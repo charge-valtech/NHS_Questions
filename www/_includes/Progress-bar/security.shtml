@@ -1,0 +1,18 @@
+
+    <ol>
+        <li class="active">
+            <span>Security Details</span>
+        </li>
+        <li>
+            <span>About You</span>
+        </li>
+        <li>
+            <span>Employment</span>
+        </li>
+        <li>
+            <span>Pay Details</span>
+        </li>
+        <li>
+            <span>Declaration</span>
+        </li>
+    </ol>

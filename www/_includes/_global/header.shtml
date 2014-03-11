@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>State Pension Prototype</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+        <link href="_assets/css/base.css" media="all" rel="stylesheet" type="text/css">
+        <link href="_assets/css/components.css" media="all" rel="stylesheet" type="text/css">
+        <link href="_assets/css/modules.css" media="all" rel="stylesheet" type="text/css">     
+        <link href="_assets/css/main.css" media="all" rel="stylesheet" type="text/css">           
+
+
+        <script src="_assets/js/vendor/modernizr-2.6.2.min.js"></script>
+
+
+    </head>
+    <body>
+        <div class="skiplink-container">
+            <div>
+                <a href="#main" class="skiplink">Skip to main content</a>
+            </div>
+        </div>
+        <header role="banner" id="global-header">
+            <div class="header-wrapper">
+                <div class="header-global">
+                    <div class="header-logo">
+                        <a href="" title="Go to the GOV.UK homepage">
+                          <img src="_assets/img/logo.png" alt="GOV.UK">
+                        </a>
+                        
+                      </div>
+                    <h1 class="page-title beta"><strong>State Pension</strong> <span>Alpha</span></h1>
+                </div>
+            </div>
+        </header>

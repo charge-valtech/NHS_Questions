@@ -1,0 +1,3069 @@
+/*
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../fonts/fontawesome-webfont.eot?v=3.2.1');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=3.2.1') format('embedded-opentype'),
+  url('../fonts/fontawesome-webfont.woff?v=3.2.1') format('woff'),
+  url('../fonts/fontawesome-webfont.ttf?v=3.2.1') format('truetype'),
+  url('../fonts/fontawesome-webfont.svg#fontawesomeregular?v=3.2.1') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+*/
+/* line 13, ../scss/main.scss */
+main {
+  background: #fff;
+  border-bottom: 10px solid #d53880;
+  display: block;
+}
+
+/* line 18, ../scss/main.scss */
+.carers-allowance {
+  background: #fff;
+  padding: 0 1em 4em 1em;
+  margin: 0 auto;
+  max-width: 980px;
+  /* Claim info */
+  /* progress steps */
+  /* section */
+  /* completed questions */
+  /* Validation panel */
+  /* form elements */
+  /* prompt panel */
+  /* button panel */
+  /* button styling */
+}
+
+/* line 32, ../scss/main.scss */
+.ie6 .carers-allowance {
+  width: 980px;
+}
+
+@media screen and (max-width: 500px) {
+  /* line 35, ../scss/main.scss */
+  .carers-allowance {
+    padding-left: .75em;
+    padding-right: .75em;
+  }
+}
+@media screen and (max-width: 640px) {
+  /* line 39, ../scss/main.scss */
+  .carers-allowance {
+    border-top: 10px solid #d53880;
+  }
+}
+/* line 41, ../scss/main.scss */
+.carers-allowance .prototype {
+  background: #d53880;
+  overflow: hidden;
+  zoom: 1;
+  padding: 0.7em 1em 0 1em;
+}
+
+@media screen and (max-width: 640px) {
+  /* line 47, ../scss/main.scss */
+  .carers-allowance .prototype {
+    margin-top: .9em;
+    padding-bottom: 0.7em;
+  }
+}
+/* line 50, ../scss/main.scss */
+.carers-allowance .prototype p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.2em;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+/* line 57, ../scss/main.scss */
+.ie .carers-allowance .prototype p {
+  font-size: 15px;
+}
+
+/* line 59, ../scss/main.scss */
+.ie7 .carers-allowance .prototype p {
+  font-size: 13px;
+}
+
+/* line 61, ../scss/main.scss */
+.carers-allowance .prototype p strong {
+  font-size: 1.5rem;
+}
+
+/* line 63, ../scss/main.scss */
+.ie .carers-allowance .prototype p strong {
+  font-size: 15px;
+}
+
+/* line 65, ../scss/main.scss */
+.carers-allowance .prototype p a {
+  color: #fff;
+  margin-left: .25em;
+}
+
+/* line 68, ../scss/main.scss */
+.carers-allowance .prototype p a:hover {
+  color: #000;
+}
+
+/* line 70, ../scss/main.scss */
+.carers-allowance .claim-info {
+  margin: 0;
+  padding: 10px 1em 10px 0;
+  list-style: none;
+  text-align: right;
+  border-top: 10px solid #d53880;
+}
+
+@media screen and (max-width: 640px) {
+  /* line 77, ../scss/main.scss */
+  .carers-allowance .claim-info {
+    border: 0;
+    padding-right: 0;
+  }
+}
+/* line 80, ../scss/main.scss */
+.carers-allowance .claim-info li {
+  margin-left: 14px;
+  display: inline;
+  font-size: 14px;
+  color: #000;
+  font-weight: 500;
+}
+
+/* line 86, ../scss/main.scss */
+.carers-allowance .claim-info li:first-child {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 90, ../scss/main.scss */
+.carers-allowance .claim-info li:first-child a {
+  display: inline-block;
+  position: relative;
+  height: 18px;
+  width: 18px;
+  text-align: center;
+  padding: 0;
+  color: #000;
+  font-size: 11px;
+  background: #f5f5f5;
+  text-decoration: none;
+  font-weight: bold;
+  line-height: 1.8em;
+  font-family: 'georgia';
+  font-style: italic;
+  top: -1px;
+  margin-right: 5px;
+  border-radius: 100px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.6);
+}
+
+/* line 109, ../scss/main.scss */
+.carers-allowance .claim-info li:first-child a:hover {
+  background: #333;
+  color: #fff;
+}
+
+/* line 112, ../scss/main.scss */
+.carers-allowance .claim-info li:first-child a span {
+  text-indent: -9999px;
+  display: inline-block;
+}
+
+@media screen and (max-width: 480px) {
+  /* line 116, ../scss/main.scss */
+  .carers-allowance .claim-info li.feedback {
+    display: none;
+  }
+}
+/* line 118, ../scss/main.scss */
+.carers-allowance .claim-info li a {
+  color: #000;
+  display: inline-block;
+  padding-top: 5px;
+}
+
+/* line 122, ../scss/main.scss */
+.carers-allowance .claim-info li a:hover {
+  color: #666;
+}
+
+/* line 124, ../scss/main.scss */
+.carers-allowance .progress-steps {
+  padding-bottom: .5em;
+}
+
+@media print {
+  /* line 127, ../scss/main.scss */
+  .carers-allowance .progress-steps {
+    display: none;
+  }
+}
+/* line 129, ../scss/main.scss */
+.carers-allowance .progress-steps ol {
+  list-style: none;
+  margin: 0;
+  overflow: hidden;
+  padding: 1.8em 0 0.3em 0;
+}
+
+@media screen and (max-width: 760px) {
+  /* line 135, ../scss/main.scss */
+  .carers-allowance .progress-steps ol {
+    padding-top: 2em;
+  }
+}
+/* line 137, ../scss/main.scss */
+.ie6 .carers-allowance .progress-steps ol, .ie7 .carers-allowance .progress-steps ol, .ie8 .carers-allowance .progress-steps ol {
+  padding-bottom: 0;
+  background: url("images/nav-line.png") 0 56px repeat-x;
+  margin-bottom: -12px;
+  zoom: 1;
+}
+
+/* line 142, ../scss/main.scss */
+.ie7 .carers-allowance .progress-steps ol {
+  background-position: 0 44px;
+}
+
+/* line 144, ../scss/main.scss */
+.ie8 .carers-allowance .progress-steps ol {
+  background: none;
+}
+
+@media screen and (max-width: 760px) {
+  /* line 147, ../scss/main.scss */
+  .carers-allowance .progress-steps ol {
+    padding-bottom: 0;
+  }
+}
+/* line 149, ../scss/main.scss */
+.carers-allowance .progress-steps ol:after {
+  content: "";
+  display: block;
+  height: 10px;
+  border-bottom: 1px dotted #afafaf;
+  margin-top: 6px;
+}
+
+@media screen and (max-width: 500px) {
+  /* line 156, ../scss/main.scss */
+  .carers-allowance .progress-steps ol:after {
+    display: none;
+  }
+}
+/* line 158, ../scss/main.scss */
+.carers-allowance .progress-steps ol li {
+  float: left;
+  width: 10%;
+  position: relative;
+  text-align: center;
+  padding: 35px 0 0 0;
+  line-height: 1em;
+}
+
+/* line 165, ../scss/main.scss */
+.ie6 .carers-allowance .progress-steps ol li, .ie7 .carers-allowance .progress-steps ol li, .ie8 .carers-allowance .progress-steps ol li {
+  background: url("images/nav-default.png") center 0 no-repeat;
+  padding-bottom: 5px;
+}
+
+/* line 168, ../scss/main.scss */
+.ie6 .carers-allowance .progress-steps ol li {
+  padding-bottom: 20px;
+}
+
+@media screen and (max-width: 760px) {
+  /* line 171, ../scss/main.scss */
+  .carers-allowance .progress-steps ol li {
+    text-indent: -9999px;
+    padding: 15px 0 0 0;
+  }
+
+  /* line 174, ../scss/main.scss */
+  .carers-allowance .progress-steps ol li span {
+    text-indent: 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 177, ../scss/main.scss */
+  .carers-allowance .progress-steps ol li {
+    width: 30px;
+    margin-left: 4px;
+  }
+
+  /* line 180, ../scss/main.scss */
+  .carers-allowance .progress-steps ol li:first-child {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 330px) {
+  /* line 183, ../scss/main.scss */
+  .carers-allowance .progress-steps ol li {
+    width: 26px;
+  }
+}
+/* line 185, ../scss/main.scss */
+.carers-allowance .progress-steps ol li span {
+  font-size: 1.3rem;
+}
+
+@media screen and (max-width: 770px) {
+  /* line 188, ../scss/main.scss */
+  .carers-allowance .progress-steps ol li span {
+    font-size: 10px;
+  }
+}
+/* line 190, ../scss/main.scss */
+.ie .carers-allowance .progress-steps ol li span {
+  font-size: 13px;
+}
+
+/* line 192, ../scss/main.scss */
+.carers-allowance .progress-steps ol li span:before {
+  position: absolute;
+  content: "\203a";
+  top: 0;
+  left: 50%;
+  width: 30px;
+  height: 25px;
+  border-radius: 100px;
+  margin: 0 0 0 -15px;
+  background: #afafaf;
+  color: #fff;
+  font-weight: 300;
+  font-size: 2rem;
+  text-align: center;
+  display: block;
+  line-height: 1em;
+  padding: 5px 0 0 0;
+}
+
+/* line 209, ../scss/main.scss */
+.ie .carers-allowance .progress-steps ol li span:before {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 330px) {
+  /* line 212, ../scss/main.scss */
+  .carers-allowance .progress-steps ol li span:before {
+    width: 26px;
+    height: 23px;
+    margin-left: -13px;
+    padding-top: 3px;
+  }
+}
+/* line 217, ../scss/main.scss */
+.ie8 .carers-allowance .progress-steps ol li span:before {
+  display: none;
+}
+
+/* line 219, ../scss/main.scss */
+.carers-allowance .progress-steps ol li.active {
+  padding-top: 48px;
+}
+
+/* line 221, ../scss/main.scss */
+.ie6 .carers-allowance .progress-steps ol li.active, .ie7 .carers-allowance .progress-steps ol li.active, .ie8 .carers-allowance .progress-steps ol li.active {
+  background: url("images/nav-active.png") center 0 no-repeat;
+  top: -8px;
+  padding-top: 55px;
+}
+
+@media screen and (max-width: 760px) {
+  /* line 226, ../scss/main.scss */
+  .carers-allowance .progress-steps ol li.active {
+    padding: 0;
+  }
+}
+/* line 228, ../scss/main.scss */
+.carers-allowance .progress-steps ol li.active span {
+  font-weight: 700;
+}
+
+/* line 230, ../scss/main.scss */
+.carers-allowance .progress-steps ol li.active span:before {
+  background: #000;
+  padding: 0;
+  height: 39px;
+  width: 50px;
+  margin: -8px 0 0 -25px;
+  font-weight: 300;
+  padding-top: 11px;
+  font-size: 2.6rem;
+}
+
+/* line 239, ../scss/main.scss */
+.ie .carers-allowance .progress-steps ol li.active span:before {
+  font-size: 26px;
+}
+
+@media screen and (max-width: 760px) {
+  /* line 242, ../scss/main.scss */
+  .carers-allowance .progress-steps ol li.active span:before {
+    width: 30px;
+    height: 29px;
+    margin: 0 0 0 -15px;
+    padding: 1px 0 0 0;
+  }
+}
+@media screen and (max-width: 330px) {
+  /* line 248, ../scss/main.scss */
+  .carers-allowance .progress-steps ol li.active span:before {
+    height: 26px;
+    width: 26px;
+    padding-top: 0;
+    margin-left: -13px;
+  }
+}
+/* line 253, ../scss/main.scss */
+.ie8 .carers-allowance .progress-steps ol li.active span:before {
+  display: none;
+}
+
+/* line 255, ../scss/main.scss */
+.ie6 .carers-allowance .progress-steps ol li.complete, .ie7 .carers-allowance .progress-steps ol li.complete, .ie8 .carers-allowance .progress-steps ol li.complete {
+  background: url("images/nav-complete.png") center 0 no-repeat;
+}
+
+/* line 257, ../scss/main.scss */
+.carers-allowance .progress-steps ol li.complete span:before {
+  background: #006435;
+  content: "\203a";
+  padding-left: 0;
+  width: 30px;
+}
+
+@media screen and (max-width: 330px) {
+  /* line 263, ../scss/main.scss */
+  .carers-allowance .progress-steps ol li.complete span:before {
+    width: 26px;
+  }
+}
+/* line 265, ../scss/main.scss */
+.ie8 .carers-allowance .progress-steps ol li.complete span:before {
+  display: none;
+}
+
+@media screen and (max-width: 500px) {
+  /* line 268, ../scss/main.scss */
+  .carers-allowance .short-steps ol:after {
+    display: block;
+  }
+}
+/* line 270, ../scss/main.scss */
+.carers-allowance .short-steps ol li {
+  width: 25%;
+}
+
+@media screen and (max-width: 760px) {
+  /* line 273, ../scss/main.scss */
+  .carers-allowance .short-steps ol li {
+    text-indent: -9999px;
+    padding: 35px 0 0 0;
+  }
+
+  /* line 276, ../scss/main.scss */
+  .carers-allowance .short-steps ol li span {
+    text-indent: 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 279, ../scss/main.scss */
+  .carers-allowance .short-steps ol li {
+    width: 25%;
+    margin-left: 0;
+  }
+
+  /* line 282, ../scss/main.scss */
+  .carers-allowance .short-steps ol li:first-child {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 330px) {
+  /* line 285, ../scss/main.scss */
+  .carers-allowance .short-steps ol li {
+    width: 25%;
+  }
+}
+@media screen and (max-width: 770px) {
+  /* line 288, ../scss/main.scss */
+  .carers-allowance .short-steps ol li span {
+    font-size: 13px;
+  }
+}
+/* line 290, ../scss/main.scss */
+.carers-allowance section {
+  background: #fff;
+  position: relative;
+  padding: 1.6em 0 0 1em;
+  /* section header */
+}
+
+@media screen and (max-width: 640px) {
+  /* line 296, ../scss/main.scss */
+  .carers-allowance section {
+    padding-left: 0;
+    padding-right: 0;
+    border: 0;
+  }
+}
+/* line 300, ../scss/main.scss */
+.carers-allowance section.error-statement {
+  margin: 0;
+  padding: 5em 0 5em 1em;
+}
+
+@media screen and (max-width: 640px) {
+  /* line 304, ../scss/main.scss */
+  .carers-allowance section.error-statement {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+/* line 307, ../scss/main.scss */
+.carers-allowance section.error-statement p {
+  margin: 2em 40% 0 0;
+}
+
+@media screen and (max-width: 700px) {
+  /* line 310, ../scss/main.scss */
+  .carers-allowance section.error-statement p {
+    margin-right: 0;
+  }
+}
+/* line 312, ../scss/main.scss */
+.carers-allowance section.error-statement h1 {
+  font-size: 5rem;
+}
+
+@media screen and (max-width: 480px) {
+  /* line 315, ../scss/main.scss */
+  .carers-allowance section.error-statement h1 {
+    font-size: 30px;
+  }
+}
+/* line 317, ../scss/main.scss */
+.ie .carers-allowance section.error-statement h1 {
+  font-size: 50px;
+}
+
+/* line 319, ../scss/main.scss */
+.carers-allowance section.finish-statement article {
+  margin-top: 1.5em;
+}
+
+/* line 321, ../scss/main.scss */
+.carers-allowance section.finish-statement article.finish-next {
+  margin-top: 1.4em;
+  margin-right: 1em;
+}
+
+@media screen and (max-width: 640px) {
+  /* line 325, ../scss/main.scss */
+  .carers-allowance section.finish-statement article.finish-next {
+    margin-right: 0;
+  }
+}
+/* line 327, ../scss/main.scss */
+.carers-allowance section.finish-statement article li {
+  font-size: 1.6rem;
+  margin-top: .6em;
+}
+
+/* line 330, ../scss/main.scss */
+.ie .carers-allowance section.finish-statement article li {
+  font-size: 16px;
+}
+
+/* line 332, ../scss/main.scss */
+.carers-allowance section.finish-statement article p {
+  font-size: 1.7rem;
+  margin-top: .5em;
+}
+
+/* line 335, ../scss/main.scss */
+.ie .carers-allowance section.finish-statement article p {
+  font-size: 17px;
+}
+
+/* line 337, ../scss/main.scss */
+.carers-allowance section h1 {
+  font-size: 3.6rem;
+  font-weight: 700;
+  line-height: 1.2em;
+  margin-bottom: .25em;
+  margin-right: 20%;
+  margin-left: -2px;
+}
+
+@media screen and (max-width: 700px) {
+  /* line 345, ../scss/main.scss */
+  .carers-allowance section h1 {
+    margin-right: 0;
+  }
+}
+/* line 347, ../scss/main.scss */
+.ie .carers-allowance section h1 {
+  font-size: 36px;
+}
+
+@media screen and (max-width: 500px) {
+  /* line 350, ../scss/main.scss */
+  .carers-allowance section h1 {
+    font-size: 3rem;
+  }
+
+  /* line 352, ../scss/main.scss */
+  .ie .carers-allowance section h1 {
+    font-size: 30px;
+  }
+}
+/* line 354, ../scss/main.scss */
+.carers-allowance section.response h1 {
+  margin-right: 0;
+}
+
+/* line 356, ../scss/main.scss */
+.carers-allowance section.response article {
+  margin: 2em 0;
+  background-image: url("../../public/images/response-trio.png");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  padding: 0 0 0 8em;
+  min-height: 100px;
+}
+
+@media screen and (max-width: 500px) {
+  /* line 364, ../scss/main.scss */
+  .carers-allowance section.response article {
+    padding: 7em 0 0 0;
+    background-position: center 0;
+  }
+}
+/* line 367, ../scss/main.scss */
+.carers-allowance section.response article h2 {
+  font-size: 2.4rem;
+  line-height: 1.3em;
+  padding-top: .3em;
+}
+
+/* line 371, ../scss/main.scss */
+.ie .carers-allowance section.response article h2 {
+  font-size: 24px;
+}
+
+/* line 373, ../scss/main.scss */
+.carers-allowance section.response article p {
+  margin-top: .25em;
+}
+
+/* line 375, ../scss/main.scss */
+.carers-allowance section.response article.earnings {
+  background-position: 0 -350px;
+}
+
+@media screen and (max-width: 500px) {
+  /* line 378, ../scss/main.scss */
+  .carers-allowance section.response article.earnings {
+    background-position: center -350px;
+  }
+}
+/* line 380, ../scss/main.scss */
+.carers-allowance section.response article.education {
+  background-position: 0 -700px;
+}
+
+@media screen and (max-width: 500px) {
+  /* line 383, ../scss/main.scss */
+  .carers-allowance section.response article.education {
+    background-position: center -700px;
+  }
+}
+/* line 385, ../scss/main.scss */
+.ie7 .carers-allowance section.response {
+  zoom: 1;
+}
+
+/* line 387, ../scss/main.scss */
+.carers-allowance section p {
+  margin: 0;
+  font-size: 1.9rem;
+  font-weight: 400;
+  line-height: 1.4em;
+}
+
+/* line 392, ../scss/main.scss */
+.ie .carers-allowance section p {
+  font-size: 19px;
+}
+
+/* line 394, ../scss/main.scss */
+.carers-allowance section p.mandatory {
+  margin-top: 1.6em;
+  font-size: 1.6rem;
+}
+
+/* line 397, ../scss/main.scss */
+.ie .carers-allowance section p.mandatory {
+  font-size: 16px;
+}
+
+/* line 399, ../scss/main.scss */
+.carers-allowance section p.mandatory em {
+  font-style: normal;
+  font-size: 1.9rem;
+}
+
+/* line 402, ../scss/main.scss */
+.ie .carers-allowance section p.mandatory em {
+  font-size: 19px;
+}
+
+/* line 404, ../scss/main.scss */
+.carers-allowance section p.security-message {
+  margin-bottom: 1em;
+  font-size: 1.6rem;
+}
+
+/* line 407, ../scss/main.scss */
+.ie .carers-allowance section p.security-message {
+  font-size: 16px;
+}
+
+/* line 409, ../scss/main.scss */
+.carers-allowance section p.security-message strong {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* line 412, ../scss/main.scss */
+.carers-allowance section ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* line 416, ../scss/main.scss */
+.carers-allowance .completed {
+  margin-top: 1.4em;
+  margin-left: -1em;
+}
+
+@media screen and (max-width: 640px) {
+  /* line 420, ../scss/main.scss */
+  .carers-allowance .completed {
+    margin-left: 0;
+  }
+}
+/* line 422, ../scss/main.scss */
+.carers-allowance .completed .start-again {
+  text-align: right;
+}
+
+/* line 424, ../scss/main.scss */
+.carers-allowance .completed .start-again a {
+  display: inline-block;
+  background: #006435;
+  font-size: 1.9rem;
+  padding: .7em 1.75em;
+  color: #fff;
+  line-height: 1em;
+  text-decoration: none;
+}
+
+/* line 432, ../scss/main.scss */
+.ie .carers-allowance .completed .start-again a {
+  font-size: 19px;
+}
+
+/* line 434, ../scss/main.scss */
+.carers-allowance .completed .start-again a:hover {
+  background: #004b27;
+}
+
+/* line 436, ../scss/main.scss */
+.carers-allowance .completed ul li {
+  background: #d5e8f3 url("../images/progress-tick.png") 1.2em 1.3em no-repeat;
+  border-bottom: 1px solid #b6d6d2;
+  padding: 1em 11em 1em 2.9em;
+  position: relative;
+}
+
+@media screen and (max-width: 760px) {
+  /* line 442, ../scss/main.scss */
+  .carers-allowance .completed ul li {
+    padding-right: 1em;
+  }
+}
+/* line 444, ../scss/main.scss */
+.carers-allowance .completed ul li h3 {
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.25;
+}
+
+/* line 448, ../scss/main.scss */
+.ie .carers-allowance .completed ul li h3 {
+  font-size: 16px;
+}
+
+/* line 450, ../scss/main.scss */
+.carers-allowance .completed ul li p {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #315843;
+  line-height: 1em;
+  margin-top: .4em;
+}
+
+/* line 456, ../scss/main.scss */
+.ie .carers-allowance .completed ul li p {
+  font-size: 16px;
+}
+
+/* line 458, ../scss/main.scss */
+.carers-allowance .completed ul li a {
+  position: absolute;
+  right: 1.2em;
+  top: 1.95em;
+  margin-top: -10px;
+  color: inherit;
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
+/* line 466, ../scss/main.scss */
+.ie .carers-allowance .completed ul li a {
+  font-size: 14px;
+}
+
+/* line 468, ../scss/main.scss */
+.ie6 .carers-allowance .completed ul li a {
+  right: auto;
+  top: auto;
+  position: relative;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+/* line 474, ../scss/main.scss */
+.carers-allowance .completed ul li a:hover {
+  color: #315843;
+}
+
+@media screen and (max-width: 760px) {
+  /* line 477, ../scss/main.scss */
+  .carers-allowance .completed ul li a {
+    position: relative;
+    right: auto;
+    top: auto;
+    margin-top: 1em;
+    display: inline-block;
+  }
+}
+/* line 483, ../scss/main.scss */
+.carers-allowance .completed.eligibility-completed li {
+  background-color: #D5ECEA;
+}
+
+/* line 485, ../scss/main.scss */
+.carers-allowance .validation-summary {
+  background: #fef7f7;
+  border: 3px solid #df3034;
+  padding: 1em .7em;
+  margin: 1em 18% 1em -1em;
+}
+
+@media screen and (max-width: 640px) {
+  /* line 491, ../scss/main.scss */
+  .carers-allowance .validation-summary {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 780px) {
+  /* line 494, ../scss/main.scss */
+  .carers-allowance .validation-summary {
+    margin-right: 0;
+  }
+}
+/* line 496, ../scss/main.scss */
+.carers-allowance .validation-summary h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.2em;
+}
+
+/* line 500, ../scss/main.scss */
+.ie .carers-allowance .validation-summary h2 {
+  font-size: 24px;
+}
+
+@media screen and (max-width: 500px) {
+  /* line 503, ../scss/main.scss */
+  .carers-allowance .validation-summary h2 {
+    font-size: 2rem;
+  }
+
+  /* line 505, ../scss/main.scss */
+  .ie .carers-allowance .validation-summary h2 {
+    font-size: 20px;
+  }
+}
+/* line 507, ../scss/main.scss */
+.carers-allowance .validation-summary p {
+  margin-top: .75em;
+}
+
+/* line 509, ../scss/main.scss */
+.carers-allowance .validation-summary ol {
+  list-style: disc;
+  padding-left: 1.25em;
+  margin: .75em 0 0 0;
+  color: #df3034;
+}
+
+/* line 514, ../scss/main.scss */
+.carers-allowance .validation-summary ol a {
+  color: #df3034;
+  text-decoration: none;
+}
+
+/* line 517, ../scss/main.scss */
+.carers-allowance .validation-summary ol a:hover {
+  text-decoration: underline;
+}
+
+/* line 519, ../scss/main.scss */
+.carers-allowance .form-elements {
+  margin: 2em 18% 0 0;
+  /* form list start */
+  /* info panel */
+  /* declaration */
+  /* table styling */
+}
+
+@media screen and (max-width: 780px) {
+  /* line 526, ../scss/main.scss */
+  .carers-allowance .form-elements {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  /* line 529, ../scss/main.scss */
+  .carers-allowance .form-elements {
+    padding-left: 0;
+  }
+}
+/* line 531, ../scss/main.scss */
+.carers-allowance .form-elements.form-eligibility {
+  padding-left: 1.9em;
+}
+
+@media screen and (max-width: 640px) {
+  /* line 534, ../scss/main.scss */
+  .carers-allowance .form-elements.form-eligibility {
+    padding-left: 2.6em;
+  }
+}
+/* line 536, ../scss/main.scss */
+.carers-allowance .form-elements.form-eligibility legend {
+  padding: .12em 0 1em 1.56em;
+  margin-left: -1.64em;
+  color: inherit;
+}
+
+/* line 540, ../scss/main.scss */
+.ie7 .carers-allowance .form-elements.form-eligibility legend {
+  display: block;
+  line-height: 1.1em;
+  margin-left: -48px;
+}
+
+/* line 544, ../scss/main.scss */
+.ie6 .carers-allowance .form-elements.form-eligibility legend {
+  padding-left: 40px;
+  margin-left: -50px;
+}
+
+/* line 547, ../scss/main.scss */
+.carers-allowance .form-elements.form-eligibility li.validation {
+  margin-top: 1em;
+}
+
+/* line 549, ../scss/main.scss */
+.carers-allowance .form-elements.nested-fieldset {
+  margin-top: 1em;
+}
+
+/* line 551, ../scss/main.scss */
+.carers-allowance .form-elements.q1 p {
+  padding-right: 2em;
+}
+
+@media screen and (max-width: 750px) {
+  /* line 554, ../scss/main.scss */
+  .carers-allowance .form-elements.q1 p {
+    padding-right: 0;
+  }
+}
+/* line 556, ../scss/main.scss */
+.carers-allowance .form-elements.q1 p.helper-message {
+  margin: 0 0 1em 0;
+}
+
+/* line 558, ../scss/main.scss */
+.carers-allowance .form-elements.results-detail {
+  margin-right: 0;
+  padding-left: 0;
+  position: relative;
+}
+
+/* line 562, ../scss/main.scss */
+.carers-allowance .form-elements.results-detail legend {
+  padding-bottom: .8em;
+}
+
+@media screen and (max-width: 750px) {
+  /* line 565, ../scss/main.scss */
+  .carers-allowance .form-elements.results-detail {
+    margin-right: 0;
+  }
+}
+/* line 567, ../scss/main.scss */
+.carers-allowance .form-elements legend {
+  font-weight: 600;
+  font-size: 2.4rem;
+  padding: .12em 0 .5em 0;
+  position: relative;
+  line-height: 1.2em;
+  color: #333399;
+}
+
+/* line 574, ../scss/main.scss */
+.ie .carers-allowance .form-elements legend {
+  font-size: 24px;
+}
+
+/* line 576, ../scss/main.scss */
+.ie7 .carers-allowance .form-elements legend {
+  margin-left: -10px;
+}
+
+/* line 578, ../scss/main.scss */
+.carers-allowance .form-elements legend span {
+  background: #000;
+  display: block;
+  border-radius: 100px;
+  width: 30px;
+  height: 22px;
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: center;
+  padding-top: 8px;
+  line-height: 1em;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+}
+
+/* line 592, ../scss/main.scss */
+.ie .carers-allowance .form-elements legend span {
+  font-size: 15px;
+}
+
+/* line 594, ../scss/main.scss */
+.carers-allowance .form-elements legend div {
+  width: 100%;
+}
+
+/* line 596, ../scss/main.scss */
+.carers-allowance .form-elements h2, .carers-allowance .form-elements p.title {
+  font-size: 1.9rem;
+  font-weight: 600;
+  line-height: 1.4em;
+  padding-top: 1em;
+}
+
+/* line 601, ../scss/main.scss */
+.ie .carers-allowance .form-elements h2, .ie .carers-allowance .form-elements p.title {
+  font-size: 19px;
+}
+
+/* line 603, ../scss/main.scss */
+.carers-allowance .form-elements h2:first-child, .carers-allowance .form-elements p.title:first-child {
+  padding-top: 0;
+}
+
+/* line 605, ../scss/main.scss */
+.carers-allowance .form-elements ul {
+  margin-top: 0;
+  zoom: 1;
+  /* radio list - includes hit areas */
+  /* Address stack */
+  /* list display - fully inline with label */
+  /* list display - stacked list with label inline */
+  /* list display - date format layout */
+  /* sort code */
+  /* list display - inline with labels stripped */
+  /* list display - national insurance number */
+}
+
+/* line 616, ../scss/main.scss */
+.carers-allowance .form-elements ul li {
+  display: block;
+  margin-top: .4rem;
+  padding: .8em 0;
+  position: relative;
+}
+
+/* line 621, ../scss/main.scss */
+.carers-allowance .form-elements ul li:first-child {
+  margin: 0;
+}
+
+/* line 623, ../scss/main.scss */
+.ie .carers-allowance .form-elements ul li {
+  margin-top: 4px;
+}
+
+/* line 625, ../scss/main.scss */
+.carers-allowance .form-elements ul li.other-detail {
+  margin: 0;
+  padding-top: 0;
+}
+
+/* line 628, ../scss/main.scss */
+.ie7 .carers-allowance .form-elements ul li.other-detail {
+  zoom: 1;
+}
+
+/* line 630, ../scss/main.scss */
+.carers-allowance .form-elements ul li.other-detail .strip {
+  position: absolute;
+  left: -9999px;
+}
+
+/* line 633, ../scss/main.scss */
+.carers-allowance .form-elements ul li.validation {
+  background: #fef7f7;
+  padding: .7em;
+  margin-left: -1.5rem;
+  border-left: 3px solid #df3034;
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 640, ../scss/main.scss */
+.ie7 .carers-allowance .form-elements ul li.validation, .ie8 .carers-allowance .form-elements ul li.validation {
+  margin-left: -15px;
+}
+
+/* line 642, ../scss/main.scss */
+.ie6 .carers-allowance .form-elements ul li.validation {
+  zoom: 1;
+}
+
+@media screen and (max-width: 640px) {
+  /* line 645, ../scss/main.scss */
+  .carers-allowance .form-elements ul li.validation {
+    margin-left: 0;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    width: auto;
+  }
+}
+/* line 650, ../scss/main.scss */
+.carers-allowance .form-elements ul li.validation .error {
+  color: #de3134;
+  font-weight: 300;
+  font-size: 1.6rem;
+  padding-bottom: .6em;
+}
+
+/* line 655, ../scss/main.scss */
+.ie .carers-allowance .form-elements ul li.validation .error {
+  font-size: 16px;
+}
+
+/* line 657, ../scss/main.scss */
+.ie6 .carers-allowance .form-elements ul li.validation .error {
+  background: transparent;
+}
+
+/* line 659, ../scss/main.scss */
+.carers-allowance .form-elements ul li.validation .inline-stack {
+  border-left: none;
+  padding-left: 0;
+}
+
+/* line 662, ../scss/main.scss */
+.carers-allowance .form-elements ul li.date-time {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* line 665, ../scss/main.scss */
+.carers-allowance .form-elements ul li.short-field input[type="text"], .carers-allowance .form-elements ul li.short-field input[type="tel"] {
+  width: 13rem;
+}
+
+/* line 667, ../scss/main.scss */
+.ie .carers-allowance .form-elements ul li.short-field input[type="text"], .ie .carers-allowance .form-elements ul li.short-field input[type="tel"] {
+  width: 130px;
+}
+
+@media screen and (max-width: 500px) {
+  /* line 670, ../scss/main.scss */
+  .carers-allowance .form-elements ul li.short-field input[type="text"], .carers-allowance .form-elements ul li.short-field input[type="tel"] {
+    width: 12.8rem;
+  }
+
+  /* line 672, ../scss/main.scss */
+  .ie .carers-allowance .form-elements ul li.short-field input[type="text"], .ie .carers-allowance .form-elements ul li.short-field input[type="tel"] {
+    width: 128px;
+  }
+}
+/* line 674, ../scss/main.scss */
+.carers-allowance .form-elements ul li.date-picker input[type="tel"] {
+  cursor: pointer;
+  position: relative;
+}
+
+/* line 677, ../scss/main.scss */
+.carers-allowance .form-elements ul li.date-picker input[type="tel"]:before {
+  content: "\f073";
+  font-size: 16px;
+  position: absolute;
+  top: 5px;
+  right: 6px;
+  font-family: 'FontAwesome';
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 688, ../scss/main.scss */
+.ie7 .carers-allowance .form-elements ul li.date-picker input[type="tel"] {
+  background: url("../images/date.png") 97% center no-repeat;
+}
+
+/* line 690, ../scss/main.scss */
+.carers-allowance .form-elements ul li.currency {
+  position: relative;
+}
+
+/* line 692, ../scss/main.scss */
+.carers-allowance .form-elements ul li.currency input[type="text"], .carers-allowance .form-elements ul li.currency input[type="tel"] {
+  width: 11.8rem;
+  position: relative;
+}
+
+/* line 695, ../scss/main.scss */
+.ie .carers-allowance .form-elements ul li.currency input[type="text"], .ie .carers-allowance .form-elements ul li.currency input[type="tel"] {
+  width: 118px;
+}
+
+@media screen and (max-width: 500px) {
+  /* line 698, ../scss/main.scss */
+  .carers-allowance .form-elements ul li.currency input[type="text"], .carers-allowance .form-elements ul li.currency input[type="tel"] {
+    width: 11.6rem;
+  }
+
+  /* line 700, ../scss/main.scss */
+  .ie .carers-allowance .form-elements ul li.currency input[type="text"], .ie .carers-allowance .form-elements ul li.currency input[type="tel"] {
+    width: 116px;
+  }
+}
+/* line 702, ../scss/main.scss */
+.carers-allowance .form-elements ul li.validation:before {
+  left: 18px;
+  bottom: 19px;
+}
+
+/* line 705, ../scss/main.scss */
+.carers-allowance .form-elements ul li .helper {
+  font-size: 1.6rem;
+  margin-top: .4em;
+  font-weight: 300;
+}
+
+/* line 709, ../scss/main.scss */
+.ie .carers-allowance .form-elements ul li .helper {
+  font-size: 16px;
+}
+
+/* line 711, ../scss/main.scss */
+.carers-allowance .form-elements ul li .helper.above {
+  margin-top: 0;
+}
+
+/* line 713, ../scss/main.scss */
+.carers-allowance .form-elements ul li .specific-help {
+  display: none;
+}
+
+/* line 715, ../scss/main.scss */
+.ie7 .carers-allowance .form-elements ul li .specific-help {
+  display: block;
+}
+
+/* line 717, ../scss/main.scss */
+.carers-allowance .form-elements ul li .helper-more {
+  cursor: pointer;
+  display: block;
+  font-size: 1.6rem;
+  margin: .6em 0 0 0;
+  font-weight: 500;
+  overflow: hidden;
+  line-height: 1em;
+  padding: .35em .7em;
+  border-left: 3px solid #006435;
+  text-decoration: underline;
+}
+
+/* line 728, ../scss/main.scss */
+.ie .carers-allowance .form-elements ul li .helper-more {
+  font-size: 16px;
+}
+
+/* line 730, ../scss/main.scss */
+.carers-allowance .form-elements ul li .helper-info {
+  display: none;
+  padding: .7em;
+  background: #d5ecea;
+  border-left: 3px solid #006435;
+}
+
+/* line 735, ../scss/main.scss */
+.carers-allowance .form-elements ul li .helper-info p {
+  font-size: 1.6rem;
+}
+
+/* line 737, ../scss/main.scss */
+.ie .carers-allowance .form-elements ul li .helper-info p {
+  font-size: 16px;
+}
+
+/* line 739, ../scss/main.scss */
+.carers-allowance .form-elements ul li label, .carers-allowance .form-elements ul li p {
+  display: block;
+  font-size: 1.9rem;
+  font-weight: 400;
+  line-height: 1.3em;
+  padding-bottom: .3em;
+}
+
+@media screen and (max-width: 600px) {
+  /* line 746, ../scss/main.scss */
+  .carers-allowance .form-elements ul li label, .carers-allowance .form-elements ul li p {
+    line-height: 1.2em;
+  }
+}
+/* line 748, ../scss/main.scss */
+.ie .carers-allowance .form-elements ul li label, .ie .carers-allowance .form-elements ul li p {
+  font-size: 19px;
+}
+
+/* line 750, ../scss/main.scss */
+.carers-allowance .form-elements ul li label em, .carers-allowance .form-elements ul li p em {
+  display: inline;
+  font-size: 1.8rem;
+  margin-right: .4rem;
+  font-style: normal;
+}
+
+/* line 755, ../scss/main.scss */
+.ie .carers-allowance .form-elements ul li label em, .ie .carers-allowance .form-elements ul li p em {
+  font-size: 18px;
+  margin-right: 4px;
+}
+
+/* line 758, ../scss/main.scss */
+.carers-allowance .form-elements ul li input[type="text"], .carers-allowance .form-elements ul li input[type="number"], .carers-allowance .form-elements ul li input[type="tel"], .carers-allowance .form-elements ul li textarea {
+  background: #f9f9f9;
+  border: 1px solid #a2a2a2;
+  font-size: 1.9rem;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+  padding: 0.25em 0 0.1em 0.4em;
+  width: 28.3rem;
+}
+
+@media screen and (max-width: 500px) {
+  /* line 768, ../scss/main.scss */
+  .carers-allowance .form-elements ul li input[type="text"], .carers-allowance .form-elements ul li input[type="number"], .carers-allowance .form-elements ul li input[type="tel"], .carers-allowance .form-elements ul li textarea {
+    width: 96%;
+  }
+}
+/* line 770, ../scss/main.scss */
+.ie .carers-allowance .form-elements ul li input[type="text"], .ie .carers-allowance .form-elements ul li input[type="number"], .ie .carers-allowance .form-elements ul li input[type="tel"], .ie .carers-allowance .form-elements ul li textarea {
+  font-size: 19px;
+  width: 283px;
+}
+
+/* line 773, ../scss/main.scss */
+.carers-allowance .form-elements ul li input[type="text"].postcode, .carers-allowance .form-elements ul li input[type="number"].postcode, .carers-allowance .form-elements ul li input[type="tel"].postcode, .carers-allowance .form-elements ul li textarea.postcode {
+  text-transform: uppercase;
+}
+
+/* line 775, ../scss/main.scss */
+.ie7 .carers-allowance .form-elements ul li input[type="text"], .ie8 .carers-allowance .form-elements ul li input[type="text"], .ie7 .carers-allowance .form-elements ul li input[type="number"], .ie8 .carers-allowance .form-elements ul li input[type="number"], .ie7 .carers-allowance .form-elements ul li input[type="tel"], .ie8 .carers-allowance .form-elements ul li input[type="tel"], .ie7 .carers-allowance .form-elements ul li textarea, .ie8 .carers-allowance .form-elements ul li textarea {
+  padding: 0.2em 0 0.4em 0.4em;
+}
+
+/* line 777, ../scss/main.scss */
+.carers-allowance .form-elements ul li input[type="text"].datepicker, .carers-allowance .form-elements ul li input[type="number"].datepicker, .carers-allowance .form-elements ul li input[type="tel"].datepicker, .carers-allowance .form-elements ul li textarea.datepicker {
+  cursor: pointer;
+  background: #f9f9f9 url("images/calendar-icon.png") 97% 50% no-repeat;
+  position: relative;
+  z-index: 20;
+}
+
+/* line 782, ../scss/main.scss */
+.ie7 .carers-allowance .form-elements ul li input[type="text"].datepicker, .ie7 .carers-allowance .form-elements ul li input[type="number"].datepicker, .ie7 .carers-allowance .form-elements ul li input[type="tel"].datepicker, .ie7 .carers-allowance .form-elements ul li textarea.datepicker {
+  cursor: auto;
+  background: #f9f9f9;
+}
+
+/* line 785, ../scss/main.scss */
+.carers-allowance .form-elements ul li input[type="radio"] {
+  width: auto;
+  vertical-align: top;
+}
+
+/* line 788, ../scss/main.scss */
+.carers-allowance .form-elements ul li input[type="radio"][type=radio]:checked + label {
+  color: #0b0c0c;
+}
+
+/* line 790, ../scss/main.scss */
+.ie7 .carers-allowance .form-elements ul li input[type="radio"] {
+  margin-top: 0;
+}
+
+/* line 792, ../scss/main.scss */
+.ie8 .carers-allowance .form-elements ul li input[type="radio"] {
+  margin-top: 1px;
+}
+
+/* line 794, ../scss/main.scss */
+.carers-allowance .form-elements ul li textarea {
+  height: 6em;
+  width: 56.6rem;
+  background: #f9f9f9;
+}
+
+@media screen and (max-width: 620px) {
+  /* line 799, ../scss/main.scss */
+  .carers-allowance .form-elements ul li textarea {
+    width: 96%;
+  }
+}
+/* line 801, ../scss/main.scss */
+.ie .carers-allowance .form-elements ul li textarea {
+  width: 566px;
+}
+
+/* line 803, ../scss/main.scss */
+.carers-allowance .form-elements ul li select {
+  padding: 2px;
+  min-width: 15rem;
+  max-width: 29.3rem;
+  position: relative;
+  font-size: 13px;
+  height: 30px;
+  top: 2px;
+  background: #fafafa;
+  border: 1px solid #a2a2a2;
+}
+
+/* line 813, ../scss/main.scss */
+.ie .carers-allowance .form-elements ul li select {
+  min-width: 150px;
+  max-width: 293px;
+  height: auto;
+  padding: 5px;
+}
+
+/* line 818, ../scss/main.scss */
+.ie8 .carers-allowance .form-elements ul li select {
+  min-width: 0;
+}
+
+/* line 820, ../scss/main.scss */
+.carers-allowance .form-elements ul li .warning-text {
+  color: #df3034;
+}
+
+/* line 822, ../scss/main.scss */
+.carers-allowance .form-elements ul li .stacked {
+  margin: 0;
+  padding: 0;
+  font-size: 1.6rem;
+}
+
+/* line 826, ../scss/main.scss */
+.ie .carers-allowance .form-elements ul li .stacked {
+  font-size: 16px;
+}
+
+/* line 828, ../scss/main.scss */
+.carers-allowance .form-elements ul.radio {
+  margin-top: 3px;
+  overflow: hidden;
+}
+
+/* line 831, ../scss/main.scss */
+.carers-allowance .form-elements ul.radio li {
+  position: relative;
+  float: left;
+  margin: 0 0 0 1px;
+  padding: 0;
+}
+
+/* line 836, ../scss/main.scss */
+.carers-allowance .form-elements ul.radio li:first-child {
+  margin-left: 0;
+}
+
+/* line 838, ../scss/main.scss */
+.carers-allowance .form-elements ul.radio li input[type="radio"] {
+  position: absolute;
+  top: 13px;
+  left: 14px;
+  margin: 0;
+  cursor: pointer;
+  line-height: 1em;
+}
+
+/* line 845, ../scss/main.scss */
+.ie .carers-allowance .form-elements ul.radio li input[type="radio"] {
+  top: 10px;
+  left: 10px;
+}
+
+/* line 848, ../scss/main.scss */
+.ie10 .carers-allowance .form-elements ul.radio li input[type="radio"] {
+  top: 10px;
+  left: 10px;
+}
+
+/* line 851, ../scss/main.scss */
+.ie8 .carers-allowance .form-elements ul.radio li input[type="radio"] {
+  top: 11px;
+}
+
+/* line 853, ../scss/main.scss */
+.ie6 .carers-allowance .form-elements ul.radio li input[type="radio"] {
+  position: relative;
+  top: auto;
+  left: auto;
+  display: inline;
+}
+
+/* line 858, ../scss/main.scss */
+.carers-allowance .form-elements ul.radio li label {
+  display: block;
+  background: #eee;
+  padding: 12px 14px 10px 34px;
+  font-size: 1.7rem;
+  cursor: pointer;
+  line-height: 1em;
+  border: 1px solid #fff;
+  font-weight: 500;
+}
+
+/* line 867, ../scss/main.scss */
+.ie .carers-allowance .form-elements ul.radio li label {
+  font-size: 17px;
+}
+
+/* line 869, ../scss/main.scss */
+.ie7 .carers-allowance .form-elements ul.radio li label:hover, .ie8 .carers-allowance .form-elements ul.radio li label:hover {
+  background: #fff;
+  border: 1px solid #a2a2a2;
+}
+
+/* line 872, ../scss/main.scss */
+.ie6 .carers-allowance .form-elements ul.radio li label {
+  display: inline;
+  padding-left: 0;
+  background: transparent;
+}
+
+/* line 876, ../scss/main.scss */
+.carers-allowance .form-elements ul.radio li input[type="radio"]:checked + label {
+  background: #fff;
+  -webkit-transition: all 200ms ease-in;
+  -moz-transition: all 200ms ease-in;
+  -ms-transition: all 200ms ease-in;
+  -o-transition: all 200ms ease-in;
+  transition: all 200ms ease-in;
+  border: 1px solid #a2a2a2;
+}
+
+/* line 884, ../scss/main.scss */
+.carers-allowance .form-elements ul.address-stack label {
+  position: absolute;
+  left: -9999px;
+}
+
+/* line 887, ../scss/main.scss */
+.carers-allowance .form-elements ul.address-stack li {
+  margin-top: .4em;
+  padding: 0 0 0 0;
+}
+
+/* line 890, ../scss/main.scss */
+.carers-allowance .form-elements ul.address-stack li:first-child {
+  margin: 0;
+}
+
+/* line 892, ../scss/main.scss */
+.carers-allowance .form-elements ul.inline li {
+  display: inline;
+  margin: 0 0 0 1.2em;
+}
+
+/* line 895, ../scss/main.scss */
+.carers-allowance .form-elements ul.inline li:first-child {
+  margin-left: 0;
+}
+
+/* line 897, ../scss/main.scss */
+.carers-allowance .form-elements ul.inline li label {
+  padding-left: 0.25em;
+  display: inline-block;
+  line-height: 1.2em;
+  font-size: 1.7rem;
+  color: #555;
+}
+
+/* line 903, ../scss/main.scss */
+.carers-allowance .form-elements ul.inline li label:hover {
+  color: #0b0c0c;
+}
+
+/* line 905, ../scss/main.scss */
+.ie .carers-allowance .form-elements ul.inline li label {
+  font-size: 17px;
+}
+
+/* line 907, ../scss/main.scss */
+.carers-allowance .form-elements ul.inline li select {
+  top: -3px;
+}
+
+/* line 909, ../scss/main.scss */
+.carers-allowance .form-elements ul.inline-stack {
+  border-left: 5px solid #eee;
+  padding-left: .5em;
+  margin-bottom: .75em;
+}
+
+/* line 913, ../scss/main.scss */
+.carers-allowance .form-elements ul.inline-stack li {
+  display: block;
+  margin: 0;
+  padding: .4em 0;
+}
+
+/* line 917, ../scss/main.scss */
+.carers-allowance .form-elements ul.inline-stack li input {
+  width: auto;
+  vertical-align: top;
+  margin-top: .38rem;
+}
+
+/* line 921, ../scss/main.scss */
+.ie .carers-allowance .form-elements ul.inline-stack li input {
+  margin-top: 0;
+}
+
+/* line 923, ../scss/main.scss */
+.carers-allowance .form-elements ul.inline-stack li input[type=checkbox] {
+  float: left;
+}
+
+/* line 925, ../scss/main.scss */
+.carers-allowance .form-elements ul.inline-stack li input[type=checkbox]:checked + label, .carers-allowance .form-elements ul.inline-stack li input[type=radio]:checked + label {
+  color: #000;
+}
+
+/* line 927, ../scss/main.scss */
+.carers-allowance .form-elements ul.inline-stack li label {
+  width: auto;
+  max-width: 90%;
+  margin-left: .25em;
+  line-height: 1.4em;
+  padding: 0;
+  font-size: 1.7rem;
+  color: #555;
+  cursor: pointer;
+}
+
+/* line 936, ../scss/main.scss */
+.ie .carers-allowance .form-elements ul.inline-stack li label {
+  font-size: 17px;
+  width: 90%;
+}
+
+/* line 939, ../scss/main.scss */
+.carers-allowance .form-elements ul.year li {
+  margin-left: .5em;
+}
+
+/* line 941, ../scss/main.scss */
+.carers-allowance .form-elements ul.year li:first-child {
+  margin-left: 0;
+}
+
+/* line 943, ../scss/main.scss */
+.carers-allowance .form-elements ul.year li label {
+  position: absolute;
+  left: -9999px;
+}
+
+/* line 946, ../scss/main.scss */
+.carers-allowance .form-elements ul.year li select {
+  margin: 0;
+  min-width: 8.6rem;
+  top: -2px;
+}
+
+@media screen and (max-width: 500px) {
+  /* line 951, ../scss/main.scss */
+  .carers-allowance .form-elements ul.year li select {
+    width: auto;
+    min-width: 1rem;
+  }
+}
+/* line 954, ../scss/main.scss */
+.ie .carers-allowance .form-elements ul.year li select {
+  width: 86px;
+  min-width: 86px;
+  top: 2px;
+}
+
+/* line 958, ../scss/main.scss */
+.carers-allowance .form-elements ul.year li input {
+  width: 7.6rem;
+  background: #f9f9f9;
+  position: relative;
+}
+
+/* line 962, ../scss/main.scss */
+.ie9 .carers-allowance .form-elements ul.year li input {
+  width: 76px;
+  top: 3px;
+}
+
+/* line 965, ../scss/main.scss */
+.ie8 .carers-allowance .form-elements ul.year li input, .ie7 .carers-allowance .form-elements ul.year li input {
+  top: 3px;
+  width: 60px;
+  font-size: 14px;
+  padding: 5px 8px;
+}
+
+/* line 970, ../scss/main.scss */
+.carers-allowance .form-elements ul.sort-code li {
+  margin-left: .5em;
+}
+
+/* line 972, ../scss/main.scss */
+.carers-allowance .form-elements ul.sort-code li:first-child {
+  margin-left: 0;
+}
+
+/* line 974, ../scss/main.scss */
+.carers-allowance .form-elements ul.sort-code label {
+  position: absolute;
+  left: -9999px;
+}
+
+/* line 977, ../scss/main.scss */
+.carers-allowance .form-elements ul.sort-code input[type="tel"], .carers-allowance .form-elements ul.sort-code input[type="text"] {
+  width: 8.1rem;
+}
+
+/* line 979, ../scss/main.scss */
+.ie .carers-allowance .form-elements ul.sort-code input[type="tel"], .ie .carers-allowance .form-elements ul.sort-code input[type="text"] {
+  width: 81px;
+}
+
+/* line 981, ../scss/main.scss */
+.carers-allowance .form-elements ul.label-strip li {
+  margin-left: .5em;
+}
+
+/* line 983, ../scss/main.scss */
+.carers-allowance .form-elements ul.label-strip li:first-child {
+  margin-left: 0;
+}
+
+/* line 985, ../scss/main.scss */
+.carers-allowance .form-elements ul.label-strip label {
+  position: absolute;
+  left: -9999px;
+}
+
+/* line 988, ../scss/main.scss */
+.carers-allowance .form-elements ul.ni-number li {
+  margin-left: .5em;
+}
+
+/* line 990, ../scss/main.scss */
+.carers-allowance .form-elements ul.ni-number li:first-child {
+  margin-left: 0;
+}
+
+/* line 992, ../scss/main.scss */
+.ie7 .carers-allowance .form-elements ul.ni-number li {
+  margin-left: 0.15em;
+}
+
+/* line 994, ../scss/main.scss */
+.carers-allowance .form-elements ul.ni-number label {
+  position: absolute;
+  left: -9999px;
+}
+
+/* line 997, ../scss/main.scss */
+.carers-allowance .form-elements ul.ni-number input[type="text"], .carers-allowance .form-elements ul.ni-number input[type="tel"] {
+  width: 4.4rem;
+  text-transform: uppercase;
+}
+
+/* line 1000, ../scss/main.scss */
+.ie .carers-allowance .form-elements ul.ni-number input[type="text"], .ie .carers-allowance .form-elements ul.ni-number input[type="tel"] {
+  width: 44px;
+}
+
+/* line 1002, ../scss/main.scss */
+.ie7 .carers-allowance .form-elements ul.ni-number input[type="text"], .ie7 .carers-allowance .form-elements ul.ni-number input[type="tel"] {
+  width: 43px;
+}
+
+/* line 1004, ../scss/main.scss */
+.carers-allowance .form-elements ul.ni-number input[type="text"].single, .carers-allowance .form-elements ul.ni-number input[type="tel"].single {
+  width: 2.7rem;
+}
+
+/* line 1006, ../scss/main.scss */
+.ie .carers-allowance .form-elements ul.ni-number input[type="text"].single, .ie .carers-allowance .form-elements ul.ni-number input[type="tel"].single {
+  width: 27px;
+}
+
+@media screen and (max-width: 750px) {
+  /* line 1009, ../scss/main.scss */
+  .carers-allowance .form-elements ul.ni-number input[type="text"], .carers-allowance .form-elements ul.ni-number input[type="tel"] {
+    width: 4.2rem;
+  }
+
+  /* line 1011, ../scss/main.scss */
+  .ie .carers-allowance .form-elements ul.ni-number input[type="text"], .ie .carers-allowance .form-elements ul.ni-number input[type="tel"] {
+    width: 42px;
+  }
+}
+/* line 1013, ../scss/main.scss */
+.carers-allowance .form-elements .info {
+  background: #bde4f6;
+  border: 1px solid #015399;
+  padding: 1em 1.25em;
+  margin-top: 1.2em;
+}
+
+/* line 1018, ../scss/main.scss */
+.carers-allowance .form-elements .info p {
+  font-size: 1.6rem;
+  margin-top: 1em;
+}
+
+/* line 1021, ../scss/main.scss */
+.carers-allowance .form-elements .info p:first-child {
+  margin: 0;
+}
+
+/* line 1023, ../scss/main.scss */
+.ie .carers-allowance .form-elements .info p {
+  font-size: 16px;
+}
+
+/* line 1025, ../scss/main.scss */
+.carers-allowance .form-elements .declaration {
+  border: 1px solid #a2a2a2;
+  padding: 1em 1.5em 1em 1em;
+}
+
+/* line 1028, ../scss/main.scss */
+.carers-allowance .form-elements .declaration p {
+  font-size: 1.7rem;
+  line-height: 1.25em;
+  margin-top: 1em;
+}
+
+/* line 1032, ../scss/main.scss */
+.carers-allowance .form-elements .declaration p:first-child {
+  margin-top: 0;
+}
+
+/* line 1034, ../scss/main.scss */
+.ie .carers-allowance .form-elements .declaration p {
+  font-size: 16px;
+}
+
+/* line 1036, ../scss/main.scss */
+.carers-allowance .form-elements article {
+  margin-top: 2em;
+  line-height: 1em;
+}
+
+/* line 1039, ../scss/main.scss */
+.carers-allowance .form-elements article p, .carers-allowance .form-elements article h3 {
+  display: inline;
+  font-size: 1.9rem;
+  line-height: 1.25em;
+}
+
+/* line 1043, ../scss/main.scss */
+.ie .carers-allowance .form-elements article p, .ie .carers-allowance .form-elements article h3 {
+  font-size: 19px;
+}
+
+/* line 1045, ../scss/main.scss */
+.ie .carers-allowance .form-elements article h3 {
+  margin-right: .25em;
+}
+
+/* line 1047, ../scss/main.scss */
+.carers-allowance .form-elements .declare {
+  margin-top: 2em;
+  position: relative;
+}
+
+/* line 1050, ../scss/main.scss */
+.carers-allowance .form-elements .declare label {
+  display: block;
+  padding: 1em 1em 1em 2.3em;
+  background: #eee;
+  font-size: 1.7rem;
+  line-height: 1.25em;
+  cursor: pointer;
+  border: 1px solid #a2a2a2;
+}
+
+/* line 1058, ../scss/main.scss */
+.ie .carers-allowance .form-elements .declare label {
+  font-size: 17px;
+}
+
+/* line 1060, ../scss/main.scss */
+.carers-allowance .form-elements .declare input {
+  position: absolute;
+  top: 17px;
+  left: 1.1em;
+}
+
+/* line 1064, ../scss/main.scss */
+.carers-allowance .form-elements .declare input[type=checkbox]:checked + label {
+  background: #fff;
+  -webkit-transition: all 200ms ease-in;
+  -moz-transition: all 200ms ease-in;
+  -ms-transition: all 200ms ease-in;
+  -o-transition: all 200ms ease-in;
+  transition: all 200ms ease-in;
+}
+
+/* line 1071, ../scss/main.scss */
+.ie .carers-allowance .form-elements .declare input {
+  left: .8em;
+}
+
+/* line 1073, ../scss/main.scss */
+.carers-allowance .form-elements .declare.secondary {
+  margin-top: 1em;
+}
+
+/* line 1075, ../scss/main.scss */
+.carers-allowance .form-elements .declare.validation-check {
+  border-left: 3px solid #df3034;
+  background: #fef7f7;
+}
+
+/* line 1078, ../scss/main.scss */
+.carers-allowance .form-elements .declare.validation-check label {
+  border: 0;
+  background: #fef7f7;
+  padding-top: 0;
+}
+
+/* line 1082, ../scss/main.scss */
+.carers-allowance .form-elements .declare.validation-check input {
+  top: 45px;
+}
+
+/* line 1084, ../scss/main.scss */
+.carers-allowance .form-elements .declare.validation-check input[type=checkbox]:checked + label {
+  background: #fef7f7;
+}
+
+/* line 1086, ../scss/main.scss */
+.carers-allowance .form-elements .declare.validation-check .error {
+  font-size: 1.6rem;
+  color: #df3034;
+  padding: 1em 0 .5em .8em;
+}
+
+/* line 1090, ../scss/main.scss */
+.ie .carers-allowance .form-elements .declare.validation-check .error {
+  font-size: 16px;
+}
+
+/* line 1092, ../scss/main.scss */
+.carers-allowance .form-elements .dec ul {
+  margin: 0 0 0 1.3em;
+  list-style: disc;
+}
+
+/* line 1095, ../scss/main.scss */
+.carers-allowance .form-elements .dec ul li {
+  line-height: 1.4em;
+  padding: 0;
+  margin: 1em 0 0 0;
+  font-size: 1.7rem;
+  display: list-item;
+}
+
+/* line 1101, ../scss/main.scss */
+.carers-allowance .form-elements .dec ul li:first-child {
+  margin-top: 1em;
+}
+
+/* line 1103, ../scss/main.scss */
+.carers-allowance .form-elements table {
+  text-align: left;
+  border-collapse: collapse;
+  width: 98%;
+}
+
+@media screen and (max-width: 640px) {
+  /* line 1108, ../scss/main.scss */
+  .carers-allowance .form-elements table {
+    width: 100%;
+  }
+}
+/* line 1110, ../scss/main.scss */
+.carers-allowance .form-elements table thead {
+  border: 1px solid #bfc1c3;
+}
+
+/* line 1112, ../scss/main.scss */
+.carers-allowance .form-elements table tbody {
+  border: 1px dotted #bfc1c3;
+}
+
+/* line 1114, ../scss/main.scss */
+.carers-allowance .form-elements table tr {
+  border-top: 1px dotted #bfc1c3;
+}
+
+/* line 1116, ../scss/main.scss */
+.carers-allowance .form-elements table tr:first-child {
+  border-top: 0;
+}
+
+/* line 1118, ../scss/main.scss */
+.carers-allowance .form-elements table tr:nth-child(odd) {
+  background: #f8f8f8;
+}
+
+/* line 1120, ../scss/main.scss */
+.carers-allowance .form-elements table th {
+  font-size: 1.6rem;
+  font-weight: 600;
+  background: #dee0e2;
+  padding: .8em;
+  vertical-align: middle;
+  border-left: 1px solid #bfc1c3;
+  line-height: 1.4em;
+}
+
+/* line 1128, ../scss/main.scss */
+.carers-allowance .form-elements table th:first-child {
+  width: 18%;
+  border-left: 0;
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  /* line 1133, ../scss/main.scss */
+  .carers-allowance .form-elements table th:first-child {
+    width: auto;
+  }
+}
+/* line 1135, ../scss/main.scss */
+.ie .carers-allowance .form-elements table th {
+  font-size: 16px;
+}
+
+/* line 1137, ../scss/main.scss */
+.ie7 .carers-allowance .form-elements table th {
+  border-top: 1px solid #bfc1c3;
+  border-bottom: 1px solid #bfc1c3;
+  border-left: 0;
+  border-right: 1px solid #bec0c2;
+}
+
+/* line 1142, ../scss/main.scss */
+.ie7 .carers-allowance .form-elements table th:first-child {
+  border-left: 1px solid #bec0c2;
+}
+
+/* line 1144, ../scss/main.scss */
+.carers-allowance .form-elements table td {
+  font-size: 1.6rem;
+  padding: .8em;
+  border-left: 1px dotted #bfc1c3;
+  line-height: 1em;
+}
+
+/* line 1149, ../scss/main.scss */
+.carers-allowance .form-elements table td span {
+  display: block;
+  padding: .35em 0;
+}
+
+/* line 1152, ../scss/main.scss */
+.carers-allowance .form-elements table td:first-child {
+  border-left: 0;
+  text-align: center;
+}
+
+/* line 1155, ../scss/main.scss */
+.ie .carers-allowance .form-elements table td {
+  font-size: 16px;
+}
+
+/* line 1157, ../scss/main.scss */
+.ie7 .carers-allowance .form-elements table td {
+  border-left: 0;
+  border-bottom: 1px dotted #bfc1c3;
+  border-right: 1px dotted #bfc1c3;
+}
+
+/* line 1161, ../scss/main.scss */
+.ie7 .carers-allowance .form-elements table td:first-child {
+  border-left: 1px dotted #bfc1c3;
+}
+
+@media screen and (max-width: 660px) {
+  /* line 1164, ../scss/main.scss */
+  .carers-allowance .form-elements table .desc {
+    display: none;
+  }
+}
+/* line 1166, ../scss/main.scss */
+.carers-allowance .form-elements table caption {
+  text-indent: -9999px;
+  font-size: 0;
+}
+
+/* line 1169, ../scss/main.scss */
+.carers-allowance .form-elements table.employment th, .carers-allowance .form-elements table.employment td {
+  text-align: left;
+}
+
+/* line 1171, ../scss/main.scss */
+.carers-allowance .form-elements table.employment th:first-child, .carers-allowance .form-elements table.employment td:first-child {
+  width: 65%;
+}
+
+/* line 1173, ../scss/main.scss */
+.carers-allowance .form-elements table.employment th.desc, .carers-allowance .form-elements table.employment td.desc {
+  width: 40%;
+}
+
+/* line 1175, ../scss/main.scss */
+.carers-allowance .prompt {
+  background: #d5e8f3;
+  padding: 1.4em 1em;
+  margin: 1em 0 0 -1em;
+}
+
+@media screen and (max-width: 640px) {
+  /* line 1180, ../scss/main.scss */
+  .carers-allowance .prompt {
+    margin-left: 0;
+  }
+}
+/* line 1182, ../scss/main.scss */
+.carers-allowance .prompt p {
+  margin-top: .25em;
+}
+
+/* line 1184, ../scss/main.scss */
+.carers-allowance .prompt p:first-child {
+  margin-top: 0;
+}
+
+/* line 1186, ../scss/main.scss */
+.carers-allowance .prompt.error {
+  background: #f2f2f2;
+}
+
+/* line 1188, ../scss/main.scss */
+.carers-allowance .prompt.submitting {
+  position: relative;
+}
+
+@media screen and (max-width: 660px) {
+  /* line 1191, ../scss/main.scss */
+  .carers-allowance .prompt.submitting {
+    padding-right: 4em;
+  }
+}
+/* line 1193, ../scss/main.scss */
+.carers-allowance .prompt.submitting p {
+  margin: .5em 0 0 0;
+  font-weight: 600;
+  font-size: 1.7rem;
+}
+
+/* line 1197, ../scss/main.scss */
+.carers-allowance .prompt.submitting p:first-child {
+  margin: 0;
+}
+
+@media screen and (max-width: 660px) {
+  /* line 1200, ../scss/main.scss */
+  .carers-allowance .prompt.submitting p {
+    margin-top: 1em;
+  }
+}
+/* line 1202, ../scss/main.scss */
+.carers-allowance .prompt.submitting span {
+  position: absolute;
+  top: 1.4em;
+  right: .8em;
+  width: 36px;
+  height: 36px;
+  margin-top: -18px;
+  border-radius: 100px;
+  background: #008bc2;
+  color: #fff;
+  text-align: center;
+  font-size: 2.6rem;
+  font-weight: 700;
+}
+
+/* line 1215, ../scss/main.scss */
+.ie .carers-allowance .prompt.submitting span {
+  font-size: 26px;
+}
+
+@media screen and (max-width: 660px) {
+  /* line 1218, ../scss/main.scss */
+  .carers-allowance .prompt.submitting span {
+    width: 50px;
+    height: 50px;
+    font-size: 3.8rem;
+    top: 1em;
+    right: .5em;
+  }
+
+  /* line 1224, ../scss/main.scss */
+  .ie .carers-allowance .prompt.submitting span {
+    font-size: 38px;
+  }
+}
+/* line 1226, ../scss/main.scss */
+.carers-allowance .prompt.entitlement {
+  background: #fff;
+  border: 1px solid #a2a2a2;
+}
+
+/* line 1229, ../scss/main.scss */
+.carers-allowance .prompt.entitlement p {
+  font-weight: 600;
+}
+
+/* line 1231, ../scss/main.scss */
+.carers-allowance .prompt.entitlement-error {
+  background: #fef7f7;
+  border: 3px solid #df3034;
+}
+
+/* line 1234, ../scss/main.scss */
+.carers-allowance .prompt.breaks-prompt {
+  background: #fef7f7;
+  border: 3px solid #df3034;
+  position: relative;
+  display: none;
+}
+
+/* line 1239, ../scss/main.scss */
+.ie7 .carers-allowance .prompt.breaks-prompt {
+  overflow: hidden;
+}
+
+/* line 1241, ../scss/main.scss */
+.carers-allowance .prompt.breaks-prompt p {
+  padding-right: 5em;
+  margin-bottom: .35em;
+}
+
+@media screen and (max-width: 500px) {
+  /* line 1245, ../scss/main.scss */
+  .carers-allowance .prompt.breaks-prompt p {
+    line-height: 1.2em;
+  }
+}
+/* line 1247, ../scss/main.scss */
+.carers-allowance .prompt.breaks-prompt span {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  margin-top: -18px;
+  border-radius: 100px;
+  background: #990c1a;
+  color: #fff;
+  text-align: center;
+  font-size: 2.6rem;
+  font-weight: 700;
+}
+
+/* line 1260, ../scss/main.scss */
+.ie .carers-allowance .prompt.breaks-prompt span {
+  font-size: 26px;
+}
+
+@media screen and (max-width: 660px) {
+  /* line 1263, ../scss/main.scss */
+  .carers-allowance .prompt.breaks-prompt span {
+    width: 50px;
+    height: 50px;
+    margin-top: -25px;
+    font-size: 3.8rem;
+  }
+
+  /* line 1268, ../scss/main.scss */
+  .ie .carers-allowance .prompt.breaks-prompt span {
+    font-size: 38px;
+  }
+}
+/* line 1270, ../scss/main.scss */
+.carers-allowance .prompt.breaks-error-prompt {
+  margin: 0;
+}
+
+/* line 1272, ../scss/main.scss */
+.carers-allowance .prompt.eligibility-prompt {
+  margin-left: 0;
+}
+
+/* line 1274, ../scss/main.scss */
+.carers-allowance .prompt.eligibility-prompt p {
+  font-size: 1.6rem;
+  margin: .75em 0 0 0;
+}
+
+/* line 1277, ../scss/main.scss */
+.carers-allowance .prompt.eligibility-prompt p:first-child {
+  margin: 0;
+}
+
+/* line 1279, ../scss/main.scss */
+.ie .carers-allowance .prompt.eligibility-prompt p {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 480px) {
+  /* line 1282, ../scss/main.scss */
+  .carers-allowance .prompt.eligibility-prompt {
+    margin-left: -2.5em;
+  }
+
+  /* line 1284, ../scss/main.scss */
+  .carers-allowance .prompt.eligibility-prompt span {
+    display: none;
+  }
+
+  /* line 1286, ../scss/main.scss */
+  .carers-allowance .prompt.eligibility-prompt p {
+    padding-right: 0;
+    margin-top: 20px;
+  }
+}
+/* line 1289, ../scss/main.scss */
+.carers-allowance .prompt.question-prompt {
+  margin: .5em 0 0 0;
+  border: 1px solid #a2a2a2;
+  background: #fff;
+}
+
+/* line 1293, ../scss/main.scss */
+.carers-allowance .prompt.helper-prompt {
+  margin: .5em 0 1em 0;
+  border: 1px solid #a2a2a2;
+  background: #fff;
+}
+
+/* line 1297, ../scss/main.scss */
+.ie7 .carers-allowance .prompt.helper-prompt {
+  zoom: 1;
+}
+
+/* line 1299, ../scss/main.scss */
+.carers-allowance .prompt.helper-prompt p {
+  font-size: 1.6rem;
+  margin-top: 1em;
+}
+
+/* line 1302, ../scss/main.scss */
+.carers-allowance .prompt.helper-prompt p:first-child {
+  margin: 0;
+}
+
+/* line 1304, ../scss/main.scss */
+.carers-allowance .prompt.helper-prompt p.intro {
+  font-weight: 600;
+}
+
+/* line 1306, ../scss/main.scss */
+.ie .carers-allowance .prompt.helper-prompt p {
+  font-size: 16px;
+}
+
+/* line 1308, ../scss/main.scss */
+.carers-allowance .prompt.helper-prompt ul {
+  margin-top: 1em;
+  padding-left: 1.4em;
+  list-style: disc;
+}
+
+/* line 1312, ../scss/main.scss */
+.carers-allowance .prompt.helper-prompt ul li {
+  display: list-item;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 1316, ../scss/main.scss */
+.carers-allowance .form-steps {
+  margin-top: 1.2em;
+  clear: both;
+}
+
+@media screen and (max-width: 500px) {
+  /* line 1320, ../scss/main.scss */
+  .carers-allowance .form-steps {
+    padding-left: 0;
+  }
+}
+/* line 1322, ../scss/main.scss */
+.carers-allowance .form-steps p {
+  padding-bottom: 0.2em;
+  clear: both;
+}
+
+/* line 1325, ../scss/main.scss */
+.carers-allowance .form-steps a {
+  font-weight: 500;
+}
+
+/* line 1327, ../scss/main.scss */
+.ie7 .carers-allowance .form-steps a {
+  width: auto;
+  display: block;
+  padding: .4em 1em;
+}
+
+/* line 1331, ../scss/main.scss */
+.carers-allowance .button {
+  font-size: 1.9rem;
+  line-height: 1em;
+  color: #fff;
+  box-shadow: 0 3px 0 #000;
+  border: 0;
+  padding: 0.4em 1em 0.25em 1em;
+  cursor: pointer;
+  -webkit-appearance: none;
+  display: inline-block;
+  margin: .8em .25em 0 0;
+  background: #006435;
+  font-weight: 500;
+  text-decoration: none;
+  top: 0;
+  position: relative;
+  overflow: visible;
+}
+
+/* line 1348, ../scss/main.scss */
+.carers-allowance .button:focus {
+  outline: 3px solid #ffbf47;
+}
+
+/* line 1350, ../scss/main.scss */
+.carers-allowance .button:before {
+  content: "";
+  background: transparent;
+  width: 100%;
+  height: 40px;
+  display: block;
+  position: absolute;
+  top: -3px;
+  left: 0;
+}
+
+/* line 1359, ../scss/main.scss */
+.ie .carers-allowance .button {
+  font-size: 19px;
+}
+
+/* line 1361, ../scss/main.scss */
+.ie7 .carers-allowance .button {
+  padding: .2em 1em;
+  float: left;
+}
+
+/* line 1364, ../scss/main.scss */
+.ie8 .carers-allowance .button {
+  padding: .4em 1em;
+}
+
+/* line 1366, ../scss/main.scss */
+.carers-allowance .button:hover {
+  background: #004b27;
+}
+
+/* line 1368, ../scss/main.scss */
+.carers-allowance .button:active {
+  top: 3px;
+  background: #004b27;
+  box-shadow: 0 0 0 transparent;
+}
+
+/* line 1372, ../scss/main.scss */
+.ie7 .carers-allowance .button:active, .ie8 .carers-allowance .button:active {
+  top: 0;
+}
+
+/* line 1374, ../scss/main.scss */
+.carers-allowance .button.secondary {
+  background: #dee0e2;
+  color: #0b0c0c;
+}
+
+/* line 1377, ../scss/main.scss */
+.carers-allowance .button.secondary:hover {
+  background: #d0d3d6;
+}
+
+/* line 1379, ../scss/main.scss */
+.carers-allowance .button.warning {
+  background: #b10e1e;
+}
+
+/* line 1381, ../scss/main.scss */
+.carers-allowance .button.warning:hover {
+  background: #990c1a;
+}
+
+/* line 1383, ../scss/main.scss */
+.carers-allowance .button.disabled {
+  opacity: .3;
+}
+
+/* line 1385, ../scss/main.scss */
+.carers-allowance .button.row {
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+/* line 1388, ../scss/main.scss */
+.ie .carers-allowance .button.row {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 350px) {
+  /* line 1391, ../scss/main.scss */
+  .carers-allowance .button.row {
+    font-size: 14px;
+    padding-left: .75em;
+    padding-right: .75em;
+  }
+}
+/* line 1395, ../scss/main.scss */
+.carers-allowance .send-info {
+  margin: 2em 0 0 -1em;
+  padding: 1em;
+  border: 1px solid #a2a2a2;
+}
+
+@media screen and (max-width: 640px) {
+  /* line 1400, ../scss/main.scss */
+  .carers-allowance .send-info {
+    margin-left: 0;
+  }
+}
+/* line 1402, ../scss/main.scss */
+.carers-allowance .send-info article {
+  margin-top: 1.25em;
+}
+
+/* line 1404, ../scss/main.scss */
+.carers-allowance .send-info article:first-child {
+  margin: 0;
+}
+
+/* line 1406, ../scss/main.scss */
+.carers-allowance .send-info article p {
+  font-size: 1.7rem;
+}
+
+/* line 1408, ../scss/main.scss */
+.carers-allowance .send-info article h2 {
+  line-height: 1.2em;
+}
+
+/* line 1410, ../scss/main.scss */
+.carers-allowance .send-info article ul {
+  margin-top: .35em;
+}
+
+/* line 1412, ../scss/main.scss */
+.carers-allowance .send-info article ul li {
+  color: #555;
+  padding: 0 0 2px 20px;
+  line-height: 1.4em;
+  font-size: 1.7rem;
+  background: url("images/progress-tick.png") 0 3px no-repeat;
+}
+
+/* line 1418, ../scss/main.scss */
+.carers-allowance .send-info article.address {
+  margin-top: 1.25em;
+}
+
+/* line 1420, ../scss/main.scss */
+.carers-allowance .send-info article.address span {
+  display: block;
+  font-size: 1.7rem;
+  color: #555;
+}
+
+/* line 1424, ../scss/main.scss */
+.carers-allowance .send-info article.address p {
+  margin-top: 1.25em;
+}
+
+/* Header title */
+/* line 1428, ../scss/main.scss */
+.header-global .page-title {
+  color: #fff;
+  font-weight: 600;
+  font-size: 2rem;
+  padding: .3em 1.5rem 0 0;
+  overflow: hidden;
+  width: auto;
+  text-align: right;
+}
+
+/* line 1436, ../scss/main.scss */
+.ie .header-global .page-title {
+  font-size: 20px;
+  padding-right: 15px;
+}
+
+/* line 1439, ../scss/main.scss */
+.header-global .page-title span {
+  width: auto;
+  margin-left: .75em;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  padding: 6px 10px 4px 10px;
+  position: relative;
+  top: -2px;
+}
+
+/* line 1449, ../scss/main.scss */
+.ie .header-global .page-title span {
+  font-size: 14px;
+}
+
+/* line 1451, ../scss/main.scss */
+.header-global .page-title.beta span {
+  background: #d53880;
+}
+
+@media screen and (max-width: 480px) {
+  /* line 1454, ../scss/main.scss */
+  .header-global .page-title strong {
+    display: none;
+  }
+
+  /* line 1456, ../scss/main.scss */
+  .header-global .page-title span {
+    position: absolute;
+    top: 13px;
+    right: 13px;
+  }
+}
+/* line 1461, ../scss/main.scss */
+.content-panel {
+  margin-top: 2em;
+}
+
+/* line 1464, ../scss/main.scss */
+.coc-layout li label {
+  padding-right: 12em;
+}
+
+@media screen and (max-width: 760px) {
+  /* line 1467, ../scss/main.scss */
+  .coc-layout li label {
+    padding-right: 0;
+  }
+}
+/* line 1470, ../scss/main.scss */
+.question-group {
+  margin-top: 0;
+}
+
+/* line 1472, ../scss/main.scss */
+.question-group legend {
+  font-size: 1.9rem !important;
+  font-weight: 400 !important;
+  color: black !important;
+}
+
+/* line 1476, ../scss/main.scss */
+.question-group ul li {
+  padding-top: 0;
+}
+
+/* STP Table */
+/* table styling */
+/* line 1481, ../scss/main.scss */
+table {
+  text-align: left;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+@media screen and (max-width: 640px) {
+  /* line 1486, ../scss/main.scss */
+  table {
+    width: 100%;
+  }
+}
+/* line 1488, ../scss/main.scss */
+table thead {
+  border: 1px solid #bfc1c3;
+}
+
+/* line 1490, ../scss/main.scss */
+table tbody {
+  border: 1px dotted #bfc1c3;
+}
+
+/* line 1492, ../scss/main.scss */
+table tr {
+  border-top: 1px dotted #bfc1c3;
+  /*&:nth-child(odd) {
+  	background: #f8f8f8;
+  }*/
+}
+
+/* line 1497, ../scss/main.scss */
+table tr:first-child {
+  border-top: 0;
+}
+
+/* line 1499, ../scss/main.scss */
+table th {
+  font-size: 1.6rem;
+  font-weight: 600;
+  background: #dee0e2;
+  padding: .8em;
+  vertical-align: middle;
+  border-left: 1px solid #bfc1c3;
+  line-height: 1.4em;
+}
+
+/* line 1507, ../scss/main.scss */
+table th:first-child {
+  width: 75%;
+  border-left: 0;
+  text-align: left;
+}
+
+@media screen and (max-width: 600px) {
+  /* line 1512, ../scss/main.scss */
+  table th:first-child {
+    width: auto;
+  }
+}
+/* line 1514, ../scss/main.scss */
+.ie table th {
+  font-size: 16px;
+}
+
+/* line 1516, ../scss/main.scss */
+.ie7 table th {
+  border-top: 1px solid #bfc1c3;
+  border-bottom: 1px solid #bfc1c3;
+  border-left: 0;
+  border-right: 1px solid #bec0c2;
+}
+
+/* line 1521, ../scss/main.scss */
+.ie7 table th:first-child {
+  border-left: 1px solid #bec0c2;
+}
+
+/* line 1523, ../scss/main.scss */
+table td {
+  font-size: 1.6rem;
+  padding: 1.0em .8em;
+  border-left: 1px dotted #bfc1c3;
+  line-height: 1em;
+}
+
+/* line 1528, ../scss/main.scss */
+table td span {
+  display: block;
+  padding: .35em 0;
+}
+
+/* line 1531, ../scss/main.scss */
+table td span.amount-breakdown {
+  color: #8d8d8d;
+}
+
+/* line 1533, ../scss/main.scss */
+table td:first-child {
+  border-left: 0;
+  text-align: left;
+  font-weight: bold;
+}
+
+/* line 1537, ../scss/main.scss */
+table td:last-child {
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+
+/* line 1540, ../scss/main.scss */
+.ie table td {
+  font-size: 16px;
+}
+
+/* line 1542, ../scss/main.scss */
+.ie7 table td {
+  border-left: 0;
+  border-bottom: 1px dotted #bfc1c3;
+  border-right: 1px dotted #bfc1c3;
+}
+
+/* line 1546, ../scss/main.scss */
+.ie7 table td:first-child {
+  border-left: 1px dotted #bfc1c3;
+}
+
+/* line 1548, ../scss/main.scss */
+table td a.info {
+  float: right;
+  font-weight: normal;
+}
+
+/* line 1551, ../scss/main.scss */
+table td p.sp-info {
+  padding: 0 2em 2em  0;
+}
+
+@media screen and (max-width: 660px) {
+  /* line 1554, ../scss/main.scss */
+  table .desc {
+    display: none;
+  }
+}
+/* line 1556, ../scss/main.scss */
+table caption {
+  text-indent: -9999px;
+  font-size: 0;
+}
+
+/* line 1559, ../scss/main.scss */
+table.employment th, table.employment td {
+  text-align: left;
+}
+
+/* line 1561, ../scss/main.scss */
+table.employment th:first-child, table.employment td:first-child {
+  width: 65%;
+}
+
+/* line 1563, ../scss/main.scss */
+table.employment th.desc, table.employment td.desc {
+  width: 40%;
+}
+
+/* line 1565, ../scss/main.scss */
+table.additional-sp {
+  margin: 20px 0;
+}
+
+/* line 1567, ../scss/main.scss */
+table.additional-sp td {
+  font-weight: normal;
+}
+
+/* line 1569, ../scss/main.scss */
+table.additional-sp td:last-child {
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+
+/*@End table */
+/* SP Summary */
+/* line 1575, ../scss/main.scss */
+.hero-panel {
+  background: #28a197;
+  padding: 2em;
+  text-align: center;
+}
+
+/* line 1579, ../scss/main.scss */
+.hero-panel h2 {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* line 1583, ../scss/main.scss */
+.hero-panel h2 span {
+  font-size: 8.2rem;
+  display: block;
+  line-height: 1.5em;
+}
+
+@media screen and (max-width: 600px) {
+  /* line 1588, ../scss/main.scss */
+  .hero-panel h2 h2 {
+    font-size: 1.5em;
+  }
+}
+/* line 1591, ../scss/main.scss */
+.sp-breakdown {
+  margin: 2em 0;
+}
+
+/* line 1593, ../scss/main.scss */
+.sp-breakdown h3 {
+  font-size: 2.4rem;
+  text-align: left;
+  margin-bottom: 1em;
+}
+
+@media screen and (max-width: 660px) {
+  /* line 1598, ../scss/main.scss */
+  .sp-breakdown h3 {
+    text-align: center;
+  }
+}
+/* ==========================================================================
+   clearfix
+   ========================================================================== */
+/* line 1605, ../scss/main.scss */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+/* line 1611, ../scss/main.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* firefix radio fix */
+@-moz-document url-prefix() {
+  /* line 1616, ../scss/main.scss */
+  .radio input[type="radio"] {
+    top: 15px !important;
+    left: 12px !important;
+  }
+}
+
+/* line 1620, ../scss/main.scss */
+.text-ar {
+  text-align: right;
+}
+
+/* line 1623, ../scss/main.scss */
+.left {
+  float: left;
+}
+
+/* line 1626, ../scss/main.scss */
+.right {
+  float: right;
+}
+
+/* Header - Global Overrides - inc !important overrides */
+/* line 1630, ../scss/main.scss */
+html {
+  background: #dee0e2 !important;
+}
+
+/* line 1633, ../scss/main.scss */
+#global-header #logo img {
+  left: -211px !important;
+}
+
+/* line 1636, ../scss/main.scss */
+#global-header .header-wrapper {
+  padding: 0.5em 1px !important;
+}
+
+/* line 1639, ../scss/main.scss */
+.carers-allowance-footer {
+  padding-top: 30px !important;
+  padding-bottom: 30px !important;
+}
+
+/* line 1643, ../scss/main.scss */
+.carers-allowance-footer .footer-meta {
+  border-top: none !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-top: 0 !important;
+}
+
+/* line 1649, ../scss/main.scss */
+.carers-allowance-footer .footer-meta .copyright {
+  position: relative;
+  top: 2px;
+}
+
+@media screen and (max-width: 640px) {
+  /* line 1654, ../scss/main.scss */
+  #footer .footer-meta nav {
+    text-align: center;
+  }
+}

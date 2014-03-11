@@ -1,0 +1,24 @@
+<footer class="group js-footer" id="footer" role="contentinfo">
+            <div class="footer-wrapper carers-allowance-footer">
+                <div class="footer-meta">
+                    <nav>
+                        <ul>
+                            <li><a href="/claim-notes#16" target="_blank">Helpdesk</a></li>
+                            <li><a href="http://www.dwp.gov.uk/privacy-policy/" target="_blank">Privacy &amp; Cookies</a></li>
+                            <li>Built by <a href="https://www.gov.uk/government/organisations/department-for-work-pensions" target="_blank">Department for Work &amp; Pensions</a></li>
+                        </ul>
+
+                    </nav>
+
+                    <div class="copyright">
+                        <a href="http://www.nationalarchives.gov.uk/information-management/our-services/crown-copyright.htm" target="_blank">© Crown Copyright</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="_assets/js/vendor/jquery-1.10.2.min.js"></script>
+        <script src="_assets/js/plugins.js"></script>
+        <script src="_assets/js/custom.js"></script>
+        
+    </body>
+</html>
