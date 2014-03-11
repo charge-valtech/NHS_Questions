@@ -1,0 +1,22 @@
+<div class="progress-bar">
+
+    <ol>
+        <li class="active">
+            <span>Employer</span>
+        </li>
+        <li>
+            <span>Vacancy / Role</span>
+        </li>
+        <li>
+            <span>Dates</span>
+        </li>
+        <li>
+            <span>Eligibility</span>
+        </li>
+        <li>
+            <span>Training Provider</span>
+        </li>
+
+    </ol>
+
+</div>

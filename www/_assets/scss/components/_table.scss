@@ -1,0 +1,155 @@
+/* STP Table */
+/* table styling */
+table {
+    text-align: left;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        width: 100%;
+    }
+}
+
+table thead {
+    border: 1px solid #bfc1c3;
+}
+
+table tbody {
+    border: 1px dotted #bfc1c3;
+}
+
+table tr {
+    border-top: 1px dotted #bfc1c3;
+    /*&:nth-child(odd) {
+      background: #f8f8f8;
+    }*/
+}
+
+table tr:first-child {
+    border-top: 0;
+}
+
+table th {
+    font-size: 1.6rem;
+    font-weight: 600;
+    background: #dee0e2;
+    padding: .8em;
+    vertical-align: middle;
+    border-left: 1px solid #bfc1c3;
+    line-height: 1.4em;
+}
+
+table th:first-child {
+    width: 75%;
+    border-left: 0;
+    text-align: left;
+}
+
+@media screen and (max-width: 600px) {
+    table th:first-child {
+        width: auto;
+    }
+}
+
+.ie table th {
+    font-size: 16px;
+}
+
+.ie7 table th {
+    border-top: 1px solid #bfc1c3;
+    border-bottom: 1px solid #bfc1c3;
+    border-left: 0;
+    border-right: 1px solid #bec0c2;
+}
+
+.ie7 table th:first-child {
+    border-left: 1px solid #bec0c2;
+}
+
+table td {
+    font-size: 1.6rem;
+    padding: 1.0em .8em;
+    border-left: 1px dotted #bfc1c3;
+    line-height: 1em;
+}
+
+table td span {
+    display: block;
+    padding: .35em 0;
+}
+
+table td span.amount-breakdown {
+    color: #8d8d8d;
+}
+
+table td:first-child {
+    border-left: 0;
+    text-align: left;
+    font-weight: bold;
+}
+
+table td:last-child {
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+
+.ie table td {
+    font-size: 16px;
+}
+
+.ie7 table td {
+    border-left: 0;
+    border-bottom: 1px dotted #bfc1c3;
+    border-right: 1px dotted #bfc1c3;
+}
+
+.ie7 table td:first-child {
+    border-left: 1px dotted #bfc1c3;
+}
+
+table td a.info {
+    float: right;
+    font-weight: normal;
+}
+
+table td p.sp-info {
+    padding: 0 2em 2em  0;
+}
+
+@media screen and (max-width: 660px) {
+    table .desc {
+        display: none;
+    }
+}
+
+table caption {
+    text-indent: -9999px;
+    font-size: 0;
+}
+
+table.employment th, table.employment td {
+    text-align: left;
+}
+
+table.employment th:first-child, table.employment td:first-child {
+    width: 65%;
+}
+
+table.employment th.desc, table.employment td.desc {
+    width: 40%;
+}
+
+table.additional-sp {
+    margin: 20px 0;
+}
+
+table.additional-sp td {
+    font-weight: normal;
+}
+
+table.additional-sp td:last-child {
+    font-size: 2.4rem;
+    font-weight: bold;
+}

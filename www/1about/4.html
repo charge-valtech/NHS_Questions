@@ -1,0 +1,242 @@
+<!--#include virtual="../public/_includes/_global/header.shtml" -->  
+<main role="main" id="main">
+	<div class="carers-allowance">
+		<div class="prototype">
+		  <p><strong>ALPHA:</strong> This is a prototype. You cannot claim State Pension using this service. </p>
+		</div>
+		<div class="progress-steps">
+		    <!--#include virtual="../public/_includes/_global/telephone.shtml" -->
+		    <!--#include virtual="../public/_includes/progress-bar/about-you.shtml" -->
+		</div>
+		<section>
+			<form action="5.html" method="post">
+		        <h1>About you</h1>
+		        <div class="completed">
+	    			<ul>
+	    				<li>
+	    					<h3>Your details</h3>
+	    					<a href="2.html" aria-label="Change this answer - this is an optional link">Change these answers</a>
+	    				</li>	    				
+	    				<li>
+	    					<h3>Your contact details</h3>
+	    					<a href="3.html" aria-label="Change this answer - this is an optional link">Change these answers</a>
+	    				</li>
+	    			</ul>
+	    		</div>	    		
+				<fieldset class="form-elements">
+					<legend>When to claim your State Pension</legend>					
+					<ul class="group">
+						<li>
+							<fieldset class="question-group">
+								<legend>You will reach State Pension age Today<!--1st April 2014-->. Do you want to claim from this date?</legend>
+								<ul class="radio"id="date">
+									<li><input name="date" class="hide" id="radio-yes" type="radio" value="yes"> <label for="radio-yes">Yes</label></li>
+									<li><input name="date" class="show" id="radio-no"  type="radio" value="no"> <label for="radio-no">No</label></li>
+								</ul>
+							</fieldset>
+						</li>
+						
+						<li style="display:none;" class="different">
+							<fieldset class="question-group">
+								<legend>When would you like to claim from?</legend>
+								<ul class="inline year" id="">
+									<li><label for="">dateOfClaim_day <em>(optional)</em></label> 
+									<select id="" name="">
+										<option value="">
+											Day
+										</option>
+
+										<option  value="1">
+											01
+										</option>
+
+										<option value="2">
+											02
+										</option>
+
+										<option value="3">
+											03
+										</option>
+
+										<option value="4">
+											04
+										</option>
+
+										<option value="5">
+											05
+										</option>
+
+										<option value="6">
+											06
+										</option>
+
+										<option value="7">
+											07
+										</option>
+
+										<option value="8">
+											08
+										</option>
+
+										<option value="9">
+											09
+										</option>
+
+										<option value="10">
+											10
+										</option>
+
+										<option value="11">
+											11
+										</option>
+
+										<option value="12">
+											12
+										</option>
+
+										<option value="13">
+											13
+										</option>
+
+										<option value="14">
+											14
+										</option>
+
+										<option value="15">
+											15
+										</option>
+
+										<option value="16">
+											16
+										</option>
+
+										<option value="17">
+											17
+										</option>
+
+										<option value="18">
+											18
+										</option>
+
+										<option value="19">
+											19
+										</option>
+
+										<option value="20">
+											20
+										</option>
+
+										<option value="21">
+											21
+										</option>
+
+										<option value="22">
+											22
+										</option>
+
+										<option value="23">
+											23
+										</option>
+
+										<option value="24">
+											24
+										</option>
+
+										<option value="25">
+											25
+										</option>
+
+										<option value="26">
+											26
+										</option>
+
+										<option value="27">
+											27
+										</option>
+
+										<option value="28">
+											28
+										</option>
+
+										<option value="29">
+											29
+										</option>
+
+										<option value="30">
+											30
+										</option>
+
+										<option value="31">
+											31
+										</option>
+									</select></li>
+									<li><label for="">dateOfClaim_month <em>(optional)</em></label> 
+									<select id="" name="">
+										<option value="">
+											Month
+										</option>
+
+										<option value="1">
+											January
+										</option>
+
+										<option value="2">
+											February
+										</option>
+
+										<option value="3">
+											March
+										</option>
+
+										<option value="4">
+											April
+										</option>
+
+										<option value="5">
+											May
+										</option>
+
+										<option value="6">
+											June
+										</option>
+
+										<option value="7">
+											July
+										</option>
+
+										<option value="8">
+											August
+										</option>
+
+										<option value="9">
+											September
+										</option>
+
+										<option value="10">
+											October
+										</option>
+
+										<option value="11">
+											November
+										</option>
+
+										<option value="12">
+											December
+										</option>
+									</select></li>
+									<li><label for="">dateOfClaim_year <em>(optional)</em></label> <input autocomplete="off" id="" maxlength="4" name="" pattern="[0-9 \-]{1,20}" placeholder="YYYY" title="Must be numbers only" type="tel"></li>
+								</ul>			
+								<p class="helper">This can't be earlier than 1st April 2014</p>
+							</fieldset>
+						</li>
+					</ul>
+				</fieldset>
+				<div class="form-steps">
+					<a href="3.html" class="button secondary" aria-label="Back Button">Back</a>
+					<button type="submit" class="button" aria-label="Next Button">Next</button>
+				</div>
+			</form>
+	    </section>
+	</div>
+</main>
+<!--#include virtual="../public/_includes/_global/footer.shtml" -->   

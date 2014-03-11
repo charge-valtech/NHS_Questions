@@ -1,0 +1,143 @@
+<!--#include virtual="../_includes/_global/header.shtml" -->  
+<main role="main" id="main">
+	<div class="carers-allowance">
+		<div class="progress-steps">
+		    <!--#include virtual="../_includes/_global/telephone.shtml" -->
+		    <!--#include virtual="../_includes/progress-bar/security.shtml" -->
+		</div>
+		<section>
+			<form action="3.html" method="post">
+	        	<h1>Employer Role Submission</h1>
+	    		<fieldset class="form-elements">
+					<legend>Employer</legend>
+					<ul class="group">					
+						<li>
+							<label for="title">Title</label>
+							<select id="" name="">
+	        
+	        
+						            <option value="">Please select</option>
+						        
+						            <option value="mr">Mr</option>
+						        
+						            <option value="mrs">Mrs</option> 
+						        
+						            <option value="miss">Miss</option>
+						        
+						            <option value="ms">Ms</option>
+						        
+						            <option value="dr">Dr</option>
+						        
+						            <option value="rev">Rev</option>
+						        
+						    </select>
+						</li>
+						<li>
+							<label for="first-name">First name</label>
+							<input type="text" name="first-name" id="first-name">
+						</li>
+						<li>
+							<label for="surname">Last name</label>
+							<input type="text" name="surname" id="surname">
+							<!--<p><a  href="javascript:void(0)" id="select-start" style="font-size:1.4px; font-size:1.4rem;">Add other names </a></p>-->
+						</li>
+						<li>
+							<label for="middle-name">Middle name (optional)</label>
+							<input type="text" name="middle-name" id="middle-name">
+						</li>
+						<li>
+							<label for="other-name">Other surname or maiden name (optional)</label>
+							<input type="text" name="other-name" id="other-name">
+							<input type="hidden" id="other">
+						</li>
+						<li>
+							<fieldset class="question-group">
+								<legend>Gender</legend>
+								<ul class="radio" id="">
+									<li><input name="gender" id="male" type="radio"> <label for="male">Male</label></li>
+									<li><input name="gender" id="female"  type="radio"> <label for="female">Female</label></li>
+								</ul>
+							</fieldset>
+						</li>
+						<li>
+						<!--
+							<p class="error">You can't apply for State Pension yet.</p>
+							<p class="error">The earliest we can accept your application is 4 months before your State Pension age.</p>
+						-->
+							<fieldset class="question-group">
+								<legend>Date of birth</legend>
+								<ul class="inline year">
+									<li>
+										<label for="day">Day</label>
+										<select name="day" id="day">
+											<option value="#" selected>Day</option>
+											<option value="#">1</option>
+											<option value="#">2</option>
+											<option value="#">3</option>
+											<option value="#">4</option>
+											<option value="#">5</option>
+											<option value="#">6</option>
+											<option value="#">7</option>
+											<option value="#">8</option>
+											<option value="#">9</option>
+											<option value="#">10</option>
+											<option value="#">11</option>
+											<option value="#">12</option>
+											<option value="#">13</option>
+											<option value="#">14</option>
+											<option value="#">15</option>
+											<option value="#">16</option>
+											<option value="#">17</option>
+											<option value="#">18</option>
+											<option value="#">19</option>
+											<option value="#">20</option>
+											<option value="#">21</option>
+											<option value="#">22</option>
+											<option value="#">23</option>
+											<option value="#">24</option>
+											<option value="#">25</option>
+											<option value="#">26</option>
+											<option value="#">27</option>
+											<option value="#">28</option>
+											<option value="#">29</option>
+											<option value="#">30</option>
+											<option value="#">31</option>
+										</select>
+									</li>
+									<li>
+										<label for="month">Month</label>
+										<select name="month" id="month">
+											<option value="#">Month</option>
+											<option value="#">January</option>
+											<option value="#">February</option>
+											<option value="#">March</option>
+											<option value="#">April</option>
+											<option value="#">May</option>
+											<option value="#">June</option>
+											<option value="#">July</option>
+											<option value="#">August</option>
+											<option value="#">September</option>
+											<option value="#">October</option>
+											<option value="#">November</option>
+											<option value="#">December</option>
+										</select>
+									</li>
+									<li>
+										<label for="year">Year</label>
+										<input type="tel" name="year" id="year" maxlength="4" placeholder="YYYY">
+									</li>
+								</ul>
+							</fieldset>
+							<p class="helper">eg: 1 January 1960</p>
+						</li>
+					</ul>
+				</fieldset>
+				<div class="form-steps">
+					<a href="1.html"  class="button secondary" aria-label="Back Button">Back</a>
+					<button class="button" aria-label="Next Button">Next</button>
+				</div>
+			</form>
+	    </section>
+	</div>
+</main>
+<!--#include virtual="../_includes/_global/footer.shtml" -->    

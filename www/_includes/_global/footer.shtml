@@ -11,14 +11,14 @@
                     </nav>
 
                     <div class="copyright">
-                        <a href="http://www.nationalarchives.gov.uk/information-management/our-services/crown-copyright.htm" target="_blank">© Crown Copyright</a>
+                        <a href="http://www.nationalarchives.gov.uk/information-management/our-services/crown-copyright.htm" target="_blank">&copy; Crown Copyright</a>
                     </div>
                 </div>
             </div>
         </footer>
-        <script src="_assets/js/vendor/jquery-1.10.2.min.js"></script>
-        <script src="_assets/js/plugins.js"></script>
-        <script src="_assets/js/custom.js"></script>
+        <script src="../_assets/js/vendor/jquery-1.10.2.min.js"></script>
+        <script src="../_assets/js/plugins.js"></script>
+        <script src="../_assets/js/custom.js"></script>
         
     </body>
 </html>

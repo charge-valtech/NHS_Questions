@@ -1,0 +1,102 @@
+<!--#include virtual="../public/_includes/_global/header.shtml" -->  
+<main role="main" id="main">
+	<div class="carers-allowance">
+		<div class="prototype">
+		  <p><strong>ALPHA:</strong> This is a prototype. You cannot claim State Pension using this service. </p>
+		</div>
+		<div class="progress-steps">
+		    <!--#include virtual="../public/_includes/_global/telephone.shtml" -->
+		    <!--#include virtual="../public/_includes/progress-bar/about-you.shtml" -->
+		</div>
+		<section>
+	        <form action="../2employment/1.html" method="post">
+	        	<h1>About you</h1>
+		        <div class="completed">
+		        	<ul>
+	    				<li>
+	    					<h3>Your details</h3>
+	    					<a href="2.html" aria-label="Change this answer - this is an optional link">Change these answers</a>
+	    				</li>	    				
+	    				<li>
+	    					<h3>Your contact details</h3>
+	    					<a href="3.html" aria-label="Change this answer - this is an optional link">Change these answers</a>
+	    				</li>
+	    				<li>
+	    					<h3>When to claim your State Pension</h3>
+	    					<a href="4.html" aria-label="Change this answer - this is an optional link">Change these answers</a>
+	    				</li>
+	    			</ul>
+	    		</div>
+				<fieldset class="form-elements">
+					<legend>More information about you</legend>
+					<ul>
+						<li>
+							<label for="marital">Relationship status?</label>
+							<select id="" name="">
+	        
+	        						<option value="">Please select</option>
+
+	        						<option value="s">Single</option>
+						        
+						            <option value="m">Married</option>
+
+						            <option value="m">Civil Partner</option>
+						        
+						            <option value="d">Divorced</option>
+
+						            <option>Former Civil Partner</option>
+						        
+						            <option value="w">Widowed</option>
+						        
+						            <option value="p">Late Civil Partner</option>
+						        
+						    </select>
+						</li>
+						<li>
+							<fieldset class="question-group">
+								<legend>Since birth, have you ever lived or worked outside the United Kingdom or Isle of Man?</legend>
+								<ul class="radio" id="lived">
+									<li><input name="lived"  id="yes1" onclick="" type="radio" value="yes"> <label for="yes1">Yes</label></li>
+									<li><input name="lived"  id="no1" onclick="" type="radio" value="no"> <label for="no1">No</label></li>
+								</ul>
+							</fieldset>
+						</li>
+						<li>
+							<fieldset class="question-group">
+								<legend>Are you or your partner/spouse waiting to hear about or getting any other benefits?</legend>
+								<ul class="radio" id="benefits">
+									<li><input name="benefits"  id="yes3" onclick="" type="radio" value="yes3"> <label for="yes3">Yes</label></li>
+									<li><input name="benefits"  id="no3" onclick="" type="radio" value="no3"> <label for="no3">No</label></li>
+								</ul>
+							</fieldset>
+						</li>
+						<li>
+							<fieldset class="question-group">
+								<legend>Are you currently in hospital?</legend>
+								<ul class="radio" id="hospital">
+									<li><input name="hospital"  id="yes4" onclick="" type="radio" value="yes4"> <label for="yes4">Yes</label></li>
+									<li><input name="hospital"  id="no4" onclick="" type="radio" value="no4"> <label for="no4">No</label></li>
+								</ul>
+							</fieldset>
+						</li>
+						<li>
+							<fieldset class="question-group">
+								<legend>Do you have anybody who acts on your behalf?</legend>
+								<ul class="radio" id="acts">
+									<li><input name="acts"  id="yes5" onclick="" type="radio" value="yes5"> <label for="yes5">Yes</label></li>
+									<li><input name="acts"  id="no5" onclick="" type="radio" value="no5"> <label for="no5">No</label></li>
+								</ul>
+							</fieldset>
+						</li>
+						
+					</ul>
+				</fieldset>
+				<div class="form-steps">
+					<a href="4.html" class="button secondary" aria-label="Back Button">Back</a>
+					<button type="submit" class="button" aria-label="Next Button">Next</button>
+				</div>
+			</form>
+	    </section>
+	</div>
+</main>
+<!--#include virtual="../public/_includes/_global/footer.shtml" -->   
