@@ -1,5 +1,5 @@
 <footer class="group js-footer" id="footer" role="contentinfo">
-            <div class="footer-wrapper carers-allowance-footer">
+            <div class="footer-wrapper">
                 <div class="footer-meta">
                     <nav>
                         <ul>
@@ -16,7 +16,14 @@
                 </div>
             </div>
         </footer>
-        <script src="../_assets/js/vendor/jquery-1.10.2.min.js"></script>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script>
+        if (!window.jQuery) {
+            document.write('<script src="../_assets/js/vendor/jquery-1.11.0.min.js"><\/script>');
+        }
+        </script>
+
         <script src="../_assets/js/plugins.js"></script>
         <script src="../_assets/js/custom.js"></script>
         

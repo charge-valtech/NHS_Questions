@@ -1962,7 +1962,7 @@ input:focus, textarea:focus, select:focus, #global-header input:focus {
 
 /* line 1242, ../scss/modules/_header.scss */
 .header-global .page-title.beta span {
-  background: #9325b2;
+  background: #da337d;
 }
 
 @media screen and (max-width: 480px) {
