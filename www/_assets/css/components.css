@@ -1,3 +1,13 @@
+/* line 4, ../scss/components/_typography.scss */
+h1 {
+  font-size: 32px;
+}
+
+/* line 11, ../scss/components/_typography.scss */
+ul.unstyled {
+  list-style: none;
+}
+
 /* STP Table */
 /* table styling */
 /* line 3, ../scss/components/_table.scss */

@@ -8,8 +8,6 @@ main {
     display: block;
 }
 
-
-
 .skiplink-container {
     text-align: center;
     background: #0b0c0c;
@@ -33,11 +31,9 @@ main {
     position: static;
 }
 
-
-
 .content-wrapper {
     background: #fff;
-    padding: 0 1em 4em 1em;
+    padding: 0 1em 4em 1em; 
     margin: 0 auto;
     max-width: 980px;
     section p {
@@ -46,76 +42,26 @@ main {
         font-weight: 400;
         line-height: 1.4em;
     }
-    h1 {
-        font-size: $h1-font-size;
+    .help-bar-wrapper {
+        width: 100%;
+        clear:both;
+        border-top: 10px solid $colorPrimary;
+        .help-bar {
+            list-style: none;
+            display: inline;
+            float: right;
+            li {
+                float: left;
+                margin-right: 20px;
+            }
+        }
     }
-
-
-
-
+    .progress-bar {
+        width: 100%;
+        display: block;
+        clear: both;
+    }
 }
-
-
-
-
- .contact-info {
-    margin: 0;
-    padding: 10px 1em 10px 0;
-    list-style: none;
-    text-align: right;
-    border-top: 10px solid #d53880; }
-    @media screen and (max-width: 640px) {
-      .contact-info {
-        border: 0;
-        padding-right: 0; } }
-    .contact-info li {
-      margin-left: 14px;
-      display: inline;
-      font-size: 14px;
-      color: #000;
-      font-weight: 500; }
-      .contact-info li:first-child {
-        border: 0;
-        margin: 0;
-        padding: 0; }
-        .contact-info li:first-child a {
-          display: inline-block;
-          position: relative;
-          height: 18px;
-          width: 18px;
-          text-align: center;
-          padding: 0;
-          color: #000;
-          font-size: 11px;
-          background: #f5f5f5;
-          text-decoration: none;
-          font-weight: bold;
-          line-height: 1.8em;
-          font-family: 'georgia';
-          font-style: italic;
-          top: -1px;
-          margin-right: 5px;
-          border-radius: 100px;
-          box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.6); }
-          .contact-info li:first-child a:hover {
-            background: #333;
-            color: #fff; }
-          .contact-info li:first-child a span {
-            text-indent: -9999px;
-            display: inline-block; }
-      @media screen and (max-width: 480px) {
-        .contact-info li.feedback {
-          display: none; } }
-      .contact-info li a {
-        color: #000;
-        display: inline-block;
-        padding-top: 5px; }
-        .contact-info li a:hover {
-          color: #666; }
-
-
-
-
 
 .content-wrapper section p.mandatory {
     margin-top: 1.6em;

@@ -1,0 +1,14 @@
+@import '../base/variables.scss';   
+
+
+h1 {
+    font-size: $h1-font-size;
+}
+
+
+ul {
+    
+    &.unstyled{
+       list-style:none;
+    }
+}
