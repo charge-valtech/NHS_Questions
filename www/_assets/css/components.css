@@ -1,192 +1,148 @@
-/* line 4, ../scss/components/_typography.scss */
-h1 {
-  font-size: 32px;
+@font-face {
+  font-family: GDS-Logo;
+  src: local("HelveticaNeue"), local("Helvetica Neue"), local("Arial"), local("Helvetica");
 }
 
-/* line 11, ../scss/components/_typography.scss */
-ul.unstyled {
-  list-style: none;
+@-ms-viewport {
+  width: device-width;
 }
 
-/* STP Table */
-/* table styling */
-/* line 3, ../scss/components/_table.scss */
-table {
-  text-align: left;
-  border-collapse: collapse;
-  width: 100%;
+@-o-viewport {
+  width: device-width;
 }
 
-@media screen and (max-width: 640px) {
-  /* line 10, ../scss/components/_table.scss */
-  table {
-    width: 100%;
-  }
-}
-/* line 15, ../scss/components/_table.scss */
-table thead {
-  border: 1px solid #bfc1c3;
+@-ms-viewport {
+  width: device-width;
 }
 
-/* line 19, ../scss/components/_table.scss */
-table tbody {
-  border: 1px dotted #bfc1c3;
+@-o-viewport {
+  width: device-width;
 }
 
-/* line 23, ../scss/components/_table.scss */
-table tr {
-  border-top: 1px dotted #bfc1c3;
-  /*&:nth-child(odd) {
-    background: #f8f8f8;
-  }*/
+@-ms-viewport {
+  width: device-width;
 }
 
-/* line 30, ../scss/components/_table.scss */
-table tr:first-child {
-  border-top: 0;
+@-o-viewport {
+  width: device-width;
 }
 
-/* line 34, ../scss/components/_table.scss */
-table th {
-  font-size: 1.6rem;
-  font-weight: 600;
-  background: #dee0e2;
-  padding: .8em;
+@-ms-viewport {
+  width: device-width;
+}
+
+@-o-viewport {
+  width: device-width;
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+
+@-o-viewport {
+  width: device-width;
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+
+@-o-viewport {
+  width: device-width;
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+
+@-o-viewport {
+  width: device-width;
+}
+
+/* line 5, ../scss/components/_buttons.scss */
+.button {
+  background-color: #b10e1e;
+  position: relative;
+  display: -moz-inline-stack;
+  display: inline-block;
   vertical-align: middle;
-  border-left: 1px solid #bfc1c3;
-  line-height: 1.4em;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  padding: 0.35em 0.5em 0.15em 0.5em;
+  border: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -webkit-box-shadow: 0 2px 0 #6a0812;
+  -moz-box-shadow: 0 2px 0 #6a0812;
+  box-shadow: 0 2px 0 #6a0812;
+  font-size: 1em;
+  line-height: 1.25;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  color: white;
 }
-
-/* line 44, ../scss/components/_table.scss */
-table th:first-child {
-  width: 75%;
-  border-left: 0;
-  text-align: left;
+/* line 48, ../scss/base/mixins/_buttons.scss */
+.button:visited {
+  background-color: #b10e1e;
 }
-
-@media screen and (max-width: 600px) {
-  /* line 51, ../scss/components/_table.scss */
-  table th:first-child {
-    width: auto;
-  }
+/* line 52, ../scss/base/mixins/_buttons.scss */
+.button:hover, .button:focus {
+  background-color: #990c1a;
 }
-/* line 56, ../scss/components/_table.scss */
-.ie table th {
-  font-size: 16px;
+/* line 55, ../scss/base/mixins/_buttons.scss */
+.button:active {
+  top: 2px;
+  -webkit-box-shadow: 0 0 0 #b10e1e;
+  -moz-box-shadow: 0 0 0 #b10e1e;
+  box-shadow: 0 0 0 #b10e1e;
 }
-
-/* line 60, ../scss/components/_table.scss */
-.ie7 table th {
-  border-top: 1px solid #bfc1c3;
-  border-bottom: 1px solid #bfc1c3;
-  border-left: 0;
-  border-right: 1px solid #bec0c2;
+/* line 63, ../scss/base/mixins/_buttons.scss */
+.button.disabled, .button[disabled="disabled"], .button[disabled] {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
 }
-
-/* line 67, ../scss/components/_table.scss */
-.ie7 table th:first-child {
-  border-left: 1px solid #bec0c2;
+/* line 65, ../scss/base/mixins/_buttons.scss */
+.button.disabled:hover, .button[disabled="disabled"]:hover, .button[disabled]:hover {
+  cursor: default;
+  background-color: #b10e1e;
 }
-
-/* line 71, ../scss/components/_table.scss */
-table td {
-  font-size: 1.6rem;
-  padding: 1.0em .8em;
-  border-left: 1px dotted #bfc1c3;
-  line-height: 1em;
+/* line 69, ../scss/base/mixins/_buttons.scss */
+.button.disabled:active, .button[disabled="disabled"]:active, .button[disabled]:active {
+  top: 0;
+  -webkit-box-shadow: 0 2px 0 #6a0812;
+  -moz-box-shadow: 0 2px 0 #6a0812;
+  box-shadow: 0 2px 0 #6a0812;
 }
-
-/* line 78, ../scss/components/_table.scss */
-table td span {
+/* line 84, ../scss/base/mixins/_buttons.scss */
+.button:link, .button:hover, .button:focus, .button:visited {
+  color: white;
+}
+/* line 99, ../scss/base/mixins/_buttons.scss */
+.button:before {
+  content: "";
+  height: 110%;
+  width: 100%;
   display: block;
-  padding: .35em 0;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
-
-/* line 83, ../scss/components/_table.scss */
-table td span.amount-breakdown {
-  color: #8d8d8d;
+/* line 109, ../scss/base/mixins/_buttons.scss */
+.button:active:before {
+  top: -10%;
+  height: 120%;
 }
-
-/* line 87, ../scss/components/_table.scss */
-table td:first-child {
-  border-left: 0;
-  text-align: left;
-  font-weight: bold;
-}
-
-/* line 93, ../scss/components/_table.scss */
-table td:last-child {
-  font-size: 2.4rem;
-  font-weight: bold;
-}
-
-/* line 98, ../scss/components/_table.scss */
-.ie table td {
-  font-size: 16px;
-}
-
-/* line 102, ../scss/components/_table.scss */
-.ie7 table td {
-  border-left: 0;
-  border-bottom: 1px dotted #bfc1c3;
-  border-right: 1px dotted #bfc1c3;
-}
-
-/* line 108, ../scss/components/_table.scss */
-.ie7 table td:first-child {
-  border-left: 1px dotted #bfc1c3;
-}
-
-/* line 112, ../scss/components/_table.scss */
-table td a.info {
-  float: right;
-  font-weight: normal;
-}
-
-/* line 117, ../scss/components/_table.scss */
-table td p.sp-info {
-  padding: 0 2em 2em  0;
-}
-
-@media screen and (max-width: 660px) {
-  /* line 122, ../scss/components/_table.scss */
-  table .desc {
-    display: none;
-  }
-}
-/* line 127, ../scss/components/_table.scss */
-table caption {
-  text-indent: -9999px;
-  font-size: 0;
-}
-
-/* line 132, ../scss/components/_table.scss */
-table.employment th, table.employment td {
-  text-align: left;
-}
-
-/* line 136, ../scss/components/_table.scss */
-table.employment th:first-child, table.employment td:first-child {
-  width: 65%;
-}
-
-/* line 140, ../scss/components/_table.scss */
-table.employment th.desc, table.employment td.desc {
-  width: 40%;
-}
-
-/* line 144, ../scss/components/_table.scss */
-table.additional-sp {
-  margin: 20px 0;
-}
-
-/* line 148, ../scss/components/_table.scss */
-table.additional-sp td {
-  font-weight: normal;
-}
-
-/* line 152, ../scss/components/_table.scss */
-table.additional-sp td:last-child {
-  font-size: 2.4rem;
-  font-weight: bold;
+/* line 122, ../scss/base/mixins/_buttons.scss */
+.button[rel="external"]:after {
+  display: none;
+  content: none;
+  margin-left: 0;
+  margin-right: 0;
 }

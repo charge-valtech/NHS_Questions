@@ -1,6 +1,9 @@
+
+
 @import 'base/variables.scss';
 @import 'base/mixins.scss';
-@import 'base/normalize.scss';
 @import 'base/utilities.scss';
+
+@include global-reset;
 
 

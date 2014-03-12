@@ -1,3 +1,7 @@
+@import "variables/colours";
+@import "variables/font-stack";
+
+
 //********** Pallete
 
 $colorPrimary: #da337d;
@@ -50,7 +54,5 @@ $indent-amount: 40px ;
 
 // After the default variables are set, import the required Compass partials.
 
-@import "compass/utilities";
-@import "compass/typography";
-@import "compass/css3";
+
 

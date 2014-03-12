@@ -1,6 +1,5 @@
-@import "../_colours";
-@import "../_typography";
-@import "../_shims";
+@import "typography";
+@import "shims";
 
 @mixin phase-banner($state: alpha) {
   padding: 8px 0;

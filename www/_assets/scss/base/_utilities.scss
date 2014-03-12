@@ -1,12 +1,8 @@
+@import "utilities/color";
+@import "utilities/general";
+@import "utilities/layout";
+@import "utilities/print";
+@import "utilities/sprites";
+@import "utilities/tables";
+@import "utilities/typography";
 
-.clearfix:before,
-.clearfix:after {
-    content: " ";
-    /* 1 */
-    display: table;
-    /* 2 */
-}
-
-.clearfix:after {
-    clear: both;
-}
