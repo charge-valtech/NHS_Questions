@@ -1,4 +1,4 @@
 UI
 ==
 
-UI framework
+This is the UI framework distributable for the Aplha prototype
