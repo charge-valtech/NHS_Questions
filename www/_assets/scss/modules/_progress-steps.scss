@@ -1,0 +1,6 @@
+@import 'base/variables.scss';
+@import 'base/mixins.scss';
+@import 'base/utilities.scss';
+
+
+@include progress-indicator($active-colour: white, $border-colour: $border-colour, $background-colour: $highlight-colour, $steps: "");

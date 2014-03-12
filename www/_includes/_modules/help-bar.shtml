@@ -1,7 +1,0 @@
-    <div class="help-bar-wrapper">
-        <ul class="help-bar" aria-label="The following links will open in a new browser window">
-            <li><a href="#" target="_blank" aria-label="" >i</a><span>Helpline: <a href="tel:0800 0150 400">0800 0150 400</a></span></li>
-            <li><a href="#" aria-label="">Application Notes</a></li>
-            <li><a href="#" aria-label="" onclick="">Your Feedback</a></li>
-        </ul>
-    </div>  
