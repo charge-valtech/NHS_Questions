@@ -592,7 +592,7 @@ table {
   width: device-width;
 }
 
-/* line 346, ../scss/base/mixins/_forms.scss */
+/* line 350, ../scss/base/mixins/_forms.scss */
 .option.group label input[type="text"] {
   margin-left: 0;
   width: 14em;
@@ -600,27 +600,27 @@ table {
   position: absolute;
 }
 
-/* line 354, ../scss/base/mixins/_forms.scss */
+/* line 358, ../scss/base/mixins/_forms.scss */
 ::-webkit-input-placeholder {
   padding-top: 0.15em;
   color: #6f777b;
 }
 
-/* line 355, ../scss/base/mixins/_forms.scss */
+/* line 359, ../scss/base/mixins/_forms.scss */
 ::-moz-placeholder {
   padding-top: 0.15em;
   color: #6f777b;
 }
 
 /* firefox 19+ */
-/* line 356, ../scss/base/mixins/_forms.scss */
+/* line 360, ../scss/base/mixins/_forms.scss */
 :-ms-input-placeholder {
   padding-top: 0.15em;
   color: #6f777b;
 }
 
 /* ie */
-/* line 357, ../scss/base/mixins/_forms.scss */
+/* line 361, ../scss/base/mixins/_forms.scss */
 input:-moz-placeholder {
   padding-top: 0.15em;
   color: #6f777b;
@@ -1156,7 +1156,7 @@ select:focus,
   width: device-width;
 }
 
-/* line 346, ../scss/base/mixins/_forms.scss */
+/* line 350, ../scss/base/mixins/_forms.scss */
 .option.group label input[type="text"] {
   margin-left: 0;
   width: 14em;
@@ -1164,27 +1164,27 @@ select:focus,
   position: absolute;
 }
 
-/* line 354, ../scss/base/mixins/_forms.scss */
+/* line 358, ../scss/base/mixins/_forms.scss */
 ::-webkit-input-placeholder {
   padding-top: 0.15em;
   color: #6f777b;
 }
 
-/* line 355, ../scss/base/mixins/_forms.scss */
+/* line 359, ../scss/base/mixins/_forms.scss */
 ::-moz-placeholder {
   padding-top: 0.15em;
   color: #6f777b;
 }
 
 /* firefox 19+ */
-/* line 356, ../scss/base/mixins/_forms.scss */
+/* line 360, ../scss/base/mixins/_forms.scss */
 :-ms-input-placeholder {
   padding-top: 0.15em;
   color: #6f777b;
 }
 
 /* ie */
-/* line 357, ../scss/base/mixins/_forms.scss */
+/* line 361, ../scss/base/mixins/_forms.scss */
 input:-moz-placeholder {
   padding-top: 0.15em;
   color: #6f777b;
@@ -1657,9 +1657,9 @@ input[type="week"],
 select[size],
 textarea {
   background-color: #f9f9f9;
-  border: 2px inset;
+  border: 1px solid #dee0e2;
   font-size: 1em;
-  padding: 0.1em 0 0.1em 0.4em;
+  padding: 0.4em;
 }
 
 /* line 37, ../scss/base/mixins/_forms.scss */
@@ -1931,7 +1931,7 @@ input[type="text"] {
 
 /* line 197, ../scss/base/mixins/_forms.scss */
 input[type="email"] {
-  width: 20em;
+  width: 30em;
 }
 
 /* line 198, ../scss/base/mixins/_forms.scss */
@@ -1941,22 +1941,22 @@ input[type="url"] {
 
 /* line 200, ../scss/base/mixins/_forms.scss */
 input.search {
-  width: 15em;
+  width: 20em;
 }
 
 /* line 201, ../scss/base/mixins/_forms.scss */
 input.password {
-  width: 15em;
+  width: 20em;
 }
 
 /* line 202, ../scss/base/mixins/_forms.scss */
 input.email {
-  width: 20em;
+  width: 30em;
 }
 
 /* line 203, ../scss/base/mixins/_forms.scss */
 input.name {
-  width: 15em;
+  width: 20em;
 }
 
 /* line 204, ../scss/base/mixins/_forms.scss */
@@ -1966,17 +1966,17 @@ input.url {
 
 /* line 205, ../scss/base/mixins/_forms.scss */
 input.full-name {
-  width: 20em;
+  width: 30em;
 }
 
 /* line 206, ../scss/base/mixins/_forms.scss */
 input.street {
-  width: 15em;
+  width: 20em;
 }
 
 /* line 207, ../scss/base/mixins/_forms.scss */
 input.town {
-  width: 15em;
+  width: 20em;
 }
 
 /* line 208, ../scss/base/mixins/_forms.scss */
@@ -1985,39 +1985,59 @@ input.small {
 }
 
 /* line 209, ../scss/base/mixins/_forms.scss */
+input.medium {
+  width: 10em;
+}
+
+/* line 210, ../scss/base/mixins/_forms.scss */
+input.large {
+  width: 20em;
+}
+
+/* line 211, ../scss/base/mixins/_forms.scss */
+input.x-large {
+  width: 30em;
+}
+
+/* line 212, ../scss/base/mixins/_forms.scss */
+input.full-width {
+  width: 99%;
+}
+
+/* line 213, ../scss/base/mixins/_forms.scss */
 input.postcode {
   width: 5em;
 }
 
-/* line 210, ../scss/base/mixins/_forms.scss */
+/* line 214, ../scss/base/mixins/_forms.scss */
 textarea.big {
-  width: 20em;
-  height: 8em;
+  width: 30em;
+  height: 10em;
 }
 
-/* line 212, ../scss/base/mixins/_forms.scss */
+/* line 216, ../scss/base/mixins/_forms.scss */
 textarea.full-size {
   width: 99%;
-  height: 15em;
+  height: 20em;
 }
 
-/* line 329, ../scss/base/mixins/_forms.scss */
+/* line 333, ../scss/base/mixins/_forms.scss */
 label {
   display: block;
 }
 
-/* line 330, ../scss/base/mixins/_forms.scss */
+/* line 334, ../scss/base/mixins/_forms.scss */
 input {
   margin-left: 0;
 }
 
-/* line 331, ../scss/base/mixins/_forms.scss */
+/* line 335, ../scss/base/mixins/_forms.scss */
 legend span {
   padding-bottom: 0.3em;
   display: block;
 }
 
-/* line 338, ../scss/base/mixins/_forms.scss */
+/* line 342, ../scss/base/mixins/_forms.scss */
 .inline input[type=text],
 .inline select,
 .inline textarea {
@@ -2029,15 +2049,21 @@ fieldset {
   border: 0;
   margin-top: 1em;
 }
-/* line 10, ../scss/components/_forms.scss */
+/* line 7, ../scss/components/_forms.scss */
+fieldset.separator {
+  border-bottom: 1px solid #bfc1c3;
+  padding-bottom: 2em;
+  margin-bottom: 3em;
+}
+/* line 13, ../scss/components/_forms.scss */
 fieldset p {
   margin: 0 0 1em;
 }
 
-/* line 14, ../scss/components/_forms.scss */
-.action {
-  border-top: 1px solid #BFC1C3;
-  padding-top: 1em;
+/* line 18, ../scss/components/_forms.scss */
+.logo-upload img {
+  width: 10em;
+  border: 1px solid #bfc1c3;
 }
 
 /* line 1, ../scss/modules/_header.scss */

@@ -26,12 +26,12 @@
   select[size],
   textarea {
       background-color: #f9f9f9;
-      border: 2px inset;
+      border: 1px solid $grey-3;
       @include ie-lte(8){
         border: 1px inset $border-colour; // Otherwise IE gets a black border
       }
       font-size: 1em;
-      padding: 0.1em 0 0.1em 0.4em;
+      padding: 0.4em;
   }
 
   textarea{  
@@ -188,9 +188,9 @@
   // Default text field widths
 
   $full-width: 99%;
-  $x-large: 20em;
-  $large:   15em;
-  $medium:  8em;
+  $x-large: 30em;
+  $large:   20em;
+  $medium:  10em;
   $small:   5em;
 
   input[type="text"] {min-width: 2em;} // overwrite core style
@@ -206,6 +206,10 @@
   input.street      {width: $large;}
   input.town        {width: $large;}
   input.small       {width: $small;}
+  input.medium      {width: $medium;}  
+  input.large       {width: $large;}  
+  input.x-large     {width: $x-large;}  
+  input.full-width  {width: $full-width;}        
   input.postcode    {width: $small;}
   textarea.big      {width: $x-large;
                     height: $medium;}

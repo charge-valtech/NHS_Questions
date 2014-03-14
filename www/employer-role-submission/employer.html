@@ -1,0 +1,143 @@
+<!--#include virtual="../_includes/_global/header.shtml" -->
+
+
+<main role="main" id="main">
+
+
+      <section>
+
+
+	<div id="content-wrapper">
+
+
+
+<!--#include virtual="../_includes/_modules/help-container.shtml" --> 
+
+
+<!--#include virtual="../_includes/_modules/progress-bar.shtml" -->
+
+
+          <h1>Employer Role Submission</h1>
+
+
+      <div class="validation-summary hidden">
+        <h3>There was a problem submitting the form</h3>
+        <p>Please try the following:</p>
+        <ol>
+          <li><a href="#error1">Enter your first name</a></li>
+
+        </ol>
+      </div>
+      <form action="vacancy.html">
+        <fieldset>
+          <legend>Employer</legend>
+
+          <p class="group">
+            <span class="validation-message hidden" id="error1">1. Enter orgaisation name</span>
+            <label for="organisation-name">Name of organisation</label>
+            <input id="organisation-name" type="text" class="large">
+          </p>
+
+
+          <p class="group">
+            <span class="validation-message hidden" id="error1">2. Enter employer description</span>
+            <label for="employer-desc">Employer description</label>
+            <input id="employer-desc" type="text" class="x-large">
+          </p>
+
+
+          <p class="group">
+            <span class="validation-message hidden" id="error1">3. Enter employer website</span>
+            <label for="employer-desc">Employer website</label>
+            <input id="employer-desc" type="url" class="large" placeholder="http://">
+          </p>          
+
+          </fieldset>
+
+
+
+
+        <fieldset class="separator">
+          <legend><span>Show logo</span></legend>
+          <p class="option group">
+            <label><input type="radio" checked="checked" name="show-logo"> Yes</label>
+            <label><input type="radio" name="show-logo"> No</label>
+          </p>
+
+          <figure class="logo-upload">
+          <img alt="" src="../_assets/img/uploads/employer-logo.jpg"/>
+          </figure>
+
+
+
+          <p class="group">
+            <label for="employer-desc">Upload employer logo</label>
+            <input type="file" class="large" placeholder="">
+          </p>          
+          <progress></progress>
+        </fieldset>
+
+
+
+        <fieldset class="separator">
+          <legend>Contact details</legend>
+          <p class="group">
+            <label for="email">Contact name</label>
+            <input id="email" type="text" class="name">
+          </p>
+          <p class="group">
+            <label for="email">Contact email</label>
+            <input id="email" type="email" class="email">
+          </p>
+          <p class="group">
+            <label for="email-confirm">Re-type contact email</label>
+            <input id="email-confirm" type="email" class="email">
+          </p>
+          <p class="group">
+            <label for="telephone">Telephone</label>
+            <input id="telephone" type="text" class="telephone">
+            <span class="hint inline"> - Include your country code</span>
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>Apprenticeship address</legend>
+          <p class="group">
+            <label for="street1">Street</label>
+            <input id="street1" type="text" class="street">
+          </p>
+          <p class="group">
+            <label for="street2" class="visuallyhidden">Street line two</label>
+            <input id="street2" type="text" class="street">
+          </p>
+          <p class="group">
+            <label for="town">Town/City</label>
+            <input id="town" type="text" class="town">
+          </p>
+          <p class="group">
+            <label for="postcode">Postcode</label>
+            <input id="postcode" type="text" class="postcode">
+          </p>
+          <p class="option group">
+            <label for="public"><input id="public" type="checkbox"> Advertise contact details?</label>
+          </p>          
+        </fieldset>
+
+      
+
+        <p class="action group">
+          <button class="button secondary" type="submit" value="Back">Clear</button>        
+          <button class="button" type="submit" value="Continue">Continue</button>
+        </p>
+      </form>
+    </div>
+
+
+  
+
+</section>
+
+
+</main>
+
+
+<!--#include virtual="../_includes/_global/footer.shtml" -->
