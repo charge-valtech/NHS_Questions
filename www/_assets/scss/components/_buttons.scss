@@ -4,8 +4,12 @@
 
 .button{
   	@include button($green);
+
+  	&.secondary {
+
+	@include button($grey-3);
+  	
+  	}
+
  }
 
-.button-back{
-	@include button($grey-3);
- } 

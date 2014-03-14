@@ -27,14 +27,14 @@
   }
 
   // PADDING
-  padding: 1em 1em 0.25em 1em;
+  padding: 1em;
 
   // FLOAT AND MARGIN
   $horizontal-margin: 0;
   @if $outdent {
     $horizontal-margin: -1em;
   }
-  @if ($float == "left"){
+  @if ($float == "left"){ 
     float: left;
     margin: 0 1.5em 1em 0;
   }

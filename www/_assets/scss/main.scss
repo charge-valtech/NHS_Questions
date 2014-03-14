@@ -1,42 +1,13 @@
-@import "base.scss";
-@import "components.scss";
-@import "modules.scss";
 
 
-main {
-    background: #fff;
-    border-bottom: 10px solid $colorPrimary;
-    display: block;
-}
-
-.skiplink-container {
-    text-align: center;
-    background: #0b0c0c;
-}
-
-.skiplink-container div {
-    text-align: left;
-    margin: 0 auto;
-    max-width: 1020px;
-}
-
-.skiplink-container div .skiplink {
-    position: absolute;
-    left: -9999em;
-    display: -moz-inline-stack;
-    display: inline-block;
-    margin: 0.75em 0 0 30px;
-}
-
-.skiplink-container div .skiplink:focus {
-    position: static;
-}
+@import "_base.scss";
+@import "_components.scss";
+@import "_modules.scss";
 
 
 
 h1 {
-    @include core-24;
-    margin-bottom:1em;
+    @include heading-36;
 }
 
 
@@ -55,9 +26,11 @@ h1 {
     .help-container {
         width: 100%;
         clear:both;
+        min-height:3em;
         border-top: 10px solid $colorPrimary;
         margin-bottom:20px;
         ul {
+        margin-top:1.5em;
             list-style: none;
             display: inline;
             float: right;
