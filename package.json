@@ -1,5 +1,5 @@
 {
-  "name": "sfa",
+  "name": "scripts",
   "version": "1.0.0",
   "homepage": "",
   "devDependencies": {
@@ -17,6 +17,7 @@
     "grunt-contrib-cssmin": "~0.7.0",
     "grunt-imageoptim": "~1.4.1",
     "grunt-curl": "~1.4.0",
-    "grunt-text-replace": "~0.3.11"
+    "grunt-text-replace": "~0.3.11",
+    "grunt-bake": "~0.3.8"
   }
 }
