@@ -9,16 +9,15 @@ module.exports = function(grunt) {
         separator: ';'
       },
       dev: {
-        src: ['www/_assets/js/*.js'],
-        dest: 'www/_assets/js/<%= pkg.name %>.js'
+     
       },
       demo: {
-        src: ['www/_assets/js/*.js'],
-        dest: 'demo/_assets/js/<%= pkg.name %>.js'
+        src: ['www/_assets/js/plugins/*.js'],
+        dest: 'demo/_assets/js/plugins.js'
       },
       dist: {
-        src: ['www/_assets/js/*.js'],
-        dest: 'dist/<%= pkg.name %>.js'
+        src: ['www/_assets/js/plugins/*.js'],
+        dest: 'dist/_assets/js/plugins.js'
       },
         // Metadata.
         meta: {
@@ -86,14 +85,16 @@ module.exports = function(grunt) {
 
 
 
+
+
   ssi: {
+    options: {},
     files: [{
-                  expand: true,
-                  cwd: 'html',
-                  src: ['**/*.html'],
-                  dest: 'demo/',
+          cwd: 'html',
+          src: ['**/*.html'],
+          dest: 'demo2/html'
         }],
-  },            
+  },         
       
     watch: {
             css: {
