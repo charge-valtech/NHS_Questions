@@ -1,35 +1,22 @@
-@import 'shims.scss';
-@import 'css3.scss';
-@import 'conditionals.scss';
-
-// Mixin and defaults for making buttons on GOV.UK services.
-
-// For guidance, see: https://www.gov.uk/service-manual/design-and-content/resources/buttons.html
-
-// Example usage:
-
-// .button{
-//   @include button;
-// }
-// .button-secondary{
-//   @include button($grey-3);
-// }
-// .button-warning{
-//   @include button($red);
-// }
+@import "css3";
 
 
-@mixin button($colour: $button-colour){
+// =======================================================
+// BUTTONS
+// Mixin and defaults for doing buttons on GOV.UK services
+
+
+@mixin button($colour: $green){
   // Colour
   background-color: $colour;
 
   // Size and shape
   position: relative;
+  top: 0; // Reset for application.css. Remove once integrated.
   @include inline-block;
   padding: 0.35em 0.5em 0.15em 0.5em;
   border: none;
-  @include border-radius(0);
-  -webkit-appearance: none;
+  @include border-radius(0.250em);
 
   // Bottom edge effect
   @include box-shadow(0 2px 0 darken($colour, 15%));
@@ -38,7 +25,7 @@
   }
 
   // Text
-  font-size: 1em; // inherit from parent
+  font-size: 1em; // inherit size from parent
   line-height: 1.25;
   text-decoration: none;
   -webkit-font-smoothing: antialiased;
@@ -50,7 +37,7 @@
   }
   &:hover,
   &:focus {
-    background-color: darken($colour, 5%);
+    background: darken($colour, 5%);
   }
   &:active {
     top: 2px;
@@ -61,24 +48,22 @@
   &.disabled,
   &[disabled="disabled"],
   &[disabled] {
-    @include opacity(0.5);
+    opacity: 0.5;
     &:hover{
       cursor: default;
       background-color: $colour;
     }
     &:active {
       top: 0;
-      @include box-shadow(0 2px 0 darken($colour, 15%));
-      @include ie-lte(8) {
+      @include box-shadow(0 2px 0 darken($colour, 15%));  @include ie-lte(8) {
         border-bottom: 2px solid darken($colour, 15%);
       }
     }
-  }
+  }    
 
   // Set text colour depending on background colour
   @if lightness($colour) < 50% {
     color: $white;
-    &:link,
     &:hover,
     &:focus,
     &:visited{
@@ -86,7 +71,6 @@
     }
   } @else {
     color: $text-colour;
-    &:link,
     &:hover,
     &:focus,
     &:visited{
@@ -94,7 +78,7 @@
     }
   }
 
-  // making the click target bigger than the button
+  // making the click target bigger than the button 
   // (and fill the space made when the button moves)
   &:before {
     content: "";
@@ -126,7 +110,7 @@
     margin-right: 0;
   }
 
-  // Fixes a bug where IE puts a black border around certain elements
+  // Fixes a bug where IE puts a nasty black border around certain elements
   @include ie-lte(8) {
     &[type="submit"],
     &[type="reset"],
@@ -138,4 +122,19 @@
       filter: none;
     }
   }
+}
+
+// default classes
+
+// Primary action
+.button{
+ @include button;
+}
+// Secondary action
+.button-secondary{
+  @include button($grey-3);
+}
+// Warning action
+.button-warning{
+ @include button($red);
 }

@@ -3,5 +3,13 @@
 @import 'base/utilities.scss';
 
 .button{
-  @include button($red);
+  	@include button($green);
+
+  	&.secondary {
+
+	@include button($grey-3);
+  	
+  	}
+
  }
+

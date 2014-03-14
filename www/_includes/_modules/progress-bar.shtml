@@ -1,6 +1,6 @@
-<div class="progress-bar">
+<nav class="progress-indicator">
 
-    <ol>
+  <ol aria-label="Progress Steps">
         <li class="active">
             <span>Employer</span>
         </li>
@@ -19,4 +19,5 @@
 
     </ol>
 
-</div>
+</nav>
+
