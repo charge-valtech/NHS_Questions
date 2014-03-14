@@ -24,8 +24,8 @@
         }
         </script>
 
-        <script src="../_assets/js/plugins.js"></script>
-        <script src="../_assets/js/custom.js"></script>
+        <script src="../_assets/js/scripts.js"></script>
+
         
     </body>
 </html>

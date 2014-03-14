@@ -18,6 +18,8 @@
     "grunt-imageoptim": "~1.4.1",
     "grunt-curl": "~1.4.0",
     "grunt-text-replace": "~0.3.11",
-    "grunt-bake": "~0.3.8"
+    "grunt-bake": "~0.3.8",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-ssi": "~0.2.0"
   }
 }

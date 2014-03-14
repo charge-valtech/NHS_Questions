@@ -8,9 +8,13 @@ module.exports = function(grunt) {
       options: {
         separator: ';'
       },
+      dev: {
+        src: ['www/_assets/js/*.js'],
+        dest: 'www/_assets/js/<%= pkg.name %>.js'
+      },
       demo: {
-        src: ['www/_assets/**/*.js'],
-        dest: 'dist/_assets/js/<%= pkg.name %>.js'
+        src: ['www/_assets/js/*.js'],
+        dest: 'demo/_assets/js/<%= pkg.name %>.js'
       },
       dist: {
         src: ['www/_assets/js/*.js'],
@@ -82,26 +86,14 @@ module.exports = function(grunt) {
 
 
 
-    bake: { 
-        demo: {
-            files: {
-                "demo/index.html": "www/index.html",
-                "demo/employer-role-submission/employer.html": "www/employer-role-submission/employer.html",
-                "demo/employer-role-submission/key-dates.html": "www/employer-role-submission/key-dates.html",
-                "demo/employer-role-submission/eligibility-criteria.html": "www/employer-role-submission/eligibility-criteria.html",
-                "demo/employer-role-submission/preview.html": "www/employer-role-submission/preview.html",
-                "demo/employer-role-submission/complete.html": "www/employer-role-submission/complete.html",
-                "demo/employer-role-submission/training-provider.html": "www/employer-role-submission/training-provider.html",
-                "demo/employer-role-submission/vacancy.html": "www/employer-role-submission/vacancy.html",                                                                                                
-
-            }
-        },
-        dev: { 
-            files: {
-
-            }
-        }
-      },           
+  ssi: {
+    files: [{
+                  expand: true,
+                  cwd: 'html',
+                  src: ['**/*.html'],
+                  dest: 'demo/',
+        }],
+  },            
       
     watch: {
             css: {
@@ -116,15 +108,17 @@ module.exports = function(grunt) {
   });
 
   grunt.loadNpmTasks( "grunt-bake" );
+  grunt.loadNpmTasks('grunt-ssi');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-compass');  
+  grunt.loadNpmTasks('grunt-contrib-concat');    
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   grunt.registerTask('default', ['jshint', 'compass:dev', 'bake:dev', 'watch']); 
 
-  grunt.registerTask('demo', ['jshint', 'compass:demo', 'concat:demo', 'cssmin', 'bake:demo']);   
+  grunt.registerTask('demo', ['jshint', 'compass:demo', 'concat:demo', 'cssmin', 'ssi']);   
 
   grunt.registerTask('dist', ['jshint', 'compass:dist']);     
 
