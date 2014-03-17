@@ -40,35 +40,24 @@
                 </div>
             </div>
         </header>
-
-
 <main role="main" id="main">
-
-
-      <section>
-
-
-  <div id="content-wrapper">
-
-
-
-    <div class="help-container">
+   <section>
+      <div id="content-wrapper">
+             <div class="help-container">
     <!--    <ul aria-label="The following links will open in a new browser window">
             <li><a class="icon info" href="#" target="_blank" aria-label="" >i</a><span>Helpline: <a href="tel:0800 0150 400">0800 0150 400</a></span></li>
             <li><a href="#" aria-label="">Application Notes</a></li>
             <li><a href="#" aria-label="" onclick="">Your Feedback</a></li>
         </ul>  -->
     </div>   
-
-
-<nav class="progress-indicator">
+         <nav class="progress-indicator">
 
   <ol aria-label="Progress Steps">
         <li class="active">
             <span>Employer</span>
         </li>
         <li>
-            <span>Vacancy / Role</span>
+            <span>Vacancy</span>
         </li>
         <li>
             <span>Dates</span>
@@ -85,47 +74,155 @@
 </nav>
 
 
-
-
-          <h1>Employer Role Submission</h1>
-
-
-      <div class="validation-summary hidden">
-        <h3>There was a problem submitting the form</h3>
-        <p>Please try the following:</p>
-        <ol>
-          <li><a href="#error1">Enter your first name</a></li>
-
-        </ol>
+         <h1>Employer Role Submission</h1>
+         <div class="validation-summary hidden">
+            <h3>There was a problem submitting the form</h3>
+            <p>Please try the following:</p>
+            <ol>
+               <li><a href="#error1">Enter your first name</a></li>
+            </ol>
+         </div>
+         <form action="key-dates.html">
+            <fieldset class="separator">
+               <legend>2. Vacancy</legend>
+               <p class="group">
+                  <label for="organisation-name">Job title</label>
+                  <input id="organisation-name" type="text" class="large" tabindex="0">
+               </p>
+               <p class="group">
+                  <label for="role-short-desc">Short description of role</label>
+                  <input id="role-short-desc" type="text" class="x-large">
+               </p>
+               <p class="group">
+                  <label for="role-long-desc">Long description of role</label>
+                  <textarea id="role-long-desc" class="big" placeholder="What will be the appplicant's key responsibilties / day-to-day tasks etc? Also add any additional information that you feel is relevent."></textarea>
+               </p>
+            </fieldset>
+            <fieldset class="separator">
+               <legend>Vacancy Location</legend>
+               <p>If you'd rather enter the full address manually <a href="#">click here</a>
+               <p class="group">
+                  <label for="role-short-desc">Postcode</label>
+                  <input id="role-short-desc" type="text" class="short">
+                  <button class="button secondary inline" type="submit" value="Continue">Find address</button>
+               </p>
+               <p class="group">
+                  <label for="title">Select address</label>
+                  <select id="title">
+                     <option value="">Please select</option>
+                     <option value="">45 High Street, Reddich</option>
+                     <option value="">47 High Street, Reddich</option>
+                     <option value="">49 High Street, Reddich</option>
+                     <option value="">51 High Street, Reddich</option>
+                     <option value="">53 High Street, Reddich</option>
+                     <option value="">55 High Street, Reddich</option>
+                  </select>
+               </p>
+            </fieldset>
+            <fieldset class="separator">
+               <legend>Working week</legend>
+               <fieldset>
+                  <legend>Working days (tick all that apply)</legend>
+                  <ul class="option group">
+                     <li>
+                        <span class="working-day">
+                        <label for="monday"><input type="checkbox" checked="checked" id="monday">Monday</label>
+                        </span>
+                        <span class="group inline">
+                           <label for="mon-start-time"></label>
+                           <select id="mon-start-time">
+                              <option value="">09:00</option>
+                           </select>
+                           <span>to&nbsp;</span>
+                           <label for="mon-end-time"></label>
+                           <select id="mon-end-time">
+                              <option value="">17:30</option>
+                           </select>
+                           <span>8 hours</span>
+                        </span>
+                     </li>
+                     <li>
+                        <span class="working-day">
+                        <label for="monday"><input type="checkbox" checked="checked" id="monday">Tuesday</label>
+                        </span>
+                        <span class="group inline">
+                           <label for="mon-start-time"></label>
+                           <select id="mon-start-time">
+                              <option value="">09:00</option>
+                           </select>
+                           <span>to&nbsp;</span>
+                           <label for="mon-end-time"></label>
+                           <select id="mon-end-time">
+                              <option value="">17:30</option>
+                           </select>
+                           <span>8 hours</span>
+                        </span>
+                     </li>
+                     </li>
+                     <li><label for=""><input type="checkbox" id="">Wednesday</label></li>
+                     <li><label for=""><input type="checkbox" id="">Thursday</label></li>
+                     <li><label for=""><input type="checkbox" id="">Friday</label></li>
+                     <li><label for=""><input type="checkbox" id="">Saturday</label></li>
+                     <li><label for=""><input type="checkbox" id="">Sunday</label></li>
+                  </ul>
+                  <p class="group">
+                     <label for="role-short-desc">Total hours per week (calculated)</label>
+                     <input id="role-short-desc" type="text" disabled="disabled" value="8" class="small">
+                  </p>
+               </fieldset>
+            </fieldset>
+            <fieldset class="separator">
+               <legend>Salary details</legend>
+               <p class="group">
+                  <label for="">Amount</label>
+                  <input id="role-short-desc" type="text" disabled="disabled" class="small" placeholder="&pound;">
+               </p>
+               <p class="group">
+                  <label for="title">Frequency</label>
+                  <select id="title">
+                     <option value="">Please select</option>
+                     <option value="">Weekly</option>
+                     <option value="">Monthly</option>
+                     <option value="">Yearly</option>
+                  </select>
+               </p>
+            </fieldset>
+            <fieldset class="separator">
+               <legend>Additional information</legend>
+               <p class="group">
+                  <label for="organisation-name">Number of vacancies</label>
+                  <select class="small" id="title">
+                     <option value="">1</option>
+                     <option value="">2</option>
+                     <option value="">3</option>
+                     <option value="">4</option>
+                     <option value="">5</option>
+                     <option value="">6</option>
+                     <option value="">7</option>
+                     <option value="">8</option>
+                     <option value="">9</option>
+                     <option value="">10</option>
+                     <option value="">11</option>
+                     <option value="">12</option>
+                  </select>
+               </p>
+               <p class="group">
+                  <label for="future prospects">Future prospects</label>
+                  <input id="reality-check" type="text" class="large">
+               </p>
+               <p class="group">
+                  <label for="reality-check">Reality check</label>
+                  <input id="reality-check" type="text" class="large">
+               </p>
+            </fieldset>
+            <p class="action group">
+               <a class="button secondary" href="employer.html">Back</a>        
+               <button class="button" type="submit" value="Continue">Continue</button>
+            </p>
+         </form>
       </div>
-      <form action="key-dates.html">
-        <fieldset>
-          <legend>Vacancy / Role</legend>
-
-
-        
-
-          </fieldset>
-
-
-      
-
-        <p class="action group">
-          <a class="button secondary" href="employer.html">Back</a>        
-          <button class="button" type="submit" value="Continue">Continue</button>
-        </p>
-      </form>
-    </div>
-
-
-  
-
-</section>
-
-
+   </section>
 </main>
-
-
 <footer class="group js-footer" id="footer" role="contentinfo">
             <div class="footer-wrapper">
                 <div class="footer-meta">
@@ -133,7 +230,7 @@
                         <ul>
                             <li><a href="/claim-notes#16" target="_blank">Helpdesk</a></li>
                             <li><a href="http://www.dwp.gov.uk/privacy-policy/" target="_blank">Privacy &amp; Cookies</a></li>
-                            <li>Built by <a href="https://www.gov.uk/government/organisations/department-for-work-pensions" target="_blank">Department for Work &amp; Pensions</a></li>
+                            <li>Built by <a href="#" target="_blank">Skills Funding Agency</a></li>
                         </ul>
 
                     </nav>
@@ -152,7 +249,8 @@
         }
         </script>
 
-        <script src="../_assets/js/scripts.js"></script>
+        <script src="../_assets/js/plugins.js"></script>
+        <script src="../_assets/js/site.js"></script>
 
         
     </body>
