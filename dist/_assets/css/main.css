@@ -1719,8 +1719,7 @@ label {
 /* line 78, ../scss/base/mixins/_forms.scss */
 input[type="checkbox"],
 input[type="radio"] {
-  margin-right: 0.25em;
-  vertical-align: 2px;
+  margin-right: 0.3em;
 }
 
 /* line 84, ../scss/base/mixins/_forms.scss */
@@ -2052,15 +2051,25 @@ fieldset {
 /* line 7, ../scss/components/_forms.scss */
 fieldset.separator {
   border-bottom: 1px solid #bfc1c3;
-  padding-bottom: 2em;
-  margin-bottom: 3em;
+  padding-bottom: 1.5em;
+  margin-bottom: 2.5em;
 }
-/* line 13, ../scss/components/_forms.scss */
+/* line 12, ../scss/components/_forms.scss */
+fieldset .working-day {
+  width: 180px;
+  float: left;
+}
+/* line 20, ../scss/components/_forms.scss */
 fieldset p {
   margin: 0 0 1em;
 }
 
-/* line 18, ../scss/components/_forms.scss */
+/* line 25, ../scss/components/_forms.scss */
+fieldset fieldset {
+  padding-left: 0;
+}
+
+/* line 27, ../scss/components/_forms.scss */
 .logo-upload img {
   width: 10em;
   border: 1px solid #bfc1c3;

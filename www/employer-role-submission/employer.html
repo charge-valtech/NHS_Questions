@@ -29,8 +29,8 @@
         </ol>
       </div>
       <form action="vacancy.html">
-        <fieldset>
-          <legend>Employer</legend>
+       <fieldset class="separator">
+          <legend>1. Employer</legend>
 
           <p class="group">
             <span class="validation-message hidden" id="error1">1. Enter orgaisation name</span>
@@ -64,9 +64,12 @@
             <label><input type="radio" name="show-logo"> No</label>
           </p>
 
+<p>
           <figure class="logo-upload">
           <img alt="" src="../_assets/img/uploads/employer-logo.jpg"/>
           </figure>
+              <progress></progress>
+              </p>
 
 
 
@@ -74,7 +77,7 @@
             <label for="employer-desc">Upload employer logo</label>
             <input type="file" class="large" placeholder="">
           </p>          
-          <progress></progress>
+      
         </fieldset>
 
 
@@ -95,8 +98,8 @@
           </p>
           <p class="group">
             <label for="telephone">Telephone</label>
-            <input id="telephone" type="text" class="telephone">
-            <span class="hint inline"> - Include your country code</span>
+            <input id="telephone" type="text" class="small" placeholder="+44">&nbsp;<input id="telephone" type="text" class="telephone">
+           
           </p>
         </fieldset>
         <fieldset>
