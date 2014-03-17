@@ -117,7 +117,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');    
   grunt.loadNpmTasks('grunt-contrib-watch');
 
-  grunt.registerTask('default', ['jshint', 'compass:dev', 'bake:dev', 'watch']); 
+  grunt.registerTask('default', ['jshint', 'compass:dev', 'watch']); 
 
   grunt.registerTask('demo', ['jshint', 'compass:demo', 'concat:demo', 'cssmin', 'ssi']);   
 
