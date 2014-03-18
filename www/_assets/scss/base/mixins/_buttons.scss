@@ -16,12 +16,12 @@
   @include inline-block;
   padding: 0.35em 0.5em 0.2em 0.5em;
   border: none;
-  @include border-radius(0.250em);
+  @include border-radius(0em);
 
   // Bottom edge effect
-  @include box-shadow(0 2px 0 darken($colour, 15%));
+  @include box-shadow(0 2px 0 darken($colour, 40%));
   @include ie-lte(8) {
-    border-bottom: 2px solid darken($colour, 15%);
+    border-bottom: 2px solid darken($colour, 40%);
   }
 
   // Text

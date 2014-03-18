@@ -639,14 +639,14 @@ input:-moz-placeholder {
   *display: inline;
   padding: 0.35em 0.5em 0.2em 0.5em;
   border: none;
-  -webkit-border-radius: 0.25em;
-  -moz-border-radius: 0.25em;
-  -ms-border-radius: 0.25em;
-  -o-border-radius: 0.25em;
-  border-radius: 0.25em;
-  -webkit-box-shadow: 0 2px 0 #00180c;
-  -moz-box-shadow: 0 2px 0 #00180c;
-  box-shadow: 0 2px 0 #00180c;
+  -webkit-border-radius: 0em;
+  -moz-border-radius: 0em;
+  -ms-border-radius: 0em;
+  -o-border-radius: 0em;
+  border-radius: 0em;
+  -webkit-box-shadow: 0 2px 0 black;
+  -moz-box-shadow: 0 2px 0 black;
+  box-shadow: 0 2px 0 black;
   font-size: 1.1em;
   line-height: 1.25;
   text-decoration: none;
@@ -726,14 +726,14 @@ input:-moz-placeholder {
   *display: inline;
   padding: 0.35em 0.5em 0.2em 0.5em;
   border: none;
-  -webkit-border-radius: 0.25em;
-  -moz-border-radius: 0.25em;
-  -ms-border-radius: 0.25em;
-  -o-border-radius: 0.25em;
-  border-radius: 0.25em;
-  -webkit-box-shadow: 0 2px 0 #b5babe;
-  -moz-box-shadow: 0 2px 0 #b5babe;
-  box-shadow: 0 2px 0 #b5babe;
+  -webkit-border-radius: 0em;
+  -moz-border-radius: 0em;
+  -ms-border-radius: 0em;
+  -o-border-radius: 0em;
+  border-radius: 0em;
+  -webkit-box-shadow: 0 2px 0 #727a82;
+  -moz-box-shadow: 0 2px 0 #727a82;
+  box-shadow: 0 2px 0 #727a82;
   font-size: 1.1em;
   line-height: 1.25;
   text-decoration: none;
@@ -813,14 +813,14 @@ input:-moz-placeholder {
   *display: inline;
   padding: 0.35em 0.5em 0.2em 0.5em;
   border: none;
-  -webkit-border-radius: 0.25em;
-  -moz-border-radius: 0.25em;
-  -ms-border-radius: 0.25em;
-  -o-border-radius: 0.25em;
-  border-radius: 0.25em;
-  -webkit-box-shadow: 0 2px 0 #6a0812;
-  -moz-box-shadow: 0 2px 0 #6a0812;
-  box-shadow: 0 2px 0 #6a0812;
+  -webkit-border-radius: 0em;
+  -moz-border-radius: 0em;
+  -ms-border-radius: 0em;
+  -o-border-radius: 0em;
+  border-radius: 0em;
+  -webkit-box-shadow: 0 2px 0 black;
+  -moz-box-shadow: 0 2px 0 black;
+  box-shadow: 0 2px 0 black;
   font-size: 1.1em;
   line-height: 1.25;
   text-decoration: none;
@@ -1203,14 +1203,14 @@ input:-moz-placeholder {
   *display: inline;
   padding: 0.35em 0.5em 0.2em 0.5em;
   border: none;
-  -webkit-border-radius: 0.25em;
-  -moz-border-radius: 0.25em;
-  -ms-border-radius: 0.25em;
-  -o-border-radius: 0.25em;
-  border-radius: 0.25em;
-  -webkit-box-shadow: 0 2px 0 #00180c;
-  -moz-box-shadow: 0 2px 0 #00180c;
-  box-shadow: 0 2px 0 #00180c;
+  -webkit-border-radius: 0em;
+  -moz-border-radius: 0em;
+  -ms-border-radius: 0em;
+  -o-border-radius: 0em;
+  border-radius: 0em;
+  -webkit-box-shadow: 0 2px 0 black;
+  -moz-box-shadow: 0 2px 0 black;
+  box-shadow: 0 2px 0 black;
   font-size: 1.1em;
   line-height: 1.25;
   text-decoration: none;
@@ -1290,14 +1290,14 @@ input:-moz-placeholder {
   *display: inline;
   padding: 0.35em 0.5em 0.2em 0.5em;
   border: none;
-  -webkit-border-radius: 0.25em;
-  -moz-border-radius: 0.25em;
-  -ms-border-radius: 0.25em;
-  -o-border-radius: 0.25em;
-  border-radius: 0.25em;
-  -webkit-box-shadow: 0 2px 0 #b5babe;
-  -moz-box-shadow: 0 2px 0 #b5babe;
-  box-shadow: 0 2px 0 #b5babe;
+  -webkit-border-radius: 0em;
+  -moz-border-radius: 0em;
+  -ms-border-radius: 0em;
+  -o-border-radius: 0em;
+  border-radius: 0em;
+  -webkit-box-shadow: 0 2px 0 #727a82;
+  -moz-box-shadow: 0 2px 0 #727a82;
+  box-shadow: 0 2px 0 #727a82;
   font-size: 1.1em;
   line-height: 1.25;
   text-decoration: none;
@@ -1377,14 +1377,14 @@ input:-moz-placeholder {
   *display: inline;
   padding: 0.35em 0.5em 0.2em 0.5em;
   border: none;
-  -webkit-border-radius: 0.25em;
-  -moz-border-radius: 0.25em;
-  -ms-border-radius: 0.25em;
-  -o-border-radius: 0.25em;
-  border-radius: 0.25em;
-  -webkit-box-shadow: 0 2px 0 #6a0812;
-  -moz-box-shadow: 0 2px 0 #6a0812;
-  box-shadow: 0 2px 0 #6a0812;
+  -webkit-border-radius: 0em;
+  -moz-border-radius: 0em;
+  -ms-border-radius: 0em;
+  -o-border-radius: 0em;
+  border-radius: 0em;
+  -webkit-box-shadow: 0 2px 0 black;
+  -moz-box-shadow: 0 2px 0 black;
+  box-shadow: 0 2px 0 black;
   font-size: 1.1em;
   line-height: 1.25;
   text-decoration: none;
@@ -1480,14 +1480,14 @@ input:-moz-placeholder {
   *display: inline;
   padding: 0.35em 0.5em 0.2em 0.5em;
   border: none;
-  -webkit-border-radius: 0.25em;
-  -moz-border-radius: 0.25em;
-  -ms-border-radius: 0.25em;
-  -o-border-radius: 0.25em;
-  border-radius: 0.25em;
-  -webkit-box-shadow: 0 2px 0 #00180c;
-  -moz-box-shadow: 0 2px 0 #00180c;
-  box-shadow: 0 2px 0 #00180c;
+  -webkit-border-radius: 0em;
+  -moz-border-radius: 0em;
+  -ms-border-radius: 0em;
+  -o-border-radius: 0em;
+  border-radius: 0em;
+  -webkit-box-shadow: 0 2px 0 black;
+  -moz-box-shadow: 0 2px 0 black;
+  box-shadow: 0 2px 0 black;
   font-size: 1.1em;
   line-height: 1.25;
   text-decoration: none;
@@ -1566,14 +1566,14 @@ input:-moz-placeholder {
   *display: inline;
   padding: 0.35em 0.5em 0.2em 0.5em;
   border: none;
-  -webkit-border-radius: 0.25em;
-  -moz-border-radius: 0.25em;
-  -ms-border-radius: 0.25em;
-  -o-border-radius: 0.25em;
-  border-radius: 0.25em;
-  -webkit-box-shadow: 0 2px 0 #b5babe;
-  -moz-box-shadow: 0 2px 0 #b5babe;
-  box-shadow: 0 2px 0 #b5babe;
+  -webkit-border-radius: 0em;
+  -moz-border-radius: 0em;
+  -ms-border-radius: 0em;
+  -o-border-radius: 0em;
+  border-radius: 0em;
+  -webkit-box-shadow: 0 2px 0 #727a82;
+  -moz-box-shadow: 0 2px 0 #727a82;
+  box-shadow: 0 2px 0 #727a82;
   font-size: 1.1em;
   line-height: 1.25;
   text-decoration: none;
@@ -2052,39 +2052,44 @@ legend span {
   margin-right: 0.5em;
 }
 
-/* line 3, ../scss/components/_forms.scss */
+/* line 4, ../scss/components/_forms.scss */
+form {
+  min-height: 200px;
+}
+
+/* line 6, ../scss/components/_forms.scss */
 fieldset {
   border: 0;
   margin-top: 1em;
 }
-/* line 7, ../scss/components/_forms.scss */
+/* line 10, ../scss/components/_forms.scss */
 fieldset.separator {
   border-bottom: 1px solid #bfc1c3;
   padding-bottom: 1.5em;
   margin-bottom: 2.5em;
 }
-/* line 12, ../scss/components/_forms.scss */
+/* line 15, ../scss/components/_forms.scss */
 fieldset .working-day {
   width: 180px;
   float: left;
 }
-/* line 20, ../scss/components/_forms.scss */
+/* line 23, ../scss/components/_forms.scss */
 fieldset p {
   margin: 0 0 1em;
 }
 
-/* line 25, ../scss/components/_forms.scss */
+/* line 28, ../scss/components/_forms.scss */
 fieldset fieldset {
   padding-left: 0;
 }
 
-/* line 27, ../scss/components/_forms.scss */
+/* line 30, ../scss/components/_forms.scss */
 .logo-upload img {
   width: 10em;
   border: 1px solid #bfc1c3;
 }
 
-/* line 29, ../scss/components/_forms.scss */
+/* line 32, ../scss/components/_forms.scss */
 .required:after {
   color: #e32;
   content: ' *';
