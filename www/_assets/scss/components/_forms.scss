@@ -26,3 +26,8 @@ fieldset fieldset {padding-left:0;}
 
 .logo-upload img {width:10em;border:1px solid $grey-2}
 
+.required:after {
+    color: #e32;
+    content: ' *';
+    display:inline;
+}

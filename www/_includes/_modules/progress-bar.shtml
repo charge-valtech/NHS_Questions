@@ -14,10 +14,14 @@
             <span>Eligibility</span>
         </li>
         <li>
-            <span>Training Provider</span>
+            <span>Preview</span>
         </li>
+        <li>
+            <span>Finished</span>
+        </li>        
 
     </ol>
 
 </nav>
+
 

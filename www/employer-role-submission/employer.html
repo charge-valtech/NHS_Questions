@@ -14,27 +14,28 @@
 <!--#include virtual="../_includes/_modules/help-container.shtml" --> 
 
 
-<!--#include virtual="../_includes/_modules/progress-bar.shtml" -->
-
 
           <h1>Employer Role Submission</h1>
 
 
-      <div class="validation-summary hidden">
-        <h3>There was a problem submitting the form</h3>
-        <p>Please try the following:</p>
+<!--#include virtual="../_includes/_modules/progress-bar.shtml" -->
+<h2>1. Employer details</h2>
+
+      <div class="validation-summary">
+        <h3>Something's not quite right with the details you entered</h3>
+        <p>Please check the following:</p>
         <ol>
-          <li><a href="#error1">Enter your first name</a></li>
+          <li><a href="#error1">Enter employer name</a></li>
 
         </ol>
       </div>
       <form action="vacancy.html">
        <fieldset class="separator">
-          <legend>1. Employer</legend>
+          <legend class="hidden">Employer</legend>
 
           <p class="group">
-            <span class="validation-message hidden" id="error1">1. Enter orgaisation name</span>
-            <label for="organisation-name">Name of organisation</label>
+            <span class="validation-message hidden" id="error1">1. Enter employer name</span>
+            <label for="organisation-name"  class="required">Employer name</label>
             <input id="organisation-name" type="text" class="large">
           </p>
 
@@ -42,7 +43,8 @@
           <p class="group">
             <span class="validation-message hidden" id="error1">2. Enter employer description</span>
             <label for="employer-desc">Employer description</label>
-            <input id="employer-desc" type="text" class="x-large">
+             <textarea id="employer-desc" class="short" placeholder=""></textarea>            
+
           </p>
 
 
@@ -58,17 +60,28 @@
 
 
         <fieldset class="separator">
-          <legend><span>Show logo</span></legend>
-          <p class="option group">
-            <label><input type="radio" checked="checked" name="show-logo"> Yes</label>
-            <label><input type="radio" name="show-logo"> No</label>
-          </p>
+          
+
+          <legend><span>Show employer logo?</span></legend>
+          <ul class="option group">
+          <li>
+           <label><input type="radio" checked="checked" name="show-logo">Yes</label></li>
+           <li>  <label><input type="radio" name="show-logo">No</label></li>
+          </ul>
 
 <p>
           <figure class="logo-upload">
           <img alt="" src="../_assets/img/uploads/employer-logo.jpg"/>
           </figure>
-              <progress></progress>
+
+
+<progress max="100" value="80">
+    <div>
+        <span style="width: 80%;">Progress: 80%</span>
+    </div>
+</progress>
+
+
               </p>
 
 
@@ -101,8 +114,12 @@
             <input id="telephone" type="text" class="small" placeholder="+44">&nbsp;<input id="telephone" type="text" class="telephone">
            
           </p>
+
+          <p class="option group">
+            <label for="public"><input id="public" type="checkbox"> Advertise contact details?</label>
+          </p>            
         </fieldset>
-        <fieldset>
+        <fieldset class="hidden">
           <legend>Apprenticeship address</legend>
           <p class="group">
             <label for="street1">Street</label>
@@ -120,9 +137,7 @@
             <label for="postcode">Postcode</label>
             <input id="postcode" type="text" class="postcode">
           </p>
-          <p class="option group">
-            <label for="public"><input id="public" type="checkbox"> Advertise contact details?</label>
-          </p>          
+        
         </fieldset>
 
       
