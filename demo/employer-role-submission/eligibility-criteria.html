@@ -9,7 +9,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>State Pension Prototype</title>
+        <title>Apprenticeship Application Prototype</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -42,16 +42,16 @@
         </header>
 
 
+        
+
+
+<div id="phase-notice">
+  <p><strong>Alpha:</strong> This is a new service - your <a href="/feedback">feedback</a> will help us to improve it</p>
+</div>
+
 <main role="main" id="main">
-
-
-      <section>
-
-
-    <div id="content-wrapper">
-
-
-
+   <section>
+      <div id="content-wrapper">
     <div class="help-container">
     <!--    <ul aria-label="The following links will open in a new browser window">
             <li><a class="icon info" href="#" target="_blank" aria-label="" >i</a><span>Helpline: <a href="tel:0800 0150 400">0800 0150 400</a></span></li>
@@ -61,10 +61,14 @@
     </div>   
 
 
+
+          <h1>Employer Role Submission</h1>
+
+
 <nav class="progress-indicator">
 
   <ol aria-label="Progress Steps">
-        <li class="active">
+        <li>
             <span>Employer</span>
         </li>
         <li>
@@ -73,12 +77,15 @@
         <li>
             <span>Dates</span>
         </li>
-        <li>
+        <li class="active">
             <span>Eligibility</span>
         </li>
         <li>
-            <span>Training Provider</span>
+            <span>Preview</span>
         </li>
+        <li>
+            <span>Finished</span>
+        </li>        
 
     </ol>
 
@@ -86,8 +93,8 @@
 
 
 
+<h2>4. Eligibility Criteria</h2>
 
-          <h1>Employer Role Submission</h1>
 
 
       <div class="validation-summary hidden">
@@ -102,20 +109,15 @@
 
 
         <fieldset class="separator">
-          <legend>4. Eligibility Criteria</legend>
+          <legend class="hidden">Qualification details</legend>
           <p class="group">
-            <label for="">Qualification required </label>
+            <label for="" class="required">Qualification(s) required </label>
             <input id="" type="text" class="x-large">
           </p>
           <p class="group">
             <label for="">Personal qualities and skills required</label>
+            <input id="" type="text" class="x-large" placeholder="eg. Good communicator, keen to learn etc. ">
 
-            <select id="">
-              <option value="">Please select</option>
-              <option value="">Good listener</option>
-              <option value="">Able to add up</option>
-
-            </select>
           </p>
          
         </fieldset>
@@ -126,12 +128,14 @@
                <legend>Your extra questions for the application form</legend>
                <p class="group">
                   <label for="">Question 1</label>
-                  <input id="" type="text" class="large" tabindex="0">
+                  <input id="" type="text" class="x-large" tabindex="0">
                </p>
+
                <p class="group">
-                  <label for="role-long-desc">Answer to question 1</label>
-                  <textarea id="" class="big"></textarea>
-               </p>
+                  <label for="">Question 2</label>
+                  <input id="" type="text" class="x-large" tabindex="0">
+               </p>               
+               
                  <p><a href="#">Add another question?</a>
             </fieldset>        
 
@@ -146,7 +150,7 @@
     </div>
 
 
-  
+   
 
 </section>
 

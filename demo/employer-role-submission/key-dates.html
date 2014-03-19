@@ -9,7 +9,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>State Pension Prototype</title>
+        <title>Apprenticeship Application Prototype</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -42,16 +42,16 @@
         </header>
 
 
+        
+
+
+<div id="phase-notice">
+  <p><strong>Alpha:</strong> This is a new service - your <a href="/feedback">feedback</a> will help us to improve it</p>
+</div>
+
 <main role="main" id="main">
-
-
-      <section>
-
-
-    <div id="content-wrapper">
-
-
-
+   <section>
+      <div id="content-wrapper">
     <div class="help-container">
     <!--    <ul aria-label="The following links will open in a new browser window">
             <li><a class="icon info" href="#" target="_blank" aria-label="" >i</a><span>Helpline: <a href="tel:0800 0150 400">0800 0150 400</a></span></li>
@@ -61,24 +61,31 @@
     </div>   
 
 
+
+          <h1>Employer Role Submission</h1>
+
+
 <nav class="progress-indicator">
 
   <ol aria-label="Progress Steps">
-        <li class="active">
+        <li>
             <span>Employer</span>
         </li>
         <li>
             <span>Vacancy</span>
         </li>
-        <li>
+        <li class="active">
             <span>Dates</span>
         </li>
         <li>
             <span>Eligibility</span>
         </li>
         <li>
-            <span>Training Provider</span>
+            <span>Preview</span>
         </li>
+        <li>
+            <span>Finished</span>
+        </li>        
 
     </ol>
 
@@ -86,8 +93,7 @@
 
 
 
-
-          <h1>Employer Role Submission</h1>
+<h2>3. Key dates</h2>
 
 
       <div class="validation-summary hidden">
@@ -103,17 +109,17 @@
 
 
         <fieldset class="separator">
-          <legend>3. Key dates</legend>
+          <legend class="hidden">Key dates</legend>
           <p class="group">
-            <label for="">Closing date for applications</label>
+            <label class="required" for="">Closing date for applications</label>
             <input id="" type="date" class="date">
           </p>
           <p class="group">
-            <label for="">Interview Start date <span class="required">*</span></label>
+            <label for="">Interview start date</label>
             <input id="" type="date" class="date">
           </p>
           <p class="group">
-            <label for="">Possible Start date <span class="required">*</span></label>
+            <label class="required" for="">Approximate start date</label>
           <input id="" type="date" class="date">
           </p>
 
