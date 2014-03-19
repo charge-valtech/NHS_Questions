@@ -9,7 +9,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>State Pension Prototype</title>
+        <title>Apprenticeship Application Prototype</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -40,23 +40,38 @@
                 </div>
             </div>
         </header>
+
+
+        
+
+
+<div id="phase-notice">
+  <p><strong>Alpha:</strong> This is a new service - your <a href="/feedback">feedback</a> will help us to improve it</p>
+</div>
+
 <main role="main" id="main">
    <section>
       <div id="content-wrapper">
-             <div class="help-container">
+    <div class="help-container">
     <!--    <ul aria-label="The following links will open in a new browser window">
             <li><a class="icon info" href="#" target="_blank" aria-label="" >i</a><span>Helpline: <a href="tel:0800 0150 400">0800 0150 400</a></span></li>
             <li><a href="#" aria-label="">Application Notes</a></li>
             <li><a href="#" aria-label="" onclick="">Your Feedback</a></li>
         </ul>  -->
     </div>   
-         <nav class="progress-indicator">
+
+
+
+          <h1>Employer Role Submission</h1>
+
+
+<nav class="progress-indicator">
 
   <ol aria-label="Progress Steps">
-        <li class="active">
+        <li>
             <span>Employer</span>
         </li>
-        <li>
+        <li class="active">
             <span>Vacancy</span>
         </li>
         <li>
@@ -66,15 +81,19 @@
             <span>Eligibility</span>
         </li>
         <li>
-            <span>Training Provider</span>
+            <span>Preview</span>
         </li>
+        <li>
+            <span>Finished</span>
+        </li>        
 
     </ol>
 
 </nav>
 
 
-         <h1>Employer Role Submission</h1>
+
+<h2>2. Vacancy details</h2>
          <div class="validation-summary hidden">
             <h3>There was a problem submitting the form</h3>
             <p>Please try the following:</p>
@@ -84,19 +103,27 @@
          </div>
          <form action="key-dates.html">
             <fieldset class="separator">
-               <legend>2. Vacancy</legend>
+               <legend class="hidden">Vacancy details</legend>
                <p class="group">
-                  <label for="organisation-name">Job title</label>
+                  <label for="organisation-name" class="required">Job title</label>
                   <input id="organisation-name" type="text" class="large" tabindex="0">
                </p>
                <p class="group">
-                  <label for="role-short-desc">Short description of role</label>
+                  <label for="role-short-desc" class="required">Short description</label>
                   <input id="role-short-desc" type="text" class="x-large">
                </p>
                <p class="group">
-                  <label for="role-long-desc">Long description of role</label>
-                  <textarea id="role-long-desc" class="big" placeholder="What will be the appplicant's key responsibilties / day-to-day tasks etc? Also add any additional information that you feel is relevent."></textarea>
+                  <label for="role-long-desc">Key responsibilities</label>
+                  <textarea id="role-long-desc" class="short" placeholder=""></textarea>
                </p>
+               <p class="group">
+                  <label for="role-long-desc">Day to day tasks and duties</label>
+                  <textarea id="role-long-desc" class="short" placeholder=""></textarea>
+               </p>
+               <p class="group">
+                  <label for="role-long-desc">Other information</label>
+                  <textarea id="role-long-desc" class="short" placeholder=""></textarea>
+               </p>                              
             </fieldset>
             <fieldset class="separator">
                <legend>Vacancy Location</legend>
@@ -172,16 +199,16 @@
                </fieldset>
             </fieldset>
             <fieldset class="separator">
-               <legend>Salary details</legend>
+               <legend>Wage</legend>
                <p class="group">
-                  <label for="">Amount</label>
-                  <input id="role-short-desc" type="text" disabled="disabled" class="small" placeholder="&pound;">
+                  <label for="" class="required">Amount</label>
+                  <input id="role-short-desc" type="text" class="small" placeholder="&pound;">
                </p>
                <p class="group">
-                  <label for="title">Frequency</label>
+                  <label for="title" class="required">Frequency</label>
                   <select id="title">
                      <option value="">Please select</option>
-                     <option value="">Weekly</option>
+                     <option selected="selected" value="">Weekly</option>
                      <option value="">Monthly</option>
                      <option value="">Yearly</option>
                   </select>
@@ -190,7 +217,7 @@
             <fieldset class="separator">
                <legend>Additional information</legend>
                <p class="group">
-                  <label for="organisation-name">Number of vacancies</label>
+                  <label for="organisation-name">No. of vacancies</label>
                   <select class="small" id="title">
                      <option value="">1</option>
                      <option value="">2</option>
@@ -201,18 +228,17 @@
                      <option value="">7</option>
                      <option value="">8</option>
                      <option value="">9</option>
-                     <option value="">10</option>
-                     <option value="">11</option>
-                     <option value="">12</option>
+                     <option value="">10+</option>
                   </select>
                </p>
+
                <p class="group">
                   <label for="future prospects">Future prospects</label>
-                  <input id="reality-check" type="text" class="large">
+                  <textarea id="role-long-desc" class="short" placeholder=""></textarea>
                </p>
                <p class="group">
                   <label for="reality-check">Reality check</label>
-                  <input id="reality-check" type="text" class="large">
+                  <textarea id="role-long-desc" class="short" placeholder="Eg. The role may involve being on your feet for long hours or working with wild geese."></textarea>
                </p>
             </fieldset>
             <p class="action group">
