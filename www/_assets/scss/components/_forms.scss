@@ -1,28 +1,35 @@
 @include form;
 
-fieldset {
-border:0;
-margin-top:1em;
-
-   &.separator {
-border-bottom: 1px solid $grey-2;padding-bottom:1.5em;margin-bottom: 2.5em;
-
-   }
-
-   .working-day {
-width:180px;
-float:left;
-
-
+form {
+    min-height: 200px;
+    fieldset {
+        border: 0;
+        margin-top: 1em;
+        &.separator {
+            border-bottom: 1px solid $grey-2;
+            padding-bottom: 1.5em;
+            margin-bottom: 2.5em;
+        }
+        .working-day {
+            width: 180px;
+            float: left;
+        }
+        p {
+            margin: 0 0 1em;
+        }
+        .required:after {
+            color: #e32;
+            content: ' *';
+            display: inline;
+        }
+    }
 }
 
-
-p {margin: 0 0 1em;}
-
+fieldset fieldset {
+    padding-left: 0;
 }
 
-
-fieldset fieldset {padding-left:0;}
-
-.logo-upload img {width:10em;border:1px solid $grey-2}
-
+.logo-upload img {
+    width: 10em;
+    border: 1px solid $grey-2;
+}

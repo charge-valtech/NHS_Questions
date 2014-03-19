@@ -7,9 +7,37 @@
 
 
 h1 {
-    @include heading-36;
+    @include heading-48;
 }
 
+
+#phase-notice 
+
+p {
+padding: 8px 32px;
+max-width: 940px;
+margin: 0 auto;
+background: $colorPrimary;
+font-size: 1.9rem;
+line-height: 1.31579;
+color: $colorWhite;
+
+a {
+color: #0B0C0C;
+}
+
+strong {
+text-transform: uppercase;
+}
+
+
+}
+
+main {
+background: #FFF;
+border-bottom: 10px solid $colorPrimary;
+display: block;
+}
 
 
 #content-wrapper {
@@ -26,9 +54,9 @@ h1 {
     .help-container {
         width: 100%;
         clear:both;
-        min-height:3em;
-        border-top: 10px solid $colorPrimary;
-        margin-bottom:20px;
+margin-bottom:2em;
+      
+
         ul {
         margin-top:1.5em;
             list-style: none;
