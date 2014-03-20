@@ -9,11 +9,9 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Apprenticeship Application Prototype</title>
+        <title>National Apprenticeship Service</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
    
         <link href="../_assets/css/main.css" media="all" rel="stylesheet" type="text/css">           
 
@@ -52,38 +50,42 @@
 <main role="main" id="main">
    <section>
       <div id="content-wrapper">
-             <div class="help-container">
+    <div class="help-container">
     <!--    <ul aria-label="The following links will open in a new browser window">
             <li><a class="icon info" href="#" target="_blank" aria-label="" >i</a><span>Helpline: <a href="tel:0800 0150 400">0800 0150 400</a></span></li>
             <li><a href="#" aria-label="">Application Notes</a></li>
             <li><a href="#" aria-label="" onclick="">Your Feedback</a></li>
         </ul>  -->
     </div>   
-         <h1>Employer Role Submission</h1>
-         <nav class="progress-indicator">
+
+
+
+          <h1>Employer Role Submission</h1>
+
+
+<nav class="progress-indicator">
 
   <ol aria-label="Progress Steps">
         <li class="active">
-            <span>Employer</span>
+
+            <span>Training provider</span>
         </li>
         <li>
             <span>Vacancy</span>
         </li>
         <li>
-            <span>Dates</span>
+            <span>Key dates</span>
         </li>
         <li>
             <span>Eligibility</span>
         </li>
-        <li class="active">
-            <span>Training Provider???</span>
+        <li>
+            <span>Employer details</span>
         </li>        
         <li>
-            <span>Preview</span>
+            <span>Preview &amp; Submit</span>
         </li>
-        <li>
-            <span>Finished</span>
-        </li>        
+       
 
     </ol>
 
@@ -91,7 +93,7 @@
 
 
 
-         <h2>5. Training Provider</h2>
+<h2>1. Find a training provider</h2>
          <div class="validation-summary hidden">
             <h3>There was a problem submitting the form</h3>
             <p>Please try the following:</p>
@@ -99,10 +101,43 @@
                <li><a href="#error1">Enter your first name</a></li>
             </ol>
          </div>
-         <form action="preview.html">
+
+
+         <p>So that we can help you find a suitable training provider, please answer the following 3 questions:</p>
+         <form action="key-dates.html">
+            <fieldset class="separator">
+               <legend class="hidden">Company basics</legend>
+               <p class="group">
+                  <label for="organisation-name">No. of employees in your company</label>
+                  <select class="small" id="title">
+                     <option value="">1</option>
+                     <option value="">2</option>
+                     <option value="">3</option>
+                     <option value="">4</option>
+                     <option value="">5</option>
+                     <option value="">6</option>
+                     <option value="">7</option>
+                     <option value="">8</option>
+                     <option value="">9</option>
+                     <option value="">10+</option>
+                  </select>
+               </p>
+
+               <p class="group">
+
+                  <label for="organisation-name"  class="required">Vacancy location</label>
+                  <input id="organisation-name" type="text" class="large" placeholder="">
+               </p>
+               <p class="group">
+                  <label for="organisation-name"  class="required">Vacancy keyword(s)</label>
+                  <input id="organisation-name" type="text" class="large" placeholder="eg. seamstress, dressmaker">
+            
+               </p>
+            </fieldset>
             <p class="action group">
-               <a class="button secondary" href="eligibility-criteria.html">Back</a>        
-               <button class="button" type="submit" value="Continue">Preview submission</button>
+               <a class="button" href="training-provider-results.html">Search</a> 
+               <a class="button secondary" href="employer.html">Clear</a>        
+
             </p>
          </form>
       </div>

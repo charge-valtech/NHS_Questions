@@ -66,14 +66,14 @@
 <nav class="progress-indicator">
 
   <ol aria-label="Progress Steps">
-        <li>
+        <li class="active">
 
             <span>Training provider</span>
         </li>
         <li>
             <span>Vacancy</span>
         </li>
-        <li class="active">
+        <li>
             <span>Key dates</span>
         </li>
         <li>
@@ -93,54 +93,96 @@
 
 
 
-<h2>3. Key dates</h2>
+<h2>1. Find a training provider</h2>
+         <div class="validation-summary hidden">
+            <h3>There was a problem submitting the form</h3>
+            <p>Please try the following:</p>
+            <ol>
+               <li><a href="#error1">Enter your first name</a></li>
+            </ol>
+         </div>
+
+   <form action="key-dates.html" class="hidden">
+            <fieldset>
+               <legend class="hidden">Company basics</legend>
+               <p class="group">
+                  <label for="organisation-name">No. of employees in your company</label>
+                  <select class="small" id="title">
+                     <option value="">1</option>
+                     <option value="">2</option>
+                     <option value="">3</option>
+                     <option value="">4</option>
+                     <option value="">5</option>
+                     <option value="">6</option>
+                     <option value="">7</option>
+                     <option value="">8</option>
+                     <option value="">9</option>
+                     <option value="">10+</option>
+                  </select>
+               </p>
+
+               <p class="group">
+
+                  <label for="organisation-name"  class="required">Vacancy location</label>
+                  <input id="organisation-name" type="text" class="large" placeholder="">
+               </p>
+               <p class="group">
+                  <label for="organisation-name"  class="required">Vacancy keyword(s)</label>
+                  <input id="organisation-name" type="text" class="large" placeholder="eg. seamstress, dressmaker">
+            
+               </p>
+
+            <p class="action group">
+               <a class="button" href="training-provider-results.html">Search</a> 
+               <a class="button secondary" href="employer.html">Clear</a>        
+
+            </p>
+            </fieldset>
+
+         </form>         
 
 
-      <div class="validation-summary hidden">
-        <h3>There was a problem submitting the form</h3>
-        <p>Please try the following:</p>
-        <ol>
-          <li><a href="#error1">Error message</a></li>
+         <p>We have found <b>10</b> training providers that might be suitable:</p>
 
-        </ol>
+
+         <ul style="list-style:none;">
+         <li style="min-height:150px;clear:both;border-bottom:1px solid #ddd;padding:15px 0;">
+
+<img class="" style="float:left;margin-right:20px;" src="http://placehold.it/150x150">           
+<h4><a href="#">Training provider #1</a></h4>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. </p>
+
+<a style="float:right;" class="button" href="vacancy.html">Select provider</a>
+
+<p><b>Distance: 10 miles</b></p>
+
+         </li>
+         <li style="min-height:150px;clear:both;border-bottom:1px solid #ddd;padding:15px 0;">
+<img class="" style="float:left;margin-right:20px;" src="http://placehold.it/150x150">           
+<h4><a href="#">Training provider #2</a></h4>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. </p>
+
+<a style="float:right;" class="button" href="vacancy.html">Select provider</a>
+<p><b>Distance: 10 miles</b></p>
+
+         </li>
+
+         <li style="min-height:150px;clear:both;border-bottom:1px solid #ddd;padding:15px 0;">
+<img class="" style="float:left;margin-right:20px;" src="http://placehold.it/150x150">           
+<h4><a href="#">Training provider #3</a></h4>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. </p>
+
+<a style="float:right;" class="button" href="vacancy.html">Select provider</a>
+<p><b>Distance: 10 miles</b></p>
+         </li>         
+
+         </form>
       </div>
-      <form action="eligibility-criteria.html">
-      
-
-
-        <fieldset class="separator">
-          <legend class="hidden">Key dates</legend>
-          <p class="group">
-            <label class="required" for="">Closing date for applications</label>
-            <input id="" type="date" class="date">
-          </p>
-          <p class="group">
-            <label for="">Interview start date</label>
-            <input id="" type="date" class="date">
-          </p>
-          <p class="group">
-            <label class="required" for="">Approximate start date</label>
-          <input id="" type="date" class="date">
-          </p>
-
-        </fieldset>
-
-        <p class="action group">
-          <a class="button secondary" href="vacancy.html">Back</a>        
-          <button class="button" type="submit" value="Continue">Continue</button>
-        </p>
-      </form>
-    </div>
-
-
-  
-
-</section>
-
-
+   </section>
 </main>
-
-
 <footer class="group js-footer" id="footer" role="contentinfo">
             <div class="footer-wrapper">
                 <div class="footer-meta">

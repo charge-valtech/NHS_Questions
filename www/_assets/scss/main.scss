@@ -23,15 +23,36 @@ p {
     }
 }
 
+
+.gov {
+    
+
+
 main {
     background: #FFF;
-    border-bottom: 10px solid $colorPrimary;
+    border-bottom: 10px solid $govuk-blue;
     display: block;
+
+
+
 }
+
+
+#phase-notice
+{
+
+ border-bottom: 10px solid $govuk-blue;
+
+}
+
+}
+
+
+
 
 #content-wrapper {
     background: #fff;
-    padding: 0 1em 4em 1em;
+    padding: 0 0 4em 0;
     margin: 0 auto;
     max-width: 980px;
     section p {
