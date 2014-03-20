@@ -9,11 +9,9 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Apprenticeship Application Prototype</title>
+        <title>National Apprenticeship Service</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
    
         <link href="../_assets/css/main.css" media="all" rel="stylesheet" type="text/css">           
 
@@ -63,24 +61,26 @@
          <nav class="progress-indicator">
 
   <ol aria-label="Progress Steps">
-        <li class="active">
-            <span>Employer</span>
+        <li>
+
+            <span>Training provider</span>
         </li>
         <li>
             <span>Vacancy</span>
         </li>
         <li>
-            <span>Dates</span>
+            <span>Key dates</span>
         </li>
         <li>
             <span>Eligibility</span>
         </li>
-        <li>
-            <span>Preview</span>
-        </li>
-        <li>
-            <span>Finished</span>
+        <li class="active">
+            <span>Employer details</span>
         </li>        
+        <li>
+            <span>Preview &amp; Submit</span>
+        </li>
+       
 
     </ol>
 
@@ -88,15 +88,15 @@
 
 
 
-         <h2>1. Employer details</h2>
-         <div class="validation-summary">
+         <h2>5. Employer details</h2>
+         <div class="validation-summary hidden">
             <h3>Something's not quite right with the details you entered</h3>
             <p>Please check the following:</p>
             <ol>
                <li><a href="#error1">Enter employer name</a></li>
             </ol>
          </div>
-         <form action="vacancy.html">
+         <form action="preview.html">
             <fieldset class="separator">
                <legend class="hidden">Employer</legend>
                <p class="group">
@@ -106,7 +106,7 @@
                </p>
                <p class="group">
                   <span class="validation-message hidden" id="error1">2. Enter employer description</span>
-                  <label for="employer-desc">Employer description</label>
+                  <label for="employer-desc"  class="required">Employer description</label>
                   <textarea id="employer-desc" class="short" placeholder=""></textarea>            
                </p>
                <p class="group">
@@ -117,7 +117,7 @@
             </fieldset>
             <fieldset class="separator">
                <legend><span>Show employer logo?</span></legend>
-               <ul class="option group">
+               <ul class="option group inline">
                   <li>
                      <label><input type="radio" checked="checked" name="show-logo">Yes</label>
                   </li>
@@ -140,25 +140,24 @@
             </fieldset>
             <fieldset class="separator">
                <legend>Contact details</legend>
+               <p>These details are for internal communications only, and will NOT be displayed on the advertisement.</p>
                <p class="group">
-                  <label for="email">Contact name</label>
+                  <label for="email"  class="required">Contact name</label>
                   <input id="email" type="text" class="name">
                </p>
                <p class="group">
-                  <label for="email">Contact email</label>
+                  <label for="email"  class="required">Contact email</label>
                   <input id="email" type="email" class="email">
                </p>
                <p class="group">
-                  <label for="email-confirm">Re-type contact email</label>
+                  <label for="email-confirm" class="required">Re-type contact email</label>
                   <input id="email-confirm" type="email" class="email">
                </p>
                <p class="group">
-                  <label for="telephone">Telephone</label>
+                  <label for="telephone" class="required">Telephone</label>
                   <input id="telephone" type="text" class="small" placeholder="+44">&nbsp;<input id="telephone" type="text" class="telephone">
                </p>
-               <p class="option group">
-                  <label for="public"><input id="public" type="checkbox"> Advertise contact details?</label>
-               </p>
+         
             </fieldset>
             <fieldset class="hidden">
                <legend>Apprenticeship address</legend>
