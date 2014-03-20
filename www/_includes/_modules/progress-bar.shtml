@@ -2,23 +2,25 @@
 
   <ol aria-label="Progress Steps">
         <li class="active">
-            <span>Employer</span>
+
+            <span>Training provider</span>
         </li>
         <li>
             <span>Vacancy</span>
         </li>
         <li>
-            <span>Dates</span>
+            <span>Key dates</span>
         </li>
         <li>
             <span>Eligibility</span>
         </li>
         <li>
-            <span>Preview</span>
-        </li>
-        <li>
-            <span>Finished</span>
+            <span>Employer details</span>
         </li>        
+        <li>
+            <span>Preview &amp; Submit</span>
+        </li>
+       
 
     </ol>
 

@@ -2079,35 +2079,36 @@ form {
 form fieldset {
   border: 0;
   margin-top: 1em;
+  padding: 1em 0;
 }
-/* line 8, ../scss/components/_forms.scss */
+/* line 9, ../scss/components/_forms.scss */
 form fieldset.separator {
   border-bottom: 1px solid #bfc1c3;
   padding-bottom: 1.5em;
   margin-bottom: 2.5em;
 }
-/* line 13, ../scss/components/_forms.scss */
+/* line 14, ../scss/components/_forms.scss */
 form fieldset .working-day {
   width: 180px;
   float: left;
 }
-/* line 17, ../scss/components/_forms.scss */
+/* line 18, ../scss/components/_forms.scss */
 form fieldset p {
   margin: 0 0 1em;
 }
-/* line 20, ../scss/components/_forms.scss */
+/* line 21, ../scss/components/_forms.scss */
 form fieldset .required:after {
   color: #e32;
   content: ' *';
   display: inline;
 }
 
-/* line 28, ../scss/components/_forms.scss */
+/* line 29, ../scss/components/_forms.scss */
 fieldset fieldset {
   padding-left: 0;
 }
 
-/* line 32, ../scss/components/_forms.scss */
+/* line 33, ../scss/components/_forms.scss */
 .logo-upload img {
   width: 10em;
   border: 1px solid #bfc1c3;
@@ -3296,41 +3297,45 @@ p strong {
   text-transform: uppercase;
 }
 
-/* line 26, ../scss/main.scss */
-main {
+/* line 31, ../scss/main.scss */
+.gov main {
   background: #FFF;
-  border-bottom: 10px solid #da337d;
+  border-bottom: 10px solid #005ea5;
   display: block;
 }
+/* line 42, ../scss/main.scss */
+.gov #phase-notice {
+  border-bottom: 10px solid #005ea5;
+}
 
-/* line 32, ../scss/main.scss */
+/* line 53, ../scss/main.scss */
 #content-wrapper {
   background: #fff;
-  padding: 0 1em 4em 1em;
+  padding: 0 0 4em 0;
   margin: 0 auto;
   max-width: 980px;
 }
-/* line 37, ../scss/main.scss */
+/* line 58, ../scss/main.scss */
 #content-wrapper section p {
   margin: 0;
   font-size: 1.9rem;
   font-weight: 400;
   line-height: 1.4em;
 }
-/* line 43, ../scss/main.scss */
+/* line 64, ../scss/main.scss */
 #content-wrapper .help-container {
   width: 100%;
   clear: both;
   margin-bottom: 2em;
 }
-/* line 47, ../scss/main.scss */
+/* line 68, ../scss/main.scss */
 #content-wrapper .help-container ul {
   margin-top: 1.5em;
   list-style: none;
   display: inline;
   float: right;
 }
-/* line 52, ../scss/main.scss */
+/* line 73, ../scss/main.scss */
 #content-wrapper .help-container ul li {
   float: left;
   margin-right: 20px;
