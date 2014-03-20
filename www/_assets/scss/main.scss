@@ -1,48 +1,37 @@
-
-
 @import "_base.scss";
 @import "_components.scss";
 @import "_modules.scss";
-
-
 
 h1 {
     @include heading-48;
 }
 
-
-#phase-notice 
-
+#phase-notice
 p {
-padding: 8px 32px;
-max-width: 940px;
-margin: 0 auto;
-background: $colorPrimary;
-font-size: 1.9rem;
-line-height: 1.31579;
-color: $colorWhite;
-
-a {
-color: #0B0C0C;
-}
-
-strong {
-text-transform: uppercase;
-}
-
-
+    padding: 8px 32px;
+    max-width: 940px;
+    margin: 0 auto;
+    background: $colorPrimary;
+    font-size: 1.9rem;
+    line-height: 1.31579;
+    color: $colorWhite;
+    a {
+        color: #0B0C0C;
+    }
+    strong {
+        text-transform: uppercase;
+    }
 }
 
 main {
-background: #FFF;
-border-bottom: 10px solid $colorPrimary;
-display: block;
+    background: #FFF;
+    border-bottom: 10px solid $colorPrimary;
+    display: block;
 }
-
 
 #content-wrapper {
     background: #fff;
-    padding: 0 1em 4em 1em; 
+    padding: 0 1em 4em 1em;
     margin: 0 auto;
     max-width: 980px;
     section p {
@@ -53,12 +42,10 @@ display: block;
     }
     .help-container {
         width: 100%;
-        clear:both;
-margin-bottom:2em;
-      
-
+        clear: both;
+        margin-bottom: 2em;
         ul {
-        margin-top:1.5em;
+            margin-top: 1.5em;
             list-style: none;
             display: inline;
             float: right;
@@ -68,5 +55,4 @@ margin-bottom:2em;
             }
         }
     }
-
 }
