@@ -1,0 +1,80 @@
+<!--#include virtual="../_includes/_global/header.shtml" -->
+<main role="main" id="main">
+   <section>
+      <div id="content-wrapper">
+         <!--#include virtual="../_includes/_modules/help-container.shtml" --> 
+
+         <h1>Find an Apprenticeship</h1>
+
+
+
+      
+
+<div style="margin-bottom:20px;background:#f9f9f9;padding:10px;clear:both;border:1px solid #ddd;">
+   <p>Not sure what you're looking for? Try our <a href="wizard.html">Apprenticeship Matching Wizard</a></p>
+</div>
+
+
+         <div class="validation-summary hidden">
+            <h3>There was a problem submitting the form</h3>
+            <p>Please try the following:</p>
+            <ol>
+               <li><a href="#error1">Enter your first name</a></li>
+            </ol>
+         </div>
+
+
+         <form action="" class="left">
+            <fieldset class="separator ">
+               <legend>Tell us what you're looking for</legend>
+
+               <p class="group hidden">
+                  <label for="organisation-name">Industry</label>
+                  <select class="small" id="title">
+                     <option value="">Any</option>
+                     <option selected="selected" value="">Engineering</option>
+                     <option value="">Health and Beauty</option>
+                  </select>
+               </p>
+
+               <p class="group">
+
+                  <label for="organisation-name">Keyword(s)</label>
+                  <input id="organisation-name" type="text" class="large" placeholder="eg. engineering">
+               </p>
+
+
+
+
+               <p class="group">
+                  <label for="organisation-name">Within</label>
+                  <select class="small" id="title">
+                     <option value="">Any</option>
+                     <option selected="selected" value="">10 miles</option>
+                     <option value="">50 miles</option>
+                  </select>
+               </p>
+
+               <p class="group">
+                  <label for="organisation-name" >of this location</label>
+                  <input id="organisation-name" type="text" class="medium" placeholder="">
+            
+               </p>
+
+
+  
+
+
+            </fieldset>
+
+
+            <p class="action group">
+               <a class="button" href="apprenticeship-results.html">Search</a> 
+               <a class="button secondary" href="#">Clear</a>        
+
+            </p>
+         </form>
+      </div>
+   </section>
+</main>
+<!--#include virtual="../_includes/_global/footer.shtml" -->

@@ -1,0 +1,40 @@
+<!--#include virtual="../_includes/_global/header.shtml" -->
+<main role="main" id="main">
+   <section>
+      <div id="content-wrapper">
+         <!--#include virtual="../_includes/_modules/help-container.shtml" --> 
+         <h1>Find an Apprenticeship</h1>
+         <!--#include virtual="../_includes/_modules/apprentice-progress-bar.shtml" -->
+         <h2>1. Step 1</h2>
+         <div class="validation-summary hidden">
+            <h3>Something's not quite right with the details you entered</h3>
+            <p>Please check the following:</p>
+            <ol>
+               <li><a href="#error1">Enter employer name</a></li>
+            </ol>
+         </div>
+         <form action="preview.html">
+            <fieldset class="separator">
+               <legend class="hidden">Employer</legend>
+               <p class="group">
+                  <span class="validation-message hidden" id="error1">1. Enter employer name</span>
+                  <label for="organisation-name"  class="required">First name</label>
+                  <input id="organisation-name" type="text" class="large">
+               </p>
+
+               <p class="group">
+                  <span class="validation-message hidden" id="error1">1. Enter employer name</span>
+                  <label for="organisation-name"  class="required">Last name</label>
+                  <input id="organisation-name" type="text" class="large">
+               </p>
+            </fieldset>
+           
+            <p class="action group">
+               <button class="button secondary" type="submit" value="Back">Clear</button>        
+               <button class="button" type="submit" value="Continue">Continue</button>
+            </p>
+         </form>
+      </div>
+   </section>
+</main>
+<!--#include virtual="../_includes/_global/footer.shtml" -->

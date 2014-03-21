@@ -1,0 +1,27 @@
+<nav class="progress-indicator">
+
+  <ol aria-label="Progress Steps">
+        <li class="active">
+
+            <span>Step 1</span>
+        </li>
+        <li>
+            <span>Step 2</span>
+        </li>
+        <li>
+            <span>Step 3</span>
+        </li>
+        <li>
+            <span>Step 4</span>
+        </li>
+      
+        <li>
+            <span>Preview &amp; Submit</span>
+        </li>
+       
+
+    </ol>
+
+</nav>
+
+

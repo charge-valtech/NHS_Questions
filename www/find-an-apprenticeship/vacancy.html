@@ -1,0 +1,169 @@
+<!--#include virtual="../_includes/_global/header.shtml" -->
+<main role="main" id="main">
+   <section>
+      <div id="content-wrapper">
+<!--#include virtual="../_includes/_modules/help-container.shtml" --> 
+
+
+
+          <h1>Employer Role Submission</h1>
+
+
+<!--#include virtual="../_includes/_modules/progress-bar.shtml" -->
+<h2>2. Vacancy details</h2>
+         <div class="validation-summary hidden">
+            <h3>There was a problem submitting the form</h3>
+            <p>Please try the following:</p>
+            <ol>
+               <li><a href="#error1">Enter your first name</a></li>
+            </ol>
+         </div>
+         <form action="key-dates.html">
+            <fieldset class="separator">
+               <legend class="hidden">Vacancy details</legend>
+               <p class="group">
+                  <label for="organisation-name" class="required">Job title</label>
+                  <input id="organisation-name" type="text" class="large" tabindex="0">
+               </p>
+               <p class="group">
+                  <label for="role-short-desc" class="required">Brief summary of role</label>
+                  <input id="role-short-desc" type="text" class="x-large">
+               </p>
+               <p class="group">
+                  <label for="role-long-desc">Key responsibilities</label>
+                  <textarea id="role-long-desc" class="short" placeholder=""></textarea>
+               </p>
+               <p class="group">
+                  <label for="role-long-desc">Day to day tasks and duties</label>
+                  <textarea id="role-long-desc" class="short" placeholder=""></textarea>
+               </p>
+               <p class="group">
+                  <label for="role-long-desc">Other information</label>
+                  <textarea id="role-long-desc" class="short" placeholder=""></textarea>
+               </p>                              
+            </fieldset>
+            <fieldset class="separator">
+               <legend>Vacancy Location</legend>
+               <p>If you'd rather enter the full address manually <a href="#">click here</a>
+               <p class="group">
+                  <label for="role-short-desc">Postcode</label>
+                  <input id="role-short-desc" type="text" class="short">
+                  <button class="button secondary inline" type="submit" value="Continue">Find address</button>
+               </p>
+               <p class="group">
+                  <label for="title">Select address</label>
+                  <select id="title">
+                     <option value="">Please select</option>
+                     <option value="">45 High Street, Reddich</option>
+                     <option value="">47 High Street, Reddich</option>
+                     <option value="">49 High Street, Reddich</option>
+                     <option value="">51 High Street, Reddich</option>
+                     <option value="">53 High Street, Reddich</option>
+                     <option value="">55 High Street, Reddich</option>
+                  </select>
+               </p>
+            </fieldset>
+            <fieldset class="separator">
+               <legend>Working week</legend>
+               <fieldset>
+                  <legend>Working days (tick all that apply)</legend>
+                  <ul class="option group">
+                     <li>
+                        <span class="working-day">
+                        <label for="monday"><input type="checkbox" checked="checked" id="monday">Monday</label>
+                        </span>
+                        <span class="group inline">
+                           <label for="mon-start-time"></label>
+                           <select id="mon-start-time">
+                              <option value="">09:00</option>
+                           </select>
+                           <span>to&nbsp;</span>
+                           <label for="mon-end-time"></label>
+                           <select id="mon-end-time">
+                              <option value="">17:30</option>
+                           </select>
+                           <span>8 hours</span>
+                        </span>
+                     </li>
+                     <li>
+                        <span class="working-day">
+                        <label for="monday"><input type="checkbox" checked="checked" id="monday">Tuesday</label>
+                        </span>
+                        <span class="group inline">
+                           <label for="mon-start-time"></label>
+                           <select id="mon-start-time">
+                              <option value="">09:00</option>
+                           </select>
+                           <span>to&nbsp;</span>
+                           <label for="mon-end-time"></label>
+                           <select id="mon-end-time">
+                              <option value="">17:30</option>
+                           </select>
+                           <span>8 hours</span>
+                        </span>
+                     </li>
+                     </li>
+                     <li><label for=""><input type="checkbox" id="">Wednesday</label></li>
+                     <li><label for=""><input type="checkbox" id="">Thursday</label></li>
+                     <li><label for=""><input type="checkbox" id="">Friday</label></li>
+                     <li><label for=""><input type="checkbox" id="">Saturday</label></li>
+                     <li><label for=""><input type="checkbox" id="">Sunday</label></li>
+                  </ul>
+                  <p class="group">
+                     <label for="role-short-desc">Total hours per week (calculated)</label>
+                     <input id="role-short-desc" type="text" disabled="disabled" value="8" class="small">
+                  </p>
+               </fieldset>
+            </fieldset>
+            <fieldset class="separator">
+               <legend>Wage</legend>
+               <p class="group">
+                  <label for="" class="required">Amount</label>
+                  <input id="role-short-desc" type="text" class="small" placeholder="&pound;">
+               </p>
+               <p class="group">
+                  <label for="title" class="required">Frequency</label>
+                  <select id="title">
+                     <option value="">Please select</option>
+                     <option selected="selected" value="">Weekly</option>
+                     <option value="">Monthly</option>
+                     <option value="">Yearly</option>
+                  </select>
+               </p>
+            </fieldset>
+            <fieldset class="separator">
+               <legend>Additional information</legend>
+               <p class="group">
+                  <label for="organisation-name">No. of vacancies</label>
+                  <select class="small" id="title">
+                     <option value="">1</option>
+                     <option value="">2</option>
+                     <option value="">3</option>
+                     <option value="">4</option>
+                     <option value="">5</option>
+                     <option value="">6</option>
+                     <option value="">7</option>
+                     <option value="">8</option>
+                     <option value="">9</option>
+                     <option value="">10+</option>
+                  </select>
+               </p>
+
+               <p class="group">
+                  <label for="future prospects">Future prospects</label>
+                  <textarea id="role-long-desc" class="short" placeholder=""></textarea>
+               </p>
+               <p class="group">
+                  <label for="reality-check">Reality check</label>
+                  <textarea id="role-long-desc" class="short" placeholder="Eg. The role may involve being on your feet for long hours or working with wild geese."></textarea>
+               </p>
+            </fieldset>
+            <p class="action group">
+               <a class="button secondary" href="employer.html">Back</a>        
+               <button class="button" type="submit" value="Continue">Continue</button>
+            </p>
+         </form>
+      </div>
+   </section>
+</main>
+<!--#include virtual="../_includes/_global/footer.shtml" -->
