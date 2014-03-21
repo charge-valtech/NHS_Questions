@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>National Apprenticeship Service</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+        <link href="../_assets/css/main.css" media="all" rel="stylesheet" type="text/css">           
+
+        <script src="../_assets/js/vendor/modernizr-2.7.1.js"></script>
+
+
+    </head>
+    <body>
+        <div class="skiplink-container">
+            <div>
+                <a href="#main" class="skiplink">Skip to main content</a>
+            </div>
+        </div>
+        <header role="banner" id="global-header">
+            <div class="header-wrapper">
+                <div class="header-global">
+                    <div class="header-logo">
+                        <a href="../index.html" title="Go to the GOV.UK homepage">
+                          <img src="../_assets/img/logos/logo.png" alt="GOV.UK">
+                        </a>
+                        
+                      </div>
+                    <h1 class="page-title beta">Apprenticeship Applications <span>Alpha</span></h1>
+                </div>
+            </div>
+        </header>
+
+
+        
+
+
+<div id="phase-notice">
+  <p><strong>Alpha:</strong> This is a new service - your <a href="/feedback">feedback</a> will help us to improve it</p>
+</div>

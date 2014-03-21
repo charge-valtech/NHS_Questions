@@ -1,0 +1,174 @@
+<!--#include virtual="../_includes/_global/header.shtml" -->
+
+
+<main role="main" id="main">
+
+
+      <section>
+
+
+	<div id="content-wrapper">
+
+
+
+<!--#include virtual="../_includes/_modules/help-container.shtml" --> 
+
+
+<!--#include virtual="../_includes/_modules/progress-bar.shtml" -->
+
+
+          <h1>Employer Role Submission</h1>
+
+
+      <div class="validation-summary">
+        <h3>There was a problem submitting the form</h3>
+        <p>Please try the following:</p>
+        <ol>
+          <li><a href="#error1">Enter your first name</a></li>
+
+        </ol>
+      </div>
+      <form>
+        <fieldset>
+          <legend>Your details</legend>
+          <p class="group">
+            <label for="title">Title</label>
+            <select id="title">
+              <option value="Mr">Mr.</option>
+              <option value="Mrs">Mrs.</option>
+              <option value="Miss">Miss</option>
+              <option value="Ms.">Ms.</option>
+              <option value="Dr.">Dr.</option>
+              <option value="Other">Other</option>
+            </select>
+          </p>
+          <p class="group validation">
+            <span class="validation-message" id="error1">1. Enter your first name</span>
+            <label for="first-name">First name</label>
+            <input id="first-name" type="text" class="name">
+          </p>
+          <p class="group">
+            <label for="last-name">Last name</label>
+            <input id="last-name" type="text" class="name">
+          </p>
+
+          </fieldset>
+
+          <fieldset>
+            <legend><span>Date of birth</span></legend>
+            <div class="inline group">
+              <p class="group">
+                <label for="day" class="visuallyhidden">Day</label>
+                <select id="day" type="text">
+                  <option value="Day">Day</option>
+                  <!-- Other options go here -->
+                </select>
+              </p>
+              <p class="group">
+                <label for="month" class="visuallyhidden">Month</label>
+                <select id="month" type="text">
+                  <option value="Month">Month</option>
+                  <!-- Other options go here -->
+                </select>
+              </p>
+              <p class="group">
+                <label for="year" class="visuallyhidden">Year</label>
+                <select id="year" type="text">
+                  <option value="Year">Year</option>
+                  <!-- Other options go here -->
+                </select>
+              </p>
+            </div>
+          </fieldset>
+
+
+        <fieldset>
+          <legend><span>Gender</span></legend>
+          <p class="option group">
+            <label><input type="radio" name="gender"> Male</label>
+            <label><input type="radio" name="gender"> Female</label>
+          </p>
+
+        </fieldset>
+
+        <fieldset>
+          <legend>Email address</legend>
+          <p class="group">
+            <label for="email">Enter email</label>
+            <input id="email" type="email" class="email">
+          </p>
+          <p class="group">
+            <label for="email-confirm">Re-type email</label>
+            <input id="email-confirm" type="email" class="email">
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>Telephone number</legend>
+          <p class="group">
+            <label for="telephone">Telephone</label>
+            <input id="telephone" type="text" class="telephone">
+            <span class="hint">Include your country code</span>
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>Postal address</legend>
+          <p class="group">
+            <label for="street1">Street</label>
+            <input id="street1" type="text" class="street">
+          </p>
+          <p class="group">
+            <label for="street2" class="visuallyhidden">Street line two</label>
+            <input id="street2" type="text" class="street">
+          </p>
+          <p class="group">
+            <label for="town">Town/City</label>
+            <input id="town" type="text" class="town">
+          </p>
+          <p class="group">
+            <label for="postcode">Postcode</label>
+            <input id="postcode" type="text" class="postcode">
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>Biography</legend>
+          <p class="group">
+            <label for="biography">Write a few short words about yourself</label>
+            <textarea id="biography" class="big" placeholder="Enter text here"></textarea>
+          </p>
+          <p class="option group">
+            <label for="public"><input id="public" type="checkbox"> Make this biography public</label>
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>I am interested in</legend>
+          <ul class="option group">
+            <li><label for="jobs"><input type="checkbox" id="jobs"> Job offers</label></li>
+            <li><label for="networking"><input type="checkbox" id="networking"> Networking</label></li>
+            <li><label for="business"><input type="checkbox" id="business"> Business opportunities</label></li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend>I prefer to be contacted by</legend>
+          <ul class="option group validation">
+            <li><label for="contact-email"><input id="contact-email" type="radio" name="preferred-contact" checked=""> Email</label></li>
+            <li><label for="contact-telephone"><input id="contact-telephone" type="radio" name="preferred-contact"> Telephone</label></li>
+            <li><label for="contact-post"><input id="contact-post" type="radio" name="preferred-contact"> Post</label></li>
+          </ul>
+        </fieldset>
+        <p class="action group">
+          <input class="button secondary" type="submit" value="Back">        
+          <input class="button" type="submit" value="Continue">
+        </p>
+      </form>
+    </div>
+
+
+  
+
+</section>
+
+
+</main>
+
+
+<!--#include virtual="../_includes/_global/footer.shtml" -->
