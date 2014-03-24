@@ -119,7 +119,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('default', ['jshint', 'compass:dev', 'watch']); 
 
-  grunt.registerTask('demo', ['jshint', 'compass:demo', 'concat:demo', 'cssmin', 'ssi']);   
+  grunt.registerTask('demo', ['jshint', 'compass:demo', 'concat:demo', 'cssmin']);   
 
   grunt.registerTask('dist', ['jshint', 'compass:dist']);     
 

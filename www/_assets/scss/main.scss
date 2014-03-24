@@ -6,6 +6,11 @@ h1 {
     @include heading-48;
 }
 
+h1.page-title {
+    @include heading-24; 
+
+}
+
 #phase-notice
 p {
     padding: 8px 32px;
