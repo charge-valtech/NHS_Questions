@@ -1,0 +1,15 @@
+@import 'base/variables.scss';
+@import 'base/mixins.scss';
+@import 'base/utilities.scss';
+
+.button{
+  	@include button($green);
+
+  	&.secondary {
+
+	@include button($grey-3);
+  	
+  	}
+
+ }
+
