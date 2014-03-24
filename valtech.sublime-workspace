@@ -88,10 +88,82 @@
 	"buffers":
 	[
 		{
-			"file": "www/employer-role-submission/eligibility-criteria.html",
+			"file": "demo/employer-role-submission/preview.html",
 			"settings":
 			{
-				"buffer_size": 1056,
+				"buffer_size": 742,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "www/index.html",
+			"settings":
+			{
+				"buffer_size": 3465,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "www/apprentice.html",
+			"settings":
+			{
+				"buffer_size": 3464,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "www/find-an-apprenticeship/wizard.html",
+			"settings":
+			{
+				"buffer_size": 4029,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "www/_includes/_modules/match-progress-bar.shtml",
+			"settings":
+			{
+				"buffer_size": 380,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "www/find-an-apprenticeship/index.html",
+			"settings":
+			{
+				"buffer_size": 2504,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "www/find-an-apprenticeship/apprenticeship-details.html",
+			"settings":
+			{
+				"buffer_size": 1165,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "www/find-an-apprenticeship/apprenticeship-apply.html",
+			"settings":
+			{
+				"buffer_size": 1814,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "www/find-an-apprenticeship/preview.html",
+			"settings":
+			{
+				"buffer_size": 794,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "www/complete-application.html",
+			"settings":
+			{
+				"buffer_size": 3722,
 				"line_ending": "Unix"
 			}
 		},
@@ -99,15 +171,42 @@
 			"file": "Gruntfile.js",
 			"settings":
 			{
-				"buffer_size": 2876,
+				"buffer_size": 2864,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "www/employer-role-submission/employer.html",
+			"contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<!--[if lt IE 7]>      <html class=\"no-js lt-ie9 lt-ie8 lt-ie7\"> <![endif]-->\n<!--[if IE 7]>         <html class=\"no-js lt-ie9 lt-ie8\"> <![endif]-->\n<!--[if IE 8]>         <html class=\"no-js lt-ie9\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html class=\"no-js\"> <!--<![endif]-->\n\n    <head>\n        <meta charset=\"utf-8\">\n        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n        <title>National Apprenticeship Service</title>\n        <meta name=\"description\" content=\"\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n   \n        <link href=\"../_assets/css/main.css\" media=\"all\" rel=\"stylesheet\" type=\"text/css\">           \n\n        <script src=\"../_assets/js/vendor/modernizr-2.7.1.js\"></script>\n\n\n    </head>\n    <body>\n        <div class=\"skiplink-container\">\n            <div>\n                <a href=\"#main\" class=\"skiplink\">Skip to main content</a>\n            </div>\n        </div>\n        <header role=\"banner\" id=\"global-header\">\n            <div class=\"header-wrapper\">\n                <div class=\"header-global\">\n                    <div class=\"header-logo\">\n                        <a href=\"../index.html\" title=\"Go to the GOV.UK homepage\">\n                          <img src=\"../_assets/img/logos/logo.png\" alt=\"GOV.UK\">\n                        </a>\n                        \n                      </div>\n                    <h1 class=\"page-title beta\">Apprenticeship Applications <span>Alpha</span></h1>\n                </div>\n            </div>\n        </header>\n\n\n        \n\n\n<div id=\"phase-notice\">\n  <p><strong>Alpha:</strong> This is a new service - your <a href=\"/feedback\">feedback</a> will help us to improve it</p>\n</div>\n",
+			"file": "www/_includes/_global/header.shtml",
+			"file_size": 1714,
+			"file_write_time": 130398846210000000,
 			"settings":
 			{
-				"buffer_size": 4277,
+				"buffer_size": 1714,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "www/_includes/_modules/apprentice-progress-bar.shtml",
+			"settings":
+			{
+				"buffer_size": 430,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "www/employer-role-submission/training-provider.html",
+			"settings":
+			{
+				"buffer_size": 2480,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "www/_assets/scss/main.scss",
+			"settings":
+			{
+				"buffer_size": 1135,
 				"line_ending": "Unix"
 			}
 		}
@@ -115,9 +214,29 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 107.0,
+		"height": 392.0,
 		"selected_items":
 		[
+			[
+				"lor",
+				"Snippet: Lorem ipsum"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"sass",
+				"SassBeautify"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"aria",
+				"Snippet: Aria Templates license header"
+			],
 			[
 				"lorem",
 				"Snippet: Lorem ipsum"
@@ -131,10 +250,6 @@
 				"HTMLPrettify"
 			],
 			[
-				"sass",
-				"SassBeautify"
-			],
-			[
 				"git",
 				"Git: Snapshot"
 			],
@@ -145,10 +260,6 @@
 			[
 				"git: status",
 				"Git: Status"
-			],
-			[
-				"inst",
-				"Package Control: Install Package"
 			],
 			[
 				"in",
@@ -213,49 +324,63 @@
 	},
 	"file_history":
 	[
-		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/demo/employer-role-submission/complete.html",
-		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/Gruntfile.js",
-		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/_includes/_global/footer.shtml",
-		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/employer-role-submission/complete.html",
-		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/employer-role-submission/employer.html",
-		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/employer-role-submission/key-dates.html",
+		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/start.html",
 		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/employer-role-submission/preview.html",
-		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/employer-role-submission/template.html",
-		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/employer-role-submission/training-provider.html",
-		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/employer-role-submission/vacancy.html",
-		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/_includes/_components/footer.shtml",
-		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/distribution/index.html",
-		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/demo/employer-role-submission/employer.html",
-		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/demo/employer-role-submission/vacancy.html",
+		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/index.html",
+		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/_assets/scss/main.scss",
+		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/_assets/scss/components/_forms.scss",
+		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/demo/index.html",
+		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/demo/employer.html",
+		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/demo/complete.html",
+		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/demo/employer-role-submission/index.html",
+		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/demo/employer-role-submission/training-provider.html",
 		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/demo/employer-role-submission/key-dates.html",
 		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/demo/employer-role-submission/eligibility-criteria.html",
-		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/demo/employer-role-submission/training-provider.html",
+		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/demo/employer-role-submission/vacancy.html",
+		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/demo/employer-role-submission/training-provider-results.html",
+		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/demo/employer-role-submission/employer.html",
+		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/employer-role-submission/index.html",
+		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/employer-role-submission/training-provider-results.html",
+		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/employer-role-submission/vacancy.html",
+		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/employer-role-submission/employer.html",
+		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/employer-role-submission/training-provider.html",
+		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/_includes/_modules/progress-bar.shtml",
+		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/complete.html",
+		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/employer-role-submission/eligibility-criteria.html",
+		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/employer-role-submission/key-dates.html",
+		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/_assets/scss/base/variables/_colours.scss",
+		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/employer-role-submission/complete.html",
+		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/basics.html",
+		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/employer-role-submission/index.php",
+		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/index.php",
+		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/_includes/_global/header.php",
+		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/config.php",
+		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/_assets/scss/base/mixins/_forms.scss",
+		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/_assets/scss/modules/_progress-steps.scss",
+		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/_includes/_global/header.shtml",
+		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/_assets/scss/base/mixins/_buttons.scss",
 		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/demo/employer-role-submission/preview.html",
-		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/index.html",
+		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/demo/employer-role-submission/complete.html",
+		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/Gruntfile.js",
+		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/employer-role-submission/template.html",
+		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/_includes/_global/footer.shtml",
+		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/_includes/_components/footer.shtml",
+		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/distribution/index.html",
 		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/package.json",
 		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/_includes/_modules/help-container.shtml",
-		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/employer-role-submission/eligibility-criteria.html",
-		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/_assets/scss/main.scss",
-		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/_assets/scss/base/mixins/_forms.scss",
 		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/_assets/scss/base/utilities/_color.scss",
-		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/_assets/scss/components/_forms.scss",
 		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/employer-role-submission/finished.html",
-		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/_assets/scss/base/variables/_colours.scss",
-		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/_assets/scss/base/mixins/_buttons.scss",
-		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/employer-role-submission/index.html",
 		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/_assets/scss/_base.scss",
 		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/_assets/scss/base/variables/_font-stack.scss",
 		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/_assets/scss/base/mixins/_progress-indicator.scss",
 		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/_assets/scss/components/_buttons.scss",
 		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/_assets/scss/base/mixins/_alpha-beta.scss",
 		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/_assets/scss/modules/_header.scss",
-		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/_assets/scss/modules/_progress-steps.scss",
 		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/_assets/scss/base/mixins/_typography.scss",
 		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/_assets/scss/base/_normalize.scss",
 		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/_assets/scss/base/_variables.scss",
 		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/_assets/scss/base/mixins/_panels.scss",
 		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/_assets/scss/base/_utilities.scss",
-		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/_includes/_global/header.shtml",
 		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/_assets/scss/base/utilities/general/_reset.scss",
 		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/_assets/scss/_components.scss",
 		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/_assets/scss/_fonts.css",
@@ -263,7 +388,6 @@
 		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/_assets/css/main.css",
 		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/_assets/scss/modules/_validation-summary.scss",
 		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/_assets/scss/base/_mixins.scss",
-		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/_includes/_modules/progress-bar.shtml",
 		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/_assets/scss/base/mixins/forms/_forms.scss",
 		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/www/_assets/scss/base/utilities/typography/lists/_inline-list.scss",
 		"/Volumes/Data/Dropbox/Development/Web/Valtech/UI/node_modules/grunt-contrib-clean/docs/clean-examples.md",
@@ -327,20 +451,7 @@
 		"/Volumes/Data/Dropbox/Development/Web/Valtech/Alpha/development/www/_assets/scss/base/_normalize.scss",
 		"/Volumes/Data/Dropbox/Development/Web/Valtech/Alpha/development/www/_assets/scss/_base.scss",
 		"/Volumes/Data/Dropbox/Development/Web/Valtech/Alpha/development/www/_assets/config.rb",
-		"/Volumes/Data/Dropbox/Development/Web/Valtech/Alpha/development/_includes/_global/header.shtml",
-		"/Volumes/Data/Dropbox/Development/Web/Valtech/Alpha/development/package.json",
-		"/Volumes/Data/Dropbox/Development/Web/Valtech/Alpha/development/www/_assets/css/_base.css",
-		"/Volumes/Data/Dropbox/Development/Web/Valtech/Alpha/content/_assets/scss/_base.scss",
-		"/Volumes/Data/Dropbox/Development/Web/Valtech/Alpha/Content/_assets/scss/base/_variables.scss",
-		"/Volumes/Data/Dropbox/Development/Web/Valtech/Alpha/development/_assets/scss/main.scss",
-		"/Volumes/Data/Dropbox/Development/Web/Valtech/Alpha/Content/_assets/scss/base/_normalize.scss",
-		"/Volumes/Data/Dropbox/Development/Web/STP/1about/5.html",
-		"/Volumes/Data/Dropbox/Development/Web/SFA/1about/1.html",
-		"/Volumes/Data/Dropbox/Development/Web/SFA/1about/4.html",
-		"/opt/O2/broadway/refresh/content/shared/_assets/css/_libraries/common.css",
-		"/opt/O2/broadway/refresh/content/shared/_assets/.sass-cache/f8acceea7bf252832c4df742892d1e37dec7a3ae/common.scssc",
-		"/opt/O2/broadway/refresh/content/node_modules/sass/spec/fixtures/comment.sass",
-		"/opt/O2/broadway/refresh/content/node_modules/sass/spec/fixtures/comment.css"
+		"/Volumes/Data/Dropbox/Development/Web/Valtech/Alpha/development/_includes/_global/header.shtml"
 	],
 	"find":
 	{
@@ -373,6 +484,15 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"h2",
+			".top",
+			"keyw",
+			"Training provider",
+			"inline",
+			"3px",
+			"inlne",
+			"inline",
+			"$label-alignment",
 			"include file",
 			"include virtual",
 			"default",
@@ -491,16 +611,7 @@
 			"hover-do",
 			"hover-down",
 			"controllerTextToExpand",
-			"js-controller",
-			"errors/404/",
-			"busine",
-			"january-sale-promo-s-short-3",
-			"stude",
-			"thankyou",
-			"/*",
-			"PUK CODE",
-			"PUK",
-			"bp3"
+			"js-controller"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -508,6 +619,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"Apprenticeship",
 			"include virtual",
 			"include file",
 			"",
@@ -588,30 +700,148 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 10,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "www/employer-role-submission/eligibility-criteria.html",
+					"file": "demo/employer-role-submission/preview.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1056,
+						"buffer_size": 742,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								742,
+								742
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 4.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "www/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3465,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2035,
+								2035
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1189.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "www/apprentice.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3464,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1945,
+								1945
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 987.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "www/find-an-apprenticeship/wizard.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4029,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								656,
+								338
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "www/_includes/_modules/match-progress-bar.shtml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 380,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								350,
+								350
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
@@ -622,50 +852,110 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "Gruntfile.js",
+					"buffer": 5,
+					"file": "www/find-an-apprenticeship/index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2876,
+						"buffer_size": 2504,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1959,
-								1959
+								476,
+								476
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 3,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1494.0,
+						"translation.y": 303.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "www/employer-role-submission/employer.html",
+					"buffer": 6,
+					"file": "www/find-an-apprenticeship/apprenticeship-details.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4277,
+						"buffer_size": 1165,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								214,
-								214
+								1049,
+								1029
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 3,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "www/find-an-apprenticeship/apprenticeship-apply.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1814,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								256,
+								216
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 3,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "www/find-an-apprenticeship/preview.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 794,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								437,
+								437
 							]
 						],
 						"settings":
@@ -678,7 +968,187 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "www/complete-application.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3722,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2303,
+								2303
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1069.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "Gruntfile.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2864,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2348,
+								2348
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1378.0,
+						"zoom_level": 1.0
+					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "www/_includes/_global/header.shtml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1714,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								466,
+								466
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "www/_includes/_modules/apprentice-progress-bar.shtml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 430,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								241,
+								241
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "www/employer-role-submission/training-provider.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2480,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								255,
+								2480
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 3,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 350.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "www/_assets/scss/main.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1135,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1122,
+								1122
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 622.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
 					"type": "text"
 				}
 			]
