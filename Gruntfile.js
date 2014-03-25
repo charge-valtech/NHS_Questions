@@ -15,6 +15,10 @@ module.exports = function(grunt) {
         src: ['www/_assets/js/plugins/*.js'],
         dest: 'demo/_assets/js/plugins.js'
       },
+      sprint: {
+        src: ['www/_assets/js/plugins/*.js'],
+        dest: 'sprint/_assets/js/plugins.js'
+      },      
       dist: {
         src: ['www/_assets/js/plugins/*.js'],
         dest: 'dist/_assets/js/plugins.js'
@@ -24,9 +28,6 @@ module.exports = function(grunt) {
             sassPath: 'www/_assets/scss/',
             cssPath: 'www/_assets/css/',
         },
-
-
-
     },
     uglify: {
       options: {
@@ -66,7 +67,14 @@ module.exports = function(grunt) {
             cssDir: 'dist/_assets/css',
             environment: 'production'
           }
-        },        
+        },  
+        sprint: {
+          options: { 
+            sassDir: 'www/_assets/scss',
+            cssDir: 'sprint/_assets/css',
+            environment: 'production'
+          }
+        },              
         dev: { 
           options: {
             sassDir: 'www/_assets/scss',
@@ -82,8 +90,6 @@ module.exports = function(grunt) {
                     }
                 }
     },   
-
-
 
 
 
@@ -108,7 +114,7 @@ module.exports = function(grunt) {
     } 
   });
 
-  grunt.loadNpmTasks( "grunt-bake" );
+  grunt.loadNpmTasks('grunt-bake');
   grunt.loadNpmTasks('grunt-ssi');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -119,7 +125,9 @@ module.exports = function(grunt) {
 
   grunt.registerTask('default', ['jshint', 'compass:dev', 'watch']); 
 
-  grunt.registerTask('demo', ['jshint', 'compass:demo', 'concat:demo', 'cssmin']);   
+  grunt.registerTask('demo', ['jshint', 'compass:demo', 'concat:demo', 'cssmin', 'ssi']);   
+
+  grunt.registerTask('sprint', ['jshint', 'compass:sprint', 'concat:sprint', 'cssmin', 'ssi']);     
 
   grunt.registerTask('dist', ['jshint', 'compass:dist']);     
 
