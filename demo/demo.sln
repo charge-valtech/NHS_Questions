@@ -1,0 +1,115 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30110.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C29A8058-5A20-4F90-A08D-339D61A9FD62}"
+	ProjectSection(SolutionItems) = preProject
+		apprentice.html = apprentice.html
+		find-an-apprenticeship\apprenticeship-apply.html = find-an-apprenticeship\apprenticeship-apply.html
+		find-an-apprenticeship\apprenticeship-details.html = find-an-apprenticeship\apprenticeship-details.html
+		find-an-apprenticeship\apprenticeship-results.html = find-an-apprenticeship\apprenticeship-results.html
+		complete-application.html = complete-application.html
+		complete.html = complete.html
+		config.rb = config.rb
+		employer-role-submission\eligibility-criteria.html = employer-role-submission\eligibility-criteria.html
+		employer.html = employer.html
+		employer-role-submission\employer.html = employer-role-submission\employer.html
+		employer-role-submission\EmployerRegistration.html = employer-role-submission\EmployerRegistration.html
+		index.html = index.html
+		employer-role-submission\index.html = employer-role-submission\index.html
+		find-an-apprenticeship\index.html = find-an-apprenticeship\index.html
+		employer-role-submission\key-dates.html = employer-role-submission\key-dates.html
+		employer-role-submission\preview.html = employer-role-submission\preview.html
+		find-an-apprenticeship\preview.html = find-an-apprenticeship\preview.html
+		employer-role-submission\RegistrationSubmit.html = employer-role-submission\RegistrationSubmit.html
+		employer-role-submission\training-provider-details.html = employer-role-submission\training-provider-details.html
+		employer-role-submission\training-provider-results.html = employer-role-submission\training-provider-results.html
+		employer-role-submission\training-provider.html = employer-role-submission\training-provider.html
+		employer-role-submission\vacancy.html = employer-role-submission\vacancy.html
+		find-an-apprenticeship\wizard.html = find-an-apprenticeship\wizard.html
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_assets", "_assets", "{642B7634-A53A-4235-A8E8-53B57DC5896E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "css", "css", "{0975647E-7AA8-4C68-A0DF-58B0693BB14D}"
+	ProjectSection(SolutionItems) = preProject
+		_assets\css\main.css = _assets\css\main.css
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "fonts", "fonts", "{78B7DDE5-0A5F-4B94-9271-A84B37A84808}"
+	ProjectSection(SolutionItems) = preProject
+		_assets\fonts\fontawesome-webfont.eot = _assets\fonts\fontawesome-webfont.eot
+		_assets\fonts\fontawesome-webfont.svg = _assets\fonts\fontawesome-webfont.svg
+		_assets\fonts\fontawesome-webfont.ttf = _assets\fonts\fontawesome-webfont.ttf
+		_assets\fonts\fontawesome-webfont.woff = _assets\fonts\fontawesome-webfont.woff
+		_assets\fonts\FontAwesome.otf = _assets\fonts\FontAwesome.otf
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "img", "img", "{A58D4495-1C58-41D9-8605-F0F5A5F2AC23}"
+	ProjectSection(SolutionItems) = preProject
+		_assets\img\calendar-icon.png = _assets\img\calendar-icon.png
+		_assets\img\progress-tick.png = _assets\img\progress-tick.png
+		_assets\img\response-bg.png = _assets\img\response-bg.png
+		_assets\img\response-trio.png = _assets\img\response-trio.png
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "js", "js", "{C33561A1-CA0D-4F39-B78A-2E00BFCCDED1}"
+	ProjectSection(SolutionItems) = preProject
+		_assets\js\plugins.js = _assets\js\plugins.js
+		_assets\js\site.js = _assets\js\site.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scss", "scss", "{16CF7CD3-475E-4A06-878C-F7D36B198F6B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "icons", "icons", "{98060747-9B6C-4B47-B4B7-6AADA986A861}"
+	ProjectSection(SolutionItems) = preProject
+		_assets\img\icons\icon-information.svg = _assets\img\icons\icon-information.svg
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "logos", "logos", "{448A3FB2-63B8-4A87-8F7D-C21F24913F77}"
+	ProjectSection(SolutionItems) = preProject
+		_assets\img\logos\AdultLearningAcad.png = _assets\img\logos\AdultLearningAcad.png
+		_assets\img\logos\crown.png = _assets\img\logos\crown.png
+		_assets\img\logos\Kaplan.png = _assets\img\logos\Kaplan.png
+		_assets\img\logos\logo.png = _assets\img\logos\logo.png
+		_assets\img\logos\LondonMetroPolyUni.jpg = _assets\img\logos\LondonMetroPolyUni.jpg
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "uploads", "uploads", "{58529D58-CCB7-4033-84FF-7D976DE13108}"
+	ProjectSection(SolutionItems) = preProject
+		_assets\img\uploads\employer-logo.jpg = _assets\img\uploads\employer-logo.jpg
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "plugins", "plugins", "{6B990652-7176-43CB-A696-D0A0627FB305}"
+	ProjectSection(SolutionItems) = preProject
+		_assets\js\plugins\jstorage.js = _assets\js\plugins\jstorage.js
+		_assets\js\plugins\plugins.js = _assets\js\plugins\plugins.js
+		_assets\js\plugins\toggle.js = _assets\js\plugins\toggle.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vendor", "vendor", "{66808AD5-6974-4E29-B8E4-DFAB980F286B}"
+	ProjectSection(SolutionItems) = preProject
+		_assets\js\vendor\jquery-1.11.0.min.js = _assets\js\vendor\jquery-1.11.0.min.js
+		_assets\js\vendor\jquery-ui-1.10.4.custom.js = _assets\js\vendor\jquery-ui-1.10.4.custom.js
+		_assets\js\vendor\modernizr-2.7.1.js = _assets\js\vendor\modernizr-2.7.1.js
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{642B7634-A53A-4235-A8E8-53B57DC5896E} = {C29A8058-5A20-4F90-A08D-339D61A9FD62}
+		{0975647E-7AA8-4C68-A0DF-58B0693BB14D} = {642B7634-A53A-4235-A8E8-53B57DC5896E}
+		{78B7DDE5-0A5F-4B94-9271-A84B37A84808} = {642B7634-A53A-4235-A8E8-53B57DC5896E}
+		{A58D4495-1C58-41D9-8605-F0F5A5F2AC23} = {642B7634-A53A-4235-A8E8-53B57DC5896E}
+		{C33561A1-CA0D-4F39-B78A-2E00BFCCDED1} = {642B7634-A53A-4235-A8E8-53B57DC5896E}
+		{16CF7CD3-475E-4A06-878C-F7D36B198F6B} = {642B7634-A53A-4235-A8E8-53B57DC5896E}
+		{98060747-9B6C-4B47-B4B7-6AADA986A861} = {A58D4495-1C58-41D9-8605-F0F5A5F2AC23}
+		{448A3FB2-63B8-4A87-8F7D-C21F24913F77} = {A58D4495-1C58-41D9-8605-F0F5A5F2AC23}
+		{58529D58-CCB7-4033-84FF-7D976DE13108} = {A58D4495-1C58-41D9-8605-F0F5A5F2AC23}
+		{6B990652-7176-43CB-A696-D0A0627FB305} = {C33561A1-CA0D-4F39-B78A-2E00BFCCDED1}
+		{66808AD5-6974-4E29-B8E4-DFAB980F286B} = {C33561A1-CA0D-4F39-B78A-2E00BFCCDED1}
+	EndGlobalSection
+EndGlobal
