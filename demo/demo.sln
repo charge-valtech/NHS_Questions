@@ -6,28 +6,13 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C29A8058-5A20-4F90-A08D-339D61A9FD62}"
 	ProjectSection(SolutionItems) = preProject
 		apprentice.html = apprentice.html
-		find-an-apprenticeship\apprenticeship-apply.html = find-an-apprenticeship\apprenticeship-apply.html
-		find-an-apprenticeship\apprenticeship-details.html = find-an-apprenticeship\apprenticeship-details.html
-		find-an-apprenticeship\apprenticeship-results.html = find-an-apprenticeship\apprenticeship-results.html
+		AuthenticateUser.html = AuthenticateUser.html
 		complete-application.html = complete-application.html
 		complete.html = complete.html
 		config.rb = config.rb
-		employer-role-submission\eligibility-criteria.html = employer-role-submission\eligibility-criteria.html
 		employer.html = employer.html
-		employer-role-submission\employer.html = employer-role-submission\employer.html
-		employer-role-submission\EmployerRegistration.html = employer-role-submission\EmployerRegistration.html
 		index.html = index.html
-		employer-role-submission\index.html = employer-role-submission\index.html
-		find-an-apprenticeship\index.html = find-an-apprenticeship\index.html
-		employer-role-submission\key-dates.html = employer-role-submission\key-dates.html
-		employer-role-submission\preview.html = employer-role-submission\preview.html
-		find-an-apprenticeship\preview.html = find-an-apprenticeship\preview.html
-		employer-role-submission\RegistrationSubmit.html = employer-role-submission\RegistrationSubmit.html
-		employer-role-submission\training-provider-details.html = employer-role-submission\training-provider-details.html
-		employer-role-submission\training-provider-results.html = employer-role-submission\training-provider-results.html
-		employer-role-submission\training-provider.html = employer-role-submission\training-provider.html
-		employer-role-submission\vacancy.html = employer-role-submission\vacancy.html
-		find-an-apprenticeship\wizard.html = find-an-apprenticeship\wizard.html
+		PostVacancyAuthenticateUser.html = PostVacancyAuthenticateUser.html
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_assets", "_assets", "{642B7634-A53A-4235-A8E8-53B57DC5896E}"
@@ -74,6 +59,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "logos", "logos", "{448A3FB2
 		_assets\img\logos\Kaplan.png = _assets\img\logos\Kaplan.png
 		_assets\img\logos\logo.png = _assets\img\logos\logo.png
 		_assets\img\logos\LondonMetroPolyUni.jpg = _assets\img\logos\LondonMetroPolyUni.jpg
+		_assets\img\logos\vacancyDetails.png = _assets\img\logos\vacancyDetails.png
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "uploads", "uploads", "{58529D58-CCB7-4033-84FF-7D976DE13108}"
@@ -95,12 +81,41 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vendor", "vendor", "{66808A
 		_assets\js\vendor\modernizr-2.7.1.js = _assets\js\vendor\modernizr-2.7.1.js
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "employer-role-submission", "employer-role-submission", "{4E56CAEC-E279-488C-BE5C-2CF5DC0D5E0E}"
+	ProjectSection(SolutionItems) = preProject
+		employer-role-submission\AdvertDetails.html = employer-role-submission\AdvertDetails.html
+		employer-role-submission\Eligibility-Criteria.html = employer-role-submission\Eligibility-Criteria.html
+		employer-role-submission\EmployerRegistration.html = employer-role-submission\EmployerRegistration.html
+		employer-role-submission\index.html = employer-role-submission\index.html
+		employer-role-submission\key-dates.html = employer-role-submission\key-dates.html
+		employer-role-submission\preview.html = employer-role-submission\preview.html
+		employer-role-submission\RegistrationSubmit.html = employer-role-submission\RegistrationSubmit.html
+		employer-role-submission\training-provider-details.html = employer-role-submission\training-provider-details.html
+		employer-role-submission\training-provider-results.html = employer-role-submission\training-provider-results.html
+		employer-role-submission\training-provider.html = employer-role-submission\training-provider.html
+		employer-role-submission\TrainingDetails.html = employer-role-submission\TrainingDetails.html
+		employer-role-submission\vacancy.html = employer-role-submission\vacancy.html
+		employer-role-submission\VacancyCheckDetails.html = employer-role-submission\VacancyCheckDetails.html
+		employer-role-submission\VacancySubmitted.html = employer-role-submission\VacancySubmitted.html
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "find-an-apprenticeship", "find-an-apprenticeship", "{16FD66DF-B773-4BB1-9005-C67E8F8F338C}"
+	ProjectSection(SolutionItems) = preProject
+		find-an-apprenticeship\apprenticeship-apply.html = find-an-apprenticeship\apprenticeship-apply.html
+		find-an-apprenticeship\apprenticeship-details.html = find-an-apprenticeship\apprenticeship-details.html
+		find-an-apprenticeship\apprenticeship-results.html = find-an-apprenticeship\apprenticeship-results.html
+		find-an-apprenticeship\preview.html = find-an-apprenticeship\preview.html
+		find-an-apprenticeship\wizard.html = find-an-apprenticeship\wizard.html
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{642B7634-A53A-4235-A8E8-53B57DC5896E} = {C29A8058-5A20-4F90-A08D-339D61A9FD62}
+		{4E56CAEC-E279-488C-BE5C-2CF5DC0D5E0E} = {C29A8058-5A20-4F90-A08D-339D61A9FD62}
+		{16FD66DF-B773-4BB1-9005-C67E8F8F338C} = {C29A8058-5A20-4F90-A08D-339D61A9FD62}
 		{0975647E-7AA8-4C68-A0DF-58B0693BB14D} = {642B7634-A53A-4235-A8E8-53B57DC5896E}
 		{78B7DDE5-0A5F-4B94-9271-A84B37A84808} = {642B7634-A53A-4235-A8E8-53B57DC5896E}
 		{A58D4495-1C58-41D9-8605-F0F5A5F2AC23} = {642B7634-A53A-4235-A8E8-53B57DC5896E}
