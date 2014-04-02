@@ -1,15 +1,14 @@
 module.exports = function(grunt) {
-
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-  
+
 
     concat: {
       options: {
         separator: ';'
       },
       dev: {
-     
+
       },
       demo: {
         src: ['www/_assets/js/plugins/*.js'],
@@ -18,16 +17,16 @@ module.exports = function(grunt) {
       sprint: {
         src: ['www/_assets/js/plugins/*.js'],
         dest: 'sprint/_assets/js/plugins.js'
-      },      
+      },
       dist: {
         src: ['www/_assets/js/plugins/*.js'],
         dest: 'dist/_assets/js/plugins.js'
       },
-        // Metadata.
-        meta: {
-            sassPath: 'www/_assets/scss/',
-            cssPath: 'www/_assets/css/',
-        },
+      // Metadata.
+      meta: {
+        sassPath: 'www/_assets/scss/',
+        cssPath: 'www/_assets/css/',
+      },
     },
     uglify: {
       options: {
@@ -52,84 +51,88 @@ module.exports = function(grunt) {
       }
     },
 
-
-    compass: { 
-        demo: {
-          options: { 
-            sassDir: 'www/_assets/scss',
-            cssDir: 'demo/_assets/css',
-            environment: 'production'
-          }
-        },
-        dist: {
-          options: { 
-            sassDir: 'www/_assets/scss',
-            cssDir: 'dist/_assets/css',
-            environment: 'production'
-          }
-        },  
-        sprint: {
-          options: { 
-            sassDir: 'www/_assets/scss',
-            cssDir: 'sprint/_assets/css',
-            environment: 'production'
-          }
-        },              
-        dev: { 
-          options: {
-            sassDir: 'www/_assets/scss',
-            cssDir: 'www/_assets/css'
-          }
+    compass: {
+      demo: {
+        options: {
+          sassDir: 'www/_assets/scss',
+          cssDir: 'demo/_assets/css',
+          environment: 'production'
         }
-      },   
+      },
+      dist: {
+        options: {
+          sassDir: 'www/_assets/scss',
+          cssDir: 'dist/_assets/css',
+          environment: 'production'
+        }
+      },
+      sprint: {
+        options: {
+          sassDir: 'www/_assets/scss',
+          cssDir: 'sprint/_assets/css',
+          environment: 'production'
+        }
+      },
+      dev: {
+        options: {
+          sassDir: 'www/_assets/scss',
+          cssDir: 'www/_assets/css'
+        }
+      }
+    },
 
-    cssmin: {
-                combine: {
-                    files: {
-                    'www/_assets/css/main.css': ['www/_assets/css/*.css'] 
-                    }
-                }
-    },   
+    ssi: {
+      options: {},
+      files: [{
+        cwd: 'html',
+        src: ['**/*.html'],
+        dest: 'demo2/html'
+      }],
+    },
 
-
-
-  ssi: {
-    options: {},
-    files: [{
-          cwd: 'html',
-          src: ['**/*.html'],
-          dest: 'demo2/html'
-        }],
-  },         
-      
     watch: {
-            css: {
-                files: ['www/_assets/scss/**/*.scss'],
-                tasks: ['compass:dev']
-            },
-            js: { 
-                files: ['www/_assets/js/**/*.js'],
-                tasks: ['jshint']
-            }          
-    } 
+      options: {
+        livereload: true
+      },
+      css: {
+        files: ['www/_assets/scss/**/*.scss'],
+        tasks: ['compass:demo']
+      },
+      js: {
+        files: ['www/_assets/js/**/*.js'],
+        tasks: ['jshint']
+      },
+      html: {
+        files: ['demo/*.html']
+      }
+    },
+    connect: {
+      server: {
+        options: {
+          port: 7000,
+          base: 'demo',
+          livereload: true
+        }
+      }
+    }
   });
 
   grunt.loadNpmTasks('grunt-bake');
   grunt.loadNpmTasks('grunt-ssi');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-compass');  
-  grunt.loadNpmTasks('grunt-contrib-concat');    
+  grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-connect');
 
-  grunt.registerTask('default', ['jshint', 'compass:dev', 'watch']); 
+  grunt.registerTask('default', ['jshint', 'compass:dev', 'connect', 'watch']);
 
-  grunt.registerTask('demo', ['jshint', 'compass:demo', 'concat:demo', 'cssmin', 'ssi']);   
+  grunt.registerTask('demo', ['jshint', 'concat:demo', 'connect', 'watch']);
 
-  grunt.registerTask('sprint', ['jshint', 'compass:sprint', 'concat:sprint', 'cssmin', 'ssi']);     
+  grunt.registerTask('sprint', ['jshint', 'compass:sprint', 'concat:sprint', 'connect', 'watch']);
 
-  grunt.registerTask('dist', ['jshint', 'compass:dist']);     
+  grunt.registerTask('dist', ['jshint', 'compass:dist']);
 
 
 };

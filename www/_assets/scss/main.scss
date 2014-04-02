@@ -3,16 +3,15 @@
 @import "_modules.scss";
 
 h1 {
-    @include heading-48;
+  @include heading-48;
 }
 
 h1.page-title {
-    @include heading-24; 
-
+  @include heading-24;
 }
 
 #phase-notice
-p {
+  p {
     padding: 8px 32px;
     max-width: 940px;
     margin: 0 auto;
@@ -20,65 +19,51 @@ p {
     font-size: 1.9rem;
     line-height: 1.31579;
     color: $colorWhite;
-    a {
-        color: #0B0C0C;
-    }
-    strong {
-        text-transform: uppercase;
-    }
+  a {
+    color: #0B0C0C;
+  }
+  strong {
+    text-transform: uppercase;
+  }
+}
+
+#main {
+  background: #FFF;
+  border-bottom: 10px solid $govuk-blue;
+  display: block;
 }
 
 
-.gov {
-    
-
-
-main {
-    background: #FFF;
-    border-bottom: 10px solid $govuk-blue;
-    display: block;
-
-
-
+#phase-notice {
+  border-bottom: 10px solid $govuk-blue;
+  max-width: 980px;
+  margin: 0 auto;
 }
-
-
-#phase-notice
-{
-
- border-bottom: 10px solid $govuk-blue;
-
-}
-
-}
-
-
-
 
 #content-wrapper {
-    background: #fff;
-    padding: 0 0 4em 0;
-    margin: 0 auto;
-    max-width: 980px;
-    section p {
-        margin: 0;
-        font-size: 1.9rem;
-        font-weight: 400;
-        line-height: 1.4em;
+  background: #fff;
+  padding: 0 0 4em 0;
+  margin: 0 auto;
+  max-width: 980px;
+  section p {
+      margin: 0;
+      font-size: 1.9rem;
+      font-weight: 400;
+      line-height: 1.4em;
+  }
+  .help-container {
+    width: 100%;
+    clear: both;
+    margin-bottom: 2em;
+    ul {
+      margin-top: 1.5em;
+      list-style: none;
+      display: inline;
+      float: right;
+      li {
+        float: left;
+        margin-right: 20px;
+      }
     }
-    .help-container {
-        width: 100%;
-        clear: both;
-        margin-bottom: 2em;
-        ul {
-            margin-top: 1.5em;
-            list-style: none;
-            display: inline;
-            float: right;
-            li {
-                float: left;
-                margin-right: 20px;
-            }
-        }
-    }
+  }
 }
