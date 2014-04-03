@@ -103,14 +103,14 @@ module.exports = function(grunt) {
         tasks: ['jshint']
       },
       html: {
-        files: ['demo/*.html', 'demo/employer-role-submission/*.html']
+        files: ['sprint/*.html', 'sprint/employer-role-submission/*.html']
       }
     },
     connect: {
       server: {
         options: {
           port: 7000,
-          base: 'demo',
+          base: 'sprint',
           livereload: true
         }
       }
