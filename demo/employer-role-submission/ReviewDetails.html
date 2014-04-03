@@ -48,160 +48,81 @@
                         <li><a href="#error1">Enter your first name</a></li>
                     </ol>
                 </div>
-                <fieldset class="separator">
-                    <legend class="">Name and logo</legend>
-                    <p class="group">
-                        <label for="organisation-name" class="required">Job title</label>
-                        <input id="organisation-name" type="text" class="large" tabindex="0">
-                    </p>
-                    <p class="group">
-                        <label for="organisation-name">No. of vacancies</label>
-                        <select class="small" id="title">
-                            <option value="">1</option>
-                            <option value="">2</option>
-                            <option value="">3</option>
-                            <option value="">4</option>
-                            <option value="">5</option>
-                            <option value="">6</option>
-                            <option value="">7</option>
-                            <option value="">8</option>
-                            <option value="">9</option>
-                            <option value="">10</option>
-                            <option value="">Multiple</option>
-
-                        </select>
-                    </p>
-                    <p class="group">
-                        <label for="role-short-desc" class="required">Brief summary of role</label>
-
-                        <input id="role-short-desc" type="text" class="x-large">
-                    </p>
-                    <p class="group">
-                        <label for="role-long-desc">Key responsibilities</label>
-                        <label>What the duties are?</label>
-                        <label>What type of person you’re looking for (eg someone who wants to start a career in engineering)?</label>
-                        <textarea id="role-long-desc" class="short" placeholder=""></textarea>
-                    </p>
-
+                <fieldset>
+                  <legend>Organisation details</legend>
+                  <p class="group">
+                    <label for="businessOrganDetails">Name of organisation</label><input type="text" width="100" id="businessOrganDetails" />
+                  </p>
+                  <label>Organisation type or sector</label>
+                  <select>
+                      <option value="Please select ">Please select </option>
+                      <option value="Administration &amp; Human Resources">Administration &amp; Human Resources</option>
+                      <option value="Agriculture &amp; Land Based Services">Agriculture &amp; Land Based Services</option>
+                      <option value="Arts, Creative &amp; Cultural Industries">Arts, Creative &amp; Cultural Industries</option>
+                      <option value="Automotive Industry &amp; Passenger Transport">Automotive Industry &amp; Passenger Transport</option>
+                      <option value="Broadcast, Film &amp; Multimedia">Broadcast, Film &amp; Multimedia</option>
+                      <option value="Chemical, Oil &amp; Nuclear Industry">Chemical, Oil &amp; Nuclear Industry</option>
+                      <option value="Construction">Construction</option>
+                      <option value="Customer Service &amp; Retail">Customer Service &amp; Retail</option>
+                      <option value="Energy/Utilities Industry">Energy/Utilities Industry</option>
+                      <option value="Engineering, Electricians &amp; Building Services">Engineering, Electricians &amp; Building Services</option>
+                      <option value="Financial Services">Financial Services</option>
+                      <option value="Food and Drink">Food and Drink</option>
+                      <option value="Hair &amp; Beauty">Hair &amp; Beauty</option>
+                      <option value="Hospitality &amp; Travel">Hospitality &amp; Travel</option>
+                      <option value="Information Technology &amp; Communications">Information Technology &amp; Communications</option>
+                      <option value="Logistics">Logistics</option>
+                      <option value="Manufacturing &amp; Processing">Manufacturing &amp; Processing</option>
+                      <option value="Marine Industry">Marine Industry</option>
+                      <option value="Property">Property</option>
+                      <option value="Public Services">Public Services</option>
+                      <option value="Sports &amp; Fitness">Sports &amp; Fitness</option>
+                  </select>
+                  <p>
+                    <label>Website address</label><input type="text" width="100" id="businessOrganDetails" placeholder="http://" />
+                  </p>
+                  <p>
+                      <label>How many employees does your organisation have in the UK?</label>
+                      <select>
+                          <option value="Please select ">Please select </option>
+                          <option value="&lt;9">&lt;9</option>
+                          <option value="9-49">9-49</option>
+                          <option value="50-249">50-249</option>
+                          <option value="250-999">250-999</option>
+                          <option value="1000-4999">1000-4999</option>
+                          <option value="5000+">5000+</option>
+                          <option value="Don't Know">Don't Know</option>
+                      </select>
+                  </p>
                 </fieldset>
-                <fieldset class="separator">
-                    <legend>Vacancy Location</legend>
-                    <p>If you'd rather enter the full address manually <a href="#">click here</a>
-                    <p class="group">
-                        <label for="role-short-desc">Postcode</label>
-                        <input id="role-short-desc" type="text" class="short">
-                        <button class="button secondary inline" type="submit" value="Continue">Find address</button>
-                    </p>
-                    <p class="group">
-                        <label for="title">Select address</label>
-                        <select id="title">
-                            <option value="">Please select</option>
-                            <option value="">45 High Street, Reddich</option>
-                            <option value="">47 High Street, Reddich</option>
-                            <option value="">49 High Street, Reddich</option>
-                            <option value="">51 High Street, Reddich</option>
-                            <option value="">53 High Street, Reddich</option>
-                            <option value="">55 High Street, Reddich</option>
-                        </select>
-                    </p>
-                </fieldset>
-                <fieldset class="separator">
-                    <legend>Working week</legend>
-                    <p class="group">
-                        <label for="role-short-desc">How many hours a week will the apprentice work?</label>
-                        <label for="">Include time they will spend at college or in training.</label>
-                        <input id="role-short-desc" type="text" value="" class="small">
-                    </p>
-                        <label>Working days (tick all that apply)</label>
-                        <label for="">What days might they be expected to work</label>
-                        <ul class="option group">
+                <fieldset>
+                  <legend>Include a logo</legend>
+                  <div>
+                    <p>
+                        <label>Do you want to include a logo in the advert?</label>
+                        <ul class="option group inline">
                             <li>
-                                <span class="working-day">
-                                    <label for="monday"><input type="checkbox" id="monday">Monday</label>
-                                </span>
+                                <label><input type="radio" checked="checked" name="show-logo">Yes</label>
                             </li>
                             <li>
-                                <span class="working-day">
-                                    <label for="monday"><input type="checkbox" id="monday">Tuesday</label>
-                                </span>
-
-                            </li>
-                            <li>
-                                <span class="working-day">
-                                    <label for="monday"><input type="checkbox" id="monday">Wednesday</label>
-                                </span>
-
-                            </li>
-                            <li>
-                                <span class="working-day">
-                                    <label for="monday"><input type="checkbox" id="monday">Thurday</label>
-                                </span>
-
-                            </li>
-                            <li>
-                                <span class="working-day">
-                                    <label for="monday"><input type="checkbox" id="monday">Friday</label>
-                                </span>
-
-                            </li>
-                            <li>
-                                <span class="working-day">
-                                    <label for="monday"><input type="checkbox" id="monday">Saturday</label>
-                                </span>
-
-                            </li>
-                            <li>
-                                <span class="working-day">
-                                    <label for="monday"><input type="checkbox" id="monday">Sunday</label>
-                                </span>
-
+                                <label><input type="radio" name="show-logo">No</label>
                             </li>
                         </ul>
-
+                    </p>
+                </div>
+                <br />
+                <br />
+                <div>
+                    <p>
+                        <img src="../_assets/img/logos/AdultLearningAcad.png" alt="GOV.UK">
+                    </p>
+                    <p>
+                        <a class="button secondary" href="#">Choose file</a>
+                    </p>
+                 </div>
                 </fieldset>
-                <fieldset class="separator">
-                    <legend>Wage</legend>
-                    <p class="group">
-                        <label for="" class="required">Amount</label>
-                        &pound;<input id="role-short-desc" type="text" class="small">
-                    </p>
-                    <p class="group">
-                        <label for="title" class="required">Frequency</label>
-                        <select id="title">
-                            <option value="">Please select</option>
-                            <option selected="selected" value="">Weekly</option>
-                            <option value="">Monthly</option>
-                            <option value="">Yearly</option>
-                        </select>
-                    </p>
-                </fieldset>
-                <fieldset class="separator">
-                    <legend>Key dates</legend>
-                    <p class="group">
-                        <label for="">Closing date for applications</label>
-                        <input type="date">
-                    </p>
-                    <p class="group">
-                        <label for="">When do you want the apprentice to start work?</label>
-                        <label for=""><input type="radio" name="h-dates">As soon as possible</label>
-                        <label for=""><input type="radio" name="h-dates">Enter date <input type="date" disabled="disabled"></label>
-                    </p>
-                    <p class="group">
-                        <label for="">When do you plan to start interviewing? (optional)</label>
-                        <input type="date">
-                    </p>
-                </fieldset>
-                <fieldset class="separator">
-                    <legend>Additional information</legend>
-                    <p class="group">
-                        <label for="reality-check">Reality check</label>
-                        <label for="">Any unusual working hours or conditions (eg evenings or weekends, heavy physical work)?</label>
-                        <textarea id="role-long-desc" class="short" placeholder=""></textarea>
-                    </p>
-                </fieldset>
-
                 <p class="action group">
-                    <a class="button secondary" href="../employer.html">Back</a>
+                    <a class="button secondary" href="../PostVacancyAuthenticateUser.html">Back</a>
                     <a class="button" href="vacancy.html">Continue</a>
                 </p>
             </div>

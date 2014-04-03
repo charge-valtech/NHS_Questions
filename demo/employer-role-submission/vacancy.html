@@ -40,7 +40,7 @@
     <main role="main" id="main">
         <section>
             <div id="content-wrapper">
-                <h2>Add vacancy details</h2>
+                <h1>Add vacancy details</h1>
                 <div class="validation-summary hidden">
                     <h3>There was a problem submitting the form</h3>
                     <p>Please try the following:</p>
@@ -79,7 +79,6 @@
                     <p class="group">
                         <label for="role-long-desc">Key responsibilities</label>
                         <label>What the duties are?</label>
-                        <label>What type of person you’re looking for (eg someone who wants to start a career in engineering)?</label>
                         <textarea id="role-long-desc" class="short" placeholder=""></textarea>
                     </p>
 
@@ -182,9 +181,12 @@
                         <input type="date">
                     </p>
                     <p class="group">
-                        <label for="">When do you want the apprentice to start work?</label>
-                        <label for=""><input type="radio" name="h-dates">As soon as possible</label>
-                        <label for=""><input type="radio" name="h-dates">Enter date <input type="date" disabled="disabled"></label>
+                        <label>When do you want the apprentice to start work?</label>
+                        <label><input checked="checked" type="radio" name="h-dates">As soon as possible</label>
+                        <label><input class="h-startdate-radio" type="radio" name="h-dates">Enter date
+                          <input type="date" class="h-startdate">
+                        </label>
+
                     </p>
                     <p class="group">
                         <label for="">When do you plan to start interviewing? (optional)</label>

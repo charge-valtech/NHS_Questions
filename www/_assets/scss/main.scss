@@ -66,6 +66,24 @@ ul {
   }
 }
 
+.review-vacancy {
+  fieldset {
+    overflow: hidden;
+  }
+  .amend-answers {
+    float: right;
+    margin-top: -19px;
+  }
+}
+
+.h-startdate {
+  display: none;
+}
+
+.h-startdate-radio:checked + .h-startdate {
+  display: block;
+}
+
 #content-wrapper {
   background: #fff;
   padding: 0 0 4em 0;
