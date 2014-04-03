@@ -1,20 +1,30 @@
 #global-header .header-wrapper:after, #global-header .header-wrapper .header-global:after, #global-header .header-wrapper .header-global .header-logo:after, #global-header .header-proposition #proposition-links:after {
   content: "";
   display: block;
-  clear: both; }
+  clear: both;
+}
 
 #global-header {
   background-color: #0b0c0c;
-  width: 100%; }
+  width: 100%;
+}
+
+#global-header .header-wrapper {
+  max-width: 990px;
+  margin: 0 auto;
+  padding: 0.5em 15px;
+}
+
+@media (max-width: 640px) {
   #global-header .header-wrapper {
-    max-width: 990px;
-    margin: 0 auto;
-    padding: 0.5em 15px; }
-    @media (max-width: 640px) {
-      #global-header .header-wrapper {
-        padding: 0.5em 0; } }
-    #global-header .header-wrapper .header-global .header-logo {
-      float: left; }
+    padding: 0.5em 0;
+  }
+}
+
+#global-header .header-wrapper .header-global .header-logo {
+  float: left;
+}
+
       @media (min-width: 769px) {
         #global-header .header-wrapper .header-global .header-logo {
           width: 33.33%; } }

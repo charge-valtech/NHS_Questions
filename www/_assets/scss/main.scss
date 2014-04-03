@@ -10,15 +10,20 @@ h1.page-title {
   @include heading-24;
 }
 
-#phase-notice
+ul {
+  padding-left: 20px;
+}
+
+#phase-notice {
+  background: $colorPrimary;
   p {
-    padding: 8px 32px;
-    max-width: 940px;
     margin: 0 auto;
-    background: $colorPrimary;
+    max-width: 980px;
+    padding: 8px 32px;
     font-size: 1.9rem;
     line-height: 1.31579;
-    color: $colorWhite;
+    color: $colorBlack;
+  }
   a {
     color: #0B0C0C;
   }
@@ -29,15 +34,36 @@ h1.page-title {
 
 #main {
   background: #FFF;
-  border-bottom: 10px solid $govuk-blue;
+  border-top: 10px solid $govuk-blue;
   display: block;
-}
-
-
-#phase-notice {
-  border-bottom: 10px solid $govuk-blue;
   max-width: 980px;
   margin: 0 auto;
+  padding-top: 1.5em;
+}
+
+.get-started {
+  margin: 1.5em 0 0 0;
+  .button {
+    padding: 0.60em 1.7em 0.45em 0.67em;
+    background-image: url(../img/icon-pointer.png);
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
+    font-size: 24px;
+    line-height: 0.66667;
+    text-transform: none;
+    font-weight: 700;
+    display: inline-block;
+  }
+  .destination {
+    font-size: 14px;
+    line-height: 1.42857;
+    font-weight: 400;
+    text-transform: none;
+    color: #2E3133;
+    display: block;
+    margin-top: 0.5em;
+    max-width: 13em;
+  }
 }
 
 #content-wrapper {

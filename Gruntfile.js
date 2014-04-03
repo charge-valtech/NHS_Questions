@@ -103,7 +103,7 @@ module.exports = function(grunt) {
         tasks: ['jshint']
       },
       html: {
-        files: ['demo/*.html']
+        files: ['demo/*.html', 'demo/employer-role-submission/*.html']
       }
     },
     connect: {
