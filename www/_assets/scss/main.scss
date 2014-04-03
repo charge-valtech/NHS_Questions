@@ -15,14 +15,15 @@ ul {
 }
 
 #phase-notice {
-  background: $colorPrimary;
+  background: $govuk-blue;
+  margin: 0 auto;
+  max-width: 980px;
   p {
-    margin: 0 auto;
-    max-width: 980px;
-    padding: 8px 32px;
+    margin: 0;
+    padding: 8px 8px;
     font-size: 1.9rem;
     line-height: 1.31579;
-    color: $colorBlack;
+    color: $colorWhite;
   }
   a {
     color: #0B0C0C;
@@ -34,7 +35,6 @@ ul {
 
 #main {
   background: #FFF;
-  border-top: 10px solid $govuk-blue;
   display: block;
   max-width: 980px;
   margin: 0 auto;

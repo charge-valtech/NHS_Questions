@@ -130,6 +130,8 @@ module.exports = function(grunt) {
 
   grunt.registerTask('demo', ['jshint', 'concat:demo', 'connect', 'watch']);
 
+  grunt.registerTask('sprint', ['jshint', 'concat:sprint', 'connect', 'watch']);
+
   grunt.registerTask('dist', ['jshint', 'compass:dist']);
 
 
