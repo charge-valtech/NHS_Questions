@@ -91,19 +91,22 @@ module.exports = function(grunt) {
     },
     assemble: {
       options: {
-        flatten: true,
-        layout: 'www/_templates/layouts/default.hbs',
+        flatten: false,
+        expand: true,
+
+        assets: 'www/_assets',
+
+        layout: 'default.hbs',
+        layoutdir: 'www/_templates/layouts',
+
         partials: ['www/_templates/partials/*.hbs'],
+        data: ['www/_templates/data/*.{json,yml}']
       },
-      pages: {
-        files: {
-            'www': ['www/_templates/pages/*.hbs', '!www/_templates/pages/index.hbs']
-        }
-      },
-      index: {
-        files: {
-            'www': ['www/_templates/pages/index.hbs']
-        }
+
+      dev: {
+        files: [
+          {expand: true, cwd: 'www/_templates/pages/', src: '**/*.hbs', dest: 'www/', ext: '.html'}
+        ]
       }
     },
     watch: {

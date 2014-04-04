@@ -1,8 +1,0 @@
-<li class="date-picker">
-	<label for="start-date">Start Date</label>
-	<input type="tel" id="start-date" name="start-date" readonly>
-</li>
-<li class="date-picker">
-	<label for="end-date">End Date</label>
-	<input type="tel" id="end-date" name="end-date" readonly>
-</li>
