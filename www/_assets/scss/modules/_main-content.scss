@@ -11,7 +11,10 @@ h1.page-title {
   display: block;
   max-width: 980px;
   margin: 0 auto;
-  padding-top: 1.5em;
+  padding: 1.5em 1.5em 0;
+  @media (min-width: 1000px) {
+    padding: 1.5em 0 0;
+  }
 }
 
 #content-wrapper {

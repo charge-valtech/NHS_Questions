@@ -22,117 +22,169 @@
 
 </head>
 <body>
-    <div class="skiplink-container">
-        <div>
-            <a href="#main" class="skiplink">Skip to main content</a>
+  <div class="skiplink-container">
+      <div>
+          <a href="#main" class="skiplink">Skip to main content</a>
+      </div>
+  </div>
+  <header role="banner" id="global-header">
+    <div class="header-wrapper">
+      <div class="header-global">
+        <div class="header-logo">
+          <a href="../index.html" title="Go to the GOV.UK homepage">
+              <img src="../_assets/img/logos/logo.png" alt="GOV.UK">
+          </a>
         </div>
+        <h1 class="page-title beta">Find an Apprenticeship <span>Alpha</span></h1>
+      </div>
     </div>
-    <header role="banner" id="global-header">
-        <div class="header-wrapper">
-            <div class="header-global">
-                <div class="header-logo">
-                    <a href="../index.html" title="Go to the GOV.UK homepage">
-                        <img src="../_assets/img/logos/logo.png" alt="GOV.UK">
-                    </a>
-
-                </div>
-                <h1 class="page-title beta">Find an Apprenticeship <span>Alpha</span></h1>
-            </div>
+  </header>
+  <div id="phase-notice">
+    <p><strong>Alpha:</strong> This is a prototype</p>
+  </div>
+  <main role="main" id="main">
+    <section>
+      <div id="content-wrapper">
+        <div class="help-container">
+            <!--    <ul aria-label="The following links will open in a new browser window">
+                    <li><a class="icon info" href="#" target="_blank" aria-label="" >i</a><span>Helpline: <a href="tel:0800 0150 400">0800 0150 400</a></span></li>
+                    <li><a href="#" aria-label="">Application Notes</a></li>
+                    <li><a href="#" aria-label="" onclick="">Your Feedback</a></li>
+                </ul>  -->
         </div>
-    </header>
-
-
-
-
-
-    <div id="phase-notice">
-        <p><strong>Alpha:</strong> This is a prototype</p>
-    </div>
-
-    <main role="main" id="main">
-        <section>
-            <div id="content-wrapper">
-                <div class="help-container">
-                    <!--    <ul aria-label="The following links will open in a new browser window">
-                            <li><a class="icon info" href="#" target="_blank" aria-label="" >i</a><span>Helpline: <a href="tel:0800 0150 400">0800 0150 400</a></span></li>
-                            <li><a href="#" aria-label="">Application Notes</a></li>
-                            <li><a href="#" aria-label="" onclick="">Your Feedback</a></li>
-                        </ul>  -->
-                </div>
-                <h1>Search results </h1>
-                <div class="validation-summary hidden">
-                    <h3>There was a problem submitting the form</h3>
-                    <p>Please try the following:</p>
-                    <ol>
-                        <li><a href="#error1">Enter your first name</a></li>
-                    </ol>
-                </div>
-                <p>You searched for <b>'Engineer'</b>, within <b>'15 miles'</b> of <b>'CV32 7RA'</b></p>
-                <p>We have found <b>3</b> apprenticeships that might be suitable:</p>
-                <ul class="search-results">
-                  <li class="search-results__item">
-                      <img src="http://placehold.it/150x150">
-                      <h4><a href="apprenticeship-details.html">Apprenticeship #1</a></h4>
-                      <p>
-                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                          tempor incididunt ut labore et dolore magna aliqua.
-                      </p>
-                      <a class="button" href="apprenticeship-apply.html">Apply</a>
-                      <p><b>Distance: 10 miles</b></p>
-                  </li>
-                  <li class="search-results__item">
-                      <img src="http://placehold.it/150x150">
-                      <h4><a href="apprenticeship-details.html">Apprenticeship #1</a></h4>
-                      <p>
-                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                          tempor incididunt ut labore et dolore magna aliqua.
-                      </p>
-                      <a class="button" href="apprenticeship-apply.html">Apply</a>
-                      <p><b>Distance: 10 miles</b></p>
-                  </li>
-                  <li class="search-results__item">
-                      <img src="http://placehold.it/150x150">
-                      <h4><a href="apprenticeship-details.html">Apprenticeship #1</a></h4>
-                      <p>
-                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                          tempor incididunt ut labore et dolore magna aliqua.
-                      </p>
-                      <a class="button" href="apprenticeship-apply.html">Apply</a>
-                      <p><b>Distance: 10 miles</b></p>
-                  </li>
+        <h1>Search results </h1>
+        <div class="validation-summary hidden">
+            <h3>There was a problem submitting the form</h3>
+            <p>Please try the following:</p>
+            <ol>
+                <li><a href="#error1">Enter your first name</a></li>
+            </ol>
+        </div>
+        <div class="search-summary">
+          <label class="search-summary__item">
+            <h4>You searched for:</h4>
+            <input class="input" type="text" value="Engineer">
+          </label>
+          <label class="search-summary__item">
+            <h4>Location:</h4>
+            <input class="input" type="text" value="CV32 7RA">
+          </label>
+          <label class="search-summary__item">
+            <h4>Within:</h4>
+            <select class="input">
+              <option value="">This area only</option>
+              <option value="">5 miles</option>
+              <option value="">10 miles</option>
+              <option value="">15 miles</option>
+              <option value="">20 miles</option>
+              <option value="">30 miles</option>
+              <option value="">40 miles</option>
+            </select>
+          </label>
+        </div>
+        <p>We have found <b>3</b> apprenticeships that might be suitable:</p>
+        <ul class="search-results">
+          <li class="search-results__item">
+            <a class="search-results__imglink" href="apprenticeship-details.html">
+              <figure class="imgwrap imgwrap--square">
+                <img src="../img/biz-logo-1.jpg">
+              </figure>
+            </a>
+            <div class="search-results__content">
+              <h3 class="search-results__title"><a href="apprenticeship-details.html">Apprentice Mechanical Engineer – Precision Toolmaker with R G Engineering</a></h3>
+              <p>
+                An exciting opportunity has arisen for the right candidate to gain an Engineering Qualification through this apprenticeship! If you have got a lot of drive and want to learn a highly skilled trade then look no further!
+              </p>
+              <div class="search-results__btm">
+                <ul class="search-results__meta">
+                  <li><b>Number of vacancies:</b> 1</li>
+                  <li><b>Distance:</b> 5.2 miles</li>
+                  <li><b>Closing date:</b> 23 May 14</li>
                 </ul>
-            </div>
-        </section>
-    </main>
-    <footer class="group js-footer" id="footer" role="contentinfo">
-        <div class="footer-wrapper">
-            <div class="footer-meta">
-                <nav>
-                    <ul>
-                        <li><a href="/claim-notes#16" target="_blank">Helpdesk</a></li>
-                        <li><a href="http://www.dwp.gov.uk/privacy-policy/" target="_blank">Privacy &amp; Cookies</a></li>
-                        <li>Built by <a href="#" target="_blank">Skills Funding Agency</a></li>
-                    </ul>
-
-                </nav>
-
-                <div class="copyright">
-                    <a href="http://www.nationalarchives.gov.uk/information-management/our-services/crown-copyright.htm" target="_blank">&copy; Crown Copyright</a>
+                <div class="search-results__actns">
+                  <a class="button secondary" href="#">More info</a>
+                  <a class="button" href="apprenticeship-apply.html">Apply</a>
                 </div>
             </div>
-        </div>
-    </footer>
+            </div>
+          </li>
+          <li class="search-results__item">
+            <a class="search-results__imglink" href="apprenticeship-details.html">
+              <figure class="imgwrap imgwrap--square">
+                <img src="../img/biz-logo-2.jpg">
+              </figure>
+            </a>
+            <div class="search-results__content">
+              <h3 class="search-results__title"><a href="apprenticeship-details.html">Advanced Apprenticeship in Electro-technical Installation/Maintenance with Johnson Controls Ltd</a></h3>
+              <p>
+                Electro-technical Engineers are responsible for the installation, maintenance, and the diagnosis and repair of faults, for a variety of Electrical Services and Equipment in commercial, industrial and retail buildings.
+              </p>
+              <div class="search-results__btm">
+                <ul class="search-results__meta">
+                  <li><b>Number of vacancies:</b> 2</li>
+                  <li><b>Distance:</b> 5.2 miles</li>
+                  <li><b>Closing date:</b> 30 Apr 14</li>
+                </ul>
+                <div class="search-results__actns">
+                  <a class="button secondary" href="#">More info</a>
+                  <a class="button" href="apprenticeship-apply.html">Apply</a>
+                </div>
+            </div>
+            </div>
+          </li>
+          <li class="search-results__item">
+            <a class="search-results__imglink" href="apprenticeship-details.html">
+              <figure class="imgwrap imgwrap--square">
+                <img src="../img/biz-logo-3.jpg">
+              </figure>
+            </a>
+            <div class="search-results__content">
+              <h3 class="search-results__title"><a href="apprenticeship-details.html">Engineering Compressed Air Service Apprentice with Direct Air & Pipe Work Ltd</a></h3>
+              <p>
+                Training to become a Compressed Air Service Engineer Once qualified working at Customers Premises around the Midlands and UK with company vehicle carrying out routine servicing/repairs of compressed air equipment.
+              </p>
+              <div class="search-results__btm">
+                <ul class="search-results__meta">
+                  <li><b>Number of vacancies:</b> 1</li>
+                  <li><b>Distance:</b> 5.2 miles</li>
+                  <li><b>Closing date:</b> 02 May 14</li>
+                </ul>
+                <div class="search-results__actns">
+                  <a class="button secondary" href="#">More info</a>
+                  <a class="button" href="apprenticeship-apply.html">Apply</a>
+                </div>
+            </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer class="group js-footer" id="footer" role="contentinfo">
+      <div class="footer-wrapper">
+          <div class="footer-meta">
+              <nav>
+                  <ul>
+                      <li><a href="/claim-notes#16" target="_blank">Helpdesk</a></li>
+                      <li><a href="http://www.dwp.gov.uk/privacy-policy/" target="_blank">Privacy &amp; Cookies</a></li>
+                      <li>Built by <a href="#" target="_blank">Skills Funding Agency</a></li>
+                  </ul>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script>
-        if (!window.jQuery) {
-            document.write('<script src="../_assets/js/vendor/jquery-1.11.0.min.js"><\/script>');
-        }
-    </script>
+              </nav>
 
-    <script src="../_assets/js/plugins.js"></script>
-    <script src="../_assets/js/site.js"></script>
-
-
+              <div class="copyright">
+                  <a href="http://www.nationalarchives.gov.uk/information-management/our-services/crown-copyright.htm" target="_blank">&copy; Crown Copyright</a>
+              </div>
+          </div>
+      </div>
+  </footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script>
+    if (!window.jQuery) {
+      document.write('<script src="../_assets/js/vendor/jquery-1.11.0.min.js"><\/script>');
+    }
+  </script>
+  <script src="../_assets/js/plugins.js"></script>
+  <script src="../_assets/js/site.js"></script>
 </body>
 </html>
