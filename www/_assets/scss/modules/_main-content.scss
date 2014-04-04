@@ -9,12 +9,13 @@ h1.page-title {
 #main {
   background: #FFF;
   display: block;
-  max-width: 980px;
-  margin: 0 auto;
   padding: 1.5em 1.5em 0;
-  @media (min-width: 1000px) {
-    padding: 1.5em 0 0;
-  }
+}
+
+.content-container {
+  margin: 0 auto;
+  padding: 0 10px;
+  max-width: 1000px;
 }
 
 #content-wrapper {

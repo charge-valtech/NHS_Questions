@@ -6,9 +6,9 @@
 .global-header__wrapper {
   font-size: 0;
   margin: 0 auto;
-  max-width: 980px;
+  max-width: 1000px;
   overflow: hidden;
-  padding: 15px 0;
+  padding: 15px 10px;
 }
 
 .global-header__logo {
@@ -37,8 +37,6 @@
 
 #phase-notice {
   background: $govuk-blue;
-  margin: 0 auto;
-  max-width: 980px;
   p {
     margin: 0;
     padding: 8px 8px;

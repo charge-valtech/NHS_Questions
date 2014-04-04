@@ -2237,45 +2237,44 @@ h1.page-title {
 #main {
   background: #FFF;
   display: block;
-  max-width: 980px;
-  margin: 0 auto;
   padding: 1.5em 1.5em 0;
 }
-@media (min-width: 1000px) {
-  /* line 9, ../scss/modules/_main-content.scss */
-  #main {
-    padding: 1.5em 0 0;
-  }
+
+/* line 15, ../scss/modules/_main-content.scss */
+.content-container {
+  margin: 0 auto;
+  padding: 0 10px;
+  max-width: 1000px;
 }
 
-/* line 20, ../scss/modules/_main-content.scss */
+/* line 21, ../scss/modules/_main-content.scss */
 #content-wrapper {
   background: #fff;
   padding: 0 0 4em 0;
   margin: 0 auto;
   max-width: 980px;
 }
-/* line 25, ../scss/modules/_main-content.scss */
+/* line 26, ../scss/modules/_main-content.scss */
 #content-wrapper section p {
   margin: 0;
   font-size: 1.9rem;
   font-weight: 400;
   line-height: 1.4em;
 }
-/* line 31, ../scss/modules/_main-content.scss */
+/* line 32, ../scss/modules/_main-content.scss */
 #content-wrapper .help-container {
   width: 100%;
   clear: both;
   margin-bottom: 2em;
 }
-/* line 35, ../scss/modules/_main-content.scss */
+/* line 36, ../scss/modules/_main-content.scss */
 #content-wrapper .help-container ul {
   margin-top: 1.5em;
   list-style: none;
   display: inline;
   float: right;
 }
-/* line 40, ../scss/modules/_main-content.scss */
+/* line 41, ../scss/modules/_main-content.scss */
 #content-wrapper .help-container ul li {
   float: left;
   margin-right: 20px;
@@ -2291,9 +2290,9 @@ h1.page-title {
 .global-header__wrapper {
   font-size: 0;
   margin: 0 auto;
-  max-width: 980px;
+  max-width: 1000px;
   overflow: hidden;
-  padding: 15px 0;
+  padding: 15px 10px;
 }
 
 /* line 14, ../scss/modules/_header.scss */
@@ -2326,10 +2325,8 @@ h1.page-title {
 /* line 38, ../scss/modules/_header.scss */
 #phase-notice {
   background: #005ea5;
-  margin: 0 auto;
-  max-width: 980px;
 }
-/* line 42, ../scss/modules/_header.scss */
+/* line 40, ../scss/modules/_header.scss */
 #phase-notice p {
   margin: 0;
   padding: 8px 8px;
@@ -2337,11 +2334,11 @@ h1.page-title {
   line-height: 1.31579;
   color: white;
 }
-/* line 49, ../scss/modules/_header.scss */
+/* line 47, ../scss/modules/_header.scss */
 #phase-notice a {
   color: #0B0C0C;
 }
-/* line 52, ../scss/modules/_header.scss */
+/* line 50, ../scss/modules/_header.scss */
 #phase-notice strong {
   text-transform: uppercase;
 }
