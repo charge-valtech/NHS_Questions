@@ -100,7 +100,7 @@ module.exports = function(grunt) {
         layoutdir: 'www/_templates/layouts',
 
         partials: ['www/_templates/partials/*.hbs'],
-        data: ['www/_templates/data/*.{json,yml}']
+        data: ['www/_templates/data/*.json']
       },
 
       dev: {
@@ -122,7 +122,7 @@ module.exports = function(grunt) {
         tasks: ['jshint']
       },
       html: {
-        files: ['www/_templates/{,*/}*.hbs'],
+        files: ['www/_templates/{,*/}*.hbs', 'www/_templates/{,*/*/}*.hbs'],
         tasks: ['assemble']
       }
     },
