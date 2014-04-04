@@ -34,3 +34,21 @@ fieldset fieldset {
     width: 10em;
     border: 1px solid $grey-2;
 }
+
+.check-to-show {
+  display: none;
+}
+
+.check-to-show-trigger:checked + .check-to-show{
+  display: block;
+}
+
+.review-vacancy {
+  fieldset {
+    overflow: hidden;
+  }
+  .amend-answers {
+    float: right;
+    margin-top: -19px;
+  }
+}

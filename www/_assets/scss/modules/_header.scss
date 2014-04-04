@@ -220,3 +220,23 @@
 .header-global .page-title.beta span {
     background: $colorPrimary;
 }
+
+
+#phase-notice {
+  background: $govuk-blue;
+  margin: 0 auto;
+  max-width: 980px;
+  p {
+    margin: 0;
+    padding: 8px 8px;
+    font-size: 1.5rem;
+    line-height: 1.31579;
+    color: $colorWhite;
+  }
+  a {
+    color: #0B0C0C;
+  }
+  strong {
+    text-transform: uppercase;
+  }
+}

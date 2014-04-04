@@ -1,0 +1,43 @@
+h1 {
+  @include heading-48;
+}
+
+h1.page-title {
+  @include heading-24;
+}
+
+#main {
+  background: #FFF;
+  display: block;
+  max-width: 980px;
+  margin: 0 auto;
+  padding-top: 1.5em;
+}
+
+#content-wrapper {
+  background: #fff;
+  padding: 0 0 4em 0;
+  margin: 0 auto;
+  max-width: 980px;
+  section p {
+      margin: 0;
+      font-size: 1.9rem;
+      font-weight: 400;
+      line-height: 1.4em;
+  }
+  .help-container {
+    width: 100%;
+    clear: both;
+    margin-bottom: 2em;
+    ul {
+      margin-top: 1.5em;
+      list-style: none;
+      display: inline;
+      float: right;
+      li {
+        float: left;
+        margin-right: 20px;
+      }
+    }
+  }
+}

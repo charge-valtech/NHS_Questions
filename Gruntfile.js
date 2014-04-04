@@ -96,14 +96,14 @@ module.exports = function(grunt) {
       },
       css: {
         files: ['www/_assets/scss/**/*.scss'],
-        tasks: ['compass:demo']
+        tasks: ['compass:sprint']
       },
       js: {
         files: ['www/_assets/js/**/*.js'],
         tasks: ['jshint']
       },
       html: {
-        files: ['sprint/*.html', 'sprint/employer-role-submission/*.html']
+        files: ['sprint/*.html', 'sprint/employer-role-submission/*.html', 'sprint/find-an-apprenticeship/*.html']
       }
     },
     connect: {

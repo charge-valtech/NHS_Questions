@@ -1,0 +1,19 @@
+.search-results {
+  list-style: none;
+  padding-left: 0;
+}
+
+.search-results__item {
+  min-height:150px;
+  clear:both;
+  border-bottom:1px solid #ddd;
+  padding:15px 0;
+  img {
+    float: left;
+    margin-right: 20px;
+  }
+  .button {
+    float: right;
+  }
+}
+
