@@ -89,28 +89,45 @@ module.exports = function(grunt) {
         dest: 'demo2/html'
       }],
     },
-
+    assemble: {
+      options: {
+        flatten: true,
+        layout: 'www/_templates/layouts/default.hbs',
+        partials: ['www/_templates/partials/*.hbs'],
+      },
+      pages: {
+        files: {
+            'www': ['www/_templates/pages/*.hbs', '!www/_templates/pages/index.hbs']
+        }
+      },
+      index: {
+        files: {
+            'www': ['www/_templates/pages/index.hbs']
+        }
+      }
+    },
     watch: {
       options: {
         livereload: true
       },
       css: {
         files: ['www/_assets/scss/**/*.scss'],
-        tasks: ['compass:sprint']
+        tasks: ['compass:dev']
       },
       js: {
         files: ['www/_assets/js/**/*.js'],
         tasks: ['jshint']
       },
       html: {
-        files: ['sprint/*.html', 'sprint/employer-role-submission/*.html', 'sprint/find-an-apprenticeship/*.html']
+        files: ['www/_templates/{,*/}*.hbs'],
+        tasks: ['assemble']
       }
     },
     connect: {
       server: {
         options: {
           port: 7000,
-          base: 'sprint',
+          base: 'www',
           livereload: true
         }
       }
@@ -118,7 +135,7 @@ module.exports = function(grunt) {
   });
 
   grunt.loadNpmTasks('grunt-bake');
-  grunt.loadNpmTasks('grunt-ssi');
+  grunt.loadNpmTasks('assemble');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-compass');
@@ -126,7 +143,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-connect');
 
-  grunt.registerTask('default', ['jshint', 'compass:dev', 'connect', 'watch']);
+  grunt.registerTask('default', ['jshint', 'compass:dev', 'assemble', 'connect', 'watch']);
 
   grunt.registerTask('demo', ['jshint', 'concat:demo', 'connect', 'watch']);
 
