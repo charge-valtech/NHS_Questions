@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en-GB" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SFA Apprenticeships | Prototype</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href="../_assets/css/main.css" media="all" rel="stylesheet" type="text/css">
+    <script src="../_assets/js/vendor/modernizr-2.7.1.js"></script>
+</head>
+<body>
+  <div class="skiplink-container">
+  <div>
+    <a href="#main" class="skiplink">Skip to main content</a>
+  </div>
+</div>
+<header role="banner" id="global-header">
+  <div class="header-wrapper">
+    <div class="header-global">
+      <div class="header-logo">
+        <a href="" title="Go to the GOV.UK homepage">
+          <img src="../_assets/img/logos/logo.png" alt="GOV.UK">
+        </a>
+      </div>
+      <h1 class="page-title beta">Apprenticeship Applications <span>Alpha</span></h1>
+    </div>
+  </div>
+</header>
+<div id="phase-notice">
+  <p><strong>ALPHA:</strong> This is a prototype</p>
+</div>
+  
+    <main role="main" id="main">
+        <section>
+            <div id="content-wrapper">
+                <div class="help-container">
+                    <!--    <ul aria-label="The following links will open in a new browser window">
+                            <li><a class="icon info" href="#" target="_blank" aria-label="" >i</a><span>Helpline: <a href="tel:0800 0150 400">0800 0150 400</a></span></li>
+                            <li><a href="#" aria-label="">Application Notes</a></li>
+                            <li><a href="#" aria-label="" onclick="">Your Feedback</a></li>
+                        </ul>  -->
+                </div>
+
+                <nav class="progress-indicator">
+
+                    <ol aria-label="Progress Steps">
+                        <li>
+
+                            <span>Training provider</span>
+                        </li>
+                        <li>
+                            <span>Vacancy</span>
+                        </li>
+                        <li>
+                            <span>Key dates</span>
+                        </li>
+                        <li>
+                            <span>Eligibility</span>
+                        </li>
+                        <li class="active">
+                            <span>Employer details</span>
+                        </li>
+                        <li>
+                            <span>Preview &amp; Submit</span>
+                        </li>
+
+
+                    </ol>
+
+                </nav>
+
+
+
+                <h2>5. Employer details</h2>
+                <div class="validation-summary hidden">
+                    <h3>Something's not quite right with the details you entered</h3>
+                    <p>Please check the following:</p>
+                    <ol>
+                        <li><a href="#error1">Enter employer name</a></li>
+                    </ol>
+                </div>
+                <form action="preview.html">
+                    <fieldset class="separator">
+                        <legend class="hidden">Employer</legend>
+                        <p class="group">
+                            <span class="validation-message hidden" id="error1">1. Enter employer name</span>
+                            <label for="organisation-name" class="required">Employer name</label>
+                            <input id="organisation-name" type="text" class="large">
+                        </p>
+                        <p class="group">
+                            <span class="validation-message hidden" id="error1">2. Enter employer description</span>
+                            <label for="employer-desc" class="required">Employer description</label>
+                            <textarea id="employer-desc" class="short" placeholder=""></textarea>
+                        </p>
+                        <p class="group">
+                            <span class="validation-message hidden" id="error1">3. Enter employer website</span>
+                            <label for="employer-desc">Employer website</label>
+                            <input id="employer-desc" type="url" class="large" placeholder="http://">
+                        </p>
+                    </fieldset>
+                    <fieldset class="separator">
+                        <legend><span>Show employer logo?</span></legend>
+                        <ul class="option group inline">
+                            <li>
+                                <label><input type="radio" checked="checked" name="show-logo">Yes</label>
+                            </li>
+                            <li>  <label><input type="radio" name="show-logo">No</label></li>
+                        </ul>
+                        <p>
+                            <figure class="logo-upload">
+                                <img alt="" src="../_assets/img/uploads/employer-logo.jpg" />
+                            </figure>
+                            <progress max="100" value="80">
+                                <div>
+                                    <span style="width: 80%;">Progress: 80%</span>
+                                </div>
+                            </progress>
+                        </p>
+                        <p class="group">
+                            <label for="employer-desc">Upload employer logo</label>
+                            <input type="file" class="large" placeholder="">
+                        </p>
+                    </fieldset>
+                    <fieldset class="separator">
+                        <legend>Contact details</legend>
+                        <p>These details are for internal communications only, and will NOT be displayed on the advertisement.</p>
+                        <p class="group">
+                            <label for="email" class="required">Contact name</label>
+                            <input id="email" type="text" class="name">
+                        </p>
+                        <p class="group">
+                            <label for="email" class="required">Contact email</label>
+                            <input id="email" type="email" class="email">
+                        </p>
+                        <p class="group">
+                            <label for="email-confirm" class="required">Re-type contact email</label>
+                            <input id="email-confirm" type="email" class="email">
+                        </p>
+                        <p class="group">
+                            <label for="telephone" class="required">Telephone</label>
+                            <input id="telephone" type="text" class="small" placeholder="+44">&nbsp;<input id="telephone" type="text" class="telephone">
+                        </p>
+
+                    </fieldset>
+                    <fieldset class="hidden">
+                        <legend>Apprenticeship address</legend>
+                        <p class="group">
+                            <label for="street1">Street</label>
+                            <input id="street1" type="text" class="street">
+                        </p>
+                        <p class="group">
+                            <label for="street2" class="visuallyhidden">Street line two</label>
+                            <input id="street2" type="text" class="street">
+                        </p>
+                        <p class="group">
+                            <label for="town">Town/City</label>
+                            <input id="town" type="text" class="town">
+                        </p>
+                        <p class="group">
+                            <label for="postcode">Postcode</label>
+                            <input id="postcode" type="text" class="postcode">
+                        </p>
+                    </fieldset>
+                    <p class="action group">
+                        <button class="button secondary" type="submit" value="Back">Clear</button>
+                        <button class="button" type="submit" value="Continue">Continue</button>
+                    </p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+
+  <footer class="group js-footer" id="footer" role="contentinfo">
+  <div class="footer-wrapper">
+    <div class="footer-meta">
+      <nav>
+        <ul>
+          <li><a href="/claim-notes#16" target="_blank">Helpdesk</a></li>
+          <li><a href="http://www.dwp.gov.uk/privacy-policy/" target="_blank">Privacy &amp; Cookies</a></li>
+          <li>Built by <a href="#" target="_blank">Skills Funding Agency</a></li>
+        </ul>
+      </nav>
+      <div class="copyright">
+        <a href="http://www.nationalarchives.gov.uk/information-management/our-services/crown-copyright.htm" target="_blank">&copy; Crown Copyright</a>
+      </div>
+    </div>
+  </div>
+</footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script>
+      if (!window.jQuery) {
+          document.write('<script src="../_assets/js/vendor/jquery-1.11.0.min.js"><\/script>');
+      }
+  </script>
+  <script src="../_assets/js/scripts.js"></script>
+</body>
+</html>
+
+
+
+
