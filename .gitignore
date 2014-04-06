@@ -1,3 +1,6 @@
 /.sass-cache
 node_modules/*
 *.DS_Store
+www/*.html
+www/employer-role-submission/*.html
+www/find-an-apprenticeship/*.html

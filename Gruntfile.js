@@ -80,15 +80,6 @@ module.exports = function(grunt) {
         }
       }
     },
-
-    ssi: {
-      options: {},
-      files: [{
-        cwd: 'html',
-        src: ['**/*.html'],
-        dest: 'demo2/html'
-      }],
-    },
     assemble: {
       options: {
         flatten: false,
@@ -137,7 +128,6 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.loadNpmTasks('grunt-bake');
   grunt.loadNpmTasks('assemble');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-jshint');
