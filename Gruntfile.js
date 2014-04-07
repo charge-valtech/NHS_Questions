@@ -125,6 +125,24 @@ module.exports = function(grunt) {
           livereload: true
         }
       }
+    },
+    copyto: {
+      sprint: {
+        files: [
+          {cwd: 'www/', src: ['**/*'], dest: 'sprint/'}
+        ],
+        options: {
+          ignore: [
+            'www/_assets/scss{,/**/*}',
+            'www/_templates{,/**/*}'
+          ]
+        }
+      },
+    },
+    clean: {
+      sprint: {
+        src: [ 'sprint/' ]
+      }
     }
   });
 
@@ -135,12 +153,14 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-copy-to');
+  grunt.loadNpmTasks('grunt-contrib-clean');
 
   grunt.registerTask('default', ['jshint', 'compass:dev', 'assemble', 'connect', 'watch']);
 
   grunt.registerTask('demo', ['jshint', 'concat:demo', 'connect', 'watch']);
 
-  grunt.registerTask('sprint', ['jshint', 'concat:sprint', 'connect', 'watch']);
+  grunt.registerTask('sprint', ['clean:sprint', 'copyto:sprint']);
 
   grunt.registerTask('dist', ['jshint', 'compass:dist']);
 
