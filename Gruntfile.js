@@ -136,12 +136,44 @@ module.exports = function(grunt) {
             'www/_assets/scss{,/**/*}',
             'www/_templates{,/**/*}'
           ]
-        }
+        },
       },
+      demo: {
+        files: [
+          {cwd: 'www/', src: ['**/*'], dest: 'demo/'}
+        ],
+        options: {
+          ignore: [
+            'www/_assets/scss{,/**/*}',
+            'www/_templates{,/**/*}'
+          ]
+        },
+      },
+      dist: {
+        files: [
+          {cwd: 'www/', src: ['**/*'], dest: 'dist/'}
+        ],
+        options: {
+          ignore: [
+            'www/_assets/scss{,/**/*}',
+            'www/_templates{,/**/*}',
+            'www/employer-role-submission{,/**/*}',
+            'www/find-an-apprenticeship{,/**/*}',
+            'www/*.html',
+            '!www/index.html',
+          ]
+        },
+      }
     },
     clean: {
       sprint: {
         src: [ 'sprint/' ]
+      },
+      demo: {
+        src: [ 'demo/' ]
+      },
+      dist: {
+        src: [ 'dist/' ]
       }
     }
   });
@@ -158,11 +190,11 @@ module.exports = function(grunt) {
 
   grunt.registerTask('default', ['jshint', 'compass:dev', 'assemble', 'connect', 'watch']);
 
-  grunt.registerTask('demo', ['jshint', 'concat:demo', 'connect', 'watch']);
+  grunt.registerTask('demo', ['clean:demo', 'copyto:demo']);
 
   grunt.registerTask('sprint', ['clean:sprint', 'copyto:sprint']);
 
-  grunt.registerTask('dist', ['jshint', 'compass:dist']);
+  grunt.registerTask('dist', ['clean:dist', 'copyto:dist']);
 
 
 };
