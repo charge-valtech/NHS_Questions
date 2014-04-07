@@ -38,6 +38,9 @@ footer {
   display: inline-block;
   padding-right: 20px;
   vertical-align: bottom;
+  @media (max-width: 600px) {
+    display: list-item;
+  }
 }
 
 .footer__copyright {
@@ -47,5 +50,8 @@ footer {
   width: 24%;
   @media (max-width: 600px) {
     width: 100%;
+  }
+  &:hover {
+    text-decoration: underline;
   }
 }

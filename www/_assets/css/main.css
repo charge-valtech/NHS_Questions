@@ -1981,7 +1981,7 @@ input.password {
 
 /* line 225, ../scss/base/mixins/_forms.scss */
 input.email {
-  width: 30em;
+  width: 20em;
 }
 
 /* line 228, ../scss/base/mixins/_forms.scss */
@@ -2257,40 +2257,12 @@ h1.page-title {
 
 /* line 21, ../scss/modules/_main-content.scss */
 #content-wrapper {
-  background: #fff;
   padding: 0 0 4em 0;
-  margin: 0 auto;
-  max-width: 980px;
-}
-/* line 26, ../scss/modules/_main-content.scss */
-#content-wrapper section p {
-  margin: 0;
-  font-size: 1.9rem;
-  font-weight: 400;
-  line-height: 1.4em;
-}
-/* line 32, ../scss/modules/_main-content.scss */
-#content-wrapper .help-container {
-  width: 100%;
-  clear: both;
-  margin-bottom: 2em;
-}
-/* line 36, ../scss/modules/_main-content.scss */
-#content-wrapper .help-container ul {
-  margin-top: 1.5em;
-  list-style: none;
-  display: inline;
-  float: right;
-}
-/* line 41, ../scss/modules/_main-content.scss */
-#content-wrapper .help-container ul li {
-  float: left;
-  margin-right: 20px;
 }
 
 /* line 1, ../scss/modules/_header.scss */
 .global-header {
-  background: black;
+  background: #0b0c0c;
   color: white;
 }
 
@@ -2326,7 +2298,7 @@ h1.page-title {
 
 /* line 30, ../scss/modules/_header.scss */
 .alpha__label {
-  background: #da337d;
+  background: #d53880;
   display: inline-block;
   font-size: 0.7em;
   font-weight: 700;
@@ -2400,8 +2372,14 @@ footer a {
   padding-right: 20px;
   vertical-align: bottom;
 }
+@media (max-width: 600px) {
+  /* line 37, ../scss/modules/_footer.scss */
+  .footer__link {
+    display: list-item;
+  }
+}
 
-/* line 43, ../scss/modules/_footer.scss */
+/* line 46, ../scss/modules/_footer.scss */
 .footer__copyright {
   display: inline-block;
   text-align: center;
@@ -2409,10 +2387,14 @@ footer a {
   width: 24%;
 }
 @media (max-width: 600px) {
-  /* line 43, ../scss/modules/_footer.scss */
+  /* line 46, ../scss/modules/_footer.scss */
   .footer__copyright {
     width: 100%;
   }
+}
+/* line 54, ../scss/modules/_footer.scss */
+.footer__copyright:hover {
+  text-decoration: underline;
 }
 
 /* Progress indicator */

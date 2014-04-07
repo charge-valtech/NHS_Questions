@@ -1,6 +1,6 @@
 .global-header {
-  background: $colorBlack;
-  color: $colorWhite;
+  background: $black;
+  color: $white;
 }
 
 .global-header__wrapper {
@@ -28,7 +28,7 @@
 }
 
 .alpha__label {
-  background: $colorPrimary;
+  background: $alpha-colour;
   display: inline-block;
   font-size: 0.7em;
   font-weight: 700;
@@ -40,7 +40,7 @@
 
 .phase-notice {
   background: $govuk-blue;
-  color: $colorWhite;
+  color: $white;
   font-size: 1.5rem;
   padding: 8px;
   strong {
