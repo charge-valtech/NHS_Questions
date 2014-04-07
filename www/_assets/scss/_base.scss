@@ -3,6 +3,10 @@
 @import 'base/_mixins.scss';
 @import 'base/_utilities.scss';
 
+*, *:after, *:before {
+  @include box-sizing(border-box);
+}
+
 html {
   font-size: 62.5%;
   /* 1 */

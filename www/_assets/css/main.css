@@ -904,6 +904,13 @@ input:-moz-placeholder {
 }
 
 /* line 6, ../scss/_base.scss */
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 10, ../scss/_base.scss */
 html {
   font-size: 62.5%;
   /* 1 */
@@ -919,7 +926,7 @@ html {
  *    (62.5% * 160% = 100%)
  * 2. Addresses margins handled incorrectly in IE6/7
  */
-/* line 20, ../scss/_base.scss */
+/* line 24, ../scss/_base.scss */
 body {
   font-family: "nta",Arial,sans-serif;
   font-size: 160%;
@@ -928,23 +935,23 @@ body {
   /* 2 */
 }
 
-/* line 28, ../scss/_base.scss */
+/* line 32, ../scss/_base.scss */
 b,
 strong {
   font-weight: 600;
 }
 
-/* line 31, ../scss/_base.scss */
+/* line 35, ../scss/_base.scss */
 img {
   border: 0;
 }
 
-/* line 34, ../scss/_base.scss */
+/* line 38, ../scss/_base.scss */
 button {
   *overflow: visible;
 }
 
-/* line 37, ../scss/_base.scss */
+/* line 41, ../scss/_base.scss */
 abbr[title] {
   cursor: help;
 }
@@ -954,7 +961,7 @@ abbr[title] {
  * 2. Addresses `box-sizing` set to `border-box` in Safari 5 and Chrome
  *    (include `-moz` to future-proof).
  */
-/* line 45, ../scss/_base.scss */
+/* line 49, ../scss/_base.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
@@ -964,19 +971,19 @@ input[type="search"] {
   box-sizing: content-box;
 }
 
-/* line 53, ../scss/_base.scss */
+/* line 57, ../scss/_base.scss */
 input[type="search"]::-webkit-search-cancel-button {
   -webkit-appearance: searchfield-cancel-button;
   margin-right: 2px;
 }
 
-/* line 57, ../scss/_base.scss */
+/* line 61, ../scss/_base.scss */
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
 /* For image replacement */
-/* line 61, ../scss/_base.scss */
+/* line 65, ../scss/_base.scss */
 .ir {
   display: block;
   text-indent: -999em;
@@ -986,20 +993,20 @@ input[type="search"]::-webkit-search-decoration {
   direction: ltr;
 }
 
-/* line 68, ../scss/_base.scss */
+/* line 72, ../scss/_base.scss */
 .ir br {
   display: none;
 }
 
 /* Hide for both screenreaders and browsers */
-/* line 72, ../scss/_base.scss */
+/* line 76, ../scss/_base.scss */
 .hidden {
   display: none;
   visibility: hidden;
 }
 
 /* Hide only visually, but have it available for screenreaders */
-/* line 77, ../scss/_base.scss */
+/* line 81, ../scss/_base.scss */
 .visuallyhidden {
   position: absolute;
   left: -9999em;
@@ -1009,7 +1016,7 @@ input[type="search"]::-webkit-search-decoration {
    */
 }
 
-/* line 84, ../scss/_base.scss */
+/* line 88, ../scss/_base.scss */
 .visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
   clip: auto;
   height: auto;
@@ -1020,56 +1027,56 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 /* Hide visually and from screenreaders, but maintain layout */
-/* line 93, ../scss/_base.scss */
+/* line 97, ../scss/_base.scss */
 .invisible {
   visibility: hidden;
 }
 
 /* Give a strong clear visual idea as to what is currently in focus */
-/* line 97, ../scss/_base.scss */
+/* line 101, ../scss/_base.scss */
 a {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3);
 }
 
-/* line 100, ../scss/_base.scss */
+/* line 104, ../scss/_base.scss */
 a:focus {
   background-color: #ffbf47;
   outline: 3px solid #ffbf47;
 }
 
 /* Make skiplinks visible when they are tabbed to */
-/* line 105, ../scss/_base.scss */
+/* line 109, ../scss/_base.scss */
 .skiplink {
   position: absolute;
   left: -9999em;
 }
 
-/* line 109, ../scss/_base.scss */
+/* line 113, ../scss/_base.scss */
 .skiplink:focus {
   position: static;
 }
 
-/* line 112, ../scss/_base.scss */
+/* line 116, ../scss/_base.scss */
 #skiplink-container {
   text-align: center;
   background: #0b0c0c;
 }
 
-/* line 115, ../scss/_base.scss */
+/* line 119, ../scss/_base.scss */
 #skiplink-container div {
   text-align: left;
   margin: 0 auto;
   max-width: 1020px;
 }
 
-/* line 119, ../scss/_base.scss */
+/* line 123, ../scss/_base.scss */
 #skiplink-container .skiplink {
   display: -moz-inline-stack;
   display: inline-block;
   margin: 0.75em 0 0 30px;
 }
 
-/* line 127, ../scss/_base.scss */
+/* line 131, ../scss/_base.scss */
 input:focus,
 textarea:focus,
 select:focus,
@@ -1077,13 +1084,13 @@ select:focus,
   outline: 3px solid #ffbf47;
 }
 
-/* line 130, ../scss/_base.scss */
+/* line 134, ../scss/_base.scss */
 #global-header h1 a:focus {
   background-color: transparent;
   outline: none;
 }
 
-/* line 133, ../scss/_base.scss */
+/* line 137, ../scss/_base.scss */
 #global-header a:focus {
   color: #0b0c0c;
 }
@@ -2365,29 +2372,49 @@ footer a {
 .footer__meta {
   margin: 0 auto;
   max-width: 1000px;
-  padding: 20px 10px;
+  overflow: hidden;
+  padding: 60px 15px;
+}
+@media (max-width: 600px) {
+  /* line 17, ../scss/modules/_footer.scss */
+  .footer__meta {
+    padding-top: 10px;
+  }
 }
 
-/* line 23, ../scss/modules/_footer.scss */
+/* line 27, ../scss/modules/_footer.scss */
 .footer__nav {
-  display: table;
-  float: left;
+  display: inline-block;
   list-style: none;
-  min-height: 102px;
+  width: 75%;
+}
+@media (max-width: 600px) {
+  /* line 27, ../scss/modules/_footer.scss */
+  .footer__nav {
+    margin-bottom: 30px;
+    width: 100%;
+  }
 }
 
-/* line 30, ../scss/modules/_footer.scss */
+/* line 37, ../scss/modules/_footer.scss */
 .footer__link {
-  display: table-cell;
+  display: inline-block;
   padding-right: 20px;
   vertical-align: bottom;
 }
 
-/* line 36, ../scss/modules/_footer.scss */
+/* line 43, ../scss/modules/_footer.scss */
 .footer__copyright {
-  float: right;
+  display: inline-block;
   text-align: center;
   text-decoration: none;
+  width: 24%;
+}
+@media (max-width: 600px) {
+  /* line 43, ../scss/modules/_footer.scss */
+  .footer__copyright {
+    width: 100%;
+  }
 }
 
 /* Progress indicator */
