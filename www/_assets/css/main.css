@@ -2310,14 +2310,20 @@ h1.page-title {
 
 /* line 19, ../scss/modules/_header.scss */
 .global-header__title {
-  font-size: 22px;
+  font-size: 20px;
   line-height: 24px;
   float: right;
   margin: 0;
   padding: 0;
 }
+@media (max-width: 450px) {
+  /* line 19, ../scss/modules/_header.scss */
+  .global-header__title {
+    float: left;
+  }
+}
 
-/* line 27, ../scss/modules/_header.scss */
+/* line 30, ../scss/modules/_header.scss */
 .alpha__label {
   background: #da337d;
   display: inline-block;
@@ -2329,24 +2335,15 @@ h1.page-title {
   text-transform: uppercase;
 }
 
-/* line 38, ../scss/modules/_header.scss */
-#phase-notice {
+/* line 41, ../scss/modules/_header.scss */
+.phase-notice {
   background: #005ea5;
-}
-/* line 40, ../scss/modules/_header.scss */
-#phase-notice p {
-  margin: 0;
-  padding: 8px 8px;
-  font-size: 1.5rem;
-  line-height: 1.31579;
   color: white;
+  font-size: 1.5rem;
+  padding: 8px;
 }
-/* line 47, ../scss/modules/_header.scss */
-#phase-notice a {
-  color: #0B0C0C;
-}
-/* line 50, ../scss/modules/_header.scss */
-#phase-notice strong {
+/* line 46, ../scss/modules/_header.scss */
+.phase-notice strong {
   text-transform: uppercase;
 }
 

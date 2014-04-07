@@ -17,11 +17,14 @@
 }
 
 .global-header__title {
-  font-size: 22px;
+  font-size: 20px;
   line-height: 24px;
   float: right;
   margin: 0;
   padding: 0;
+  @media (max-width: 450px) {
+    float: left;
+  }
 }
 
 .alpha__label {
@@ -35,18 +38,11 @@
   text-transform: uppercase;
 }
 
-#phase-notice {
+.phase-notice {
   background: $govuk-blue;
-  p {
-    margin: 0;
-    padding: 8px 8px;
-    font-size: 1.5rem;
-    line-height: 1.31579;
-    color: $colorWhite;
-  }
-  a {
-    color: #0B0C0C;
-  }
+  color: $colorWhite;
+  font-size: 1.5rem;
+  padding: 8px;
   strong {
     text-transform: uppercase;
   }
