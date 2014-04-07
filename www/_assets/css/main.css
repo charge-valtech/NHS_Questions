@@ -592,7 +592,7 @@ table {
   width: device-width;
 }
 
-/* line 407, ../scss/base/mixins/_forms.scss */
+/* line 416, ../scss/base/mixins/_forms.scss */
 .option.group label input[type="text"] {
   margin-left: 0;
   width: 14em;
@@ -600,27 +600,27 @@ table {
   position: absolute;
 }
 
-/* line 415, ../scss/base/mixins/_forms.scss */
+/* line 424, ../scss/base/mixins/_forms.scss */
 ::-webkit-input-placeholder {
   padding-top: 0.15em;
   color: #6f777b;
 }
 
-/* line 420, ../scss/base/mixins/_forms.scss */
+/* line 429, ../scss/base/mixins/_forms.scss */
 ::-moz-placeholder {
   padding-top: 0.15em;
   color: #6f777b;
 }
 
 /* firefox 19+ */
-/* line 426, ../scss/base/mixins/_forms.scss */
+/* line 435, ../scss/base/mixins/_forms.scss */
 :-ms-input-placeholder {
   padding-top: 0.15em;
   color: #6f777b;
 }
 
 /* ie */
-/* line 432, ../scss/base/mixins/_forms.scss */
+/* line 441, ../scss/base/mixins/_forms.scss */
 input:-moz-placeholder {
   padding-top: 0.15em;
   color: #6f777b;
@@ -1164,7 +1164,7 @@ select:focus,
   width: device-width;
 }
 
-/* line 407, ../scss/base/mixins/_forms.scss */
+/* line 416, ../scss/base/mixins/_forms.scss */
 .option.group label input[type="text"] {
   margin-left: 0;
   width: 14em;
@@ -1172,27 +1172,27 @@ select:focus,
   position: absolute;
 }
 
-/* line 415, ../scss/base/mixins/_forms.scss */
+/* line 424, ../scss/base/mixins/_forms.scss */
 ::-webkit-input-placeholder {
   padding-top: 0.15em;
   color: #6f777b;
 }
 
-/* line 420, ../scss/base/mixins/_forms.scss */
+/* line 429, ../scss/base/mixins/_forms.scss */
 ::-moz-placeholder {
   padding-top: 0.15em;
   color: #6f777b;
 }
 
 /* firefox 19+ */
-/* line 426, ../scss/base/mixins/_forms.scss */
+/* line 435, ../scss/base/mixins/_forms.scss */
 :-ms-input-placeholder {
   padding-top: 0.15em;
   color: #6f777b;
 }
 
 /* ie */
-/* line 432, ../scss/base/mixins/_forms.scss */
+/* line 441, ../scss/base/mixins/_forms.scss */
 input:-moz-placeholder {
   padding-top: 0.15em;
   color: #6f777b;
@@ -1561,7 +1561,7 @@ input:-moz-placeholder {
   margin-left: 0;
   margin-right: 0;
 }
-/* line 8, ../scss/components/_buttons.scss */
+/* line 7, ../scss/components/_buttons.scss */
 .button.secondary {
   background-color: #dee0e2;
   position: relative;
@@ -1646,6 +1646,17 @@ input:-moz-placeholder {
   content: none;
   margin-left: 0;
   margin-right: 0;
+}
+/* line 10, ../scss/components/_buttons.scss */
+.button.inline {
+  margin-top: -4px;
+  margin-left: 8px;
+}
+@media (max-width: 450px) {
+  /* line 10, ../scss/components/_buttons.scss */
+  .button.inline {
+    margin: 8px 0 0;
+  }
 }
 
 /* line 26, ../scss/base/mixins/_forms.scss */
@@ -1954,126 +1965,96 @@ fieldset fieldset legend {
   }
 }
 
-/* line 209, ../scss/base/mixins/_forms.scss */
+/* line 210, ../scss/base/mixins/_forms.scss */
+input.search, input.password, input.email, input.name, input.street, input.town, input.large {
+  width: 20em;
+}
+@media (max-width: 460px) {
+  /* line 210, ../scss/base/mixins/_forms.scss */
+  input.search, input.password, input.email, input.name, input.street, input.town, input.large {
+    width: 100%;
+  }
+}
+
+/* line 216, ../scss/base/mixins/_forms.scss */
+input.full-name, input.x-large, textarea.short, textarea.tall {
+  width: 30em;
+}
+@media (max-width: 460px) {
+  /* line 216, ../scss/base/mixins/_forms.scss */
+  input.full-name, input.x-large, textarea.short, textarea.tall {
+    width: 100%;
+  }
+}
+
+/* line 222, ../scss/base/mixins/_forms.scss */
 input[type="text"] {
   min-width: 2em;
 }
 
-/* line 213, ../scss/base/mixins/_forms.scss */
-input[type="email"] {
-  width: 30em;
-}
-
-/* line 216, ../scss/base/mixins/_forms.scss */
+/* line 225, ../scss/base/mixins/_forms.scss */
 input[type="url"] {
   width: 99%;
 }
 
-/* line 219, ../scss/base/mixins/_forms.scss */
-input.search {
-  width: 20em;
-}
-
-/* line 222, ../scss/base/mixins/_forms.scss */
-input.password {
-  width: 20em;
-}
-
-/* line 225, ../scss/base/mixins/_forms.scss */
-input.email {
-  width: 20em;
-}
-
-/* line 228, ../scss/base/mixins/_forms.scss */
-input.name {
-  width: 20em;
-}
-
-/* line 231, ../scss/base/mixins/_forms.scss */
+/* line 240, ../scss/base/mixins/_forms.scss */
 input.url {
   width: 99%;
 }
 
-/* line 234, ../scss/base/mixins/_forms.scss */
-input.full-name {
-  width: 30em;
-}
-
-/* line 237, ../scss/base/mixins/_forms.scss */
-input.street {
-  width: 20em;
-}
-
-/* line 240, ../scss/base/mixins/_forms.scss */
-input.town {
-  width: 20em;
-}
-
-/* line 243, ../scss/base/mixins/_forms.scss */
+/* line 252, ../scss/base/mixins/_forms.scss */
 input.small {
   width: 5em;
 }
 
-/* line 246, ../scss/base/mixins/_forms.scss */
+/* line 255, ../scss/base/mixins/_forms.scss */
 input.medium {
   width: 10em;
 }
 
-/* line 249, ../scss/base/mixins/_forms.scss */
-input.large {
-  width: 20em;
-}
-
-/* line 252, ../scss/base/mixins/_forms.scss */
-input.x-large {
-  width: 30em;
-}
-
-/* line 255, ../scss/base/mixins/_forms.scss */
+/* line 264, ../scss/base/mixins/_forms.scss */
 input.full-width {
   width: 99%;
 }
 
-/* line 258, ../scss/base/mixins/_forms.scss */
+/* line 267, ../scss/base/mixins/_forms.scss */
 input.postcode {
   width: 5em;
 }
 
-/* line 261, ../scss/base/mixins/_forms.scss */
+/* line 270, ../scss/base/mixins/_forms.scss */
 textarea.short {
-  width: 30em;
   height: 5em;
 }
 
-/* line 265, ../scss/base/mixins/_forms.scss */
+/* line 274, ../scss/base/mixins/_forms.scss */
 textarea.tall {
-  width: 30em;
   height: 10em;
 }
 
-/* line 269, ../scss/base/mixins/_forms.scss */
+/* line 278, ../scss/base/mixins/_forms.scss */
 textarea.full-size {
   width: 99%;
   height: 20em;
 }
 
-/* line 386, ../scss/base/mixins/_forms.scss */
+/* line 395, ../scss/base/mixins/_forms.scss */
 label {
   display: block;
 }
 
-/* line 389, ../scss/base/mixins/_forms.scss */
+/* line 398, ../scss/base/mixins/_forms.scss */
 input {
   margin-left: 0;
 }
 
-/* line 392, ../scss/base/mixins/_forms.scss */
+/* line 401, ../scss/base/mixins/_forms.scss */
 legend span {
   padding-bottom: 0.3em;
   display: block;
 }
 
-/* line 399, ../scss/base/mixins/_forms.scss */
+/* line 408, ../scss/base/mixins/_forms.scss */
 .inline input[type=text],
 .inline select,
 .inline textarea {
@@ -2081,70 +2062,43 @@ legend span {
 }
 
 /* line 3, ../scss/components/_forms.scss */
-form {
-  min-height: 200px;
-}
-/* line 5, ../scss/components/_forms.scss */
-form fieldset {
-  border: 0;
-  margin-top: 1em;
-  padding: 1em 0;
-}
-/* line 9, ../scss/components/_forms.scss */
-form fieldset.separator {
-  border-bottom: 1px solid #bfc1c3;
-  padding-bottom: 1.5em;
-  margin-bottom: 2.5em;
-}
-/* line 14, ../scss/components/_forms.scss */
-form fieldset .working-day {
-  width: 180px;
-  float: left;
-}
-/* line 18, ../scss/components/_forms.scss */
-form fieldset p {
-  margin: 0 0 1em;
-}
-/* line 21, ../scss/components/_forms.scss */
-form fieldset .required:after {
-  color: #e32;
-  content: ' *';
-  display: inline;
-}
-
-/* line 29, ../scss/components/_forms.scss */
 select {
   border: 1px solid #dadada;
   font-family: inherit;
   font-size: inherit;
 }
-
-/* line 35, ../scss/components/_forms.scss */
-fieldset fieldset {
-  padding-left: 0;
+@media (max-width: 450px) {
+  /* line 3, ../scss/components/_forms.scss */
+  select {
+    width: 100%;
+  }
 }
 
-/* line 39, ../scss/components/_forms.scss */
+/* line 12, ../scss/components/_forms.scss */
 .logo-upload img {
-  width: 10em;
   border: 1px solid #bfc1c3;
+  width: 10em;
 }
 
-/* line 44, ../scss/components/_forms.scss */
+/* line 17, ../scss/components/_forms.scss */
 .check-to-show {
   display: none;
 }
+/* line 19, ../scss/components/_forms.scss */
+.lt-ie9 .check-to-show {
+  display: block;
+}
 
-/* line 48, ../scss/components/_forms.scss */
+/* line 24, ../scss/components/_forms.scss */
 .check-to-show-trigger:checked + .check-to-show {
   display: block;
 }
 
-/* line 53, ../scss/components/_forms.scss */
+/* line 29, ../scss/components/_forms.scss */
 .review-vacancy fieldset {
   overflow: hidden;
 }
-/* line 56, ../scss/components/_forms.scss */
+/* line 32, ../scss/components/_forms.scss */
 .review-vacancy .amend-answers {
   float: right;
   margin-top: -19px;
@@ -2508,341 +2462,6 @@ nav.progress-indicator ol li.active:after {
   margin-bottom: 0.25em;
 }
 
-/* line 3, ../scss/modules/_datepicker.scss */
-.ui-icon {
-  display: block;
-  text-indent: -99999px;
-}
-
-/* line 5, ../scss/modules/_datepicker.scss */
-.ui-datepicker {
-  display: none;
-}
-
-/* line 6, ../scss/modules/_datepicker.scss */
-.ui-datepicker .ui-datepicker-header {
-  position: relative;
-  padding: 20px 0;
-}
-
-/* line 8, ../scss/modules/_datepicker.scss */
-.ui-datepicker .ui-datepicker-prev,
-.ui-datepicker .ui-datepicker-next {
-  position: absolute;
-  top: 0;
-  width: 50px;
-  height: 100%;
-  cursor: pointer;
-  text-align: center;
-}
-
-/* line 10, ../scss/modules/_datepicker.scss */
-.ui-datepicker .ui-datepicker-prev:before {
-  top: 8px;
-  position: relative;
-  color: #fff;
-  content: "\f104";
-  font-family: 'FontAwesome';
-  font-weight: normal;
-  font-style: normal;
-  text-decoration: inherit;
-  -webkit-font-smoothing: antialiased;
-  font-size: 26px;
-}
-
-/* line 22, ../scss/modules/_datepicker.scss */
-.ui-datepicker .ui-datepicker-next:before {
-  top: 8px;
-  position: relative;
-  color: #fff;
-  content: "\f105";
-  font-family: 'FontAwesome';
-  font-weight: normal;
-  font-style: normal;
-  text-decoration: inherit;
-  -webkit-font-smoothing: antialiased;
-  font-size: 26px;
-}
-
-/* line 37, ../scss/modules/_datepicker.scss */
-.ui-datepicker .ui-datepicker-prev-hover,
-.ui-datepicker .ui-datepicker-next-hover {
-  background: #2b8cc4;
-}
-
-/* line 38, ../scss/modules/_datepicker.scss */
-.ui-datepicker .ui-datepicker-prev {
-  left: 0;
-}
-
-/* line 39, ../scss/modules/_datepicker.scss */
-.ui-datepicker .ui-datepicker-next {
-  right: 0;
-}
-
-/* line 41, ../scss/modules/_datepicker.scss */
-.ui-datepicker .ui-datepicker-prev span,
-.ui-datepicker .ui-datepicker-next span {
-  display: block;
-  position: absolute;
-  left: 50%;
-  margin-left: -8px;
-  top: 50%;
-  margin-top: -8px;
-}
-
-/* line 42, ../scss/modules/_datepicker.scss */
-.ui-datepicker .ui-datepicker-title {
-  margin: 0;
-  line-height: 1em;
-  text-align: center;
-  color: #fff;
-  font-weight: 600;
-}
-
-/* line 43, ../scss/modules/_datepicker.scss */
-.ui-datepicker .ui-datepicker-title select {
-  font-size: 1em;
-  margin: 1px 0;
-}
-
-/* line 44, ../scss/modules/_datepicker.scss */
-.ui-datepicker select.ui-datepicker-month-year {
-  width: 100%;
-}
-
-/* line 46, ../scss/modules/_datepicker.scss */
-.ui-datepicker select.ui-datepicker-month,
-.ui-datepicker select.ui-datepicker-year {
-  width: 49%;
-}
-
-/* line 47, ../scss/modules/_datepicker.scss */
-.ui-datepicker table {
-  width: 100%;
-  font-size: .9em;
-  border-collapse: collapse;
-}
-
-/* line 48, ../scss/modules/_datepicker.scss */
-.ui-datepicker th {
-  padding: 14px 0;
-  text-align: center;
-  font-weight: bold;
-  border: 0;
-}
-
-/* line 49, ../scss/modules/_datepicker.scss */
-.ui-datepicker td {
-  border: 0;
-}
-
-/* line 51, ../scss/modules/_datepicker.scss */
-.ui-datepicker td span,
-.ui-datepicker td a {
-  display: block;
-  padding: 14px 0;
-  text-align: center;
-  text-decoration: none;
-  line-height: 1em;
-}
-
-/* line 53, ../scss/modules/_datepicker.scss */
-.ui-datepicker {
-  position: fixed !important;
-  top: 15% !important;
-  left: 50% !important;
-  z-index: 1;
-  width: 600px;
-  margin: 0 0 0 -315px;
-  background: #fff;
-  padding: 15px;
-  box-shadow: 0px 0px 10px 800px rgba(0, 0, 0, 0.5);
-}
-
-/* line 57, ../scss/modules/_datepicker.scss */
-.ui-datepicker:before,
-.ui-datepicker:after {
-  content: " ";
-  /* 1 */
-  display: table;
-  /* 2 */
-}
-
-/* line 62, ../scss/modules/_datepicker.scss */
-.ui-datepicker:after {
-  clear: both;
-}
-
-/* line 67, ../scss/modules/_datepicker.scss */
-.ui-datepicker-title, .ui-datepicker-header {
-  background: #000;
-}
-
-/* line 68, ../scss/modules/_datepicker.scss */
-.ui-datepicker-today a {
-  background: #f9f9f9;
-  color: #000;
-}
-
-/* line 69, ../scss/modules/_datepicker.scss */
-.ui-datepicker-week-end a {
-  background: #eee;
-  color: #000;
-}
-
-/* line 70, ../scss/modules/_datepicker.scss */
-.ui-datepicker-current-day a {
-  background: #2b8cc4;
-  color: #fff;
-}
-
-/* line 71, ../scss/modules/_datepicker.scss */
-.ui-state-default {
-  background: #f9f9f9;
-  color: #000;
-}
-
-/* line 72, ../scss/modules/_datepicker.scss */
-.ui-state-default:hover {
-  background: #fff;
-  color: #000;
-  box-shadow: inset 0px 0px 0px 2px #2b8cc4;
-}
-
-/* action buttons */
-/* line 76, ../scss/modules/_datepicker.scss */
-.ui-datepicker-buttonpane {
-  text-align: right;
-}
-
-/* line 77, ../scss/modules/_datepicker.scss */
-button.ui-datepicker-current {
-  display: none;
-}
-
-/* line 78, ../scss/modules/_datepicker.scss */
-button.ui-datepicker-close {
-  border: 0 !important;
-  width: auto;
-  margin-top: 12px;
-  cursor: pointer;
-  padding: 5px 0 5px 0;
-  font-size: 14px;
-  background: transparent;
-  color: #808080;
-}
-
-/* line 79, ../scss/modules/_datepicker.scss */
-button.ui-datepicker-close:hover {
-  box-shadow: none;
-  color: #2b8cc4;
-  background: transparent;
-}
-
-/* line 82, ../scss/modules/_datepicker.scss */
-button.ui-datepicker-close:before {
-  content: "\f057";
-  color: #919191;
-  font-family: 'FontAwesome';
-  font-size: 20px;
-  position: relative;
-  top: 2px;
-  left: 0;
-  margin-right: 4px;
-}
-
-/* line 92, ../scss/modules/_datepicker.scss */
-button.ui-datepicker-close:hover:before {
-  color: #2b8cc4;
-}
-
-/* IE fixes */
-/* line 99, ../scss/modules/_datepicker.scss */
-.ie6 .ui-datepicker, .ie7 .ui-datepicker, .ie8 .ui-datepicker {
-  border: 10px solid #ccc;
-}
-
-/* line 100, ../scss/modules/_datepicker.scss */
-.ie6 .ui-state-default, .ie7 .ui-state-default, .ie8 .ui-state-default {
-  border: 1px solid #f9f9f9;
-}
-
-/* line 101, ../scss/modules/_datepicker.scss */
-.ie6 .ui-state-default:hover, .ie7 .ui-state-default:hover, .ie8 .ui-state-default:hover {
-  border: 1px solid #2b8cc4;
-}
-
-/* line 102, ../scss/modules/_datepicker.scss */
-.ie7 .ui-datepicker .ui-datepicker-prev {
-  background: url("../images/ie-icon.png") center no-repeat;
-}
-
-/* line 103, ../scss/modules/_datepicker.scss */
-.ie7 .ui-datepicker .ui-datepicker-next {
-  background: url("../images/ie-icon-right.png") center no-repeat;
-}
-
-/* ==========================================================================
-   Mobile
-   ========================================================================== */
-@media screen and (max-width: 650px) {
-  /* line 114, ../scss/modules/_datepicker.scss */
-  .ui-datepicker {
-    top: auto !important;
-    left: 0 !important;
-    width: 96%;
-    margin: 0;
-    padding: 2% 2% 0 2%;
-    height: 290px !important;
-    bottom: 0 !important;
-  }
-
-  /* line 116, ../scss/modules/_datepicker.scss */
-  .ui-datepicker .ui-datepicker-header {
-    padding: 15px 0;
-  }
-
-  /* line 119, ../scss/modules/_datepicker.scss */
-  .ui-datepicker .ui-datepicker-prev-hover,
-  .ui-datepicker .ui-datepicker-next-hover {
-    background: #000;
-  }
-
-  /* line 121, ../scss/modules/_datepicker.scss */
-  .ui-datepicker .ui-datepicker-prev:before {
-    top: 4px;
-  }
-
-  /* line 122, ../scss/modules/_datepicker.scss */
-  .ui-datepicker .ui-datepicker-next:before {
-    top: 4px;
-  }
-
-  /* line 124, ../scss/modules/_datepicker.scss */
-  ui-datepicker-month {
-    font-size: 10px;
-  }
-
-  /* line 126, ../scss/modules/_datepicker.scss */
-  .ui-datepicker td a, .ui-datepicker th {
-    padding: 8px 0;
-  }
-
-  /* line 128, ../scss/modules/_datepicker.scss */
-  button.ui-datepicker-close {
-    margin-top: 0;
-    position: absolute;
-    bottom: 5px;
-    right: 2%;
-  }
-
-  /* line 130, ../scss/modules/_datepicker.scss */
-  .ui-state-default:hover {
-    box-shadow: none;
-    background: #f9f9f9;
-  }
-}
 /* line 1, ../scss/modules/_search-results.scss */
 .search-summary {
   overflow: hidden;
