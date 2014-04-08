@@ -33,6 +33,11 @@ module.exports = function(grunt) {
         }
       }
     },
+    imageoptim: {
+      dev: {
+        src: ['www/_assets/img']
+      }
+    },
     compass: {
       dev: {
         options: {
@@ -147,6 +152,8 @@ module.exports = function(grunt) {
   });
 
   grunt.loadNpmTasks('assemble');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
+  grunt.loadNpmTasks('grunt-imageoptim');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-compass');
@@ -156,6 +163,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-copy-to');
   grunt.loadNpmTasks('grunt-contrib-clean');
+
+  grunt.registerTask('imageoptim', ['imageoptim']);
 
   grunt.registerTask('default', ['jshint', 'concat:dev', 'compass:dev', 'assemble', 'connect', 'watch']);
 

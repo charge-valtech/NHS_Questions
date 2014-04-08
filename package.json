@@ -14,7 +14,6 @@
     "grunt-contrib-watch": "~0.5.3",
     "grunt-contrib-jasmine": "~0.5.2",
     "grunt-legacssy": "~0.2.0",
-    "grunt-imageoptim": "~1.4.1",
     "grunt-curl": "~1.4.0",
     "grunt-text-replace": "~0.3.11",
     "grunt-contrib-concat": "~0.3.0",
@@ -22,6 +21,8 @@
     "assemble": "~0.4.37",
     "assemble-contrib-permalinks": "~0.3.6",
     "grunt-copy-to": "0.0.10",
-    "grunt-contrib-cssmin": "~0.9.0"
+    "grunt-contrib-cssmin": "~0.9.0",
+    "grunt-contrib-imagemin": "~0.6.1",
+    "grunt-imageoptim": "~1.4.1"
   }
 }

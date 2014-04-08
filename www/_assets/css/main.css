@@ -2247,10 +2247,11 @@ h1.page-title {
   /* line 19, ../scss/modules/_header.scss */
   .global-header__title {
     float: left;
+    font-size: 16px;
   }
 }
 
-/* line 30, ../scss/modules/_header.scss */
+/* line 31, ../scss/modules/_header.scss */
 .alpha__label {
   background: #d53880;
   display: inline-block;
@@ -2262,14 +2263,14 @@ h1.page-title {
   text-transform: uppercase;
 }
 
-/* line 41, ../scss/modules/_header.scss */
+/* line 42, ../scss/modules/_header.scss */
 .phase-notice {
   background: #005ea5;
   color: white;
   font-size: 1.5rem;
   padding: 8px;
 }
-/* line 46, ../scss/modules/_header.scss */
+/* line 47, ../scss/modules/_header.scss */
 .phase-notice strong {
   text-transform: uppercase;
 }
