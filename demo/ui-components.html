@@ -24,7 +24,7 @@
     <a class="global-header__logo" href="/" title="Go to the GOV.UK homepage">
       <img src="_assets/img/logos/logo.png" alt="GOV.UK">
     </a>
-    <h1 class="global-header__title alpha">Apprenticeship Applications <span class="alpha__label">Alpha</span></h1>
+    <h1 class="global-header__title alpha">UI Components <span class="alpha__label">Alpha</span></h1>
   </div>
 </header>
   <div class="content-container">
@@ -32,68 +32,61 @@
       <strong>ALPHA:</strong> This is a prototype
     </div>
     
-    <main role="main" id="main">
+<div id="main">
+  <section>
+    <div id="content-wrapper" class="components-used">
+      <h1>UI Components</h1>
+      <fieldset>
+        <legend>
+          Form components
+        </legend>
+        <div class="group">
+          <h2>Buttons</h2>
+          <button class="button">Primary</button>
+          <button class="button secondary">Secondary</button>
+          <div id="get-started" class="get-started">
+            <a href="#" rel="" data-transaction-slug="" class="button">Start now</a>
+              <span class="destination"> to do something</span>
+          </div>
+        </div>
+        <div class="group">
+          <h2>Inputs</h2>
+          <label><input type="text" class="name" placeholder="Name input"></label>
+          <label><input type="email" class="email" placeholder="email@email.com"></label>
+          <label><input type="password" class="password" placeholder="Password"></label>
+          <label><input type="text" class="x-large" placeholder="X Large input"></label>
+          <label><textarea class="short" placeholder="Text area (short)"></textarea></label>
+          <label><textarea class="tall" placeholder="Text area (tall)"></textarea></label>
+        </div>
+        <div class="group">
+          <h2>Radios, Checkboxes, Selects</h2>
+          <ul class="option group inline">
+              <li>
+                  <label><input type="radio" checked="checked" name="show-logo">Yes</label>
+              </li>
+              <li>
+                  <label><input type="radio" name="show-logo">No</label>
+              </li>
+          </ul>
+          <label><input type="checkbox">Checkbox</label>
+          <label><input type="radio" checked="checked" name="hide-show">Hide something</label>
+          <label>
+            <input type="radio" class="check-to-show-trigger" name="hide-show">Show something
+            <input type="date" class="check-to-show">
+          </label>
+          <label>
+            <select name="" id="">
+              <option value="">Option 1</option>
+              <option value="">Option 2</option>
+              <option value="">Option 3</option>
+            </select>
+          </label>
+        </div>
 
-
-        <section>
-
-
-            <div id="content-wrapper">
-
-
-
-                <div class="help-container">
-
-                </div>
-
-
-
-
-
-                <h1>Apprenticeships</h1>
-
-
-
-
-
-
-
-                <h2>Apply for an Apprenticeship - Complete</h2>
-
-
-
-                <p>
-
-                    Your application has been submitted. An email has been sent to you confirming the details.
-
-
-                </p>
-
-
-                <p>
-
-                    Your reference for this application is: <b>VE1234556</b>
-
-
-                </p>
-
-
-                <p class="action group">
-                    <a class="button" href="employer.html">Finished</a>
-                    <a class="button secondary" href="find-an-apprenticeship/index.html">Make another application</a>
-                </p>
-
-            </div>
-
-
-
-
-        </section>
-
-
-    </main>
-
-
+      </fieldset>
+    </div>
+  </section>
+</div>
   </div>
   <footer role="contentinfo">
   <div class="footer__wrapper">
