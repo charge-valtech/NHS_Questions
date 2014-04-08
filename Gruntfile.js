@@ -7,7 +7,7 @@ module.exports = function(grunt) {
         separator: ';'
       },
       dev: {
-        src: ['www/_assets/js/plugins/*.js'],
+        src: ['www/_assets/js/plugins/*.js', 'www/_assets/js/*.js', '!www/_assets/js/scripts.min.js'],
         dest: 'www/_assets/js/scripts.min.js'
       }
     },
@@ -83,7 +83,7 @@ module.exports = function(grunt) {
       },
       js: {
         files: ['www/_assets/js/**/*.js'],
-        tasks: ['jshint']
+        tasks: ['jshint', 'concat:dev']
       },
       html: {
         files: ['www/_templates/{,*/}*.hbs', 'www/_templates/{,*/*/}*.hbs'],

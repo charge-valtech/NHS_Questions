@@ -5,6 +5,9 @@
   a {
     color: $white;
     text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
   }
   .heading {
     display: inline-block;
@@ -12,6 +15,9 @@
     margin-bottom: 0;
     vertical-align: middle;
     width: 80%;
+    a {
+      text-decoration: none;
+    }
   }
   @media (min-width: 769px) {
     clear: none;
@@ -24,13 +30,26 @@
   text-align: right;
   vertical-align: middle;
   width: 20%;
+  &:after {
+    content: " \25BC";
+    display: inline-block;
+    font-size: 8px;
+    height: 8px;
+    padding-left: 5px;
+    vertical-align: middle;
+  }
+  &.triggered {
+    &:after {
+      content: " \25B2";
+    }
+  }
   @media (min-width: 769px) {
     display: none;
   }
 }
 
 .responsive-nav__links {
-  display: none;
+  height: 0;
   overflow: hidden;
   padding: 0;
   li {
@@ -43,8 +62,11 @@
     display: block;
     padding: 5px 15px 5px 0;
   }
+  &.menu-open, .no-js & {
+    height: auto;
+  }
   @media (min-width: 769px) {
-    display: block;
+    height: auto;
     li {
       border-bottom: none;
       display: inline-block;
