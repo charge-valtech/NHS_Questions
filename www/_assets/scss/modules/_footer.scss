@@ -5,13 +5,13 @@ footer {
   color: #454A4C;
   font-size: 1em;
   overflow: hidden;
-  a {
-    color: #454A4C;
-  }
 }
 
 .footer__wrapper {
   border-top: 1px solid #a1acb2;
+  a {
+    color: #454A4C;
+  }
 }
 
 .footer__meta {
@@ -38,6 +38,9 @@ footer {
   display: inline-block;
   padding-right: 20px;
   vertical-align: bottom;
+  @media (max-width: 600px) {
+    display: list-item;
+  }
 }
 
 .footer__copyright {
@@ -47,5 +50,8 @@ footer {
   width: 24%;
   @media (max-width: 600px) {
     width: 100%;
+  }
+  &:hover {
+    text-decoration: underline;
   }
 }

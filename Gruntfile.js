@@ -2,31 +2,14 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
-
     concat: {
       options: {
         separator: ';'
       },
       dev: {
-
-      },
-      demo: {
         src: ['www/_assets/js/plugins/*.js'],
-        dest: 'demo/_assets/js/plugins.js'
-      },
-      sprint: {
-        src: ['www/_assets/js/plugins/*.js'],
-        dest: 'sprint/_assets/js/plugins.js'
-      },
-      dist: {
-        src: ['www/_assets/js/plugins/*.js'],
-        dest: 'dist/_assets/js/plugins.js'
-      },
-      // Metadata.
-      meta: {
-        sassPath: 'www/_assets/scss/',
-        cssPath: 'www/_assets/css/',
-      },
+        dest: 'www/_assets/js/scripts.min.js'
+      }
     },
     uglify: {
       options: {
@@ -39,7 +22,7 @@ module.exports = function(grunt) {
       }
     },
     jshint: {
-      files: ['Gruntfile.js', 'www/_assets/js/modules/*.js'],
+      files: ['Gruntfile.js'],
       options: {
         // options here to override JSHint defaults
         globals: {
@@ -50,33 +33,23 @@ module.exports = function(grunt) {
         }
       }
     },
-
+    imageoptim: {
+      dev: {
+        src: ['www/_assets/img']
+      }
+    },
     compass: {
-      demo: {
-        options: {
-          sassDir: 'www/_assets/scss',
-          cssDir: 'demo/_assets/css',
-          environment: 'production'
-        }
-      },
-      dist: {
-        options: {
-          sassDir: 'www/_assets/scss',
-          cssDir: 'dist/_assets/css',
-          environment: 'production'
-        }
-      },
-      sprint: {
-        options: {
-          sassDir: 'www/_assets/scss',
-          cssDir: 'sprint/_assets/css',
-          environment: 'production'
-        }
-      },
       dev: {
         options: {
           sassDir: 'www/_assets/scss',
           cssDir: 'www/_assets/css'
+        }
+      }
+    },
+    cssmin: {
+      dist: {
+        files: {
+          'www/_assets/css/main.css': ['www/_assets/css/main.css']
         }
       }
     },
@@ -125,24 +98,81 @@ module.exports = function(grunt) {
           livereload: true
         }
       }
+    },
+    copyto: {
+      sprint: {
+        files: [
+          {cwd: 'www/', src: ['**/*'], dest: 'sprint/'}
+        ],
+        options: {
+          ignore: [
+            'www/_assets/scss{,/**/*}',
+            'www/_templates{,/**/*}'
+          ]
+        },
+      },
+      demo: {
+        files: [
+          {cwd: 'www/', src: ['**/*'], dest: 'demo/'}
+        ],
+        options: {
+          ignore: [
+            'www/_assets/scss{,/**/*}',
+            'www/_templates{,/**/*}'
+          ]
+        },
+      },
+      dist: {
+        files: [
+          {cwd: 'www/', src: ['**/*'], dest: 'dist/'}
+        ],
+        options: {
+          ignore: [
+            'www/_assets/scss{,/**/*}',
+            'www/_templates{,/**/*}',
+            'www/employer-role-submission{,/**/*}',
+            'www/find-an-apprenticeship{,/**/*}',
+            'www/*.html',
+            '!www/index.html',
+          ]
+        },
+      }
+    },
+    clean: {
+      sprint: {
+        src: [ 'sprint/' ]
+      },
+      demo: {
+        src: [ 'demo/' ]
+      },
+      dist: {
+        src: [ 'dist/' ]
+      }
     }
   });
 
   grunt.loadNpmTasks('assemble');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
+  grunt.loadNpmTasks('grunt-imageoptim');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-copy-to');
+  grunt.loadNpmTasks('grunt-contrib-clean');
 
-  grunt.registerTask('default', ['jshint', 'compass:dev', 'assemble', 'connect', 'watch']);
+  grunt.registerTask('imageoptim', ['imageoptim']);
 
-  grunt.registerTask('demo', ['jshint', 'concat:demo', 'connect', 'watch']);
+  grunt.registerTask('default', ['jshint', 'concat:dev', 'compass:dev', 'assemble', 'connect', 'watch']);
 
-  grunt.registerTask('sprint', ['jshint', 'concat:sprint', 'connect', 'watch']);
+  grunt.registerTask('demo', ['cssmin:dist', 'clean:demo', 'copyto:demo']);
 
-  grunt.registerTask('dist', ['jshint', 'compass:dist']);
+  grunt.registerTask('sprint', ['cssmin:dist', 'clean:sprint', 'copyto:sprint']);
+
+  grunt.registerTask('dist', ['cssmin:dist', 'clean:dist', 'copyto:dist']);
 
 
 };

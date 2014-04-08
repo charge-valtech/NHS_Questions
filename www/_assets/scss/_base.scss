@@ -101,9 +101,36 @@ input[type="search"]::-webkit-search-decoration {
 a {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
 
-a:focus {
+a:focus, button:focus {
   background-color: #ffbf47;
   outline: 3px solid #ffbf47; }
+
+button:active {
+  outline: none;
+}
+
+a {
+  color: $link-colour;
+  &:visited {
+    color: $link-visited-colour;
+  }
+  // &[href="#"]:visited {
+  //   color: $link-colour;
+  //   &:hover {
+  //     color: $link-hover-colour;
+  //   }
+  // }
+  &:hover {
+    color: $link-hover-colour;
+  }
+  &:active {
+    color: $link-active-colour;
+  }
+}
+
+a:active, a:hover {
+  color: $purple;
+}
 
 /* Make skiplinks visible when they are tabbed to */
 .skiplink {

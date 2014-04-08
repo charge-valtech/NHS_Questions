@@ -18,12 +18,12 @@
     @include core-16;
   }
 
-  a, a:link, a:visited, a:active {
-    color: $text-colour;
+  a, a:link, a:visited {
+    color: $govuk-blue;
   }
 
-  a:hover {
-    color: $text-colour;
+  a:active, a:hover {
+    color: $purple;
   }
 
 }
@@ -46,5 +46,5 @@
 
   margin: 3px 10px 0 5px;
   padding: 2px 5px 0;
-  
+
 }

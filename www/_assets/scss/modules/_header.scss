@@ -1,6 +1,6 @@
 .global-header {
-  background: $colorBlack;
-  color: $colorWhite;
+  background: $black;
+  color: $white;
 }
 
 .global-header__wrapper {
@@ -13,22 +13,23 @@
 
 .global-header__logo {
   float: left;
-  margin: 2px 20px 15px 0;
+  margin: 0 20px 15px 0;
 }
 
 .global-header__title {
   font-size: 20px;
-  line-height: 24px;
+  line-height: 22px;
   float: right;
   margin: 0;
   padding: 0;
   @media (max-width: 450px) {
     float: left;
+    font-size: 16px;
   }
 }
 
 .alpha__label {
-  background: $colorPrimary;
+  background: $alpha-colour;
   display: inline-block;
   font-size: 0.7em;
   font-weight: 700;
@@ -40,7 +41,7 @@
 
 .phase-notice {
   background: $govuk-blue;
-  color: $colorWhite;
+  color: $white;
   font-size: 1.5rem;
   padding: 8px;
   strong {
