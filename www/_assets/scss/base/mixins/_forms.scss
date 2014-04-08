@@ -31,11 +31,17 @@
           border: 1px inset $border-colour;
           // Otherwise IE gets a black border
       }
-
+      display: block;
       font-size: 1em;
       padding: 0.2em 0 0.1em 0.4em;
       font-size: 19px;
       line-height: 1.3em;
+      &.inline {
+        display: inline-block;
+      }
+      &.check-to-show {
+        display: none;
+      }
   }
   textarea {
       min-height: 5em;
