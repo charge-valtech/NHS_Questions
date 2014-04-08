@@ -59,7 +59,7 @@
         border-bottom: 2px solid darken($colour, 15%);
       }
     }
-  }    
+  }
 
   // Set text colour depending on background colour
   @if lightness($colour) < 50% {
@@ -78,7 +78,7 @@
     }
   }
 
-  // making the click target bigger than the button 
+  // making the click target bigger than the button
   // (and fill the space made when the button moves)
   &:before {
     content: "";
@@ -93,7 +93,7 @@
   &:active:before {
     top: -10%;
     height: 120%;
-    
+
     // IE6 ignores the :before psuedo-class but applies the block to :active
     // It therefore needs to be reset
     @include ie(6) {
