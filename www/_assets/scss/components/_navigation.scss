@@ -1,5 +1,95 @@
+.responsive-nav {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  a {
+    color: $white;
+    text-decoration: none;
+  }
+  .heading {
+    display: inline-block;
+    margin-right: -4px;
+    margin-bottom: 0;
+    vertical-align: middle;
+    width: 80%;
+  }
+  @media (min-width: 769px) {
+    clear: none;
+  }
+}
+
+.responsive-nav__trigger {
+  display: inline-block;
+  margin-right: -4px;
+  text-align: right;
+  vertical-align: middle;
+  width: 20%;
+  @media (min-width: 769px) {
+    display: none;
+  }
+}
+
+.responsive-nav__links {
+  display: none;
+  overflow: hidden;
+  padding: 0;
+  li {
+    border-bottom: 1px solid #2E3133;
+    float: left;
+    font-size: 16px;
+    width: 50%;
+  }
+  a {
+    display: block;
+    padding: 5px 15px 5px 0;
+  }
+  @media (min-width: 769px) {
+    display: block;
+    li {
+      border-bottom: none;
+      display: inline-block;
+      float: none;
+      font-size: 18px;
+      width: auto;
+    }
+    a {
+      display: inline-block;
+      padding: 0 15px 0 0;
+    }
+  }
+}
+
+.breadcrumbs {
+  ul {
+    list-style: none;
+    margin-bottom: 10px;
+    padding: 0;
+  }
+  a {
+    color: $black;
+    &:hover {
+      color: $link-active-colour;
+    }
+  }
+}
+
+.breadcrumbs__item {
+  background: url(../img/breadcrumb-separator.png) no-repeat center right;
+  background-size: 6px 11px;
+  display: inline-block;
+  margin-left: 8px;
+  padding-right: 18px;
+  &:first-child {
+    margin: 0;
+  }
+  &:last-child {
+    background-image: none;
+  }
+}
+
 .page-navigation {
   border-top: 1px solid $grey-2;
+  padding-top: 10px;
 }
 
 .page-navigation__btn {

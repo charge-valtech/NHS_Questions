@@ -55,8 +55,37 @@ headerTitle: UI Components
       </fieldset>
       <fieldset>
         <legend>Navigation</legend>
+        <h2>Responsive navigation</h2>
+        <header>
+            <a class="global-header__logo" href="/" title="Go to the GOV.UK homepage">
+              <img src="{{assets}}/img/logos/logo.png" alt="GOV.UK">
+            </a>
+          <nav role="navigation" class="responsive-nav">
+            <h2 class="heading"><a href="#">A title that links somewhere</a></h2>
+            <a href="#" class="responsive-nav__trigger">Menu</a>
+            <ul class="responsive-nav__links">
+              <li><a href="#">First link</a></li>
+              <li><a href="#">Second link</a></li>
+              <li><a href="#">Third link</a></li>
+            </ul>
+          </nav>
+        </header>
+        <h2>Breadcrumbs</h2>
+        <nav role="navigation" class="breadcrumbs">
+          <ul>
+            <li class="breadcrumbs__item">
+              <a href="#">Home</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a href="#">Somewhere</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a href="#">Somewhere else</a>
+            </li>
+          </ul>
+        </nav>
         <h2>Bottom of page navigation</h2>
-        <nav class="page-navigation">
+        <nav role="navigation" class="page-navigation">
           <a class="page-navigation__btn previous" href="#" rel="previous">
             <i class="arrow-button"></i>
             Previous page
@@ -66,6 +95,13 @@ headerTitle: UI Components
             Next page
           </a>
         </nav>
+      </fieldset>
+      <fieldset>
+        <legend>Textual</legend>
+        <h2>Explanation box</h2>
+        <div class="explanation-box">
+          <p>Some useful information can go here: <a href="#">Perhaps with a link?</a></p>
+        </div>
       </fieldset>
     </div>
   </section>

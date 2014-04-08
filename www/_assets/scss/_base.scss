@@ -120,11 +120,11 @@ a {
   //     color: $link-hover-colour;
   //   }
   // }
-  &:active {
-    color: $link-active-colour;
-  }
   &:hover {
     color: $link-hover-colour;
+  }
+  &:active {
+    color: $link-active-colour;
   }
 }
 

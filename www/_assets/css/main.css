@@ -1058,12 +1058,12 @@ a:visited {
   color: #2e8aca;
 }
 /* line 123, ../scss/_base.scss */
-a:active {
-  color: #2e8aca;
-}
-/* line 126, ../scss/_base.scss */
 a:hover {
   color: #2e358b;
+}
+/* line 126, ../scss/_base.scss */
+a:active {
+  color: #2e8aca;
 }
 
 /* line 131, ../scss/_base.scss */
@@ -2289,7 +2289,7 @@ ul {
 }
 
 /* line 1, ../scss/components/_misc.scss */
-.highlight-box {
+.explanation-box {
   background: #f9f9f9;
   border: 1px solid #ddd;
   clear: both;
@@ -2298,11 +2298,123 @@ ul {
 }
 
 /* line 1, ../scss/components/_navigation.scss */
-.page-navigation {
-  border-top: 1px solid #bfc1c3;
+.responsive-nav {
+  clear: both;
+  display: block;
+  overflow: hidden;
+}
+/* line 5, ../scss/components/_navigation.scss */
+.responsive-nav a {
+  color: white;
+  text-decoration: none;
+}
+/* line 9, ../scss/components/_navigation.scss */
+.responsive-nav .heading {
+  display: inline-block;
+  margin-right: -4px;
+  margin-bottom: 0;
+  vertical-align: middle;
+  width: 80%;
+}
+@media (min-width: 769px) {
+  /* line 1, ../scss/components/_navigation.scss */
+  .responsive-nav {
+    clear: none;
+  }
 }
 
-/* line 5, ../scss/components/_navigation.scss */
+/* line 21, ../scss/components/_navigation.scss */
+.responsive-nav__trigger {
+  display: inline-block;
+  margin-right: -4px;
+  text-align: right;
+  vertical-align: middle;
+  width: 20%;
+}
+@media (min-width: 769px) {
+  /* line 21, ../scss/components/_navigation.scss */
+  .responsive-nav__trigger {
+    display: none;
+  }
+}
+
+/* line 32, ../scss/components/_navigation.scss */
+.responsive-nav__links {
+  display: none;
+  overflow: hidden;
+  padding: 0;
+}
+/* line 36, ../scss/components/_navigation.scss */
+.responsive-nav__links li {
+  border-bottom: 1px solid #2E3133;
+  float: left;
+  font-size: 16px;
+  width: 50%;
+}
+/* line 42, ../scss/components/_navigation.scss */
+.responsive-nav__links a {
+  display: block;
+  padding: 5px 15px 5px 0;
+}
+@media (min-width: 769px) {
+  /* line 32, ../scss/components/_navigation.scss */
+  .responsive-nav__links {
+    display: block;
+  }
+  /* line 48, ../scss/components/_navigation.scss */
+  .responsive-nav__links li {
+    border-bottom: none;
+    display: inline-block;
+    float: none;
+    font-size: 18px;
+    width: auto;
+  }
+  /* line 55, ../scss/components/_navigation.scss */
+  .responsive-nav__links a {
+    display: inline-block;
+    padding: 0 15px 0 0;
+  }
+}
+
+/* line 63, ../scss/components/_navigation.scss */
+.breadcrumbs ul {
+  list-style: none;
+  margin-bottom: 10px;
+  padding: 0;
+}
+/* line 68, ../scss/components/_navigation.scss */
+.breadcrumbs a {
+  color: #0b0c0c;
+}
+/* line 70, ../scss/components/_navigation.scss */
+.breadcrumbs a:hover {
+  color: #2e8aca;
+}
+
+/* line 76, ../scss/components/_navigation.scss */
+.breadcrumbs__item {
+  background: url(../img/breadcrumb-separator.png) no-repeat center right;
+  background-size: 6px 11px;
+  display: inline-block;
+  margin-left: 8px;
+  padding-right: 18px;
+}
+/* line 82, ../scss/components/_navigation.scss */
+.breadcrumbs__item:first-child {
+  margin: 0;
+}
+/* line 85, ../scss/components/_navigation.scss */
+.breadcrumbs__item:last-child {
+  background-image: none;
+}
+
+/* line 90, ../scss/components/_navigation.scss */
+.page-navigation {
+  border-top: 1px solid #bfc1c3;
+  padding-top: 10px;
+}
+
+/* line 95, ../scss/components/_navigation.scss */
 .page-navigation__btn {
   display: inline-block;
   font-size: 19px;
@@ -2315,24 +2427,24 @@ ul {
   vertical-align: top;
   width: 50%;
 }
-/* line 15, ../scss/components/_navigation.scss */
+/* line 105, ../scss/components/_navigation.scss */
 .page-navigation__btn.previous {
   text-align: left;
 }
-/* line 18, ../scss/components/_navigation.scss */
+/* line 108, ../scss/components/_navigation.scss */
 .page-navigation__btn.next {
   text-align: right;
 }
-/* line 21, ../scss/components/_navigation.scss */
+/* line 111, ../scss/components/_navigation.scss */
 .page-navigation__btn:hover {
   text-decoration: underline;
 }
-/* line 24, ../scss/components/_navigation.scss */
+/* line 114, ../scss/components/_navigation.scss */
 .page-navigation__btn:active, .page-navigation__btn:focus {
   background-color: #f8f8f8;
 }
 
-/* line 29, ../scss/components/_navigation.scss */
+/* line 119, ../scss/components/_navigation.scss */
 .arrow-button {
   background: url(../img/arrow-sprite.png) no-repeat;
   background-size: 116px 44px;
@@ -2340,12 +2452,12 @@ ul {
   width: 35px;
   height: 44px;
 }
-/* line 34, ../scss/components/_navigation.scss */
+/* line 124, ../scss/components/_navigation.scss */
 .previous .arrow-button {
   background-position: top left;
   float: left;
 }
-/* line 38, ../scss/components/_navigation.scss */
+/* line 128, ../scss/components/_navigation.scss */
 .next .arrow-button {
   background-position: top right;
   float: right;
@@ -2855,4 +2967,10 @@ nav.progress-indicator ol li.active:after {
 /* line 8, ../scss/modules/_ui-components.scss */
 .components-used .group {
   margin-bottom: 1em;
+}
+/* line 11, ../scss/modules/_ui-components.scss */
+.components-used header {
+  background: #0b0c0c;
+  margin-bottom: 1em;
+  padding: 10px;
 }
