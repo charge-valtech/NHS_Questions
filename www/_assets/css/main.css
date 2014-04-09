@@ -592,7 +592,7 @@ table {
   width: device-width;
 }
 
-/* line 418, ../scss/base/mixins/_forms.scss */
+/* line 358, ../scss/base/mixins/_forms.scss */
 .option.group label input[type="text"] {
   margin-left: 0;
   width: 14em;
@@ -600,27 +600,27 @@ table {
   position: absolute;
 }
 
-/* line 426, ../scss/base/mixins/_forms.scss */
+/* line 366, ../scss/base/mixins/_forms.scss */
 ::-webkit-input-placeholder {
   padding-top: 0.15em;
   color: #6f777b;
 }
 
-/* line 431, ../scss/base/mixins/_forms.scss */
+/* line 371, ../scss/base/mixins/_forms.scss */
 ::-moz-placeholder {
   padding-top: 0.15em;
   color: #6f777b;
 }
 
 /* firefox 19+ */
-/* line 437, ../scss/base/mixins/_forms.scss */
+/* line 377, ../scss/base/mixins/_forms.scss */
 :-ms-input-placeholder {
   padding-top: 0.15em;
   color: #6f777b;
 }
 
 /* ie */
-/* line 443, ../scss/base/mixins/_forms.scss */
+/* line 383, ../scss/base/mixins/_forms.scss */
 input:-moz-placeholder {
   padding-top: 0.15em;
   color: #6f777b;
@@ -911,6 +911,16 @@ input:-moz-placeholder {
 }
 
 /* line 10, ../scss/_base.scss */
+.toggle-content {
+  display: none;
+}
+
+/* line 15, ../scss/_base.scss */
+.no-js .toggle-content {
+  display: block !important;
+}
+
+/* line 20, ../scss/_base.scss */
 html {
   font-size: 62.5%;
   /* 1 */
@@ -926,7 +936,7 @@ html {
  *    (62.5% * 160% = 100%)
  * 2. Addresses margins handled incorrectly in IE6/7
  */
-/* line 24, ../scss/_base.scss */
+/* line 34, ../scss/_base.scss */
 body {
   font-family: "nta",Arial,sans-serif;
   font-size: 160%;
@@ -935,23 +945,23 @@ body {
   /* 2 */
 }
 
-/* line 32, ../scss/_base.scss */
+/* line 42, ../scss/_base.scss */
 b,
 strong {
   font-weight: 600;
 }
 
-/* line 35, ../scss/_base.scss */
+/* line 45, ../scss/_base.scss */
 img {
   border: 0;
 }
 
-/* line 38, ../scss/_base.scss */
+/* line 48, ../scss/_base.scss */
 button {
   *overflow: visible;
 }
 
-/* line 41, ../scss/_base.scss */
+/* line 51, ../scss/_base.scss */
 abbr[title] {
   cursor: help;
 }
@@ -961,7 +971,7 @@ abbr[title] {
  * 2. Addresses `box-sizing` set to `border-box` in Safari 5 and Chrome
  *    (include `-moz` to future-proof).
  */
-/* line 49, ../scss/_base.scss */
+/* line 59, ../scss/_base.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
@@ -971,19 +981,19 @@ input[type="search"] {
   box-sizing: content-box;
 }
 
-/* line 57, ../scss/_base.scss */
+/* line 67, ../scss/_base.scss */
 input[type="search"]::-webkit-search-cancel-button {
   -webkit-appearance: searchfield-cancel-button;
   margin-right: 2px;
 }
 
-/* line 61, ../scss/_base.scss */
+/* line 71, ../scss/_base.scss */
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
 /* For image replacement */
-/* line 65, ../scss/_base.scss */
+/* line 75, ../scss/_base.scss */
 .ir {
   display: block;
   text-indent: -999em;
@@ -993,20 +1003,20 @@ input[type="search"]::-webkit-search-decoration {
   direction: ltr;
 }
 
-/* line 72, ../scss/_base.scss */
+/* line 82, ../scss/_base.scss */
 .ir br {
   display: none;
 }
 
 /* Hide for both screenreaders and browsers */
-/* line 76, ../scss/_base.scss */
+/* line 86, ../scss/_base.scss */
 .hidden {
   display: none;
   visibility: hidden;
 }
 
 /* Hide only visually, but have it available for screenreaders */
-/* line 81, ../scss/_base.scss */
+/* line 91, ../scss/_base.scss */
 .visuallyhidden {
   position: absolute;
   left: -9999em;
@@ -1016,7 +1026,7 @@ input[type="search"]::-webkit-search-decoration {
    */
 }
 
-/* line 88, ../scss/_base.scss */
+/* line 98, ../scss/_base.scss */
 .visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
   clip: auto;
   height: auto;
@@ -1027,83 +1037,83 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 /* Hide visually and from screenreaders, but maintain layout */
-/* line 97, ../scss/_base.scss */
+/* line 107, ../scss/_base.scss */
 .invisible {
   visibility: hidden;
 }
 
 /* Give a strong clear visual idea as to what is currently in focus */
-/* line 101, ../scss/_base.scss */
+/* line 111, ../scss/_base.scss */
 a {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3);
 }
 
-/* line 104, ../scss/_base.scss */
+/* line 114, ../scss/_base.scss */
 a:focus, button:focus {
   background-color: #ffbf47;
   outline: 3px solid #ffbf47;
 }
 
-/* line 108, ../scss/_base.scss */
+/* line 118, ../scss/_base.scss */
 button:active {
   outline: none;
 }
 
-/* line 112, ../scss/_base.scss */
+/* line 122, ../scss/_base.scss */
 a {
   color: #005ea5;
 }
-/* line 114, ../scss/_base.scss */
+/* line 124, ../scss/_base.scss */
 a:visited {
   color: #2e8aca;
 }
-/* line 123, ../scss/_base.scss */
+/* line 133, ../scss/_base.scss */
 a:hover {
   color: #2e358b;
 }
-/* line 126, ../scss/_base.scss */
+/* line 136, ../scss/_base.scss */
 a:active {
   color: #2e8aca;
 }
 
-/* line 131, ../scss/_base.scss */
+/* line 141, ../scss/_base.scss */
 a:active, a:hover {
   color: #2e358b;
 }
 
 /* Make skiplinks visible when they are tabbed to */
-/* line 136, ../scss/_base.scss */
+/* line 146, ../scss/_base.scss */
 .skiplink {
   position: absolute;
   left: -9999em;
 }
 
-/* line 140, ../scss/_base.scss */
+/* line 150, ../scss/_base.scss */
 .skiplink:focus {
   position: static;
 }
 
-/* line 143, ../scss/_base.scss */
+/* line 153, ../scss/_base.scss */
 #skiplink-container {
   text-align: center;
   background: #0b0c0c;
 }
 
-/* line 146, ../scss/_base.scss */
+/* line 156, ../scss/_base.scss */
 #skiplink-container div {
   text-align: left;
   margin: 0 auto;
   max-width: 1020px;
 }
 
-/* line 150, ../scss/_base.scss */
+/* line 160, ../scss/_base.scss */
 #skiplink-container .skiplink {
   display: -moz-inline-stack;
   display: inline-block;
   margin: 0.75em 0 0 30px;
 }
 
-/* line 158, ../scss/_base.scss */
+/* line 168, ../scss/_base.scss */
 input:focus,
 textarea:focus,
 select:focus,
@@ -1111,13 +1121,13 @@ select:focus,
   outline: 3px solid #ffbf47;
 }
 
-/* line 161, ../scss/_base.scss */
+/* line 171, ../scss/_base.scss */
 #global-header h1 a:focus {
   background-color: transparent;
   outline: none;
 }
 
-/* line 164, ../scss/_base.scss */
+/* line 174, ../scss/_base.scss */
 #global-header a:focus {
   color: #0b0c0c;
 }
@@ -1191,7 +1201,7 @@ select:focus,
   width: device-width;
 }
 
-/* line 418, ../scss/base/mixins/_forms.scss */
+/* line 358, ../scss/base/mixins/_forms.scss */
 .option.group label input[type="text"] {
   margin-left: 0;
   width: 14em;
@@ -1199,27 +1209,27 @@ select:focus,
   position: absolute;
 }
 
-/* line 426, ../scss/base/mixins/_forms.scss */
+/* line 366, ../scss/base/mixins/_forms.scss */
 ::-webkit-input-placeholder {
   padding-top: 0.15em;
   color: #6f777b;
 }
 
-/* line 431, ../scss/base/mixins/_forms.scss */
+/* line 371, ../scss/base/mixins/_forms.scss */
 ::-moz-placeholder {
   padding-top: 0.15em;
   color: #6f777b;
 }
 
 /* firefox 19+ */
-/* line 437, ../scss/base/mixins/_forms.scss */
+/* line 377, ../scss/base/mixins/_forms.scss */
 :-ms-input-placeholder {
   padding-top: 0.15em;
   color: #6f777b;
 }
 
 /* ie */
-/* line 443, ../scss/base/mixins/_forms.scss */
+/* line 383, ../scss/base/mixins/_forms.scss */
 input:-moz-placeholder {
   padding-top: 0.15em;
   color: #6f777b;
@@ -2132,96 +2142,23 @@ fieldset fieldset legend {
   }
 }
 
-/* line 212, ../scss/base/mixins/_forms.scss */
-input.search, input.password, input.email, input.name, input.street, input.town, input.large {
-  width: 20em;
-}
-@media (max-width: 460px) {
-  /* line 212, ../scss/base/mixins/_forms.scss */
-  input.search, input.password, input.email, input.name, input.street, input.town, input.large {
-    width: 100%;
-  }
-}
-
-/* line 218, ../scss/base/mixins/_forms.scss */
-input.full-name, input.x-large, textarea.short, textarea.tall {
-  width: 30em;
-}
-@media (max-width: 460px) {
-  /* line 218, ../scss/base/mixins/_forms.scss */
-  input.full-name, input.x-large, textarea.short, textarea.tall {
-    width: 100%;
-  }
-}
-
-/* line 224, ../scss/base/mixins/_forms.scss */
-input[type="text"] {
-  min-width: 2em;
-}
-
-/* line 227, ../scss/base/mixins/_forms.scss */
-input[type="url"] {
-  width: 99%;
-}
-
-/* line 242, ../scss/base/mixins/_forms.scss */
-input.url {
-  width: 99%;
-}
-
-/* line 254, ../scss/base/mixins/_forms.scss */
-input.small {
-  width: 5em;
-}
-
-/* line 257, ../scss/base/mixins/_forms.scss */
-input.medium {
-  width: 10em;
-}
-
-/* line 266, ../scss/base/mixins/_forms.scss */
-input.full-width {
-  width: 99%;
-}
-
-/* line 269, ../scss/base/mixins/_forms.scss */
-input.postcode {
-  width: 5em;
-}
-
-/* line 272, ../scss/base/mixins/_forms.scss */
-textarea.short {
-  height: 5em;
-}
-
-/* line 276, ../scss/base/mixins/_forms.scss */
-textarea.tall {
-  height: 10em;
-}
-
-/* line 280, ../scss/base/mixins/_forms.scss */
-textarea.full-size {
-  width: 99%;
-  height: 20em;
-}
-
-/* line 397, ../scss/base/mixins/_forms.scss */
+/* line 337, ../scss/base/mixins/_forms.scss */
 label {
   display: block;
 }
 
-/* line 400, ../scss/base/mixins/_forms.scss */
+/* line 340, ../scss/base/mixins/_forms.scss */
 input {
   margin-left: 0;
 }
 
-/* line 403, ../scss/base/mixins/_forms.scss */
+/* line 343, ../scss/base/mixins/_forms.scss */
 legend span {
   padding-bottom: 0.3em;
   display: block;
 }
 
-/* line 410, ../scss/base/mixins/_forms.scss */
+/* line 350, ../scss/base/mixins/_forms.scss */
 .inline input[type=text],
 .inline select,
 .inline textarea {
@@ -2254,14 +2191,20 @@ input[type="checkbox"] {
   .form-group {
     margin-bottom: 45px;
   }
+  /* line 20, ../scss/components/_forms.scss */
+  .inline-form-groups .form-group {
+    clear: none;
+    margin-right: 30px;
+    width: auto;
+  }
 }
 
-/* line 23, ../scss/components/_forms.scss */
+/* line 28, ../scss/components/_forms.scss */
 .form-group--compound {
   margin-bottom: 10px;
 }
 
-/* line 27, ../scss/components/_forms.scss */
+/* line 32, ../scss/components/_forms.scss */
 .form-label {
   font-family: "nta", Arial, sans-serif;
   font-size: 19px;
@@ -2272,14 +2215,14 @@ input[type="checkbox"] {
   text-transform: none;
 }
 @media (max-width: 640px) {
-  /* line 27, ../scss/components/_forms.scss */
+  /* line 32, ../scss/components/_forms.scss */
   .form-label {
     font-size: 16px;
     line-height: 1.25;
   }
 }
 
-/* line 31, ../scss/components/_forms.scss */
+/* line 36, ../scss/components/_forms.scss */
 .form-hint {
   font-family: "nta", Arial, sans-serif;
   font-size: 19px;
@@ -2294,14 +2237,14 @@ input[type="checkbox"] {
   margin-bottom: 5px;
 }
 @media (max-width: 640px) {
-  /* line 31, ../scss/components/_forms.scss */
+  /* line 36, ../scss/components/_forms.scss */
   .form-hint {
     font-size: 16px;
     line-height: 1.25;
   }
 }
 
-/* line 39, ../scss/components/_forms.scss */
+/* line 44, ../scss/components/_forms.scss */
 .form-control {
   background: white;
   border: 1px solid #bfc1c3;
@@ -2313,56 +2256,56 @@ input[type="checkbox"] {
   -webkit-appearance: none;
 }
 @media (min-width: 641px) {
-  /* line 39, ../scss/components/_forms.scss */
+  /* line 44, ../scss/components/_forms.scss */
   .form-control {
     width: 50%;
   }
 }
 
-/* line 53, ../scss/components/_forms.scss */
+/* line 58, ../scss/components/_forms.scss */
 .form-control--hours {
   width: 4em;
 }
 
-/* line 57, ../scss/components/_forms.scss */
+/* line 62, ../scss/components/_forms.scss */
 .form-control--wage {
   width: 8em;
 }
 
-/* line 61, ../scss/components/_forms.scss */
+/* line 66, ../scss/components/_forms.scss */
 .form-control--1-4 {
   width: 100%;
 }
 @media (min-width: 641px) {
-  /* line 61, ../scss/components/_forms.scss */
+  /* line 66, ../scss/components/_forms.scss */
   .form-control--1-4 {
     width: 25%;
   }
 }
 
-/* line 68, ../scss/components/_forms.scss */
+/* line 73, ../scss/components/_forms.scss */
 .form-control--1-3 {
   width: 100%;
 }
 @media (min-width: 641px) {
-  /* line 68, ../scss/components/_forms.scss */
+  /* line 73, ../scss/components/_forms.scss */
   .form-control--1-3 {
     width: 33.33%;
   }
 }
 
-/* line 75, ../scss/components/_forms.scss */
+/* line 80, ../scss/components/_forms.scss */
 .form-control--1-2 {
   width: 100%;
 }
 @media (min-width: 641px) {
-  /* line 75, ../scss/components/_forms.scss */
+  /* line 80, ../scss/components/_forms.scss */
   .form-control--1-2 {
     width: 50%;
   }
 }
 
-/* line 82, ../scss/components/_forms.scss */
+/* line 87, ../scss/components/_forms.scss */
 .block-label {
   background: #dee0e2;
   border: 1px solid #dee0e2;
@@ -2374,74 +2317,80 @@ input[type="checkbox"] {
   padding: 18px 30px 15px 45px;
   position: relative;
 }
-/* line 92, ../scss/components/_forms.scss */
+/* line 97, ../scss/components/_forms.scss */
 .block-label:hover {
   border-color: #0b0c0c;
 }
-/* line 95, ../scss/components/_forms.scss */
+/* line 100, ../scss/components/_forms.scss */
 .block-label.selected {
   background: white;
   border-color: #0b0c0c;
 }
-/* line 99, ../scss/components/_forms.scss */
+/* line 104, ../scss/components/_forms.scss */
 .inline .block-label {
   clear: none;
 }
+@media (max-width: 640px) {
+  /* line 87, ../scss/components/_forms.scss */
+  .block-label {
+    font-size: 16px;
+  }
+}
 @media (min-width: 641px) {
-  /* line 82, ../scss/components/_forms.scss */
+  /* line 87, ../scss/components/_forms.scss */
   .block-label {
     float: left;
   }
-  /* line 104, ../scss/components/_forms.scss */
+  /* line 112, ../scss/components/_forms.scss */
   .inline .block-label {
     margin-right: 15px;
   }
 }
-/* line 108, ../scss/components/_forms.scss */
+/* line 116, ../scss/components/_forms.scss */
 .block-label input {
   position: absolute;
   top: 18px;
   left: 15px;
 }
 
-/* line 114, ../scss/components/_forms.scss */
+/* line 122, ../scss/components/_forms.scss */
 select {
   border: 1px solid #dadada;
   font-family: inherit;
   font-size: inherit;
 }
 @media (max-width: 450px) {
-  /* line 114, ../scss/components/_forms.scss */
+  /* line 122, ../scss/components/_forms.scss */
   select {
     width: 100%;
   }
 }
 
-/* line 125, ../scss/components/_forms.scss */
+/* line 133, ../scss/components/_forms.scss */
 .logo-upload img {
   border: 1px solid #bfc1c3;
   width: 10em;
 }
 
-/* line 130, ../scss/components/_forms.scss */
+/* line 138, ../scss/components/_forms.scss */
 .check-to-show {
   display: none;
 }
-/* line 132, ../scss/components/_forms.scss */
+/* line 140, ../scss/components/_forms.scss */
 .lt-ie9 .check-to-show {
   display: block;
 }
 
-/* line 137, ../scss/components/_forms.scss */
+/* line 145, ../scss/components/_forms.scss */
 .check-to-show-trigger:checked + .check-to-show {
   display: block;
 }
 
-/* line 142, ../scss/components/_forms.scss */
+/* line 150, ../scss/components/_forms.scss */
 .review-vacancy fieldset {
   overflow: hidden;
 }
-/* line 145, ../scss/components/_forms.scss */
+/* line 153, ../scss/components/_forms.scss */
 .review-vacancy .amend-answers {
   float: right;
   margin-top: -19px;

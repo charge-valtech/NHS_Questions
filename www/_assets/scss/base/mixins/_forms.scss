@@ -221,66 +221,6 @@
       width: 100%;
     }
   }
-  input[type="text"] {
-      min-width: 2em;
-  }
-  input[type="url"] {
-      width: $full-width;
-  }
-  input.search {
-      @extend %large-input;
-  }
-  input.password {
-      @extend %large-input;
-  }
-  input.email {
-      @extend %large-input;
-  }
-  input.name {
-      @extend %large-input;
-  }
-  input.url {
-      width: $full-width;
-  }
-  input.full-name {
-      @extend %xlarge-input;
-  }
-  input.street {
-      @extend %large-input;
-  }
-  input.town {
-      @extend %large-input;
-  }
-  input.small {
-      width: $small;
-  }
-  input.medium {
-      width: $medium;
-  }
-  input.large {
-      @extend %large-input;
-  }
-  input.x-large {
-      @extend %xlarge-input;
-  }
-  input.full-width {
-      width: $full-width;
-  }
-  input.postcode {
-      width: $small;
-  }
-  textarea.short {
-      @extend %xlarge-input;
-      height: $small;
-  }
-  textarea.tall {
-      @extend %xlarge-input;
-      height: $medium;
-  }
-  textarea.full-size {
-      width: $full-width;
-      height: $large;
-  }
   // LABEL POSITIONING
   // Left or right aligned labels
   @if $label-alignment == left or $label-alignment == right {

@@ -90,7 +90,7 @@ headerTitle: Advertising an Apprenticeship
   </div>
 </fieldset>
 
-<fieldset>
+<fieldset class="inline-form-groups">
   <legend class="heading-36">Wage</legend>
   <div class="form-group">
     <label for="wage-amount" class="form-label">Amount</label>
@@ -107,29 +107,29 @@ headerTitle: Advertising an Apprenticeship
     </select>
   </div>
 </fieldset>
+
 <fieldset>
   <legend class="heading-36">Key dates</legend>
   <div class="form-group">
-    <label for="">Closing date for applications</label>
-    <input type="date">
+    <label class="form-label" for="closing-date">Closing date for applications</label>
+    <input class="form-control form-control--1-3" type="date" id="closing-date">
   </div>
-    <p class="group">
-        <label for="">When do you plan to start interviewing? (optional)</label>
-        <input type="date">
-    </p>
-    <p class="group">
-        <label>When do you want the apprentice to start work?</label>
-        <label><input checked="checked" type="radio" name="h-dates">As soon as possible</label>
-        <label><input class="check-to-show-trigger" type="radio" name="h-dates">Enter date
-          <input type="date" class="check-to-show">
-        </label>
-
-    </p>
-
+  <div class="form-group">
+    <label class="form-label" for="interview-date">When do you plan to start interviewing? (optional)</label>
+    <input class="form-control form-control--1-3" id="interview-date" type="date">
+  </div>
+  <div class="inline">
+    <p>When do you want the apprentice to start work?</p>
+    <label class="block-label"><input type="radio" name="h-dates">As soon as possible</label>
+    <label data-target="start-date-panel" class="block-label"><input class="check-to-show-trigger" type="radio" name="h-dates">Enter date</label>
+    <div id="start-date-panel" class="panel-indent toggle-content">
+      <label class="form-label" for="start-date">Start date</label>
+      <input id="start-date" type="date" class="form-control form-control--1-3">
+    </div>
+  </div>
 </fieldset>
 
-
-<p class="action group">
-    <a class="button-link" href="ReviewDetails.html">Back</a>
-    <a class="button" href="TrainingDetails.html">Continue</a>
-</p>
+<div class="form-group">
+  <a class="button" href="TrainingDetails.html">Continue</a>
+  <a class="button-link" href="ReviewDetails.html">Back</a>
+</div>

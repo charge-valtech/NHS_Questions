@@ -17,6 +17,11 @@ input[type="checkbox"] { /*Overriding normalize presets*/
   width: 100%;
   @include media(tablet){
     margin-bottom: 45px;
+    .inline-form-groups & {
+      clear: none;
+      margin-right: 30px;
+      width: auto;
+    }
   }
 }
 
@@ -98,6 +103,9 @@ input[type="checkbox"] { /*Overriding normalize presets*/
   }
   .inline & {
     clear: none;
+  }
+  @media (max-width: 640px) {
+    font-size: 16px;
   }
   @include media(tablet){
     float: left;

@@ -7,6 +7,16 @@
   @include box-sizing(border-box);
 }
 
+.toggle-content {
+  display: none;
+}
+
+.no-js {
+  .toggle-content {
+    display: block !important;
+  }
+}
+
 html {
   font-size: 62.5%;
   /* 1 */
