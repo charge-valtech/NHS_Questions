@@ -1,95 +1,79 @@
 ---
 headerTitle: Advertising an Apprenticeship
 ---
-    <main role="main" id="main">
-        <section>
-            <div id="content-wrapper">
-                <h1 class="heading-48">Review organisation details</h1>
-                <div class="validation-summary hidden">
-                    <h3>There was a problem submitting the form</h3>
-                    <p>Please try the following:</p>
-                    <ol>
-                        <li><a href="#error1">Enter your first name</a></li>
-                    </ol>
-                </div>
-                <fieldset>
-                  <legend class="heading-36">Organisation details</legend>
-                  <p class="group">
-                    <label for="businessOrganDetails">Name of organisation</label><input type="text" width="100" id="businessOrganDetails" />
-                  </p>
-                  <label>Organisation type or sector</label>
-                  <select>
-                      <option value="Please select ">Please select </option>
-                      <option value="Administration &amp; Human Resources">Administration &amp; Human Resources</option>
-                      <option value="Agriculture &amp; Land Based Services">Agriculture &amp; Land Based Services</option>
-                      <option value="Arts, Creative &amp; Cultural Industries">Arts, Creative &amp; Cultural Industries</option>
-                      <option value="Automotive Industry &amp; Passenger Transport">Automotive Industry &amp; Passenger Transport</option>
-                      <option value="Broadcast, Film &amp; Multimedia">Broadcast, Film &amp; Multimedia</option>
-                      <option value="Chemical, Oil &amp; Nuclear Industry">Chemical, Oil &amp; Nuclear Industry</option>
-                      <option value="Construction">Construction</option>
-                      <option value="Customer Service &amp; Retail">Customer Service &amp; Retail</option>
-                      <option value="Energy/Utilities Industry">Energy/Utilities Industry</option>
-                      <option value="Engineering, Electricians &amp; Building Services">Engineering, Electricians &amp; Building Services</option>
-                      <option value="Financial Services">Financial Services</option>
-                      <option value="Food and Drink">Food and Drink</option>
-                      <option value="Hair &amp; Beauty">Hair &amp; Beauty</option>
-                      <option value="Hospitality &amp; Travel">Hospitality &amp; Travel</option>
-                      <option value="Information Technology &amp; Communications">Information Technology &amp; Communications</option>
-                      <option value="Logistics">Logistics</option>
-                      <option value="Manufacturing &amp; Processing">Manufacturing &amp; Processing</option>
-                      <option value="Marine Industry">Marine Industry</option>
-                      <option value="Property">Property</option>
-                      <option value="Public Services">Public Services</option>
-                      <option value="Sports &amp; Fitness">Sports &amp; Fitness</option>
-                  </select>
-                  <p>
-                    <label>Website address</label><input type="text" width="100" id="businessOrganDetails" placeholder="http://" />
-                  </p>
-                  <p>
-                      <label>How many employees does your organisation have in the UK?</label>
-                      <select>
-                          <option value="Please select ">Please select </option>
-                          <option value="&lt;9">&lt;9</option>
-                          <option value="9-49">9-49</option>
-                          <option value="50-249">50-249</option>
-                          <option value="250-999">250-999</option>
-                          <option value="1000-4999">1000-4999</option>
-                          <option value="5000+">5000+</option>
-                          <option value="Don't Know">Don't Know</option>
-                      </select>
-                  </p>
-                </fieldset>
-                <fieldset>
-                  <legend class="heading-36">Include a logo</legend>
-                  <div>
-                    <p>
-                        <label>Do you want to include a logo in the advert?</label>
-                        <ul class="option group inline">
-                            <li>
-                                <label><input type="radio" checked="checked" name="show-logo">Yes</label>
-                            </li>
-                            <li>
-                                <label><input type="radio" name="show-logo">No</label>
-                            </li>
-                        </ul>
-                    </p>
-                </div>
-                <br />
-                <br />
-                <div>
-                    <p>
-                        <img src="{{assets}}/img/logos/AdultLearningAcad.png" alt="GOV.UK">
-                    </p>
-                    <p>
-                        <a class="button secondary" href="#">Choose file</a>
-                    </p>
-                 </div>
-                </fieldset>
-                <p class="action group">
-                    <a class="button secondary" href="../PostVacancyAuthenticateUser.html">Back</a>
-                    <a class="button" href="vacancy.html">Continue</a>
-                </p>
-            </div>
-        </section>
-    </main>
-
+<h1 class="heading-48">Review organisation details</h1>
+<fieldset>
+  <legend class="heading-36">Organisation details</legend>
+  <div class="form-group">
+    <label class="form-label" for="businessOrganDetails">Name of organisation</label>
+    <input class="form-control" type="text" id="businessOrganDetails" />
+  </div>
+  <div class="form-group">
+    <label class="form-label">Organisation type or sector</label>
+    <select>
+        <option value="Please select ">Please select </option>
+        <option value="Administration &amp; Human Resources">Administration &amp; Human Resources</option>
+        <option value="Agriculture &amp; Land Based Services">Agriculture &amp; Land Based Services</option>
+        <option value="Arts, Creative &amp; Cultural Industries">Arts, Creative &amp; Cultural Industries</option>
+        <option value="Automotive Industry &amp; Passenger Transport">Automotive Industry &amp; Passenger Transport</option>
+        <option value="Broadcast, Film &amp; Multimedia">Broadcast, Film &amp; Multimedia</option>
+        <option value="Chemical, Oil &amp; Nuclear Industry">Chemical, Oil &amp; Nuclear Industry</option>
+        <option value="Construction">Construction</option>
+        <option value="Customer Service &amp; Retail">Customer Service &amp; Retail</option>
+        <option value="Energy/Utilities Industry">Energy/Utilities Industry</option>
+        <option value="Engineering, Electricians &amp; Building Services">Engineering, Electricians &amp; Building Services</option>
+        <option value="Financial Services">Financial Services</option>
+        <option value="Food and Drink">Food and Drink</option>
+        <option value="Hair &amp; Beauty">Hair &amp; Beauty</option>
+        <option value="Hospitality &amp; Travel">Hospitality &amp; Travel</option>
+        <option value="Information Technology &amp; Communications">Information Technology &amp; Communications</option>
+        <option value="Logistics">Logistics</option>
+        <option value="Manufacturing &amp; Processing">Manufacturing &amp; Processing</option>
+        <option value="Marine Industry">Marine Industry</option>
+        <option value="Property">Property</option>
+        <option value="Public Services">Public Services</option>
+        <option value="Sports &amp; Fitness">Sports &amp; Fitness</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label class="form-label" for="busWebAddress">Website address</label>
+    <input type="text" width="100" id="busWebAddress" class="form-control" />
+  </div>
+  <div class="form-group">
+    <label class="form-label">How many employees does your organisation have in the UK?</label>
+    <select>
+        <option value="Please select ">Please select </option>
+        <option value="&lt;9">&lt;9</option>
+        <option value="9-49">9-49</option>
+        <option value="50-249">50-249</option>
+        <option value="250-999">250-999</option>
+        <option value="1000-4999">1000-4999</option>
+        <option value="5000+">5000+</option>
+        <option value="Don't Know">Don't Know</option>
+    </select>
+  </div>
+</fieldset>
+<fieldset>
+  <legend class="heading-36">Include a logo</legend>
+  <div class="form-group form-group--compound inline">
+    <p class="form-label">Do you want to include a logo in the advert?</p>
+    <label for="radio-inline-1" class="block-label">
+      <input id="radio-inline-1" type="radio" name="radio-inline-group" value="Yes">
+      Yes
+    </label>
+    <label for="radio-inline-2" class="block-label">
+      <input id="radio-inline-2" type="radio" name="radio-inline-group" value="No">
+      No
+    </label>
+  </div>
+    <div class="form-group form-group--compound">
+      <a class="button-link" href="#">Choose file</a>
+    </div>
+  <div class="form-group">
+    <img src="{{assets}}/img/logos/AdultLearningAcad.png" alt="GOV.UK">
+  </div>
+</fieldset>
+<div class="group">
+  <a class="button" href="vacancy.html">Continue</a>
+  <a class="button-link" href="../PostVacancyAuthenticateUser.html">Back</a>
+</div>
