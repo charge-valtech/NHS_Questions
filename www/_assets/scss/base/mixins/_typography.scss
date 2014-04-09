@@ -44,7 +44,7 @@ $is-print: false !default;
     font-size: 18pt;
   }
   line-height: $line-height;
-  font-weight: 400;
+  font-weight: 700;
   text-transform: none;
   @media (max-width: 640px) {
     font-size: 32px;
@@ -64,7 +64,7 @@ $is-print: false !default;
     font-size: 18pt;
   }
   line-height: $line-height;
-  font-weight: 400;
+  font-weight: 700;
   text-transform: none;
   @media (max-width: 640px) {
     font-size: 24px;
@@ -104,7 +104,7 @@ $is-print: false !default;
     font-size: 16pt;
   }
   line-height: $line-height;
-  font-weight: 400;
+  font-weight: 700;
   text-transform: none;
   @media (max-width: 640px) {
     font-size: 20px;
@@ -125,6 +125,7 @@ $is-print: false !default;
   }
   line-height: $line-height;
   font-weight: 400;
+  margin-bottom: 10px;
   text-transform: none;
   @media (max-width: 640px) {
     font-size: 16px;
@@ -226,25 +227,17 @@ $is-print: false !default;
 
 @mixin heading-48($tabular-numbers: false) {
   @include core-48($tabular-numbers: $tabular-numbers);
-
-  padding-top: 10px;
-  padding-bottom: 10px;
-
   @include media(tablet){
-    padding-top: 7px;
-    padding-bottom: 13px;
+    margin-top: 30px;
+    margin-bottom: 60px;
   }
 }
 
 @mixin heading-36($tabular-numbers: false) {
   @include core-36($tabular-numbers: $tabular-numbers);
-
-  padding-top: 8px;
-  padding-bottom: 7px;
-
   @include media(tablet){
-    padding-top: 6px;
-    padding-bottom: 9px;
+    margin-top: 45px;
+    margin-bottom: 20px;
   }
 }
 
@@ -275,12 +268,10 @@ $is-print: false !default;
 @mixin copy-19($tabular-numbers: false) {
   @include core-19($tabular-numbers: $tabular-numbers);
 
-  padding-top: 2px;
-  padding-bottom: 8px;
+
 
   @include media(tablet){
-    padding-top: 0;
-    padding-bottom: 5px;
+
   }
 }
 

@@ -24,24 +24,24 @@
   input[type="week"],
   select[size],
   textarea {
-      background-color: #f9f9f9;
-      border: 1px solid $grey-2;
-      font-family: inherit;
-      @include ie-lte(8) {
-          border: 1px inset $border-colour;
-          // Otherwise IE gets a black border
-      }
-      display: block;
-      font-size: 1em;
-      padding: 0.2em 0 0.1em 0.4em;
-      font-size: 19px;
-      line-height: 1.3em;
-      &.inline {
-        display: inline-block;
-      }
-      &.check-to-show {
-        display: none;
-      }
+    background: $white;
+    border: 1px solid $grey-2;
+    font-family: inherit;
+    @include ie-lte(8) {
+        border: 1px inset $border-colour;
+        // Otherwise IE gets a black border
+    }
+    display: block;
+    font-size: 1em;
+    padding: 0.2em 0 0.1em 0.4em;
+    font-size: 19px;
+    line-height: 1.3em;
+    &.inline {
+      display: inline-block;
+    }
+    &.check-to-show {
+      display: none;
+    }
   }
   textarea {
       min-height: 5em;
@@ -51,14 +51,11 @@
       padding: 0 1em 0 1em;
   }
   // Labels
-  label {
-      color: $text-colour;
-      @include core-19;
-      vertical-align: top;
-      padding: 0.25em 0;
-      // vertically align labels with middle of text fields
-
-  }
+  // label {
+  //     color: $text-colour;
+  //     @include copy-19;
+  //     vertical-align: top;
+  // }
   // Checkboxes and radio buttons
   .option.group {
       padding-bottom: 0.5em;
@@ -142,7 +139,7 @@
   }
   // Legends and fieldsets
   legend {
-      @include core-24;
+      @include heading-36;
       margin-bottom: 0.5em;
       color: $legend-colour;
   }
