@@ -50,6 +50,14 @@ input[type="checkbox"] { /*Overriding normalize presets*/
   }
 }
 
+.form-control--hours {
+  width: 4em;
+}
+
+.form-control--wage {
+  width: 8em;
+}
+
 .form-control--1-4 {
   width: 100%;
   @include media(tablet){

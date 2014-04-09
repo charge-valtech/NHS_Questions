@@ -592,7 +592,7 @@ table {
   width: device-width;
 }
 
-/* line 419, ../scss/base/mixins/_forms.scss */
+/* line 418, ../scss/base/mixins/_forms.scss */
 .option.group label input[type="text"] {
   margin-left: 0;
   width: 14em;
@@ -600,27 +600,27 @@ table {
   position: absolute;
 }
 
-/* line 427, ../scss/base/mixins/_forms.scss */
+/* line 426, ../scss/base/mixins/_forms.scss */
 ::-webkit-input-placeholder {
   padding-top: 0.15em;
   color: #6f777b;
 }
 
-/* line 432, ../scss/base/mixins/_forms.scss */
+/* line 431, ../scss/base/mixins/_forms.scss */
 ::-moz-placeholder {
   padding-top: 0.15em;
   color: #6f777b;
 }
 
 /* firefox 19+ */
-/* line 438, ../scss/base/mixins/_forms.scss */
+/* line 437, ../scss/base/mixins/_forms.scss */
 :-ms-input-placeholder {
   padding-top: 0.15em;
   color: #6f777b;
 }
 
 /* ie */
-/* line 444, ../scss/base/mixins/_forms.scss */
+/* line 443, ../scss/base/mixins/_forms.scss */
 input:-moz-placeholder {
   padding-top: 0.15em;
   color: #6f777b;
@@ -1191,7 +1191,7 @@ select:focus,
   width: device-width;
 }
 
-/* line 419, ../scss/base/mixins/_forms.scss */
+/* line 418, ../scss/base/mixins/_forms.scss */
 .option.group label input[type="text"] {
   margin-left: 0;
   width: 14em;
@@ -1199,27 +1199,27 @@ select:focus,
   position: absolute;
 }
 
-/* line 427, ../scss/base/mixins/_forms.scss */
+/* line 426, ../scss/base/mixins/_forms.scss */
 ::-webkit-input-placeholder {
   padding-top: 0.15em;
   color: #6f777b;
 }
 
-/* line 432, ../scss/base/mixins/_forms.scss */
+/* line 431, ../scss/base/mixins/_forms.scss */
 ::-moz-placeholder {
   padding-top: 0.15em;
   color: #6f777b;
 }
 
 /* firefox 19+ */
-/* line 438, ../scss/base/mixins/_forms.scss */
+/* line 437, ../scss/base/mixins/_forms.scss */
 :-ms-input-placeholder {
   padding-top: 0.15em;
   color: #6f777b;
 }
 
 /* ie */
-/* line 444, ../scss/base/mixins/_forms.scss */
+/* line 443, ../scss/base/mixins/_forms.scss */
 input:-moz-placeholder {
   padding-top: 0.15em;
   color: #6f777b;
@@ -1791,6 +1791,10 @@ input:-moz-placeholder {
   padding: 10px 10px 5px 10px;
   vertical-align: top;
 }
+/* line 39, ../scss/components/_buttons.scss */
+.inline-button .button-link {
+  margin-bottom: 0;
+}
 
 /* line 26, ../scss/base/mixins/_forms.scss */
 input[type="text"],
@@ -1812,13 +1816,12 @@ textarea {
   background: white;
   border: 1px solid #bfc1c3;
   font-family: inherit;
-  display: block;
   font-size: 1em;
   padding: 0.2em 0 0.1em 0.4em;
   font-size: 19px;
   line-height: 1.3em;
 }
-/* line 39, ../scss/base/mixins/_forms.scss */
+/* line 38, ../scss/base/mixins/_forms.scss */
 input[type="text"].inline,
 input[type="email"].inline,
 input[type="password"].inline,
@@ -1837,7 +1840,7 @@ select[size].inline,
 textarea.inline {
   display: inline-block;
 }
-/* line 42, ../scss/base/mixins/_forms.scss */
+/* line 41, ../scss/base/mixins/_forms.scss */
 input[type="text"].check-to-show,
 input[type="email"].check-to-show,
 input[type="password"].check-to-show,
@@ -1857,34 +1860,34 @@ textarea.check-to-show {
   display: none;
 }
 
-/* line 46, ../scss/base/mixins/_forms.scss */
+/* line 45, ../scss/base/mixins/_forms.scss */
 textarea {
   min-height: 5em;
   height: auto;
 }
 
-/* line 50, ../scss/base/mixins/_forms.scss */
+/* line 49, ../scss/base/mixins/_forms.scss */
 details {
   padding: 0 1em 0 1em;
 }
 
-/* line 60, ../scss/base/mixins/_forms.scss */
+/* line 59, ../scss/base/mixins/_forms.scss */
 .option.group {
   padding-bottom: 0.5em;
   padding-left: 1em;
   margin-left: -1em;
 }
-/* line 64, ../scss/base/mixins/_forms.scss */
+/* line 63, ../scss/base/mixins/_forms.scss */
 .option.group.inline {
   float: left;
   display: block;
   width: 100%;
 }
-/* line 68, ../scss/base/mixins/_forms.scss */
+/* line 67, ../scss/base/mixins/_forms.scss */
 .option.group.inline li {
   display: inline;
 }
-/* line 70, ../scss/base/mixins/_forms.scss */
+/* line 69, ../scss/base/mixins/_forms.scss */
 .option.group.inline li label {
   background: #f8f8f8;
   padding: 6px 10px;
@@ -1893,31 +1896,31 @@ details {
   cursor: pointer;
   border: 1px solid #dee0e2;
 }
-/* line 80, ../scss/base/mixins/_forms.scss */
+/* line 79, ../scss/base/mixins/_forms.scss */
 .option.group label {
   width: auto;
   float: none;
   text-align: left;
 }
-/* line 87, ../scss/base/mixins/_forms.scss */
+/* line 86, ../scss/base/mixins/_forms.scss */
 .option.group li {
   list-style-type: none;
   list-style-image: none;
   margin: 0;
   padding: 0.25em 0;
 }
-/* line 93, ../scss/base/mixins/_forms.scss */
+/* line 92, ../scss/base/mixins/_forms.scss */
 .option.group li label {
   display: inline;
 }
 
-/* line 99, ../scss/base/mixins/_forms.scss */
+/* line 98, ../scss/base/mixins/_forms.scss */
 input[type="checkbox"],
 input[type="radio"] {
   margin-right: 0.3em;
 }
 
-/* line 105, ../scss/base/mixins/_forms.scss */
+/* line 104, ../scss/base/mixins/_forms.scss */
 .hint {
   clear: left;
   display: block;
@@ -1928,52 +1931,52 @@ input[type="radio"] {
   text-transform: none;
 }
 @media (max-width: 640px) {
-  /* line 105, ../scss/base/mixins/_forms.scss */
+  /* line 104, ../scss/base/mixins/_forms.scss */
   .hint {
     font-size: 14px;
     line-height: 1.14286;
   }
 }
-/* line 110, ../scss/base/mixins/_forms.scss */
+/* line 109, ../scss/base/mixins/_forms.scss */
 .hint:last-child {
   padding-top: 0.25em;
 }
-/* line 113, ../scss/base/mixins/_forms.scss */
+/* line 112, ../scss/base/mixins/_forms.scss */
 .hint:first-child {
   padding-bottom: 0.25em;
 }
 
-/* line 117, ../scss/base/mixins/_forms.scss */
+/* line 116, ../scss/base/mixins/_forms.scss */
 .inline.hint {
   display: inline-block;
 }
 
-/* line 121, ../scss/base/mixins/_forms.scss */
+/* line 120, ../scss/base/mixins/_forms.scss */
 label abbr {
   border-bottom: none;
   color: #0b0c0c;
 }
 
-/* line 127, ../scss/base/mixins/_forms.scss */
+/* line 126, ../scss/base/mixins/_forms.scss */
 .action.group .button,
 .action.group .btn {
   margin-right: 0.5em;
 }
 
-/* line 130, ../scss/base/mixins/_forms.scss */
+/* line 129, ../scss/base/mixins/_forms.scss */
 .inline.option label {
   float: left;
   margin-right: 1em;
 }
 
-/* line 135, ../scss/base/mixins/_forms.scss */
+/* line 134, ../scss/base/mixins/_forms.scss */
 .inline .group {
   float: left;
   margin-top: 0;
   width: auto;
 }
 
-/* line 141, ../scss/base/mixins/_forms.scss */
+/* line 140, ../scss/base/mixins/_forms.scss */
 legend {
   font-family: "nta", Arial, sans-serif;
   font-size: 36px;
@@ -1986,30 +1989,30 @@ legend {
   color: #0b0c0c;
 }
 @media (max-width: 640px) {
-  /* line 141, ../scss/base/mixins/_forms.scss */
+  /* line 140, ../scss/base/mixins/_forms.scss */
   legend {
     font-size: 24px;
     line-height: 1.04167;
   }
 }
 @media (min-width: 641px) {
-  /* line 141, ../scss/base/mixins/_forms.scss */
+  /* line 140, ../scss/base/mixins/_forms.scss */
   legend {
     margin-top: 45px;
     margin-bottom: 20px;
   }
 }
 
-/* line 146, ../scss/base/mixins/_forms.scss */
+/* line 145, ../scss/base/mixins/_forms.scss */
 fieldset {
   margin: 0;
   margin-top: 2em;
 }
-/* line 150, ../scss/base/mixins/_forms.scss */
+/* line 149, ../scss/base/mixins/_forms.scss */
 fieldset fieldset {
   margin-top: 0;
 }
-/* line 152, ../scss/base/mixins/_forms.scss */
+/* line 151, ../scss/base/mixins/_forms.scss */
 fieldset fieldset legend {
   font-family: "nta", Arial, sans-serif;
   font-size: 19px;
@@ -2021,14 +2024,14 @@ fieldset fieldset legend {
   color: #0b0c0c;
 }
 @media (max-width: 640px) {
-  /* line 152, ../scss/base/mixins/_forms.scss */
+  /* line 151, ../scss/base/mixins/_forms.scss */
   fieldset fieldset legend {
     font-size: 16px;
     line-height: 1.25;
   }
 }
 
-/* line 165, ../scss/base/mixins/_forms.scss */
+/* line 164, ../scss/base/mixins/_forms.scss */
 .validation-summary {
   border: 2px solid #df3034;
   box-sizing: border-box;
@@ -2061,33 +2064,33 @@ fieldset fieldset legend {
 .validation-summary .inner textarea {
   background-color: #f8f8f8;
 }
-/* line 168, ../scss/base/mixins/_forms.scss */
+/* line 167, ../scss/base/mixins/_forms.scss */
 .validation-summary h3 {
   font-weight: normal;
 }
-/* line 171, ../scss/base/mixins/_forms.scss */
+/* line 170, ../scss/base/mixins/_forms.scss */
 .validation-summary a {
   color: #df3034;
   text-decoration: none;
 }
-/* line 174, ../scss/base/mixins/_forms.scss */
+/* line 173, ../scss/base/mixins/_forms.scss */
 .validation-summary a:hover {
   text-decoration: underline;
 }
-/* line 178, ../scss/base/mixins/_forms.scss */
+/* line 177, ../scss/base/mixins/_forms.scss */
 .validation-summary ul, .validation-summary ol {
   color: #df3034;
 }
-/* line 181, ../scss/base/mixins/_forms.scss */
+/* line 180, ../scss/base/mixins/_forms.scss */
 .validation-summary ul {
   padding-left: 2.2em;
 }
-/* line 183, ../scss/base/mixins/_forms.scss */
+/* line 182, ../scss/base/mixins/_forms.scss */
 .validation-summary ul li {
   list-style-type: none;
   list-style-image: none;
 }
-/* line 188, ../scss/base/mixins/_forms.scss */
+/* line 187, ../scss/base/mixins/_forms.scss */
 .validation-summary li {
   font-family: "nta", Arial, sans-serif;
   font-size: 16px;
@@ -2096,21 +2099,21 @@ fieldset fieldset legend {
   text-transform: none;
 }
 @media (max-width: 640px) {
-  /* line 188, ../scss/base/mixins/_forms.scss */
+  /* line 187, ../scss/base/mixins/_forms.scss */
   .validation-summary li {
     font-size: 14px;
     line-height: 1.14286;
   }
 }
 
-/* line 193, ../scss/base/mixins/_forms.scss */
+/* line 192, ../scss/base/mixins/_forms.scss */
 .validation {
   background-color: #fef7f7;
   border-left: 2px solid #df3034;
   margin: 0 -1em 0.5em -1em;
   padding: 0.75em 1em 1em 1em;
 }
-/* line 198, ../scss/base/mixins/_forms.scss */
+/* line 197, ../scss/base/mixins/_forms.scss */
 .validation .validation-message {
   color: #df3034;
   font-family: "nta", Arial, sans-serif;
@@ -2122,103 +2125,103 @@ fieldset fieldset legend {
   padding-bottom: 0.5em;
 }
 @media (max-width: 640px) {
-  /* line 198, ../scss/base/mixins/_forms.scss */
+  /* line 197, ../scss/base/mixins/_forms.scss */
   .validation .validation-message {
     font-size: 14px;
     line-height: 1.14286;
   }
 }
 
-/* line 213, ../scss/base/mixins/_forms.scss */
+/* line 212, ../scss/base/mixins/_forms.scss */
 input.search, input.password, input.email, input.name, input.street, input.town, input.large {
   width: 20em;
 }
 @media (max-width: 460px) {
-  /* line 213, ../scss/base/mixins/_forms.scss */
+  /* line 212, ../scss/base/mixins/_forms.scss */
   input.search, input.password, input.email, input.name, input.street, input.town, input.large {
     width: 100%;
   }
 }
 
-/* line 219, ../scss/base/mixins/_forms.scss */
+/* line 218, ../scss/base/mixins/_forms.scss */
 input.full-name, input.x-large, textarea.short, textarea.tall {
   width: 30em;
 }
 @media (max-width: 460px) {
-  /* line 219, ../scss/base/mixins/_forms.scss */
+  /* line 218, ../scss/base/mixins/_forms.scss */
   input.full-name, input.x-large, textarea.short, textarea.tall {
     width: 100%;
   }
 }
 
-/* line 225, ../scss/base/mixins/_forms.scss */
+/* line 224, ../scss/base/mixins/_forms.scss */
 input[type="text"] {
   min-width: 2em;
 }
 
-/* line 228, ../scss/base/mixins/_forms.scss */
+/* line 227, ../scss/base/mixins/_forms.scss */
 input[type="url"] {
   width: 99%;
 }
 
-/* line 243, ../scss/base/mixins/_forms.scss */
+/* line 242, ../scss/base/mixins/_forms.scss */
 input.url {
   width: 99%;
 }
 
-/* line 255, ../scss/base/mixins/_forms.scss */
+/* line 254, ../scss/base/mixins/_forms.scss */
 input.small {
   width: 5em;
 }
 
-/* line 258, ../scss/base/mixins/_forms.scss */
+/* line 257, ../scss/base/mixins/_forms.scss */
 input.medium {
   width: 10em;
 }
 
-/* line 267, ../scss/base/mixins/_forms.scss */
+/* line 266, ../scss/base/mixins/_forms.scss */
 input.full-width {
   width: 99%;
 }
 
-/* line 270, ../scss/base/mixins/_forms.scss */
+/* line 269, ../scss/base/mixins/_forms.scss */
 input.postcode {
   width: 5em;
 }
 
-/* line 273, ../scss/base/mixins/_forms.scss */
+/* line 272, ../scss/base/mixins/_forms.scss */
 textarea.short {
   height: 5em;
 }
 
-/* line 277, ../scss/base/mixins/_forms.scss */
+/* line 276, ../scss/base/mixins/_forms.scss */
 textarea.tall {
   height: 10em;
 }
 
-/* line 281, ../scss/base/mixins/_forms.scss */
+/* line 280, ../scss/base/mixins/_forms.scss */
 textarea.full-size {
   width: 99%;
   height: 20em;
 }
 
-/* line 398, ../scss/base/mixins/_forms.scss */
+/* line 397, ../scss/base/mixins/_forms.scss */
 label {
   display: block;
 }
 
-/* line 401, ../scss/base/mixins/_forms.scss */
+/* line 400, ../scss/base/mixins/_forms.scss */
 input {
   margin-left: 0;
 }
 
-/* line 404, ../scss/base/mixins/_forms.scss */
+/* line 403, ../scss/base/mixins/_forms.scss */
 legend span {
   padding-bottom: 0.3em;
   display: block;
 }
 
-/* line 411, ../scss/base/mixins/_forms.scss */
+/* line 410, ../scss/base/mixins/_forms.scss */
 .inline input[type=text],
 .inline select,
 .inline textarea {
@@ -2317,39 +2320,49 @@ input[type="checkbox"] {
 }
 
 /* line 53, ../scss/components/_forms.scss */
+.form-control--hours {
+  width: 4em;
+}
+
+/* line 57, ../scss/components/_forms.scss */
+.form-control--wage {
+  width: 8em;
+}
+
+/* line 61, ../scss/components/_forms.scss */
 .form-control--1-4 {
   width: 100%;
 }
 @media (min-width: 641px) {
-  /* line 53, ../scss/components/_forms.scss */
+  /* line 61, ../scss/components/_forms.scss */
   .form-control--1-4 {
     width: 25%;
   }
 }
 
-/* line 60, ../scss/components/_forms.scss */
+/* line 68, ../scss/components/_forms.scss */
 .form-control--1-3 {
   width: 100%;
 }
 @media (min-width: 641px) {
-  /* line 60, ../scss/components/_forms.scss */
+  /* line 68, ../scss/components/_forms.scss */
   .form-control--1-3 {
     width: 33.33%;
   }
 }
 
-/* line 67, ../scss/components/_forms.scss */
+/* line 75, ../scss/components/_forms.scss */
 .form-control--1-2 {
   width: 100%;
 }
 @media (min-width: 641px) {
-  /* line 67, ../scss/components/_forms.scss */
+  /* line 75, ../scss/components/_forms.scss */
   .form-control--1-2 {
     width: 50%;
   }
 }
 
-/* line 74, ../scss/components/_forms.scss */
+/* line 82, ../scss/components/_forms.scss */
 .block-label {
   background: #dee0e2;
   border: 1px solid #dee0e2;
@@ -2361,74 +2374,74 @@ input[type="checkbox"] {
   padding: 18px 30px 15px 45px;
   position: relative;
 }
-/* line 84, ../scss/components/_forms.scss */
+/* line 92, ../scss/components/_forms.scss */
 .block-label:hover {
   border-color: #0b0c0c;
 }
-/* line 87, ../scss/components/_forms.scss */
+/* line 95, ../scss/components/_forms.scss */
 .block-label.selected {
   background: white;
   border-color: #0b0c0c;
 }
-/* line 91, ../scss/components/_forms.scss */
+/* line 99, ../scss/components/_forms.scss */
 .inline .block-label {
   clear: none;
 }
 @media (min-width: 641px) {
-  /* line 74, ../scss/components/_forms.scss */
+  /* line 82, ../scss/components/_forms.scss */
   .block-label {
     float: left;
   }
-  /* line 96, ../scss/components/_forms.scss */
+  /* line 104, ../scss/components/_forms.scss */
   .inline .block-label {
     margin-right: 15px;
   }
 }
-/* line 100, ../scss/components/_forms.scss */
+/* line 108, ../scss/components/_forms.scss */
 .block-label input {
   position: absolute;
   top: 18px;
   left: 15px;
 }
 
-/* line 106, ../scss/components/_forms.scss */
+/* line 114, ../scss/components/_forms.scss */
 select {
   border: 1px solid #dadada;
   font-family: inherit;
   font-size: inherit;
 }
 @media (max-width: 450px) {
-  /* line 106, ../scss/components/_forms.scss */
+  /* line 114, ../scss/components/_forms.scss */
   select {
     width: 100%;
   }
 }
 
-/* line 117, ../scss/components/_forms.scss */
+/* line 125, ../scss/components/_forms.scss */
 .logo-upload img {
   border: 1px solid #bfc1c3;
   width: 10em;
 }
 
-/* line 122, ../scss/components/_forms.scss */
+/* line 130, ../scss/components/_forms.scss */
 .check-to-show {
   display: none;
 }
-/* line 124, ../scss/components/_forms.scss */
+/* line 132, ../scss/components/_forms.scss */
 .lt-ie9 .check-to-show {
   display: block;
 }
 
-/* line 129, ../scss/components/_forms.scss */
+/* line 137, ../scss/components/_forms.scss */
 .check-to-show-trigger:checked + .check-to-show {
   display: block;
 }
 
-/* line 134, ../scss/components/_forms.scss */
+/* line 142, ../scss/components/_forms.scss */
 .review-vacancy fieldset {
   overflow: hidden;
 }
-/* line 137, ../scss/components/_forms.scss */
+/* line 145, ../scss/components/_forms.scss */
 .review-vacancy .amend-answers {
   float: right;
   margin-top: -19px;
@@ -2562,6 +2575,23 @@ p, pre {
 /* line 25, ../scss/components/_typography.scss */
 .text {
   max-width: 30em;
+}
+
+/* line 29, ../scss/components/_typography.scss */
+.panel-indent {
+  border-left: 5px solid #dee0e2;
+  clear: both;
+  margin: 30px 0;
+}
+@media (min-width: 641px) {
+  /* line 29, ../scss/components/_typography.scss */
+  .panel-indent {
+    padding: 10px 15px 10px 30px;
+  }
+}
+/* line 36, ../scss/components/_typography.scss */
+.panel-indent p, .panel-indent ul {
+  margin-bottom: 0;
 }
 
 /* line 1, ../scss/components/_lists.scss */

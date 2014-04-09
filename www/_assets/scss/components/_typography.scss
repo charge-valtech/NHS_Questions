@@ -25,3 +25,15 @@ p, pre {
 .text {
   max-width: 30em;
 }
+
+.panel-indent {
+  border-left: 5px solid $grey-3;
+  clear: both;
+  margin: 30px 0;
+  @include media(tablet) {
+    padding: 10px 15px 10px 30px;
+  }
+  p, ul {
+    margin-bottom: 0;
+  }
+}
