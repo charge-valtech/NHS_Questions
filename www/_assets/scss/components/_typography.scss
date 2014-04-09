@@ -17,3 +17,11 @@
 .copy-16 {
   @include copy-16;
 }
+
+p, pre {
+  margin: 5px 0 20px;
+}
+
+.text {
+  max-width: 30em;
+}
