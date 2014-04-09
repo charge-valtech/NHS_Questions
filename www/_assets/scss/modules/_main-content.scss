@@ -1,23 +1,13 @@
-h1 {
-  @include heading-48;
-}
-
-h1.page-title {
-  @include heading-24;
-}
-
 #main {
   background: #FFF;
   display: block;
+  overflow: hidden;
   padding: 1.5em 0;
 }
 
 .content-container {
+  font-size: 19px;
   margin: 0 auto;
   padding: 0 10px;
   max-width: 1000px;
-}
-
-#content-wrapper {
-  padding: 0 0 4em 0;
 }

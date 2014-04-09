@@ -1,17 +1,27 @@
 @include form;
 
-fieldset {
+fieldset { /*Overriding normalize presets*/
   border: 0;
   padding: 0;
+}
+
+input[type="radio"],
+input[type="checkbox"] { /*Overriding normalize presets*/
+  margin: 3px 0;
 }
 
 .form-group {
   clear: both;
   float: left;
+  margin-bottom: 20px;
   width: 100%;
   @include media(tablet){
     margin-bottom: 45px;
   }
+}
+
+.form-group--compound {
+  margin-bottom: 10px;
 }
 
 .form-label {
@@ -30,10 +40,31 @@ fieldset {
   border: 1px solid $grey-2;
   border-radius: 0;
   font-family: inherit;
-  // font-size: 1em;
+  font-size: 1em;
   padding: 4px;
   width: 100%;
   -webkit-appearance: none;
+  @include media(tablet){
+    width: 50%;
+  }
+}
+
+.form-control--1-4 {
+  width: 100%;
+  @include media(tablet){
+    width: 25%;
+  }
+}
+
+.form-control--1-3 {
+  width: 100%;
+  @include media(tablet){
+    width: 33.33%;
+  }
+}
+
+.form-control--1-2 {
+  width: 100%;
   @include media(tablet){
     width: 50%;
   }
@@ -58,10 +89,12 @@ fieldset {
   }
   .inline & {
     clear: none;
-    margin-right: 15px;
   }
   @include media(tablet){
     float: left;
+    .inline & {
+      margin-right: 15px;
+    }
   }
   input {
     position: absolute;
