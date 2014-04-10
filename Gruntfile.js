@@ -110,19 +110,12 @@ module.exports = function(grunt) {
             'www/_templates{,/**/*}',
             'www/z-backups{,/**/*}'
           ]
-        },
+        }
       },
       demo: {
         files: [
-          {cwd: 'www/', src: ['**/*'], dest: 'demo/'}
-        ],
-        options: {
-          ignore: [
-            'www/_assets/scss{,/**/*}',
-            'www/_templates{,/**/*}',
-            'www/z-backups{,/**/*}'
-          ]
-        },
+          {cwd: 'sprint/', src: ['**/*'], dest: 'demo/'}
+        ]
       },
       dist: {
         files: [
@@ -138,7 +131,7 @@ module.exports = function(grunt) {
             'www/*.html',
             '!www/index.html',
           ]
-        },
+        }
       }
     },
     clean: {
@@ -173,7 +166,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('sprint', ['cssmin:dist', 'clean:sprint', 'copyto:sprint']);
 
-  grunt.registerTask('demo', ['cssmin:dist', 'clean:demo', 'copyto:demo']);
+  grunt.registerTask('demo', ['clean:demo', 'copyto:demo']);
 
   grunt.registerTask('dist', ['cssmin:dist', 'clean:dist', 'copyto:dist']);
 
