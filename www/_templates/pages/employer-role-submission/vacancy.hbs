@@ -9,8 +9,8 @@ headerTitle: Advertising an Apprenticeship
     <input id="job-title" type="text" class="form-control">
   </div>
   <div class="form-group">
-    <label class="form-label">No. of vacancies</label>
-    <select>
+    <label for="num-vacancies" class="form-label">No. of vacancies</label>
+    <select id="num-vacancies">
         <option value="">1</option>
         <option value="">2</option>
         <option value="">3</option>
@@ -25,13 +25,13 @@ headerTitle: Advertising an Apprenticeship
     </select>
   </div>
   <div class="form-group">
-    <label for="role-short-desc" class="form-label">Brief summary of role</label>
-    <input id="role-short-desc" type="text" class="form-control">
+    <label for="brief-summ" class="form-label">Brief summary of role</label>
+    <input id="brief-summ" type="text" class="form-control">
   </div>
   <div class="form-group">
-    <label for="role-long-desc" class="form-label">Key responsibilities</label>
+    <label for="key-resp" class="form-label">Key responsibilities</label>
     <p class="form-hint">What the duties are?</p>
-    <textarea id="role-long-desc" class="form-control short" placeholder=""></textarea>
+    <textarea id="key-resp" class="form-control short"></textarea>
   </div>
 </fieldset>
 
@@ -43,8 +43,8 @@ headerTitle: Advertising an Apprenticeship
     <a class="button-link" href="#">Find address</a>
   </div>
   <div class="form-group">
-    <label class="form-label">Select address</label>
-    <select>
+    <label for="select-address" class="form-label">Select address</label>
+    <select id="select-address">
         <option value="">Please select</option>
         <option value="">45 High Street, Reddich</option>
         <option value="">47 High Street, Reddich</option>
@@ -71,9 +71,9 @@ headerTitle: Advertising an Apprenticeship
 <fieldset>
   <legend class="heading-36">Working week</legend>
   <div class="form-group">
-    <label class="form-label" for="role-short-desc">How many hours a week will the apprentice work?</label>
+    <label class="form-label" for="how-many-hours">How many hours a week will the apprentice work?</label>
     <p class="form-hint" >Include time they will spend at college or in training.</p>
-    <input id="role-short-desc" type="text" maxlength="2" class="form-control form-control--hours">
+    <input id="how-many-hours" type="text" maxlength="2" class="form-control form-control--hours">
   </div>
   <div class="form-group form-group--compound">
     <label class="form-label">Working days (tick all that apply)</label>
