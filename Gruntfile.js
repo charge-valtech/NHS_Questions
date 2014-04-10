@@ -107,7 +107,8 @@ module.exports = function(grunt) {
         options: {
           ignore: [
             'www/_assets/scss{,/**/*}',
-            'www/_templates{,/**/*}'
+            'www/_templates{,/**/*}',
+            'www/z-backups{,/**/*}'
           ]
         },
       },
@@ -118,7 +119,8 @@ module.exports = function(grunt) {
         options: {
           ignore: [
             'www/_assets/scss{,/**/*}',
-            'www/_templates{,/**/*}'
+            'www/_templates{,/**/*}',
+            'www/z-backups{,/**/*}'
           ]
         },
       },
@@ -130,6 +132,7 @@ module.exports = function(grunt) {
           ignore: [
             'www/_assets/scss{,/**/*}',
             'www/_templates{,/**/*}',
+            'www/z-backups{,/**/*}',
             'www/employer-role-submission{,/**/*}',
             'www/find-an-apprenticeship{,/**/*}',
             'www/*.html',
