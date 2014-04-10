@@ -1,75 +1,43 @@
 ---
 headerTitle: Find an Apprenticeship
 ---
-<main role="main" id="main">
-        <section>
-            <div id="content-wrapper">
-                <div class="help-container">
-                    <!--    <ul aria-label="The following links will open in a new browser window">
-                            <li><a class="icon info" href="#" target="_blank" aria-label="" >i</a><span>Helpline: <a href="tel:0800 0150 400">0800 0150 400</a></span></li>
-                            <li><a href="#" aria-label="">Application Notes</a></li>
-                            <li><a href="#" aria-label="" onclick="">Your Feedback</a></li>
-                        </ul>  -->
-                </div>
-                <h1 class="heading-48">Find an Apprenticeship</h1>
-                <nav class="progress-indicator">
 
-                    <ol aria-label="Progress Steps">
-                        <li class="active">
+<h1 class="heading-48">Find an Apprenticeship</h1>
+<nav class="progress-indicator">
+  <ol aria-label="Progress Steps">
+    <li class="active">
+      <span>Step 1</span>
+    </li>
+    <li>
+      <span>Step 2</span>
+    </li>
+    <li>
+      <span>Step 3</span>
+    </li>
+    <li>
+      <span>Step 4</span>
+    </li>
+    <li>
+      <span>Preview &amp; Submit</span>
+    </li>
+  </ol>
+</nav>
 
-                            <span>Step 1</span>
-                        </li>
-                        <li>
-                            <span>Step 2</span>
-                        </li>
-                        <li>
-                            <span>Step 3</span>
-                        </li>
-                        <li>
-                            <span>Step 4</span>
-                        </li>
+<fieldset>
+  <legend class="heading-36">1. Step 1</legend>
+  <div class="form-group form-group--compound">
+    <label for="first-name" class="form-label">First name</label>
+    <input id="first-name" type="text" class="form-control">
+  </div>
 
-                        <li>
-                            <span>Preview &amp; Submit</span>
-                        </li>
+  <div class="form-group">
+    <label for="last-name" class="form-label">Last name</label>
+    <input id="last-name" type="text" class="form-control">
+  </div>
+</fieldset>
 
-
-                    </ol>
-
-                </nav>
-
-
-
-                <h2>1. Step 1</h2>
-                <div class="validation-summary hidden">
-                    <h3>Something's not quite right with the details you entered</h3>
-                    <p>Please check the following:</p>
-                    <ol>
-                        <li><a href="#error1">Enter employer name</a></li>
-                    </ol>
-                </div>
-                <form action="preview.html">
-                    <fieldset>
-                        <legend class="hidden">Employer</legend>
-                        <p class="group">
-                            <span class="validation-message hidden" id="error1">1. Enter employer name</span>
-                            <label for="organisation-name" class="required">First name</label>
-                            <input id="organisation-name" type="text" class="large">
-                        </p>
-
-                        <p class="group">
-                            <span class="validation-message hidden" id="error1">1. Enter employer name</span>
-                            <label for="organisation-name" class="required">Last name</label>
-                            <input id="organisation-name" type="text" class="large">
-                        </p>
-                    </fieldset>
-
-                    <p class="action group">
-                        <button class="button-link" type="submit" value="Back">Clear</button>
-                        <button class="button" type="submit" value="Continue">Continue</button>
-                    </p>
-                </form>
-            </div>
-        </section>
-    </main>
+<div class="form-group">
+  <a href="preview.html" class="button">Continue</a>
+  <a href="#" class="button-link">Clear</a>
+</div>
 

@@ -1,64 +1,37 @@
 ---
 headerTitle: Find an Apprenticeship
 ---
-<main role="main" id="main">
-       <section>
-        <div id="content-wrapper">
-          <div class="help-container">
-      <!--    <ul aria-label="The following links will open in a new browser window">
-              <li><a class="icon info" href="#" target="_blank" aria-label="" >i</a><span>Helpline: <a href="tel:0800 0150 400">0800 0150 400</a></span></li>
-              <li><a href="#" aria-label="">Application Notes</a></li>
-              <li><a href="#" aria-label="" onclick="">Your Feedback</a></li>
-          </ul>  -->
-        </div>
-        <h1 class="heading-48">Find an Apprenticeship</h1>
-        <div class="explanation-box">
-           <p>Not sure what you're looking for? Try our <a href="wizard.html">Apprenticeship Matching Wizard</a></p>
-        </div>
-             <div class="validation-summary hidden">
-                <h3>There was a problem submitting the form</h3>
-                <p>Please try the following:</p>
-                <ol>
-                   <li><a href="#error1">Enter your first name</a></li>
-                </ol>
-             </div>
-             <form>
-                <fieldset class="separator ">
-                   <legend class="heading-36">Tell us what you're looking for</legend>
-                   <p class="group hidden">
-                      <label for="organisation-name">Industry</label>
-                      <select class="small" id="title">
-                         <option value="">Any</option>
-                         <option selected="selected" value="">Engineering</option>
-                         <option value="">Health and Beauty</option>
-                      </select>
-                   </p>
-                   <p class="group">
-                      <label for="organisation-name">Keyword(s)</label>
-                      <input id="organisation-name" type="text" class="large" placeholder="">
-                   </p>
-                   <p class="group">
-                      <label for="organisation-name" >Location:</label>
-                      <input id="organisation-name" type="text" class="medium" placeholder="">
-                   </p>
-                   <p class="group">
-                      <label>Within</label>
-                      <select class="">
-                        <option value="">This area only</option>
-                        <option value="">5 miles</option>
-                        <option value="">10 miles</option>
-                        <option value="">15 miles</option>
-                        <option value="">20 miles</option>
-                        <option value="">30 miles</option>
-                        <option value="">40 miles</option>
-                      </select>
-                   </p>
-                </fieldset>
-                <p class="action group">
-                 <a class="button-link" href="#">Clear</a>
-                 <a class="button" href="apprenticeship-results.html">Search</a>
-                </p>
-             </form>
-          </div>
-       </section>
-    </main>
+<h1 class="heading-48">Find an Apprenticeship</h1>
+
+<div class="panel-indent">
+  <p>Not sure what you're looking for? Try our <a href="wizard.html">Apprenticeship Matching Wizard</a></p>
+</div>
+
+<fieldset>
+  <legend class="heading-36">Tell us what you're looking for</legend>
+  <div class="form-group form-group--compound">
+    <label for="keywords" class="form-label">Keyword(s)</label>
+    <input id="keywords" type="text" class="form-control">
+  </div>
+  <div class="form-group form-group--compound">
+    <label for="location" class="form-label">Location:</label>
+    <input id="location" type="text" class="form-control">
+  </div>
+  <div class="form-group">
+    <label class="form-label">Within</label>
+    <select>
+      <option value="">This area only</option>
+      <option value="">5 miles</option>
+      <option value="">10 miles</option>
+      <option value="">15 miles</option>
+      <option value="">20 miles</option>
+      <option value="">30 miles</option>
+      <option value="">40 miles</option>
+    </select>
+  </div>
+</fieldset>
+
+<div class="form-group">
+  <a class="button" href="apprenticeship-results.html">Search</a>
+  <a class="button-link" href="#">Clear</a>
+</div>

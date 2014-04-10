@@ -1,123 +1,109 @@
 ---
 headerTitle: Find an Apprenticeship
 ---
-<main role="main" id="main">
-    <section>
-      <div id="content-wrapper">
-        <h1 class="heading-48">Search results </h1>
-        <div class="validation-summary hidden">
-            <h3>There was a problem submitting the form</h3>
-            <p>Please try the following:</p>
-            <ol>
-                <li><a href="#error1">Enter your first name</a></li>
-            </ol>
-        </div>
-        <div class="search-summary">
-          <label class="search-summary__item">
-            <h4>You searched for:</h4>
-            <input class="input" type="text" value="Engineer">
-          </label>
-          <label class="search-summary__item">
-            <h4>Location:</h4>
-            <input class="input" type="text" value="CV32 7RA">
-          </label>
-          <label class="search-summary__item">
-            <h4>Within:</h4>
-            <select class="input">
-              <option value="">This area only</option>
-              <option value="">5 miles</option>
-              <option value="">10 miles</option>
-              <option value="">15 miles</option>
-              <option value="">20 miles</option>
-              <option value="">30 miles</option>
-              <option value="">40 miles</option>
-            </select>
-          </label>
-        </div>
-        <p>We have found <b>3</b> apprenticeships that might be suitable:</p>
-        <p>
-          Filter results by:
-          <select>
-            <option value="">Closing date</option>
-            <option value="">Location</option>
-            <option value="">Relevance</option>
-          </select>
-        </p>
-        <ul class="search-results">
-          <li class="search-results__item">
-            <a class="search-results__imglink" href="apprenticeship-details.html">
-              <figure class="imgwrap imgwrap--square">
-                <img src="{{assets}}/img/biz-logo-1.jpg">
-              </figure>
-            </a>
-            <div class="search-results__content">
-              <h3 class="search-results__title"><a href="apprenticeship-details.html">Apprentice Mechanical Engineer – Precision Toolmaker with R G Engineering</a></h3>
-              <p>
-                An exciting opportunity has arisen for the right candidate to gain an Engineering Qualification through this apprenticeship! If you have got a lot of drive and want to learn a highly skilled trade then look no further!
-              </p>
-              <div class="search-results__btm">
-                <ul class="search-results__meta">
-                  <li><b>Number of vacancies:</b> 1</li>
-                  <li><b>Distance:</b> 5.2 miles</li>
-                  <li><b>Closing date:</b> 23 May 14</li>
-                </ul>
-                <div class="search-results__actns">
-                  <a class="button-link" href="apprenticeship-details.html">More info</a>
-                  <a class="button" href="apprenticeship-apply.html">Apply</a>
-                </div>
-            </div>
-            </div>
-          </li>
-          <li class="search-results__item">
-            <a class="search-results__imglink" href="#">
-              <figure class="imgwrap imgwrap--square">
-                <img src="{{assets}}/img/biz-logo-2.jpg">
-              </figure>
-            </a>
-            <div class="search-results__content">
-              <h3 class="search-results__title"><a href="#">Advanced Apprenticeship in Electro-technical Installation/Maintenance with Johnson Controls Ltd</a></h3>
-              <p>
-                Electro-technical Engineers are responsible for the installation, maintenance, and the diagnosis and repair of faults, for a variety of Electrical Services and Equipment in commercial, industrial and retail buildings.
-              </p>
-              <div class="search-results__btm">
-                <ul class="search-results__meta">
-                  <li><b>Number of vacancies:</b> 2</li>
-                  <li><b>Distance:</b> 5.2 miles</li>
-                  <li><b>Closing date:</b> 30 Apr 14</li>
-                </ul>
-                <div class="search-results__actns">
-                  <a class="button-link" href="#">More info</a>
-                  <a class="button" href="apprenticeship-apply.html">Apply</a>
-                </div>
-            </div>
-            </div>
-          </li>
-          <li class="search-results__item">
-            <a class="search-results__imglink" href="#">
-              <figure class="imgwrap imgwrap--square">
-                <img src="{{assets}}/img/biz-logo-3.jpg">
-              </figure>
-            </a>
-            <div class="search-results__content">
-              <h3 class="search-results__title"><a href="#">Engineering Compressed Air Service Apprentice with Direct Air &amp; Pipe Work Ltd</a></h3>
-              <p>
-                Training to become a Compressed Air Service Engineer Once qualified working at Customers Premises around the Midlands and UK with company vehicle carrying out routine servicing/repairs of compressed air equipment.
-              </p>
-              <div class="search-results__btm">
-                <ul class="search-results__meta">
-                  <li><b>Number of vacancies:</b> 1</li>
-                  <li><b>Distance:</b> 5.2 miles</li>
-                  <li><b>Closing date:</b> 02 May 14</li>
-                </ul>
-                <div class="search-results__actns">
-                  <a class="button-link" href="#">More info</a>
-                  <a class="button" href="apprenticeship-apply.html">Apply</a>
-                </div>
-            </div>
-            </div>
-          </li>
+<h1 class="heading-48">Search results</h1>
+<div class="search-summary">
+  <label class="search-summary__item">
+    <h4>You searched for:</h4>
+    <input class="input" type="text" value="Engineer">
+  </label>
+  <label class="search-summary__item">
+    <h4>Location:</h4>
+    <input class="input" type="text" value="CV32 7RA">
+  </label>
+  <label class="search-summary__item">
+    <h4>Within:</h4>
+    <select class="input">
+      <option value="">This area only</option>
+      <option value="">5 miles</option>
+      <option value="">10 miles</option>
+      <option value="">15 miles</option>
+      <option value="">20 miles</option>
+      <option value="">30 miles</option>
+      <option value="">40 miles</option>
+    </select>
+  </label>
+</div>
+<p>We have found <b>3</b> apprenticeships that might be suitable:</p>
+<p>
+  Filter results by:
+  <select>
+    <option value="">Closing date</option>
+    <option value="">Location</option>
+    <option value="">Relevance</option>
+  </select>
+</p>
+<ul class="search-results">
+  <li class="search-results__item">
+    <a class="search-results__imglink" href="apprenticeship-details.html">
+      <figure class="imgwrap imgwrap--square">
+        <img src="{{assets}}/img/biz-logo-1.jpg">
+      </figure>
+    </a>
+    <div class="search-results__content">
+      <h3 class="search-results__title"><a href="apprenticeship-details.html">Apprentice Mechanical Engineer – Precision Toolmaker with R G Engineering</a></h3>
+      <p>
+        An exciting opportunity has arisen for the right candidate to gain an Engineering Qualification through this apprenticeship! If you have got a lot of drive and want to learn a highly skilled trade then look no further!
+      </p>
+      <div class="search-results__btm">
+        <ul class="search-results__meta">
+          <li><b>Number of vacancies:</b> 1</li>
+          <li><b>Distance:</b> 5.2 miles</li>
+          <li><b>Closing date:</b> 23 May 14</li>
         </ul>
-      </div>
-    </section>
-  </main>
-
+        <div class="search-results__actns">
+          <a class="button" href="apprenticeship-apply.html">Apply</a>
+          <a class="button-link" href="apprenticeship-details.html">More info</a>
+        </div>
+    </div>
+    </div>
+  </li>
+  <li class="search-results__item">
+    <a class="search-results__imglink" href="#">
+      <figure class="imgwrap imgwrap--square">
+        <img src="{{assets}}/img/biz-logo-2.jpg">
+      </figure>
+    </a>
+    <div class="search-results__content">
+      <h3 class="search-results__title"><a href="#">Advanced Apprenticeship in Electro-technical Installation/Maintenance with Johnson Controls Ltd</a></h3>
+      <p>
+        Electro-technical Engineers are responsible for the installation, maintenance, and the diagnosis and repair of faults, for a variety of Electrical Services and Equipment in commercial, industrial and retail buildings.
+      </p>
+      <div class="search-results__btm">
+        <ul class="search-results__meta">
+          <li><b>Number of vacancies:</b> 2</li>
+          <li><b>Distance:</b> 5.2 miles</li>
+          <li><b>Closing date:</b> 30 Apr 14</li>
+        </ul>
+        <div class="search-results__actns">
+          <a class="button" href="apprenticeship-apply.html">Apply</a>
+          <a class="button-link" href="#">More info</a>
+        </div>
+    </div>
+    </div>
+  </li>
+  <li class="search-results__item">
+    <a class="search-results__imglink" href="#">
+      <figure class="imgwrap imgwrap--square">
+        <img src="{{assets}}/img/biz-logo-3.jpg">
+      </figure>
+    </a>
+    <div class="search-results__content">
+      <h3 class="search-results__title"><a href="#">Engineering Compressed Air Service Apprentice with Direct Air &amp; Pipe Work Ltd</a></h3>
+      <p>
+        Training to become a Compressed Air Service Engineer Once qualified working at Customers Premises around the Midlands and UK with company vehicle carrying out routine servicing/repairs of compressed air equipment.
+      </p>
+      <div class="search-results__btm">
+        <ul class="search-results__meta">
+          <li><b>Number of vacancies:</b> 1</li>
+          <li><b>Distance:</b> 5.2 miles</li>
+          <li><b>Closing date:</b> 02 May 14</li>
+        </ul>
+        <div class="search-results__actns">
+          <a class="button" href="apprenticeship-apply.html">Apply</a>
+          <a class="button-link" href="#">More info</a>
+        </div>
+    </div>
+    </div>
+  </li>
+</ul>

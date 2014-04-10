@@ -17,6 +17,10 @@ input[type="checkbox"] { /*Overriding normalize presets*/
   }
 }
 
+.progress-indicator {
+  font-size: 16px;
+}
+
 .form-group {
   clear: both;
   float: left;
@@ -135,22 +139,9 @@ select {
   }
 }
 
-
-
 .logo-upload img {
   border: 1px solid $grey-2;
   width: 10em;
-}
-
-.check-to-show {
-  display: none;
-  .lt-ie9 & {
-    display: block;
-  }
-}
-
-.check-to-show-trigger:checked + .check-to-show{
-  display: block;
 }
 
 .review-vacancy {
