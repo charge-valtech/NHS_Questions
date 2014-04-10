@@ -31,4 +31,13 @@ $(function() {
       $('#'+target).show();
 
     });
+
+    $('.amend-answers').on('click', function() {
+      $(this).closest('.form-group').toggleClass('expanded');
+      return false;
+    });
+
+    $('.update-answers').on('click', function() {
+      $(this).closest('.form-group').toggleClass('expanded');
+    });
 });
