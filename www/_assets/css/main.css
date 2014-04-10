@@ -922,46 +922,25 @@ input:-moz-placeholder {
 
 /* line 20, ../scss/_base.scss */
 html {
-  font-size: 62.5%;
-  /* 1 */
   overflow-y: scroll;
-  /* 2 */
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  /* 3 */
 }
 
-/*
- * 1. Font-size increased to compensate for change to html element font-size in
- *    order to support beta typography which was set in ems
- *    (62.5% * 160% = 100%)
- * 2. Addresses margins handled incorrectly in IE6/7
- */
-/* line 34, ../scss/_base.scss */
+/* line 24, ../scss/_base.scss */
 body {
-  font-family: "nta",Arial,sans-serif;
-  font-size: 160%;
-  /* 1 */
   margin: 0;
-  /* 2 */
 }
 
-/* line 42, ../scss/_base.scss */
-b,
-strong {
-  font-weight: 600;
-}
-
-/* line 45, ../scss/_base.scss */
+/* line 28, ../scss/_base.scss */
 img {
   border: 0;
 }
 
-/* line 48, ../scss/_base.scss */
+/* line 31, ../scss/_base.scss */
 button {
   *overflow: visible;
 }
 
-/* line 51, ../scss/_base.scss */
+/* line 34, ../scss/_base.scss */
 abbr[title] {
   cursor: help;
 }
@@ -971,7 +950,7 @@ abbr[title] {
  * 2. Addresses `box-sizing` set to `border-box` in Safari 5 and Chrome
  *    (include `-moz` to future-proof).
  */
-/* line 59, ../scss/_base.scss */
+/* line 42, ../scss/_base.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
@@ -981,19 +960,59 @@ input[type="search"] {
   box-sizing: content-box;
 }
 
-/* line 67, ../scss/_base.scss */
+/* line 50, ../scss/_base.scss */
 input[type="search"]::-webkit-search-cancel-button {
   -webkit-appearance: searchfield-cancel-button;
   margin-right: 2px;
 }
 
-/* line 71, ../scss/_base.scss */
+/* line 54, ../scss/_base.scss */
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
+@-ms-viewport {
+  width: device-width;
+}
+
+@-o-viewport {
+  width: device-width;
+}
+
+/* Make skiplinks visible when they are tabbed to */
+/* line 2, ../scss/components/_accessibility.scss */
+.skiplink {
+  position: absolute;
+  left: -9999em;
+}
+
+/* line 6, ../scss/components/_accessibility.scss */
+.skiplink:focus {
+  position: static;
+}
+
+/* line 9, ../scss/components/_accessibility.scss */
+#skiplink-container {
+  text-align: center;
+  background: #0b0c0c;
+}
+
+/* line 12, ../scss/components/_accessibility.scss */
+#skiplink-container div {
+  text-align: left;
+  margin: 0 auto;
+  max-width: 1020px;
+}
+
+/* line 16, ../scss/components/_accessibility.scss */
+#skiplink-container .skiplink {
+  display: -moz-inline-stack;
+  display: inline-block;
+  margin: 0.75em 0 0 30px;
+}
+
 /* For image replacement */
-/* line 75, ../scss/_base.scss */
+/* line 22, ../scss/components/_accessibility.scss */
 .ir {
   display: block;
   text-indent: -999em;
@@ -1003,20 +1022,20 @@ input[type="search"]::-webkit-search-decoration {
   direction: ltr;
 }
 
-/* line 82, ../scss/_base.scss */
+/* line 29, ../scss/components/_accessibility.scss */
 .ir br {
   display: none;
 }
 
 /* Hide for both screenreaders and browsers */
-/* line 86, ../scss/_base.scss */
+/* line 33, ../scss/components/_accessibility.scss */
 .hidden {
   display: none;
   visibility: hidden;
 }
 
 /* Hide only visually, but have it available for screenreaders */
-/* line 91, ../scss/_base.scss */
+/* line 38, ../scss/components/_accessibility.scss */
 .visuallyhidden {
   position: absolute;
   left: -9999em;
@@ -1026,7 +1045,7 @@ input[type="search"]::-webkit-search-decoration {
    */
 }
 
-/* line 98, ../scss/_base.scss */
+/* line 45, ../scss/components/_accessibility.scss */
 .visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
   clip: auto;
   height: auto;
@@ -1037,129 +1056,57 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 /* Hide visually and from screenreaders, but maintain layout */
-/* line 107, ../scss/_base.scss */
+/* line 54, ../scss/components/_accessibility.scss */
 .invisible {
   visibility: hidden;
 }
 
 /* Give a strong clear visual idea as to what is currently in focus */
-/* line 111, ../scss/_base.scss */
+/* line 58, ../scss/components/_accessibility.scss */
 a {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3);
 }
 
-/* line 114, ../scss/_base.scss */
+/* line 61, ../scss/components/_accessibility.scss */
 a:focus, button:focus {
   background-color: #ffbf47;
   outline: 3px solid #ffbf47;
 }
 
-/* line 118, ../scss/_base.scss */
+/* line 65, ../scss/components/_accessibility.scss */
 button:active {
   outline: none;
 }
 
-/* line 122, ../scss/_base.scss */
+/* line 69, ../scss/components/_accessibility.scss */
 a {
   color: #005ea5;
 }
-/* line 124, ../scss/_base.scss */
+/* line 71, ../scss/components/_accessibility.scss */
 a:visited {
   color: #2e8aca;
 }
-/* line 133, ../scss/_base.scss */
+/* line 80, ../scss/components/_accessibility.scss */
 a:hover {
   color: #2e358b;
 }
-/* line 136, ../scss/_base.scss */
+/* line 83, ../scss/components/_accessibility.scss */
 a:active {
   color: #2e8aca;
 }
 
-/* line 141, ../scss/_base.scss */
+/* line 88, ../scss/components/_accessibility.scss */
 a:active, a:hover {
   color: #2e358b;
 }
 
-/* Make skiplinks visible when they are tabbed to */
-/* line 146, ../scss/_base.scss */
-.skiplink {
-  position: absolute;
-  left: -9999em;
-}
-
-/* line 150, ../scss/_base.scss */
-.skiplink:focus {
-  position: static;
-}
-
-/* line 153, ../scss/_base.scss */
-#skiplink-container {
-  text-align: center;
-  background: #0b0c0c;
-}
-
-/* line 156, ../scss/_base.scss */
-#skiplink-container div {
-  text-align: left;
-  margin: 0 auto;
-  max-width: 1020px;
-}
-
-/* line 160, ../scss/_base.scss */
-#skiplink-container .skiplink {
-  display: -moz-inline-stack;
-  display: inline-block;
-  margin: 0.75em 0 0 30px;
-}
-
-/* line 168, ../scss/_base.scss */
+/* line 96, ../scss/components/_accessibility.scss */
 input:focus,
 textarea:focus,
-select:focus,
-#global-header input:focus {
+select:focus {
   outline: 3px solid #ffbf47;
 }
 
-/* line 171, ../scss/_base.scss */
-#global-header h1 a:focus {
-  background-color: transparent;
-  outline: none;
-}
-
-/* line 174, ../scss/_base.scss */
-#global-header a:focus {
-  color: #0b0c0c;
-}
-
-/* Cross-browser shims
-
-  Ways of normalising properties across browsers.
- */
-@-ms-viewport {
-  width: device-width;
-}
-
-@-o-viewport {
-  width: device-width;
-}
-
-/* Usage:
-   @include inline-block
-
-   or
-
-   @include inline-block("250px")
-
-   which gives a min-height to the inline-block elements.
-*/
-/* Contain floats usage:
-
-   .this-has-floated-children {
-     @extend %contain-floats;
-   }
-
-*/
 /* The below comment needs a ! so that the copyright message doesn't get removed during the minification step. See: http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#comments */
 /*! Copyright (c) 2011 by Margaret Calvert & Henrik Kubel. All rights reserved. The font has been customised for exclusive use on gov.uk. This cut is not commercially available. */
 @font-face {
@@ -2397,6 +2344,24 @@ select {
 }
 
 /* line 1, ../scss/components/_typography.scss */
+html {
+  font-size: 62.5%;
+  /* 1 */
+}
+
+/*
+ *    Font-size increased to compensate for change to html element font-size in
+ *    order to support beta typography which was set in ems
+ *    (62.5% * 160% = 100%)
+ */
+/* line 12, ../scss/components/_typography.scss */
+body {
+  color: #0b0c0c;
+  font-family: "nta",Arial,sans-serif;
+  font-size: 160%;
+}
+
+/* line 18, ../scss/components/_typography.scss */
 .heading-48 {
   font-family: "nta", Arial, sans-serif;
   font-size: 48px;
@@ -2407,21 +2372,21 @@ select {
   text-transform: none;
 }
 @media (max-width: 640px) {
-  /* line 1, ../scss/components/_typography.scss */
+  /* line 18, ../scss/components/_typography.scss */
   .heading-48 {
     font-size: 32px;
     line-height: 1.09375;
   }
 }
 @media (min-width: 641px) {
-  /* line 1, ../scss/components/_typography.scss */
+  /* line 18, ../scss/components/_typography.scss */
   .heading-48 {
     margin-top: 30px;
     margin-bottom: 60px;
   }
 }
 
-/* line 5, ../scss/components/_typography.scss */
+/* line 22, ../scss/components/_typography.scss */
 .heading-36 {
   font-family: "nta", Arial, sans-serif;
   font-size: 36px;
@@ -2432,21 +2397,21 @@ select {
   text-transform: none;
 }
 @media (max-width: 640px) {
-  /* line 5, ../scss/components/_typography.scss */
+  /* line 22, ../scss/components/_typography.scss */
   .heading-36 {
     font-size: 24px;
     line-height: 1.04167;
   }
 }
 @media (min-width: 641px) {
-  /* line 5, ../scss/components/_typography.scss */
+  /* line 22, ../scss/components/_typography.scss */
   .heading-36 {
     margin-top: 45px;
     margin-bottom: 20px;
   }
 }
 
-/* line 9, ../scss/components/_typography.scss */
+/* line 26, ../scss/components/_typography.scss */
 .heading-24 {
   font-family: "nta", Arial, sans-serif;
   font-size: 24px;
@@ -2459,21 +2424,21 @@ select {
   padding-bottom: 6px;
 }
 @media (max-width: 640px) {
-  /* line 9, ../scss/components/_typography.scss */
+  /* line 26, ../scss/components/_typography.scss */
   .heading-24 {
     font-size: 20px;
     line-height: 1.2;
   }
 }
 @media (min-width: 641px) {
-  /* line 9, ../scss/components/_typography.scss */
+  /* line 26, ../scss/components/_typography.scss */
   .heading-24 {
     padding-top: 6px;
     padding-bottom: 4px;
   }
 }
 
-/* line 13, ../scss/components/_typography.scss */
+/* line 30, ../scss/components/_typography.scss */
 .copy-19 {
   font-family: "nta", Arial, sans-serif;
   font-size: 19px;
@@ -2484,14 +2449,14 @@ select {
   text-transform: none;
 }
 @media (max-width: 640px) {
-  /* line 13, ../scss/components/_typography.scss */
+  /* line 30, ../scss/components/_typography.scss */
   .copy-19 {
     font-size: 16px;
     line-height: 1.25;
   }
 }
 
-/* line 17, ../scss/components/_typography.scss */
+/* line 34, ../scss/components/_typography.scss */
 .copy-16 {
   font-family: "nta", Arial, sans-serif;
   font-size: 16px;
@@ -2502,31 +2467,37 @@ select {
   padding-bottom: 7px;
 }
 @media (max-width: 640px) {
-  /* line 17, ../scss/components/_typography.scss */
+  /* line 34, ../scss/components/_typography.scss */
   .copy-16 {
     font-size: 14px;
     line-height: 1.14286;
   }
 }
 @media (min-width: 641px) {
-  /* line 17, ../scss/components/_typography.scss */
+  /* line 34, ../scss/components/_typography.scss */
   .copy-16 {
     padding-top: 5px;
     padding-bottom: 5px;
   }
 }
 
-/* line 21, ../scss/components/_typography.scss */
+/* line 38, ../scss/components/_typography.scss */
 p, pre {
   margin: 5px 0 20px;
 }
 
-/* line 25, ../scss/components/_typography.scss */
+/* line 43, ../scss/components/_typography.scss */
+b,
+strong {
+  font-weight: 600;
+}
+
+/* line 47, ../scss/components/_typography.scss */
 .text {
   max-width: 30em;
 }
 
-/* line 29, ../scss/components/_typography.scss */
+/* line 51, ../scss/components/_typography.scss */
 .panel-indent {
   border-left: 5px solid #dee0e2;
   clear: both;
@@ -2534,12 +2505,12 @@ p, pre {
   padding: 0 15px;
 }
 @media (min-width: 641px) {
-  /* line 29, ../scss/components/_typography.scss */
+  /* line 51, ../scss/components/_typography.scss */
   .panel-indent {
     padding: 10px 15px 10px 30px;
   }
 }
-/* line 37, ../scss/components/_typography.scss */
+/* line 59, ../scss/components/_typography.scss */
 .panel-indent p, .panel-indent ul {
   margin-bottom: 0;
 }

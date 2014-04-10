@@ -1,3 +1,20 @@
+html {
+  font-size: 62.5%;
+  /* 1 */
+}
+
+/*
+ *    Font-size increased to compensate for change to html element font-size in
+ *    order to support beta typography which was set in ems
+ *    (62.5% * 160% = 100%)
+ */
+
+body {
+  color: $text-colour;
+  font-family: "nta",Arial,sans-serif;
+  font-size: 160%;
+}
+
 .heading-48 {
   @include heading-48;
 }
@@ -20,6 +37,11 @@
 
 p, pre {
   margin: 5px 0 20px;
+}
+
+b,
+strong {
+  font-weight: 600;
 }
 
 .text {
