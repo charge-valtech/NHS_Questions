@@ -46,6 +46,24 @@ input[type="checkbox"] { /*Overriding normalize presets*/
   }
 }
 
+.date-input {
+  margin-top: 0;
+  input {
+    width: 100%;
+  }
+  @include media(tablet) {
+    .form-group {
+      clear: none;
+      float: left;
+      margin-right: 20px;
+      width: 50px;
+    }
+    .form-group--year {
+      width: 70px;
+    }
+  }
+}
+
 .form-group--compound {
   margin-bottom: 10px;
 }
@@ -155,8 +173,8 @@ select {
 }
 
 .review-vacancy {
-  .expanded .toggle-content {
-    display: block;
+  h2:first-child {
+    margin-top: 0;
   }
   .vacancy-title {
     display: block;
@@ -167,6 +185,13 @@ select {
       margin-right: -4px;
       width: 70%;
     }
+  }
+}
+
+.vacancy-answers {
+  display: none;
+  .no-js &, .expanded & {
+    display: block;
   }
 }
 
