@@ -5,6 +5,16 @@ fieldset { /*Overriding normalize presets*/
   padding: 0;
 }
 
+.fieldset--with-border {
+  border-bottom: 1px solid $grey-2;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  @include media(tablet) {
+    margin-bottom: 30px;
+    padding-bottom: 45px;
+  }
+}
+
 input[type="radio"],
 input[type="checkbox"] { /*Overriding normalize presets*/
   margin: 3px 0;
@@ -149,7 +159,12 @@ select {
     overflow: hidden;
   }
   .amend-answers {
-    float: right;
-    margin-top: -19px;
+    display: inline-block;
+    font-size: 0.5em;
+    margin-left: 1em;
+    vertical-align: middle;
+    .expanded & {
+      display: none;
+    }
   }
 }

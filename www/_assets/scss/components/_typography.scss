@@ -28,6 +28,11 @@ body {
   @include heading-24;
 }
 
+.heading--with-border {
+  border-top: 1px solid $grey-2;
+  padding-top: 45px;
+}
+
 .copy-19 {
   @include copy-19;
 }
