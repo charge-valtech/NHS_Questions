@@ -82,7 +82,7 @@ module.exports = function(grunt) {
         tasks: ['compass:dev']
       },
       js: {
-        files: ['www/_assets/js/**/*.js'],
+        files: ['www/_assets/js/**/*.js', '!www/_assets/js/scripts.min.js'],
         tasks: ['jshint', 'concat:dev']
       },
       html: {

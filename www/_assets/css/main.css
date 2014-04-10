@@ -1685,35 +1685,35 @@ select:focus {
   margin-bottom: 0;
 }
 
-/* line 11, ../scss/base/mixins/_forms.scss */
+/* line 8, ../scss/base/mixins/_forms.scss */
 textarea {
   min-height: 5em;
   height: auto;
 }
 
-/* line 15, ../scss/base/mixins/_forms.scss */
+/* line 12, ../scss/base/mixins/_forms.scss */
 details {
   padding: 0 1em 0 1em;
 }
 
-/* line 19, ../scss/base/mixins/_forms.scss */
+/* line 16, ../scss/base/mixins/_forms.scss */
 label abbr {
   border-bottom: none;
   color: #0b0c0c;
 }
 
-/* line 23, ../scss/base/mixins/_forms.scss */
+/* line 20, ../scss/base/mixins/_forms.scss */
 fieldset {
   margin: 0;
   margin-top: 2em;
 }
 
-/* line 49, ../scss/base/mixins/_forms.scss */
+/* line 46, ../scss/base/mixins/_forms.scss */
 label {
   display: block;
 }
 
-/* line 52, ../scss/base/mixins/_forms.scss */
+/* line 49, ../scss/base/mixins/_forms.scss */
 input {
   margin-left: 0;
 }
@@ -1954,18 +1954,43 @@ select {
 }
 
 /* line 158, ../scss/components/_forms.scss */
-.review-vacancy fieldset {
-  overflow: hidden;
+.review-vacancy .expanded .toggle-content {
+  display: block;
 }
 /* line 161, ../scss/components/_forms.scss */
-.review-vacancy .amend-answers {
-  display: inline-block;
-  font-size: 0.5em;
-  margin-left: 1em;
-  vertical-align: middle;
+.review-vacancy .vacancy-title {
+  display: block;
+  margin-bottom: 15px;
 }
-/* line 166, ../scss/components/_forms.scss */
-.expanded .review-vacancy .amend-answers {
+@media (min-width: 641px) {
+  /* line 161, ../scss/components/_forms.scss */
+  .review-vacancy .vacancy-title {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-right: -4px;
+    width: 70%;
+  }
+}
+
+/* line 173, ../scss/components/_forms.scss */
+.amend-answers {
+  display: block;
+  font-size: 0.65em;
+  font-weight: normal;
+}
+@media (min-width: 641px) {
+  /* line 173, ../scss/components/_forms.scss */
+  .amend-answers {
+    display: inline-block;
+    font-size: 0.54em;
+    margin-right: -4px;
+    text-align: right;
+    vertical-align: middle;
+    width: 30%;
+  }
+}
+/* line 185, ../scss/components/_forms.scss */
+.expanded .amend-answers {
   display: none;
 }
 
@@ -2068,10 +2093,16 @@ body {
 /* line 31, ../scss/components/_typography.scss */
 .heading--with-border {
   border-top: 1px solid #bfc1c3;
-  padding-top: 45px;
+  padding-top: 15px;
+}
+@media (min-width: 641px) {
+  /* line 31, ../scss/components/_typography.scss */
+  .heading--with-border {
+    padding-top: 45px;
+  }
 }
 
-/* line 36, ../scss/components/_typography.scss */
+/* line 39, ../scss/components/_typography.scss */
 .copy-19 {
   font-family: "nta", Arial, sans-serif;
   font-size: 19px;
@@ -2082,14 +2113,14 @@ body {
   text-transform: none;
 }
 @media (max-width: 640px) {
-  /* line 36, ../scss/components/_typography.scss */
+  /* line 39, ../scss/components/_typography.scss */
   .copy-19 {
     font-size: 16px;
     line-height: 1.25;
   }
 }
 
-/* line 40, ../scss/components/_typography.scss */
+/* line 43, ../scss/components/_typography.scss */
 .copy-16 {
   font-family: "nta", Arial, sans-serif;
   font-size: 16px;
@@ -2100,25 +2131,25 @@ body {
   padding-bottom: 7px;
 }
 @media (max-width: 640px) {
-  /* line 40, ../scss/components/_typography.scss */
+  /* line 43, ../scss/components/_typography.scss */
   .copy-16 {
     font-size: 14px;
     line-height: 1.14286;
   }
 }
 @media (min-width: 641px) {
-  /* line 40, ../scss/components/_typography.scss */
+  /* line 43, ../scss/components/_typography.scss */
   .copy-16 {
     padding-top: 5px;
     padding-bottom: 5px;
   }
 }
 
-/* line 44, ../scss/components/_typography.scss */
+/* line 47, ../scss/components/_typography.scss */
 p, pre {
   margin: 5px 0 20px;
 }
-/* line 46, ../scss/components/_typography.scss */
+/* line 49, ../scss/components/_typography.scss */
 p.text, pre.text {
   font-family: "nta", Arial, sans-serif;
   font-size: 19px;
@@ -2129,30 +2160,30 @@ p.text, pre.text {
   text-transform: none;
 }
 @media (max-width: 640px) {
-  /* line 46, ../scss/components/_typography.scss */
+  /* line 49, ../scss/components/_typography.scss */
   p.text, pre.text {
     font-size: 16px;
     line-height: 1.25;
   }
 }
 
-/* line 52, ../scss/components/_typography.scss */
+/* line 55, ../scss/components/_typography.scss */
 b,
 strong {
   font-weight: 600;
 }
 
-/* line 56, ../scss/components/_typography.scss */
+/* line 59, ../scss/components/_typography.scss */
 .highlight {
   color: #0076c0;
 }
 
-/* line 60, ../scss/components/_typography.scss */
+/* line 63, ../scss/components/_typography.scss */
 .text {
   max-width: 30em;
 }
 
-/* line 64, ../scss/components/_typography.scss */
+/* line 67, ../scss/components/_typography.scss */
 .panel-indent {
   border-left: 5px solid #dee0e2;
   clear: both;
@@ -2160,12 +2191,12 @@ strong {
   padding: 0 15px;
 }
 @media (min-width: 641px) {
-  /* line 64, ../scss/components/_typography.scss */
+  /* line 67, ../scss/components/_typography.scss */
   .panel-indent {
     padding: 10px 15px 10px 30px;
   }
 }
-/* line 72, ../scss/components/_typography.scss */
+/* line 75, ../scss/components/_typography.scss */
 .panel-indent p, .panel-indent ul {
   margin-bottom: 0;
 }

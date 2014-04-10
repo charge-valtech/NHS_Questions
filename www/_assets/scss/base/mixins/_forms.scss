@@ -1,9 +1,6 @@
 // ===================================================
 // FORMS
 //
-// Native form controls vary in size across browser
-// and OS. This can throw out alignments by a few px.
-// The styles are currently optimised for Chrome OS X.
 
 @mixin form($label-alignment: top, $label-width: 8em, $legend-colour: $text-colour) {
   // FORM ELEMENT STYLES
