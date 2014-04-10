@@ -124,6 +124,7 @@ module.exports = function(grunt) {
         options: {
           ignore: [
             'www/_assets/scss{,/**/*}',
+            'www/_assets/video{,/**/*}',
             'www/_templates{,/**/*}',
             'www/z-backups{,/**/*}',
             'www/employer-role-submission{,/**/*}',
