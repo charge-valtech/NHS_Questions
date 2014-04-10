@@ -10,6 +10,13 @@ input[type="checkbox"] { /*Overriding normalize presets*/
   margin: 3px 0;
 }
 
+.add-focus {
+  outline: 3px solid #ffbf47;
+  input[type="radio"], input[type="checkbox"] {
+    outline: 0;
+  }
+}
+
 .form-group {
   clear: both;
   float: left;

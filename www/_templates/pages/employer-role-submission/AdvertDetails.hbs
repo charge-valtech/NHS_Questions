@@ -1,46 +1,42 @@
 ---
 headerTitle: Advertising an Apprenticeship
 ---
-    <main role="main" id="main">
-        <section>
-            <div id="content-wrapper">
-                <h1 class="heading-48">Additional information</h1>
-                <fieldset class="">
-                    <legend class="heading-36">Reality check</legend>
-                    <p class="group">
-                        <label for="">Any unusual working hours or conditions (eg evenings or weekends, heavy physical work)?</label>
-                        <textarea id="role-long-desc" class="short" placeholder=""></textarea>
-                    </p>
-                </fieldset>
-                <fieldset>
-                    <legend class="heading-36">Future prospects (optional)</legend>
-                    <div>
-                        <label>Briefly explain what the candidate can expect once they have finished  the apprenticeship:</label>
-                        <label>What are the chances of there being a permanent job on offer?</label>
-                        <textarea name="" id="" class="short"></textarea>
-                    </div>
-                </fieldset>
+<h1 class="heading-48">Additional information</h1>
+<fieldset>
+  <legend class="heading-36">Reality check</legend>
+  <div class="form-group">
+    <label class="form-label" for="any-unusual">Any unusual working hours or conditions (eg evenings or weekends, heavy physical work)?</label>
+    <textarea id="any-unusual" class="form-control"></textarea>
+  </div>
+</fieldset>
 
-                <fieldset class="separator">
-                    <legend class="heading-36">
-                        Contact details for further information (optional)
-                    </legend>
-                    <label>These details will appear in the advert.</label>
-                    <p>
-                        <label>Contact name</label>
-                    <input id="" type="text" class="x-large" tabindex="0"></p>
-                    <p>
-                        <label>Email address</label>
-                    <input id="" type="email" class="x-large" tabindex="0"></p>
-                    <p>
-                        <label>Telephone number</label>
-                    <input id="" type="tel" class="x-large" tabindex="0"></p>
-                </fieldset>
-                <p class="action group">
-                    <a class="button-link" href="TrainingDetails.html">Back</a>
-                    <a class="button" href="VacancyCheckDetails.html">Preview</a>
-                </p>
-            </div>
-        </section>
-    </main>
+<fieldset>
+  <legend class="heading-36">Future prospects (optional)</legend>
+  <div class="form-group">
+    <label class="form-label" for="briefly-explain">Briefly explain what the candidate can expect once they have finished  the apprenticeship:</label>
+    <p class="form-hint">What are the chances of there being a permanent job on offer?</p>
+    <textarea id="briefly-explain" class="form-control"></textarea>
+  </div>
+</fieldset>
 
+<fieldset>
+  <legend class="heading-36">Contact details for further information (optional)</legend>
+  <p class="form-hint">These details will appear in the advert.</p>
+  <div class="form-group form-group--compound">
+    <label class="form-label" for="contact-name">Contact name</label>
+    <input id="contact-name" type="text" class="form-control">
+  </div>
+  <div class="form-group form-group--compound">
+    <label class="form-label" for="contact-email">Email address</label>
+    <input id="contact-email" type="email" class="form-control">
+  </div>
+  <div class="form-group">
+    <label class="form-label" for="contact-tel">Telephone number</label>
+    <input id="contact-tel" type="tel" class="form-control">
+  </div>
+</fieldset>
+
+<div class="form-group">
+  <a class="button" href="VacancyCheckDetails.html">Preview</a>
+  <a class="button-link" href="TrainingDetails.html">Back</a>
+</div>
