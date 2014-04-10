@@ -1,1 +1,59 @@
-@include progress-indicator($active_colour: white, $border_colour: $border-colour, $background_colour: $highlight-colour, $steps: "");
+// @include progress-indicator($active_colour: white, $border_colour: $border-colour, $background_colour: $highlight-colour, $steps: "");
+
+/* line 7, ../sass/design-patterns/_progress-indicator.scss */
+.progress-indicator {
+  margin-bottom: 30px;
+}
+/* line 12, ../sass/design-patterns/_progress-indicator.scss */
+.progress-indicator ol,
+.progress-indicator ul {
+  border-bottom: 1px solid;
+  border-top: 1px solid;
+  border-color: #bfc1c3;
+  list-style-type: none;
+  padding-left: 0;
+}
+/* line 21, ../sass/design-patterns/_progress-indicator.scss */
+.progress-indicator li {
+  color: #6f777b;
+  padding: 12px 0 5px 0;
+}
+/* line 25, ../sass/design-patterns/_progress-indicator.scss */
+.progress-indicator a {
+  text-decoration: none;
+}
+/* line 29, ../sass/design-patterns/_progress-indicator.scss */
+.progress-indicator .active {
+  border-bottom: 5px solid #0b0c0c;
+  color: #0b0c0c;
+}
+/* line 33, ../sass/design-patterns/_progress-indicator.scss */
+.progress-indicator .active a {
+  color: #0b0c0c;
+  text-decoration: none;
+}
+
+@media (min-width: 641px) {
+  /* line 42, ../sass/design-patterns/_progress-indicator.scss */
+  .progress-indicator-horizontal li {
+    float: left;
+    margin-right: 30px;
+  }
+}
+@media (min-width: 641px) {
+  /* line 48, ../sass/design-patterns/_progress-indicator.scss */
+  .progress-indicator-horizontal li.active {
+    margin-bottom: -5px;
+  }
+}
+
+@media (min-width: 641px) {
+  /* line 56, ../sass/design-patterns/_progress-indicator.scss */
+  .progress-indicator-vertical {
+    width: 50%;
+  }
+}
+/* line 63, ../sass/design-patterns/_progress-indicator.scss */
+.progress-indicator-vertical span {
+  float: right;
+}
