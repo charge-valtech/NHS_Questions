@@ -10,7 +10,7 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-  <link href="_assets/css/main.css" media="all" rel="stylesheet" type="text/css">
+  <link href="_assets/css/main.css?cache-bust" media="all" rel="stylesheet" type="text/css">
   <script src="_assets/js/vendor/modernizr-2.7.1.js"></script>
 </head>
 <body>
@@ -31,62 +31,115 @@
     <div class="phase-notice">
       <strong>ALPHA:</strong> This is a prototype
     </div>
-    
-<div id="main">
-  <section>
-    <div id="content-wrapper" class="components-used">
-      <h1>UI Components</h1>
-      <fieldset>
-        <legend>
-          Form components
-        </legend>
-        <div class="group">
-          <h2>Buttons</h2>
-          <button class="button">Primary</button>
-          <button class="button secondary">Secondary</button>
-          <div id="get-started" class="get-started">
-            <a href="#" rel="" data-transaction-slug="" class="button">Start now</a>
-              <span class="destination"> to do something</span>
-          </div>
-        </div>
-        <div class="group">
-          <h2>Inputs</h2>
-          <label><input type="text" class="name" placeholder="Name input"></label>
-          <label><input type="email" class="email" placeholder="email@email.com"></label>
-          <label><input type="password" class="password" placeholder="Password"></label>
-          <label><input type="text" class="x-large" placeholder="X Large input"></label>
-          <label><textarea class="short" placeholder="Text area (short)"></textarea></label>
-          <label><textarea class="tall" placeholder="Text area (tall)"></textarea></label>
-        </div>
-        <div class="group">
-          <h2>Radios, Checkboxes, Selects</h2>
-          <ul class="option group inline">
-              <li>
-                  <label><input type="radio" checked="checked" name="show-logo">Yes</label>
-              </li>
-              <li>
-                  <label><input type="radio" name="show-logo">No</label>
-              </li>
-          </ul>
-          <label><input type="checkbox">Checkbox</label>
-          <label><input type="radio" checked="checked" name="hide-show">Hide something</label>
-          <label>
-            <input type="radio" class="check-to-show-trigger" name="hide-show">Show something
-            <input type="date" class="check-to-show">
-          </label>
-          <label>
-            <select name="" id="">
-              <option value="">Option 1</option>
-              <option value="">Option 2</option>
-              <option value="">Option 3</option>
-            </select>
-          </label>
-        </div>
+    <main role="main" id="main">
+      
 
-      </fieldset>
+<div class="components-used">
+  <h1 class="heading-48">UI Components</h1>
+  <fieldset>
+    <legend class="heading-36">
+      Form components
+    </legend>
+    <div class="group">
+      <h2>Buttons</h2>
+      <button class="button">Primary</button>
+      <button class="button-link">Secondary</button>
+      <button class="button warning">Warning</button>
+      <div id="get-started" class="get-started">
+        <a href="#" rel="" data-transaction-slug="" class="button">Start now</a>
+          <span class="destination"> to do something</span>
+      </div>
     </div>
-  </section>
+    <div class="group">
+      <h2>Inputs</h2>
+      <label><input type="text" class="name" placeholder="Name input"></label>
+      <label><input type="email" class="email" placeholder="email@email.com"></label>
+      <label><input type="password" class="password" placeholder="Password"></label>
+      <label><input type="text" class="x-large" placeholder="X Large input"></label>
+      <label><textarea class="short" placeholder="Text area (short)"></textarea></label>
+      <label><textarea class="tall" placeholder="Text area (tall)"></textarea></label>
+    </div>
+    <div class="group">
+      <h2>Radios, Checkboxes, Selects</h2>
+      <ul class="option group inline">
+          <li>
+              <label><input type="radio" checked="checked" name="show-logo">Yes</label>
+          </li>
+          <li>
+              <label><input type="radio" name="show-logo">No</label>
+          </li>
+      </ul>
+      <label><input type="checkbox">Checkbox</label>
+      <label><input type="radio" checked="checked" name="hide-show">Hide something</label>
+      <label>
+        <input type="radio" class="check-to-show-trigger" name="hide-show">Show something
+        <input type="date" class="check-to-show">
+      </label>
+      <label>
+        <select name="" id="">
+          <option value="">Option 1</option>
+          <option value="">Option 2</option>
+          <option value="">Option 3</option>
+        </select>
+      </label>
+    </div>
+  </fieldset>
+  <fieldset>
+    <legend class="heading-36">Navigation</legend>
+    <h2>Responsive navigation</h2>
+    <header>
+        <a class="global-header__logo" href="/" title="Go to the GOV.UK homepage">
+          <img src="_assets/img/logos/logo.png" alt="GOV.UK">
+        </a>
+      <nav role="navigation" class="responsive-nav">
+        <h2 class="heading"><a href="#">A title that links somewhere</a></h2>
+        <a href="#" class="responsive-nav__trigger menu-trigger">Menu</a>
+        <ul class="responsive-nav__links menu">
+          <li><a href="#">First link</a></li>
+          <li><a href="#">Second link</a></li>
+          <li><a href="#">Third link</a></li>
+        </ul>
+      </nav>
+    </header>
+    <br>
+    <h2>Breadcrumbs</h2>
+    <nav role="navigation" class="breadcrumbs">
+      <ul>
+        <li class="breadcrumbs__item">
+          <a href="#">Home</a>
+        </li>
+        <li class="breadcrumbs__item">
+          <a href="#">Somewhere</a>
+        </li>
+        <li class="breadcrumbs__item">
+          <a href="#">Somewhere else</a>
+        </li>
+      </ul>
+    </nav>
+    <br>
+    <h2>Bottom of page navigation</h2>
+    <nav role="navigation" class="page-navigation">
+      <a class="page-navigation__btn previous" href="#" rel="previous">
+        <i class="arrow-button"></i>
+        Previous page
+      </a>
+      <a class="page-navigation__btn next" href="#" rel="next">
+        <i class="arrow-button"></i>
+        Next page
+      </a>
+    </nav>
+  </fieldset>
+  <fieldset>
+    <legend class="heading-36">Textual</legend>
+    <h2>Explanation box</h2>
+    <div class="explanation-box">
+      <p>Some useful information can go here: <a href="#">Perhaps with a link?</a></p>
+    </div>
+  </fieldset>
 </div>
+
+    </main>
+    <div class="clearfix"></div>
   </div>
   <footer role="contentinfo">
   <div class="footer__wrapper">
@@ -94,7 +147,7 @@
       <ul class="footer__nav" role="navigation">
         <li class="footer__link"><a href="/claim-notes#16" target="_blank">Helpdesk</a></li>
         <li class="footer__link"><a href="http://www.dwp.gov.uk/privacy-policy/" target="_blank">Privacy &amp; Cookies</a></li>
-        <li class="footer__link">Built by <a href="#" target="_blank">Skills Funding Agency</a></li>
+        <li class="footer__link">Built by <a href="http://apprenticeships.org.uk" target="_blank">Skills Funding Agency</a></li>
       </ul>
       <a class="footer__copyright" href="http://www.nationalarchives.gov.uk/information-management/our-services/crown-copyright.htm" target="_blank">
         <img src="_assets/img/logos/govuk-crest@2x.png" width="125" height="102" alt="Crown copyright logo">
@@ -103,12 +156,7 @@
     </div>
   </div>
 </footer>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  <script>
-      if (!window.jQuery) {
-          document.write('<script src="_assets/js/vendor/jquery-1.11.0.min.js"><\/script>');
-      }
-  </script>
+  <script src="_assets/js/vendor/jquery-1.11.0.min.js"></script>
   <script src="_assets/js/scripts.min.js"></script>
 </body>
 </html>

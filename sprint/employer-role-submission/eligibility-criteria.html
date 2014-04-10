@@ -10,7 +10,7 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-  <link href="../_assets/css/main.css" media="all" rel="stylesheet" type="text/css">
+  <link href="../_assets/css/main.css?cache-bust" media="all" rel="stylesheet" type="text/css">
   <script src="../_assets/js/vendor/modernizr-2.7.1.js"></script>
 </head>
 <body>
@@ -31,57 +31,52 @@
     <div class="phase-notice">
       <strong>ALPHA:</strong> This is a prototype
     </div>
-    
     <main role="main" id="main">
-        <section>
-            <div id="content-wrapper">
-                <h1>About the Apprentice</h1>
-                <fieldset class="separator">
-                    <legend>What you want from an Apprentice</legend>
-                    <p class="group">
-                        <label for="" class="required">Skills desired</label>
-                        <p>
-                          <input id="" type="text" class="x-large">
-                        </p>
-                        <p>
-                          <input id="" type="text" class="x-large">
-                        </p>
-                        <p>
-                          <input id="" type="text" class="x-large">
-                        </p>
-                        <p><a href="#">+ Add a new skill</a></p>
-                    </p>
-                    <p class="group">
-                        <label for="" class="required">Personal qualities desired</label>
-                        <textarea id="" class="short" placeholder=""></textarea>
-                    </p>
-                    <p class="group">
-                        <label for="">Required qualifications</label>
-                        <textarea id="" class="short" placeholder=""></textarea>
-                    </p>
-                </fieldset>
-                <fieldset class="separator">
-                    <legend>Your extra questions for the application form</legend>
-                    <p class="group">
-                        <label for="">Question 1</label>
-                        <input id="" type="text" class="x-large" tabindex="0">
-                    </p>
-                    <p class="group">
-                        <label for="">Question 2</label>
-                        <input id="" type="text" class="x-large" tabindex="0">
-                    </p>
-                    <p><a href="#">+ Add another question</a>
-                </fieldset>
+      
+<h1 class="heading-48">About the Apprentice</h1>
+<fieldset>
+  <legend class="heading-36">What you want from an Apprentice</legend>
+  <div class="form-group form-group--compound">
+    <label for="skill1" class="form-label">Skills desired</label>
+    <input type="text" class="form-control" id="skill1">
+  </div>
+  <div class="form-group form-group--compound">
+    <input type="text" class="form-control" id="skill2">
+  </div>
+  <div class="form-group form-group">
+    <input type="text" class="form-control" id="skill3">
+    <a class="form-hint" href="#">+ Add a new skill</a>
+  </div>
+  <div class="form-group">
+    <label for="pers-quals" class="form-label">Personal qualities desired</label>
+    <textarea id="pers-quals" class="form-control"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="req-quals" class="form-label">Required qualifications</label>
+    <textarea id="req-quals" class="form-control"></textarea>
+  </div>
+</fieldset>
 
-                <p class="action group">
-                    <a class="button secondary" href="TrainingDetails.html">Back</a>
-                    <a class="button" href="AdvertDetails.html">Continue</a>
-                </p>
-            </div>
-        </section>
+<fieldset>
+  <legend class="heading-36">Your extra questions for the application form</legend>
+  <div class="form-group form-group--compound">
+    <label class="form-label" for="ques-1">Question 1</label>
+    <input id="ques-1" class="form-control" type="text">
+  </div>
+  <div class="form-group">
+    <label class="form-label" for="ques-2">Question 2</label>
+    <input id="ques-2" type="text" class="form-control">
+    <a class="form-hint" href="#">+ Add another question</a>
+  </div>
+</fieldset>
+
+<div class="form-group">
+  <a class="button" href="AdvertDetails.html">Continue</a>
+  <a class="button-link" href="TrainingDetails.html">Back</a>
+</div>
+
     </main>
-
-
+    <div class="clearfix"></div>
   </div>
   <footer role="contentinfo">
   <div class="footer__wrapper">
@@ -89,7 +84,7 @@
       <ul class="footer__nav" role="navigation">
         <li class="footer__link"><a href="/claim-notes#16" target="_blank">Helpdesk</a></li>
         <li class="footer__link"><a href="http://www.dwp.gov.uk/privacy-policy/" target="_blank">Privacy &amp; Cookies</a></li>
-        <li class="footer__link">Built by <a href="#" target="_blank">Skills Funding Agency</a></li>
+        <li class="footer__link">Built by <a href="http://apprenticeships.org.uk" target="_blank">Skills Funding Agency</a></li>
       </ul>
       <a class="footer__copyright" href="http://www.nationalarchives.gov.uk/information-management/our-services/crown-copyright.htm" target="_blank">
         <img src="../_assets/img/logos/govuk-crest@2x.png" width="125" height="102" alt="Crown copyright logo">
@@ -98,12 +93,7 @@
     </div>
   </div>
 </footer>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  <script>
-      if (!window.jQuery) {
-          document.write('<script src="../_assets/js/vendor/jquery-1.11.0.min.js"><\/script>');
-      }
-  </script>
+  <script src="../_assets/js/vendor/jquery-1.11.0.min.js"></script>
   <script src="../_assets/js/scripts.min.js"></script>
 </body>
 </html>

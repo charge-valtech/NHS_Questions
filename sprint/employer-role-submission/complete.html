@@ -10,7 +10,7 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-  <link href="../_assets/css/main.css" media="all" rel="stylesheet" type="text/css">
+  <link href="../_assets/css/main.css?cache-bust" media="all" rel="stylesheet" type="text/css">
   <script src="../_assets/js/vendor/modernizr-2.7.1.js"></script>
 </head>
 <body>
@@ -31,34 +31,25 @@
     <div class="phase-notice">
       <strong>ALPHA:</strong> This is a prototype
     </div>
-    
     <main role="main" id="main">
-        <section>
-            <div id="content-wrapper">
-                <div class="help-container">
-                </div>
-                <h1>Apprenticeships</h1>
-                <h2>Employer Role Submission - Complete</h2>
-                <p>
-                    Your vacancy has been submitted.
-                </p>
-                <p>
-                    Your reference for this vacancy is: <b>VE1234556</b>
-                </p>
-                <p class="action group">
-                <a class="button secondary" href="ReviewDetails.html">Submit another role</a>
-                    <a class="button" href="../employer.html">Finished</a>
+      
+<h1 class="heading-48">Apprenticeships</h1>
+<h2 class="heading-36">Employer Role Submission - Complete</h2>
+<div class="form-group">
+  <p class="text">
+    Your vacancy has been submitted.
+  </p>
+  <p class="text">
+    Your reference for this vacancy is: <b>VE1234556</b>
+  </p>
+</div>
+<div class="form-group">
+  <a class="button" href="ReviewDetails.html">Submit another role</a>
+  <a class="button-link" href="../employer.html">Return to dashboard</a>
+</div>
 
-                </p>
-            </div>
-        </section>
     </main>
-
-
-
-
-
-
+    <div class="clearfix"></div>
   </div>
   <footer role="contentinfo">
   <div class="footer__wrapper">
@@ -66,7 +57,7 @@
       <ul class="footer__nav" role="navigation">
         <li class="footer__link"><a href="/claim-notes#16" target="_blank">Helpdesk</a></li>
         <li class="footer__link"><a href="http://www.dwp.gov.uk/privacy-policy/" target="_blank">Privacy &amp; Cookies</a></li>
-        <li class="footer__link">Built by <a href="#" target="_blank">Skills Funding Agency</a></li>
+        <li class="footer__link">Built by <a href="http://apprenticeships.org.uk" target="_blank">Skills Funding Agency</a></li>
       </ul>
       <a class="footer__copyright" href="http://www.nationalarchives.gov.uk/information-management/our-services/crown-copyright.htm" target="_blank">
         <img src="../_assets/img/logos/govuk-crest@2x.png" width="125" height="102" alt="Crown copyright logo">
@@ -75,12 +66,7 @@
     </div>
   </div>
 </footer>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  <script>
-      if (!window.jQuery) {
-          document.write('<script src="../_assets/js/vendor/jquery-1.11.0.min.js"><\/script>');
-      }
-  </script>
+  <script src="../_assets/js/vendor/jquery-1.11.0.min.js"></script>
   <script src="../_assets/js/scripts.min.js"></script>
 </body>
 </html>

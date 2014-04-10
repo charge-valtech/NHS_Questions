@@ -10,7 +10,7 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-  <link href="../_assets/css/main.css" media="all" rel="stylesheet" type="text/css">
+  <link href="../_assets/css/main.css?cache-bust" media="all" rel="stylesheet" type="text/css">
   <script src="../_assets/js/vendor/modernizr-2.7.1.js"></script>
 </head>
 <body>
@@ -31,51 +31,50 @@
     <div class="phase-notice">
       <strong>ALPHA:</strong> This is a prototype
     </div>
-    
     <main role="main" id="main">
-        <section>
-            <div id="content-wrapper">
-                <h1>Additional information</h1>
-                <fieldset class="">
-                    <legend>Reality check</legend>
-                    <p class="group">
-                        <label for="">Any unusual working hours or conditions (eg evenings or weekends, heavy physical work)?</label>
-                        <textarea id="role-long-desc" class="short" placeholder=""></textarea>
-                    </p>
-                </fieldset>
-                <fieldset>
-                    <legend>Future prospects (optional)</legend>
-                    <div>
-                        <label>Briefly explain what the candidate can expect once they have finished  the apprenticeship:</label>
-                        <label>What are the chances of there being a permanent job on offer?</label>
-                        <textarea name="" id="" class="short"></textarea>
-                    </div>
-                </fieldset>
+      
+<h1 class="heading-48">Additional information</h1>
+<fieldset>
+  <legend class="heading-36">Reality check</legend>
+  <div class="form-group">
+    <label class="form-label" for="any-unusual">Any unusual working hours or conditions (eg evenings or weekends, heavy physical work)?</label>
+    <textarea id="any-unusual" class="form-control"></textarea>
+  </div>
+</fieldset>
 
-                <fieldset class="separator">
-                    <legend>
-                        Contact details for further information (optional)
-                    </legend>
-                    <label>These details will appear in the advert.</label>
-                    <p>
-                        <label>Contact name</label>
-                    <input id="" type="text" class="x-large" tabindex="0"></p>
-                    <p>
-                        <label>Email address</label>
-                    <input id="" type="email" class="x-large" tabindex="0"></p>
-                    <p>
-                        <label>Telephone number</label>
-                    <input id="" type="tel" class="x-large" tabindex="0"></p>
-                </fieldset>
-                <p class="action group">
-                    <a class="button secondary" href="TrainingDetails.html">Back</a>
-                    <a class="button" href="VacancyCheckDetails.html">Preview</a>
-                </p>
-            </div>
-        </section>
+<fieldset>
+  <legend class="heading-36">Future prospects (optional)</legend>
+  <div class="form-group">
+    <label class="form-label" for="briefly-explain">Briefly explain what the candidate can expect once they have finished  the apprenticeship:</label>
+    <p class="form-hint">What are the chances of there being a permanent job on offer?</p>
+    <textarea id="briefly-explain" class="form-control"></textarea>
+  </div>
+</fieldset>
+
+<fieldset>
+  <legend class="heading-36">Contact details for further information (optional)</legend>
+  <p class="form-hint">These details will appear in the advert.</p>
+  <div class="form-group form-group--compound">
+    <label class="form-label" for="contact-name">Contact name</label>
+    <input id="contact-name" type="text" class="form-control">
+  </div>
+  <div class="form-group form-group--compound">
+    <label class="form-label" for="contact-email">Email address</label>
+    <input id="contact-email" type="email" class="form-control">
+  </div>
+  <div class="form-group">
+    <label class="form-label" for="contact-tel">Telephone number</label>
+    <input id="contact-tel" type="tel" class="form-control">
+  </div>
+</fieldset>
+
+<div class="form-group">
+  <a class="button" href="VacancyCheckDetails.html">Preview</a>
+  <a class="button-link" href="TrainingDetails.html">Back</a>
+</div>
+
     </main>
-
-
+    <div class="clearfix"></div>
   </div>
   <footer role="contentinfo">
   <div class="footer__wrapper">
@@ -83,7 +82,7 @@
       <ul class="footer__nav" role="navigation">
         <li class="footer__link"><a href="/claim-notes#16" target="_blank">Helpdesk</a></li>
         <li class="footer__link"><a href="http://www.dwp.gov.uk/privacy-policy/" target="_blank">Privacy &amp; Cookies</a></li>
-        <li class="footer__link">Built by <a href="#" target="_blank">Skills Funding Agency</a></li>
+        <li class="footer__link">Built by <a href="http://apprenticeships.org.uk" target="_blank">Skills Funding Agency</a></li>
       </ul>
       <a class="footer__copyright" href="http://www.nationalarchives.gov.uk/information-management/our-services/crown-copyright.htm" target="_blank">
         <img src="../_assets/img/logos/govuk-crest@2x.png" width="125" height="102" alt="Crown copyright logo">
@@ -92,12 +91,7 @@
     </div>
   </div>
 </footer>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  <script>
-      if (!window.jQuery) {
-          document.write('<script src="../_assets/js/vendor/jquery-1.11.0.min.js"><\/script>');
-      }
-  </script>
+  <script src="../_assets/js/vendor/jquery-1.11.0.min.js"></script>
   <script src="../_assets/js/scripts.min.js"></script>
 </body>
 </html>

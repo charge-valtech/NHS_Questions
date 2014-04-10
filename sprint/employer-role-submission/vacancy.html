@@ -10,7 +10,7 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-  <link href="../_assets/css/main.css" media="all" rel="stylesheet" type="text/css">
+  <link href="../_assets/css/main.css?cache-bust" media="all" rel="stylesheet" type="text/css">
   <script src="../_assets/js/vendor/modernizr-2.7.1.js"></script>
 </head>
 <body>
@@ -31,158 +31,149 @@
     <div class="phase-notice">
       <strong>ALPHA:</strong> This is a prototype
     </div>
-    
     <main role="main" id="main">
-        <section>
-            <div id="content-wrapper">
-                <h1>Add vacancy details</h1>
-                <div class="validation-summary hidden">
-                    <h3>There was a problem submitting the form</h3>
-                    <p>Please try the following:</p>
-                    <ol>
-                        <li><a href="#error1">Enter your first name</a></li>
-                    </ol>
-                </div>
-                <fieldset class="separator">
-                    <legend class="">Vacancy details</legend>
-                    <p class="group">
-                        <label for="organisation-name" class="required">Job title</label>
-                        <input id="organisation-name" type="text" class="large" tabindex="0">
-                    </p>
-                    <p class="group">
-                        <label for="organisation-name">No. of vacancies</label>
-                        <select class="small" id="title">
-                            <option value="">1</option>
-                            <option value="">2</option>
-                            <option value="">3</option>
-                            <option value="">4</option>
-                            <option value="">5</option>
-                            <option value="">6</option>
-                            <option value="">7</option>
-                            <option value="">8</option>
-                            <option value="">9</option>
-                            <option value="">10</option>
-                            <option value="">Multiple</option>
+      
+<h1 class="heading-48">Add vacancy details</h1>
+<fieldset>
+  <legend class="heading-36">Vacancy details</legend>
+  <div class="form-group">
+    <label for="job-title" class="form-label">Job title</label>
+    <input id="job-title" type="text" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="num-vacancies" class="form-label">No. of vacancies</label>
+    <select id="num-vacancies">
+        <option value="">1</option>
+        <option value="">2</option>
+        <option value="">3</option>
+        <option value="">4</option>
+        <option value="">5</option>
+        <option value="">6</option>
+        <option value="">7</option>
+        <option value="">8</option>
+        <option value="">9</option>
+        <option value="">10</option>
+        <option value="">Multiple</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="brief-summ" class="form-label">Brief summary of role</label>
+    <input id="brief-summ" type="text" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="key-resp" class="form-label">Key responsibilities</label>
+    <p class="form-hint">What the duties are?</p>
+    <textarea id="key-resp" class="form-control short"></textarea>
+  </div>
+</fieldset>
 
-                        </select>
-                    </p>
-                    <p class="group">
-                        <label for="role-short-desc" class="required">Brief summary of role</label>
+<fieldset>
+  <legend class="heading-36">Vacancy Location</legend>
+  <div class="form-group form-group--compound inline-button">
+    <label class="form-label" for="role-short-desc">Postcode</label>
+    <input id="role-short-desc" type="text" class="form-control form-control--1-4">
+    <a class="button-link" href="#">Find address</a>
+  </div>
+  <div class="form-group">
+    <label for="select-address" class="form-label">Select address</label>
+    <select id="select-address">
+        <option value="">Please select</option>
+        <option value="">45 High Street, Reddich</option>
+        <option value="">47 High Street, Reddich</option>
+        <option value="">49 High Street, Reddich</option>
+        <option value="">51 High Street, Reddich</option>
+        <option value="">53 High Street, Reddich</option>
+        <option value="">55 High Street, Reddich</option>
+    </select>
+  </div>
+  <div class="form-group form-group--compound">
+    <label class="form-label" for="address1">Address line 1</label>
+    <input type="text" id="address1" class="form-control">
+  </div>
+  <div class="form-group form-group--compound">
+    <label class="form-label" for="address2">Address line 2</label>
+    <input type="text" id="address2" class="form-control">
+  </div>
+  <div class="form-group form-group--compound">
+    <label class="form-label" for="address3">Town or City</label>
+    <input type="text" id="address3" class="form-control form-control--1-3">
+  </div>
+</fieldset>
 
-                        <input id="role-short-desc" type="text" class="x-large">
-                    </p>
-                    <p class="group">
-                        <label for="role-long-desc">Key responsibilities</label>
-                        <label>What the duties are?</label>
-                        <textarea id="role-long-desc" class="short" placeholder=""></textarea>
-                    </p>
+<fieldset>
+  <legend class="heading-36">Working week</legend>
+  <div class="form-group">
+    <label class="form-label" for="how-many-hours">How many hours a week will the apprentice work?</label>
+    <p class="form-hint" >Include time they will spend at college or in training.</p>
+    <input id="how-many-hours" type="text" maxlength="2" class="form-control form-control--hours">
+  </div>
+  <div class="form-group form-group--compound">
+    <label class="form-label">Working days (tick all that apply)</label>
+    <p class="form-hint">What days might they be expected to work</p>
+  </div>
+  <div class="form-group">
+    <label for="weekday1" class="block-label"><input id="weekday1" type="checkbox">Monday</label>
+    <label for="weekday2" class="block-label"><input id="weekday2" type="checkbox">Tuesday</label>
+    <label for="weekday3" class="block-label"><input id="weekday3" type="checkbox">Wednesday</label>
+    <label for="weekday4" class="block-label"><input id="weekday4" type="checkbox">Thurday</label>
+    <label for="weekday5" class="block-label"><input id="weekday5" type="checkbox">Friday</label>
+    <label for="weekday6" class="block-label"><input id="weekday6" type="checkbox">Saturday</label>
+    <label for="weekday7" class="block-label"><input id="weekday7" type="checkbox">Sunday</label>
+  </div>
+</fieldset>
 
-                </fieldset>
-                <fieldset class="separator">
-                    <legend>Vacancy Location</legend>
-                    <p>If you'd rather enter the full address manually <a href="#">click here</a>
-                    <p class="group">
-                        <label for="role-short-desc">Postcode</label>
-                        <input id="role-short-desc" type="text" class="short">
-                        <button class="button secondary inline" type="submit" value="Continue">Find address</button>
-                    </p>
-                    <p class="group">
-                        <label for="title">Select address</label>
-                        <select id="title">
-                            <option value="">Please select</option>
-                            <option value="">45 High Street, Reddich</option>
-                            <option value="">47 High Street, Reddich</option>
-                            <option value="">49 High Street, Reddich</option>
-                            <option value="">51 High Street, Reddich</option>
-                            <option value="">53 High Street, Reddich</option>
-                            <option value="">55 High Street, Reddich</option>
-                        </select>
-                    </p>
-                </fieldset>
-                <fieldset class="separator">
-                    <legend>Working week</legend>
-                    <p class="group">
-                        <label for="role-short-desc">How many hours a week will the apprentice work?</label>
-                        <label for="">Include time they will spend at college or in training.</label>
-                        <input id="role-short-desc" type="text" value="" class="small">
-                    </p>
-                        <label>Working days (tick all that apply)</label>
-                        <label for="">What days might they be expected to work</label>
-                        <ul class="option group">
-                            <li>
-                                    <label><input type="checkbox">Monday</label>
-                            </li>
-                            <li>
-                                    <label><input type="checkbox">Tuesday</label>
+<fieldset class="inline-form-groups">
+  <legend class="heading-36">Wage</legend>
+  <div class="form-group">
+    <label for="wage-amount" class="form-label">Amount</label>
+    <input id="wage-amount" type="text" class="form-control form-control--wage">
+    <p class="form-hint">E.g. £24.00</p>
+  </div>
+  <div class="form-group">
+    <label for="wage-freq" class="form-label">Frequency</label>
+    <select id="wage-freq">
+      <option value="">Please select</option>
+      <option selected="selected" value="">Weekly</option>
+      <option value="">Monthly</option>
+      <option value="">Yearly</option>
+    </select>
+  </div>
+</fieldset>
 
-                            </li>
-                            <li>
-                                    <label><input type="checkbox">Wednesday</label>
+<fieldset>
+  <legend class="heading-36">Key dates</legend>
+  <div class="form-group">
+    <label class="form-label" for="closing-date">Closing date for applications</label>
+    <input class="form-control form-control--1-3" type="date" id="closing-date">
+  </div>
+  <div class="form-group">
+    <label class="form-label" for="interview-date">When do you plan to start interviewing? (optional)</label>
+    <input class="form-control form-control--1-3" id="interview-date" type="date">
+  </div>
+  <div class="form-group inline">
+    <p>When do you want the apprentice to start work?</p>
+    <label for="asap-start" class="block-label">
+      <input id="asap-start" type="radio" name="h-dates">
+      As soon as possible
+    </label>
+    <label data-target="start-date-panel" for="enter-start" class="block-label">
+      <input class="check-to-show-trigger" id="enter-start" type="radio" name="h-dates">
+      Enter date
+    </label>
+    <div id="start-date-panel" class="panel-indent toggle-content">
+      <label class="form-label" for="start-date">Start date</label>
+      <input id="start-date" type="date" class="form-control form-control--1-3">
+    </div>
+  </div>
+</fieldset>
 
-                            </li>
-                            <li>
-                                    <label><input type="checkbox">Thurday</label>
+<div class="form-group">
+  <a class="button" href="TrainingDetails.html">Continue</a>
+  <a class="button-link" href="ReviewDetails.html">Back</a>
+</div>
 
-                            </li>
-                            <li>
-                                    <label><input type="checkbox">Friday</label>
-                            </li>
-                            <li>
-                                    <label><input type="checkbox">Saturday</label>
-                            </li>
-                            <li>
-                                    <label><input type="checkbox">Sunday</label>
-                            </li>
-                        </ul>
-
-                </fieldset>
-                <fieldset class="separator">
-                    <legend>Wage</legend>
-                    <p class="group">
-                        <label for="" class="required">Amount</label>
-                        &pound;<input id="role-short-desc" type="text" class="small">
-                    </p>
-                    <p class="group">
-                        <label for="title" class="required">Frequency</label>
-                        <select id="title">
-                            <option value="">Please select</option>
-                            <option selected="selected" value="">Weekly</option>
-                            <option value="">Monthly</option>
-                            <option value="">Yearly</option>
-                        </select>
-                    </p>
-                </fieldset>
-                <fieldset class="separator">
-                    <legend>Key dates</legend>
-                    <p class="group">
-                        <label for="">Closing date for applications</label>
-                        <input type="date">
-                    </p>
-                    <p class="group">
-                        <label for="">When do you plan to start interviewing? (optional)</label>
-                        <input type="date">
-                    </p>
-                    <p class="group">
-                        <label>When do you want the apprentice to start work?</label>
-                        <label><input checked="checked" type="radio" name="h-dates">As soon as possible</label>
-                        <label><input class="check-to-show-trigger" type="radio" name="h-dates">Enter date
-                          <input type="date" class="check-to-show">
-                        </label>
-
-                    </p>
-
-                </fieldset>
-
-
-                <p class="action group">
-                    <a class="button secondary" href="ReviewDetails.html">Back</a>
-                    <a class="button" href="TrainingDetails.html">Continue</a>
-                </p>
-            </div>
-        </section>
     </main>
-
-
+    <div class="clearfix"></div>
   </div>
   <footer role="contentinfo">
   <div class="footer__wrapper">
@@ -190,7 +181,7 @@
       <ul class="footer__nav" role="navigation">
         <li class="footer__link"><a href="/claim-notes#16" target="_blank">Helpdesk</a></li>
         <li class="footer__link"><a href="http://www.dwp.gov.uk/privacy-policy/" target="_blank">Privacy &amp; Cookies</a></li>
-        <li class="footer__link">Built by <a href="#" target="_blank">Skills Funding Agency</a></li>
+        <li class="footer__link">Built by <a href="http://apprenticeships.org.uk" target="_blank">Skills Funding Agency</a></li>
       </ul>
       <a class="footer__copyright" href="http://www.nationalarchives.gov.uk/information-management/our-services/crown-copyright.htm" target="_blank">
         <img src="../_assets/img/logos/govuk-crest@2x.png" width="125" height="102" alt="Crown copyright logo">
@@ -199,12 +190,7 @@
     </div>
   </div>
 </footer>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  <script>
-      if (!window.jQuery) {
-          document.write('<script src="../_assets/js/vendor/jquery-1.11.0.min.js"><\/script>');
-      }
-  </script>
+  <script src="../_assets/js/vendor/jquery-1.11.0.min.js"></script>
   <script src="../_assets/js/scripts.min.js"></script>
 </body>
 </html>

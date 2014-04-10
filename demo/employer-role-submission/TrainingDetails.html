@@ -10,7 +10,7 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-  <link href="../_assets/css/main.css" media="all" rel="stylesheet" type="text/css">
+  <link href="../_assets/css/main.css?cache-bust" media="all" rel="stylesheet" type="text/css">
   <script src="../_assets/js/vendor/modernizr-2.7.1.js"></script>
 </head>
 <body>
@@ -31,45 +31,24 @@
     <div class="phase-notice">
       <strong>ALPHA:</strong> This is a prototype
     </div>
-    
     <main role="main" id="main">
-        <section>
-            <div id="content-wrapper">
-                <h1>Training details</h1>
-                <fieldset class="separator">
-                    <legend class="">Provider</legend>
-                    <p class="group">
-                        <h3>
-                            Which college or learning provider are you using?
-                        </h3>
-                        <input id="organisation-name" type="text"  tabindex="0">
-                        <a target="_blank" href="http://www.apprenticeships.org.uk/employers/find-an-apprenticeship-training-organisation.aspx">Need to find a training provider?</a>
-                    </p>
-                    <!-- <p class="group">
-                        <h3>Qualifications</h3>
-                    </p>
-                    <p class="group">
-                        <label>Please select from the list of qualifications below</label>
-                        <label for="">This will be the qualification your apprentice will work towards during the apprenticeship</label>
-                        </p>
-                    <p class="group">
-                        <select id="title">
-                            <option value="">BTEC level 1 (construction and the built environment)</option>
-                            <option value="">BTEC level 2 (construction and the built environment)</option>
-                            <option value="">BTEC level 3 (construction and the built environment)</option>
-                            <option value="">BTEC level 4 (construction and the built environment)</option>
-                        </select>
-                    </p> -->
-                    </p>
-                </fieldset>
-                <p class="action group">
-                    <a class="button secondary" href="vacancy.html">Back</a>
-                    <a class="button" href="eligibility-criteria.html">Continue</a>
-                </p>
-            </div>
-        </section>
-    </main>
+      
+<h1 class="heading-48">Training details</h1>
+<fieldset>
+  <legend class="heading-36">Provider</legend>
+  <div class="form-group">
+    <label for="organisation-name" class="form-label">Which college or learning provider are you using?</label>
+    <input class="form-control" id="organisation-name" type="text">
+    <a class="form-hint" target="_blank" href="http://www.apprenticeships.org.uk/employers/find-an-apprenticeship-training-organisation.aspx">Need to find a training provider?</a>
+  </div>
+</fieldset>
+<div class="form-group">
+  <a class="button" href="eligibility-criteria.html">Continue</a>
+  <a class="button-link" href="vacancy.html">Back</a>
+</div>
 
+    </main>
+    <div class="clearfix"></div>
   </div>
   <footer role="contentinfo">
   <div class="footer__wrapper">
@@ -77,7 +56,7 @@
       <ul class="footer__nav" role="navigation">
         <li class="footer__link"><a href="/claim-notes#16" target="_blank">Helpdesk</a></li>
         <li class="footer__link"><a href="http://www.dwp.gov.uk/privacy-policy/" target="_blank">Privacy &amp; Cookies</a></li>
-        <li class="footer__link">Built by <a href="#" target="_blank">Skills Funding Agency</a></li>
+        <li class="footer__link">Built by <a href="http://apprenticeships.org.uk" target="_blank">Skills Funding Agency</a></li>
       </ul>
       <a class="footer__copyright" href="http://www.nationalarchives.gov.uk/information-management/our-services/crown-copyright.htm" target="_blank">
         <img src="../_assets/img/logos/govuk-crest@2x.png" width="125" height="102" alt="Crown copyright logo">
@@ -86,12 +65,7 @@
     </div>
   </div>
 </footer>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  <script>
-      if (!window.jQuery) {
-          document.write('<script src="../_assets/js/vendor/jquery-1.11.0.min.js"><\/script>');
-      }
-  </script>
+  <script src="../_assets/js/vendor/jquery-1.11.0.min.js"></script>
   <script src="../_assets/js/scripts.min.js"></script>
 </body>
 </html>

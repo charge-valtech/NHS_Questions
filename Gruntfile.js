@@ -171,9 +171,9 @@ module.exports = function(grunt) {
 
   grunt.registerTask('default', ['jshint', 'concat:dev', 'compass:dev', 'assemble', 'connect', 'watch']);
 
-  grunt.registerTask('demo', ['cssmin:dist', 'clean:demo', 'copyto:demo']);
-
   grunt.registerTask('sprint', ['cssmin:dist', 'clean:sprint', 'copyto:sprint']);
+
+  grunt.registerTask('demo', ['cssmin:dist', 'clean:demo', 'copyto:demo']);
 
   grunt.registerTask('dist', ['cssmin:dist', 'clean:dist', 'copyto:dist']);
 

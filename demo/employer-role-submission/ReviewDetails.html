@@ -10,7 +10,7 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-  <link href="../_assets/css/main.css" media="all" rel="stylesheet" type="text/css">
+  <link href="../_assets/css/main.css?cache-bust" media="all" rel="stylesheet" type="text/css">
   <script src="../_assets/js/vendor/modernizr-2.7.1.js"></script>
 </head>
 <body>
@@ -31,100 +31,89 @@
     <div class="phase-notice">
       <strong>ALPHA:</strong> This is a prototype
     </div>
-    
     <main role="main" id="main">
-        <section>
-            <div id="content-wrapper">
-                <h1>Review organisation details</h1>
-                <div class="validation-summary hidden">
-                    <h3>There was a problem submitting the form</h3>
-                    <p>Please try the following:</p>
-                    <ol>
-                        <li><a href="#error1">Enter your first name</a></li>
-                    </ol>
-                </div>
-                <fieldset>
-                  <legend>Organisation details</legend>
-                  <p class="group">
-                    <label for="businessOrganDetails">Name of organisation</label><input type="text" width="100" id="businessOrganDetails" />
-                  </p>
-                  <label>Organisation type or sector</label>
-                  <select>
-                      <option value="Please select ">Please select </option>
-                      <option value="Administration &amp; Human Resources">Administration &amp; Human Resources</option>
-                      <option value="Agriculture &amp; Land Based Services">Agriculture &amp; Land Based Services</option>
-                      <option value="Arts, Creative &amp; Cultural Industries">Arts, Creative &amp; Cultural Industries</option>
-                      <option value="Automotive Industry &amp; Passenger Transport">Automotive Industry &amp; Passenger Transport</option>
-                      <option value="Broadcast, Film &amp; Multimedia">Broadcast, Film &amp; Multimedia</option>
-                      <option value="Chemical, Oil &amp; Nuclear Industry">Chemical, Oil &amp; Nuclear Industry</option>
-                      <option value="Construction">Construction</option>
-                      <option value="Customer Service &amp; Retail">Customer Service &amp; Retail</option>
-                      <option value="Energy/Utilities Industry">Energy/Utilities Industry</option>
-                      <option value="Engineering, Electricians &amp; Building Services">Engineering, Electricians &amp; Building Services</option>
-                      <option value="Financial Services">Financial Services</option>
-                      <option value="Food and Drink">Food and Drink</option>
-                      <option value="Hair &amp; Beauty">Hair &amp; Beauty</option>
-                      <option value="Hospitality &amp; Travel">Hospitality &amp; Travel</option>
-                      <option value="Information Technology &amp; Communications">Information Technology &amp; Communications</option>
-                      <option value="Logistics">Logistics</option>
-                      <option value="Manufacturing &amp; Processing">Manufacturing &amp; Processing</option>
-                      <option value="Marine Industry">Marine Industry</option>
-                      <option value="Property">Property</option>
-                      <option value="Public Services">Public Services</option>
-                      <option value="Sports &amp; Fitness">Sports &amp; Fitness</option>
-                  </select>
-                  <p>
-                    <label>Website address</label><input type="text" width="100" id="businessOrganDetails" placeholder="http://" />
-                  </p>
-                  <p>
-                      <label>How many employees does your organisation have in the UK?</label>
-                      <select>
-                          <option value="Please select ">Please select </option>
-                          <option value="&lt;9">&lt;9</option>
-                          <option value="9-49">9-49</option>
-                          <option value="50-249">50-249</option>
-                          <option value="250-999">250-999</option>
-                          <option value="1000-4999">1000-4999</option>
-                          <option value="5000+">5000+</option>
-                          <option value="Don't Know">Don't Know</option>
-                      </select>
-                  </p>
-                </fieldset>
-                <fieldset>
-                  <legend>Include a logo</legend>
-                  <div>
-                    <p>
-                        <label>Do you want to include a logo in the advert?</label>
-                        <ul class="option group inline">
-                            <li>
-                                <label><input type="radio" checked="checked" name="show-logo">Yes</label>
-                            </li>
-                            <li>
-                                <label><input type="radio" name="show-logo">No</label>
-                            </li>
-                        </ul>
-                    </p>
-                </div>
-                <br />
-                <br />
-                <div>
-                    <p>
-                        <img src="../_assets/img/logos/AdultLearningAcad.png" alt="GOV.UK">
-                    </p>
-                    <p>
-                        <a class="button secondary" href="#">Choose file</a>
-                    </p>
-                 </div>
-                </fieldset>
-                <p class="action group">
-                    <a class="button secondary" href="../PostVacancyAuthenticateUser.html">Back</a>
-                    <a class="button" href="vacancy.html">Continue</a>
-                </p>
-            </div>
-        </section>
+      
+<h1 class="heading-48">Review organisation details</h1>
+<fieldset>
+  <legend class="heading-36">Organisation details</legend>
+  <div class="form-group">
+    <label class="form-label" for="businessOrganDetails">Name of organisation</label>
+    <input class="form-control" type="text" id="businessOrganDetails" />
+  </div>
+  <div class="form-group">
+    <label for="select-org-type" class="form-label">Organisation type or sector</label>
+    <select id="select-org-type">
+        <option value="Please select ">Please select </option>
+        <option value="Administration &amp; Human Resources">Administration &amp; Human Resources</option>
+        <option value="Agriculture &amp; Land Based Services">Agriculture &amp; Land Based Services</option>
+        <option value="Arts, Creative &amp; Cultural Industries">Arts, Creative &amp; Cultural Industries</option>
+        <option value="Automotive Industry &amp; Passenger Transport">Automotive Industry &amp; Passenger Transport</option>
+        <option value="Broadcast, Film &amp; Multimedia">Broadcast, Film &amp; Multimedia</option>
+        <option value="Chemical, Oil &amp; Nuclear Industry">Chemical, Oil &amp; Nuclear Industry</option>
+        <option value="Construction">Construction</option>
+        <option value="Customer Service &amp; Retail">Customer Service &amp; Retail</option>
+        <option value="Energy/Utilities Industry">Energy/Utilities Industry</option>
+        <option value="Engineering, Electricians &amp; Building Services">Engineering, Electricians &amp; Building Services</option>
+        <option value="Financial Services">Financial Services</option>
+        <option value="Food and Drink">Food and Drink</option>
+        <option value="Hair &amp; Beauty">Hair &amp; Beauty</option>
+        <option value="Hospitality &amp; Travel">Hospitality &amp; Travel</option>
+        <option value="Information Technology &amp; Communications">Information Technology &amp; Communications</option>
+        <option value="Logistics">Logistics</option>
+        <option value="Manufacturing &amp; Processing">Manufacturing &amp; Processing</option>
+        <option value="Marine Industry">Marine Industry</option>
+        <option value="Property">Property</option>
+        <option value="Public Services">Public Services</option>
+        <option value="Sports &amp; Fitness">Sports &amp; Fitness</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label class="form-label" for="busWebAddress">Website address</label>
+    <input type="text" width="100" id="busWebAddress" class="form-control" />
+  </div>
+  <div class="form-group">
+    <label for="howmany-emp" class="form-label">How many employees does your organisation have in the UK?</label>
+    <select id="howmany-emp">
+        <option value="Please select ">Please select </option>
+        <option value="&lt;9">&lt;9</option>
+        <option value="9-49">9-49</option>
+        <option value="50-249">50-249</option>
+        <option value="250-999">250-999</option>
+        <option value="1000-4999">1000-4999</option>
+        <option value="5000+">5000+</option>
+        <option value="Don't Know">Don't Know</option>
+    </select>
+  </div>
+</fieldset>
+
+<fieldset>
+  <legend class="heading-36">Include a logo</legend>
+  <div class="form-group form-group--compound inline">
+    <p class="form-label">Do you want to include a logo in the advert?</p>
+    <label for="radio-inline-1" class="block-label">
+      <input id="radio-inline-1" type="radio" name="radio-inline-group" value="Yes">
+      Yes
+    </label>
+    <label for="radio-inline-2" class="block-label">
+      <input id="radio-inline-2" type="radio" name="radio-inline-group" value="No">
+      No
+    </label>
+  </div>
+    <div class="form-group form-group--compound">
+      <a class="button-link" href="#">Choose file</a>
+    </div>
+  <div class="form-group">
+    <img src="../_assets/img/logos/AdultLearningAcad.png" alt="GOV.UK">
+  </div>
+</fieldset>
+
+<div class="form-group">
+  <a class="button" href="vacancy.html">Continue</a>
+  <a class="button-link" href="../PostVacancyAuthenticateUser.html">Back</a>
+</div>
+
     </main>
-
-
+    <div class="clearfix"></div>
   </div>
   <footer role="contentinfo">
   <div class="footer__wrapper">
@@ -132,7 +121,7 @@
       <ul class="footer__nav" role="navigation">
         <li class="footer__link"><a href="/claim-notes#16" target="_blank">Helpdesk</a></li>
         <li class="footer__link"><a href="http://www.dwp.gov.uk/privacy-policy/" target="_blank">Privacy &amp; Cookies</a></li>
-        <li class="footer__link">Built by <a href="#" target="_blank">Skills Funding Agency</a></li>
+        <li class="footer__link">Built by <a href="http://apprenticeships.org.uk" target="_blank">Skills Funding Agency</a></li>
       </ul>
       <a class="footer__copyright" href="http://www.nationalarchives.gov.uk/information-management/our-services/crown-copyright.htm" target="_blank">
         <img src="../_assets/img/logos/govuk-crest@2x.png" width="125" height="102" alt="Crown copyright logo">
@@ -141,12 +130,7 @@
     </div>
   </div>
 </footer>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  <script>
-      if (!window.jQuery) {
-          document.write('<script src="../_assets/js/vendor/jquery-1.11.0.min.js"><\/script>');
-      }
-  </script>
+  <script src="../_assets/js/vendor/jquery-1.11.0.min.js"></script>
   <script src="../_assets/js/scripts.min.js"></script>
 </body>
 </html>

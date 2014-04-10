@@ -10,7 +10,7 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-  <link href="../_assets/css/main.css" media="all" rel="stylesheet" type="text/css">
+  <link href="../_assets/css/main.css?cache-bust" media="all" rel="stylesheet" type="text/css">
   <script src="../_assets/js/vendor/modernizr-2.7.1.js"></script>
 </head>
 <body>
@@ -24,150 +24,75 @@
     <a class="global-header__logo" href="/" title="Go to the GOV.UK homepage">
       <img src="../_assets/img/logos/logo.png" alt="GOV.UK">
     </a>
-    <h1 class="global-header__title alpha"> <span class="alpha__label">Alpha</span></h1>
+    <h1 class="global-header__title alpha">Find an Apprenticeship <span class="alpha__label">Alpha</span></h1>
   </div>
 </header>
   <div class="content-container">
     <div class="phase-notice">
       <strong>ALPHA:</strong> This is a prototype
     </div>
-    
----
-headerTitle: Find an Apprenticeship
----
-<main role="main" id="main">
-        <section>
-            <div id="content-wrapper">
-                <div class="help-container">
-                    <!--    <ul aria-label="The following links will open in a new browser window">
-                            <li><a class="icon info" href="#" target="_blank" aria-label="" >i</a><span>Helpline: <a href="tel:0800 0150 400">0800 0150 400</a></span></li>
-                            <li><a href="#" aria-label="">Application Notes</a></li>
-                            <li><a href="#" aria-label="" onclick="">Your Feedback</a></li>
-                        </ul>  -->
-                </div>
+    <main role="main" id="main">
+      
 
-                <h1>Find an Apprenticeship</h1>
-                <nav class="progress-indicator">
+<h1 class="heading-48">Find an Apprenticeship</h1>
+<nav class="progress-indicator">
+  <ol aria-label="Progress Steps">
+    <li class="active">
+      <span>Personal attributes</span>
+    </li>
+    <li>
+      <span>Skills</span>
+    </li>
+    <li>
+      <span>Qualifications</span>
+    </li>
+    <li>
+      <span>Location</span>
+    </li>
+  </ol>
+</nav>
 
-                    <ol aria-label="Progress Steps">
-                        <li class="active">
+<div class="panel-indent">
+  <p>By answering the following questions, we hope to be able to match you to more suitable apprenticehips.</p>
+  <p>If you know what you're looking for already, then <a href="index.html">click here</a></p>
+</div>
+<fieldset>
+  <legend class="heading-36">1. Personal attributes</legend>
+  <ul class="group" style="font-size: 16px; list-style:none; padding-left: 0;">
+    <li class="inline form-group">
+      <h3 class="heading-24">You like to work outside</h3>
+      <label class="block-label" for="outside1"><input id="outside1" type="radio" checked="checked" name="show-logo">Strongly disagree</label>
+      <label class="block-label" for="outside2"><input id="outside2"  type="radio" checked="checked" name="show-logo">Disagree</label>
+      <label class="block-label" for="outside3"><input  id="outside3" type="radio" checked="checked" name="show-logo">Don't mind</label>
+      <label class="block-label" for="outside4"><input  id="outside4"  type="radio" checked="checked" name="show-logo">Agree</label>
+      <label class="block-label" for="outside5"><input  id="outside5" type="radio" checked="checked" name="show-logo">Strongly agree</label>
+    </li>
+    <li class="inline form-group">
+      <h3 class="heading-24">You like to work with your hands</h3>
+      <label class="block-label" for="hands1"><input id="hands1" type="radio" checked="checked" name="show-logo">Strongly disagree</label>
+      <label class="block-label" for="hands2"><input id="hands2"  type="radio" checked="checked" name="show-logo">Disagree</label>
+      <label class="block-label" for="hands3"><input  id="hands3" type="radio" checked="checked" name="show-logo">Don't mind</label>
+      <label class="block-label" for="hands4"><input  id="hands4"  type="radio" checked="checked" name="show-logo">Agree</label>
+      <label class="block-label" for="hands5"><input  id="hands5" type="radio" checked="checked" name="show-logo">Strongly agree</label>
+    </li>
+    <li class="inline form-group">
+      <h3 class="heading-24">You like to work in a team</h3>
+      <label class="block-label" for="team1"><input id="team1" type="radio" checked="checked" name="show-logo">Strongly disagree</label>
+      <label class="block-label" for="team2"><input id="team2"  type="radio" checked="checked" name="show-logo">Disagree</label>
+      <label class="block-label" for="team3"><input  id="team3" type="radio" checked="checked" name="show-logo">Don't mind</label>
+      <label class="block-label" for="team4"><input  id="team4"  type="radio" checked="checked" name="show-logo">Agree</label>
+      <label class="block-label" for="team5"><input  id="team5" type="radio" checked="checked" name="show-logo">Strongly agree</label>
+    </li>
+  </ul>
+</fieldset>
 
-                            <span>Personal attributes</span>
-                        </li>
-                        <li>
-                            <span>Skills</span>
-                        </li>
-                        <li>
-                            <span>Qualifications</span>
-                        </li>
-                        <li>
-                            <span>Location</span>
-                        </li>
+<div class="form-group">
+  <a class="button" href="apprenticeship-results.html">Continue</a>
+  <a class="button-link" href="#">Clear</a>
+</div>
 
-
-
-                    </ol>
-
-                </nav>
-
-
-
-
-
-                <div style="margin-bottom:20px;background:#f9f9f9;padding:10px;clear:both;border:1px solid #ddd;">
-                    <p>By answering the following questions, we hope to be able to match you to more suitable apprenticehips.</p>
-                    <p>If you know what you're looking for already, then <a href="index.html">click here</a></p>
-                </div>
-
-                <form action="" class="left">
-                    <fieldset class="separator">
-                        <legend>1. Personal attributes</legend>
-
-
-                        <ul class="group" style="list-style:none;">
-
-                            <li>
-                                <p>You like to work outside</p>
-                                <ul class="option group inline" style="margin-bottom:20px;">
-                                    <li>
-                                        <label><input type="radio" checked="checked" name="show-logo">Strongly disagree</label>
-                                    </li>
-                                    <li>
-                                        <label><input type="radio" checked="checked" name="show-logo">Disagree</label>
-                                    </li>
-                                    <li>
-                                        <label><input type="radio" checked="checked" name="show-logo">Don't mind</label>
-                                    </li>
-                                    <li>
-                                        <label><input type="radio" checked="checked" name="show-logo">Agree</label>
-                                    </li>
-                                    <li>
-                                        <label><input type="radio" checked="checked" name="show-logo">Strongly agree</label>
-                                    </li>
-                                </ul>
-                            </li>
-
-
-                            <li>
-                                <p>You like to work with your hands</p>
-                                <ul class="option group inline" style="margin-bottom:20px;">
-                                    <li>
-                                        <label><input type="radio" checked="checked" name="show-logo">Strongly disagree</label>
-                                    </li>
-                                    <li>
-                                        <label><input type="radio" checked="checked" name="show-logo">Disagree</label>
-                                    </li>
-                                    <li>
-                                        <label><input type="radio" checked="checked" name="show-logo">Don't mind</label>
-                                    </li>
-                                    <li>
-                                        <label><input type="radio" checked="checked" name="show-logo">Agree</label>
-                                    </li>
-                                    <li>
-                                        <label><input type="radio" checked="checked" name="show-logo">Strongly agree</label>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <p>You like working with fruit and veg?</p>
-                                <ul class="option group inline" style="margin-bottom:20px;">
-                                    <li>
-                                        <label><input type="radio" checked="checked" name="show-logo">Strongly disagree</label>
-                                    </li>
-                                    <li>
-                                        <label><input type="radio" checked="checked" name="show-logo">Disagree</label>
-                                    </li>
-                                    <li>
-                                        <label><input type="radio" checked="checked" name="show-logo">Don't mind</label>
-                                    </li>
-                                    <li>
-                                        <label><input type="radio" checked="checked" name="show-logo">Agree</label>
-                                    </li>
-                                    <li>
-                                        <label><input type="radio" checked="checked" name="show-logo">Strongly agree</label>
-                                    </li>
-                                </ul>
-                            </li>
-
-                        </ul>
-
-
-
-                    </fieldset>
-                </form>
-
-                <p class="action group">
-                    <a class="button" href="apprenticeship-results.html">Continue</a>
-                    <a class="button secondary" href="#">Clear</a>
-
-                </p>
-                </form>
-            </div>
-        </section>
     </main>
-l>
-
+    <div class="clearfix"></div>
   </div>
   <footer role="contentinfo">
   <div class="footer__wrapper">
@@ -175,7 +100,7 @@ l>
       <ul class="footer__nav" role="navigation">
         <li class="footer__link"><a href="/claim-notes#16" target="_blank">Helpdesk</a></li>
         <li class="footer__link"><a href="http://www.dwp.gov.uk/privacy-policy/" target="_blank">Privacy &amp; Cookies</a></li>
-        <li class="footer__link">Built by <a href="#" target="_blank">Skills Funding Agency</a></li>
+        <li class="footer__link">Built by <a href="http://apprenticeships.org.uk" target="_blank">Skills Funding Agency</a></li>
       </ul>
       <a class="footer__copyright" href="http://www.nationalarchives.gov.uk/information-management/our-services/crown-copyright.htm" target="_blank">
         <img src="../_assets/img/logos/govuk-crest@2x.png" width="125" height="102" alt="Crown copyright logo">
@@ -184,12 +109,7 @@ l>
     </div>
   </div>
 </footer>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  <script>
-      if (!window.jQuery) {
-          document.write('<script src="../_assets/js/vendor/jquery-1.11.0.min.js"><\/script>');
-      }
-  </script>
+  <script src="../_assets/js/vendor/jquery-1.11.0.min.js"></script>
   <script src="../_assets/js/scripts.min.js"></script>
 </body>
 </html>
