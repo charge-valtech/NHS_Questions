@@ -38,11 +38,18 @@ body {
 
 p, pre {
   margin: 5px 0 20px;
+  &.text {
+    @include copy-19;
+  }
 }
 
 b,
 strong {
   font-weight: 600;
+}
+
+.highlight {
+  color: $hm-government;
 }
 
 .text {
