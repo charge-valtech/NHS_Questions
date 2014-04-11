@@ -38,11 +38,21 @@ module.exports = function(grunt) {
         src: ['www/_assets/img']
       }
     },
-    compass: {
+    // compass: {
+    //   dev: {
+    //     options: {
+    //       sassDir: 'www/_assets/scss',
+    //       cssDir: 'www/_assets/css'
+    //     }
+    //   }
+    // },
+    sass: {
       dev: {
         options: {
-          sassDir: 'www/_assets/scss',
-          cssDir: 'www/_assets/css'
+          style: 'expanded'
+        },
+        files: {
+          'www/_assets/css/main.css' : 'www/_assets/scss/main.scss'
         }
       }
     },
@@ -79,7 +89,7 @@ module.exports = function(grunt) {
       },
       css: {
         files: ['www/_assets/scss/**/*.scss'],
-        tasks: ['compass:dev']
+        tasks: ['sass']
       },
       js: {
         files: ['www/_assets/js/**/*.js', '!www/_assets/js/scripts.min.js'],
@@ -154,7 +164,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-imageoptim');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-compass');
+  // grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-watch');
@@ -164,7 +175,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('imageoptim', ['imageoptim']);
 
-  grunt.registerTask('default', ['jshint', 'concat:dev', 'compass:dev', 'assemble', 'connect', 'watch']);
+  grunt.registerTask('default', ['jshint', 'concat:dev', 'sass', 'assemble', 'connect', 'watch']);
 
   grunt.registerTask('sprint', ['cssmin:dist', 'clean:sprint', 'copyto:sprint']);
 
