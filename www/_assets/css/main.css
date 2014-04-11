@@ -1971,7 +1971,7 @@ video {
   margin: 0 auto;
   max-width: 1020px;
   overflow: hidden;
-  padding: 15px 15px 0;
+  padding: 15px;
 }
 @media (min-width: 641px) {
   .global-header__wrapper {
@@ -1983,9 +1983,17 @@ video {
 .global-header__logo {
   display: inline-block;
   font-size: 0;
-  /* Removes strange gap below img */
   margin: 0 -4px 15px 0;
+  vertical-align: middle;
   width: 33.33%;
+}
+.global-header__logo a {
+  display: inline-block;
+}
+@media (min-width: 641px) {
+  .global-header__logo {
+    margin-bottom: 0;
+  }
 }
 
 .global-header__title {
@@ -2013,9 +2021,10 @@ video {
   font-size: 0.7em;
   font-weight: 700;
   letter-spacing: 1px;
-  margin: 0 0 15px 8px;
+  margin-left: 8px;
   padding: 2px 5px;
   text-transform: uppercase;
+  vertical-align: middle;
 }
 
 .phase-notice {
