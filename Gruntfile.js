@@ -38,17 +38,10 @@ module.exports = function(grunt) {
         src: ['www/_assets/img']
       }
     },
-    // compass: {
-    //   dev: {
-    //     options: {
-    //       sassDir: 'www/_assets/scss',
-    //       cssDir: 'www/_assets/css'
-    //     }
-    //   }
-    // },
     sass: {
       dev: {
         options: {
+          sourcemap: true,
           style: 'expanded'
         },
         files: {

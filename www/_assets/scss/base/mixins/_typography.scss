@@ -1,3 +1,4 @@
+
 //  GOV.UK typography palettes
 
 //  ANATOMY OF A TYPE STYLE
@@ -12,22 +13,20 @@
 
 $is-print: false !default;
 
-%bold-nocaps {
-  font-weight: 700;
-  text-transform: none;
-}
-
 @mixin core-80($line-height: (80 / 80), $line-height-640: (55 / 53), $tabular-numbers: false) {
   @if $tabular-numbers == true {
     font-family: $NTA-Light-Tabular;
+  } @else {
+    font-family: $NTA-Light;
   }
   @if $is-print == false {
     font-size: 80px;
   } @else {
     font-size: 28pt;
   }
-  @extend %bold-nocaps;
   line-height: $line-height;
+  font-weight: 400;
+  text-transform: none;
   @media (max-width: 640px) {
     font-size: 53px;
     line-height: $line-height-640;
@@ -37,16 +36,17 @@ $is-print: false !default;
 @mixin core-48($line-height: (50 / 48), $line-height-640: (35 / 32), $tabular-numbers: false) {
   @if $tabular-numbers == true {
     font-family: $NTA-Light-Tabular;
+  } @else {
+    font-family: $NTA-Light;
   }
   @if $is-print == false {
     font-size: 48px;
   } @else {
     font-size: 18pt;
   }
-  @extend %bold-nocaps;
   line-height: $line-height;
-  margin-top: 15px;
-  margin-bottom: 30px;
+  font-weight: 400;
+  text-transform: none;
   @media (max-width: 640px) {
     font-size: 32px;
     line-height: $line-height-640;
@@ -56,16 +56,17 @@ $is-print: false !default;
 @mixin core-36($line-height: (40 / 36), $line-height-640: (25 / 24), $tabular-numbers: false) {
   @if $tabular-numbers == true {
     font-family: $NTA-Light-Tabular;
+  } @else {
+    font-family: $NTA-Light;
   }
   @if $is-print == false {
     font-size: 36px;
   } @else {
     font-size: 18pt;
   }
-  @extend %bold-nocaps;
   line-height: $line-height;
-  margin-top: 25px;
-  margin-bottom: 10px;
+  font-weight: 400;
+  text-transform: none;
   @media (max-width: 640px) {
     font-size: 24px;
     line-height: $line-height-640;
@@ -75,14 +76,17 @@ $is-print: false !default;
 @mixin core-27($line-height: (30 / 27), $line-height-640: (20 / 18), $tabular-numbers: false) {
   @if $tabular-numbers == true {
     font-family: $NTA-Light-Tabular;
+  } @else {
+    font-family: $NTA-Light;
   }
   @if $is-print == false {
     font-size: 27px;
   } @else {
     font-size: 16pt;
   }
-  @extend %bold-nocaps;
   line-height: $line-height;
+  font-weight: 400;
+  text-transform: none;
   @media (max-width: 640px) {
     font-size: 18px;
     line-height: $line-height-640;
@@ -92,16 +96,17 @@ $is-print: false !default;
 @mixin core-24($line-height: (30 / 24), $line-height-640: (24 / 20), $tabular-numbers: false) {
   @if $tabular-numbers == true {
     font-family: $NTA-Light-Tabular;
+  } @else {
+    font-family: $NTA-Light;
   }
   @if $is-print == false {
     font-size: 24px;
   } @else {
     font-size: 16pt;
   }
-  @extend %bold-nocaps;
   line-height: $line-height;
-  margin-top: 25px;
-  margin-bottom: 10px;
+  font-weight: 400;
+  text-transform: none;
   @media (max-width: 640px) {
     font-size: 20px;
     line-height: $line-height-640;
@@ -111,6 +116,8 @@ $is-print: false !default;
 @mixin core-19($line-height: (25 / 19), $line-height-640: (20 / 16), $tabular-numbers: false) {
   @if $tabular-numbers == true {
     font-family: $NTA-Light-Tabular;
+  } @else {
+    font-family: $NTA-Light;
   }
   @if $is-print == false {
     font-size: 19px;
@@ -119,8 +126,6 @@ $is-print: false !default;
   }
   line-height: $line-height;
   font-weight: 400;
-  margin-top: 10px;
-  margin-bottom: 5px;
   text-transform: none;
   @media (max-width: 640px) {
     font-size: 16px;
@@ -131,6 +136,8 @@ $is-print: false !default;
 @mixin core-16($line-height: (20 / 16), $line-height-640: (16 / 14), $tabular-numbers: false) {
   @if $tabular-numbers == true {
     font-family: $NTA-Light-Tabular;
+  } @else {
+    font-family: $NTA-Light;
   }
   @if $is-print == false {
     font-size: 16px;
@@ -149,6 +156,8 @@ $is-print: false !default;
 @mixin core-14($line-height: (20 / 14), $line-height-640: (15 / 12), $tabular-numbers: false) {
   @if $tabular-numbers == true {
     font-family: $NTA-Light-Tabular;
+  } @else {
+    font-family: $NTA-Light;
   }
   @if $is-print == false {
     font-size: 14px;
@@ -218,17 +227,25 @@ $is-print: false !default;
 
 @mixin heading-48($tabular-numbers: false) {
   @include core-48($tabular-numbers: $tabular-numbers);
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+
   @include media(tablet){
-    margin-top: 30px;
-    margin-bottom: 60px;
+    padding-top: 7px;
+    padding-bottom: 13px;
   }
 }
 
 @mixin heading-36($tabular-numbers: false) {
   @include core-36($tabular-numbers: $tabular-numbers);
+
+  padding-top: 8px;
+  padding-bottom: 7px;
+
   @include media(tablet){
-    margin-top: 45px;
-    margin-bottom: 20px;
+    padding-top: 6px;
+    padding-bottom: 9px;
   }
 }
 
@@ -259,10 +276,12 @@ $is-print: false !default;
 @mixin copy-19($tabular-numbers: false) {
   @include core-19($tabular-numbers: $tabular-numbers);
 
-
+  padding-top: 2px;
+  padding-bottom: 8px;
 
   @include media(tablet){
-
+    padding-top: 0;
+    padding-bottom: 5px;
   }
 }
 

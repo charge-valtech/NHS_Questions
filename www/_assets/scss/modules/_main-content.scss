@@ -9,12 +9,16 @@
 }
 
 .content-container {
-  font-size: 19px;
+  font-size: 19px; /*19px*/
   margin: 0 auto;
   padding: 0 15px;
   max-width: 1020px;
   @include media(tablet) {
     padding: 0 30px;
+  }
+  @media (max-width: 640px) {
+    font-size: 16px;
+    line-height: 1.25;
   }
 }
 

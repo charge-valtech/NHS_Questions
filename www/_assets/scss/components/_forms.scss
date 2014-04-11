@@ -1,18 +1,17 @@
-@include form;
+// Forms
+// ==========================================================================
+
+// Form layout
+fieldset,
+legend {
+  width: 100%;
+  float: left;
+  clear: both;
+}
 
 fieldset { /*Overriding normalize presets*/
   border: 0;
   padding: 0;
-}
-
-.fieldset--with-border {
-  border-bottom: 1px solid $grey-2;
-  margin-bottom: 15px;
-  padding-bottom: 15px;
-  @include media(tablet) {
-    margin-bottom: 30px;
-    padding-bottom: 45px;
-  }
 }
 
 input[type="radio"],
@@ -31,13 +30,14 @@ input[type="checkbox"] { /*Overriding normalize presets*/
   font-size: 16px;
 }
 
+// Form group is used to wrap label and input pairs
 .form-group {
   clear: both;
   float: left;
   margin-bottom: 20px;
   width: 100%;
-  @include media(tablet){
-    margin-bottom: 45px;
+  @include media(tablet) {
+    margin-bottom: ($gutter*1.5);
     .inline-form-groups & {
       clear: none;
       margin-right: 30px;
@@ -46,51 +46,50 @@ input[type="checkbox"] { /*Overriding normalize presets*/
   }
 }
 
-.date-input {
-  margin-top: 0;
-  input {
-    width: 100%;
-  }
-  @include media(tablet) {
-    .form-group {
-      clear: none;
-      float: left;
-      margin-right: 20px;
-      width: 50px;
-    }
-    .form-group--year {
-      width: 70px;
-    }
-  }
-}
-
 .form-group--compound {
   margin-bottom: 10px;
 }
 
+// Labels
+
+// Form labels, or for legends styled to look like labels
 .form-label {
-  @include copy-19;
-}
-
-.form-hint {
-  @include copy-19;
-  color: $grey-1;
+  @include core-19;
   display: block;
-  margin-top: 8px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
+// Used for paragraphs i n-between forms
+.form-block {
+  float: left;
+  width: 100%;
+}
+
+// Form controls
+
+// By default, form controls are 50% width for desktop,
+// and 100% width for mobile
 .form-control {
   background: $white;
-  border: 1px solid $grey-2;
-  border-radius: 0;
+  border: 1px solid $border-color;
   font-family: inherit;
   font-size: 1em;
   padding: 4px;
   width: 100%;
+  // Disable webkit appearance and remove rounded corners
+  border-radius: 0;
   -webkit-appearance: none;
   @include media(tablet){
     width: 50%;
+  }
+}
+
+
+// Form control widths
+.form-control--3-4 {
+  width: 100%;
+  @include media(tablet) {
+    width: 75%;
   }
 }
 
@@ -100,6 +99,13 @@ input[type="checkbox"] { /*Overriding normalize presets*/
 
 .form-control--wage {
   width: 8em;
+}
+
+.form-control--1-8 {
+  width: 100%;
+  @include media(tablet) {
+    width: 12.5%;
+  }
 }
 
 .form-control--1-4 {
@@ -123,40 +129,42 @@ input[type="checkbox"] { /*Overriding normalize presets*/
   }
 }
 
-.block-label {
-  background: $grey-3;
-  border: 1px solid $grey-3;
-  clear: left;
-  cursor: pointer;
+.form-hint {
+  @include copy-19;
+  color: $secondary-text-colour;
   display: block;
-  float: none;
-  margin-bottom: 15px;
-  padding: 18px 30px 15px 45px;
-  position: relative;
-  &:hover {
-    border-color: $black;
-  }
-  &.selected {
-    background: $white;
-    border-color: $black;
-  }
-  .inline & {
-    clear: none;
-  }
-  @media (max-width: 640px) {
-    font-size: 16px;
-  }
-  @include media(tablet){
-    float: left;
-    .inline & {
-      margin-right: 15px;
-    }
-  }
-  input {
-    position: absolute;
-    top: 18px; left: 15px;
-  }
+  margin-top: 8px;
+  margin-bottom: 5px;
 }
+
+// Radio buttons
+.form-radio {
+  display: block;
+  margin: 10px 0;
+}
+.form-radio input {
+  vertical-align: middle;
+  margin: -4px 5px 0 0;
+}
+
+// Checkboxes
+.form-checkbox {
+  display: block;
+  margin: $gutter-half 0;
+}
+.form-checkbox input {
+  vertical-align: middle;
+  margin: -2px 5px 0 0;
+}
+
+// Form validation
+@import "forms/form-validation";
+
+// Form patterns
+@import "forms/form-date-of-birth";
+
+@import "forms/form-chunky-labels";
+
 
 select {
   border: 1px solid #dadada;

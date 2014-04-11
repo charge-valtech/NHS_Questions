@@ -4,7 +4,6 @@
 }
 
 .global-header__wrapper {
-  font-size: 0;
   margin: 0 auto;
   max-width: 1020px;
   overflow: hidden;
@@ -17,18 +16,19 @@
 
 .global-header__logo {
   float: left;
+  font-size: 0; /* Removes strange gap below img */
   margin: 0 20px 15px 0;
 }
 
 .global-header__title {
-  font-size: 20px;
+  float: left;
+  font-size: 16px; /* 16px */
   line-height: 22px;
-  float: right;
   margin: 0;
   padding: 0;
-  @media (max-width: 450px) {
-    float: left;
-    font-size: 16px;
+  @include media(tablet) {
+    float: right;
+    font-size: 20px; /* 20px */
   }
 }
 
@@ -46,7 +46,7 @@
 .phase-notice {
   background: $govuk-blue;
   color: $white;
-  font-size: 1.5rem;
+  font-size: 16px; /*16px*/
   padding: 8px;
   strong {
     text-transform: uppercase;
