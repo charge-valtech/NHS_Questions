@@ -71,7 +71,7 @@ input[type="checkbox"] { /*Overriding normalize presets*/
 // and 100% width for mobile
 .form-control {
   background: $white;
-  border: 1px solid $border-color;
+  border: 1px solid $border-colour;
   font-family: inherit;
   font-size: 1em;
   padding: 4px;
@@ -161,7 +161,7 @@ input[type="checkbox"] { /*Overriding normalize presets*/
 @import "forms/form-validation";
 
 // Form patterns
-@import "forms/form-date-of-birth";
+@import "forms/form-date-inputs";
 
 @import "forms/form-chunky-labels";
 

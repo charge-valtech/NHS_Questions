@@ -15,20 +15,24 @@
 }
 
 .global-header__logo {
-  float: left;
+  display: inline-block;
   font-size: 0; /* Removes strange gap below img */
-  margin: 0 20px 15px 0;
+  margin: 0 -4px 15px 0;
+  width: 33.33%;
 }
 
 .global-header__title {
-  float: left;
+  display: block;
   font-size: 16px; /* 16px */
-  line-height: 22px;
   margin: 0;
   padding: 0;
+  vertical-align: middle;
   @include media(tablet) {
-    float: right;
+    display: inline-block;
     font-size: 20px; /* 20px */
+    margin-right: -4px;
+    text-align: right;
+    width: 66.66%;
   }
 }
 
@@ -37,9 +41,9 @@
   display: inline-block;
   font-size: 0.7em;
   font-weight: 700;
-  letter-spacing: 0.2em;
+  letter-spacing: 1px;
   margin: 0 0 15px 8px;
-  padding: 3px 10px 2px;
+  padding: 2px 5px;
   text-transform: uppercase;
 }
 

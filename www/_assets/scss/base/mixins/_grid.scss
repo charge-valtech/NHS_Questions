@@ -3,12 +3,12 @@
 //
 
 // A mixin for laying out lists of elements in a grid.
-// 
+//
 // Parameters:
 //
 // $columns     For columns of equal width:
 //              A single value representing the number of columns in the grid
-//              
+//
 //              For columns of unequal width:
 //              An array of values representing the relative widths of the columns
 //
@@ -29,8 +29,8 @@
     margin-bottom: 1em;
   }
   padding: 0;
-  @include clearfix;
-  > * { 
+  // @include clearfix;
+  > * {
     display: block;
     margin: 0;
     padding: 0;

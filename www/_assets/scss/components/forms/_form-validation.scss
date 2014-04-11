@@ -40,7 +40,6 @@
 
 // Validation error message box
 .validation-error {
-  @include contain-floats;
   border-left: 3px solid $error-colour;
   background: $error-background;
   padding: $gutter-half $gutter;
