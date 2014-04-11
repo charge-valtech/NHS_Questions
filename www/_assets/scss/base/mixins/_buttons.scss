@@ -13,10 +13,11 @@
   // Size and shape
   position: relative;
   top: 0; // Reset for application.css. Remove once integrated.
-  @include inline-block;
+  display: inline-block;
   padding: 10px 10px 5px;
   border: none;
-  @include border-radius(0em);
+  // @include border-radius(0em);
+  border-radius: 0;
 
   // Bottom edge effect
   @include box-shadow(0 2px 0 darken($colour, 40%));

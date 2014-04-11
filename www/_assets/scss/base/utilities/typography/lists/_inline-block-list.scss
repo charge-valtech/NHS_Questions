@@ -33,7 +33,7 @@
 // Used to implement `inline-block-list`.
 @mixin inline-block-list-item($padding: false) {
   @include no-bullet;
-  @include inline-block;
+  display: inline-block;
   white-space: nowrap;
   @if $padding {
     padding: {

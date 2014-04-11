@@ -30,7 +30,7 @@
 
 @mixin phase-tag($state: alpha) {
 
-  @include inline-block;
+  display: inline-block;
 
   @if $state == alpha {
     background-color: $alpha-colour;
