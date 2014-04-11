@@ -20,7 +20,7 @@
   border-radius: 0;
 
   // Bottom edge effect
-  @include box-shadow(0 2px 0 darken($colour, 40%));
+  box-shadow: 0 2px 0 darken($colour, 40%);
   @include ie-lte(8) {
     border-bottom: 2px solid darken($colour, 40%);
   }
@@ -42,7 +42,7 @@
   }
   &:active {
     top: 2px;
-    @include box-shadow(0 0 0 $colour);
+    box-shadow: 0 0 0 $colour;
   }
 
   // Disabled button styles
@@ -56,7 +56,8 @@
     }
     &:active {
       top: 0;
-      @include box-shadow(0 2px 0 darken($colour, 15%));  @include ie-lte(8) {
+      box-shadow: 0 2px 0 darken($colour, 15%);
+      @include ie-lte(8) {
         border-bottom: 2px solid darken($colour, 15%);
       }
     }

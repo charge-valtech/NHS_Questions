@@ -592,7 +592,7 @@ table {
   width: device-width;
 }
 
-/* line 131, ../scss/base/mixins/_buttons.scss */
+/* line 132, ../scss/base/mixins/_buttons.scss */
 .button {
   background-color: #006435;
   position: relative;
@@ -601,8 +601,6 @@ table {
   padding: 10px 10px 5px;
   border: none;
   border-radius: 0;
-  -webkit-box-shadow: 0 2px 0 black;
-  -moz-box-shadow: 0 2px 0 black;
   box-shadow: 0 2px 0 black;
   font-size: 1em;
   line-height: 1.25;
@@ -622,8 +620,6 @@ table {
 /* line 43, ../scss/base/mixins/_buttons.scss */
 .button:active {
   top: 2px;
-  -webkit-box-shadow: 0 0 0 #006435;
-  -moz-box-shadow: 0 0 0 #006435;
   box-shadow: 0 0 0 #006435;
 }
 /* line 51, ../scss/base/mixins/_buttons.scss */
@@ -638,15 +634,13 @@ table {
 /* line 57, ../scss/base/mixins/_buttons.scss */
 .button.disabled:active, .button[disabled="disabled"]:active, .button[disabled]:active {
   top: 0;
-  -webkit-box-shadow: 0 2px 0 #00180c;
-  -moz-box-shadow: 0 2px 0 #00180c;
   box-shadow: 0 2px 0 #00180c;
 }
-/* line 70, ../scss/base/mixins/_buttons.scss */
+/* line 71, ../scss/base/mixins/_buttons.scss */
 .button:hover, .button:focus, .button:visited {
   color: white;
 }
-/* line 84, ../scss/base/mixins/_buttons.scss */
+/* line 85, ../scss/base/mixins/_buttons.scss */
 .button:before {
   content: "";
   height: 110%;
@@ -657,12 +651,12 @@ table {
   top: 0;
   left: 0;
 }
-/* line 94, ../scss/base/mixins/_buttons.scss */
+/* line 95, ../scss/base/mixins/_buttons.scss */
 .button:active:before {
   top: -10%;
   height: 120%;
 }
-/* line 107, ../scss/base/mixins/_buttons.scss */
+/* line 108, ../scss/base/mixins/_buttons.scss */
 .button[rel="external"]:after {
   display: none;
   content: none;
@@ -670,7 +664,7 @@ table {
   margin-right: 0;
 }
 
-/* line 135, ../scss/base/mixins/_buttons.scss */
+/* line 136, ../scss/base/mixins/_buttons.scss */
 .button-secondary {
   background-color: #dee0e2;
   position: relative;
@@ -679,8 +673,6 @@ table {
   padding: 10px 10px 5px;
   border: none;
   border-radius: 0;
-  -webkit-box-shadow: 0 2px 0 #727a82;
-  -moz-box-shadow: 0 2px 0 #727a82;
   box-shadow: 0 2px 0 #727a82;
   font-size: 1em;
   line-height: 1.25;
@@ -700,8 +692,6 @@ table {
 /* line 43, ../scss/base/mixins/_buttons.scss */
 .button-secondary:active {
   top: 2px;
-  -webkit-box-shadow: 0 0 0 #dee0e2;
-  -moz-box-shadow: 0 0 0 #dee0e2;
   box-shadow: 0 0 0 #dee0e2;
 }
 /* line 51, ../scss/base/mixins/_buttons.scss */
@@ -716,15 +706,13 @@ table {
 /* line 57, ../scss/base/mixins/_buttons.scss */
 .button-secondary.disabled:active, .button-secondary[disabled="disabled"]:active, .button-secondary[disabled]:active {
   top: 0;
-  -webkit-box-shadow: 0 2px 0 #b5babe;
-  -moz-box-shadow: 0 2px 0 #b5babe;
   box-shadow: 0 2px 0 #b5babe;
 }
-/* line 77, ../scss/base/mixins/_buttons.scss */
+/* line 78, ../scss/base/mixins/_buttons.scss */
 .button-secondary:hover, .button-secondary:focus, .button-secondary:visited {
   color: #0b0c0c;
 }
-/* line 84, ../scss/base/mixins/_buttons.scss */
+/* line 85, ../scss/base/mixins/_buttons.scss */
 .button-secondary:before {
   content: "";
   height: 110%;
@@ -735,12 +723,12 @@ table {
   top: 0;
   left: 0;
 }
-/* line 94, ../scss/base/mixins/_buttons.scss */
+/* line 95, ../scss/base/mixins/_buttons.scss */
 .button-secondary:active:before {
   top: -10%;
   height: 120%;
 }
-/* line 107, ../scss/base/mixins/_buttons.scss */
+/* line 108, ../scss/base/mixins/_buttons.scss */
 .button-secondary[rel="external"]:after {
   display: none;
   content: none;
@@ -748,7 +736,7 @@ table {
   margin-right: 0;
 }
 
-/* line 139, ../scss/base/mixins/_buttons.scss */
+/* line 140, ../scss/base/mixins/_buttons.scss */
 .button-warning {
   background-color: #b10e1e;
   position: relative;
@@ -757,8 +745,6 @@ table {
   padding: 10px 10px 5px;
   border: none;
   border-radius: 0;
-  -webkit-box-shadow: 0 2px 0 black;
-  -moz-box-shadow: 0 2px 0 black;
   box-shadow: 0 2px 0 black;
   font-size: 1em;
   line-height: 1.25;
@@ -778,8 +764,6 @@ table {
 /* line 43, ../scss/base/mixins/_buttons.scss */
 .button-warning:active {
   top: 2px;
-  -webkit-box-shadow: 0 0 0 #b10e1e;
-  -moz-box-shadow: 0 0 0 #b10e1e;
   box-shadow: 0 0 0 #b10e1e;
 }
 /* line 51, ../scss/base/mixins/_buttons.scss */
@@ -794,15 +778,13 @@ table {
 /* line 57, ../scss/base/mixins/_buttons.scss */
 .button-warning.disabled:active, .button-warning[disabled="disabled"]:active, .button-warning[disabled]:active {
   top: 0;
-  -webkit-box-shadow: 0 2px 0 #6a0812;
-  -moz-box-shadow: 0 2px 0 #6a0812;
   box-shadow: 0 2px 0 #6a0812;
 }
-/* line 70, ../scss/base/mixins/_buttons.scss */
+/* line 71, ../scss/base/mixins/_buttons.scss */
 .button-warning:hover, .button-warning:focus, .button-warning:visited {
   color: white;
 }
-/* line 84, ../scss/base/mixins/_buttons.scss */
+/* line 85, ../scss/base/mixins/_buttons.scss */
 .button-warning:before {
   content: "";
   height: 110%;
@@ -813,33 +795,17 @@ table {
   top: 0;
   left: 0;
 }
-/* line 94, ../scss/base/mixins/_buttons.scss */
+/* line 95, ../scss/base/mixins/_buttons.scss */
 .button-warning:active:before {
   top: -10%;
   height: 120%;
 }
-/* line 107, ../scss/base/mixins/_buttons.scss */
+/* line 108, ../scss/base/mixins/_buttons.scss */
 .button-warning[rel="external"]:after {
   display: none;
   content: none;
   margin-left: 0;
   margin-right: 0;
-}
-
-@-ms-viewport {
-  width: device-width;
-}
-
-@-o-viewport {
-  width: device-width;
-}
-
-@-ms-viewport {
-  width: device-width;
-}
-
-@-o-viewport {
-  width: device-width;
 }
 
 /* line 6, ../scss/_base.scss */
@@ -1087,7 +1053,7 @@ select:focus {
   width: device-width;
 }
 
-/* line 131, ../scss/base/mixins/_buttons.scss */
+/* line 132, ../scss/base/mixins/_buttons.scss */
 .button {
   background-color: #006435;
   position: relative;
@@ -1096,8 +1062,6 @@ select:focus {
   padding: 10px 10px 5px;
   border: none;
   border-radius: 0;
-  -webkit-box-shadow: 0 2px 0 black;
-  -moz-box-shadow: 0 2px 0 black;
   box-shadow: 0 2px 0 black;
   font-size: 1em;
   line-height: 1.25;
@@ -1117,8 +1081,6 @@ select:focus {
 /* line 43, ../scss/base/mixins/_buttons.scss */
 .button:active {
   top: 2px;
-  -webkit-box-shadow: 0 0 0 #006435;
-  -moz-box-shadow: 0 0 0 #006435;
   box-shadow: 0 0 0 #006435;
 }
 /* line 51, ../scss/base/mixins/_buttons.scss */
@@ -1133,15 +1095,13 @@ select:focus {
 /* line 57, ../scss/base/mixins/_buttons.scss */
 .button.disabled:active, .button[disabled="disabled"]:active, .button[disabled]:active {
   top: 0;
-  -webkit-box-shadow: 0 2px 0 #00180c;
-  -moz-box-shadow: 0 2px 0 #00180c;
   box-shadow: 0 2px 0 #00180c;
 }
-/* line 70, ../scss/base/mixins/_buttons.scss */
+/* line 71, ../scss/base/mixins/_buttons.scss */
 .button:hover, .button:focus, .button:visited {
   color: white;
 }
-/* line 84, ../scss/base/mixins/_buttons.scss */
+/* line 85, ../scss/base/mixins/_buttons.scss */
 .button:before {
   content: "";
   height: 110%;
@@ -1152,12 +1112,12 @@ select:focus {
   top: 0;
   left: 0;
 }
-/* line 94, ../scss/base/mixins/_buttons.scss */
+/* line 95, ../scss/base/mixins/_buttons.scss */
 .button:active:before {
   top: -10%;
   height: 120%;
 }
-/* line 107, ../scss/base/mixins/_buttons.scss */
+/* line 108, ../scss/base/mixins/_buttons.scss */
 .button[rel="external"]:after {
   display: none;
   content: none;
@@ -1165,7 +1125,7 @@ select:focus {
   margin-right: 0;
 }
 
-/* line 135, ../scss/base/mixins/_buttons.scss */
+/* line 136, ../scss/base/mixins/_buttons.scss */
 .button-secondary {
   background-color: #dee0e2;
   position: relative;
@@ -1174,8 +1134,6 @@ select:focus {
   padding: 10px 10px 5px;
   border: none;
   border-radius: 0;
-  -webkit-box-shadow: 0 2px 0 #727a82;
-  -moz-box-shadow: 0 2px 0 #727a82;
   box-shadow: 0 2px 0 #727a82;
   font-size: 1em;
   line-height: 1.25;
@@ -1195,8 +1153,6 @@ select:focus {
 /* line 43, ../scss/base/mixins/_buttons.scss */
 .button-secondary:active {
   top: 2px;
-  -webkit-box-shadow: 0 0 0 #dee0e2;
-  -moz-box-shadow: 0 0 0 #dee0e2;
   box-shadow: 0 0 0 #dee0e2;
 }
 /* line 51, ../scss/base/mixins/_buttons.scss */
@@ -1211,15 +1167,13 @@ select:focus {
 /* line 57, ../scss/base/mixins/_buttons.scss */
 .button-secondary.disabled:active, .button-secondary[disabled="disabled"]:active, .button-secondary[disabled]:active {
   top: 0;
-  -webkit-box-shadow: 0 2px 0 #b5babe;
-  -moz-box-shadow: 0 2px 0 #b5babe;
   box-shadow: 0 2px 0 #b5babe;
 }
-/* line 77, ../scss/base/mixins/_buttons.scss */
+/* line 78, ../scss/base/mixins/_buttons.scss */
 .button-secondary:hover, .button-secondary:focus, .button-secondary:visited {
   color: #0b0c0c;
 }
-/* line 84, ../scss/base/mixins/_buttons.scss */
+/* line 85, ../scss/base/mixins/_buttons.scss */
 .button-secondary:before {
   content: "";
   height: 110%;
@@ -1230,12 +1184,12 @@ select:focus {
   top: 0;
   left: 0;
 }
-/* line 94, ../scss/base/mixins/_buttons.scss */
+/* line 95, ../scss/base/mixins/_buttons.scss */
 .button-secondary:active:before {
   top: -10%;
   height: 120%;
 }
-/* line 107, ../scss/base/mixins/_buttons.scss */
+/* line 108, ../scss/base/mixins/_buttons.scss */
 .button-secondary[rel="external"]:after {
   display: none;
   content: none;
@@ -1243,7 +1197,7 @@ select:focus {
   margin-right: 0;
 }
 
-/* line 139, ../scss/base/mixins/_buttons.scss */
+/* line 140, ../scss/base/mixins/_buttons.scss */
 .button-warning {
   background-color: #b10e1e;
   position: relative;
@@ -1252,8 +1206,6 @@ select:focus {
   padding: 10px 10px 5px;
   border: none;
   border-radius: 0;
-  -webkit-box-shadow: 0 2px 0 black;
-  -moz-box-shadow: 0 2px 0 black;
   box-shadow: 0 2px 0 black;
   font-size: 1em;
   line-height: 1.25;
@@ -1273,8 +1225,6 @@ select:focus {
 /* line 43, ../scss/base/mixins/_buttons.scss */
 .button-warning:active {
   top: 2px;
-  -webkit-box-shadow: 0 0 0 #b10e1e;
-  -moz-box-shadow: 0 0 0 #b10e1e;
   box-shadow: 0 0 0 #b10e1e;
 }
 /* line 51, ../scss/base/mixins/_buttons.scss */
@@ -1289,15 +1239,13 @@ select:focus {
 /* line 57, ../scss/base/mixins/_buttons.scss */
 .button-warning.disabled:active, .button-warning[disabled="disabled"]:active, .button-warning[disabled]:active {
   top: 0;
-  -webkit-box-shadow: 0 2px 0 #6a0812;
-  -moz-box-shadow: 0 2px 0 #6a0812;
   box-shadow: 0 2px 0 #6a0812;
 }
-/* line 70, ../scss/base/mixins/_buttons.scss */
+/* line 71, ../scss/base/mixins/_buttons.scss */
 .button-warning:hover, .button-warning:focus, .button-warning:visited {
   color: white;
 }
-/* line 84, ../scss/base/mixins/_buttons.scss */
+/* line 85, ../scss/base/mixins/_buttons.scss */
 .button-warning:before {
   content: "";
   height: 110%;
@@ -1308,33 +1256,17 @@ select:focus {
   top: 0;
   left: 0;
 }
-/* line 94, ../scss/base/mixins/_buttons.scss */
+/* line 95, ../scss/base/mixins/_buttons.scss */
 .button-warning:active:before {
   top: -10%;
   height: 120%;
 }
-/* line 107, ../scss/base/mixins/_buttons.scss */
+/* line 108, ../scss/base/mixins/_buttons.scss */
 .button-warning[rel="external"]:after {
   display: none;
   content: none;
   margin-left: 0;
   margin-right: 0;
-}
-
-@-ms-viewport {
-  width: device-width;
-}
-
-@-o-viewport {
-  width: device-width;
-}
-
-@-ms-viewport {
-  width: device-width;
-}
-
-@-o-viewport {
-  width: device-width;
 }
 
 /* line 5, ../scss/components/_buttons.scss */
@@ -1346,8 +1278,6 @@ select:focus {
   padding: 10px 10px 5px;
   border: none;
   border-radius: 0;
-  -webkit-box-shadow: 0 2px 0 black;
-  -moz-box-shadow: 0 2px 0 black;
   box-shadow: 0 2px 0 black;
   font-size: 1em;
   line-height: 1.25;
@@ -1368,8 +1298,6 @@ select:focus {
 /* line 43, ../scss/base/mixins/_buttons.scss */
 .button:active {
   top: 2px;
-  -webkit-box-shadow: 0 0 0 #006435;
-  -moz-box-shadow: 0 0 0 #006435;
   box-shadow: 0 0 0 #006435;
 }
 /* line 51, ../scss/base/mixins/_buttons.scss */
@@ -1384,15 +1312,13 @@ select:focus {
 /* line 57, ../scss/base/mixins/_buttons.scss */
 .button.disabled:active, .button[disabled="disabled"]:active, .button[disabled]:active {
   top: 0;
-  -webkit-box-shadow: 0 2px 0 #00180c;
-  -moz-box-shadow: 0 2px 0 #00180c;
   box-shadow: 0 2px 0 #00180c;
 }
-/* line 70, ../scss/base/mixins/_buttons.scss */
+/* line 71, ../scss/base/mixins/_buttons.scss */
 .button:hover, .button:focus, .button:visited {
   color: white;
 }
-/* line 84, ../scss/base/mixins/_buttons.scss */
+/* line 85, ../scss/base/mixins/_buttons.scss */
 .button:before {
   content: "";
   height: 110%;
@@ -1403,12 +1329,12 @@ select:focus {
   top: 0;
   left: 0;
 }
-/* line 94, ../scss/base/mixins/_buttons.scss */
+/* line 95, ../scss/base/mixins/_buttons.scss */
 .button:active:before {
   top: -10%;
   height: 120%;
 }
-/* line 107, ../scss/base/mixins/_buttons.scss */
+/* line 108, ../scss/base/mixins/_buttons.scss */
 .button[rel="external"]:after {
   display: none;
   content: none;
@@ -1424,8 +1350,6 @@ select:focus {
   padding: 10px 10px 5px;
   border: none;
   border-radius: 0;
-  -webkit-box-shadow: 0 2px 0 #727a82;
-  -moz-box-shadow: 0 2px 0 #727a82;
   box-shadow: 0 2px 0 #727a82;
   font-size: 1em;
   line-height: 1.25;
@@ -1445,8 +1369,6 @@ select:focus {
 /* line 43, ../scss/base/mixins/_buttons.scss */
 .button.secondary:active {
   top: 2px;
-  -webkit-box-shadow: 0 0 0 #dee0e2;
-  -moz-box-shadow: 0 0 0 #dee0e2;
   box-shadow: 0 0 0 #dee0e2;
 }
 /* line 51, ../scss/base/mixins/_buttons.scss */
@@ -1461,15 +1383,13 @@ select:focus {
 /* line 57, ../scss/base/mixins/_buttons.scss */
 .button.secondary.disabled:active, .button.secondary[disabled="disabled"]:active, .button.secondary[disabled]:active {
   top: 0;
-  -webkit-box-shadow: 0 2px 0 #b5babe;
-  -moz-box-shadow: 0 2px 0 #b5babe;
   box-shadow: 0 2px 0 #b5babe;
 }
-/* line 77, ../scss/base/mixins/_buttons.scss */
+/* line 78, ../scss/base/mixins/_buttons.scss */
 .button.secondary:hover, .button.secondary:focus, .button.secondary:visited {
   color: #0b0c0c;
 }
-/* line 84, ../scss/base/mixins/_buttons.scss */
+/* line 85, ../scss/base/mixins/_buttons.scss */
 .button.secondary:before {
   content: "";
   height: 110%;
@@ -1480,12 +1400,12 @@ select:focus {
   top: 0;
   left: 0;
 }
-/* line 94, ../scss/base/mixins/_buttons.scss */
+/* line 95, ../scss/base/mixins/_buttons.scss */
 .button.secondary:active:before {
   top: -10%;
   height: 120%;
 }
-/* line 107, ../scss/base/mixins/_buttons.scss */
+/* line 108, ../scss/base/mixins/_buttons.scss */
 .button.secondary[rel="external"]:after {
   display: none;
   content: none;
@@ -1501,8 +1421,6 @@ select:focus {
   padding: 10px 10px 5px;
   border: none;
   border-radius: 0;
-  -webkit-box-shadow: 0 2px 0 black;
-  -moz-box-shadow: 0 2px 0 black;
   box-shadow: 0 2px 0 black;
   font-size: 1em;
   line-height: 1.25;
@@ -1522,8 +1440,6 @@ select:focus {
 /* line 43, ../scss/base/mixins/_buttons.scss */
 .button.warning:active {
   top: 2px;
-  -webkit-box-shadow: 0 0 0 #b10e1e;
-  -moz-box-shadow: 0 0 0 #b10e1e;
   box-shadow: 0 0 0 #b10e1e;
 }
 /* line 51, ../scss/base/mixins/_buttons.scss */
@@ -1538,15 +1454,13 @@ select:focus {
 /* line 57, ../scss/base/mixins/_buttons.scss */
 .button.warning.disabled:active, .button.warning[disabled="disabled"]:active, .button.warning[disabled]:active {
   top: 0;
-  -webkit-box-shadow: 0 2px 0 #6a0812;
-  -moz-box-shadow: 0 2px 0 #6a0812;
   box-shadow: 0 2px 0 #6a0812;
 }
-/* line 70, ../scss/base/mixins/_buttons.scss */
+/* line 71, ../scss/base/mixins/_buttons.scss */
 .button.warning:hover, .button.warning:focus, .button.warning:visited {
   color: white;
 }
-/* line 84, ../scss/base/mixins/_buttons.scss */
+/* line 85, ../scss/base/mixins/_buttons.scss */
 .button.warning:before {
   content: "";
   height: 110%;
@@ -1557,12 +1471,12 @@ select:focus {
   top: 0;
   left: 0;
 }
-/* line 94, ../scss/base/mixins/_buttons.scss */
+/* line 95, ../scss/base/mixins/_buttons.scss */
 .button.warning:active:before {
   top: -10%;
   height: 120%;
 }
-/* line 107, ../scss/base/mixins/_buttons.scss */
+/* line 108, ../scss/base/mixins/_buttons.scss */
 .button.warning[rel="external"]:after {
   display: none;
   content: none;
