@@ -592,220 +592,10 @@ table {
   width: device-width;
 }
 
-/* line 132, ../scss/base/mixins/_buttons.scss */
-.button {
-  background-color: #006435;
-  position: relative;
-  top: 0;
-  display: inline-block;
-  padding: 10px 10px 5px;
-  border: none;
-  border-radius: 0;
-  box-shadow: 0 2px 0 black;
-  font-size: 1em;
-  line-height: 1.25;
-  text-decoration: none;
-  -webkit-font-smoothing: antialiased;
-  cursor: pointer;
-  color: white;
-}
-/* line 36, ../scss/base/mixins/_buttons.scss */
-.button:visited {
-  background-color: #006435;
-}
-/* line 40, ../scss/base/mixins/_buttons.scss */
-.button:hover, .button:focus {
-  background: #004b27;
-}
-/* line 43, ../scss/base/mixins/_buttons.scss */
-.button:active {
-  top: 2px;
-  box-shadow: 0 0 0 #006435;
-}
-/* line 51, ../scss/base/mixins/_buttons.scss */
-.button.disabled, .button[disabled="disabled"], .button[disabled] {
-  opacity: 0.5;
-}
-/* line 53, ../scss/base/mixins/_buttons.scss */
-.button.disabled:hover, .button[disabled="disabled"]:hover, .button[disabled]:hover {
-  cursor: default;
-  background-color: #006435;
-}
-/* line 57, ../scss/base/mixins/_buttons.scss */
-.button.disabled:active, .button[disabled="disabled"]:active, .button[disabled]:active {
-  top: 0;
-  box-shadow: 0 2px 0 #00180c;
-}
-/* line 71, ../scss/base/mixins/_buttons.scss */
-.button:hover, .button:focus, .button:visited {
-  color: white;
-}
-/* line 85, ../scss/base/mixins/_buttons.scss */
-.button:before {
-  content: "";
-  height: 110%;
-  width: 100%;
-  display: block;
-  background: transparent;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-/* line 95, ../scss/base/mixins/_buttons.scss */
-.button:active:before {
-  top: -10%;
-  height: 120%;
-}
-/* line 108, ../scss/base/mixins/_buttons.scss */
-.button[rel="external"]:after {
-  display: none;
-  content: none;
-  margin-left: 0;
-  margin-right: 0;
-}
-
-/* line 136, ../scss/base/mixins/_buttons.scss */
-.button-secondary {
-  background-color: #dee0e2;
-  position: relative;
-  top: 0;
-  display: inline-block;
-  padding: 10px 10px 5px;
-  border: none;
-  border-radius: 0;
-  box-shadow: 0 2px 0 #727a82;
-  font-size: 1em;
-  line-height: 1.25;
-  text-decoration: none;
-  -webkit-font-smoothing: antialiased;
-  cursor: pointer;
-  color: #0b0c0c;
-}
-/* line 36, ../scss/base/mixins/_buttons.scss */
-.button-secondary:visited {
-  background-color: #dee0e2;
-}
-/* line 40, ../scss/base/mixins/_buttons.scss */
-.button-secondary:hover, .button-secondary:focus {
-  background: #d0d3d6;
-}
-/* line 43, ../scss/base/mixins/_buttons.scss */
-.button-secondary:active {
-  top: 2px;
-  box-shadow: 0 0 0 #dee0e2;
-}
-/* line 51, ../scss/base/mixins/_buttons.scss */
-.button-secondary.disabled, .button-secondary[disabled="disabled"], .button-secondary[disabled] {
-  opacity: 0.5;
-}
-/* line 53, ../scss/base/mixins/_buttons.scss */
-.button-secondary.disabled:hover, .button-secondary[disabled="disabled"]:hover, .button-secondary[disabled]:hover {
-  cursor: default;
-  background-color: #dee0e2;
-}
-/* line 57, ../scss/base/mixins/_buttons.scss */
-.button-secondary.disabled:active, .button-secondary[disabled="disabled"]:active, .button-secondary[disabled]:active {
-  top: 0;
-  box-shadow: 0 2px 0 #b5babe;
-}
-/* line 78, ../scss/base/mixins/_buttons.scss */
-.button-secondary:hover, .button-secondary:focus, .button-secondary:visited {
-  color: #0b0c0c;
-}
-/* line 85, ../scss/base/mixins/_buttons.scss */
-.button-secondary:before {
-  content: "";
-  height: 110%;
-  width: 100%;
-  display: block;
-  background: transparent;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-/* line 95, ../scss/base/mixins/_buttons.scss */
-.button-secondary:active:before {
-  top: -10%;
-  height: 120%;
-}
-/* line 108, ../scss/base/mixins/_buttons.scss */
-.button-secondary[rel="external"]:after {
-  display: none;
-  content: none;
-  margin-left: 0;
-  margin-right: 0;
-}
-
-/* line 140, ../scss/base/mixins/_buttons.scss */
-.button-warning {
-  background-color: #b10e1e;
-  position: relative;
-  top: 0;
-  display: inline-block;
-  padding: 10px 10px 5px;
-  border: none;
-  border-radius: 0;
-  box-shadow: 0 2px 0 black;
-  font-size: 1em;
-  line-height: 1.25;
-  text-decoration: none;
-  -webkit-font-smoothing: antialiased;
-  cursor: pointer;
-  color: white;
-}
-/* line 36, ../scss/base/mixins/_buttons.scss */
-.button-warning:visited {
-  background-color: #b10e1e;
-}
-/* line 40, ../scss/base/mixins/_buttons.scss */
-.button-warning:hover, .button-warning:focus {
-  background: #990c1a;
-}
-/* line 43, ../scss/base/mixins/_buttons.scss */
-.button-warning:active {
-  top: 2px;
-  box-shadow: 0 0 0 #b10e1e;
-}
-/* line 51, ../scss/base/mixins/_buttons.scss */
-.button-warning.disabled, .button-warning[disabled="disabled"], .button-warning[disabled] {
-  opacity: 0.5;
-}
-/* line 53, ../scss/base/mixins/_buttons.scss */
-.button-warning.disabled:hover, .button-warning[disabled="disabled"]:hover, .button-warning[disabled]:hover {
-  cursor: default;
-  background-color: #b10e1e;
-}
-/* line 57, ../scss/base/mixins/_buttons.scss */
-.button-warning.disabled:active, .button-warning[disabled="disabled"]:active, .button-warning[disabled]:active {
-  top: 0;
-  box-shadow: 0 2px 0 #6a0812;
-}
-/* line 71, ../scss/base/mixins/_buttons.scss */
-.button-warning:hover, .button-warning:focus, .button-warning:visited {
-  color: white;
-}
-/* line 85, ../scss/base/mixins/_buttons.scss */
-.button-warning:before {
-  content: "";
-  height: 110%;
-  width: 100%;
-  display: block;
-  background: transparent;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-/* line 95, ../scss/base/mixins/_buttons.scss */
-.button-warning:active:before {
-  top: -10%;
-  height: 120%;
-}
-/* line 108, ../scss/base/mixins/_buttons.scss */
-.button-warning[rel="external"]:after {
-  display: none;
-  content: none;
-  margin-left: 0;
-  margin-right: 0;
+/* line 15, ../scss/base/mixins/_typography.scss */
+.heading-48, .heading-36, .heading-24 {
+  font-weight: 700;
+  text-transform: none;
 }
 
 /* line 6, ../scss/_base.scss */
@@ -882,6 +672,223 @@ input[type="search"]::-webkit-search-decoration {
 
 @-o-viewport {
   width: device-width;
+}
+
+/* line 1, ../scss/components/_typography.scss */
+html {
+  font-size: 62.5%;
+  /* 1 */
+}
+
+/*
+ *    1. Font-size increased to compensate for change to html element font-size in
+ *    order to support beta typography which was set in ems
+ *    (62.5% * 160% = 100%)
+ */
+/* line 12, ../scss/components/_typography.scss */
+body {
+  color: #0b0c0c;
+  font-family: "nta", Arial, sans-serif;
+  font-size: 160%;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 19, ../scss/components/_typography.scss */
+.heading-48 {
+  font-size: 48px;
+  line-height: 1.04167;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+@media (max-width: 640px) {
+  /* line 19, ../scss/components/_typography.scss */
+  .heading-48 {
+    font-size: 32px;
+    line-height: 1.09375;
+  }
+}
+@media (min-width: 641px) {
+  /* line 19, ../scss/components/_typography.scss */
+  .heading-48 {
+    margin-top: 30px;
+    margin-bottom: 60px;
+  }
+}
+
+/* line 23, ../scss/components/_typography.scss */
+.heading-36 {
+  font-size: 36px;
+  line-height: 1.11111;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+@media (max-width: 640px) {
+  /* line 23, ../scss/components/_typography.scss */
+  .heading-36 {
+    font-size: 24px;
+    line-height: 1.04167;
+  }
+}
+@media (min-width: 641px) {
+  /* line 23, ../scss/components/_typography.scss */
+  .heading-36 {
+    margin-top: 45px;
+    margin-bottom: 20px;
+  }
+}
+
+/* line 27, ../scss/components/_typography.scss */
+.heading-24 {
+  font-size: 24px;
+  line-height: 1.25;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  padding-top: 9px;
+  padding-bottom: 6px;
+}
+@media (max-width: 640px) {
+  /* line 27, ../scss/components/_typography.scss */
+  .heading-24 {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+}
+@media (min-width: 641px) {
+  /* line 27, ../scss/components/_typography.scss */
+  .heading-24 {
+    padding-top: 6px;
+    padding-bottom: 4px;
+  }
+}
+
+/* line 31, ../scss/components/_typography.scss */
+.heading--with-border {
+  border-top: 1px solid #bfc1c3;
+  padding-top: 15px;
+}
+@media (min-width: 641px) {
+  /* line 31, ../scss/components/_typography.scss */
+  .heading--with-border {
+    padding-top: 45px;
+  }
+}
+
+/* line 39, ../scss/components/_typography.scss */
+.copy-19 {
+  font-size: 19px;
+  line-height: 1.31579;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  text-transform: none;
+}
+@media (max-width: 640px) {
+  /* line 39, ../scss/components/_typography.scss */
+  .copy-19 {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+/* line 43, ../scss/components/_typography.scss */
+.copy-16 {
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+  padding-top: 8px;
+  padding-bottom: 7px;
+}
+@media (max-width: 640px) {
+  /* line 43, ../scss/components/_typography.scss */
+  .copy-16 {
+    font-size: 14px;
+    line-height: 1.14286;
+  }
+}
+@media (min-width: 641px) {
+  /* line 43, ../scss/components/_typography.scss */
+  .copy-16 {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+}
+
+/* line 47, ../scss/components/_typography.scss */
+p, pre {
+  margin: 5px 0 20px;
+}
+/* line 49, ../scss/components/_typography.scss */
+p.text, pre.text {
+  font-size: 19px;
+  line-height: 1.31579;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  text-transform: none;
+}
+@media (max-width: 640px) {
+  /* line 49, ../scss/components/_typography.scss */
+  p.text, pre.text {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+/* line 54, ../scss/components/_typography.scss */
+a {
+  color: #005ea5;
+}
+/* line 56, ../scss/components/_typography.scss */
+a:visited {
+  color: #2e8aca;
+}
+/* line 65, ../scss/components/_typography.scss */
+a:hover {
+  color: #2e358b;
+}
+/* line 68, ../scss/components/_typography.scss */
+a:active {
+  color: #2e8aca;
+}
+
+/* line 73, ../scss/components/_typography.scss */
+a:active, a:hover {
+  color: #2e358b;
+}
+
+/* line 78, ../scss/components/_typography.scss */
+b,
+strong {
+  font-weight: 600;
+}
+
+/* line 82, ../scss/components/_typography.scss */
+.highlight {
+  color: #0076c0;
+}
+
+/* line 86, ../scss/components/_typography.scss */
+.text {
+  max-width: 30em;
+}
+
+/* line 90, ../scss/components/_typography.scss */
+.panel-indent {
+  border-left: 5px solid #dee0e2;
+  clear: both;
+  margin: 30px 0;
+  padding: 0 15px;
+}
+@media (min-width: 641px) {
+  /* line 90, ../scss/components/_typography.scss */
+  .panel-indent {
+    padding: 10px 15px 10px 30px;
+  }
+}
+/* line 98, ../scss/components/_typography.scss */
+.panel-indent p, .panel-indent ul {
+  margin-bottom: 0;
 }
 
 /* Make skiplinks visible when they are tabbed to */
@@ -983,29 +990,7 @@ button:active {
   outline: none;
 }
 
-/* line 69, ../scss/components/_accessibility.scss */
-a {
-  color: #005ea5;
-}
-/* line 71, ../scss/components/_accessibility.scss */
-a:visited {
-  color: #2e8aca;
-}
-/* line 80, ../scss/components/_accessibility.scss */
-a:hover {
-  color: #2e358b;
-}
-/* line 83, ../scss/components/_accessibility.scss */
-a:active {
-  color: #2e8aca;
-}
-
-/* line 88, ../scss/components/_accessibility.scss */
-a:active, a:hover {
-  color: #2e358b;
-}
-
-/* line 96, ../scss/components/_accessibility.scss */
+/* line 73, ../scss/components/_accessibility.scss */
 input:focus,
 textarea:focus,
 select:focus {
@@ -1053,220 +1038,10 @@ select:focus {
   width: device-width;
 }
 
-/* line 132, ../scss/base/mixins/_buttons.scss */
-.button {
-  background-color: #006435;
-  position: relative;
-  top: 0;
-  display: inline-block;
-  padding: 10px 10px 5px;
-  border: none;
-  border-radius: 0;
-  box-shadow: 0 2px 0 black;
-  font-size: 1em;
-  line-height: 1.25;
-  text-decoration: none;
-  -webkit-font-smoothing: antialiased;
-  cursor: pointer;
-  color: white;
-}
-/* line 36, ../scss/base/mixins/_buttons.scss */
-.button:visited {
-  background-color: #006435;
-}
-/* line 40, ../scss/base/mixins/_buttons.scss */
-.button:hover, .button:focus {
-  background: #004b27;
-}
-/* line 43, ../scss/base/mixins/_buttons.scss */
-.button:active {
-  top: 2px;
-  box-shadow: 0 0 0 #006435;
-}
-/* line 51, ../scss/base/mixins/_buttons.scss */
-.button.disabled, .button[disabled="disabled"], .button[disabled] {
-  opacity: 0.5;
-}
-/* line 53, ../scss/base/mixins/_buttons.scss */
-.button.disabled:hover, .button[disabled="disabled"]:hover, .button[disabled]:hover {
-  cursor: default;
-  background-color: #006435;
-}
-/* line 57, ../scss/base/mixins/_buttons.scss */
-.button.disabled:active, .button[disabled="disabled"]:active, .button[disabled]:active {
-  top: 0;
-  box-shadow: 0 2px 0 #00180c;
-}
-/* line 71, ../scss/base/mixins/_buttons.scss */
-.button:hover, .button:focus, .button:visited {
-  color: white;
-}
-/* line 85, ../scss/base/mixins/_buttons.scss */
-.button:before {
-  content: "";
-  height: 110%;
-  width: 100%;
-  display: block;
-  background: transparent;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-/* line 95, ../scss/base/mixins/_buttons.scss */
-.button:active:before {
-  top: -10%;
-  height: 120%;
-}
-/* line 108, ../scss/base/mixins/_buttons.scss */
-.button[rel="external"]:after {
-  display: none;
-  content: none;
-  margin-left: 0;
-  margin-right: 0;
-}
-
-/* line 136, ../scss/base/mixins/_buttons.scss */
-.button-secondary {
-  background-color: #dee0e2;
-  position: relative;
-  top: 0;
-  display: inline-block;
-  padding: 10px 10px 5px;
-  border: none;
-  border-radius: 0;
-  box-shadow: 0 2px 0 #727a82;
-  font-size: 1em;
-  line-height: 1.25;
-  text-decoration: none;
-  -webkit-font-smoothing: antialiased;
-  cursor: pointer;
-  color: #0b0c0c;
-}
-/* line 36, ../scss/base/mixins/_buttons.scss */
-.button-secondary:visited {
-  background-color: #dee0e2;
-}
-/* line 40, ../scss/base/mixins/_buttons.scss */
-.button-secondary:hover, .button-secondary:focus {
-  background: #d0d3d6;
-}
-/* line 43, ../scss/base/mixins/_buttons.scss */
-.button-secondary:active {
-  top: 2px;
-  box-shadow: 0 0 0 #dee0e2;
-}
-/* line 51, ../scss/base/mixins/_buttons.scss */
-.button-secondary.disabled, .button-secondary[disabled="disabled"], .button-secondary[disabled] {
-  opacity: 0.5;
-}
-/* line 53, ../scss/base/mixins/_buttons.scss */
-.button-secondary.disabled:hover, .button-secondary[disabled="disabled"]:hover, .button-secondary[disabled]:hover {
-  cursor: default;
-  background-color: #dee0e2;
-}
-/* line 57, ../scss/base/mixins/_buttons.scss */
-.button-secondary.disabled:active, .button-secondary[disabled="disabled"]:active, .button-secondary[disabled]:active {
-  top: 0;
-  box-shadow: 0 2px 0 #b5babe;
-}
-/* line 78, ../scss/base/mixins/_buttons.scss */
-.button-secondary:hover, .button-secondary:focus, .button-secondary:visited {
-  color: #0b0c0c;
-}
-/* line 85, ../scss/base/mixins/_buttons.scss */
-.button-secondary:before {
-  content: "";
-  height: 110%;
-  width: 100%;
-  display: block;
-  background: transparent;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-/* line 95, ../scss/base/mixins/_buttons.scss */
-.button-secondary:active:before {
-  top: -10%;
-  height: 120%;
-}
-/* line 108, ../scss/base/mixins/_buttons.scss */
-.button-secondary[rel="external"]:after {
-  display: none;
-  content: none;
-  margin-left: 0;
-  margin-right: 0;
-}
-
-/* line 140, ../scss/base/mixins/_buttons.scss */
-.button-warning {
-  background-color: #b10e1e;
-  position: relative;
-  top: 0;
-  display: inline-block;
-  padding: 10px 10px 5px;
-  border: none;
-  border-radius: 0;
-  box-shadow: 0 2px 0 black;
-  font-size: 1em;
-  line-height: 1.25;
-  text-decoration: none;
-  -webkit-font-smoothing: antialiased;
-  cursor: pointer;
-  color: white;
-}
-/* line 36, ../scss/base/mixins/_buttons.scss */
-.button-warning:visited {
-  background-color: #b10e1e;
-}
-/* line 40, ../scss/base/mixins/_buttons.scss */
-.button-warning:hover, .button-warning:focus {
-  background: #990c1a;
-}
-/* line 43, ../scss/base/mixins/_buttons.scss */
-.button-warning:active {
-  top: 2px;
-  box-shadow: 0 0 0 #b10e1e;
-}
-/* line 51, ../scss/base/mixins/_buttons.scss */
-.button-warning.disabled, .button-warning[disabled="disabled"], .button-warning[disabled] {
-  opacity: 0.5;
-}
-/* line 53, ../scss/base/mixins/_buttons.scss */
-.button-warning.disabled:hover, .button-warning[disabled="disabled"]:hover, .button-warning[disabled]:hover {
-  cursor: default;
-  background-color: #b10e1e;
-}
-/* line 57, ../scss/base/mixins/_buttons.scss */
-.button-warning.disabled:active, .button-warning[disabled="disabled"]:active, .button-warning[disabled]:active {
-  top: 0;
-  box-shadow: 0 2px 0 #6a0812;
-}
-/* line 71, ../scss/base/mixins/_buttons.scss */
-.button-warning:hover, .button-warning:focus, .button-warning:visited {
-  color: white;
-}
-/* line 85, ../scss/base/mixins/_buttons.scss */
-.button-warning:before {
-  content: "";
-  height: 110%;
-  width: 100%;
-  display: block;
-  background: transparent;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-/* line 95, ../scss/base/mixins/_buttons.scss */
-.button-warning:active:before {
-  top: -10%;
-  height: 120%;
-}
-/* line 108, ../scss/base/mixins/_buttons.scss */
-.button-warning[rel="external"]:after {
-  display: none;
-  content: none;
-  margin-left: 0;
-  margin-right: 0;
+/* line 15, ../scss/base/mixins/_typography.scss */
+.heading-48, .heading-36, .heading-24 {
+  font-weight: 700;
+  text-transform: none;
 }
 
 /* line 5, ../scss/components/_buttons.scss */
@@ -1342,178 +1117,34 @@ select:focus {
   margin-right: 0;
 }
 /* line 8, ../scss/components/_buttons.scss */
-.button.secondary {
-  background-color: #dee0e2;
-  position: relative;
-  top: 0;
-  display: inline-block;
-  padding: 10px 10px 5px;
-  border: none;
-  border-radius: 0;
-  box-shadow: 0 2px 0 #727a82;
-  font-size: 1em;
-  line-height: 1.25;
-  text-decoration: none;
-  -webkit-font-smoothing: antialiased;
-  cursor: pointer;
-  color: #0b0c0c;
-}
-/* line 36, ../scss/base/mixins/_buttons.scss */
-.button.secondary:visited {
-  background-color: #dee0e2;
-}
-/* line 40, ../scss/base/mixins/_buttons.scss */
-.button.secondary:hover, .button.secondary:focus {
-  background: #d0d3d6;
-}
-/* line 43, ../scss/base/mixins/_buttons.scss */
-.button.secondary:active {
-  top: 2px;
-  box-shadow: 0 0 0 #dee0e2;
-}
-/* line 51, ../scss/base/mixins/_buttons.scss */
-.button.secondary.disabled, .button.secondary[disabled="disabled"], .button.secondary[disabled] {
-  opacity: 0.5;
-}
-/* line 53, ../scss/base/mixins/_buttons.scss */
-.button.secondary.disabled:hover, .button.secondary[disabled="disabled"]:hover, .button.secondary[disabled]:hover {
-  cursor: default;
-  background-color: #dee0e2;
-}
-/* line 57, ../scss/base/mixins/_buttons.scss */
-.button.secondary.disabled:active, .button.secondary[disabled="disabled"]:active, .button.secondary[disabled]:active {
-  top: 0;
-  box-shadow: 0 2px 0 #b5babe;
-}
-/* line 78, ../scss/base/mixins/_buttons.scss */
-.button.secondary:hover, .button.secondary:focus, .button.secondary:visited {
-  color: #0b0c0c;
-}
-/* line 85, ../scss/base/mixins/_buttons.scss */
-.button.secondary:before {
-  content: "";
-  height: 110%;
-  width: 100%;
-  display: block;
-  background: transparent;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-/* line 95, ../scss/base/mixins/_buttons.scss */
-.button.secondary:active:before {
-  top: -10%;
-  height: 120%;
-}
-/* line 108, ../scss/base/mixins/_buttons.scss */
-.button.secondary[rel="external"]:after {
-  display: none;
-  content: none;
-  margin-left: 0;
-  margin-right: 0;
-}
-/* line 11, ../scss/components/_buttons.scss */
-.button.warning {
-  background-color: #b10e1e;
-  position: relative;
-  top: 0;
-  display: inline-block;
-  padding: 10px 10px 5px;
-  border: none;
-  border-radius: 0;
-  box-shadow: 0 2px 0 black;
-  font-size: 1em;
-  line-height: 1.25;
-  text-decoration: none;
-  -webkit-font-smoothing: antialiased;
-  cursor: pointer;
-  color: white;
-}
-/* line 36, ../scss/base/mixins/_buttons.scss */
-.button.warning:visited {
-  background-color: #b10e1e;
-}
-/* line 40, ../scss/base/mixins/_buttons.scss */
-.button.warning:hover, .button.warning:focus {
-  background: #990c1a;
-}
-/* line 43, ../scss/base/mixins/_buttons.scss */
-.button.warning:active {
-  top: 2px;
-  box-shadow: 0 0 0 #b10e1e;
-}
-/* line 51, ../scss/base/mixins/_buttons.scss */
-.button.warning.disabled, .button.warning[disabled="disabled"], .button.warning[disabled] {
-  opacity: 0.5;
-}
-/* line 53, ../scss/base/mixins/_buttons.scss */
-.button.warning.disabled:hover, .button.warning[disabled="disabled"]:hover, .button.warning[disabled]:hover {
-  cursor: default;
-  background-color: #b10e1e;
-}
-/* line 57, ../scss/base/mixins/_buttons.scss */
-.button.warning.disabled:active, .button.warning[disabled="disabled"]:active, .button.warning[disabled]:active {
-  top: 0;
-  box-shadow: 0 2px 0 #6a0812;
-}
-/* line 71, ../scss/base/mixins/_buttons.scss */
-.button.warning:hover, .button.warning:focus, .button.warning:visited {
-  color: white;
-}
-/* line 85, ../scss/base/mixins/_buttons.scss */
-.button.warning:before {
-  content: "";
-  height: 110%;
-  width: 100%;
-  display: block;
-  background: transparent;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-/* line 95, ../scss/base/mixins/_buttons.scss */
-.button.warning:active:before {
-  top: -10%;
-  height: 120%;
-}
-/* line 108, ../scss/base/mixins/_buttons.scss */
-.button.warning[rel="external"]:after {
-  display: none;
-  content: none;
-  margin-left: 0;
-  margin-right: 0;
-}
-/* line 14, ../scss/components/_buttons.scss */
 .button.inline {
   margin-top: -4px;
   margin-left: 8px;
 }
 @media (max-width: 450px) {
-  /* line 14, ../scss/components/_buttons.scss */
+  /* line 8, ../scss/components/_buttons.scss */
   .button.inline {
     margin: 8px 0 0;
   }
 }
 
-/* line 23, ../scss/components/_buttons.scss */
+/* line 17, ../scss/components/_buttons.scss */
 .button-link {
-  font-size: 1em;
-  line-height: 1.31579;
-  font-weight: 400;
-  text-transform: none;
   background: none;
   border: none;
-  -webkit-font-smoothing: antialiased;
-  display: inline-block;
   color: #005EA5;
-  line-height: 1.25;
-  text-decoration: underline;
   cursor: pointer;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.25;
   margin: 0 15px 15px 0;
   padding: 10px 10px 5px 10px;
+  text-decoration: underline;
+  text-transform: none;
   vertical-align: top;
 }
-/* line 39, ../scss/components/_buttons.scss */
+/* line 31, ../scss/components/_buttons.scss */
 .inline-button .button-link {
   margin-bottom: 0;
 }
@@ -1564,12 +1195,6 @@ fieldset {
   margin-bottom: 15px;
   padding-bottom: 15px;
 }
-/* line 52, ../scss/base/mixins/_conditionals.scss */
-.lt-ie9 .fieldset--with-border {
-  /* To serve styles to IE8 - Remove once support for IE8 is dropped */
-  margin-bottom: 30px;
-  padding-bottom: 45px;
-}
 @media (min-width: 641px) {
   /* line 8, ../scss/components/_forms.scss */
   .fieldset--with-border {
@@ -1606,17 +1231,6 @@ input[type="checkbox"] {
   margin-bottom: 20px;
   width: 100%;
 }
-/* line 52, ../scss/base/mixins/_conditionals.scss */
-.lt-ie9 .form-group {
-  /* To serve styles to IE8 - Remove once support for IE8 is dropped */
-  margin-bottom: 45px;
-}
-/* line 41, ../scss/components/_forms.scss */
-.inline-form-groups .lt-ie9 .form-group {
-  clear: none;
-  margin-right: 30px;
-  width: auto;
-}
 @media (min-width: 641px) {
   /* line 34, ../scss/components/_forms.scss */
   .form-group {
@@ -1637,21 +1251,6 @@ input[type="checkbox"] {
 /* line 51, ../scss/components/_forms.scss */
 .date-input input {
   width: 100%;
-}
-/* line 52, ../scss/base/mixins/_conditionals.scss */
-.lt-ie9 .date-input {
-  /* To serve styles to IE8 - Remove once support for IE8 is dropped */
-}
-/* line 55, ../scss/components/_forms.scss */
-.lt-ie9 .date-input .form-group {
-  clear: none;
-  float: left;
-  margin-right: 20px;
-  width: 50px;
-}
-/* line 61, ../scss/components/_forms.scss */
-.lt-ie9 .date-input .form-group--year {
-  width: 70px;
 }
 @media (min-width: 641px) {
   /* line 55, ../scss/components/_forms.scss */
@@ -1674,7 +1273,6 @@ input[type="checkbox"] {
 
 /* line 71, ../scss/components/_forms.scss */
 .form-label {
-  font-family: "nta", Arial, sans-serif;
   font-size: 19px;
   line-height: 1.31579;
   font-weight: 400;
@@ -1689,14 +1287,9 @@ input[type="checkbox"] {
     line-height: 1.25;
   }
 }
-/* line 52, ../scss/base/mixins/_conditionals.scss */
-.lt-ie9 .form-label {
-  /* To serve styles to IE8 - Remove once support for IE8 is dropped */
-}
 
 /* line 75, ../scss/components/_forms.scss */
 .form-hint {
-  font-family: "nta", Arial, sans-serif;
   font-size: 19px;
   line-height: 1.31579;
   font-weight: 400;
@@ -1715,10 +1308,6 @@ input[type="checkbox"] {
     line-height: 1.25;
   }
 }
-/* line 52, ../scss/base/mixins/_conditionals.scss */
-.lt-ie9 .form-hint {
-  /* To serve styles to IE8 - Remove once support for IE8 is dropped */
-}
 
 /* line 83, ../scss/components/_forms.scss */
 .form-control {
@@ -1730,11 +1319,6 @@ input[type="checkbox"] {
   padding: 4px;
   width: 100%;
   -webkit-appearance: none;
-}
-/* line 52, ../scss/base/mixins/_conditionals.scss */
-.lt-ie9 .form-control {
-  /* To serve styles to IE8 - Remove once support for IE8 is dropped */
-  width: 50%;
 }
 @media (min-width: 641px) {
   /* line 83, ../scss/components/_forms.scss */
@@ -1757,11 +1341,6 @@ input[type="checkbox"] {
 .form-control--1-4 {
   width: 100%;
 }
-/* line 52, ../scss/base/mixins/_conditionals.scss */
-.lt-ie9 .form-control--1-4 {
-  /* To serve styles to IE8 - Remove once support for IE8 is dropped */
-  width: 25%;
-}
 @media (min-width: 641px) {
   /* line 105, ../scss/components/_forms.scss */
   .form-control--1-4 {
@@ -1773,11 +1352,6 @@ input[type="checkbox"] {
 .form-control--1-3 {
   width: 100%;
 }
-/* line 52, ../scss/base/mixins/_conditionals.scss */
-.lt-ie9 .form-control--1-3 {
-  /* To serve styles to IE8 - Remove once support for IE8 is dropped */
-  width: 33.33%;
-}
 @media (min-width: 641px) {
   /* line 112, ../scss/components/_forms.scss */
   .form-control--1-3 {
@@ -1788,11 +1362,6 @@ input[type="checkbox"] {
 /* line 119, ../scss/components/_forms.scss */
 .form-control--1-2 {
   width: 100%;
-}
-/* line 52, ../scss/base/mixins/_conditionals.scss */
-.lt-ie9 .form-control--1-2 {
-  /* To serve styles to IE8 - Remove once support for IE8 is dropped */
-  width: 50%;
 }
 @media (min-width: 641px) {
   /* line 119, ../scss/components/_forms.scss */
@@ -1831,15 +1400,6 @@ input[type="checkbox"] {
   .block-label {
     font-size: 16px;
   }
-}
-/* line 52, ../scss/base/mixins/_conditionals.scss */
-.lt-ie9 .block-label {
-  /* To serve styles to IE8 - Remove once support for IE8 is dropped */
-  float: left;
-}
-/* line 151, ../scss/components/_forms.scss */
-.inline .lt-ie9 .block-label {
-  margin-right: 15px;
 }
 @media (min-width: 641px) {
   /* line 126, ../scss/components/_forms.scss */
@@ -1886,14 +1446,6 @@ select {
   display: block;
   margin-bottom: 15px;
 }
-/* line 52, ../scss/base/mixins/_conditionals.scss */
-.lt-ie9 .review-vacancy .vacancy-title {
-  /* To serve styles to IE8 - Remove once support for IE8 is dropped */
-  display: inline-block;
-  margin-bottom: 0;
-  margin-right: -4px;
-  width: 70%;
-}
 @media (min-width: 641px) {
   /* line 179, ../scss/components/_forms.scss */
   .review-vacancy .vacancy-title {
@@ -1919,16 +1471,6 @@ select {
   font-size: 0.65em;
   font-weight: normal;
 }
-/* line 52, ../scss/base/mixins/_conditionals.scss */
-.lt-ie9 .amend-answers {
-  /* To serve styles to IE8 - Remove once support for IE8 is dropped */
-  display: inline-block;
-  font-size: 0.54em;
-  margin-right: -4px;
-  text-align: right;
-  vertical-align: middle;
-  width: 30%;
-}
 @media (min-width: 641px) {
   /* line 198, ../scss/components/_forms.scss */
   .amend-answers {
@@ -1943,255 +1485,6 @@ select {
 /* line 210, ../scss/components/_forms.scss */
 .expanded .amend-answers {
   display: none;
-}
-
-/* line 1, ../scss/components/_typography.scss */
-html {
-  font-size: 62.5%;
-  /* 1 */
-}
-
-/*
- *    1. Font-size increased to compensate for change to html element font-size in
- *    order to support beta typography which was set in ems
- *    (62.5% * 160% = 100%)
- */
-/* line 12, ../scss/components/_typography.scss */
-body {
-  color: #0b0c0c;
-  font-family: "nta", Arial, sans-serif;
-  font-size: 160%;
-  -webkit-font-smoothing: antialiased;
-}
-
-/* line 19, ../scss/components/_typography.scss */
-.heading-48 {
-  font-family: "nta", Arial, sans-serif;
-  font-size: 48px;
-  line-height: 1.04167;
-  font-weight: 700;
-  margin-top: 15px;
-  margin-bottom: 30px;
-  text-transform: none;
-}
-@media (max-width: 640px) {
-  /* line 19, ../scss/components/_typography.scss */
-  .heading-48 {
-    font-size: 32px;
-    line-height: 1.09375;
-  }
-}
-/* line 52, ../scss/base/mixins/_conditionals.scss */
-.lt-ie9 .heading-48 {
-  /* To serve styles to IE8 - Remove once support for IE8 is dropped */
-  margin-top: 30px;
-  margin-bottom: 60px;
-}
-@media (min-width: 641px) {
-  /* line 19, ../scss/components/_typography.scss */
-  .heading-48 {
-    margin-top: 30px;
-    margin-bottom: 60px;
-  }
-}
-
-/* line 23, ../scss/components/_typography.scss */
-.heading-36 {
-  font-family: "nta", Arial, sans-serif;
-  font-size: 36px;
-  line-height: 1.11111;
-  font-weight: 700;
-  margin-top: 25px;
-  margin-bottom: 10px;
-  text-transform: none;
-}
-@media (max-width: 640px) {
-  /* line 23, ../scss/components/_typography.scss */
-  .heading-36 {
-    font-size: 24px;
-    line-height: 1.04167;
-  }
-}
-/* line 52, ../scss/base/mixins/_conditionals.scss */
-.lt-ie9 .heading-36 {
-  /* To serve styles to IE8 - Remove once support for IE8 is dropped */
-  margin-top: 45px;
-  margin-bottom: 20px;
-}
-@media (min-width: 641px) {
-  /* line 23, ../scss/components/_typography.scss */
-  .heading-36 {
-    margin-top: 45px;
-    margin-bottom: 20px;
-  }
-}
-
-/* line 27, ../scss/components/_typography.scss */
-.heading-24 {
-  font-family: "nta", Arial, sans-serif;
-  font-size: 24px;
-  line-height: 1.25;
-  font-weight: 700;
-  margin-top: 25px;
-  margin-bottom: 10px;
-  text-transform: none;
-  padding-top: 9px;
-  padding-bottom: 6px;
-}
-@media (max-width: 640px) {
-  /* line 27, ../scss/components/_typography.scss */
-  .heading-24 {
-    font-size: 20px;
-    line-height: 1.2;
-  }
-}
-/* line 52, ../scss/base/mixins/_conditionals.scss */
-.lt-ie9 .heading-24 {
-  /* To serve styles to IE8 - Remove once support for IE8 is dropped */
-  padding-top: 6px;
-  padding-bottom: 4px;
-}
-@media (min-width: 641px) {
-  /* line 27, ../scss/components/_typography.scss */
-  .heading-24 {
-    padding-top: 6px;
-    padding-bottom: 4px;
-  }
-}
-
-/* line 31, ../scss/components/_typography.scss */
-.heading--with-border {
-  border-top: 1px solid #bfc1c3;
-  padding-top: 15px;
-}
-/* line 52, ../scss/base/mixins/_conditionals.scss */
-.lt-ie9 .heading--with-border {
-  /* To serve styles to IE8 - Remove once support for IE8 is dropped */
-  padding-top: 45px;
-}
-@media (min-width: 641px) {
-  /* line 31, ../scss/components/_typography.scss */
-  .heading--with-border {
-    padding-top: 45px;
-  }
-}
-
-/* line 39, ../scss/components/_typography.scss */
-.copy-19 {
-  font-family: "nta", Arial, sans-serif;
-  font-size: 19px;
-  line-height: 1.31579;
-  font-weight: 400;
-  margin-top: 10px;
-  margin-bottom: 5px;
-  text-transform: none;
-}
-@media (max-width: 640px) {
-  /* line 39, ../scss/components/_typography.scss */
-  .copy-19 {
-    font-size: 16px;
-    line-height: 1.25;
-  }
-}
-/* line 52, ../scss/base/mixins/_conditionals.scss */
-.lt-ie9 .copy-19 {
-  /* To serve styles to IE8 - Remove once support for IE8 is dropped */
-}
-
-/* line 43, ../scss/components/_typography.scss */
-.copy-16 {
-  font-family: "nta", Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.25;
-  font-weight: 300;
-  text-transform: none;
-  padding-top: 8px;
-  padding-bottom: 7px;
-}
-@media (max-width: 640px) {
-  /* line 43, ../scss/components/_typography.scss */
-  .copy-16 {
-    font-size: 14px;
-    line-height: 1.14286;
-  }
-}
-/* line 52, ../scss/base/mixins/_conditionals.scss */
-.lt-ie9 .copy-16 {
-  /* To serve styles to IE8 - Remove once support for IE8 is dropped */
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
-@media (min-width: 641px) {
-  /* line 43, ../scss/components/_typography.scss */
-  .copy-16 {
-    padding-top: 5px;
-    padding-bottom: 5px;
-  }
-}
-
-/* line 47, ../scss/components/_typography.scss */
-p, pre {
-  margin: 5px 0 20px;
-}
-/* line 49, ../scss/components/_typography.scss */
-p.text, pre.text {
-  font-family: "nta", Arial, sans-serif;
-  font-size: 19px;
-  line-height: 1.31579;
-  font-weight: 400;
-  margin-top: 10px;
-  margin-bottom: 5px;
-  text-transform: none;
-}
-@media (max-width: 640px) {
-  /* line 49, ../scss/components/_typography.scss */
-  p.text, pre.text {
-    font-size: 16px;
-    line-height: 1.25;
-  }
-}
-/* line 52, ../scss/base/mixins/_conditionals.scss */
-.lt-ie9 p.text, .lt-ie9 pre.text {
-  /* To serve styles to IE8 - Remove once support for IE8 is dropped */
-}
-
-/* line 55, ../scss/components/_typography.scss */
-b,
-strong {
-  font-weight: 600;
-}
-
-/* line 59, ../scss/components/_typography.scss */
-.highlight {
-  color: #0076c0;
-}
-
-/* line 63, ../scss/components/_typography.scss */
-.text {
-  max-width: 30em;
-}
-
-/* line 67, ../scss/components/_typography.scss */
-.panel-indent {
-  border-left: 5px solid #dee0e2;
-  clear: both;
-  margin: 30px 0;
-  padding: 0 15px;
-}
-/* line 52, ../scss/base/mixins/_conditionals.scss */
-.lt-ie9 .panel-indent {
-  /* To serve styles to IE8 - Remove once support for IE8 is dropped */
-  padding: 10px 15px 10px 30px;
-}
-@media (min-width: 641px) {
-  /* line 67, ../scss/components/_typography.scss */
-  .panel-indent {
-    padding: 10px 15px 10px 30px;
-  }
-}
-/* line 75, ../scss/components/_typography.scss */
-.panel-indent p, .panel-indent ul {
-  margin-bottom: 0;
 }
 
 /* line 1, ../scss/components/_lists.scss */
@@ -2431,51 +1724,6 @@ video {
   float: right;
 }
 
-/* line 1, ../scss/modules/_main-content.scss */
-#main {
-  background: white;
-  display: block;
-  padding: 15px 0 30px;
-}
-/* line 52, ../scss/base/mixins/_conditionals.scss */
-.lt-ie9 #main {
-  /* To serve styles to IE8 - Remove once support for IE8 is dropped */
-  padding-top: 30px;
-  padding-bottom: 90px;
-}
-@media (min-width: 641px) {
-  /* line 1, ../scss/modules/_main-content.scss */
-  #main {
-    padding-top: 30px;
-    padding-bottom: 90px;
-  }
-}
-
-/* line 11, ../scss/modules/_main-content.scss */
-.content-container {
-  font-size: 19px;
-  margin: 0 auto;
-  padding: 0 15px;
-  max-width: 1020px;
-}
-/* line 52, ../scss/base/mixins/_conditionals.scss */
-.lt-ie9 .content-container {
-  /* To serve styles to IE8 - Remove once support for IE8 is dropped */
-  padding: 0 30px;
-}
-@media (min-width: 641px) {
-  /* line 11, ../scss/modules/_main-content.scss */
-  .content-container {
-    padding: 0 30px;
-  }
-}
-
-/* line 21, ../scss/modules/_main-content.scss */
-.clearfix {
-  clear: both;
-  display: block;
-}
-
 /* line 1, ../scss/modules/_header.scss */
 .global-header {
   background: #0b0c0c;
@@ -2489,12 +1737,6 @@ video {
   max-width: 1020px;
   overflow: hidden;
   padding: 15px 15px 0;
-}
-/* line 52, ../scss/base/mixins/_conditionals.scss */
-.lt-ie9 .global-header__wrapper {
-  /* To serve styles to IE8 - Remove once support for IE8 is dropped */
-  padding-left: 30px;
-  padding-right: 30px;
 }
 @media (min-width: 641px) {
   /* line 6, ../scss/modules/_header.scss */
@@ -2627,6 +1869,40 @@ footer {
   text-decoration: underline;
 }
 
+/* line 1, ../scss/modules/_main-content.scss */
+#main {
+  background: white;
+  display: block;
+  padding: 15px 0 30px;
+}
+@media (min-width: 641px) {
+  /* line 1, ../scss/modules/_main-content.scss */
+  #main {
+    padding-top: 30px;
+    padding-bottom: 90px;
+  }
+}
+
+/* line 11, ../scss/modules/_main-content.scss */
+.content-container {
+  font-size: 19px;
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1020px;
+}
+@media (min-width: 641px) {
+  /* line 11, ../scss/modules/_main-content.scss */
+  .content-container {
+    padding: 0 30px;
+  }
+}
+
+/* line 21, ../scss/modules/_main-content.scss */
+.clearfix {
+  clear: both;
+  display: block;
+}
+
 /* line 2, ../scss/modules/_progress-steps.scss */
 .progress-indicator {
   margin-bottom: 30px;
@@ -2660,19 +1936,6 @@ footer {
   text-decoration: none;
 }
 
-/* line 52, ../scss/base/mixins/_conditionals.scss */
-.lt-ie9 .progress-indicator-horizontal {
-  /* To serve styles to IE8 - Remove once support for IE8 is dropped */
-}
-/* line 31, ../scss/modules/_progress-steps.scss */
-.lt-ie9 .progress-indicator-horizontal li {
-  float: left;
-  margin-right: 30px;
-}
-/* line 34, ../scss/modules/_progress-steps.scss */
-.lt-ie9 .progress-indicator-horizontal li.active {
-  margin-bottom: -5px;
-}
 @media (min-width: 641px) {
   /* line 31, ../scss/modules/_progress-steps.scss */
   .progress-indicator-horizontal li {
@@ -2688,11 +1951,6 @@ footer {
 /* line 42, ../scss/modules/_progress-steps.scss */
 .progress-indicator-vertical span {
   float: right;
-}
-/* line 52, ../scss/base/mixins/_conditionals.scss */
-.lt-ie9 .progress-indicator-vertical {
-  /* To serve styles to IE8 - Remove once support for IE8 is dropped */
-  width: 50%;
 }
 @media (min-width: 641px) {
   /* line 41, ../scss/modules/_progress-steps.scss */

@@ -11,7 +11,7 @@ html {
 
 body {
   color: $text-colour;
-  font-family: "nta", Arial, sans-serif;
+  font-family: $NTA-Light;
   font-size: 160%;
   -webkit-font-smoothing: antialiased;
 }
@@ -49,6 +49,29 @@ p, pre {
   &.text {
     @include copy-19;
   }
+}
+
+a {
+  color: $link-colour;
+  &:visited {
+    color: $link-visited-colour;
+  }
+  // &[href="#"]:visited {
+  //   color: $link-colour;
+  //   &:hover {
+  //     color: $link-hover-colour;
+  //   }
+  // }
+  &:hover {
+    color: $link-hover-colour;
+  }
+  &:active {
+    color: $link-active-colour;
+  }
+}
+
+a:active, a:hover {
+  color: $purple;
 }
 
 b,

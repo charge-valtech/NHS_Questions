@@ -125,18 +125,3 @@
     }
   }
 }
-
-// default classes
-
-// Primary action
-.button{
- @include button;
-}
-// Secondary action
-.button-secondary{
-  @include button($grey-3);
-}
-// Warning action
-.button-warning{
- @include button($red);
-}

@@ -66,29 +66,6 @@ button:active {
   outline: none;
 }
 
-a {
-  color: $link-colour;
-  &:visited {
-    color: $link-visited-colour;
-  }
-  // &[href="#"]:visited {
-  //   color: $link-colour;
-  //   &:hover {
-  //     color: $link-hover-colour;
-  //   }
-  // }
-  &:hover {
-    color: $link-hover-colour;
-  }
-  &:active {
-    color: $link-active-colour;
-  }
-}
-
-a:active, a:hover {
-  color: $purple;
-}
-
 
 
 input:focus,
