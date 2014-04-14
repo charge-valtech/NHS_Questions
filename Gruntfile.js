@@ -46,7 +46,8 @@ module.exports = function(grunt) {
           sourceComments: 'map'
         },
         files: {
-          'www/_assets/css/main.css' : 'www/_assets/scss/main.scss'
+          'www/_assets/css/main.css' : 'www/_assets/scss/main.scss',
+          'www/_assets/css/main-ie8.css' : 'www/_assets/scss/main-ie8.scss'
         }
       }
     },
