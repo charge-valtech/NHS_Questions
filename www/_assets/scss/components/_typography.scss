@@ -24,6 +24,32 @@ body {
 }
 
 // Headings
+
+h1 {
+  @include core-48;
+}
+
+h2 {
+  @include core-36;
+}
+
+h3 {
+  @include core-24;
+}
+
+h4, h5, h6 {
+  @include core-19;
+}
+
+.hgroup {
+  padding: 0;
+  .subtitle {
+    @include core-24;
+    color: $secondary-text-colour;
+    margin: 0;
+  }
+}
+
 .heading-48 {
   @include bold-48();
   margin-top: $gutter-half;

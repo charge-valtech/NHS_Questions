@@ -9,6 +9,10 @@ legend {
   clear: both;
 }
 
+fieldset:first-of-type legend.heading-36 {
+  margin-top: 0;
+}
+
 fieldset { /*Overriding normalize presets*/
   border: 0;
   padding: 0;
