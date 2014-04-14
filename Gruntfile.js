@@ -33,6 +33,15 @@ module.exports = function(grunt) {
         }
       }
     },
+    modernizr: {
+      dist: {
+        // [REQUIRED] Path to the build you're using for development.
+        "devFile" : "www/_assets/js/vendor/modernizr-2.7.1.js",
+
+        // [REQUIRED] Path to save out the built file.
+        "outputFile" : "www/_assets/js/vendor/modernizr-custom.js"
+      }
+    },
     imageoptim: {
       dev: {
         src: ['www/_assets/img']
@@ -156,6 +165,7 @@ module.exports = function(grunt) {
 
   [
     'assemble',
+    'grunt-modernizr',
     'grunt-contrib-imagemin',
     'grunt-imageoptim',
     'grunt-contrib-uglify',
@@ -173,7 +183,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('imageoptim', ['imageoptim']);
 
-  grunt.registerTask('default', ['jshint', 'concat:dev', 'sass', 'assemble', 'connect', 'watch']);
+  grunt.registerTask('default', ['modernizr', 'jshint', 'concat:dev', 'sass', 'assemble', 'connect', 'watch']);
 
   grunt.registerTask('sprint', ['cssmin:dist', 'clean:sprint', 'copyto:sprint']);
 
