@@ -28,6 +28,9 @@
     top: 18px;
     left: $gutter-half;
     cursor: pointer;
+    @media (max-width: 450px) {
+      top: 15px;
+    }
   }
   .inline & {
     clear: none;
@@ -37,18 +40,21 @@
 
 // Only if JavaScript is enabled
 
+.js-enabled {
 // Add focus styles to block labels
-.js-enabled .add-focus {
-  outline: 3px solid $yellow;
-}
-
+  .add-focus {
+    outline: 3px solid $yellow;
+  }
 // Remove focus styles from radio and checkbox inputs
-.js-enabled .block-label input:focus {
-  outline: none;
+  .block-label input:focus {
+    outline: none;
+  }
+// Add selected state to block labels
+  .selected {
+    background: $white;
+    border-color: $black;
+  }
 }
 
-// Add selected state to block labels
-.js-enabled .selected {
-  background: $white;
-  border-color: $black;
-}
+
+

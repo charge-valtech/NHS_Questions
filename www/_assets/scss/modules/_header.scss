@@ -20,11 +20,38 @@
   margin: 0 -4px 15px 0;
   vertical-align: middle;
   width: 33.33%;
-  a {
-    display: inline-block;
-  }
   @include media(tablet) {
     margin-bottom: 0;
+  }
+}
+
+.govuk-logo {
+  border-bottom: 1px solid rgba(black, 0);
+  color: $white;
+  display: inline-block;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1em;
+  text-decoration: none;
+  // text-rendering: optimizeLegibility;
+  img {
+    display: none;
+    line-height: inherit;
+    margin-top: -6px;
+    vertical-align: middle;
+    width: 35px; height: 31px;
+  }
+  &:hover, &:visited {
+    color: $white;
+  }
+  &:hover {
+    border-color: $white;
+  }
+  &:active {
+    color: $link-active-colour;
+    &:hover {
+      border-color: $link-active-colour;
+    }
   }
 }
 
