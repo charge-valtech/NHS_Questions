@@ -2,18 +2,18 @@
 headerTitle: Find an Apprenticeship
 ---
 <h1 class="heading-48">Search results</h1>
-<div class="search-summary">
-  <label class="search-summary__item">
-    <h4>You searched for:</h4>
-    <input class="input" type="text" value="Engineer">
-  </label>
-  <label class="search-summary__item">
-    <h4>Location:</h4>
-    <input class="input" type="text" value="CV32 7RA">
-  </label>
-  <label class="search-summary__item">
-    <h4>Within:</h4>
-    <select class="input">
+<fieldset class="inline">
+  <div class="form-group">
+    <label for="you-searched-for" class="form-label">You searched for:</label>
+    <input class="form-control" id="you-searched-for" type="text" value="Engineer">
+  </div>
+  <div class="form-group">
+    <label for="location" class="form-label">Location:</label>
+    <input class="form-control" id="location" type="text" value="CV32 7RA">
+  </div>
+  <div class="form-group">
+    <label for="within" class="form-label">Within:</label>
+    <select class="" id="within">
       <option value="">This area only</option>
       <option value="">5 miles</option>
       <option value="">10 miles</option>
@@ -22,8 +22,9 @@ headerTitle: Find an Apprenticeship
       <option value="">30 miles</option>
       <option value="">40 miles</option>
     </select>
-  </label>
-</div>
+  </div>
+</fieldset>
+
 <p>We have found <b>3</b> apprenticeships that might be suitable:</p>
 <p>
   Filter results by:

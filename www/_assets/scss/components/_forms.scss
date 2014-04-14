@@ -38,10 +38,13 @@ input[type="checkbox"] { /*Overriding normalize presets*/
   width: 100%;
   @include media(tablet) {
     margin-bottom: ($gutter*1.5);
-    .inline-form-groups & {
+    .inline & {
       clear: none;
       margin-right: 30px;
       width: auto;
+      .form-control {
+        width: 100%;
+      }
     }
   }
 }

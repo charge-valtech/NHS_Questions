@@ -90,7 +90,7 @@ headerTitle: Advertising an Apprenticeship
   </div>
 </fieldset>
 
-<fieldset class="inline-form-groups">
+<fieldset class="inline">
   <legend class="heading-36">Wage</legend>
   <div class="form-group">
     <label for="wage-amount" class="form-label">Amount</label>
@@ -116,7 +116,7 @@ headerTitle: Advertising an Apprenticeship
       <label class="form-hint" for="date-day1">Day</label>
       <input type="text" class="form-control" maxlength="2" pattern="[0-9*]" id="date-day1">
     </div>
-    <div class="form-group form-group--compound">
+    <div class="form-group form-group--compound b">
       <label class="form-hint" for="date-month1">Month</label>
       <input type="text" class="form-control" maxlength="2" id="date-month1">
     </div>
@@ -140,16 +140,18 @@ headerTitle: Advertising an Apprenticeship
       <input type="text" class="form-control" maxlength="4" id="date-year2">
     </div>
   </fieldset>
-  <div class="form-group inline">
-    <p>When do you want the apprentice to start work?</p>
-    <label for="asap-start" class="block-label">
-      <input id="asap-start" type="radio" name="h-dates">
-      As soon as possible
-    </label>
-    <label data-target="start-date-panel" for="enter-start" class="block-label">
-      <input class="check-to-show-trigger" id="enter-start" type="radio" name="h-dates">
-      Enter date
-    </label>
+  <div class="form-group">
+    <div class="form-group form-group--compound inline">
+      <p>When do you want the apprentice to start work?</p>
+      <label for="asap-start" class="block-label">
+        <input id="asap-start" type="radio" name="h-dates">
+        As soon as possible
+      </label>
+      <label data-target="start-date-panel" for="enter-start" class="block-label">
+        <input class="check-to-show-trigger" id="enter-start" type="radio" name="h-dates">
+        Enter date
+      </label>
+    </div>
     <fieldset id="start-date-panel" class="panel-indent toggle-content form-group date-input">
       <label class="form-label" for="date-day3">Start date</label>
       <div class="form-group form-group--compound">

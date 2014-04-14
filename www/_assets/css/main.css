@@ -1047,10 +1047,12 @@ input[type="radio"], input[type="checkbox"] {
   @media (min-width: 641px) {
     .form-group {
       margin-bottom: 45px; }
-      .inline-form-groups .form-group {
+      .inline .form-group {
         clear: none;
         margin-right: 30px;
-        width: auto; } }
+        width: auto; }
+        .inline .form-group .form-control {
+          width: 100%; } }
 
 .form-group--compound {
   margin-bottom: 10px; }
