@@ -41,8 +41,9 @@ module.exports = function(grunt) {
     sass: {
       dev: {
         options: {
-          sourcemap: true,
-          style: 'expanded'
+          includePaths: ['www/_assets/scss'],
+          outputStyle: 'expanded',
+          sourceComments: 'map'
         },
         files: {
           'www/_assets/css/main.css' : 'www/_assets/scss/main.scss'
@@ -152,19 +153,22 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.loadNpmTasks('assemble');
-  grunt.loadNpmTasks('grunt-contrib-imagemin');
-  grunt.loadNpmTasks('grunt-imageoptim');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  // grunt.loadNpmTasks('grunt-contrib-compass');
-  grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
-  grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-connect');
-  grunt.loadNpmTasks('grunt-copy-to');
-  grunt.loadNpmTasks('grunt-contrib-clean');
+  [
+    'assemble',
+    'grunt-contrib-imagemin',
+    'grunt-imageoptim',
+    'grunt-contrib-uglify',
+    'grunt-contrib-jshint',
+    'grunt-sass',
+    'grunt-contrib-cssmin',
+    'grunt-contrib-concat',
+    'grunt-contrib-watch',
+    'grunt-contrib-connect',
+    'grunt-copy-to',
+    'grunt-contrib-clean'
+  ].forEach(function (task) {
+    grunt.loadNpmTasks(task);
+  });
 
   grunt.registerTask('imageoptim', ['imageoptim']);
 
