@@ -7,29 +7,27 @@
   display: block;
   float: none;
   clear: left;
-  position: relative;
 
   background: $grey-3;
   border: 1px solid $grey-3;
-  padding: (18px $gutter $gutter-half $gutter*1.5);
+  padding: 20px $gutter $gutter-half $gutter-half;
   margin-bottom: $gutter-half;
 
   cursor: pointer; // Encourage clicking on block labels
 
   @include media(tablet) {
     float: left;
-    // width: 25%; - Test : check that text within labels will wrap
   }
   &:hover {
     border-color: $black;
   }
   input {
-    position: absolute;
-    top: 18px;
-    left: $gutter-half;
     cursor: pointer;
-    @media (max-width: 450px) {
-      top: 15px;
+    display: inline-block;
+    margin: 0 10px 0 0;
+    vertical-align: top;
+    @include media(tablet) {
+      margin-top: 2px;
     }
   }
   .inline & {

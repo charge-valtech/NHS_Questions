@@ -1247,23 +1247,20 @@ input[type="radio"], input[type="checkbox"] {
   display: block;
   float: none;
   clear: left;
-  position: relative;
   background: #dee0e2;
   border: 1px solid #dee0e2;
-  padding: 18px 30px 15px 45px;
+  padding: 20px 30px 15px 15px;
   margin-bottom: 15px;
   cursor: pointer;
   float: left; }
   .block-label:hover {
     border-color: #0b0c0c; }
   .block-label input {
-    position: absolute;
-    top: 18px;
-    left: 15px;
-    cursor: pointer; }
-    @media (max-width: 450px) {
-      .block-label input {
-        top: 15px; } }
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 10px 0 0;
+    vertical-align: top;
+    margin-top: 2px; }
   .inline .block-label {
     clear: none;
     margin-right: 15px; }
