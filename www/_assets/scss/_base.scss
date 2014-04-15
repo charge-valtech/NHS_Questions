@@ -17,8 +17,12 @@
   }
 }
 
+/* 1. Stops scrollbar from hiding when user is inactive on the page */
+
 html {
   overflow-y: scroll;
+  /* 1 */
+  -ms-overflow-style: scrollbar; /*auto | none | scrollbar | -ms-autohiding-scrollbar*/
 }
 
 body {

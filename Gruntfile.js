@@ -176,7 +176,8 @@ module.exports = function(grunt) {
     'grunt-contrib-watch',
     'grunt-contrib-connect',
     'grunt-copy-to',
-    'grunt-contrib-clean'
+    'grunt-contrib-clean',
+    'grunt-contrib-compress'
   ].forEach(function (task) {
     grunt.loadNpmTasks(task);
   });

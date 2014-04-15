@@ -3,7 +3,7 @@ footer {
   background: #dee0e2;
   border-top: 10px solid $govuk-blue;
   color: #454A4C;
-  font-size: 14px;
+  font-size: 16px;
   overflow: hidden;
 }
 
@@ -11,6 +11,9 @@ footer {
   border-top: 1px solid #a1acb2;
   a {
     color: #454A4C;
+    &:hover {
+      color: #171819;
+    }
   }
 }
 
@@ -18,28 +21,28 @@ footer {
   margin: 0 auto;
   max-width: 1000px;
   overflow: hidden;
-  padding: 60px 15px;
-  @media (max-width: 600px) {
-    padding-top: 10px;
+  padding: 10px 15px 60px;
+  @include media(tablet) {
+    padding-top: 60px;
   }
 }
 
 .footer__nav {
   display: inline-block;
   list-style: none;
-  width: 75%;
-  @media (max-width: 600px) {
-    margin-bottom: 30px;
-    width: 100%;
+  margin-bottom: 30px;
+  width: 100%;
+  @include media(tablet) {
+    margin-bottom: 0;
+    width: 75%;
   }
 }
 
 .footer__link {
-  display: inline-block;
   padding-right: 20px;
   vertical-align: bottom;
-  @media (max-width: 600px) {
-    display: list-item;
+  @include media(tablet) {
+    display: inline-block;
   }
 }
 
@@ -47,9 +50,9 @@ footer {
   display: inline-block;
   text-align: center;
   text-decoration: none;
-  width: 24%;
-  @media (max-width: 600px) {
-    width: 100%;
+  width: 100%;
+  @include media(tablet) {
+    width: 24%;
   }
   &:hover {
     text-decoration: underline;

@@ -96,11 +96,14 @@
 }
 
 .breadcrumbs__item {
-  background: url(../img/breadcrumb-separator.png) no-repeat center right;
+  background: url(../img/separator.png) no-repeat center right;
   background-size: 6px 11px;
   display: inline-block;
   margin-left: 8px;
   padding-right: 18px;
+  @include device-pixel-ratio(2) {
+    background-image: url(../img/separator@2x.png);
+  }
   &:first-child {
     margin: 0;
   }

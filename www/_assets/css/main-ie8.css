@@ -429,8 +429,12 @@ table {
 .no-js .toggle-content {
   display: block !important; }
 
+/* 1. Stops scrollbar from hiding when user is inactive on the page */
 html {
-  overflow-y: scroll; }
+  overflow-y: scroll;
+  /* 1 */
+  -ms-overflow-style: scrollbar;
+  /*auto | none | scrollbar | -ms-autohiding-scrollbar*/ }
 
 body {
   margin: 0; }
@@ -1491,11 +1495,14 @@ video {
     color: #2e8aca; }
 
 .breadcrumbs__item {
-  background: url(../img/breadcrumb-separator.png) no-repeat center right;
+  background: url(../img/separator.png) no-repeat center right;
   background-size: 6px 11px;
   display: inline-block;
   margin-left: 8px;
   padding-right: 18px; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20/10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    .breadcrumbs__item {
+      background-image: url(../img/separator@2x.png); } }
   .breadcrumbs__item:first-child {
     margin: 0; }
   .breadcrumbs__item:last-child {
@@ -1630,48 +1637,42 @@ footer {
   background: #dee0e2;
   border-top: 10px solid #005ea5;
   color: #454A4C;
-  font-size: 14px;
+  font-size: 16px;
   overflow: hidden; }
 
 .footer__wrapper {
   border-top: 1px solid #a1acb2; }
   .footer__wrapper a {
     color: #454A4C; }
+    .footer__wrapper a:hover {
+      color: #171819; }
 
 .footer__meta {
   margin: 0 auto;
   max-width: 1000px;
   overflow: hidden;
-  padding: 60px 15px; }
-  @media (max-width: 600px) {
-    .footer__meta {
-      padding-top: 10px; } }
+  padding: 10px 15px 60px;
+  padding-top: 60px; }
 
 .footer__nav {
   display: inline-block;
   list-style: none;
+  margin-bottom: 30px;
+  width: 100%;
+  margin-bottom: 0;
   width: 75%; }
-  @media (max-width: 600px) {
-    .footer__nav {
-      margin-bottom: 30px;
-      width: 100%; } }
 
 .footer__link {
-  display: inline-block;
   padding-right: 20px;
-  vertical-align: bottom; }
-  @media (max-width: 600px) {
-    .footer__link {
-      display: list-item; } }
+  vertical-align: bottom;
+  display: inline-block; }
 
 .footer__copyright {
   display: inline-block;
   text-align: center;
   text-decoration: none;
+  width: 100%;
   width: 24%; }
-  @media (max-width: 600px) {
-    .footer__copyright {
-      width: 100%; } }
   .footer__copyright:hover {
     text-decoration: underline; }
 
