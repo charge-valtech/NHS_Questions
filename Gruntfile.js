@@ -186,7 +186,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('default', ['modernizr', 'jshint', 'concat:dev', 'sass', 'assemble', 'connect', 'watch']);
 
-  grunt.registerTask('sprint', ['cssmin:dist', 'clean:sprint', 'copyto:sprint']);
+  grunt.registerTask('sprint', ['clean:sprint', 'copyto:sprint']);
 
   grunt.registerTask('demo', ['clean:demo', 'copyto:demo']);
 
