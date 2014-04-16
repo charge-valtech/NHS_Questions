@@ -123,7 +123,8 @@ module.exports = function(grunt) {
           ignore: [
             'www/_assets/scss{,/**/*}',
             'www/_templates{,/**/*}',
-            'www/z-backups{,/**/*}'
+            'www/z-backups{,/**/*}',
+            'www/_assets/css/*.map'
           ]
         }
       },

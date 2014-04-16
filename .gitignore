@@ -4,3 +4,4 @@ node_modules/*
 www/*.html
 www/employer-role-submission/*.html
 www/find-an-apprenticeship/*.html
+*.map
