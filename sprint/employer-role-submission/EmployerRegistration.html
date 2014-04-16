@@ -9,9 +9,29 @@
   <title>SFA Apprenticeships</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-  <link href="../_assets/css/main.css?cache-bust" media="all" rel="stylesheet" type="text/css">
-  <script src="../_assets/js/vendor/modernizr-2.7.1.js"></script>
+  <!--[if gt IE 8]><!--> <link href="../_assets/css/main.css" media="all" rel="stylesheet" type="text/css"><!--<![endif]-->
+  <!--[if IE 8]><link href="../_assets/css/main-ie8.css" media="all" rel="stylesheet" type="text/css"><![endif]-->
+
+  <!--[if IE 8]>
+    <script type="text/javascript">
+      (function(){if(window.opera){return;}
+       setTimeout(function(){var a=document,g,b={families:(g=
+       ["nta"]),urls:["../_assets/css/fonts-ie8.css"]},
+       c="../_assets/js/vendor/goog/webfont-debug.js",d="script",
+       e=a.createElement(d),f=a.getElementsByTagName(d)[0],h=g.length;WebFontConfig
+       ={custom:b},e.src=c,f.parentNode.insertBefore(e,f);for(;h=h-1;a.documentElement
+       .className+=' wf-'+g[h].replace(/\s/g,'').toLowerCase()+'-n4-loading');},0)
+      })()
+    </script>
+    <![endif]-->
+    <!--[if gte IE 9]><!-->
+      <link href="../_assets/css/fonts.css" media="all" rel="stylesheet" type="text/css" />
+    <!--<![endif]-->
+  <script>
+    var html = document.documentElement;
+    html.className += " js-enabled";
+  </script>
+  <script src="../_assets/js/vendor/modernizr-custom.js"></script>
 </head>
 <body>
   <div class="skiplink-container">
@@ -21,9 +41,12 @@
 </div>
 <header role="banner" class="global-header">
   <div class="global-header__wrapper">
-    <a class="global-header__logo" href="/" title="Go to the GOV.UK homepage">
-      <img src="../_assets/img/logos/logo.png" alt="GOV.UK">
-    </a>
+    <div class="global-header__logo">
+      <a href="/" title="Go to the GOV.UK homepage" class="govuk-logo">
+        <img src="../_assets/img/gov.uk_logotype_crown.png" alt="Crown">
+        GOV.UK
+      </a>
+    </div>
     <h1 class="global-header__title alpha">Register your organisation <span class="alpha__label">Alpha</span></h1>
   </div>
 </header>
@@ -34,7 +57,7 @@
     <main role="main" id="main">
       
 <h1 class="heading-48">Register your organisation</h1>
-<fieldset>
+<fieldset class="fieldset--with-border">
   <legend class="heading-36">Organisation details</legend>
   <div class="form-group">
     <label class="form-label" for="businessOrganDetails">Name of organisation</label>
@@ -143,7 +166,7 @@
       </ul>
       <a class="footer__copyright" href="http://www.nationalarchives.gov.uk/information-management/our-services/crown-copyright.htm" target="_blank">
         <img src="../_assets/img/logos/govuk-crest@2x.png" width="125" height="102" alt="Crown copyright logo">
-        <p>&copy; Crown Copyright</p>
+        <p>&copy; Crown copyright</p>
       </a>
     </div>
   </div>

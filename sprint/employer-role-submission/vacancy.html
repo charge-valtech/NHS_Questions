@@ -9,9 +9,29 @@
   <title>SFA Apprenticeships</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-  <link href="../_assets/css/main.css?cache-bust" media="all" rel="stylesheet" type="text/css">
-  <script src="../_assets/js/vendor/modernizr-2.7.1.js"></script>
+  <!--[if gt IE 8]><!--> <link href="../_assets/css/main.css" media="all" rel="stylesheet" type="text/css"><!--<![endif]-->
+  <!--[if IE 8]><link href="../_assets/css/main-ie8.css" media="all" rel="stylesheet" type="text/css"><![endif]-->
+
+  <!--[if IE 8]>
+    <script type="text/javascript">
+      (function(){if(window.opera){return;}
+       setTimeout(function(){var a=document,g,b={families:(g=
+       ["nta"]),urls:["../_assets/css/fonts-ie8.css"]},
+       c="../_assets/js/vendor/goog/webfont-debug.js",d="script",
+       e=a.createElement(d),f=a.getElementsByTagName(d)[0],h=g.length;WebFontConfig
+       ={custom:b},e.src=c,f.parentNode.insertBefore(e,f);for(;h=h-1;a.documentElement
+       .className+=' wf-'+g[h].replace(/\s/g,'').toLowerCase()+'-n4-loading');},0)
+      })()
+    </script>
+    <![endif]-->
+    <!--[if gte IE 9]><!-->
+      <link href="../_assets/css/fonts.css" media="all" rel="stylesheet" type="text/css" />
+    <!--<![endif]-->
+  <script>
+    var html = document.documentElement;
+    html.className += " js-enabled";
+  </script>
+  <script src="../_assets/js/vendor/modernizr-custom.js"></script>
 </head>
 <body>
   <div class="skiplink-container">
@@ -21,9 +41,12 @@
 </div>
 <header role="banner" class="global-header">
   <div class="global-header__wrapper">
-    <a class="global-header__logo" href="/" title="Go to the GOV.UK homepage">
-      <img src="../_assets/img/logos/logo.png" alt="GOV.UK">
-    </a>
+    <div class="global-header__logo">
+      <a href="/" title="Go to the GOV.UK homepage" class="govuk-logo">
+        <img src="../_assets/img/gov.uk_logotype_crown.png" alt="Crown">
+        GOV.UK
+      </a>
+    </div>
     <h1 class="global-header__title alpha">Advertising an Apprenticeship <span class="alpha__label">Alpha</span></h1>
   </div>
 </header>
@@ -34,7 +57,7 @@
     <main role="main" id="main">
       
 <h1 class="heading-48">Add vacancy details</h1>
-<fieldset>
+<fieldset class="fieldset--with-border">
   <legend class="heading-36">Vacancy details</legend>
   <div class="form-group">
     <label for="job-title" class="form-label">Job title</label>
@@ -67,7 +90,7 @@
   </div>
 </fieldset>
 
-<fieldset>
+<fieldset class="fieldset--with-border">
   <legend class="heading-36">Vacancy Location</legend>
   <div class="form-group form-group--compound inline-button">
     <label class="form-label" for="role-short-desc">Postcode</label>
@@ -94,13 +117,13 @@
     <label class="form-label" for="address2">Address line 2</label>
     <input type="text" id="address2" class="form-control">
   </div>
-  <div class="form-group form-group--compound">
+  <div class="form-group form-group">
     <label class="form-label" for="address3">Town or City</label>
     <input type="text" id="address3" class="form-control form-control--1-3">
   </div>
 </fieldset>
 
-<fieldset>
+<fieldset class="fieldset--with-border">
   <legend class="heading-36">Working week</legend>
   <div class="form-group">
     <label class="form-label" for="how-many-hours">How many hours a week will the apprentice work?</label>
@@ -115,14 +138,14 @@
     <label for="weekday1" class="block-label"><input id="weekday1" type="checkbox">Monday</label>
     <label for="weekday2" class="block-label"><input id="weekday2" type="checkbox">Tuesday</label>
     <label for="weekday3" class="block-label"><input id="weekday3" type="checkbox">Wednesday</label>
-    <label for="weekday4" class="block-label"><input id="weekday4" type="checkbox">Thurday</label>
+    <label for="weekday4" class="block-label"><input id="weekday4" type="checkbox">Thursday</label>
     <label for="weekday5" class="block-label"><input id="weekday5" type="checkbox">Friday</label>
     <label for="weekday6" class="block-label"><input id="weekday6" type="checkbox">Saturday</label>
     <label for="weekday7" class="block-label"><input id="weekday7" type="checkbox">Sunday</label>
   </div>
 </fieldset>
 
-<fieldset class="inline-form-groups">
+<fieldset class="fieldset--with-border inline">
   <legend class="heading-36">Wage</legend>
   <div class="form-group">
     <label for="wage-amount" class="form-label">Amount</label>
@@ -146,55 +169,57 @@
     <label class="form-label" for="date-day1">Closing date for applications</label>
     <div class="form-group form-group--compound">
       <label class="form-hint" for="date-day1">Day</label>
-      <input type="text" class="form-control" maxlength="2" pattern="[0-9*]" id="date-day1">
+      <input type="tel" class="form-control" maxlength="2" pattern="[0-9*]" id="date-day1">
     </div>
-    <div class="form-group form-group--compound">
+    <div class="form-group form-group--compound b">
       <label class="form-hint" for="date-month1">Month</label>
-      <input type="text" class="form-control" maxlength="2" id="date-month1">
+      <input type="tel" class="form-control" maxlength="2" id="date-month1">
     </div>
     <div class="form-group form-group--compound form-group--year">
       <label class="form-hint" for="date-year1">Year</label>
-      <input type="text" class="form-control" maxlength="4" id="date-year1">
+      <input type="tel" class="form-control" maxlength="4" id="date-year1">
     </div>
   </fieldset>
   <fieldset class="form-group date-input">
     <label class="form-label" for="date-day2">When do you plan to start interviewing? (optional)</label>
     <div class="form-group form-group--compound">
       <label class="form-hint" for="date-day2">Day</label>
-      <input type="text" class="form-control" maxlength="2" pattern="[0-9*]" id="date-day2">
+      <input type="tel" class="form-control" maxlength="2" pattern="[0-9*]" id="date-day2">
     </div>
     <div class="form-group form-group--compound">
       <label class="form-hint" for="date-month2">Month</label>
-      <input type="text" class="form-control" maxlength="2" id="date-month2">
+      <input type="tel" class="form-control" maxlength="2" id="date-month2">
     </div>
     <div class="form-group form-group--compound form-group--year">
       <label class="form-hint" for="date-year2">Year</label>
-      <input type="text" class="form-control" maxlength="4" id="date-year2">
+      <input type="tel" class="form-control" maxlength="4" id="date-year2">
     </div>
   </fieldset>
-  <div class="form-group inline">
-    <p>When do you want the apprentice to start work?</p>
-    <label for="asap-start" class="block-label">
-      <input id="asap-start" type="radio" name="h-dates">
-      As soon as possible
-    </label>
-    <label data-target="start-date-panel" for="enter-start" class="block-label">
-      <input class="check-to-show-trigger" id="enter-start" type="radio" name="h-dates">
-      Enter date
-    </label>
+  <div class="form-group">
+    <div class="form-group form-group--compound inline">
+      <p>When do you want the apprentice to start work?</p>
+      <label for="asap-start" class="block-label">
+        <input id="asap-start" type="radio" name="h-dates">
+        As soon as possible
+      </label>
+      <label data-target="start-date-panel" for="enter-start" class="block-label">
+        <input class="check-to-show-trigger" id="enter-start" type="radio" name="h-dates">
+        Enter date
+      </label>
+    </div>
     <fieldset id="start-date-panel" class="panel-indent toggle-content form-group date-input">
       <label class="form-label" for="date-day3">Start date</label>
       <div class="form-group form-group--compound">
         <label class="form-hint" for="date-day3">Day</label>
-        <input type="text" class="form-control" maxlength="2" pattern="[0-9*]" id="date-day3">
+        <input type="tel" class="form-control" maxlength="2" pattern="[0-9*]" id="date-day3">
       </div>
       <div class="form-group form-group--compound">
         <label class="form-hint" for="date-month3">Month</label>
-        <input type="text" class="form-control" maxlength="2" id="date-month3">
+        <input type="tel" class="form-control" maxlength="2" id="date-month3">
       </div>
       <div class="form-group form-group--compound form-group--year">
         <label class="form-hint" for="date-year3">Year</label>
-        <input type="text" class="form-control" maxlength="4" id="date-year3">
+        <input type="tel" class="form-control" maxlength="4" id="date-year3">
       </div>
     </fieldset>
   </div>
@@ -218,7 +243,7 @@
       </ul>
       <a class="footer__copyright" href="http://www.nationalarchives.gov.uk/information-management/our-services/crown-copyright.htm" target="_blank">
         <img src="../_assets/img/logos/govuk-crest@2x.png" width="125" height="102" alt="Crown copyright logo">
-        <p>&copy; Crown Copyright</p>
+        <p>&copy; Crown copyright</p>
       </a>
     </div>
   </div>
