@@ -9,9 +9,29 @@
   <title>SFA Apprenticeships</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-  <link href="../_assets/css/main.css?cache-bust" media="all" rel="stylesheet" type="text/css">
-  <script src="../_assets/js/vendor/modernizr-2.7.1.js"></script>
+  <!--[if gt IE 8]><!--> <link href="../_assets/css/main.css" media="all" rel="stylesheet" type="text/css"><!--<![endif]-->
+  <!--[if IE 8]><link href="../_assets/css/main-ie8.css" media="all" rel="stylesheet" type="text/css"><![endif]-->
+
+  <!--[if IE 8]>
+    <script type="text/javascript">
+      (function(){if(window.opera){return;}
+       setTimeout(function(){var a=document,g,b={families:(g=
+       ["nta"]),urls:["../_assets/css/fonts-ie8.css"]},
+       c="../_assets/js/vendor/goog/webfont-debug.js",d="script",
+       e=a.createElement(d),f=a.getElementsByTagName(d)[0],h=g.length;WebFontConfig
+       ={custom:b},e.src=c,f.parentNode.insertBefore(e,f);for(;h=h-1;a.documentElement
+       .className+=' wf-'+g[h].replace(/\s/g,'').toLowerCase()+'-n4-loading');},0)
+      })()
+    </script>
+    <![endif]-->
+    <!--[if gte IE 9]><!-->
+      <link href="../_assets/css/fonts.css" media="all" rel="stylesheet" type="text/css" />
+    <!--<![endif]-->
+  <script>
+    var html = document.documentElement;
+    html.className += " js-enabled";
+  </script>
+  <script src="../_assets/js/vendor/modernizr-custom.js"></script>
 </head>
 <body>
   <div class="skiplink-container">
@@ -21,9 +41,12 @@
 </div>
 <header role="banner" class="global-header">
   <div class="global-header__wrapper">
-    <a class="global-header__logo" href="/" title="Go to the GOV.UK homepage">
-      <img src="../_assets/img/logos/logo.png" alt="GOV.UK">
-    </a>
+    <div class="global-header__logo">
+      <a href="/" title="Go to the GOV.UK homepage" class="govuk-logo">
+        <img src="../_assets/img/gov.uk_logotype_crown.png" alt="Crown">
+        GOV.UK
+      </a>
+    </div>
     <h1 class="global-header__title alpha">Find an Apprenticeship <span class="alpha__label">Alpha</span></h1>
   </div>
 </header>
@@ -34,18 +57,18 @@
     <main role="main" id="main">
       
 <h1 class="heading-48">Search results</h1>
-<div class="search-summary">
-  <label class="search-summary__item">
-    <h4>You searched for:</h4>
-    <input class="input" type="text" value="Engineer">
-  </label>
-  <label class="search-summary__item">
-    <h4>Location:</h4>
-    <input class="input" type="text" value="CV32 7RA">
-  </label>
-  <label class="search-summary__item">
-    <h4>Within:</h4>
-    <select class="input">
+<fieldset class="inline">
+  <div class="form-group">
+    <label for="you-searched-for" class="form-label">You searched for:</label>
+    <input class="form-control" id="you-searched-for" type="text" value="Engineer">
+  </div>
+  <div class="form-group">
+    <label for="location" class="form-label">Location:</label>
+    <input class="form-control" id="location" type="text" value="CV32 7RA">
+  </div>
+  <div class="form-group">
+    <label for="within" class="form-label">Within:</label>
+    <select class="" id="within">
       <option value="">This area only</option>
       <option value="">5 miles</option>
       <option value="">10 miles</option>
@@ -54,8 +77,9 @@
       <option value="">30 miles</option>
       <option value="">40 miles</option>
     </select>
-  </label>
-</div>
+  </div>
+</fieldset>
+
 <p>We have found <b>3</b> apprenticeships that might be suitable:</p>
 <p>
   Filter results by:
@@ -152,7 +176,7 @@
       </ul>
       <a class="footer__copyright" href="http://www.nationalarchives.gov.uk/information-management/our-services/crown-copyright.htm" target="_blank">
         <img src="../_assets/img/logos/govuk-crest@2x.png" width="125" height="102" alt="Crown copyright logo">
-        <p>&copy; Crown Copyright</p>
+        <p>&copy; Crown copyright</p>
       </a>
     </div>
   </div>
