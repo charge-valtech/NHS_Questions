@@ -1,19 +1,19 @@
 .date-input {
-  @extend .form-label;
   margin-top: 0;
   input {
     width: 100%;
   }
-  @include media(tablet) {
-    .form-group {
-      clear: none;
-      float: left;
-      margin-right: 20px;
-      width: 50px;
-    }
-    .form-group--year {
-      width: 70px;
-    }
+  .form-label {
+    margin: 0;
+  }
+  .form-group {
+    clear: none;
+    float: left;
+    margin-right: 20px;
+    width: 50px;
+  }
+  .form-group--year {
+    width: 70px;
   }
   &.toggle-content {
     display: none;

@@ -18,6 +18,10 @@ fieldset { /*Overriding normalize presets*/
   padding: 0;
 }
 
+.fieldset--with-border {
+  border-bottom: 1px solid $grey-2;
+}
+
 input[type="radio"],
 input[type="checkbox"] { /*Overriding normalize presets*/
   margin: 3px 0;

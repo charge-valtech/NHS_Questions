@@ -1057,6 +1057,9 @@ fieldset {
   border: 0;
   padding: 0; }
 
+.fieldset--with-border {
+  border-bottom: 1px solid #bfc1c3; }
+
 input[type="radio"], input[type="checkbox"] {
   /*Overriding normalize presets*/
   margin: 3px 0; }
@@ -1085,7 +1088,7 @@ input[type="radio"], input[type="checkbox"] {
 .form-group--compound {
   margin-bottom: 10px; }
 
-.form-label, .date-input {
+.form-label {
   font-family: "nta", Arial, sans-serif;
   font-size: 19px;
   line-height: 1.31579;
@@ -1233,6 +1236,8 @@ input[type="radio"], input[type="checkbox"] {
   margin-top: 0; }
   .date-input input {
     width: 100%; }
+  .date-input .form-label {
+    margin: 0; }
   .date-input .form-group {
     clear: none;
     float: left;
