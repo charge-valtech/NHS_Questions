@@ -51,19 +51,12 @@ module.exports = function(grunt) {
       dev: {
         options: {
           includePaths: ['www/_assets/scss'],
-          outputStyle: 'expanded',
+          outputStyle: 'compressed',
           sourceComments: 'map'
         },
         files: {
           'www/_assets/css/main.css' : 'www/_assets/scss/main.scss',
           'www/_assets/css/main-ie8.css' : 'www/_assets/scss/main-ie8.scss'
-        }
-      }
-    },
-    cssmin: {
-      dist: {
-        files: {
-          'www/_assets/css/main.css': ['www/_assets/css/main.css']
         }
       }
     },
@@ -135,18 +128,18 @@ module.exports = function(grunt) {
       },
       dist: {
         files: [
-          {cwd: 'www/', src: ['**/*'], dest: 'dist/'}
+          {cwd: 'sprint/', src: ['**/*'], dest: 'dist/'}
         ],
         options: {
           ignore: [
-            'www/_assets/scss{,/**/*}',
-            'www/_assets/video{,/**/*}',
-            'www/_templates{,/**/*}',
-            'www/z-backups{,/**/*}',
-            'www/employer-role-submission{,/**/*}',
-            'www/find-an-apprenticeship{,/**/*}',
-            'www/*.html',
-            '!www/index.html',
+            'sprint/_assets/scss{,/**/*}',
+            'sprint/_assets/video{,/**/*}',
+            'sprint/_templates{,/**/*}',
+            'sprint/z-backups{,/**/*}',
+            'sprint/employer-role-submission{,/**/*}',
+            'sprint/find-an-apprenticeship{,/**/*}',
+            'sprint/*.html',
+            '!sprint/index.html',
           ]
         }
       }
@@ -172,7 +165,6 @@ module.exports = function(grunt) {
     'grunt-contrib-uglify',
     'grunt-contrib-jshint',
     'grunt-sass',
-    'grunt-contrib-cssmin',
     'grunt-contrib-concat',
     'grunt-contrib-watch',
     'grunt-contrib-connect',
@@ -191,7 +183,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('demo', ['clean:demo', 'copyto:demo']);
 
-  grunt.registerTask('dist', ['cssmin:dist', 'clean:dist', 'copyto:dist']);
+  grunt.registerTask('dist', ['clean:dist', 'copyto:dist']);
 
 
 };
