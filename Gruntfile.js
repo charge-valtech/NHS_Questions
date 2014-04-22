@@ -154,6 +154,19 @@ module.exports = function(grunt) {
       dist: {
         src: [ 'dist/' ]
       }
+    },
+    replace: {
+      map: {
+        src: ['www/_assets/css/*.css'],
+        overwrite: true,
+        replacements: [{
+          from: 'sourceMappingURL=main.css.map',
+          to: 'Map removed'
+        },{
+          from: 'sourceMappingURL=main-ie8.css.map',
+          to: 'Map removed'
+        }]
+      }
     }
   });
 
@@ -166,6 +179,7 @@ module.exports = function(grunt) {
     'grunt-contrib-jshint',
     'grunt-sass',
     'grunt-contrib-concat',
+    'grunt-text-replace',
     'grunt-contrib-watch',
     'grunt-contrib-connect',
     'grunt-copy-to',
@@ -179,7 +193,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('default', ['modernizr', 'jshint', 'concat:dev', 'sass', 'assemble', 'connect', 'watch']);
 
-  grunt.registerTask('sprint', ['clean:sprint', 'copyto:sprint']);
+  grunt.registerTask('sprint', ['replace', 'clean:sprint', 'copyto:sprint']);
 
   grunt.registerTask('demo', ['clean:demo', 'copyto:demo']);
 
