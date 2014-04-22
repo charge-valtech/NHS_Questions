@@ -19,9 +19,9 @@
   font-size: 0;
   margin: 0 -4px 15px 0;
   vertical-align: middle;
-  width: 33.33%;
   @include media(tablet) {
     margin-bottom: 0;
+    width: 33.33%;
   }
 }
 
@@ -33,11 +33,10 @@
   font-weight: 700;
   line-height: 1em;
   text-decoration: none;
-  // text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;
   img {
-    display: none;
     line-height: inherit;
-    margin-top: -6px;
+    margin: -6px 6px 0 0;
     vertical-align: middle;
     width: 35px; height: 31px;
   }
@@ -66,13 +65,12 @@
     display: inline-block;
     font-size: 20px; /* 20px */
     margin-right: -4px;
-    text-align: right;
     width: 66.66%;
   }
 }
 
-.alpha__label {
-  background: $alpha-colour;
+.beta__label {
+  background: $beta-colour;
   display: inline-block;
   font-size: 0.7em;
   font-weight: 700;

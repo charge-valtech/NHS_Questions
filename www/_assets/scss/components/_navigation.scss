@@ -19,7 +19,7 @@
       text-decoration: none;
     }
   }
-  @media (min-width: 769px) {
+  @include media(tablet) {
     clear: none;
   }
 }
@@ -43,7 +43,7 @@
       content: " \25B2";
     }
   }
-  @media (min-width: 769px) {
+  @include media(tablet) {
     display: none;
   }
 }
@@ -65,7 +65,7 @@
   &.menu-open, .no-js & {
     height: auto;
   }
-  @media (min-width: 769px) {
+  @include media(tablet) {
     height: auto;
     li {
       border-bottom: none;

@@ -193,7 +193,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('default', ['modernizr', 'jshint', 'concat:dev', 'sass', 'assemble', 'connect', 'watch']);
 
-  grunt.registerTask('sprint', ['replace', 'clean:sprint', 'copyto:sprint']);
+  grunt.registerTask('sprint', ['replace:map', 'clean:sprint', 'copyto:sprint']);
 
   grunt.registerTask('demo', ['clean:demo', 'copyto:demo']);
 
