@@ -26,12 +26,12 @@
 }
 
 .govuk-logo {
-  border-bottom: 1px solid rgba(black, 0);
   color: $white;
   display: inline-block;
   font-size: 30px;
   font-weight: 700;
   line-height: 1em;
+  padding-bottom: 1px;
   text-decoration: none;
   text-rendering: optimizeLegibility;
   img {
@@ -44,7 +44,8 @@
     color: $white;
   }
   &:hover, &:focus {
-    border-color: $white;
+    border-bottom: 1px solid $white;
+    padding-bottom: 0;
   }
   &:active {
     color: $link-active-colour;
@@ -63,7 +64,7 @@
   vertical-align: middle;
   @include media(tablet) {
     display: inline-block;
-    font-size: 20px; /* 20px */
+    font-size: 24px; /* 20px */
     margin-right: -4px;
     width: 66.66%;
   }
@@ -72,7 +73,7 @@
 .beta__label {
   background: $beta-colour;
   display: inline-block;
-  font-size: 0.7em;
+  font-size: 0.6em;
   font-weight: 700;
   letter-spacing: 1px;
   margin-left: 8px;
