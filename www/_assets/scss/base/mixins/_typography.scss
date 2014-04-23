@@ -374,11 +374,11 @@ $is-print: false !default;
 
 @mixin external-link-default {
   &:after {
-    background-image: image-url("external-links/external-link.png");
+    background-image: url("../img/external-link.png");
     background-repeat: no-repeat;
 
     @include device-pixel-ratio() {
-      background-image: image-url("external-links/external-link-24x24.png");
+      background-image: url("../img/external-link-24x24.png");
       background-size: 12px 400px;
     }
   }
@@ -386,11 +386,11 @@ $is-print: false !default;
 
 @mixin external-link-heading {
   &:after {
-    background-image: image-url("external-links/external-link-black-12x12.png");
+    background-image: url("../img/external-link-black-12x12.png");
     background-repeat: no-repeat;
 
     @include device-pixel-ratio() {
-      background-image: image-url("external-links/external-link-black-24x24.png");
+      background-image: url("../img/external-link-black-24x24.png");
       background-size: 12px 400px;
     }
   }

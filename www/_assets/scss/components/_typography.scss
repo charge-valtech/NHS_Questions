@@ -148,26 +148,31 @@ p, pre {
 
 a {
   color: $link-colour;
-  &:visited {
-    color: $link-visited-colour;
-  }
+  // &:visited {
+  //   color: $link-visited-colour;
+  // }
   // &[href="#"]:visited {
   //   color: $link-colour;
   //   &:hover {
   //     color: $link-hover-colour;
   //   }
   // }
-  &:hover {
-    color: $link-hover-colour;
-  }
   &:active {
     color: $link-active-colour;
   }
+  &:hover {
+    color: $link-hover-colour;
+  }
 }
 
-a:active, a:hover {
-  color: $purple;
+a[rel="external"] {
+  @include external-link-default;
+  @include external-link-19;
 }
+
+// a:active, a:hover {
+//   color: $purple;
+// }
 
 b,
 strong {

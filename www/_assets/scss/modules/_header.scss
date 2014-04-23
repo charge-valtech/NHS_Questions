@@ -43,7 +43,7 @@
   &:hover, &:visited {
     color: $white;
   }
-  &:hover {
+  &:hover, &:focus {
     border-color: $white;
   }
   &:active {
