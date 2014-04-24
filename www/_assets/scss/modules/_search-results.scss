@@ -15,7 +15,7 @@
   select {
     height: 28px;
   }
-  @media (min-width: 600px) {
+  @include media(tablet) {
     float: left;
     margin-right: 1em;
   }
@@ -24,10 +24,13 @@
 .search-results {
   list-style: none;
   padding-left: 0;
+  .heading-24 {
+    margin-top: 0;
+  }
 }
 
 .search-results__item {
-  border-bottom:1px solid #ddd;
+  border-top:1px solid #ddd;
   min-height: 150px;
   overflow: hidden;
   padding: 15px 0;
@@ -39,22 +42,21 @@
 .search-results__imglink {
   float: left;
   margin-right: 20px;
-  width: 150px;
-  @media (max-width:400px) {
-    width: 75px;
+  width: 75px;
+  @include media(tablet) {
+    width: 150px;
   }
 }
 
 .search-results__content {
   float: left;
-  width: calc(100% - 170px);
-  @media (max-width:400px) {
-    width: calc(100% - 95px);
+  width: calc(100% - 95px);
+  @include media(tablet) {
+    width: calc(100% - 170px);
   }
-}
-
-.search-results__title {
-  margin: 0.5em 0 1em;
+  .lt-ie9 & {
+    width: 790px;
+  }
 }
 
 .search-results__btm {
@@ -64,22 +66,25 @@
 .search-results__meta {
   display: inline-block;
   list-style: none;
+  margin-bottom: 15px;
   padding: 0;
-  width: 50%;
-  @media (max-width: 600px) {
-    margin-bottom: 15px;
-    width: 100%;
+  width: 100%;
+  @include media(tablet) {
+    margin: 0;
+    margin-right: -4px;
+    width: 50%;
   }
 }
 
 .search-results__actns {
   display: inline-block;
-  text-align: right;
+  text-align: left;
   vertical-align: bottom;
-  width: 49%;
-  @media (max-width: 600px) {
-    text-align: left;
-    width: 100%;
+  width: 100%;
+  @include media(tablet) {
+    margin-right: -4px;
+    text-align: right;
+    width: 50%;
     .button:first-child {
       margin-left: 0;
     }

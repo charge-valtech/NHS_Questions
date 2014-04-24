@@ -23,10 +23,8 @@ select {
   border: 1px solid #dadada;
   font-family: inherit;
   font-size: inherit;
+  height: 36px;
   vertical-align: middle;
-  .form-group & {
-    height: 36px;
-  }
   @media (max-width: 450px) {
     width: 100%;
   }
