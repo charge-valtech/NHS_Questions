@@ -18,13 +18,22 @@ fieldset { /*Overriding normalize presets*/
   padding: 0;
 }
 
-.fieldset--with-border {
-  border-bottom: 1px solid $grey-2;
+
+select {
+  border: 1px solid #dadada;
+  font-family: inherit;
+  font-size: inherit;
+  vertical-align: middle;
+  .form-group & {
+    height: 36px;
+  }
+  @media (max-width: 450px) {
+    width: 100%;
+  }
 }
 
-input[type="radio"],
-input[type="checkbox"] { /*Overriding normalize presets*/
-  margin: 3px 0;
+.fieldset--with-border {
+  border-bottom: 1px solid $grey-2;
 }
 
 .add-focus {
@@ -175,16 +184,6 @@ input[type="checkbox"] { /*Overriding normalize presets*/
 @import "forms/form-date-inputs";
 
 @import "forms/form-chunky-labels";
-
-
-select {
-  border: 1px solid #dadada;
-  font-family: inherit;
-  font-size: inherit;
-  @media (max-width: 450px) {
-    width: 100%;
-  }
-}
 
 .logo-upload img {
   border: 1px solid $grey-2;
