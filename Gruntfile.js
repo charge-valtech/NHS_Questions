@@ -142,6 +142,15 @@ module.exports = function(grunt) {
             '!sprint/index.html',
           ]
         }
+      },
+      fe_toolkit: {
+        files: [
+          {
+            cwd: 'node_modules/govuk_frontend_toolkit/govuk_frontend_toolkit/stylesheets',
+            src: ['**/*'],
+            dest: 'www/_assets/scss/fe_toolkit/'
+          }
+        ]
       }
     },
     clean: {
@@ -190,6 +199,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks(task);
   });
 
+  grunt.registerTask('copytoolkit', ['copyto:fe_toolkit']);
 
   grunt.registerTask('imageoptim', ['imageoptim']);
 
