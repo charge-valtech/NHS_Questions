@@ -168,6 +168,7 @@ module.exports = function(grunt) {
         }]
       }
     }
+
   });
 
   [
@@ -188,6 +189,7 @@ module.exports = function(grunt) {
   ].forEach(function (task) {
     grunt.loadNpmTasks(task);
   });
+
 
   grunt.registerTask('imageoptim', ['imageoptim']);
 

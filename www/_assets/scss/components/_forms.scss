@@ -70,6 +70,14 @@ input[type="checkbox"] { /*Overriding normalize presets*/
   margin-bottom: 10px;
 }
 
+.form-hint {
+  @include copy-19;
+  color: $secondary-text-colour;
+  display: block;
+  margin-top: 8px;
+  margin-bottom: 5px;
+}
+
 // Used for paragraphs i n-between forms
 .form-block {
   float: left;
@@ -138,14 +146,6 @@ input[type="checkbox"] { /*Overriding normalize presets*/
   @include media(tablet){
     width: 50%;
   }
-}
-
-.form-hint {
-  @include copy-19;
-  color: $secondary-text-colour;
-  display: block;
-  margin-top: 8px;
-  margin-bottom: 5px;
 }
 
 // Radio buttons

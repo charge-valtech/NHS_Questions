@@ -1,6 +1,6 @@
 {
   "name": "scripts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "",
   "devDependencies": {
     "grunt": "~0.4.1",
@@ -26,6 +26,7 @@
     "grunt-contrib-sass": "~0.7.3",
     "grunt-sass": "~0.12.1",
     "grunt-modernizr": "~0.5.2",
-    "grunt-contrib-compress": "~0.8.0"
+    "grunt-contrib-compress": "~0.8.0",
+    "govuk_frontend_toolkit": "~0.48.0"
   }
 }

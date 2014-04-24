@@ -29,19 +29,21 @@
 .get-started {
 
   .button {
-    @include bold-24;
+    font-size: 24px;
+    font-weight: 700;
     line-height: 0.66667;
     color: #FFF;
-    background-color: $button-colour;
     padding: 14px 41px 10px 16px;
-    background-image: url(https://assets.digital.cabinet-office.gov.uk/static/icon-pointer-063838cde108768e30b077e5303783fc.png);
-    background-position: 100% 50%;
-    background-repeat: no-repeat;
+    background: $button-colour url(../img/icon-pointer.png) 100% 50% no-repeat;
+    background-size: 30px 19px;
     margin-bottom: 0;
-
-    // @include ie-lte(6){
-    //   background-image: url(https://assets.digital.cabinet-office.gov.uk/static/icon-pointer-indexed-837e19e1ba2d4beb5563d052b044770b.png);
-    // }
+    text-transform: none;
+    @include device-pixel-ratio(2) {
+      background-image: url(../img/icon-pointer-2x.png);
+    }
+    @media (max-width: 640px) {
+      font-size: 20px;
+    }
   }
 
   .button:hover {
