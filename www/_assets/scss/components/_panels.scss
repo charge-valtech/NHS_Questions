@@ -10,3 +10,30 @@
     margin-bottom: 0;
   }
 }
+
+.summary-box {
+  background: $white;
+  color: $black;
+  margin-top: 10px;
+  padding: 20px;
+  @include media(tablet) {
+    font-size: 19px;
+  }
+}
+
+.summary-close {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+  padding: $gutter-half $gutter-half $gutter-half 0;
+  &:before {
+    content: "\00d7";
+    display: inline-block;
+    font-size: 26px;
+    line-height: 22px;
+    margin-right: 4px;
+    vertical-align: top;
+  }
+}

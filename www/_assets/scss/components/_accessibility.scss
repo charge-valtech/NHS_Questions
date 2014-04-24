@@ -30,9 +30,11 @@
   overflow: hidden;
   background-repeat: no-repeat;
   text-align: left;
-  direction: ltr; }
-  .ir br {
-    display: none; }
+  direction: ltr;
+  br {
+    display: none;
+  }
+}
 
 /* Hide for both screenreaders and browsers */
 .hidden {
@@ -46,34 +48,38 @@
   /*
    * Extends the .visuallyhidden class to allow the element to be
    * focusable when navigated to via the keyboard
-   */ }
-  .visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+   */
+  &.focusable:active, &.focusable:focus {
     clip: auto;
     height: auto;
     margin: 0;
     overflow: visible;
     position: static;
-    width: auto; }
+    width: auto;
+  }
+}
 
 /* Hide visually and from screenreaders, but maintain layout */
 .invisible {
-  visibility: hidden; }
+  visibility: hidden;
+}
 
 /* Give a strong clear visual idea as to what is currently in focus */
 a {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
+  -webkit-tap-highlight-color: rgba(black, 0.3);
+}
 
 a:focus, button:focus {
-  background-color: #ffbf47;
-  outline: 3px solid #ffbf47; }
+  background-color: $yellow;
+  outline: 3px solid $yellow;
+}
 
 button:active {
   outline: none;
 }
 
-
-
 input:focus,
 textarea:focus,
 select:focus {
-  outline: 3px solid #ffbf47; }
+  outline: 3px solid $yellow;
+}

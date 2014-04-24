@@ -47,6 +47,14 @@ $(function() {
     $(this).closest('.form-group').toggleClass('expanded');
   });
 
+  $('.summary-trigger').on('click', function() {
+    $('.summary-box').toggle();
+  });
+
+  $('.summary-close').on('click', function() {
+    $('.summary-box').toggle();
+  });
+
   // Example - Details & summary
 
   // // Add aria support for details
