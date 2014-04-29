@@ -7,17 +7,14 @@ module.exports = function(grunt) {
         separator: ';'
       },
       dev: {
-        src: ['www/_assets/js/plugins/*.js', 'www/_assets/js/*.js', '!www/_assets/js/scripts.min.js'],
-        dest: 'www/_assets/js/scripts.min.js'
+        src: ['www/_assets/js/*.js', '!www/_assets/js/scripts.min.js', '!www/_assets/js/scripts.js'],
+        dest: 'www/_assets/js/scripts.js'
       }
     },
     uglify: {
-      options: {
-        banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
-      },
       dist: {
         files: {
-          'dist/<%= pkg.name %>.min.js': ['<%= concat.dist.dest %>']
+          'www/_assets/js/scripts.min.js': ['www/_assets/js/scripts.js']
         }
       }
     },
@@ -89,7 +86,7 @@ module.exports = function(grunt) {
         tasks: ['sass']
       },
       js: {
-        files: ['www/_assets/js/**/*.js', '!www/_assets/js/scripts.min.js'],
+        files: ['www/_assets/js/**/*.js', '!www/_assets/js/scripts.min.js', '!www/_assets/js/scripts.js'],
         tasks: ['jshint', 'concat:dev']
       },
       html: {
@@ -128,19 +125,22 @@ module.exports = function(grunt) {
       },
       dist: {
         files: [
-          {cwd: 'sprint/', src: ['**/*'], dest: 'dist/'}
+          {cwd: 'www/', src: ['**/*'], dest: 'dist/'}
         ],
         options: {
           ignore: [
-            'sprint/_assets/scss{,/**/*}',
-            'sprint/_assets/video{,/**/*}',
-            'sprint/_templates{,/**/*}',
-            'sprint/z-backups{,/**/*}',
-            'sprint/employer-role-submission{,/**/*}',
-            'sprint/find-an-apprenticeship{,/**/*}',
-            'sprint/apprentice-profile{,/**/*}',
-            'sprint/*.html',
-            '!sprint/index.html',
+            'www/_assets/scss{,/**/*}',
+            'www/_assets/video{,/**/*}',
+            'www/_assets/js/plugins{,/**/*}',
+            'www/_assets/js/interactions.js',
+            'www/_assets/js/scripts.js',
+            'www/_templates{,/**/*}',
+            'www/z-backups{,/**/*}',
+            'www/employer-role-submission{,/**/*}',
+            'www/find-an-apprenticeship{,/**/*}',
+            'www/apprentice-profile{,/**/*}',
+            'www/*.html',
+            '!www/index.html',
           ]
         }
       },
@@ -176,6 +176,14 @@ module.exports = function(grunt) {
           from: 'sourceMappingURL=main-ie8.css.map',
           to: 'Map removed'
         }]
+      },
+      scripts: {
+        src: ['www/index.html'],
+        overwrite: true,
+        replacements: [{
+          from: 'scripts.js',
+          to: 'scripts.min.js'
+        }]
       }
     }
 
@@ -210,7 +218,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('demo', ['clean:demo', 'copyto:demo']);
 
-  grunt.registerTask('dist', ['clean:dist', 'copyto:dist']);
+  grunt.registerTask('dist', ['uglify:dist', 'replace:scripts', 'clean:dist', 'copyto:dist']);
 
 
 };

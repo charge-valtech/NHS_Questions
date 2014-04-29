@@ -52,7 +52,7 @@ select {
   margin-bottom: 20px;
   width: 100%;
   @include media(tablet) {
-    margin-bottom: ($gutter*1.5);
+    margin-bottom: $gutter;
     .inline & {
       clear: none;
       margin-right: 30px;
@@ -77,12 +77,24 @@ select {
   margin-bottom: 10px;
 }
 
+.form-label-bold {
+  @include bold-24;
+  display: block;
+  margin-bottom: 0;
+  .form-hint {
+    @include core-19;
+  }
+}
+
+
 .form-hint {
   @include copy-19;
   color: $secondary-text-colour;
   display: block;
-  margin-top: 8px;
   margin-bottom: 5px;
+  @include media (tablet) {
+    margin-top: 8px;
+  }
 }
 
 // Used for paragraphs i n-between forms

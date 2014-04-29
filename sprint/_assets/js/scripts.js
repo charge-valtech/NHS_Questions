@@ -23,6 +23,12 @@ $(function() {
     }
   });
 
+  // Create linked input fields (For using email address as username)
+  $('.linked-input-master').keyup(function() {
+    var masterVal = $(this).val();
+    $('.linked-input-slave').val(masterVal);
+  });
+
   // Add/remove selected class
   $('.block-label').find('input[type=radio], input[type=checkbox]').click(function() {
 
