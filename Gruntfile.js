@@ -218,7 +218,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('demo', ['clean:demo', 'copyto:demo']);
 
-  grunt.registerTask('dist', ['uglify:dist', 'replace:scripts', 'clean:dist', 'copyto:dist']);
+  grunt.registerTask('dist', ['uglify:dist', 'replace:map', 'replace:scripts', 'clean:dist', 'copyto:dist']);
 
 
 };
