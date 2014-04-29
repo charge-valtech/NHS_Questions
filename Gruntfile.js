@@ -138,6 +138,7 @@ module.exports = function(grunt) {
             'sprint/z-backups{,/**/*}',
             'sprint/employer-role-submission{,/**/*}',
             'sprint/find-an-apprenticeship{,/**/*}',
+            'sprint/apprentice-profile{,/**/*}',
             'sprint/*.html',
             '!sprint/index.html',
           ]
