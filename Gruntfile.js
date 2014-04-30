@@ -94,16 +94,6 @@ module.exports = function(grunt) {
         tasks: ['assemble']
       }
     },
-    connect: {
-      server: {
-        options: {
-          port: 7000,
-          base: 'www',
-          livereload: true,
-          open: true
-        }
-      }
-    },
     copyto: {
       sprint: {
         files: [
@@ -200,7 +190,11 @@ module.exports = function(grunt) {
     browserSync: {
       dev: {
         bsFiles: {
-          src : 'www/_assets/css/*.css'
+          src : [
+            'www/_assets/css/*.css',
+            'www/_assets/js/scripts.js',
+            'www/**/*.html'
+            ]
         },
         options: {
           ghostMode: {
@@ -230,7 +224,6 @@ module.exports = function(grunt) {
     'grunt-contrib-concat',
     'grunt-text-replace',
     'grunt-contrib-watch',
-    'grunt-contrib-connect',
     'grunt-copy-to',
     'grunt-contrib-clean',
     'grunt-contrib-compress',
@@ -244,7 +237,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('imageoptim', ['imageoptim']);
 
-  grunt.registerTask('default', ['modernizr', 'jshint', 'concat:dev', 'sass', 'assemble', 'browserSync', 'connect', 'watch']);
+  grunt.registerTask('default', ['modernizr', 'jshint', 'concat:dev', 'sass', 'assemble', 'browserSync', 'watch']);
 
   grunt.registerTask('sprint', ['replace:map', 'clean:sprint', 'copyto:sprint']);
 
