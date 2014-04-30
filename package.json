@@ -27,6 +27,8 @@
     "grunt-sass": "~0.12.1",
     "grunt-modernizr": "~0.5.2",
     "grunt-contrib-compress": "~0.8.0",
-    "govuk_frontend_toolkit": "~0.48.0"
+    "govuk_frontend_toolkit": "~0.48.0",
+    "grunt-pngmin": "~0.6.1",
+    "grunt-browser-sync": "~0.8.2"
   }
 }

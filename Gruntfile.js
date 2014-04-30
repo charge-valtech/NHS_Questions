@@ -185,6 +185,36 @@ module.exports = function(grunt) {
           to: 'scripts.min.js'
         }]
       }
+    },
+    pngmin: {
+      compile: {
+        options: {},
+        files: [
+          {
+            src: 'path/to/image.png',
+            dest: 'dest/'
+          }
+        ]
+      }
+    },
+    browserSync: {
+      dev: {
+        bsFiles: {
+          src : 'www/_assets/css/*.css'
+        },
+        options: {
+          ghostMode: {
+            clicks: true,
+            scroll: true,
+            links: true,
+            forms: true
+            },
+          watchTask: true,
+          server: {
+            baseDir: "www"
+          }
+        }
+      }
     }
 
   });
@@ -203,7 +233,9 @@ module.exports = function(grunt) {
     'grunt-contrib-connect',
     'grunt-copy-to',
     'grunt-contrib-clean',
-    'grunt-contrib-compress'
+    'grunt-contrib-compress',
+    'grunt-pngmin',
+    'grunt-browser-sync'
   ].forEach(function (task) {
     grunt.loadNpmTasks(task);
   });
@@ -212,7 +244,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('imageoptim', ['imageoptim']);
 
-  grunt.registerTask('default', ['modernizr', 'jshint', 'concat:dev', 'sass', 'assemble', 'connect', 'watch']);
+  grunt.registerTask('default', ['modernizr', 'jshint', 'concat:dev', 'sass', 'assemble', 'browserSync', 'connect', 'watch']);
 
   grunt.registerTask('sprint', ['replace:map', 'clean:sprint', 'copyto:sprint']);
 
