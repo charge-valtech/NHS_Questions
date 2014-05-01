@@ -102,7 +102,11 @@ headerTitle: Apprenticeship registration
   <div class="form-group">
     <label for="password-input" class="form-label">Password</label>
     <span class="form-hint">A minimum of 8 characters including at least one number</span>
-    <input type="password" class="form-control" id="password-input">
+    <div class="password-wrapper">
+      <input type="password" class="form-control" id="password-input">
+      <span class="pw-masktoggle button-link">Show</span>
+    </div>
+    <p class="form-hint strength-indicator">Password strength: <span id="pass_meter" class=""></span></p>
   </div>
 </fieldset>
 <div class="form-group">

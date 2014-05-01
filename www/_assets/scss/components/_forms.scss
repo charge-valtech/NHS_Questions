@@ -239,3 +239,32 @@ select {
     display: none;
   }
 }
+
+//Password strength
+.password-wrapper {
+  position: relative;
+  input {
+    width: 100%;
+  }
+  .pw-masktoggle {
+    margin-right: 0;
+    position: absolute;
+    top: 0; right: 0;
+  }
+  @include media(tablet) {
+    width: 50%;
+  }
+}
+
+.strength-indicator {
+  span, .strength-weak {
+    color: $error-colour;
+  }
+  .strength-medium {
+    color: $orange;
+  }
+  .strength-strong {
+    color: $green;
+  }
+}
+
