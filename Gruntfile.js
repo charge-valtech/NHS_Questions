@@ -120,6 +120,7 @@ module.exports = function(grunt) {
         options: {
           ignore: [
             'www/_assets/scss{,/**/*}',
+            'www/_assets/css/*.map',
             'www/_assets/video{,/**/*}',
             'www/_assets/js/plugins{,/**/*}',
             'www/_assets/js/interactions.js',
@@ -187,6 +188,20 @@ module.exports = function(grunt) {
         ]
       }
     },
+    devUpdate: {
+      main: {
+        options: {
+          updateType: 'report', //just report outdated packages
+          reportUpdated: false, //don't report already updated packages
+          semver: true, //use package.json semver rules when updating
+          packages: { //what packages to check
+            devDependencies: true, //only devDependencies
+            dependencies: false
+          },
+          packageJson: null //find package.json automatically
+        }
+      }
+    },
     browserSync: {
       dev: {
         bsFiles: {
@@ -228,12 +243,13 @@ module.exports = function(grunt) {
     'grunt-contrib-clean',
     'grunt-contrib-compress',
     'grunt-pngmin',
-    'grunt-browser-sync'
+    'grunt-browser-sync',
+    'grunt-dev-update'
   ].forEach(function (task) {
     grunt.loadNpmTasks(task);
   });
 
-  grunt.registerTask('copytoolkit', ['copyto:fe_toolkit']);
+  grunt.registerTask('copytoolkit', ['devUpdate', 'copyto:fe_toolkit']);
 
   grunt.registerTask('imageoptim', ['imageoptim']);
 
