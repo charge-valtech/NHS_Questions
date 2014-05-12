@@ -24,16 +24,14 @@
 // Validation error message box
 .validation-error {
   border-left: 3px solid $error-colour;
-  border-right: 10px solid $error-background;
   box-sizing: content-box;
-  background: $error-background;
-  padding: $gutter-half 0 $gutter-half 10px;
+  color: $error-colour;
+  padding: 0 0 0 10px;
   margin-left: -13px;
   .form-hint {
-    color: $black;
+    color: $error-colour;
   }
   @include media(tablet) {
-    border-right: 0;
     margin-left: -18px;
     padding-left: $gutter-half;
   }
