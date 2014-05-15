@@ -26,6 +26,7 @@
     "govuk_frontend_toolkit": "~0.48.0",
     "grunt-pngmin": "~0.6.1",
     "grunt-browser-sync": "~0.8.2",
-    "grunt-dev-update": "~0.5.7"
+    "grunt-dev-update": "~0.5.7",
+    "grunt-contrib-connect": "~0.7.1"
   }
 }

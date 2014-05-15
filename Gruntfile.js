@@ -78,6 +78,9 @@ module.exports = function(grunt) {
       }
     },
     watch: {
+      options: {
+        livereload: true
+      },
       css: {
         files: ['www/_assets/scss/**/*.scss'],
         tasks: ['sass']
@@ -221,6 +224,16 @@ module.exports = function(grunt) {
           }
         }
       }
+    },
+    connect: {
+      server: {
+        options: {
+          port: 7000,
+          base: 'www',
+          livereload: true,
+          open: true
+        }
+      }
     }
 
   });
@@ -241,7 +254,8 @@ module.exports = function(grunt) {
     'grunt-contrib-compress',
     'grunt-pngmin',
     'grunt-browser-sync',
-    'grunt-dev-update'
+    'grunt-dev-update',
+    'grunt-contrib-connect'
   ].forEach(function (task) {
     grunt.loadNpmTasks(task);
   });
@@ -250,7 +264,9 @@ module.exports = function(grunt) {
 
   grunt.registerTask('imageoptim', ['imageoptim']);
 
-  grunt.registerTask('default', ['modernizr', 'jshint', 'concat:dev', 'sass', 'assemble', 'browserSync', 'watch']);
+  grunt.registerTask('default', ['modernizr', 'jshint', 'concat:dev', 'sass', 'assemble', 'connect', 'watch']);
+
+  grunt.registerTask('sync', ['modernizr', 'jshint', 'concat:dev', 'sass', 'assemble', 'browserSync', 'watch']);
 
   grunt.registerTask('sprint', ['replace:map', 'clean:sprint', 'copyto:sprint']);
 
