@@ -40,17 +40,18 @@
 }
 
 .search-results__imglink {
+  display: none;
   float: left;
   margin-right: 20px;
-  width: 75px;
   @include media(tablet) {
+    display: block;
     width: 150px;
   }
 }
 
 .search-results__content {
   float: left;
-  width: calc(100% - 95px);
+  width: 100%;
   @include media(tablet) {
     width: calc(100% - 170px);
   }
