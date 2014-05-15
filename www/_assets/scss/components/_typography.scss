@@ -42,7 +42,11 @@ h4, h5, h6 {
 }
 
 .hgroup {
+  margin-bottom: $gutter * 2;
   padding: 0;
+  h1 {
+    margin-bottom: 5px;
+  }
   .subtitle {
     @include core-24;
     color: $secondary-text-colour;

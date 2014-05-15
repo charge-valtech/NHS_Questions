@@ -1,8 +1,7 @@
+
 // Grid layout
 .grid-wrapper {
-  @include media(tablet) {
-    padding: 0 $gutter-half;
-  }
+  @extend %clearfix;
 }
 
 // Grid units take 100% width, unless a .grid-width class is applied

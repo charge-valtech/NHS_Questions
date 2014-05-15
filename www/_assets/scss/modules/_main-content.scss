@@ -2,11 +2,7 @@
   background: $white;
   display: block;
   padding: 15px 0 30px;
-  &:after {
-    clear: both;
-    content: "";
-    display: table;
-  }
+  @extend %clearfix;
   @include media(tablet) {
     padding-top: 30px;
     padding-bottom: 90px;
@@ -23,6 +19,12 @@
   @media (max-width: 640px) {
     font-size: 16px;
     line-height: 1.25;
+  }
+}
+
+aside {
+  .heading-36:first-child {
+    margin-top: 0;
   }
 }
 
