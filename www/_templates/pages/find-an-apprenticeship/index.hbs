@@ -2,36 +2,56 @@
 headerTitle: Find an Apprenticeship
 ---
 <h1 class="heading-48">Find an Apprenticeship</h1>
-
+<!--
 <div class="panel-indent text">
   <p class="lead">Not sure what you're looking for? Try our <a href="wizard.html">Apprenticeship Matching Wizard</a></p>
 </div>
+ -->
+<div class="grid-wrapper">
+  <section class="grid grid-2-3">
+    <fieldset>
+      <legend class="heading-36">Before you start</legend>
+      <p class="text">
+        If you <a href="">register with GOV.UK</a> you can track your applications, set up vacancies alerts and manage your profile.
+      </p>
+      <p>
+        <a href="">Already registered?</a>
+      </p>
+    </fieldset>
+    <fieldset>
+      <legend class="heading-36">Search and apply for an apprenticeship in England</legend>
+      <div class="form-group">
+        <label for="job-title" class="form-label">Job title</label>
+        <input id="job-title" type="text" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="keywords" class="form-label">Keyword(s)</label>
+        <input id="keywords" type="text" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="location" class="form-label">Postcode, town or place</label>
+        <input id="location" type="text" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="loc-within" class="form-label">Within</label>
+        <select id="loc-within">
+          <option value="">This area only</option>
+          <option value="">5 miles</option>
+          <option value="">10 miles</option>
+          <option value="">15 miles</option>
+          <option value="">20 miles</option>
+          <option value="">30 miles</option>
+          <option value="">40 miles</option>
+        </select>
+      </div>
+    </fieldset>
 
-<fieldset>
-  <legend class="heading-36">Tell us what you're looking for</legend>
-  <div class="form-group form-group--compound">
-    <label for="keywords" class="form-label">Keyword(s)</label>
-    <input id="keywords" type="text" class="form-control">
-  </div>
-  <div class="form-group form-group--compound">
-    <label for="location" class="form-label">Location:</label>
-    <input id="location" type="text" class="form-control">
-  </div>
-  <div class="form-group">
-    <label for="loc-within" class="form-label">Within</label>
-    <select id="loc-within">
-      <option value="">This area only</option>
-      <option value="">5 miles</option>
-      <option value="">10 miles</option>
-      <option value="">15 miles</option>
-      <option value="">20 miles</option>
-      <option value="">30 miles</option>
-      <option value="">40 miles</option>
-    </select>
-  </div>
-</fieldset>
-
-<div class="form-group">
-  <a class="button" href="apprenticeship-results.html">Search</a>
-  <a class="button-link" href="#">Clear</a>
+    <div class="form-group get-started">
+      <a class="button" href="apprenticeship-results.html">Search</a>
+      <a class="button-link" href="#">Clear</a>
+    </div>
+  </section>
+  <aside class="grid grid-1-3">
+    <h2 class="heading-36">Sidebar</h2>
+  </aside>
 </div>

@@ -17,6 +17,7 @@
 
   @include media(tablet) {
     float: left;
+    margin-right: $gutter-half;
   }
   &:hover {
     border-color: $black;
@@ -32,7 +33,6 @@
   }
   .inline & {
     clear: none;
-    margin-right: $gutter-half;
   }
 }
 

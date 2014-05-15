@@ -157,30 +157,20 @@ $(function() {
                 this.className = "strength-weak";
                 break;
               case 1:
-                this.info = "Very weak";
-                this.className = "strength-weak";
-                break;
-              case 2:
                 this.info = "Weak";
                 this.className = "strength-weak";
                 break;
-              case 3:
+              case 2:
                 this.info = "Medium";
                 this.className = "strength-medium";
                 break;
+              case 3:
+                this.info = "Strong";
+                this.className = "strength-strong";
+                break;
               case 4:
-                if (this.settings.advancedStrength) {
-                  var crackTime = String(strength.crack_time_display);
-
-                  if (crackTime.indexOf("centuries") !=-1) {
-                    this.info = "Strongest";
-                    this.className = "strength-strong";
-                  }
-                } else {
-                  this.info = "Strong";
-                  this.className = "strength-strong";
-                }
-
+                this.info = "Strongest";
+                this.className = "strength-strong";
                 break;
             }
           }
