@@ -25,8 +25,9 @@ select {
   font-size: inherit;
   height: 36px;
   vertical-align: middle;
-  @media (max-width: 450px) {
-    width: 100%;
+  width: 100%;
+  @include media(tablet) {
+    width: auto;
   }
 }
 
@@ -75,6 +76,12 @@ select {
   @include core-19;
   display: block;
   margin-bottom: 10px;
+  &.inline {
+    @include media(tablet) {
+      display: inline-block;
+      margin-right: 5px;
+    }
+  }
 }
 
 .form-label-bold {

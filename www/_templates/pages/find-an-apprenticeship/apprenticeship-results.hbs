@@ -2,109 +2,99 @@
 headerTitle: Find an Apprenticeship
 ---
 <h1 class="heading-48">Search results</h1>
-<fieldset class="inline">
-  <div class="form-group">
-    <label for="you-searched-for" class="form-label">You searched for:</label>
-    <input class="form-control" id="you-searched-for" type="text" value="Engineer">
-  </div>
-  <div class="form-group">
-    <label for="location" class="form-label">Location:</label>
-    <input class="form-control" id="location" type="text" value="CV32 7RA">
-  </div>
-  <div class="form-group">
-    <label for="within" class="form-label">Within:</label>
-    <select class="" id="within">
-      <option value="">This area only</option>
-      <option value="">5 miles</option>
-      <option value="">10 miles</option>
-      <option value="">15 miles</option>
-      <option value="">20 miles</option>
-      <option value="">30 miles</option>
-      <option value="">40 miles</option>
-    </select>
-  </div>
-</fieldset>
-
-<p>We have found <b>3</b> apprenticeships that might be suitable:</p>
-<p>
-  Sort results by:
-  <select>
-    <option value="">Closing date</option>
-    <option value="">Location</option>
-    <option value="">Relevance</option>
-  </select>
-</p>
-<ul class="search-results">
-  <li class="search-results__item">
-    <a class="search-results__imglink" href="apprenticeship-details.html">
-      <figure class="imgwrap imgwrap--square">
-        <img src="{{assets}}/img/biz-logo-1.jpg">
-      </figure>
-    </a>
-    <div class="search-results__content">
-      <h3 class="heading-24"><a href="apprenticeship-details.html">Apprentice Mechanical Engineer – Precision Toolmaker with R G Engineering</a></h3>
-      <p>
-        An exciting opportunity has arisen for the right candidate to gain an Engineering Qualification through this apprenticeship! If you have got a lot of drive and want to learn a highly skilled trade then look no further!
-        <a href="apprenticeship-details.html">Read more</a>
-      </p>
-      <div class="search-results__btm">
-        <ul class="search-results__meta">
-          <li><b>Number of vacancies:</b> 1</li>
-          <li><b>Distance:</b> 5.2 miles</li>
-          <li><b>Closing date:</b> 23 May 14</li>
-        </ul>
-        <div class="search-results__actns">
-          <a class="button" href="apprenticeship-apply.html">Apply</a>
-        </div>
+<div class="search-results-wrapper grid-wrapper">
+  <section class="grid grid-1-3">
+    <fieldset class="search-refinement">
+      <legend class="visuallyhidden">Search summary</legend>
+      <div class="form-group">
+        <label for="you-searched-for" class="form-label">You searched for:</label>
+        <input class="form-control" id="you-searched-for" type="text" value="Engineer">
       </div>
-    </div>
-  </li>
-  <li class="search-results__item">
-    <a class="search-results__imglink" href="#">
-      <figure class="imgwrap imgwrap--square">
-        <img src="{{assets}}/img/biz-logo-2.jpg">
-      </figure>
-    </a>
-    <div class="search-results__content">
-      <h3 class="heading-24"><a href="#">Advanced Apprenticeship in Electro-technical Installation/Maintenance with Johnson Controls Ltd</a></h3>
-      <p>
-        Electro-technical Engineers are responsible for the installation, maintenance, and the diagnosis and repair of faults, for a variety of Electrical Services and Equipment in commercial, industrial and retail buildings.
-        <a href="#">Read more</a>
-      </p>
-      <div class="search-results__btm">
-        <ul class="search-results__meta">
-          <li><b>Number of vacancies:</b> 2</li>
-          <li><b>Distance:</b> 5.2 miles</li>
-          <li><b>Closing date:</b> 30 Apr 14</li>
-        </ul>
-        <div class="search-results__actns">
-          <a class="button" href="apprenticeship-apply.html">Apply</a>
+      <div class="form-group">
+        <label for="location" class="form-label">Location:</label>
+        <input class="form-control" id="location" type="text" value="CV32 7RA">
+      </div>
+      <div class="form-group">
+        <label for="within" class="form-label">Within:</label>
+        <select class="" id="within">
+          <option value="">This area only</option>
+          <option value="">5 miles</option>
+          <option value="">10 miles</option>
+          <option value="">15 miles</option>
+          <option value="">20 miles</option>
+          <option value="">30 miles</option>
+          <option value="">40 miles</option>
+        </select>
+      </div>
+    </fieldset>
+  </section>
+  <section class="grid grid-2-3">
+    <fieldset>
+      <legend class="visuallyhidden">Search items</legend>
+      <div class="form-group">
+        <span class="form-label">We have found <b>3</b> apprenticeships that might be suitable:</span>
+        <label class="form-label inline" for="sort-by">Sort results by</label>
+        <select id="sort-by">
+          <option value="">Closing date</option>
+          <option value="">Location</option>
+          <option value="">Relevance</option>
+        </select>
+      </div>
+    </fieldset>
+    <ul class="search-results">
+      <li class="search-results__item">
+        <h3 class="heading-24"><a href="apprenticeship-details.html">Apprentice Mechanical Engineer – Precision Toolmaker with R G Engineering</a></h3>
+        <p>
+          An exciting opportunity has arisen for the right candidate to gain an Engineering Qualification through this apprenticeship! If you have got a lot of drive and want to learn a highly skilled trade then look no further!
+        </p>
+        <a href="apprenticeship-details.html">Read more</a>
+        <div class="search-results__btm">
+          <ul class="search-results__meta">
+            <li><b>Number of vacancies:</b> 1</li>
+            <li><b>Distance:</b> 5.2 miles</li>
+            <li><b>Closing date:</b> 23 May 14</li>
+          </ul>
+          <div class="search-results__actns">
+            <a class="button" href="apprenticeship-apply.html">Apply</a>
+          </div>
         </div>
-    </div>
-    </div>
-  </li>
-  <li class="search-results__item">
-    <a class="search-results__imglink" href="#">
-      <figure class="imgwrap imgwrap--square">
-        <img src="{{assets}}/img/biz-logo-3.jpg">
-      </figure>
-    </a>
-    <div class="search-results__content">
-      <h3 class="heading-24"><a href="#">Engineering Compressed Air Service Apprentice with Direct Air &amp; Pipe Work Ltd</a></h3>
-      <p>
-        Training to become a Compressed Air Service Engineer Once qualified working at Customers Premises around the Midlands and UK with company vehicle carrying out routine servicing/repairs of compressed air equipment.
+      </li>
+      <li class="search-results__item">
+        <h3 class="heading-24"><a href="#">Advanced Apprenticeship in Electro-technical Installation/Maintenance with Johnson Controls Ltd</a></h3>
+        <p>
+          Electro-technical Engineers are responsible for the installation, maintenance, and the diagnosis and repair of faults, for a variety of Electrical Services and Equipment in commercial, industrial and retail buildings.
+        </p>
         <a href="#">Read more</a>
-      </p>
-      <div class="search-results__btm">
-        <ul class="search-results__meta">
-          <li><b>Number of vacancies:</b> 1</li>
-          <li><b>Distance:</b> 5.2 miles</li>
-          <li><b>Closing date:</b> 02 May 14</li>
-        </ul>
-        <div class="search-results__actns">
-          <a class="button" href="apprenticeship-apply.html">Apply</a>
+        <div class="search-results__btm">
+          <ul class="search-results__meta">
+            <li><b>Number of vacancies:</b> 2</li>
+            <li><b>Distance:</b> 5.2 miles</li>
+            <li><b>Closing date:</b> 30 Apr 14</li>
+          </ul>
+          <div class="search-results__actns">
+            <a class="button" href="apprenticeship-apply.html">Apply</a>
+          </div>
         </div>
-    </div>
-    </div>
-  </li>
-</ul>
+      </li>
+      <li class="search-results__item">
+        <h3 class="heading-24"><a href="#">Engineering Compressed Air Service Apprentice with Direct Air &amp; Pipe Work Ltd</a></h3>
+        <p>
+          Training to become a Compressed Air Service Engineer Once qualified working at Customers Premises around the Midlands and UK with company vehicle carrying out routine servicing/repairs of compressed air equipment.
+        </p>
+        <a href="#">Read more</a>
+        <div class="search-results__btm">
+          <ul class="search-results__meta">
+            <li><b>Number of vacancies:</b> 1</li>
+            <li><b>Distance:</b> 5.2 miles</li>
+            <li><b>Closing date:</b> 02 May 14</li>
+          </ul>
+          <div class="search-results__actns">
+            <a class="button" href="apprenticeship-apply.html">Apply</a>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </section>
+</div>
+
+

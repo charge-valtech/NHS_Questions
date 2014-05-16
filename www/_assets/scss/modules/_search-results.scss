@@ -1,23 +1,15 @@
-.search-summary {
-  overflow: hidden;
+.search-refinement {
+  @include media(tablet) {
+    padding-right: $gutter;
+  }
+  .form-control {
+    width: 100%;
+  }
 }
 
-.search-summary__item {
-  font-size: 1em;
-  margin-bottom: 1em;
-  h4 {
-    margin: 0;
-  }
-  .input {
-    display: block;
-    font-size: inherit;
-  }
-  select {
-    height: 28px;
-  }
-  @include media(tablet) {
-    float: left;
-    margin-right: 1em;
+.search-results-wrapper {
+  fieldset {
+    float: none;
   }
 }
 
@@ -31,36 +23,20 @@
 
 .search-results__item {
   border-top:1px solid #ddd;
-  min-height: 150px;
+  margin: 0;
   overflow: hidden;
   padding: 15px 0;
   .button {
-    margin-left: 0.5em;
+    margin: 0;
+    margin-bottom: 5px;
   }
-}
-
-.search-results__imglink {
-  display: none;
-  float: left;
-  margin-right: 20px;
-  @include media(tablet) {
-    display: block;
-    width: 150px;
-  }
-}
-
-.search-results__content {
-  float: left;
-  width: 100%;
-  @include media(tablet) {
-    width: calc(100% - 170px);
-  }
-  .lt-ie9 & {
-    width: 790px;
+  p {
+    margin-bottom: 5px;
   }
 }
 
 .search-results__btm {
+  margin-top: $gutter-half;
   padding: 2px 0;
 }
 
@@ -70,6 +46,9 @@
   margin-bottom: 15px;
   padding: 0;
   width: 100%;
+  li:last-child {
+    margin-bottom: 0;
+  }
   @include media(tablet) {
     margin: 0;
     margin-right: -4px;
