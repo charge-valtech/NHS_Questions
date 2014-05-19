@@ -2,6 +2,11 @@
 
 // Add them as you need them. This should let us manage vendor prefixes in one place.
 
+// Return ems from a pixel value
+// This assumes a base of 19px
+@function em($px, $base: 19) {
+  @return ($px / $base) + em;
+}
 
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
