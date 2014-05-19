@@ -3,7 +3,7 @@ headerTitle: Apprenticeship Applications
 ---
 
 <fieldset>
-    <legend class="heading-36">Authentication for user</legend>
+    <legend class="heading-large">Authentication for user</legend>
     <div>
         <label>Login</label>
         <p>

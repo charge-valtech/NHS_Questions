@@ -24,7 +24,7 @@ headerTitle: Advertising an Apprenticeship
   </ol>
 </nav>
 
-<h2 class="heading-36">5. Employer details</h2>
+<h2 class="heading-large">5. Employer details</h2>
 <fieldset>
   <p class="group">
     <span class="validation-message hidden" id="error1">1. Enter employer name</span>
@@ -43,7 +43,7 @@ headerTitle: Advertising an Apprenticeship
   </p>
 </fieldset>
 <fieldset>
-  <legend class="heading-36"><span>Show employer logo?</span></legend>
+  <legend class="heading-large"><span>Show employer logo?</span></legend>
   <ul class="option group inline">
     <li>
         <label><input type="radio" checked="checked" name="show-logo">Yes</label>
@@ -66,7 +66,7 @@ headerTitle: Advertising an Apprenticeship
   </p>
 </fieldset>
 <fieldset>
-    <legend class="heading-36">Contact details</legend>
+    <legend class="heading-large">Contact details</legend>
     <p>These details are for internal communications only, and will NOT be displayed on the advertisement.</p>
     <p class="group">
         <label for="email" class="required">Contact name</label>
@@ -87,7 +87,7 @@ headerTitle: Advertising an Apprenticeship
 
 </fieldset>
 <fieldset class="hidden">
-  <legend class="heading-36">Apprenticeship address</legend>
+  <legend class="heading-large">Apprenticeship address</legend>
   <p class="group">
       <label for="street1">Street</label>
       <input id="street1" type="text" class="street">

@@ -1,9 +1,9 @@
 ---
 headerTitle: Advertising an Apprenticeship
 ---
-<h1 class="heading-48">Vacancy details submitted</h2>
+<h1 class="heading-xlarge">Vacancy details submitted</h2>
 
-<h2 class="heading-36">Your reference: <span class="highlight">VAC000393742</span></h2>
+<h2 class="heading-large">Your reference: <span class="highlight">VAC000393742</span></h2>
 
 <div class="form-group">
   <img src="../_assets/img/logos/vacancyDetails.png" alt="GOV.UK">

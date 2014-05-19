@@ -229,7 +229,7 @@ $is-print: false !default;
   }
 }
 
-@mixin heading-48($tabular-numbers: false) {
+@mixin heading-xlarge($tabular-numbers: false) {
   @include core-48($tabular-numbers: $tabular-numbers);
 
   padding-top: 10px;
@@ -241,7 +241,7 @@ $is-print: false !default;
   }
 }
 
-@mixin heading-36($tabular-numbers: false) {
+@mixin heading-large($tabular-numbers: false) {
   @include core-36($tabular-numbers: $tabular-numbers);
 
   padding-top: 8px;
@@ -265,7 +265,7 @@ $is-print: false !default;
   }
 }
 
-@mixin heading-24($tabular-numbers: false) {
+@mixin heading-medium($tabular-numbers: false) {
   @include core-24($tabular-numbers: $tabular-numbers);
 
   padding-top: 9px;
