@@ -10,6 +10,30 @@
   outline: 3px solid $yellow;
 }
 
+// Link style buttons
+.button-link {
+  @include core-19;
+  background: none;
+  border: none;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  color: $link-colour;
+  line-height: 1.4;
+  text-decoration: underline;
+  cursor: pointer;
+  margin: 0 $gutter-half $gutter-half 0;
+  padding: 7px 10px 5px;
+  vertical-align: top;
+  .inline-button & {
+    margin-bottom: 0;
+  }
+}
+.button-link:hover {
+  color: $link-hover-colour;
+}
+.button-link:focus {
+  outline: 3px solid $yellow;
+}
 
 // Disabled buttons
 
@@ -58,31 +82,6 @@
     max-width: 182px;
   }
 
-}
-
-// Link style buttons
-.button-link {
-  @include core-19;
-  background: none;
-  border: none;
-  -webkit-font-smoothing: antialiased;
-  display: inline-block;
-  color: $link-colour;
-  line-height: 1.25;
-  text-decoration: underline;
-  cursor: pointer;
-  margin: 0 $gutter-half $gutter-half 0;
-  padding: 10px 10px 5px 10px;
-  vertical-align: top;
-  .inline-button & {
-    margin-bottom: 0;
-  }
-}
-.button-link:hover {
-  color: $link-hover-colour;
-}
-.button-link:focus {
-  outline: 3px solid $yellow;
 }
 
 // Show & hide links

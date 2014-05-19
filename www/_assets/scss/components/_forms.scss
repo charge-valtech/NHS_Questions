@@ -23,10 +23,11 @@ select {
   border: 1px solid #dadada;
   font-family: inherit;
   font-size: inherit;
-  height: 36px;
+  height: 31px;
   vertical-align: middle;
   width: 100%;
   @include media(tablet) {
+    height: 36px;
     width: auto;
   }
 }
@@ -126,6 +127,9 @@ select {
   -webkit-appearance: none;
   @include media(tablet){
     width: 50%;
+    .grid & {
+      width: 75%;
+    }
   }
 }
 
