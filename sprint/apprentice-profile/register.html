@@ -84,16 +84,6 @@
 
 <fieldset class="fieldset--with-border">
   <legend class="heading-36">Contact details</legend>
-  <div class="form-group">
-    <label for="first-email" class="form-label">Email address</label>
-    <span class="form-hint">This will be used to activate your account</span>
-    <input type="email" class="form-control linked-input-master" id="first-email">
-  </div>
-  <div class="form-group">
-    <label for="telephone-num1" class="form-label">Telephone number</label>
-    <span class="form-hint">This can be mobile or landline</span>
-    <input type="tel" class="form-control" id="telephone-num1">
-  </div>
   <div class="form-group form-group--compound inline-button">
     <label class="form-label" for="role-short-desc">Postcode</label>
     <input id="role-short-desc" type="text" class="form-control form-control--1-4">
@@ -123,45 +113,56 @@
     <label class="form-label" for="address3">Town or City</label>
     <input type="text" id="address3" class="form-control form-control--1-3">
   </div> -->
+
+  <div class="form-group form-group--compound">
+    <label for="first-email" class="form-label">Enter email</label>
+    <span class="form-hint">This will also be your username</span>
+    <input type="email" class="form-control" id="first-email">
+  </div>
+  <div class="form-group">
+    <label for="second-email" class="form-label">Re-type email</label>
+    <input type="email" class="form-control linked-input-master" id="second-email">
+  </div>
+  <div class="form-group">
+    <label for="telephone-num1" class="form-label">Telephone</label>
+    <input type="tel" class="form-control" id="telephone-num1">
+  </div>
+
   <div class="form-group inline">
-    <p class="form-label">How would you prefer to be contacted?</p>
-    <label for="pref-tel" class="block-label">
-      <input name="preference" type="radio" id="pref-tel">Telephone
-    </label>
+    <p class="form-label">I prefer to be contacted by</p>
     <label for="pref-email" class="block-label">
       <input name="preference" type="radio" id="pref-email">Email
+    </label>
+    <label for="pref-tel" class="block-label">
+      <input name="preference" type="radio" id="pref-tel">Telephone
     </label>
     <label for="pref-post" class="block-label">
       <input name="preference" type="radio" id="pref-post">Post
     </label>
   </div>
-  <div class="form-group">
-    <p class="form-label">News and information</p>
-    <label for="opt-in" class="block-label">
-      <input type="checkbox" id="opt-in"> Opt in to receive relevant information on vacancies
-    </label>
-  </div>
 </fieldset>
 <fieldset>
-  <legend class="heading-36">Create your sign in details</legend>
+  <legend class="heading-36">Sign in details</legend>
   <div class="form-group">
-    <label for="username-input" class="form-label">Username</label>
-    <span class="form-hint">You can change this to something of your choice</span>
-    <input type="email" class="form-control linked-input-slave" id="username-input">
+    <p>Your username will be your email address</p>
   </div>
   <div class="form-group">
-    <label for="password-input" class="form-label">Password</label>
-    <span class="form-hint">A minimum of 8 characters including at least one number</span>
-    <input type="password" class="form-control" id="password-input">
+    <label for="password-input" class="form-label">Create password</label>
+    <span class="form-hint">This must be at least 8 characters long</span>
+    <div class="password-wrapper">
+      <input type="password" class="form-control" id="password-input">
+      <span class="pw-masktoggle button-link">Show</span>
+    </div>
+    <p class="form-hint strength-indicator">Password strength: <span id="pass_meter" class=""></span></p>
   </div>
 </fieldset>
 <div class="form-group">
-  <a class="button" href="terms.html">Finish</a>
+  <a class="button" href="terms.html">Create account</a>
   <a class="button-link" href="../apprentice.html">Back</a>
 </div>
     </main>
   </div>
-  <footer role="contentinfo">
+  <footer class="gov-border" role="contentinfo">
   <div class="footer__wrapper">
     <div class="footer__meta">
       <ul class="footer__nav" role="navigation">
@@ -178,6 +179,7 @@
   </div>
 </footer>
   <script src="../_assets/js/vendor/jquery-1.11.0.min.js"></script>
+  <script src="../_assets/js/vendor/zxcvbn-async.js"></script>
   <script src="../_assets/js/scripts.js"></script>
 </body>
 </html>
