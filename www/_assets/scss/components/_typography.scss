@@ -42,7 +42,7 @@ h4, h5, h6 {
 }
 
 .hgroup {
-  margin-bottom: $gutter * 2;
+  margin-bottom: $gutter;
   padding: 0;
   h1 {
     margin-bottom: 5px;
@@ -51,6 +51,9 @@ h4, h5, h6 {
     @include core-24;
     color: $secondary-text-colour;
     margin: 0;
+  }
+  @include media(tablet) {
+    margin-bottom: $gutter * 2;
   }
 }
 
@@ -183,6 +186,7 @@ h4, h5, h6 {
 
 .copy-19 {
   @include copy-19;
+  margin-bottom: 20px;
 }
 
 .copy-16 {

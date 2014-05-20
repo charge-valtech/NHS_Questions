@@ -11,8 +11,14 @@
   display: none;
 }
 
+.toggle-content--mob {
+  @media (max-width: 640px) {
+    display: none;
+  }
+}
+
 .no-js {
-  .toggle-content {
+  .toggle-content, .toggle-content--mob {
     display: block !important;
   }
 }

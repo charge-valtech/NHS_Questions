@@ -9,8 +9,10 @@ legend {
   width: 100%;
 }
 
-fieldset:first-of-type legend.heading-large {
-  margin-top: 0;
+fieldset:first-of-type {
+  legend.heading-large, legend.heading-medium {
+    margin-top: 0;
+  }
 }
 
 fieldset { /*Overriding normalize presets*/
@@ -62,6 +64,10 @@ select {
       .form-control {
         width: 100%;
       }
+    }
+    .float-right-wrap & {
+      float: right;
+      width: auto;
     }
   }
 }

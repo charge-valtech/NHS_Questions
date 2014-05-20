@@ -3,3 +3,9 @@
 .gov-border {
   border-top: 10px solid $govuk-blue;
 }
+
+.float-right-wrap {
+  clear: both;
+  float: left;
+  width: 100%;
+}

@@ -41,3 +41,29 @@
     vertical-align: top;
   }
 }
+
+.mob-collpanel-trigger {
+  @media (max-width: 640px) {
+    &:after {
+      content: " \25BC";
+      display: inline-block;
+      font-size: 12px;
+      height: 14px;
+      padding-left: 10px;
+      vertical-align: middle;
+    }
+    &.triggered {
+      &:after {
+        content: " \25B2";
+      }
+    }
+  }
+}
+
+.mob-collpanel {
+  @media (max-width: 640px) {
+    &.panel-open {
+      display: block;
+    }
+  }
+}
