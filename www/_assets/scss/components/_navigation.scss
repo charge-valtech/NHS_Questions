@@ -115,6 +115,18 @@
 .page-navigation {
   border-top: 1px solid $grey-2;
   padding-top: 10px;
+  .description {
+    display: block;
+  }
+  .counter {
+    display: block;
+    font-size: 14px;
+  }
+  .hide-mob {
+    @media (max-width: 640px) {
+      display: none;
+    }
+  }
 }
 
 .page-navigation__btn {
@@ -123,10 +135,13 @@
   font-size: 1.9rem;
   margin-right: -4px; /*Inline block pixel fix*/
   overflow: hidden;
-  padding: 25px 10px 10px;
+  padding: $gutter-half 10px;
   text-decoration: none;
   vertical-align: top;
   width: 50%;
+  @include media(tablet) {
+    padding: $gutter 10px;
+  }
   &.previous {
     text-align: left;
   }

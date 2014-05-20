@@ -104,13 +104,15 @@
   width: 30%;
 }
 
-.ad-details__image {
-  float: left;
-  margin: 0 15px 15px 0;
-  text-align: center;
-  width: 300px;
-  .imgwrap {
-    margin-bottom: 10px;
+.ad-details__map {
+  background-color: $grey-3;
+  height: 300px;
+  vertical-align: middle;
+  .no-js & {
+    display: table;
+    .nojs-notice {
+      padding: 0 $gutter-half;
+      vertical-align: middle;
+    }
   }
 }
-

@@ -1,7 +1,6 @@
 $square-width: 10;
 $square-height: 10;
 
-
 .imgwrap {
   display: block;
   height: 0;
@@ -20,4 +19,14 @@ $square-height: 10;
 
 .imgwrap--square {
   padding-top: percentage($square-height / $square-width);
+}
+
+iframe, object, embed {
+  max-width: 100%;
+}
+
+iframe {
+  .no-js & {
+    display: none !important;
+  }
 }

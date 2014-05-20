@@ -36,6 +36,10 @@ select {
 
 .fieldset--with-border {
   border-bottom: 1px solid $grey-2;
+  margin-bottom: 20px;
+  @include media(tablet) {
+    margin-bottom: 30px;
+  }
 }
 
 .add-focus {

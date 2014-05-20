@@ -17,9 +17,18 @@
   }
 }
 
+.js-enabled {
+  .nojs-notice {
+    display: none;
+  }
+}
+
 .no-js {
   .toggle-content, .toggle-content--mob {
     display: block !important;
+  }
+  .nojs-notice {
+    display: table-cell;
   }
 }
 
