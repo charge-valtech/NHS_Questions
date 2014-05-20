@@ -38,62 +38,83 @@
         <img src="../_assets/img/gov.uk_logotype_crown.png" alt="Crown">GOV.UK
       </a>
     </div>
-    <h1 class="global-header__title beta">Find an Apprenticeship <span class="beta__label">Beta</span></h1>
+    <div class="global-header__nav">
+      <h1 class="global-header__title beta">Find an Apprenticeship</h1>
+    </div>
   </div>
 </header>
   <div class="content-container">
-    <div class="phase-notice">
-  <strong>BETA:</strong> This is a prototype
-  <!-- <section class="summary-box toggle-content">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, suscipit, id, ad tempore deserunt fugit eaque placeat ducimus sequi similique maiores illum fugiat labore libero rem nemo at quos recusandae quasi cupiditate nobis! Fuga, incidunt doloribus magnam deserunt hic similique animi cumque ipsa debitis autem. Autem, ad, amet, commodi eos ratione vel sed necessitatibus accusantium cum facere sunt voluptatem error minima recusandae enim odit voluptatibus mollitia qui tempore veritatis dolorem quod praesentium impedit dignissimos animi officia nesciunt! Vitae, at, consequatur consectetur quo excepturi numquam libero tenetur assumenda molestias ducimus maxime suscipit aut corporis optio perspiciatis ea autem incidunt dolore nisi.</p>
+    <div class="phase-notice gov-border">
+  <strong class="beta__label">Beta</strong> <span>This is a prototype – your <a href="#">feedback</a> will help us to improve it.</span>
+</div>
+<!-- <section class="summary-box toggle-content">
+    <h2 class="heading-medium">Help and feedback</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, eum inventore reiciendis consectetur ullam ad dolorem incidunt! Reprehenderit, modi, dolorem.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, doloribus, nulla. Distinctio, explicabo, ut consectetur assumenda nam fugiat molestias quisquam architecto facere suscipit debitis!</p>
+    <p>You can also <a href="mailto:test@test.com">email us feedback</a> to help us improve this service.</p>
     <p class="summary-close">Close</p>
   </section> -->
-</div>
     <main role="main" id="main">
       
-<h1 class="heading-48">Search results</h1>
 <div class="search-results-wrapper grid-wrapper">
+  <div class="hgroup">
+    <h1 class="heading-xlarge">Search results</h1>
+    <p><b class="bold-medium">18</b> Apprenticeships that closely match your search.</p>
+  </div>
   <section class="grid grid-1-3">
     <fieldset class="search-refinement">
-      <legend class="visuallyhidden">Search summary</legend>
-      <div class="form-group">
-        <label for="you-searched-for" class="form-label">You searched for:</label>
-        <input class="form-control" id="you-searched-for" type="text" value="Engineer">
-      </div>
-      <div class="form-group">
-        <label for="location" class="form-label">Location:</label>
-        <input class="form-control" id="location" type="text" value="CV32 7RA">
-      </div>
-      <div class="form-group">
-        <label for="within" class="form-label">Within:</label>
-        <select class="" id="within">
-          <option value="">This area only</option>
-          <option value="">5 miles</option>
-          <option value="">10 miles</option>
-          <option value="">15 miles</option>
-          <option value="">20 miles</option>
-          <option value="">30 miles</option>
-          <option value="">40 miles</option>
-        </select>
+      <legend class="heading-medium mob-collpanel-trigger">Filter results</legend>
+      <div class="mob-collpanel toggle-content--mob">
+        <div class="form-group">
+          <label for="job-title" class="form-label">Job title (Optional)</label>
+          <input id="job-title" type="text" class="form-control" value="Mechanical Engineer">
+        </div>
+        <div class="form-group">
+          <label for="keywords" class="form-label">Keyword(s) (Optional)</label>
+          <input id="keywords" type="text" class="form-control" value="Engineer">
+        </div>
+        <div class="form-group">
+          <label for="location" class="form-label">Location</label>
+          <input id="location" type="text" class="form-control" value="Coventry">
+        </div>
+        <div class="form-group">
+          <label for="loc-within" class="form-label">Within</label>
+          <select id="loc-within">
+            <option value="">This area only</option>
+            <option value="" selected>5 miles</option>
+            <option value="">10 miles</option>
+            <option value="">15 miles</option>
+            <option value="">20 miles</option>
+            <option value="">30 miles</option>
+            <option value="">40 miles</option>
+            <option value="">Nationwide</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <a href="#" class="button">Update results</a>
+        </div>
       </div>
     </fieldset>
   </section>
   <section class="grid grid-2-3">
     <fieldset>
       <legend class="visuallyhidden">Search items</legend>
-      <div class="form-group">
-        <span class="form-label">We have found <b>3</b> apprenticeships that might be suitable:</span>
-        <label class="form-label inline" for="sort-by">Sort results by</label>
-        <select id="sort-by">
-          <option value="">Closing date</option>
-          <option value="">Location</option>
-          <option value="">Relevance</option>
-        </select>
+      <div class="float-right-wrap">
+        <div class="form-group form-group--compound">
+          <label class="form-label inline" for="sort-by">Sort results by</label>
+          <select id="sort-by">
+            <option value="">Relevance</option>
+            <option value="">Closing date</option>
+            <option value="">Created date</option>
+            <option value="">Distance</option>
+            <option value="">Popular</option>
+          </select>
+        </div>
       </div>
     </fieldset>
     <ul class="search-results">
       <li class="search-results__item">
-        <h3 class="heading-24"><a href="apprenticeship-details.html">Apprentice Mechanical Engineer – Precision Toolmaker with R G Engineering</a></h3>
+        <h3 class="heading-medium"><a href="apprenticeship-details.html">Apprentice Mechanical Engineer – Precision Toolmaker with R G Engineering</a></h3>
         <p>
           An exciting opportunity has arisen for the right candidate to gain an Engineering Qualification through this apprenticeship! If you have got a lot of drive and want to learn a highly skilled trade then look no further!
         </p>
@@ -113,7 +134,7 @@
         </div>
       </li>
       <li class="search-results__item">
-        <h3 class="heading-24"><a href="#">Advanced Apprenticeship in Electro-technical Installation/Maintenance with Johnson Controls Ltd</a></h3>
+        <h3 class="heading-medium"><a href="#">Advanced Apprenticeship in Electro-technical Installation/Maintenance with Johnson Controls Ltd</a></h3>
         <p>
           Electro-technical Engineers are responsible for the installation, maintenance, and the diagnosis and repair of faults, for a variety of Electrical Services and Equipment in commercial, industrial and retail buildings.
         </p>
@@ -133,7 +154,7 @@
         </div>
       </li>
       <li class="search-results__item">
-        <h3 class="heading-24"><a href="#">Engineering Compressed Air Service Apprentice with Direct Air &amp; Pipe Work Ltd</a></h3>
+        <h3 class="heading-medium"><a href="#">Engineering Compressed Air Service Apprentice with Direct Air &amp; Pipe Work Ltd</a></h3>
         <p>
           Training to become a Compressed Air Service Engineer Once qualified working at Customers Premises around the Midlands and UK with company vehicle carrying out routine servicing/repairs of compressed air equipment.
         </p>

@@ -1,9 +1,16 @@
 $(function() {
   $('.menu-trigger').on('click', function() {
     $(this).next('.menu').toggleClass('menu-open');
-    $(this).toggleClass('triggered')
+    $(this).toggleClass('triggered');
     return false;
   });
+
+  $('.mob-collpanel-trigger').on('click', function() {
+    $(this).next('.mob-collpanel').toggleClass('panel-open');
+    $(this).toggleClass('triggered');
+    return false;
+  });
+
   $(".block-label").each(function(){
 
     // Add focus

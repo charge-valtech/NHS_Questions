@@ -38,22 +38,27 @@
         <img src="../_assets/img/gov.uk_logotype_crown.png" alt="Crown">GOV.UK
       </a>
     </div>
-    <h1 class="global-header__title beta">Find an Apprenticeship <span class="beta__label">Beta</span></h1>
+    <div class="global-header__nav">
+      <h1 class="global-header__title beta">Find an Apprenticeship</h1>
+    </div>
   </div>
 </header>
   <div class="content-container">
-    <div class="phase-notice">
-  <strong>BETA:</strong> This is a prototype
-  <!-- <section class="summary-box toggle-content">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, suscipit, id, ad tempore deserunt fugit eaque placeat ducimus sequi similique maiores illum fugiat labore libero rem nemo at quos recusandae quasi cupiditate nobis! Fuga, incidunt doloribus magnam deserunt hic similique animi cumque ipsa debitis autem. Autem, ad, amet, commodi eos ratione vel sed necessitatibus accusantium cum facere sunt voluptatem error minima recusandae enim odit voluptatibus mollitia qui tempore veritatis dolorem quod praesentium impedit dignissimos animi officia nesciunt! Vitae, at, consequatur consectetur quo excepturi numquam libero tenetur assumenda molestias ducimus maxime suscipit aut corporis optio perspiciatis ea autem incidunt dolore nisi.</p>
+    <div class="phase-notice gov-border">
+  <strong class="beta__label">Beta</strong> <span>This is a prototype – your <a href="#">feedback</a> will help us to improve it.</span>
+</div>
+<!-- <section class="summary-box toggle-content">
+    <h2 class="heading-medium">Help and feedback</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, eum inventore reiciendis consectetur ullam ad dolorem incidunt! Reprehenderit, modi, dolorem.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, doloribus, nulla. Distinctio, explicabo, ut consectetur assumenda nam fugiat molestias quisquam architecto facere suscipit debitis!</p>
+    <p>You can also <a href="mailto:test@test.com">email us feedback</a> to help us improve this service.</p>
     <p class="summary-close">Close</p>
   </section> -->
-</div>
     <main role="main" id="main">
       
 <div class="hgroup">
-  <h1 class="heading-48">Find an Apprenticeship</h1>
-  <h2 class="subtitle">Search and apply for an apprenticeship in England</h2>
+  <h1 class="heading-xlarge">Find an Apprenticeship</h1>
+  <h2 class="subtitle">Search and apply for an Apprenticeship in England</h2>
 </div>
 <!--
 <div class="panel-indent text">
@@ -63,9 +68,9 @@
 <div class="grid-wrapper">
   <section class="grid grid-2-3">
     <fieldset>
-      <legend class="heading-36">Before you start</legend>
+      <legend class="heading-large">Before you start</legend>
       <p class="text">
-        If you <a href="">register with GOV.UK</a> you can track your applications, set up vacancy alerts and manage your profile.
+        If you <a href="../apprentice-profile/register.html">create an account</a> with GOV.UK you can track your applications, set up vacancy alerts and manage your profile.
       </p>
       <p>
         Already registered? <a href="">Sign in</a>
@@ -76,15 +81,15 @@
         <p>You can still search and apply for a vacancy without an account</p>
       </legend>
       <div class="form-group">
-        <label for="job-title" class="form-label">Job title</label>
+        <label for="job-title" class="form-label">Job title (Optional)</label>
         <input id="job-title" type="text" class="form-control">
       </div>
       <div class="form-group">
-        <label for="keywords" class="form-label">Keyword(s)</label>
+        <label for="keywords" class="form-label">Keyword(s) (Optional)</label>
         <input id="keywords" type="text" class="form-control">
       </div>
       <div class="form-group">
-        <label for="location" class="form-label">Postcode, town or place</label>
+        <label for="location" class="form-label">Location</label>
         <input id="location" type="text" class="form-control">
       </div>
       <div class="form-group">
@@ -97,20 +102,31 @@
           <option value="">20 miles</option>
           <option value="">30 miles</option>
           <option value="">40 miles</option>
+          <option value="">Nationwide</option>
         </select>
       </div>
     </fieldset>
 
     <div class="form-group get-started">
       <a class="button" href="apprenticeship-results.html">Search</a>
-      <a class="button-link" href="#">Clear</a>
+      <p>
+        <a class="button-link" href="#">Clear</a>
+      </p>
+    </div>
+    <div class="form-group">
+      <p>You can also apply for Apprenticeships in other parts of the UK</p>
+      <ul>
+        <li><a href="#">Apprenticeships in Northern Ireland</a></li>
+        <li><a href="#">Apprenticeships in Scotland</a></li>
+        <li><a href="#">Apprenticeships in Wales</a></li>
+      </ul>
     </div>
   </section>
   <aside class="grid grid-1-3">
     <div class="inner-block">
       <div class="gov-border">
-        <h2 class="heading-24">Elsewhere on GOV.UK</h2>
-        <a href="apprenticeship-overview.html">About apprenticeships</a>
+        <h2 class="heading-medium">Elsewhere on GOV.UK</h2>
+        <a href="apprenticeship-overview.html">About Apprenticeships</a>
       </div>
     </div>
   </aside>
