@@ -15,15 +15,15 @@
   @include core-19;
   background: none;
   border: none;
-  -webkit-font-smoothing: antialiased;
-  display: inline-block;
   color: $link-colour;
-  line-height: 1.4;
-  text-decoration: underline;
   cursor: pointer;
+  display: inline-block;
+  line-height: 1.4;
   margin: 0 $gutter-half $gutter-half 0;
   padding: 7px 10px 5px;
+  text-decoration: underline;
   vertical-align: top;
+  -webkit-font-smoothing: antialiased;
   .inline-button & {
     margin-bottom: 0;
   }
@@ -49,16 +49,15 @@
 
 // Start now buttons
 .get-started {
-
   .button {
+    background: $button-colour url(../img/icon-pointer.png) 100% 50% no-repeat;
+    background-size: 30px 19px;
+    color: #FFF;
     font-size: 24px;
     font-weight: 700;
     line-height: 0.66667;
-    color: #FFF;
-    padding: 14px 41px 10px 16px;
-    background: $button-colour url(../img/icon-pointer.png) 100% 50% no-repeat;
-    background-size: 30px 19px;
     margin-bottom: 0;
+    padding: 14px 41px 10px 16px;
     text-transform: none;
     @include device-pixel-ratio(2) {
       background-image: url(../img/icon-pointer-2x.png);
@@ -67,7 +66,6 @@
       font-size: 20px;
     }
   }
-
   .button:hover {
     background-color: $green;
   }
@@ -81,7 +79,6 @@
     margin-top: 7px;
     max-width: 182px;
   }
-
 }
 
 // Show & hide links
@@ -103,12 +100,12 @@ details summary:focus {
   display: none;
 }
 .no-details details > summary:before {
+  content: '► ';
   font-size: 16px;
   float: left;
   margin-top: 1px;
   margin-right: -1px;
   width: 20px;
-  content: '► ';
 }
 .no-details .open summary,
 .no-details details[open="open"] > summary {

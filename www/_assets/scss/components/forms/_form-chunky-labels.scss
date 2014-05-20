@@ -3,18 +3,14 @@
 
 // By default, block labels stack vertically
 .block-label {
-
-  display: block;
-  float: none;
-  clear: left;
-
   background: $grey-3;
   border: 1px solid $grey-3;
-  padding: 20px $gutter $gutter-half $gutter-half;
-  margin-bottom: $gutter-half;
-
+  clear: left;
   cursor: pointer; // Encourage clicking on block labels
-
+  display: block;
+  float: none;
+  margin-bottom: $gutter-half;
+  padding: 20px $gutter $gutter-half $gutter-half;
   @include media(tablet) {
     float: left;
     margin-right: $gutter-half;

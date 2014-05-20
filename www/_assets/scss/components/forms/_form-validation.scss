@@ -1,11 +1,10 @@
 
 // Validation summary box
 .validation-summary {
-  border: 3px solid $error-colour;
   background: $error-background;
-
-  padding: $gutter-half $gutter;
+  border: 3px solid $error-colour;
   margin-bottom: $gutter;
+  padding: $gutter-half $gutter;
   ul {
     margin-top: 10px;
   }
@@ -26,8 +25,8 @@
   border-left: 3px solid $error-colour;
   box-sizing: content-box;
   color: $error-colour;
-  padding: 0 0 0 10px;
   margin-left: -13px;
+  padding: 0 0 0 10px;
   .form-hint {
     color: $error-colour;
   }

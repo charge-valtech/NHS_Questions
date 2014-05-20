@@ -4,9 +4,9 @@
 // Form layout
 fieldset,
 legend {
-  width: 100%;
-  float: left;
   clear: both;
+  float: left;
+  width: 100%;
 }
 
 fieldset:first-of-type legend.heading-large {

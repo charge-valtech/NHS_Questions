@@ -1,19 +1,21 @@
 /* Make skiplinks visible when they are tabbed to */
 .skiplink {
   position: absolute;
-  left: -9999em; }
+  left: -9999em;
+}
 
 .skiplink:focus {
-  position: static; }
+  position: static;
+}
 
 .skiplink-container {
+  background: $black;
   font-size: 16px;
   text-align: center;
-  background: $black;
   div {
-    text-align: left;
     margin: 0 auto;
     max-width: 1020px;
+    text-align: left;
   }
   .skiplink {
     display: -moz-inline-stack;
@@ -25,12 +27,12 @@
 
 /* For image replacement */
 .ir {
-  display: block;
-  text-indent: -999em;
-  overflow: hidden;
   background-repeat: no-repeat;
-  text-align: left;
   direction: ltr;
+  display: block;
+  overflow: hidden;
+  text-align: left;
+  text-indent: -999em;
   br {
     display: none;
   }
