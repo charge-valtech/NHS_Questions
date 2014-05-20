@@ -5,6 +5,17 @@ ul {
   }
 }
 
+ol {
+  margin-left: 25px;
+}
+
+.list-number {
+  margin-bottom: 20px;
+  @include media(tablet) {
+    margin-bottom: 30px;
+  }
+}
+
 ol, ul {
   li {
     margin-bottom: 5px;
