@@ -88,7 +88,7 @@
   padding: 0;
   width: 70%;
   .ad-details & {
-    margin: $gutter-half 0 $gutter;
+    margin: 0 0 $gutter;
     width: auto;
   }
   li:last-child {
@@ -106,7 +106,8 @@
 
 .ad-details__map {
   background-color: $grey-3;
-  height: 300px;
+  height: 250px;
+  margin-bottom: 20px;
   vertical-align: middle;
   .no-js & {
     display: table;

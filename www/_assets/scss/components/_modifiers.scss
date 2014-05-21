@@ -4,6 +4,10 @@
   border-top: 10px solid $govuk-blue;
 }
 
+.section-border {
+  border-bottom: 1px solid $border-colour;
+}
+
 .float-right-wrap {
   clear: both;
   float: left;
