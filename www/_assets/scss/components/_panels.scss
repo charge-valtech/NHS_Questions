@@ -67,3 +67,26 @@
     }
   }
 }
+
+.collpanel-trigger {
+  cursor: pointer;
+  &:after {
+    content: " \25BC";
+    display: inline-block;
+    font-size: 12px;
+    height: 14px;
+    padding-left: 10px;
+    vertical-align: middle;
+  }
+  &.triggered {
+    &:after {
+      content: " \25B2";
+    }
+  }
+}
+
+.collpanel {
+  &.panel-open {
+    display: block;
+  }
+}

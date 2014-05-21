@@ -11,6 +11,12 @@ $(function() {
     return false;
   });
 
+  $('.collpanel-trigger').on('click', function() {
+    $(this).next('.collpanel').toggleClass('panel-open');
+    $(this).toggleClass('triggered');
+    return false;
+  });
+
   $(".block-label").each(function(){
 
     // Add focus
