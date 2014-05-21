@@ -34,7 +34,7 @@ select {
   }
 }
 
-.fieldset--with-border {
+.fieldset-with-border {
   border-bottom: 1px solid $grey-2;
   margin-bottom: 20px;
   @include media(tablet) {
@@ -76,7 +76,7 @@ select {
   }
 }
 
-.form-group--compound {
+.form-group-compound {
   margin-bottom: 10px;
 }
 
@@ -152,11 +152,11 @@ select {
   }
 }
 
-.form-control--hours {
+.form-control-hours {
   width: 4em;
 }
 
-.form-control--wage {
+.form-control-wage {
   width: 8em;
 }
 
@@ -167,14 +167,14 @@ select {
   }
 }
 
-.form-control--1-4 {
+.form-control-1-4 {
   width: 100%;
   @include media(tablet){
     width: 25%;
   }
 }
 
-.form-control--1-3 {
+.form-control-1-3 {
   width: 100%;
   @include media(tablet){
     width: 33.33%;

@@ -23,6 +23,38 @@
     display: inline-block;
     margin: 0 10px 0 0;
     vertical-align: top;
+// /* A fix for low contrast radio and checkboxes in Chrome on Windows */
+//     background-color: white;
+//     border-radius: 50%;
+//     border: 1px solid $grey-1;
+//     position: relative;
+//     -webkit-appearance: none;
+//     width: 16px; height: 16px;
+
+//     &:checked {
+//       &:before {
+//         background-color: $govuk-blue;
+//         border-radius: 50%;
+//         content: '';
+//         display: inline-block;
+//         position: absolute;
+//         top: 4px; left: 4px;
+//         width: 6px; height: 6px;
+//       }
+//     }
+//     &[type="checkbox"] {
+//       border-radius: 0;
+//       width: 15px; height: 15px;
+//       &:checked {
+//         &:before {
+//           background-color: transparent;
+//           content: '✓';
+//           border-radius: 0;
+//           top: -3px; left: 0;
+//           width: 10px; height: 10px;
+//         }
+//       }
+//     }
     @include media(tablet) {
       margin-top: 2px;
     }
