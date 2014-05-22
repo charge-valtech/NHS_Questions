@@ -22,6 +22,16 @@ ol {
   }
 }
 
+.list-flowing {
+  @extend %clearfix;
+  @include media(tablet) {
+    li {
+      float: left;
+      width: 50%;
+    }
+  }
+}
+
 ol, ul {
   li {
     margin-bottom: 5px;
