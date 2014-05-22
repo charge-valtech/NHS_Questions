@@ -128,8 +128,7 @@ module.exports = function(grunt) {
             'www/_templates{,/**/*}',
             'www/z-backups{,/**/*}',
             'www/employer/{,/**/*}',
-            'www/find-an-apprenticeship{,/**/*}',
-            'www/apprentice-profile{,/**/*}',
+            'www/apprentice{,/**/*}',
             'www/*.html',
             '!www/index.html',
           ]

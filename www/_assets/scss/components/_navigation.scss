@@ -157,9 +157,12 @@
 
 .arrow-button {
   background: url(../img/arrow-sprite.png) no-repeat;
-  background-size: 116px 44px;
+  background-size: 113px 39px;
   display: inline-block;
-  width: 35px; height: 44px;
+  width: 35px; height: 39px;
+  @include device-pixel-ratio(2) {
+    background-image: url(../img/arrow-sprite-2x.png);
+  }
   .previous & {
     background-position: top left;
     float: left;
