@@ -14,10 +14,10 @@ headerTitle: Apprenticeship Applications
         <p>
             <label>Before you can post a vacancy you need to :</label>
             <div>
-                <a href="employer-role-submission/EmployerRegistration.html">Register your organisation</a>
+                <a href="employer/EmployerRegistration.html">Register your organisation</a>
             </div>
             <div>
-                <a href="employer-role-submission/training-provider.html">Choose a learning provider</a>
+                <a href="employer/training-provider.html">Choose a learning provider</a>
             </div>
         </p>
         <p class="action group">

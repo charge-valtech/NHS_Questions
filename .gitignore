@@ -2,7 +2,7 @@
 node_modules/*
 *.DS_Store
 www/*.html
-www/employer-role-submission/*.html
+www/employer/*.html
 www/find-an-apprenticeship/*.html
 www/apprentice-profile/*.html
 *.map
