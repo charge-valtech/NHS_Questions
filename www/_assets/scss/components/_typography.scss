@@ -157,7 +157,7 @@ h4, h5, h6 {
 }
 
 // Set a max-width for text blocks
-// Less than 75 characters per line of text
+// Fewer than 75 characters per line of text
 .text {
   max-width: 30em;
 }
@@ -189,8 +189,12 @@ h4, h5, h6 {
   margin-bottom: 20px;
 }
 
-.copy-16 {
+.copy-16, .text-attribution {
   @include copy-16;
+}
+
+.text-attribution {
+  font-style: italic;
 }
 
 p, pre {
