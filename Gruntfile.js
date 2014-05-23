@@ -7,7 +7,7 @@ module.exports = function(grunt) {
         separator: ';'
       },
       dev: {
-        src: ['www/_assets/js/*.js', '!www/_assets/js/scripts.min.js', '!www/_assets/js/scripts.js'],
+        src: ['www/_assets/js/vendor-concat/*.js', 'www/_assets/js/*.js', '!www/_assets/js/scripts.js', '!www/_assets/js/scripts.min.js'],
         dest: 'www/_assets/js/scripts.js'
       }
     },
@@ -126,11 +126,9 @@ module.exports = function(grunt) {
             'www/_assets/js/interactions.js',
             'www/_assets/js/scripts.js',
             'www/_templates{,/**/*}',
-            'www/z-backups{,/**/*}',
-            'www/employer/{,/**/*}',
-            'www/apprentice{,/**/*}',
             'www/*.html',
             '!www/index.html',
+            'www/z-backups{,/**/*}'
           ]
         }
       },
@@ -168,7 +166,7 @@ module.exports = function(grunt) {
         }]
       },
       scripts: {
-        src: ['www/index.html'],
+        src: ['www/apprentice/*.html', 'www/employer/*.html', 'www/*.html'],
         overwrite: true,
         replacements: [{
           from: 'scripts.js',
@@ -176,14 +174,16 @@ module.exports = function(grunt) {
         }]
       }
     },
-    pngmin: {
-      compile: {
-        options: {},
+    prettify: {
+      options: {
+        indent: 2,
+        wrap_line_length: 78,
+        brace_style: 'expand',
+      },
+      // Specify a number to padcomments
+      dist: {
         files: [
-          {
-            src: 'path/to/image.png',
-            dest: 'dest/'
-          }
+          {expand: true, cwd: 'dist/', src: ['apprentice/*.html', 'employer/*.html', '*.html'], dest: 'dist/', ext: '.html'}
         ]
       }
     },
@@ -254,7 +254,8 @@ module.exports = function(grunt) {
     'grunt-pngmin',
     'grunt-browser-sync',
     'grunt-dev-update',
-    'grunt-contrib-connect'
+    'grunt-contrib-connect',
+    'grunt-prettify'
   ].forEach(function (task) {
     grunt.loadNpmTasks(task);
   });
@@ -271,7 +272,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('demo', ['clean:demo', 'copyto:demo']);
 
-  grunt.registerTask('dist', ['uglify:dist', 'replace:map', 'replace:scripts', 'clean:dist', 'copyto:dist']);
+  grunt.registerTask('dist', ['uglify:dist', 'replace:map', 'clean:dist', 'replace:scripts', 'copyto:dist', 'prettify:dist']);
 
 
 };

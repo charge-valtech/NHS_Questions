@@ -12,22 +12,22 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--[if gt IE 8]><!-->
-    <link href="_assets/css/main.css" media="all" rel="stylesheet" type="text/css">
+    <link href="../_assets/css/main.css" media="all" rel="stylesheet" type="text/css">
     <!--<![endif]-->
-    <!--[if lte IE 8]><link href="_assets/css/main-ie8.css" media="all" rel="stylesheet" type="text/css"><![endif]-->
+    <!--[if lte IE 8]><link href="../_assets/css/main-ie8.css" media="all" rel="stylesheet" type="text/css"><![endif]-->
     <!--[if lte IE 8]>
-    <link href="_assets/css/fonts-ie8.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="../_assets/css/fonts-ie8.css" media="all" rel="stylesheet" type="text/css" />
     <![endif]-->
     <!--[if gte IE 9]><!-->
-    <link href="_assets/css/fonts.css" media="all" rel="stylesheet" type="text/css"
+    <link href="../_assets/css/fonts.css" media="all" rel="stylesheet" type="text/css"
     />
     <!--<![endif]-->
-    <link rel="shortcut icon" href="_assets/img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../_assets/img/favicon.ico" type="image/x-icon">
     <script>
     var html = document.documentElement;
     html.className += " js-enabled";
     </script>
-    <script src="_assets/js/vendor/modernizr-custom.js"></script>
+    <script src="../_assets/js/vendor/modernizr-custom.js"></script>
   </head>
   <body>
     <div class="skiplink-container">
@@ -39,11 +39,11 @@
       <div class="global-header__wrapper">
         <div class="global-header__logo">
           <a href="/" title="Go to the GOV.UK homepage" class="govuk-logo">
-            <img src="_assets/img/gov.uk_logotype_crown.png" alt="Crown">GOV.UK
+            <img src="../_assets/img/gov.uk_logotype_crown.png" alt="Crown">GOV.UK
           </a>
         </div>
         <div class="global-header__nav">
-          <h1 class="global-header__title beta">Apprenticeships</h1>
+          <h1 class="global-header__title beta">Find an Apprenticeship</h1>
         </div>
       </div>
     </header>
@@ -52,20 +52,32 @@
         <strong class="beta__label">Beta</strong>  <span>This is a prototype – your <a href="#">feedback</a> will help us to improve it.</span>
       </div>
       <main role="main" id="main">
-        <h1 class="heading-xlarge">Apprenticeships</h1>
-        <h2 class="heading-large">Which of the following are you...</h2>
-        <ul class="form-group">
-          <li>
-            <a href="apprentice/index.html">Apprentice</a>
-          </li>
-          <li>
-            <a href="employer/index.html">Employer</a>
-          </li>
-          <li>
-            <a href="#">Training organisation</a>
-          </li>
-        </ul>
+        <h1 class="heading-xlarge">Apply for a vacancy</h1>
+        <nav class="progress-indicator progress-indicator-horizontal">
+          <ol aria-label="Progress Steps">
+            <li>
+              <span>Step 1</span>
+            </li>
+            <li>
+              <span>Step 2</span>
+            </li>
+            <li>
+              <span>Step 3</span>
+            </li>
+            <li>
+              <span>Step 4</span>
+            </li>
+            <li class="active">
+              <span>Preview &amp; Submit</span>
+            </li>
+          </ol>
+        </nav>
+        <br>
+        <h2 class="heading-large">5. Preview before submitting</h2>
         <div class="form-group">
+          <a href="apply-complete.html" class="button">Submit application</a>
+          <p><a class="button-link" href="apply-index.html">Back</a>
+          </p>
         </div>
       </main>
     </div>
@@ -85,12 +97,12 @@
           </ul>
           <a class="footer__copyright" href="http://www.nationalarchives.gov.uk/information-management/our-services/crown-copyright.htm"
           target="_blank">
-            <img src="_assets/img/logos/govuk-crest@2x.png" width="125" height="102" alt="Crown copyright logo">
+            <img src="../_assets/img/logos/govuk-crest@2x.png" width="125" height="102" alt="Crown copyright logo">
             <p>&copy; Crown copyright</p>
           </a>
         </div>
       </div>
     </footer>
-    <script src="_assets/js/scripts.min.js"></script>
+    <script src="../_assets/js/scripts.min.js"></script>
   </body>
 </html>
