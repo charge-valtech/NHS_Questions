@@ -57,6 +57,18 @@ h4, h5, h6 {
   }
 }
 
+.hgroup-medium {
+  margin-bottom: $gutter-half;
+  .heading-medium {
+    margin-bottom: 5px;
+  }
+  .subtitle {
+    @include core-19;
+    color: $secondary-text-colour;
+    margin: 0;
+  }
+}
+
 // Common heading sizes
 // Using the bold-xx mixins from the govuk_toolkit _typography.scss file
 // Spacing is set in em, using the px to em function in the elements _helpers.scss file
