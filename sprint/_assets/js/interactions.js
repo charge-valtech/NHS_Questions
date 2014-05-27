@@ -1,4 +1,6 @@
 $(function() {
+  FastClick.attach(document.body);
+
   $('.menu-trigger').on('click', function() {
     $(this).next('.menu').toggleClass('menu-open');
     $(this).toggleClass('triggered');
