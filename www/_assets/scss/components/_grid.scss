@@ -2,10 +2,6 @@
 // Grid layout
 .grid-wrapper {
   @extend %clearfix;
-  margin-bottom: 20px;
-  @include media(tablet) {
-    margin-bottom: 30px;
-  }
 }
 
 // Grid units take 100% width, unless a .grid-width class is applied

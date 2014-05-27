@@ -53,6 +53,13 @@ button {
 abbr[title] {
   cursor: help; }
 
+section {
+  margin-bottom: 20px;
+  @include media(tablet) {
+    margin-bottom: $gutter;
+  }
+}
+
 /*
  * 1. Addresses `appearance` set to `searchfield` in Safari 5 and Chrome.
  * 2. Addresses `box-sizing` set to `border-box` in Safari 5 and Chrome
