@@ -6,6 +6,10 @@
   margin: 0 $gutter-half $gutter-half 0;
 }
 
+.button-with-hint {
+  margin-bottom: 0;
+}
+
 .button:focus {
   outline: 3px solid $yellow;
 }

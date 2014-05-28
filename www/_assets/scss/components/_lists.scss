@@ -9,6 +9,12 @@ ul {
   list-style-type: none;
   margin-bottom: 20px;
   padding-left: 0;
+  &.btm-align{
+    margin-bottom: 0;
+    li:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 
 ol {
