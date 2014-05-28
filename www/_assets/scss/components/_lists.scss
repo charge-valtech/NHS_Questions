@@ -32,6 +32,20 @@ ol {
   }
 }
 
+.list-flowing-3cols {
+  list-style-type: none;
+  padding-left: 0;
+  li {
+    @include media(tablet){
+      display: inline-block;
+      margin-right: -4px;
+      vertical-align: top;
+      width: 33.3%;
+    }
+  }
+
+}
+
 ol, ul {
   li {
     margin-bottom: 5px;

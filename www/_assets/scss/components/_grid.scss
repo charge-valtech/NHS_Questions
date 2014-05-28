@@ -9,15 +9,17 @@
   float: left;
   width: 100%;
   // Grid 'inner-block' aligns grid content with header and footer
-  .inner-block {
-    @include media(tablet) {
-      padding: 0 $gutter-half;
-    }
+}
+
+.inner-block {
+  @include media(tablet) {
+    padding: 0 $gutter-half;
   }
-  .inner-block-padr {
-    @include media(tablet) {
-      padding-right: $gutter;
-    }
+}
+
+.inner-block-padr {
+  @include media(tablet) {
+    padding-right: $gutter;
   }
 }
 
