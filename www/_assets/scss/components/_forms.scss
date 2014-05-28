@@ -22,7 +22,7 @@ fieldset { /*Overriding normalize presets*/
 
 
 select {
-  border: 1px solid #dadada;
+  border: 1px solid $border-colour;;
   font-family: inherit;
   font-size: inherit;
   height: 31px;
