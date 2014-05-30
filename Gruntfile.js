@@ -166,7 +166,7 @@ module.exports = function(grunt) {
         }]
       },
       scripts: {
-        src: ['www/apprentice/*.html', 'www/employer/*.html', 'www/*.html'],
+        src: ['www/apprentice/*.html', 'www/trainee/*.html', 'www/employer/*.html', 'www/*.html'],
         overwrite: true,
         replacements: [{
           from: 'scripts.js',
@@ -183,7 +183,7 @@ module.exports = function(grunt) {
       // Specify a number to padcomments
       dist: {
         files: [
-          {expand: true, cwd: 'dist/', src: ['apprentice/*.html', 'employer/*.html', '*.html'], dest: 'dist/', ext: '.html'}
+          {expand: true, cwd: 'dist/', src: ['apprentice/*.html', 'trainee/*.html', 'employer/*.html', '*.html'], dest: 'dist/', ext: '.html'}
         ]
       }
     },
