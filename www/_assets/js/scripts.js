@@ -1882,16 +1882,17 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
     $.jStorage.set('input1Key', $input1);
     $.jStorage.set('input2Key', $input2);
 
-    console.log($index);
-
   });
 
+  function changeSearchInputs() {
+    var resultInput1 = $.jStorage.get('input1Key'),
+        resultInput2 = $.jStorage.get('input2Key');
 
+    $('.trainee-result-input-1').val(resultInput1);
+    $('.trainee-result-input-2').val(resultInput2);
+  }
 
-
-
-
-
+  changeSearchInputs();
 
 });;/*
  *  jQuery Password Strength - v0.0.1
