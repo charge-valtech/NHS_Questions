@@ -112,4 +112,31 @@ $(function() {
       $('.pw-masktoggle').text('Show');
     }
   }
+
+  // ------------ Trainee search mockup ------------ //
+
+  $('.trainee-input').on('change', function(){
+    var $this   = $(this).val(),
+        $input1 = $('.trainee-input-1').val(),
+        $input2 = $('.trainee-input-2').val(),
+        $index  = $.jStorage.index();
+
+    if($this.indexOf('cust') > -1){
+      $('.trainee-searchbtn').attr('href', 'search-results-customer.html');
+    }
+
+    $.jStorage.set('input1Key', $input1);
+    $.jStorage.set('input2Key', $input2);
+
+    console.log($index);
+
+  });
+
+
+
+
+
+
+
+
 });
