@@ -134,6 +134,21 @@ $(function() {
 
   });
 
+  $('.trainee-result-input').on('keyup', function(){
+    var $this   = $(this).val(),
+        $input1 = $('.trainee-result-input-1').val(),
+        $input2 = $('.trainee-result-input-2').val();
+
+    if($this.toLowerCase().indexOf('cust') > -1){
+      $('.update-results-btn').attr('href', 'search-results-customer.html');
+    } else if($this.toLowerCase().indexOf('admin') > -1){
+      $('.update-results-btn').attr('href', 'search-results-admin.html');
+    }
+
+    $.jStorage.set('input1Key', $input1);
+    $.jStorage.set('input2Key', $input2);
+  });
+
   function changeSearchInputs() {
     var resultInput1 = $.jStorage.get('input1Key'),
         resultInput2 = $.jStorage.get('input2Key'),
