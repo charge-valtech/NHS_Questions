@@ -137,7 +137,8 @@ $(function() {
   $('.trainee-result-input').on('keyup', function(){
     var $this   = $(this).val(),
         $input1 = $('.trainee-result-input-1').val(),
-        $input2 = $('.trainee-result-input-2').val();
+        $input2 = $('.trainee-result-input-2').val(),
+        $input3 = $('.trainee-result-input-3').val();
 
     if($this.toLowerCase().indexOf('cust') > -1){
       $('.update-results-btn').attr('href', 'search-results-customer.html');
@@ -147,6 +148,7 @@ $(function() {
 
     $.jStorage.set('input1Key', $input1);
     $.jStorage.set('input2Key', $input2);
+    $.jStorage.set('input3Key', $input3);
   });
 
   function changeSearchInputs() {
@@ -160,5 +162,7 @@ $(function() {
   }
 
   changeSearchInputs();
+  // --------------- Remove for live code -------------- //
+
 
 });
