@@ -79,7 +79,8 @@ module.exports = function(grunt) {
     },
     watch: {
       options: {
-        livereload: true
+        livereload: true,
+        spawn: false
       },
       css: {
         files: ['www/_assets/scss/**/*.scss'],

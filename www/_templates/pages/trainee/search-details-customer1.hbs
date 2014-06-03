@@ -17,66 +17,19 @@ headerTitle: Find a Traineeship
     </div>
   </div>
   <div class="grid grid-1-3">
-    <a href="https://apprenticeshipvacancymatchingservice.lsc.gov.uk/Navms/Forms/Candidate/CandidatesLogin.aspx" class="button button-with-hint">Apply for opportunity</a>
+    <a href="https://apprenticeshipvacancymatchingservice.lsc.gov.uk/Navms/Forms/Candidate/CandidatesLogin.aspx" class="button button-with-hint">Apply</a>
     <p class="copy-16">Closing date: 12 Jun 14</p>
   </div>
 </section>
 
-<section class="section-border">
-  <ul class="list-flowing-3cols">
-    <li class="inner-block-padr">
-      <h2 class="heading-small">
-        <a href="#vacancy-info">1. Opportunity summary</a>
-      </h2>
-      <p>
-        Information about responsibilities and working hours
-      </p>
-    </li>
-
-    <li class="inner-block-padr">
-      <h2 class="heading-small">
-        <a href="#eligible">2. Are you eligible?</a>
-      </h2>
-      <p>
-        Check through this to ensure you qualify for a Traineeship
-      </p>
-    </li>
-
-    <li class="inner-block-padr">
-      <h2 class="heading-small">
-        <a href="#course-info">3. Information for candidate</a>
-      </h2>
-      <p>
-        Includes qualifications, skills and personal qualities required for role
-      </p>
-    </li>
-
-    <li class="inner-block-padr">
-      <h2 class="heading-small">
-        <a href="#provider-info">4. Learning provider</a>
-      </h2>
-      <p>
-        Details of training plans and role of learning provider
-      </p>
-    </li>
-
-    <li class="inner-block-padr">
-      <h2 class="heading-small">
-        <a href="#before-apply">5. Before you apply</a>
-      </h2>
-      <p>
-        What you must do before you apply for the vacancy
-      </p>
-    </li>
-  </ul>
-</section>
+{{> trainee-index }}
 
 <section class="section-border grid-wrapper" id="vacancy-info">
-  <h2 class="heading-large">1. Opportunity summary</h2>
+  <h2 class="heading-large">1. Summary of role</h2>
   <div class="grid grid-2-3">
     <div class="inner-block-padr">
       <div class="text">
-        <p>This Traineeship Opportunity, is unwaged Work Experience as part of an entry to work course</p>
+        <p>This traineeship is unpaid work experience as part of an entry to work course.</p>
 
         <p>Tiverton Pool &amp; Fitness Centre and Lifetime Training are looking for enthusiastic and friendly 16-23 year olds, who want to break into the fitness industry, to join them on a Traineeship. Traineeships are a new government programme designed to give young people the skills and experience needed to secure a job or apprenticeship.</p>
 
@@ -86,27 +39,15 @@ headerTitle: Find a Traineeship
           <li>Work placement (at Tiverton Pool &amp; Fitness Centre) where you’ll gain Industry knowledge and skills specific to the fitness industry</li>
         </ul>
 
-       <p> It’s a great opportunity to get your foot in the door, learn some great skills to help spruce up your CV and impress an employer.</p>
-
         <p>As part of this traineeship you will be working in all areas of the gym, including gaining experience with customers in reception.</p>
-
-        <p>Apply now, to find out more about working in one of the most exciting industries.</p>
-
-        <p>This traineeship work experience is part of an education and training programme that is focused on giving young people the skills and experience that employers are looking for. At its core is work preparation training, English and maths for those who need it, and a high quality work experience placement. </p>
 
       </div>
     </div>
   </div>
   <div class="grid grid-1-3">
-    <!-- <ul class="list-text">
-      <li class="bold-medium">Weekly wage</li>
-      <li>&pound;107.20</li>
-    </ul> -->
     <ul class="list-text">
       <li><h3 class="bold-medium">Working week</h3></li>
       <li>30 hours a week Monday - Friday</li>
-      <!-- <li>Fri: 07:30 - 12:30</li>
-      <li>Total hours per week: 38</li> -->
     </ul>
     <ul class="list-text">
       <li><h3 class="bold-medium">Expected duration</h3></li>
@@ -116,12 +57,6 @@ headerTitle: Find a Traineeship
       <li class="bold-medium">Distance</li>
       <li>3 miles</li>
     </ul>
-      <ul class="list-text">
-        <li>
-          <h3 class="bold-medium">Vacancy type</h3>
-        </li>
-        <li>Traineeship</li>
-      </ul>
     <ul class="list-text">
       <li class="bold-medium">Reference number</li>
       <li>VAC000409315</li>
@@ -132,12 +67,7 @@ headerTitle: Find a Traineeship
 
 <section class="section-border" id="eligible">
   <div class="text">
-    <h2 class="heading-large">2. Are you eligible?</h2>
-    <ol class="list-number">
-      <li>Are you currently not in a job and have little or no relevant Work Experience </li>
-      <li>Are you aged 16-18 and qualified below Level 3 (A level) or 19 to 23 and not yet achieved a Full Level 2 (5 GCSE’s at grade C or above inclusive of Math and English) </li>
-      <li>Think you could be ready for employment or an apprenticeship within 6 months </li>
-    </ol>
+    {{> trainee-eligible }}
   </div>
 </section>
 
@@ -147,10 +77,13 @@ headerTitle: Find a Traineeship
     <div class="inner-block-padr">
       <div class="text">
         <h3 class="heading-medium">Desired skills &amp; qualities</h3>
-        <p>You need to have a keen interest in the health and fitness industry.</p>
-        <p>You must be enthusiastic and able to work well in a team.</p>
+        <ul>
+          <li>Good communication and personal skills.</li>
+          <li>Have a keen interest in the health and fitness industry.</li>
+          <li>Enthusiastic and able to work well in a team.</li>
+        </ul>
         <h3 class="heading-medium">Other information</h3>
-        <p>Consisting of a 12 week programme, the first week is totally guided learning with one of our tutors (Monday –Friday) weeks 2-7 will consist of the student attending the placement work place 3 days a week full time and an additional 2 days a week will be back in the classroom with the tutor, weeks 8-12 will the totally full time in the placement supported with a visit from a lifetime tutor.</p>
+        <p>Consisting of a 12 week programme, the first week is totally guided learning with one of our tutors, weeks 2-7 will you be attending the placement work place 3 days a week full time and an additional 2 days a week will be with the tutor, weeks 8-12 will be full time in the placement supported with a visit from a lifetime tutor.</p>
       </div>
     </div>
   </div>
@@ -206,17 +139,9 @@ headerTitle: Find a Traineeship
 </section>
 
 <section id="before-apply">
-  <h2 class="heading-large">5. Before you apply</h2>
-  <div class="text">
-    <p>You will need to:</p>
-    <ul>
-      <li>complete an application form</li>
-      <li>write a personal statement</li>
-      <li>provide details of your qualifications</li>
-    </ul>
-  </div>
+  {{> trainee-beforeapply }}
   <div class="form-group">
-    <a class="button button-with-hint" href="https://apprenticeshipvacancymatchingservice.lsc.gov.uk/Navms/Forms/Candidate/CandidatesLogin.aspx">Apply for opportunity</a>
+    <a class="button button-with-hint" href="https://apprenticeshipvacancymatchingservice.lsc.gov.uk/Navms/Forms/Candidate/CandidatesLogin.aspx">Apply</a>
     <p class="copy-16">Closing date: 12 Jun 14</p>
     <a class="button-link" href="search-results-admin.html">Back</a>
   </div>
