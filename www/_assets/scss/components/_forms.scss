@@ -79,7 +79,11 @@ select {
   }
   .inline-fixed & {
     clear: none;
-    margin-right: 30px;
+    display: inline-block;
+    float: none;
+    margin-right: -4px;
+    padding-right: $gutter;
+    vertical-align: baseline;
     width: auto;
   }
 }
