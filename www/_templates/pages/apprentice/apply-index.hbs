@@ -30,12 +30,13 @@ headerTitle: Find an Apprenticeship
   </div>
 </fieldset>
 
-<fieldset class="fieldset-with-border">
-  <legend class="heading-large">Education</legend>
-  <div class="form-group">
+<fieldset class="">
+  <legend class="heading-large">Qualifications</legend>
+  <!-- <div class="form-group">
     <label for="school-college" class="form-label">Name of school/college</label>
+    <span class="form-hint">Including the town</span>
     <input type="text" class="form-control" id="school-college">
-  </div>
+  </div> -->
   <div class="form-group">
     <label for="qual-type" class="form-label">Qualification type</label>
     <select id="qual-type">
@@ -50,33 +51,43 @@ headerTitle: Find an Apprenticeship
   <fieldset class="inline-fixed">
     <div class="form-group">
       <label for="subject-grade" class="form-label">Grade</label>
-      <input type="text" class="form-control form-control-small" id="subject-grade" maxlength="3">
-    </div>
-    <div class="form-group">
-      <label for="subject-year" class="form-label">Year attained</label>
-      <input type="text" class="form-control form-control-medium" id="subject-year" maxlength="4">
+      <input type="text" class="form-control form-control-medium" id="subject-grade">
     </div>
   </fieldset>
-  <table>
+  <div class="form-group">
+    <a href="#">Add to list</a>
+  </div>
+  <table class="grid-3-4">
+    <colgroup>
+      <col class="t55">
+      <col class="t35">
+      <col class="t10">
+      <col>
+    </colgroup>
     <thead>
       <tr>
-        <th>Qualification type</th>
-        <th>Subject</th>
+        <th>GCSE subject</th>
         <th>Grade</th>
-        <th>Year attained</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>GCSE</td>
         <td>Maths</td>
         <td>A*</td>
-        <td>2012</td>
+        <td><a href="#">Edit</a></td>
+      </tr>
+      <tr>
+        <td>Science</td>
+        <td>BB (Predicted)</td>
+        <td><a href="#">Edit</a></td>
       </tr>
     </tbody>
   </table>
 </fieldset>
-
+<fieldset>
+  <div class="form-group"></div>
+</fieldset>
 <div class="form-group">
   <a href="apply-preview.html" class="button">Save and continue</a>
   <p>

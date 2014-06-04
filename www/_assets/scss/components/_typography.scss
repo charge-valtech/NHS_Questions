@@ -232,11 +232,11 @@ h4, h5, h6 {
   margin-bottom: 20px;
 }
 
-.copy-16, .text-attribution {
+.copy-16, .subtext {
   @include copy-16;
 }
 
-.text-attribution {
+.subtext {
   clear: both;
   font-style: italic;
 }
