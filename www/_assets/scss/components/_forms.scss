@@ -77,10 +77,15 @@ select {
       width: auto;
     }
   }
+  .inline-fixed & {
+    clear: none;
+    margin-right: 30px;
+    width: auto;
+  }
 }
 
 .form-group-compound {
-  margin-bottom: 10px;
+  margin-bottom: $gutter-half;
 }
 
 // Labels
@@ -89,7 +94,7 @@ select {
 .form-label {
   @include core-19;
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   &.inline {
     @include media(tablet) {
       display: inline-block;
@@ -157,6 +162,14 @@ select {
 
 .form-control-hours {
   width: 4em;
+}
+
+.form-control-small {
+  width: 4em;
+}
+
+.form-control-medium {
+  width: 6em;
 }
 
 .form-control-wage {

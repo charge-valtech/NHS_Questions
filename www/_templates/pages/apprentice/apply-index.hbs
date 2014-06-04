@@ -3,41 +3,84 @@ headerTitle: Find an Apprenticeship
 ---
 
 <h1 class="heading-xlarge">Apply for a vacancy</h1>
-<nav class="progress-indicator progress-indicator-horizontal">
-  <ol aria-label="Progress Steps">
-    <li class="active">
-      <a href="#">Step 1</a>
-    </li>
-    <li>
-      <a href="#">Step 2</a>
-    </li>
-    <li>
-      <a href="#">Step 3</a>
-    </li>
-    <li>
-      <a href="#">Step 4</a>
-    </li>
-    <li>
-      <a href="#">Preview &amp; Submit</a>
-    </li>
-  </ol>
-</nav>
-<br>
-<fieldset>
-  <legend class="heading-large">1. Step 1</legend>
-  <div class="form-group form-group-compound">
-    <label for="first-name" class="form-label">First name</label>
-    <input id="first-name" type="text" class="form-control">
-  </div>
-
+<fieldset class="fieldset-with-border">
+  <legend class="heading-large">Your details</legend>
   <div class="form-group">
-    <label for="last-name" class="form-label">Last name</label>
-    <input id="last-name" type="text" class="form-control">
+    <label for="full-name" class="form-label">Full name</label>
+    <input id="full-name" type="text" class="form-control">
   </div>
+  <div class="form-group date-input">
+    <p class="form-label">Date of birth</p>
+    <div class="form-group form-group-compound">
+      <label class="form-hint" for="date-day2">Day</label>
+      <input type="tel" class="form-control" maxlength="2" id="date-day2">
+    </div>
+    <div class="form-group form-group-compound">
+      <label class="form-hint" for="date-month2">Month</label>
+      <input type="tel" class="form-control" maxlength="2" id="date-month2">
+    </div>
+    <div class="form-group form-group-compound form-group-year">
+      <label class="form-hint" for="date-year2">Year</label>
+      <input type="tel" class="form-control" maxlength="4" id="date-year2">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="address" class="form-label">Address</label>
+    <input id="address" type="text" class="form-control form-control-1-4">
+  </div>
+</fieldset>
+
+<fieldset class="fieldset-with-border">
+  <legend class="heading-large">Education</legend>
+  <div class="form-group">
+    <label for="school-college" class="form-label">Name of school/college</label>
+    <input type="text" class="form-control" id="school-college">
+  </div>
+  <div class="form-group">
+    <label for="qual-type" class="form-label">Qualification type</label>
+    <select id="qual-type">
+      <option value="">Select qualification</option>
+      <option value="">GCSE</option>
+    </select>
+  </div>
+  <div class="form-group form-group-compound">
+    <label for="subject-name" class="form-label">Subject</label>
+    <input type="text" class="form-control" id="subject-name">
+  </div>
+  <fieldset class="inline-fixed">
+    <div class="form-group">
+      <label for="subject-grade" class="form-label">Grade</label>
+      <input type="text" class="form-control form-control-small" id="subject-grade" maxlength="3">
+    </div>
+    <div class="form-group">
+      <label for="subject-year" class="form-label">Year attained</label>
+      <input type="text" class="form-control form-control-medium" id="subject-year" maxlength="4">
+    </div>
+  </fieldset>
+  <table>
+    <thead>
+      <tr>
+        <th>Qualification type</th>
+        <th>Subject</th>
+        <th>Grade</th>
+        <th>Year attained</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>GCSE</td>
+        <td>Maths</td>
+        <td>A*</td>
+        <td>2012</td>
+      </tr>
+    </tbody>
+  </table>
 </fieldset>
 
 <div class="form-group">
   <a href="apply-preview.html" class="button">Save and continue</a>
-  <a href="#" class="button-link">Clear</a>
+  <p>
+    <a href="#" class="button-link">Back</a>
+  </p>
 </div>
 
