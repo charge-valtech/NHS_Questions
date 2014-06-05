@@ -58,11 +58,10 @@ $(function() {
         $qualGrade   = $('#subject-grade').val()
         $isPredicted = $('#qual-predicted').is(':checked'),
         $isPredValue = ($isPredicted ? " (Predicted)" : ""),
-        $tableID     = $('.qualification-table').attr('id'),
         $rowHTML     = '<tr class="tr-qualRow">' +
-                          '<td class="td-qualSubject">' + $qualSubject + '</td>' +
-                          '<td class="td-qualGrade">' + $qualGrade + $isPredValue + '</td>' +
-                          '<td><a href="#" class="qualEdit">Edit</a></td>' +
+                          '<td class="td-qualcell">' + $qualSubject + '</td>' +
+                          '<td class="td-qualcell">' + $qualGrade + $isPredValue + '</td>' +
+                          '<td class="fake-link td-qualEdit">Edit</td>' +
                         '</tr>',
         $emptyTable  = '<div class="qualification-table"' + 'id="' + $qualID + '">' +
                         '<h3 class="heading-small heading-qualType">' + $qualType + '</h3>' +
@@ -101,15 +100,29 @@ $(function() {
       }
     }
 
-
     $('#subject-name').val('');
     $('#subject-grade').val('');
     $('#qual-predicted').prop('checked', false);
 
-    $.jStorage.set('selectedQual', $qualID);
-
     e.preventDefault();
 
+  });
+
+  $('.qualifications-wrapper').on('click', '.td-qualEdit', function(e) {
+    var $this  = $(this),
+        $cells = $this.siblings().attr('class');
+
+    $this.text('Save').addClass('qualSave');
+
+    e.preventDefault();
+  });
+
+  $('.qualifications-wrapper').on('click', '.qualSave', function(e) {
+    var $this = $(this);
+
+    $this.text('Edit').removeClass('qualSave');
+
+    e.preventDefault();
   });
 
 // --------------- Remove for live code -------------- //

@@ -256,7 +256,7 @@ article {
   }
 }
 
-a {
+a, .fake-link {
   color: $link-colour;
   &:active {
     color: $link-active-colour;
@@ -264,6 +264,11 @@ a {
   &:hover {
     color: $link-hover-colour;
   }
+}
+
+.fake-link {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 a[rel="external"] {
