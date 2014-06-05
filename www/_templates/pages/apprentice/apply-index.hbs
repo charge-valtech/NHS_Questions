@@ -30,7 +30,7 @@ headerTitle: Find an Apprenticeship
   </div>
 </fieldset>
 
-<fieldset class="">
+<fieldset class="fieldset-with-border">
   <legend class="heading-large">Qualifications</legend>
   <!-- <div class="form-group">
     <label for="school-college" class="form-label">Name of school/college</label>
@@ -83,10 +83,68 @@ headerTitle: Find an Apprenticeship
       <tbody class="tbody-qual">
       </tbody>
     </table>
+    <p class="copy-16">You can edit the results above</p>
   </div>
 </fieldset>
 <fieldset>
-  <div class="form-group"></div>
+  <legend class="heading-large">Work experience</legend>
+  <div class="enter-qualification clearfix">
+    <div class="form-group form-group-compound">
+      <label for="work-employer" class="form-label">Employer</label>
+      <input type="text" class="form-control" id="work-employer">
+    </div>
+    <div class="form-group form-group-compound">
+      <label for="work-role" class="form-label">Your role</label>
+      <input type="text" class="form-control" id="work-role">
+    </div>
+    <fieldset class="inline-fixed">
+      <div class="form-group">
+        <label for="work-from" class="form-label">From</label>
+        <input type="text" class="form-control form-control-medium" id="work-from">
+      </div>
+      <div class="form-group">
+        <label for="work-to" class="form-label">To</label>
+        <input type="text" class="form-control form-control-medium" id="work-to">
+      </div>
+      <div class="form-group">
+        <input id="work-current" type="checkbox">
+        <label for="work-current">Current</label>
+      </div>
+    </fieldset>
+    <div class="form-group">
+      <a href="#" class="save-qual-btn" id="saveQualification">Add work</a>
+    </div>
+  </div>
+  <div class="work-table">
+    <h3 class="heading-small heading-qualType">Work history</h3>
+    <table class="grid-3-4">
+      <colgroup>
+        <col class="t55">
+        <col class="t35">
+        <col class="t10">
+        <col>
+      </colgroup>
+      <thead>
+        <tr>
+          <th class="th-workEmployer">Employer</th>
+          <th class="th-workRole">Your role</th>
+          <th class="th-workFrom">From</th>
+          <th class="th-workTo">To</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody class="tbody-work">
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td><a href="#">Edit</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="copy-16">You can edit the results above</p>
+  </div>
 </fieldset>
 <div class="form-group">
   <a href="#" class="button">Apply for vacancy</a>

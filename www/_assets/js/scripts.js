@@ -2066,12 +2066,11 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
                         '</table>' +
                       '</div>';
 
-    $('.qualification-table').show().attr('id', $qualID);
-
     if($('.tr-qualRow').length == 0) {
+      $('.qualification-table').show().attr('id', $qualID);
       $('.heading-qualType').html($qualType);
       $('.tbody-qual').html($rowHTML);
-    } else if($('.tr-qualRow').length > 0 && $qualID == $tableID)  {
+    } else {
       $('#' + $tableID).find('.tbody-qual').append($rowHTML);
     }
 
