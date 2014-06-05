@@ -265,7 +265,9 @@ module.exports = function(grunt) {
 
   grunt.registerTask('imageoptim', ['imageoptim']);
 
-  grunt.registerTask('default', ['modernizr', 'jshint', 'concat:dev', 'sass', 'assemble', 'connect', 'watch']);
+  grunt.registerTask('modern', ['modernizr']);
+
+  grunt.registerTask('default', ['jshint', 'concat:dev', 'sass', 'assemble', 'connect', 'watch']);
 
   grunt.registerTask('sync', ['modernizr', 'jshint', 'concat:dev', 'sass', 'assemble', 'browserSync', 'watch']);
 

@@ -51,11 +51,28 @@ $(function() {
 
 // ------------ Apply for vacancy mockup ------------ //
 
-  $('#saveQualification').on('click', function(){
+  $('#saveQualification').on('click', function(e){
     var $qualType    = $('#qual-type').val(),
         $qualSubject = $('#subject-name').val()
         $qualGrade   = $('#subject-grade').val()
-        $isPredicted = $('#qual-predicted').is(':checked');
+        $isPredicted = $('#qual-predicted').is(':checked'),
+        $rowHTML     = '<tr class="tr-qualRow">' +
+                          '<td class="td-qualSubject"></td>' +
+                          '<td class="td-qualGrade"></td>' +
+                          '<td><a href="#" class="qualEdit">Edit</a></td>' +
+                        '</tr>';
+
+    $('.qualification-table').show();
+
+    $('.heading-qualType').html($qualType);
+
+    if($('.tr-qualRow').length == 0) {
+      $('.tbody-qual').html($rowHTML);
+    } else {
+      $($rowHTML).insertAfter('.tr-qualRow:last-child');
+    }
+
+    e.preventDefault();
 
   });
 
