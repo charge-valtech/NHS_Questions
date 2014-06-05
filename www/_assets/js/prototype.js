@@ -64,8 +64,8 @@ $(function() {
                           '<td class="td-qualGrade">' + $qualGrade + $isPredValue + '</td>' +
                           '<td><a href="#" class="qualEdit">Edit</a></td>' +
                         '</tr>',
-        $emptyTable  = '<div class="qualification-table">' +
-                        '<h3 class="heading-small heading-qualType"></h3>' +
+        $emptyTable  = '<div class="qualification-table"' + 'id="' + $qualID + '">' +
+                        '<h3 class="heading-small heading-qualType">' + $qualType + '</h3>' +
                         '<table class="grid-3-4">' +
                           '<colgroup>' +
                             '<col class="t55">' +
@@ -90,13 +90,11 @@ $(function() {
       $('.qualification-table').show().attr('id', $qualID);
       $('.heading-qualType').html($qualType);
       $('.tbody-qual').html($rowHTML);
-    } else {
+    } else if($('.tr-qualRow').length > 0 && $qualID == $tableID) {
       $('#' + $tableID).find('.tbody-qual').append($rowHTML);
+    } else if($qualID !== $tableID) {
+      $('.qualifications-wrapper').append($emptyTable);
     }
-
-    // else if($qualID !== $tableID) {
-    //   $($emptyTable).insertAfter('.qualification-table:last-child');
-    // }
 
     $('#subject-name').val('');
     $('#subject-grade').val('');
