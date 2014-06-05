@@ -2,7 +2,7 @@
 headerTitle: Find an Apprenticeship
 ---
 
-<h1 class="heading-xlarge">Apply for a vacancy</h1>
+<h1 class="heading-xlarge">Apply for vacancy</h1>
 <fieldset class="fieldset-with-border">
   <legend class="heading-large">Your details</legend>
   <div class="form-group">
@@ -37,58 +37,58 @@ headerTitle: Find an Apprenticeship
     <span class="form-hint">Including the town</span>
     <input type="text" class="form-control" id="school-college">
   </div> -->
-  <div class="form-group">
-    <label for="qual-type" class="form-label">Type of qualification</label>
-    <select id="qual-type">
-      <option value="">Select from list</option>
-      <option value="">GCSE</option>
-    </select>
-  </div>
-  <div class="form-group form-group-compound">
-    <label for="subject-name" class="form-label">Subject</label>
-    <input type="text" class="form-control" id="subject-name">
-  </div>
-  <fieldset class="inline-fixed">
+  <div class="enter-qualification">
     <div class="form-group">
-      <label for="subject-grade" class="form-label">Grade</label>
-      <input type="text" class="form-control form-control-medium" id="subject-grade">
+      <label for="qual-type" class="form-label">Type of qualification</label>
+      <select id="qual-type">
+        <option value="">Select from list</option>
+        <option value="GCSE">GCSE</option>
+        <option value="NVQ or SVQ Level 1">NVQ or SVQ Level 1</option>
+      </select>
     </div>
+    <div class="form-group form-group-compound">
+      <label for="subject-name" class="form-label">Subject</label>
+      <input type="text" class="form-control" id="subject-name">
+    </div>
+    <fieldset class="inline-fixed">
+      <div class="form-group">
+        <label for="subject-grade" class="form-label">Grade</label>
+        <input type="text" class="form-control form-control-medium" id="subject-grade">
+      </div>
+      <div class="form-group">
+        <input id="qual-predicted" type="checkbox">
+        <label for="qual-predicted">Predicted?</label>
+      </div>
+    </fieldset>
     <div class="form-group">
-      <input id="predicted" type="checkbox">
-      <label for="predicted">Predicted?</label>
+      <a href="#" class="save-qual-btn" id="saveQualification">Save qualification</a>
     </div>
-  </fieldset>
-  <div class="form-group">
-    <a href="#">Save qualification</a>
   </div>
-  <h3 class="heading-small">GCSE</h3>
-  <table class="grid-3-4">
-    <colgroup>
-      <col class="t55">
-      <col class="t35">
-      <col class="t10">
-      <col>
-    </colgroup>
-    <thead>
-      <tr>
-        <th>Subject</th>
-        <th>Grade</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Maths</td>
-        <td>B</td>
-        <td><a href="#">Edit</a></td>
-      </tr>
-      <tr>
-        <td>Science</td>
-        <td>CC (Predicted)</td>
-        <td><a href="#">Edit</a></td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="qualification-table toggle-content">
+    <h3 class="heading-small"></h3>
+    <table class="grid-3-4">
+      <colgroup>
+        <col class="t55">
+        <col class="t35">
+        <col class="t10">
+        <col>
+      </colgroup>
+      <thead>
+        <tr>
+          <th class="th-qualSubject">Subject</th>
+          <th class="th-qualGrade">Grade</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="tr-qualRow">
+          <td class="td-qualSubject">Maths</td>
+          <td class="td-qualGrade">B</td>
+          <td><a href="#" class="qualEdit">Edit</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </fieldset>
 <fieldset>
   <div class="form-group"></div>
