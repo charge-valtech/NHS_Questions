@@ -56,9 +56,10 @@ $(function() {
         $qualSubject = $('#subject-name').val()
         $qualGrade   = $('#subject-grade').val()
         $isPredicted = $('#qual-predicted').is(':checked'),
+        $isPredValue = ($isPredicted ? " (Predicted)" : ""),
         $rowHTML     = '<tr class="tr-qualRow">' +
-                          '<td class="td-qualSubject"></td>' +
-                          '<td class="td-qualGrade"></td>' +
+                          '<td class="td-qualSubject">' + $qualSubject + '</td>' +
+                          '<td class="td-qualGrade">' + $qualGrade + $isPredValue + '</td>' +
                           '<td><a href="#" class="qualEdit">Edit</a></td>' +
                         '</tr>';
 
