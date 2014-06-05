@@ -29,6 +29,5 @@ aside {
 }
 
 .clearfix {
-  clear: both;
-  display: block;
+  @extend %clearfix;
 }

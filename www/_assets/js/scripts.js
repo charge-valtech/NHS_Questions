@@ -2033,25 +2033,55 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
 
   $('#saveQualification').on('click', function(e){
     var $qualType    = $('#qual-type').val(),
+        $qualID      = $('#qual-type').find(":selected").attr('class'),
         $qualSubject = $('#subject-name').val()
         $qualGrade   = $('#subject-grade').val()
         $isPredicted = $('#qual-predicted').is(':checked'),
         $isPredValue = ($isPredicted ? " (Predicted)" : ""),
+        $tableID     = $('.qualification-table').attr('id'),
         $rowHTML     = '<tr class="tr-qualRow">' +
                           '<td class="td-qualSubject">' + $qualSubject + '</td>' +
                           '<td class="td-qualGrade">' + $qualGrade + $isPredValue + '</td>' +
                           '<td><a href="#" class="qualEdit">Edit</a></td>' +
-                        '</tr>';
+                        '</tr>',
+        $emptyTable  = '<div class="qualification-table">' +
+                        '<h3 class="heading-small heading-qualType"></h3>' +
+                        '<table class="grid-3-4">' +
+                          '<colgroup>' +
+                            '<col class="t55">' +
+                            '<col class="t35">' +
+                            '<col class="t10">' +
+                            '<col>' +
+                          '</colgroup>' +
+                          '<thead>' +
+                            '<tr>' +
+                              '<th class="th-qualSubject">Subject</th>' +
+                              '<th class="th-qualGrade">Grade</th>' +
+                              '<th></th>' +
+                            '</tr>' +
+                          '</thead>' +
+                          '<tbody class="tbody-qual">' +
+                            $rowHTML +
+                          '</tbody>' +
+                        '</table>' +
+                      '</div>';
 
-    $('.qualification-table').show();
-
-    $('.heading-qualType').html($qualType);
+    $('.qualification-table').show().attr('id', $qualID);
 
     if($('.tr-qualRow').length == 0) {
+      $('.heading-qualType').html($qualType);
       $('.tbody-qual').html($rowHTML);
-    } else {
-      $($rowHTML).insertAfter('.tr-qualRow:last-child');
+    } else if($('.tr-qualRow').length > 0 && $qualID == $tableID)  {
+      $('#' + $tableID).find('.tbody-qual').append($rowHTML);
     }
+
+    // else if($qualID !== $tableID) {
+    //   $($emptyTable).insertAfter('.qualification-table:last-child');
+    // }
+
+    $('#subject-name').val('');
+    $('#subject-grade').val('');
+    $('#qual-predicted').prop('checked', false);
 
     e.preventDefault();
 
