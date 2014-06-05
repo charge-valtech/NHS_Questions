@@ -90,15 +90,23 @@ $(function() {
       $('.qualification-table').show().attr('id', $qualID);
       $('.heading-qualType').html($qualType);
       $('.tbody-qual').html($rowHTML);
-    } else if($('.tr-qualRow').length > 0 && $qualID == $tableID) {
-      $('#' + $tableID).find('.tbody-qual').append($rowHTML);
-    } else if($qualID !== $tableID) {
-      $('.qualifications-wrapper').append($emptyTable);
+    } else {
+      $('#' + $qualID).find('.tbody-qual').append($rowHTML);
+      diffQual();
     }
+
+    function diffQual() {
+      if($('#' + $qualID).length == 0) {
+        $('.qualifications-wrapper').append($emptyTable);
+      }
+    }
+
 
     $('#subject-name').val('');
     $('#subject-grade').val('');
     $('#qual-predicted').prop('checked', false);
+
+    $.jStorage.set('selectedQual', $qualID);
 
     e.preventDefault();
 
