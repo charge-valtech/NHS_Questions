@@ -2040,11 +2040,11 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
         $isPredValue = ($isPredicted ? " (Predicted)" : ""),
         $rowHTML     = '<tr class="tr-qualRow">' +
                           '<td class="td-qualcell">' +
-                            '<span>' + $qualSubject + '</span>' +
+                            '<span class="qualSpan">' + $qualSubject + '</span>' +
                             '<input class="qual-input-edit" type="text" value="' + $qualSubject + '">' +
                           '</td>' +
                           '<td class="td-qualcell">' +
-                            '<span>' + $qualGrade + $isPredValue + '</span>' +
+                            '<span class="qualSpan">' + $qualGrade + $isPredValue + '</span>' +
                             '<input class="qual-input-edit" type="text" value="' + $qualGrade + '">' +
                           '</td>' +
                           '<td class="fake-link td-qualEdit">Edit</td>' +
@@ -2108,11 +2108,22 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
   });
 
   $('.qualifications-wrapper').on('click', '.qualSave', function(e) {
-    var $this = $(this);
+    var $this       = $(this),
+        $qualSpans  = $this.siblings().find('span'),
+        $editBoxes  = $this.siblings().find('.qual-input-edit');
 
     $this.text('Edit').removeClass('qualSave');
 
+    $qualSpans.show();
+    $editBoxes.hide();
+
     e.preventDefault();
+  });
+
+  $('.qualifications-wrapper').on('keyup', '.qual-input-edit', function() {
+    var $thisVal = $(this).val();
+
+    $(this).prev('.qualSpan').text($thisVal);
   });
 
 // --------------- Remove for live code -------------- //
