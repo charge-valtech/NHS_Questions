@@ -59,8 +59,14 @@ $(function() {
         $isPredicted = $('#qual-predicted').is(':checked'),
         $isPredValue = ($isPredicted ? " (Predicted)" : ""),
         $rowHTML     = '<tr class="tr-qualRow">' +
-                          '<td class="td-qualcell">' + $qualSubject + '</td>' +
-                          '<td class="td-qualcell">' + $qualGrade + $isPredValue + '</td>' +
+                          '<td class="td-qualcell">' +
+                            '<span>' + $qualSubject + '</span>' +
+                            '<input class="qual-input-edit" type="text" value="' + $qualSubject + '">' +
+                          '</td>' +
+                          '<td class="td-qualcell">' +
+                            '<span>' + $qualGrade + $isPredValue + '</span>' +
+                            '<input class="qual-input-edit" type="text" value="' + $qualGrade + '">' +
+                          '</td>' +
                           '<td class="fake-link td-qualEdit">Edit</td>' +
                         '</tr>',
         $emptyTable  = '<div class="qualification-table"' + 'id="' + $qualID + '">' +
@@ -109,10 +115,14 @@ $(function() {
   });
 
   $('.qualifications-wrapper').on('click', '.td-qualEdit', function(e) {
-    var $this  = $(this),
-        $cells = $this.siblings().attr('class');
+    var $this      = $(this),
+        $qualSpans = $this.siblings().find('span'),
+        $editBoxes = $this.siblings().find('.qual-input-edit');
 
     $this.text('Save').addClass('qualSave');
+
+    $qualSpans.hide();
+    $editBoxes.show();
 
     e.preventDefault();
   });
