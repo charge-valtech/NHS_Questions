@@ -9,7 +9,7 @@ headerTitle: Find an Apprenticeship
     <label for="full-name" class="form-label">Full name</label>
     <input id="full-name" type="text" class="form-control">
   </div>
-  <div class="form-group date-input">
+  <div class="form-group form-group-compound date-input">
     <p class="form-label">Date of birth</p>
     <div class="form-group form-group-compound">
       <label class="form-hint" for="date-day2">Day</label>
@@ -24,9 +24,16 @@ headerTitle: Find an Apprenticeship
       <input type="tel" class="form-control" maxlength="4" id="date-year2">
     </div>
   </div>
+  <div class="form-group form-group-compound">
+    <label for="postcode" class="form-label">Post code</label>
+    <input id="postcode" type="text" class="form-control form-control-1-4 ">
+  </div>
   <div class="form-group">
-    <label for="address" class="form-label">Address</label>
-    <input id="address" type="text" class="form-control form-control-1-4">
+    <label class="form-label" for="select-address">Select address</label>
+    <select name="" id="select-address">
+      <option value="">Choose from list</option>
+      <option value="">2 Scarth Road</option>
+    </select>
   </div>
 </fieldset>
 
