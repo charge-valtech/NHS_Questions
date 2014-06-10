@@ -2034,8 +2034,9 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
   $('#saveQualification').on('click', function(e){
     var $qualType    = $('#qual-type').val(),
         $qualID      = $('#qual-type').find(":selected").attr('class'),
-        $qualSubject = $('#subject-name').val()
-        $qualGrade   = $('#subject-grade').val()
+        $qualSubject = $('#subject-name').val(),
+        $qualGrade   = $('#subject-grade').val(),
+        $qualYear   = $('#subject-year').val(),
         $isPredicted = $('#qual-predicted').is(':checked'),
         $isPredValue = ($isPredicted ? " (Predicted)" : ""),
         $rowHTML     = '<tr class="tr-qualRow">' +
@@ -2047,14 +2048,19 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
                             '<span class="qualSpan">' + $qualGrade + $isPredValue + '</span>' +
                             '<input class="qual-input-edit" type="text" value="' + $qualGrade + '">' +
                           '</td>' +
+                          '<td class="td-qualcell">' +
+                            '<span class="qualSpan">' + $qualYear + '</span>' +
+                            '<input class="qual-input-edit" type="text" value="' + $qualYear + '">' +
+                          '</td>' +
                           '<td class="fake-link td-qualEdit">Edit</td>' +
                         '</tr>',
         $emptyTable  = '<div class="qualification-table"' + 'id="' + $qualID + '">' +
                         '<h3 class="heading-small heading-qualType">' + $qualType + '</h3>' +
                         '<table class="grid-3-4">' +
                           '<colgroup>' +
-                            '<col class="t55">' +
-                            '<col class="t35">' +
+                            '<col class="t40">' +
+                            '<col class="t25">' +
+                            '<col class="t25">' +
                             '<col class="t10">' +
                             '<col>' +
                           '</colgroup>' +
@@ -2062,6 +2068,7 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
                             '<tr>' +
                               '<th class="th-qualSubject">Subject</th>' +
                               '<th class="th-qualGrade">Grade</th>' +
+                              '<th class="th-qualYear">Year</th>' +
                               '<th></th>' +
                             '</tr>' +
                           '</thead>' +
@@ -2088,6 +2095,7 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
 
     $('#subject-name').val('');
     $('#subject-grade').val('');
+    $('#subject-year').val('');
     $('#qual-predicted').prop('checked', false);
 
     e.preventDefault();
