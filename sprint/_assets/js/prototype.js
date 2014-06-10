@@ -61,16 +61,16 @@ $(function() {
         $isPredValue = ($isPredicted ? " (Predicted)" : ""),
         $rowHTML     = '<tr class="tr-qualRow">' +
                           '<td class="td-qualcell">' +
-                            '<span class="qualSpan">' + $qualSubject + '</span>' +
                             '<input class="form-control qual-input-edit" type="text" value="' + $qualSubject + '">' +
+                            '<span class="qualSpan">' + $qualSubject + '</span>' +
                           '</td>' +
                           '<td class="td-qualcell">' +
-                            '<span class="qualSpan">' + $qualGrade + $isPredValue + '</span>' +
                             '<input class="form-control qual-input-edit" type="text" value="' + $qualGrade + '">' +
+                            '<span class="qualSpan">' + $qualGrade + $isPredValue + '</span>' +
                           '</td>' +
                           '<td class="td-qualcell">' +
-                            '<span class="qualSpan">' + $qualYear + '</span>' +
                             '<input class="form-control qual-input-edit" type="text" value="' + $qualYear + '">' +
+                            '<span class="qualSpan">' + $qualYear + '</span>' +
                           '</td>' +
                           '<td class="fake-link td-qualEdit">Edit</td>' +
                         '</tr>',
@@ -151,7 +151,7 @@ $(function() {
   $('.qualifications-wrapper').on('keyup', '.qual-input-edit', function() {
     var $thisVal = $(this).val();
 
-    $(this).prev('.qualSpan').text($thisVal);
+    $(this).next('.qualSpan').text($thisVal);
   });
 
 // ------------ Work experience entry ------------ //
@@ -169,6 +169,7 @@ $('#addWorkBtn').on('click', function(e) {
                           '<span class="subtitle">'+ $workFrom + ' - ' + $workTo + $isCurrValue +'</span>' +
                         '</div>' +
                         '<p class="copy-16">'+ $workRole +'</p>' +
+                        '<p class="copy-16"><a href="#" class="work-delete">Delete</a></p>' +
                       '</div>';
 
   $('.work-history-wrapper').append($historyHTML);
@@ -188,6 +189,12 @@ $('#addWorkBtn').on('click', function(e) {
 $('#work-current').click(function() {
   $('#work-to').prop('disabled', $(this).prop('checked'));
   $('#work-to').parent().toggleClass('disabled', $(this).prop('checked'));
+});
+
+$('.work-history-wrapper').on('click', '.work-delete', function(e) {
+  $(this).closest('.work-history').remove();
+
+  e.preventDefault();
 });
 
 // --------------- Remove for live code -------------- //

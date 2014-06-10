@@ -72,9 +72,18 @@
       <input type="tel" class="form-control" maxlength="4" id="date-year2">
     </div>
   </div>
+  <div class="form-group">
+    <label for="email-address" class="form-label">Email address</label>
+    <input type="text" id="email-address" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="tel-number" class="form-label">Telephone</label>
+    <input type="text" class="form-control form-control-1-3">
+  </div>
   <div class="form-group form-group-compound">
-    <label for="postcode" class="form-label">Post code</label>
-    <input id="postcode" type="text" class="form-control form-control-1-4 ">
+    <label for="address" class="form-label">Address</label>
+    <span class="form-hint">Post code</span>
+    <input id="address" type="text" class="form-control form-control-1-4 ">
   </div>
   <div class="form-group">
     <label class="form-label" for="select-address">Select address</label>
@@ -86,12 +95,19 @@
 </fieldset>
 
 <fieldset class="fieldset-with-border">
-  <legend class="heading-large">Qualifications</legend>
-  <!-- <div class="form-group">
+  <legend class="heading-large">Education</legend>
+  <div class="form-group">
     <label for="school-college" class="form-label">Name of school/college</label>
-    <span class="form-hint">Including the town</span>
     <input type="text" class="form-control" id="school-college">
-  </div> -->
+  </div>
+  <div class="form-group">
+    <label for="school-town" class="form-label">Town or city</label>
+    <input type="text" class="form-control" id="school-town">
+  </div>
+</fieldset>
+
+<fieldset class="fieldset-with-border">
+  <legend class="heading-large">Qualifications</legend>
   <div class="enter-qualification clearfix">
     <div class="form-group">
       <label for="qual-type" class="form-label">Type of qualification</label>
@@ -149,7 +165,8 @@
     </div>
   </div>
 </fieldset>
-<fieldset>
+
+<fieldset class="fieldset-with-border">
   <legend class="heading-large">Work experience</legend>
   <div class="enter-work clearfix">
     <div class="form-group form-group-compound">
@@ -181,12 +198,18 @@
   <div class="work-history-wrapper">
   </div>
 </fieldset>
-<div class="form-group">
-  <a href="#" class="button">Apply for vacancy</a>
-  <p>
-    <a href="#" class="button-link">Back</a>
-  </p>
-</div>
+
+<fieldset>
+  <legend class="heading-large">Before you apply</legend>
+  <p>Check you've completed the form properly</p>
+  <div class="form-group">
+    <a href="#" class="button">Apply</a>
+    <p>
+      <a href="#" class="button-link">Back</a>
+    </p>
+  </div>
+</fieldset>
+
 
 
     </main>
