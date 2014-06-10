@@ -177,7 +177,10 @@ select {
 }
 
 .form-control-large {
-  width: 8em;
+  width: 7em;
+  @include media(tablet) {
+    width: 8em;
+  }
 }
 
 .form-control-wage {
