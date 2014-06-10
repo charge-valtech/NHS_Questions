@@ -157,10 +157,10 @@
       <input type="text" class="form-control" id="work-employer">
     </div>
     <div class="form-group form-group-compound">
-      <label for="work-role" class="form-label">Your role</label>
-      <input type="text" class="form-control" id="work-role">
+      <label for="work-role" class="form-label">Describe your role</label>
+      <textarea type="text" class="form-control" id="work-role" maxlength="140"></textarea>
     </div>
-    <fieldset class="inline-fixed">
+    <div class="inline-fixed">
       <div class="form-group">
         <label for="work-from" class="form-label">From</label>
         <input type="text" class="form-control form-control-large" id="work-from">
@@ -173,28 +173,12 @@
         <input id="work-current" type="checkbox">
         <label for="work-current">Current</label>
       </div>
-    </fieldset>
+    </div>
     <div class="form-group">
-      <a href="#" class="save-work-btn">Add work</a>
+      <a href="#" class="save-work-btn" id="addWorkBtn">Add work</a>
     </div>
   </div>
-  <div class="work-history">
-    <div class="hgroup-small">
-      <h3 class="heading-small">Boots chemist</h4>
-      <span class="subtitle">May 2013 - September 2013</span>
-    </div>
-    <div class="text">
-      <p class="copy-16">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, soluta vel dicta maxime atque tempora debitis omnis molestiae hic laboriosam?</p>
-    </div>
-  </div>
-  <div class="work-history">
-    <div class="hgroup-small">
-      <h3 class="heading-small">Snips hairdressers</h4>
-      <span class="subtitle">September 2013 - Current</span>
-    </div>
-    <div class="text">
-      <p class="copy-16">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, soluta vel dicta maxime atque tempora debitis omnis molestiae hic laboriosam?</p>
-    </div>
+  <div class="work-history-wrapper">
   </div>
 </fieldset>
 <div class="form-group">

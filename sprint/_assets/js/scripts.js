@@ -2042,15 +2042,15 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
         $rowHTML     = '<tr class="tr-qualRow">' +
                           '<td class="td-qualcell">' +
                             '<span class="qualSpan">' + $qualSubject + '</span>' +
-                            '<input class="qual-input-edit" type="text" value="' + $qualSubject + '">' +
+                            '<input class="form-control qual-input-edit" type="text" value="' + $qualSubject + '">' +
                           '</td>' +
                           '<td class="td-qualcell">' +
                             '<span class="qualSpan">' + $qualGrade + $isPredValue + '</span>' +
-                            '<input class="qual-input-edit" type="text" value="' + $qualGrade + '">' +
+                            '<input class="form-control qual-input-edit" type="text" value="' + $qualGrade + '">' +
                           '</td>' +
                           '<td class="td-qualcell">' +
                             '<span class="qualSpan">' + $qualYear + '</span>' +
-                            '<input class="qual-input-edit" type="text" value="' + $qualYear + '">' +
+                            '<input class="form-control qual-input-edit" type="text" value="' + $qualYear + '">' +
                           '</td>' +
                           '<td class="fake-link td-qualEdit">Edit</td>' +
                         '</tr>',
@@ -2133,6 +2133,42 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
 
     $(this).prev('.qualSpan').text($thisVal);
   });
+
+// ------------ Work experience entry ------------ //
+
+$('#addWorkBtn').on('click', function(e) {
+  var $workEmployer = $('#work-employer').val(),
+      $workRole     = $('#work-role').val(),
+      $workFrom     = $('#work-from').val(),
+      $workTo       = $('#work-to').val(),
+      $isCurrent    = $('#work-current').is(':checked'),
+      $isCurrValue  = ($isCurrent ? "Current" : ""),
+      $historyHTML  = '<div class="work-history text">' +
+                        '<div class="hgroup-small">' +
+                          '<h3 class="heading-small heading-with-border">'+ $workEmployer +'</h4>' +
+                          '<span class="subtitle">'+ $workFrom + ' - ' + $workTo + $isCurrValue +'</span>' +
+                        '</div>' +
+                        '<p class="copy-16">'+ $workRole +'</p>' +
+                      '</div>';
+
+  $('.work-history-wrapper').append($historyHTML);
+
+  $('#work-employer').val('');
+  $('#work-role').val('');
+  $('#work-from').val('');
+  $('#work-to').val('');
+  $('#work-current').prop('checked', false);
+  $('#work-to').parent().removeClass('disabled');
+  $('#work-to').prop('disabled', false);
+
+  e.preventDefault();
+
+});
+
+$('#work-current').click(function() {
+  $('#work-to').prop('disabled', $(this).prop('checked'));
+  $('#work-to').parent().toggleClass('disabled', $(this).prop('checked'));
+});
 
 // --------------- Remove for live code -------------- //
 });
