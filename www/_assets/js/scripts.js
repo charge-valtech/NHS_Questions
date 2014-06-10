@@ -2149,6 +2149,7 @@ $('#addWorkBtn').on('click', function(e) {
                           '<span class="subtitle">'+ $workFrom + ' - ' + $workTo + $isCurrValue +'</span>' +
                         '</div>' +
                         '<p class="copy-16">'+ $workRole +'</p>' +
+                        '<p class="copy-16"><a href="#" class="work-delete">Delete</a></p>' +
                       '</div>';
 
   $('.work-history-wrapper').append($historyHTML);
@@ -2168,6 +2169,12 @@ $('#addWorkBtn').on('click', function(e) {
 $('#work-current').click(function() {
   $('#work-to').prop('disabled', $(this).prop('checked'));
   $('#work-to').parent().toggleClass('disabled', $(this).prop('checked'));
+});
+
+$('.work-history-wrapper').on('click', '.work-delete', function(e) {
+  $(this).closest('.work-history').remove();
+
+  e.preventDefault();
 });
 
 // --------------- Remove for live code -------------- //
