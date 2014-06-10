@@ -161,10 +161,12 @@ $('#addWorkBtn').on('click', function(e) {
       $workRole     = $('#work-role').val(),
       $workFrom     = $('#work-from').val(),
       $workTo       = $('#work-to').val(),
+      $isCurrent    = $('#work-current').is(':checked'),
+      $isCurrValue  = ($isCurrent ? "Current" : ""),
       $historyHTML  = '<div class="work-history text">' +
                         '<div class="hgroup-small">' +
                           '<h3 class="heading-small heading-with-border">'+ $workEmployer +'</h4>' +
-                          '<span class="subtitle">'+ $workFrom + ' - ' + $workTo +'</span>' +
+                          '<span class="subtitle">'+ $workFrom + ' - ' + $workTo + $isCurrValue +'</span>' +
                         '</div>' +
                         '<p class="copy-16">'+ $workRole +'</p>' +
                       '</div>';
@@ -176,12 +178,17 @@ $('#addWorkBtn').on('click', function(e) {
   $('#work-from').val('');
   $('#work-to').val('');
   $('#work-current').prop('checked', false);
+  $('#work-to').parent().removeClass('disabled');
+  $('#work-to').prop('disabled', false);
 
   e.preventDefault();
 
 });
 
-
+$('#work-current').click(function() {
+  $('#work-to').prop('disabled', $(this).prop('checked'));
+  $('#work-to').parent().toggleClass('disabled', $(this).prop('checked'));
+});
 
 // --------------- Remove for live code -------------- //
 });
