@@ -112,10 +112,16 @@ module.exports = function(grunt) {
           ]
         }
       },
-      demo: {
+      beta: {
         files: [
-          {cwd: 'sprint/', src: ['**/*'], dest: 'demo/'}
-        ]
+          {cwd: 'sprint/_assets/', src: ['**/*'], dest: '_beta-sln/Beta/src/SFA.Apprenticeships.Web.Candidate/Content/_assets/'},
+          {cwd: 'sprint/_assets/', src: ['**/*'], dest: '_beta-sln/Beta/src/SFA.Apprenticeships.Web.Employer/Content/_assets/'}
+        ],
+        options: {
+          ignore: [
+            'sprint/_assets/video{,/**/*}'
+          ]
+        }
       },
       dist: {
         files: [
@@ -273,6 +279,8 @@ module.exports = function(grunt) {
   grunt.registerTask('sprint', ['uglify:dist', 'replace:map', 'clean:sprint', 'replace:scripts', 'copyto:sprint', 'prettify:sprint']);
 
   grunt.registerTask('dist', ['uglify:dist', 'replace:map', 'clean:dist', 'replace:scripts', 'copyto:dist', 'prettify:dist']);
+
+  grunt.registerTask('beta', ['copyto:beta']);
 
 
 };
