@@ -103,6 +103,9 @@ module.exports = function(grunt) {
         options: {
           ignore: [
             'www/_assets/scss{,/**/*}',
+            'www/_assets/js{,/**/*}',
+            '!www/_assets/js/vendor{,/**/*}',
+            '!www/_assets/js/scripts.min.js',
             'www/_templates{,/**/*}',
             'www/z-backups{,/**/*}',
             'www/_assets/css/*.map'
@@ -132,15 +135,6 @@ module.exports = function(grunt) {
             'www/z-backups{,/**/*}'
           ]
         }
-      },
-      fe_toolkit: {
-        files: [
-          {
-            cwd: 'node_modules/govuk_frontend_toolkit/govuk_frontend_toolkit/stylesheets',
-            src: ['**/*'],
-            dest: 'www/_assets/scss/fe_toolkit/'
-          }
-        ]
       }
     },
     clean: {
@@ -185,6 +179,11 @@ module.exports = function(grunt) {
       dist: {
         files: [
           {expand: true, cwd: 'dist/', src: ['apprentice/*.html', 'trainee/*.html', 'employer/*.html', '*.html'], dest: 'dist/', ext: '.html'}
+        ]
+      },
+      sprint: {
+        files: [
+          {expand: true, cwd: 'sprint/', src: ['apprentice/*.html', 'trainee/*.html', 'employer/*.html', '*.html'], dest: 'sprint/', ext: '.html'}
         ]
       }
     },
@@ -271,9 +270,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('sync', ['modernizr', 'jshint', 'concat:dev', 'sass', 'assemble', 'browserSync', 'watch']);
 
-  grunt.registerTask('sprint', ['replace:map', 'clean:sprint', 'copyto:sprint']);
-
-  grunt.registerTask('demo', ['clean:demo', 'copyto:demo']);
+  grunt.registerTask('sprint', ['uglify:dist', 'replace:map', 'clean:sprint', 'replace:scripts', 'copyto:sprint', 'prettify:sprint']);
 
   grunt.registerTask('dist', ['uglify:dist', 'replace:map', 'clean:dist', 'replace:scripts', 'copyto:dist', 'prettify:dist']);
 
