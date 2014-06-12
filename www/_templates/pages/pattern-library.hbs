@@ -1,0 +1,157 @@
+---
+headerTitle: SFA Pattern library
+---
+
+<div class="hgroup">
+  <h1 class="heading-xlarge">Pattern library</h1>
+  <h2 class="subtitle">UI Components and states</h2>
+</div>
+
+<fieldset class="fieldset-with-border">
+  <legend class="heading-large">
+    Buttons
+  </legend>
+  <div class="form-group">
+    <button class="button">Primary</button>
+    <button class="button-link">Secondary</button>
+    <div id="get-started" class="get-started">
+      <a href="#" rel="" data-transaction-slug="" class="button">Start now</a>
+        <span class="destination"> to do something</span>
+    </div>
+  </div>
+</fieldset>
+
+<fieldset class="fieldset-with-border">
+  <legend class="heading-large">Form controls</legend>
+  <div class="form-group">
+    <label for="normal-label" class="form-label">Label for input</label>
+    <input type="text" id="normal-label" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="hint-label" class="form-label">Label with a hint</label>
+    <span class="form-hint">I'm the hint ;-)</span>
+    <input type="text" id="hint-label" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="normal-textarea" class="form-label">Label for textarea</label>
+    <textarea type="text" id="normal-textarea" class="form-control"></textarea>
+  </div>
+
+  <div class="form-group form-group-compound date-input">
+    <p class="form-label">Date of birth</p>
+    <div class="form-group form-group-compound">
+      <label class="form-hint" for="date-day2">Day</label>
+      <input type="tel" class="form-control" maxlength="2" id="date-day2">
+    </div>
+    <div class="form-group form-group-compound">
+      <label class="form-hint" for="date-month2">Month</label>
+      <input type="tel" class="form-control" maxlength="2" id="date-month2">
+    </div>
+    <div class="form-group form-group-compound form-group-year">
+      <label class="form-hint" for="date-year2">Year</label>
+      <input type="tel" class="form-control" maxlength="4" id="date-year2">
+    </div>
+  </div>
+
+  <div class="inline-fixed">
+    <div class="form-group">
+      <label for="subject-grade" class="form-label">Inline</label>
+      <input type="text" class="form-control form-control-medium" id="subject-grade">
+    </div>
+    <div class="form-group">
+      <label for="subject-year" class="form-label">Another</label>
+      <input maxlength="4" type="tel" class="form-control form-control-medium" id="subject-year">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="select-example" class="form-label">Select dropdown</label>
+    <select name="" id="select-example">
+      <option value="">Select from a list</option>
+      <option value="">I'm in a list</option>
+    </select>
+  </div>
+</fieldset>
+
+<fieldset class="fieldset-with-border">
+  <legend class="heading-large">Radios and checkboxes</legend>
+  <div class="form-group inline">
+    <p class="form-label">Chunky radios inline</p>
+    <label for="pref-email" class="block-label">
+      <input name="preference" type="radio" id="pref-email">Email
+    </label>
+    <label for="pref-tel" class="block-label">
+      <input name="preference" type="radio" id="pref-tel">Telephone
+    </label>
+    <label for="pref-post" class="block-label">
+      <input name="preference" type="radio" id="pref-post">Post
+    </label>
+  </div>
+
+  <p>Chunky checkboxes</p>
+  <div class="form-group">
+    <label for="weekday1" class="block-label"><input id="weekday1" type="checkbox">Monday</label>
+    <label for="weekday2" class="block-label"><input id="weekday2" type="checkbox">Tuesday</label>
+    <label for="weekday3" class="block-label"><input id="weekday3" type="checkbox">Wednesday</label>
+    <label for="weekday4" class="block-label"><input id="weekday4" type="checkbox">Thursday</label>
+    <label for="weekday5" class="block-label"><input id="weekday5" type="checkbox">Friday</label>
+  </div>
+
+</fieldset>
+
+<fieldset class="fieldset-with-border">
+  <legend class="heading-large">Navigation</legend>
+  <h3 class="heading-medium">Breadcrumbs</h3>
+  <nav role="navigation" class="breadcrumbs">
+    <ul>
+      <li class="breadcrumbs__item">
+        <a href="#">Home</a>
+      </li>
+      <li class="breadcrumbs__item">
+        <a href="#">Somewhere</a>
+      </li>
+      <li class="breadcrumbs__item">
+        <a href="#">Somewhere else</a>
+      </li>
+    </ul>
+  </nav>
+  <br>
+
+  <h3 class="heading-medium">Progress indicator</h3>
+  <nav class="progress-indicator progress-indicator-horizontal">
+    <ol aria-label="Progress Steps">
+      <li class="active">
+        <a href="#">Step 1</a>
+      </li>
+      <li>
+        <a href="#">Step 2</a>
+      </li>
+      <li>
+        <a href="#">Step 3</a>
+      </li>
+      <li>
+        <a href="#">Step 4</a>
+      </li>
+      <li>
+        <a href="#">Preview &amp; Submit</a>
+      </li>
+    </ol>
+  </nav>
+  <br>
+
+  <div class="text">
+    <h3 class="heading-medium">Bottom of page navigation</h3>
+    <nav role="navigation" class="page-navigation">
+      <a class="page-navigation__btn previous" href="#" rel="previous">
+        <i class="arrow-button"></i>
+        Previous page
+      </a>
+      <a class="page-navigation__btn next" href="#" rel="next">
+        <i class="arrow-button"></i>
+        Next page
+      </a>
+    </nav>
+  </div>
+</fieldset>
