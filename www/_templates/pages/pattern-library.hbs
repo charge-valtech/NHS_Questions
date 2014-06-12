@@ -7,9 +7,19 @@ headerTitle: SFA Pattern library
   <h2 class="subtitle">UI Components and states</h2>
 </div>
 
+<ol class="list-number list-flowing">
+  <li><a href="#buttons">Buttons/Links</a></li>
+  <li><a href="#formControls">Form controls</a></li>
+  <li><a href="#radioCheckboxes">Radios and checkboxes</a></li>
+  <li><a href="#navigation">Navigation</a></li>
+  <li><a href="#typography">Typography</a></li>
+  <li><a href="#gridSystem">Grid system</a></li>
+  <li><a href="#tables">Tabular data</a></li>
+</ol>
+
 <fieldset class="fieldset-with-border">
-  <legend class="heading-large">
-    Buttons
+  <legend id="buttons" class="heading-large">
+    Buttons/Links
   </legend>
   <div class="form-group">
     <button class="button">Primary</button>
@@ -19,10 +29,16 @@ headerTitle: SFA Pattern library
         <span class="destination"> to do something</span>
     </div>
   </div>
+  <p>
+    <a href="#">Normal link</a>
+  </p>
+  <p>
+    <a href="www.google.com" rel="external">External link</a>
+  </p>
 </fieldset>
 
 <fieldset class="fieldset-with-border">
-  <legend class="heading-large">Form controls</legend>
+  <legend id="formControls" class="heading-large">Form controls</legend>
   <div class="form-group">
     <label for="normal-label" class="form-label">Label for input</label>
     <input type="text" id="normal-label" class="form-control">
@@ -76,7 +92,7 @@ headerTitle: SFA Pattern library
 </fieldset>
 
 <fieldset class="fieldset-with-border">
-  <legend class="heading-large">Radios and checkboxes</legend>
+  <legend id="radioCheckboxes" class="heading-large">Radios and checkboxes</legend>
   <div class="form-group inline">
     <p class="form-label">Chunky radios inline</p>
     <label for="pref-email" class="block-label">
@@ -102,7 +118,7 @@ headerTitle: SFA Pattern library
 </fieldset>
 
 <fieldset class="fieldset-with-border">
-  <legend class="heading-large">Navigation</legend>
+  <legend id="navigation" class="heading-large">Navigation</legend>
   <h3 class="heading-medium">Breadcrumbs</h3>
   <nav role="navigation" class="breadcrumbs">
     <ul>
@@ -155,3 +171,109 @@ headerTitle: SFA Pattern library
     </nav>
   </div>
 </fieldset>
+
+<fieldset class="fieldset-with-border">
+  <legend id="typography" class="heading-large">Typography</legend>
+  <h1 class="heading-xlarge">Heading 1 - X Large</h1>
+  <h2 class="heading-large">Heading 2 - Large</h2>
+  <h3 class="heading-medium">Heading 3 - Medium</h3>
+  <h4 class="heading-small">Heading 4 - Small</h4>
+  <p class="lead">Lead text - 24px</p>
+  <p class="text">
+    Normal copy text is 19px and has a maximum width. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, quibusdam, fugiat, blanditiis enim consequatur repellat nisi reiciendis hic voluptatibus optio magni doloribus velit eveniet quidem iure cumque sequi dignissimos ab?
+  </p>
+  <p class="copy-16">Smaller text can be used and will be 16px</p>
+</fieldset>
+
+<fieldset class="fieldset-with-border">
+  <legend class="heading-large">Grid system</legend>
+  <div class="grid-wrapper">
+    <div class="grid grid-1-2">
+      <div class="inner-block-padr">
+        <p>Half width - 1/2</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, quibusdam, fugiat, blanditiis enim consequatur repellat nisi reiciendis hic voluptatibus optio magni doloribus velit eveniet quidem iure cumque sequi dignissimos ab?</p>
+      </div>
+    </div>
+    <div class="grid grid-1-2">
+      <div class="inner-block-padr">
+        <p>Half width - 1/2</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, quibusdam, fugiat, blanditiis enim consequatur repellat nisi reiciendis hic voluptatibus optio magni doloribus velit eveniet quidem iure cumque sequi dignissimos ab?</p>
+      </div>
+    </div>
+  </div>
+  <div class="grid-wrapper">
+    <div class="grid grid-1-3">
+      <div class="inner-block-padr">
+        <p>Third width - 1/3</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, quibusdam, fugiat, blanditiis enim consequatur repellat nisi reiciendis hic voluptatibus optio magni doloribus velit eveniet quidem iure cumque sequi dignissimos ab?</p>
+      </div>
+    </div>
+    <div class="grid grid-1-3">
+      <div class="inner-block-padr">
+        <p>Third width - 1/3</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, quibusdam, fugiat, blanditiis enim consequatur repellat nisi reiciendis hic voluptatibus optio magni doloribus velit eveniet quidem iure cumque sequi dignissimos ab?</p>
+      </div>
+    </div>
+    <div class="grid grid-1-3">
+      <div class="inner-block-padr">
+        <p>Third width - 1/3</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, quibusdam, fugiat, blanditiis enim consequatur repellat nisi reiciendis hic voluptatibus optio magni doloribus velit eveniet quidem iure cumque sequi dignissimos ab?</p>
+      </div>
+    </div>
+  </div>
+  <div class="grid-wrapper">
+    <div class="grid grid-2-3">
+      <div class="inner-block-padr">
+        <p>Two third width - 2/3</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, quibusdam, fugiat, blanditiis enim consequatur repellat nisi reiciendis hic voluptatibus optio magni doloribus velit eveniet quidem iure cumque sequi dignissimos ab?</p>
+      </div>
+    </div>
+    <div class="grid grid-1-3">
+      <div class="inner-block-padr">
+        <p>Third width - 1/3</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, quibusdam, fugiat, blanditiis enim consequatur repellat nisi reiciendis hic voluptatibus optio magni doloribus velit eveniet quidem iure cumque sequi dignissimos ab?</p>
+      </div>
+    </div>
+  </div>
+  <div class="grid-wrapper">
+    <div class="grid grid-1-4">
+      <div class="inner-block-padr">
+        <p>Quarter width - 1/4</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, quibusdam, fugiat, blanditiis enim consequatur repellat nisi reiciendis hic voluptatibus optio magni doloribus velit eveniet quidem iure cumque sequi dignissimos ab?</p>
+      </div>
+    </div>
+    <div class="grid grid-1-4">
+      <div class="inner-block-padr">
+        <p>Quarter width - 1/4</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, quibusdam, fugiat, blanditiis enim consequatur repellat nisi reiciendis hic voluptatibus optio magni doloribus velit eveniet quidem iure cumque sequi dignissimos ab?</p>
+      </div>
+    </div>
+    <div class="grid grid-1-4">
+      <div class="inner-block-padr">
+        <p>Quarter width - 1/4</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, quibusdam, fugiat, blanditiis enim consequatur repellat nisi reiciendis hic voluptatibus optio magni doloribus velit eveniet quidem iure cumque sequi dignissimos ab?</p>
+      </div>
+    </div>
+    <div class="grid grid-1-4">
+      <div class="inner-block-padr">
+        <p>Quarter width - 1/4</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, quibusdam, fugiat, blanditiis enim consequatur repellat nisi reiciendis hic voluptatibus optio magni doloribus velit eveniet quidem iure cumque sequi dignissimos ab?</p>
+      </div>
+    </div>
+  </div>
+  <div class="grid-wrapper">
+    <div class="grid grid-3-4">
+      <div class="inner-block-padr">
+        <p>Three quarter width - 1/4</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, quibusdam, fugiat, blanditiis enim consequatur repellat nisi reiciendis hic voluptatibus optio magni doloribus velit eveniet quidem iure cumque sequi dignissimos ab?</p>
+      </div>
+    </div>
+    <div class="grid grid-1-4">
+      <div class="inner-block-padr">
+        <p>Quarter width - 1/4</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, quibusdam, fugiat, blanditiis enim consequatur repellat nisi reiciendis hic voluptatibus optio magni doloribus velit eveniet quidem iure cumque sequi dignissimos ab?</p>
+      </div>
+    </div>
+  </div>
+</fieldset>
+
