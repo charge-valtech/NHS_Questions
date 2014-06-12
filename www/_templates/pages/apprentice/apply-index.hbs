@@ -29,8 +29,8 @@ headerTitle: Find an Apprenticeship
     <input type="text" id="email-address" class="form-control">
   </div>
   <div class="form-group">
-    <label for="tel-number" class="form-label">Telephone</label>
-    <input type="text" class="form-control form-control-1-3">
+    <label for="tel-number" class="form-label">Phone</label>
+    <input id="tel-number" type="text" class="form-control form-control-1-3">
   </div>
   <div class="form-group form-group-compound">
     <label for="address" class="form-label">Address</label>
@@ -74,7 +74,7 @@ headerTitle: Find an Apprenticeship
       <label for="subject-name" class="form-label">Subject</label>
       <input type="text" class="form-control" id="subject-name">
     </div>
-    <fieldset class="inline-fixed">
+    <div class="inline-fixed">
       <div class="form-group">
         <label for="subject-grade" class="form-label">Grade</label>
         <input type="text" class="form-control form-control-medium" id="subject-grade">
@@ -87,7 +87,7 @@ headerTitle: Find an Apprenticeship
         <input id="qual-predicted" type="checkbox">
         <label for="qual-predicted">Predicted?</label>
       </div>
-    </fieldset>
+    </div>
     <div class="form-group">
       <a href="#" class="save-qual-btn" id="saveQualification">Add qualification</a>
     </div>
@@ -148,6 +148,20 @@ headerTitle: Find an Apprenticeship
     </div>
   </div>
   <div class="work-history-wrapper">
+  </div>
+</fieldset>
+
+<fieldset class="fieldset-with-border">
+  <legend class="heading-large">Personal statement</legend>
+  <div class="form-group form-group-compound">
+    <label for="personal-statement" class="form-label">Tell us about yourself</label>
+    <textarea name="" id="personal-statement" class="form-control"></textarea>
+  </div>
+  <div class="form-group text">
+    <details>
+      <summary role="button">How to write a good statement</summary>
+      <p class="panel-indent">For example, any qualities you feel that would be beneficial to the role you're applying for</p>
+    </details>
   </div>
 </fieldset>
 

@@ -92,7 +92,8 @@ summary {
 }
 
 details summary {
-  @extend .button-link;
+  cursor: pointer;
+  @extend .copy-19;
 }
 
 details summary:focus {
@@ -111,14 +112,12 @@ details summary:focus {
   margin-right: -1px;
   width: 20px;
 }
-.no-details .open summary,
-.no-details details[open="open"] > summary {
+.no-details details.open summary {
   outline: 3px solid $yellow;
 }
-.no-details details[open="open"] > summary:before {
+.no-details details.open summary:before {
   content: '▼ ';
 }
-.no-details .open p,
-.no-details details[open="open"] p {
+.no-details .open p {
   display: block;
 }

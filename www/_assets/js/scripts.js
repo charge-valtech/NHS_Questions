@@ -1979,6 +1979,14 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
 
 })( jQuery, window, document );
 ;$(function() {
+
+  //-- Faking details behaviour
+
+  $('.no-details').on('click', 'summary', function() {
+    $(this).parent().toggleClass('open');
+  });
+
+});;$(function() {
 // ------------ Trainee search mockup ------------ //
 
   $('.trainee-input').on('keyup', function(){
