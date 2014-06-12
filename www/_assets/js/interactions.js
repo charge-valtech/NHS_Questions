@@ -32,11 +32,12 @@ $(function() {
 
   });
 
-  $('.form-control').keyup(function(){
-    if($(this).val().length==$(this).attr("maxlength")){
-      $(this).parent().next('.form-group').find('.form-control').focus();
-    }
-  });
+  // Removed due to lack of support on mobile and confusing to users
+  // $('.date-input').on('keyup', '.form-control', function(){
+  //   if($(this).val().length==$(this).attr("maxlength")){
+  //     $(this).parent().next('.form-group').find('.form-control').focus();
+  //   }
+  // });
 
   // Create linked input fields (For using email address as username)
   $('.linked-input-master').keyup(function() {
