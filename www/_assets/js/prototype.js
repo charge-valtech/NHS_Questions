@@ -56,9 +56,12 @@ $(function() {
         $qualID      = $('#qual-type').find(":selected").attr('class'),
         $qualSubject = $('#subject-name').val(),
         $qualGrade   = $('#subject-grade').val(),
-        $qualYear   = $('#subject-year').val(),
+        $qualYear    = $('#subject-year').val(),
         $isPredicted = $('#qual-predicted').is(':checked'),
         $isPredValue = ($isPredicted ? " (Predicted)" : ""),
+        $otherQual   = $('#other-qual').val(),
+        $isOther     = $('#otherQualOption').is(':selected'),
+        $qualTorO    = ($isOther ? $otherQual : $qualType),
         $rowHTML     = '<tr class="tr-qualRow">' +
                           '<td class="td-qualcell">' +
                             '<input class="form-control qual-input-edit" type="text" value="' + $qualSubject + '">' +
@@ -75,7 +78,7 @@ $(function() {
                           '<td class="fake-link td-qualEdit">Edit</td>' +
                         '</tr>',
         $emptyTable  = '<div class="qualification-table"' + 'id="' + $qualID + '">' +
-                        '<h3 class="heading-small heading-qualType">' + $qualType + '</h3>' +
+                        '<h3 class="heading-small heading-qualType">' + $qualTorO + '</h3>' +
                         '<table class="grid-3-4">' +
                           '<colgroup>' +
                             '<col class="t40">' +
@@ -100,7 +103,7 @@ $(function() {
 
     if($('.tr-qualRow').length == 0) {
       $('.qualification-table').show().attr('id', $qualID);
-      $('.heading-qualType').html($qualType);
+      $('.heading-qualType').html($qualTorO);
       $('.tbody-qual').html($rowHTML);
     } else {
       $('#' + $qualID).find('.tbody-qual').append($rowHTML);
@@ -113,6 +116,12 @@ $(function() {
       }
     }
 
+    function ifOther() {
+      if($('#qual-type').val() == "Other") {
+        $qualType = $('#other-qual').val();
+      }
+    }
+
     $('#subject-name').val('');
     $('#subject-grade').val('');
     $('#subject-year').val('');
@@ -120,6 +129,14 @@ $(function() {
 
     e.preventDefault();
 
+  });
+
+  $('#qual-type').change(function() {
+    if($(this).val() == "Other") {
+      $('.other-qual-input').show();
+    } else {
+      $('.other-qual-input').hide();
+    }
   });
 
   $('.qualifications-wrapper').on('click', '.td-qualEdit', function(e) {
@@ -156,46 +173,46 @@ $(function() {
 
 // ------------ Work experience entry ------------ //
 
-$('#addWorkBtn').on('click', function(e) {
-  var $workEmployer = $('#work-employer').val(),
-      $workRole     = $('#work-role').val(),
-      $workFrom     = $('#work-from').val(),
-      $workTo       = $('#work-to').val(),
-      $isCurrent    = $('#work-current').is(':checked'),
-      $isCurrValue  = ($isCurrent ? "Current" : ""),
-      $historyHTML  = '<div class="work-history text">' +
-                        '<div class="hgroup-small">' +
-                          '<h3 class="heading-small heading-with-border">'+ $workEmployer +'</h4>' +
-                          '<span class="subtitle">'+ $workFrom + ' - ' + $workTo + $isCurrValue +'</span>' +
-                        '</div>' +
-                        '<p class="copy-16">'+ $workRole +'</p>' +
-                        '<p class="copy-16"><a href="#" class="work-delete">Delete</a></p>' +
-                      '</div>';
+  $('#addWorkBtn').on('click', function(e) {
+    var $workEmployer = $('#work-employer').val(),
+        $workRole     = $('#work-role').val(),
+        $workFrom     = $('#work-from').val(),
+        $workTo       = $('#work-to').val(),
+        $isCurrent    = $('#work-current').is(':checked'),
+        $isCurrValue  = ($isCurrent ? "Current" : ""),
+        $historyHTML  = '<div class="work-history text">' +
+                          '<div class="hgroup-small">' +
+                            '<h3 class="heading-small heading-with-border">'+ $workEmployer +'</h4>' +
+                            '<span class="subtitle">'+ $workFrom + ' - ' + $workTo + $isCurrValue +'</span>' +
+                          '</div>' +
+                          '<p class="copy-16">'+ $workRole +'</p>' +
+                          '<p class="copy-16"><a href="#" class="work-delete">Delete</a></p>' +
+                        '</div>';
 
-  $('.work-history-wrapper').append($historyHTML);
+    $('.work-history-wrapper').append($historyHTML);
 
-  $('#work-employer').val('');
-  $('#work-role').val('');
-  $('#work-from').val('');
-  $('#work-to').val('');
-  $('#work-current').prop('checked', false);
-  $('#work-to').parent().removeClass('disabled');
-  $('#work-to').prop('disabled', false);
+    $('#work-employer').val('');
+    $('#work-role').val('');
+    $('#work-from').val('');
+    $('#work-to').val('');
+    $('#work-current').prop('checked', false);
+    $('#work-to').parent().removeClass('disabled');
+    $('#work-to').prop('disabled', false);
 
-  e.preventDefault();
+    e.preventDefault();
 
-});
+  });
 
-$('#work-current').click(function() {
-  $('#work-to').prop('disabled', $(this).prop('checked'));
-  $('#work-to').parent().toggleClass('disabled', $(this).prop('checked'));
-});
+  $('#work-current').click(function() {
+    $('#work-to').prop('disabled', $(this).prop('checked'));
+    $('#work-to').parent().toggleClass('disabled', $(this).prop('checked'));
+  });
 
-$('.work-history-wrapper').on('click', '.work-delete', function(e) {
-  $(this).closest('.work-history').remove();
+  $('.work-history-wrapper').on('click', '.work-delete', function(e) {
+    $(this).closest('.work-history').remove();
 
-  e.preventDefault();
-});
+    e.preventDefault();
+  });
 
 // --------------- Remove for live code -------------- //
 });
