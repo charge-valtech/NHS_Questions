@@ -10,6 +10,7 @@ headerTitle: SFA Pattern library
 <ol class="list-number list-flowing">
   <li><a href="#buttons">Buttons/Links</a></li>
   <li><a href="#formControls">Form controls</a></li>
+  <li><a href="#errors">Errors/validation</a></li>
   <li><a href="#radioCheckboxes">Radios and checkboxes</a></li>
   <li><a href="#navigation">Navigation</a></li>
   <li><a href="#typography">Typography</a></li>
@@ -39,7 +40,16 @@ headerTitle: SFA Pattern library
 
 <fieldset class="fieldset-with-border">
   <legend id="formControls" class="heading-large">Form controls</legend>
-  <div class="form-group">
+
+  <div class="form-group validation-summary toggle-content">
+    <h3 class="heading-small">You have the following errors</h3>
+    <ul>
+      <li><a href="#error1">You haven't filled in this input</a></li>
+      <li><a href="#error2">You haven't entered a date of birth</a></li>
+    </ul>
+  </div>
+
+  <div id="error1" class="form-group has-an-error">
     <label for="normal-label" class="form-label">Label for input</label>
     <input type="text" id="normal-label" class="form-control">
   </div>
@@ -55,7 +65,7 @@ headerTitle: SFA Pattern library
     <textarea type="text" id="normal-textarea" class="form-control"></textarea>
   </div>
 
-  <div class="form-group form-group-compound date-input">
+  <div id="error2" class="form-group form-group-compound date-input has-an-error">
     <p class="form-label">Date of birth</p>
     <div class="form-group form-group-compound">
       <label class="form-hint" for="date-day2">Day</label>
@@ -89,6 +99,12 @@ headerTitle: SFA Pattern library
       <option value="">I'm in a list</option>
     </select>
   </div>
+</fieldset>
+
+<fieldset class="fieldset-with-border">
+  <legend id="errors" class="heading-large">Errors/validation</legend>
+  <p class="text">Click the following button and you'll get an error in the form above</p>
+  <a id="errorButton" href="#formControls" class="button">Give me errors</a>
 </fieldset>
 
 <fieldset class="fieldset-with-border">
@@ -276,4 +292,3 @@ headerTitle: SFA Pattern library
     </div>
   </div>
 </fieldset>
-

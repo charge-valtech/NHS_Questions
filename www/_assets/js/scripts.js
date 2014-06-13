@@ -2203,5 +2203,12 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
     e.preventDefault();
   });
 
+  //-- Errors on pattern library page
+
+  $('#errorButton').on('click', function() {
+    $('.validation-summary').toggle();
+    $('.has-an-error').toggleClass('validation-error')
+  });
+
 // --------------- Remove for live code -------------- //
 });

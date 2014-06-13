@@ -1,10 +1,13 @@
 
 // Validation summary box
 .validation-summary {
+  @extend %clearfix;
   background: $error-background;
-  border: 3px solid $error-colour;
+  border-left: 3px solid $error-colour;
+  box-sizing: content-box;
   margin-bottom: $gutter;
-  padding: $gutter-half $gutter;
+  margin-left: -13px;
+  padding: $gutter-half 0 $gutter 10px;
   ul {
     margin-top: 10px;
   }
@@ -16,6 +19,7 @@
     margin-bottom: 5px;
   }
   .heading-small {
+    color: $error-colour;
     margin-top: $gutter-half;
   }
 }
