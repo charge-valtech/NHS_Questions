@@ -224,7 +224,7 @@ $(function() {
   //-- Errors on pattern library page
 
   $('#errorButton').on('click', function() {
-    $('.validation-summary-errors​').toggle();
+    $('.validation-summary-errors').toggle();
     $('.has-an-error').toggleClass('input-validation-error')
   });
 

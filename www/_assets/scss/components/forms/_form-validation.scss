@@ -1,7 +1,7 @@
 
 // Validation summary box
 .validation-summary,
-.validation-summary-errors​ {
+.validation-summary-errors{
   @extend %clearfix;
   background: $error-background;
   border-left: 3px solid $error-colour;
@@ -35,6 +35,13 @@
   padding: 0 0 0 10px;
   .form-hint {
     color: $error-colour;
+  }
+  .form-control {
+    box-sizing: border-box;
+    border: 1px solid $border-colour;
+    color: $black;
+    margin-left: 0;
+    padding: 4px;
   }
   @include media(tablet) {
     margin-left: -18px;
