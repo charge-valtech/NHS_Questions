@@ -51,12 +51,17 @@ $(function() {
     $('input:not(:checked)').parent().removeClass('selected');
     $('input:checked').parent().addClass('selected');
 
-    // Hide open data-toggle content
-    $('.toggle-content').hide();
 
     // Show data-toggle content
     var target = $(this).parent().attr('data-target');
     $('#'+target).show();
+    
+    // Hide open data-toggle content
+    if($(this).prop('checked') != true) {
+      $(this).parent().next('.toggle-content').hide();
+    }
+    // $('.toggle-content').hide();
+
 
   });
 
