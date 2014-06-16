@@ -54,6 +54,7 @@ $(function() {
   $('#saveQualification').on('click', function(e){
     var $qualType    = $('#qual-type').val(),
         $qualID      = $('#qual-type').find(":selected").attr('class'),
+        $qualWhere   = $('#qual-where').val(),
         $qualSubject = $('#subject-name').val(),
         $qualGrade   = $('#subject-grade').val(),
         $qualYear    = $('#subject-year').val(),
@@ -78,7 +79,10 @@ $(function() {
                           '<td class="fake-link td-qualEdit">Edit</td>' +
                         '</tr>',
         $emptyTable  = '<div class="qualification-table"' + 'id="' + $qualID + '">' +
-                        '<h3 class="heading-small heading-qualType">' + $qualTorO + '</h3>' +
+                        '<div class="hgroup-small">' +
+                          '<h3 class="heading-small heading-qualType">' + $qualTorO + '</h3>' +
+                          '<span class="subtitle subtitle-qualWhere">'+ $qualWhere +'</span>' +
+                        '</div>' +
                         '<table class="grid-3-4">' +
                           '<colgroup>' +
                             '<col class="t40">' +
@@ -104,6 +108,7 @@ $(function() {
     if($('.tr-qualRow').length == 0) {
       $('.qualification-table').show().attr('id', $qualID);
       $('.heading-qualType').html($qualTorO);
+      $('.subtitle-qualWhere').html($qualWhere);
       $('.tbody-qual').html($rowHTML);
     } else {
       $('#' + $qualID).find('.tbody-qual').append($rowHTML);
@@ -124,7 +129,7 @@ $(function() {
 
     $('#subject-name').val('');
     $('#subject-grade').val('');
-    $('#subject-year').val('');
+    // $('#subject-year').val('');
     $('#qual-predicted').prop('checked', false);
 
     e.preventDefault();
@@ -175,6 +180,7 @@ $(function() {
 
   $('#addWorkBtn').on('click', function(e) {
     var $workEmployer = $('#work-employer').val(),
+        $workTitle    = $('#work-title').val(),
         $workRole     = $('#work-role').val(),
         $workFrom     = $('#work-from').val(),
         $workTo       = $('#work-to').val(),
@@ -182,7 +188,7 @@ $(function() {
         $isCurrValue  = ($isCurrent ? "Current" : ""),
         $historyHTML  = '<div class="work-history text">' +
                           '<div class="hgroup-small">' +
-                            '<h3 class="heading-small heading-with-border">'+ $workEmployer +'</h4>' +
+                            '<h3 class="heading-small heading-with-border">'+ $workEmployer + ' - ' + $workTitle + '</h4>' +
                             '<span class="subtitle">'+ $workFrom + ' - ' + $workTo + $isCurrValue +'</span>' +
                           '</div>' +
                           '<p class="copy-16">'+ $workRole +'</p>' +
@@ -192,6 +198,7 @@ $(function() {
     $('.work-history-wrapper').append($historyHTML);
 
     $('#work-employer').val('');
+    $('#work-title').val('');
     $('#work-role').val('');
     $('#work-from').val('');
     $('#work-to').val('');
@@ -217,8 +224,8 @@ $(function() {
   //-- Errors on pattern library page
 
   $('#errorButton').on('click', function() {
-    $('.validation-summary').toggle();
-    $('.has-an-error').toggleClass('validation-error')
+    $('.validation-summary-errors​').toggle();
+    $('.has-an-error').toggleClass('input-validation-error')
   });
 
 // --------------- Remove for live code -------------- //

@@ -1,13 +1,14 @@
 
 // Validation summary box
-.validation-summary {
+.validation-summary,
+.validation-summary-errors​ {
   @extend %clearfix;
   background: $error-background;
   border-left: 3px solid $error-colour;
   box-sizing: content-box;
   margin-bottom: $gutter;
-  margin-left: -13px;
-  padding: $gutter-half 0 $gutter 10px;
+  margin-left: -18px;
+  padding: $gutter-half 0 $gutter $gutter-half;
   ul {
     margin-top: 10px;
   }
@@ -25,7 +26,8 @@
 }
 
 // Validation error message box
-.validation-error {
+.validation-error,
+.input-validation-error {
   border-left: 3px solid $error-colour;
   box-sizing: content-box;
   color: $error-colour;
