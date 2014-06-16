@@ -24,25 +24,53 @@ headerTitle: Find an Apprenticeship
       <input type="tel" class="form-control" maxlength="4" id="date-year2">
     </div>
   </div>
-  
-  <div class="inline">
-    <div class="form-group form-group-compound">
-      <label for="address" class="form-label">Post code</label>
-      <input id="address" type="text" class="form-control form-control-1-4 " autocapitalize="characters" autocorrect="off">
+
+  <div>
+    <h3 class="heading-small">Address</h3>
+    <!-- <div class="form-group form-group-compound">
+      <label for="address-number" class="form-label">House number (or name)</label>
+      <input id="address-number" type="text" class="form-control form-control-xlarge "autocorrect="off">
+    </div> -->
+    <div class="inline-fixed">
+      <div class="form-group form-group-compound">
+        <label for="address" class="form-label">Post code</label>
+        <input id="address" type="text" class="form-control form-control-large " autocapitalize="characters" autocorrect="off">
+      </div>
+      <div class="form-group form-group-compound">
+        <a href="#" class="address-find-btn">Find address</a>
+      </div>
     </div>
-    <div class="form-group form-group-compound">
-      <a href="#" class="address-find-btn">Find address</a> or <a href="#" class="address-manual-btn">Enter manually</a>
+    <div class="form-group toggle-content">
+      <label for="address-select" class="form-label">Select your address</label>
+      <select name="" id="address-select">
+        <option value=""></option>
+      </select>
     </div>
-  </div>
-  <div class="form-group toggle-content">
-    <label class="form-label" for="select-address">Select address</label>
-    <select name="" id="select-address">
-      <option value="">Choose from list</option>
-      <option value="">2 Scarth Road</option>
-    </select>
+    <div class="form-group">
+      Or you can <a href="#" class="address-manual-btn">enter address manually</a>
+    </div>
+    <div class="panel-indent toggle-content">
+      <div class="form-group form-group-compound">
+        <label for="address1" class="form-label">First line of address</label>
+        <input id="address1" type="text" class="form-control" autocorrect="off">
+      </div>
+      <div class="form-group form-group-compound">
+        <label for="address2" class="form-label">Second line (optional)</label>
+        <input id="address2" type="text" class="form-control" autocorrect="off">
+      </div>
+      <div class="form-group form-group-compound">
+        <label for="address3" class="form-label">Town or city</label>
+        <input id="address3" type="text" class="form-control" autocorrect="off">
+      </div>
+      <div class="form-group form-group-compound">
+        <label for="address4" class="form-label">Post code</label>
+        <input id="address4" type="text" class="form-control form-control-large" autocapitalize="characters" autocorrect="off">
+      </div>
+    </div>
   </div>
 
   <div class="form-group">
+    <h3 class="heading-small">Contact</h3>
     <p class="form-label">I prefer to be contacted by</p>
     <label data-target="email-input-panel" for="pref-email" class="block-label">
       <input type="checkbox" id="pref-email">Email

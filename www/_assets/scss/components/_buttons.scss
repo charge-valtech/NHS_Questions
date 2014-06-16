@@ -4,6 +4,11 @@
 .button {
   @include button ($button-colour);
   margin: 0 $gutter-half $gutter-half 0;
+  text-align: center;
+  width: 100%;
+  @include media(tablet) {
+    width: auto;
+  }
 }
 
 .button-with-hint {

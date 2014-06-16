@@ -1995,11 +1995,10 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
 });;$(function() {
 // ------------ Trainee search mockup ------------ //
 
-  $('.trainee-input').on('keyup', function(){
+  $('.search-proto-input').on('keyup', function(){
     var $this   = $(this).val(),
-        $input1 = $('.trainee-input-1').val(),
-        $input2 = $('.trainee-input-2').val(),
-        $input3 = $('.trainee-input-3').val(),
+        $input1 = $('.search-proto-input-1').val(),
+        $input2 = $('.search-proto-input-2').val(),
         $index  = $.jStorage.index();
 
     if($this.toLowerCase().indexOf('cust') > -1){
@@ -2010,15 +2009,13 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
 
     $.jStorage.set('input1Key', $input1);
     $.jStorage.set('input2Key', $input2);
-    $.jStorage.set('input3Key', $input3);
 
   });
 
-  $('.trainee-result-input').on('keyup', function(){
+  $('.search-proto-result-input').on('keyup', function(){
     var $this   = $(this).val(),
-        $input1 = $('.trainee-result-input-1').val(),
-        $input2 = $('.trainee-result-input-2').val(),
-        $input3 = $('.trainee-result-input-3').val();
+        $input1 = $('.search-proto-result-input-1').val(),
+        $input2 = $('.search-proto-result-input-2').val();
 
     if($this.toLowerCase().indexOf('cust') > -1){
       $('.update-results-btn').attr('href', 'search-results-customer.html');
@@ -2028,17 +2025,14 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
 
     $.jStorage.set('input1Key', $input1);
     $.jStorage.set('input2Key', $input2);
-    $.jStorage.set('input3Key', $input3);
   });
 
   function changeSearchInputs() {
     var resultInput1 = $.jStorage.get('input1Key'),
-        resultInput2 = $.jStorage.get('input2Key'),
-        resultInput3 = $.jStorage.get('input3Key');
+        resultInput2 = $.jStorage.get('input2Key')
 
-    $('.trainee-result-input-1').val(resultInput1);
-    $('.trainee-result-input-2').val(resultInput2);
-    $('.trainee-result-input-3').val(resultInput3);
+    $('.search-proto-result-input-1').val(resultInput1);
+    $('.search-proto-result-input-2').val(resultInput2);
   }
 
   changeSearchInputs();
