@@ -71,6 +71,7 @@ $(function() {
                             '<span class="qualSpan">' + $qualYear + '</span>' +
                           '</td>' +
                           '<td class="fake-link td-qualEdit">Edit</td>' +
+                          '<td><i class="ir icon-remove qualRemove">Remove</i></td>' +
                         '</tr>',
         $emptyTable  = '<div class="qualification-table"' + 'id="' + $qualID + '">' +
                         '<div class="hgroup-small">' +
@@ -81,8 +82,9 @@ $(function() {
                           '<colgroup>' +
                             '<col class="t40">' +
                             '<col class="t25">' +
-                            '<col class="t25">' +
+                            '<col class="t20">' +
                             '<col class="t10">' +
+                            '<col class="t5">' +
                             '<col>' +
                           '</colgroup>' +
                           '<thead>' +
@@ -90,6 +92,7 @@ $(function() {
                               '<th class="th-qualSubject">Subject</th>' +
                               '<th class="th-qualGrade">Grade</th>' +
                               '<th class="th-qualYear">Year</th>' +
+                              '<th></th>' +
                               '<th></th>' +
                             '</tr>' +
                           '</thead>' +
@@ -136,6 +139,13 @@ $(function() {
     } else {
       $('.other-qual-input').hide();
     }
+  });
+
+  $('.qualifications-wrapper').on('click', '.qualRemove', function() {
+    var $this = $(this);
+
+    $this.closest('.tr-qualRow').remove();
+
   });
 
   $('.qualifications-wrapper').on('click', '.td-qualEdit', function(e) {

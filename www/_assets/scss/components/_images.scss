@@ -30,3 +30,15 @@ iframe {
     display: none !important;
   }
 }
+
+.icon-remove {
+  background: url(../img/icon-remove.png) no-repeat;
+  background-size: 19px 19px;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: bottom;
+  width: 19px; height: 19px;
+  @include device-pixel-ratio(2) {
+    background-image: url(../img/icon-remove-2x.png);
+  }
+}

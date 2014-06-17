@@ -2065,6 +2065,7 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
                             '<span class="qualSpan">' + $qualYear + '</span>' +
                           '</td>' +
                           '<td class="fake-link td-qualEdit">Edit</td>' +
+                          '<td><i class="ir icon-remove qualRemove">Remove</i></td>' +
                         '</tr>',
         $emptyTable  = '<div class="qualification-table"' + 'id="' + $qualID + '">' +
                         '<div class="hgroup-small">' +
@@ -2075,8 +2076,9 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
                           '<colgroup>' +
                             '<col class="t40">' +
                             '<col class="t25">' +
-                            '<col class="t25">' +
+                            '<col class="t20">' +
                             '<col class="t10">' +
+                            '<col class="t5">' +
                             '<col>' +
                           '</colgroup>' +
                           '<thead>' +
@@ -2084,6 +2086,7 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
                               '<th class="th-qualSubject">Subject</th>' +
                               '<th class="th-qualGrade">Grade</th>' +
                               '<th class="th-qualYear">Year</th>' +
+                              '<th></th>' +
                               '<th></th>' +
                             '</tr>' +
                           '</thead>' +
@@ -2130,6 +2133,13 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
     } else {
       $('.other-qual-input').hide();
     }
+  });
+
+  $('.qualifications-wrapper').on('click', '.qualRemove', function() {
+    var $this = $(this);
+
+    $this.closest('.tr-qualRow').remove();
+
   });
 
   $('.qualifications-wrapper').on('click', '.td-qualEdit', function(e) {
