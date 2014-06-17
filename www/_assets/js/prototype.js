@@ -43,6 +43,32 @@ $(function() {
 
   changeSearchInputs();
 
+//------------- Address input
+  $('.address-find-btn').on('click', function(e) {
+    $('.address-find-select').show();
+    e.preventDefault();
+  });
+
+  $('#address-select').on('change', function() {
+    var $this     = $(this),
+        $thisVal  = $this.val(),
+        $postCode = $('#post-code').val();
+
+    if($this.val() != 'void') {
+
+      $('#address1').val($thisVal);
+      $('#address3').val('Windsor');
+      $('#address4').val($postCode);
+
+      $('.address-manual-input').show();
+    }
+  });
+
+  $('.address-manual-btn').on('click', function(e) {
+    $('.address-manual-input').show();
+    e.preventDefault();
+  });
+
 // ------------ Apply for vacancy mockup ------------ //
 
   $('#saveQualification').on('click', function(e){
