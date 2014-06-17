@@ -42,3 +42,32 @@ iframe {
     background-image: url(../img/icon-remove-2x.png);
   }
 }
+
+.icon-edit {
+  background: url(../img/icon-edit.png) no-repeat;
+  background-size: 16px 16px;
+  cursor: pointer;
+  display: none;
+  margin: 0 5px;
+  vertical-align: baseline;
+  width: 16px; height: 16px;
+  @include device-pixel-ratio(2) {
+    background-image: url(../img/icon-edit-2x.png);
+  }
+  .edit-mode & {
+    display: inline-block;
+  }
+}
+
+.icon-tick {
+  background: url(../img/icon-tick.png) no-repeat;
+  background-size: 16px 16px;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 5px;
+  vertical-align: baseline;
+  width: 16px; height: 16px;
+  @include device-pixel-ratio(2) {
+    background-image: url(../img/icon-tick-2x.png);
+  }
+}

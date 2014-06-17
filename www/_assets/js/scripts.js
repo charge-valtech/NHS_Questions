@@ -2212,11 +2212,21 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
         $isCurrValue  = ($isCurrent ? "Current" : ""),
         $historyHTML  = '<div class="work-history text">' +
                           '<div class="hgroup-small">' +
-                            '<h3 class="heading-small heading-with-border">'+ $workEmployer + ' - ' + $workTitle + '</h4>' +
-                            '<span class="subtitle">'+ $workFrom + ' - ' + $workTo + $isCurrValue +'</span>' +
+                            '<h3 class="heading-small heading-with-border"><i class="ir icon-edit">Edit</i>' + 
+                              '<span class="editable-work">' + $workEmployer + '</span>' +
+                              ' - ' + 
+                              '<span class="editable-work">' + $workTitle + '</span>' +
+                            '</h3>' +
+                            '<h4 class="subtitle"><span class="editable-work"><i class="ir icon-edit">Edit</i>'+ 
+                              '<span class="editable-work">' + $workFrom + '</span>' +
+                              ' - ' + 
+                              '<span class="editable-work">' + $workTo + $isCurrValue + '</span>' +
+                            '</h4>' +
                           '</div>' +
-                          '<p class="copy-16">'+ $workRole +'</p>' +
-                          '<p class="copy-16"><a href="#" class="work-delete">Delete</a></p>' +
+                          '<p class="copy-16"><i class="ir icon-edit">Edit</i>'+ 
+                            '<span class="editable-work">' + $workRole + '</span>' +
+                          '</p>' +
+                          '<p class="copy-16"><a href="#" class="work-edit">Edit</a> or <a href="#" class="work-delete">Delete</a></p>' +
                         '</div>';
 
     $('.work-history-wrapper').append($historyHTML);
@@ -2241,6 +2251,19 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
 
   $('.work-history-wrapper').on('click', '.work-delete', function(e) {
     $(this).closest('.work-history').remove();
+    e.preventDefault();
+  });
+
+  $('.work-history-wrapper').on('click', '.work-edit', function(e) {
+    $(this).closest('.work-history').addClass('edit-mode');
+    $(this).text('Save').addClass('work-save');
+
+    e.preventDefault();
+  });
+
+  $('.work-history-wrapper').on('click', '.work-save', function(e) {
+    $(this).closest('.work-history').removeClass('edit-mode');
+    $(this).text('Edit').removeClass('work-save');
 
     e.preventDefault();
   });
