@@ -83,3 +83,28 @@
     }
   }
 }
+
+/* Application form stuff */
+
+.edit-mode {
+  .editable-work {
+    display: inline-block;
+    padding: 7px 4px;
+  }
+}
+
+.editing-worksection {
+  .toggle-content {
+    display: inline-block;
+    width: auto;
+  }
+  textarea.toggle-content {
+    width: 100%;
+    @include media(tablet) {
+      width: 75%;
+    }
+  }
+  .editable-work {
+    display: none;
+  }
+}
