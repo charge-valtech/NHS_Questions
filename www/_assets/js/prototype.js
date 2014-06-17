@@ -218,18 +218,18 @@ $(function() {
         $isCurrValue  = ($isCurrent ? "Current" : ""),
         $historyHTML  = '<div class="work-history text">' +
                           '<div class="hgroup-small">' +
-                            '<h3 class="heading-small heading-with-border"><i class="ir icon-edit">Edit</i>' + 
+                            '<h3 class="work-editsection heading-small heading-with-border"><i class="ir icon-edit">Edit</i>' + 
                               '<span class="editable-work">' + $workEmployer + '</span>' +
                               ' - ' + 
                               '<span class="editable-work">' + $workTitle + '</span>' +
                             '</h3>' +
-                            '<h4 class="subtitle"><span class="editable-work"><i class="ir icon-edit">Edit</i>'+ 
+                            '<h4 class="subtitle work-editsection"><span class="editable-work"><i class="ir icon-edit">Edit</i>'+ 
                               '<span class="editable-work">' + $workFrom + '</span>' +
                               ' - ' + 
                               '<span class="editable-work">' + $workTo + $isCurrValue + '</span>' +
                             '</h4>' +
                           '</div>' +
-                          '<p class="copy-16"><i class="ir icon-edit">Edit</i>'+ 
+                          '<p class="copy-16 work-editsection"><i class="ir icon-edit">Edit</i>'+ 
                             '<span class="editable-work">' + $workRole + '</span>' +
                           '</p>' +
                           '<p class="copy-16"><a href="#" class="work-edit">Edit</a> or <a href="#" class="work-delete">Delete</a></p>' +
@@ -265,6 +265,20 @@ $(function() {
     $(this).text('Save').addClass('work-save');
 
     e.preventDefault();
+  });
+
+  $('.work-history-wrapper').on('click', '.icon-edit', function() {
+    $(this).closest('.work-editsection').addClass('editing-worksection');
+
+    $(this).removeClass('icon-edit').addClass('icon-tick').text('Done');
+
+  });
+
+  $('.work-history-wrapper').on('click', '.icon-tick', function() {
+    $(this).closest('.work-editsection').removeClass('editing-worksection');
+    
+    $(this).removeClass('icon-tick').addClass('icon-edit').text('Edit');
+
   });
 
   $('.work-history-wrapper').on('click', '.work-save', function(e) {

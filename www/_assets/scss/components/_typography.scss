@@ -72,7 +72,7 @@ h4, h5, h6 {
 .hgroup-small {
   margin-bottom: $gutter-half;
   .heading-small {
-    margin-bottom: 0;
+    margin-bottom: 5px;
   }
   .subtitle {
     @include core-16;
