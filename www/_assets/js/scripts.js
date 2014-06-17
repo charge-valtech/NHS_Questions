@@ -2090,8 +2090,8 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
                             '<input class="form-control qual-input-edit" type="text" value="' + $qualYear + '">' +
                             '<span class="qualSpan">' + $qualYear + '</span>' +
                           '</td>' +
-                          '<td class="fake-link td-qualEdit">Edit</td>' +
-                          '<td><i class="ir icon-remove qualRemove">Remove</i></td>' +
+                          '<td class="fake-link td-qualEdit ta-center">Edit</td>' +
+                          '<td class="qualRemove ta-center"><i class="ir icon-remove">Remove</i></td>' +
                         '</tr>',
         $emptyTable  = '<div class="qualification-table"' + 'id="' + $qualID + '">' +
                         '<div class="hgroup-small">' +
@@ -2102,9 +2102,9 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
                           '<colgroup>' +
                             '<col class="t40">' +
                             '<col class="t25">' +
-                            '<col class="t20">' +
+                            '<col class="t15">' +
                             '<col class="t10">' +
-                            '<col class="t5">' +
+                            '<col class="t10">' +
                             '<col>' +
                           '</colgroup>' +
                           '<thead>' +
@@ -2231,7 +2231,7 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
                             '<textarea class="form-control editable-work-input toggle-content">' + $workRole + '</textarea>' +
                             '<span class="editable-work">' + $workRole + '</span>' +
                           '</p>' +
-                          '<p class="copy-16"><a href="#" class="work-edit">Edit</a> or <a href="#" class="work-delete">Delete</a></p>' +
+                          '<p class="copy-16"><a href="#" class="work-delete">Delete</a></p>' +
                         '</div>';
 
     $('.work-history-wrapper').append($historyHTML);
