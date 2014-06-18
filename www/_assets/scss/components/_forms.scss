@@ -68,7 +68,7 @@ select {
       display: inline-block;
       float: none;
       margin-right: -4px;
-      padding-right: $gutter;
+      padding-right: 20px;
       vertical-align: baseline;
       width: auto;
       .form-control {
@@ -85,7 +85,7 @@ select {
     display: inline-block;
     float: none;
     margin-right: -4px;
-    padding-right: $gutter;
+    padding-right: 20px;
     vertical-align: baseline;
     width: auto;
     &:last-child {
@@ -131,7 +131,6 @@ select {
   @include copy-19;
   color: $secondary-text-colour;
   display: block;
-  margin-bottom: 5px;
   @include media (tablet) {
     margin-top: 8px;
   }
@@ -152,6 +151,7 @@ select {
   border: 1px solid $border-colour;
   font-family: inherit;
   font-size: 1em;
+  margin-top: 0; margin-bottom: 0; // Remove mysterious top and bottom margins
   padding: 4px;
   width: 100%;
   // Disable webkit appearance and remove rounded corners
@@ -338,6 +338,10 @@ select {
 
 .qual-input-edit + span {
   display: inline-block;
-  padding: 7px 5px;
+  padding: 5px;
 }
 
+.heading-span {
+  display: inline-block;
+  padding-left: 5px;
+}

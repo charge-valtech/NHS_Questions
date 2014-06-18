@@ -2109,9 +2109,9 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
                           '</colgroup>' +
                           '<thead>' +
                             '<tr>' +
-                              '<th class="th-qualSubject">Subject</th>' +
-                              '<th class="th-qualGrade">Grade</th>' +
-                              '<th class="th-qualYear">Year</th>' +
+                              '<th class="th-qualSubject"><span class="heading-span">Subject</span></th>' +
+                              '<th class="th-qualGrade"><span class="heading-span">Grade</span></th>' +
+                              '<th class="th-qualYear"><span class="heading-span">Year</span></th>' +
                               '<th></th>' +
                               '<th></th>' +
                             '</tr>' +
@@ -2138,15 +2138,8 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
       }
     }
 
-    function ifOther() {
-      if($('#qual-type').val() == "Other") {
-        $qualType = $('#other-qual').val();
-      }
-    }
-
     $('#subject-name').val('');
     $('#subject-grade').val('');
-    // $('#subject-year').val('');
     $('#qual-predicted').prop('checked', false);
 
     e.preventDefault();
@@ -2165,7 +2158,6 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
     var $this = $(this);
 
     $this.closest('.tr-qualRow').remove();
-
   });
 
   $('.qualifications-wrapper').on('click', '.td-qualEdit', function(e) {
@@ -2210,16 +2202,16 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
         $workTo       = $('#work-to').val(),
         $isCurrent    = $('#work-current').is(':checked'),
         $isCurrValue  = ($isCurrent ? "Current" : ""),
-        $historyHTML  = '<div class="work-history text">' +
+        $historyHTML  = '<div class="work-history grid-3-4">' +
                           '<div class="hgroup-small">' +
-                            '<h3 class="work-editsection heading-small heading-with-border"><i class="ir icon-edit">Edit</i>' + 
+                            '<h3 class="work-editsection heading-small heading-with-border">' + 
                               '<input class="form-control editable-work-input toggle-content" value="' + $workEmployer + '">' +
                               '<span class="editable-work">' + $workEmployer + '</span>' +
                               ' - ' + 
                               '<input class="form-control editable-work-input toggle-content" value="' + $workTitle + '">' +
                               '<span class="editable-work">' + $workTitle + '</span>' +
                             '</h3>' +
-                            '<h4 class="subtitle work-editsection"><i class="ir icon-edit">Edit</i>'+ 
+                            '<h4 class="subtitle work-editsection">'+ 
                               '<input class="form-control editable-work-input toggle-content" value="' + $workFrom + '">' +
                               '<span class="editable-work">' + $workFrom + '</span>' +
                               ' - ' + 
@@ -2227,7 +2219,7 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
                               '<span class="editable-work">' + $workTo + $isCurrValue + '</span>' +
                             '</h4>' +
                           '</div>' +
-                          '<p class="copy-16 work-editsection"><i class="ir icon-edit next-textarea">Edit</i>'+ 
+                          '<p class="copy-16 work-editsection">'+ 
                             '<textarea class="form-control editable-work-input toggle-content">' + $workRole + '</textarea>' +
                             '<span class="editable-work">' + $workRole + '</span>' +
                           '</p>' +
@@ -2252,6 +2244,8 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
   $('#work-current').click(function() {
     $('#work-to').prop('disabled', $(this).prop('checked'));
     $('#work-to').parent().toggleClass('disabled', $(this).prop('checked'));
+
+    $('#work-to').val('');
   });
 
   $('.work-history-wrapper').on('click', '.work-delete', function(e) {
@@ -2262,6 +2256,16 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
   $('.work-history-wrapper').on('click', '.work-edit', function(e) {
     $(this).closest('.work-history').addClass('edit-mode');
     $(this).text('Save').addClass('work-save');
+
+    e.preventDefault();
+  });
+
+  $('.work-history-wrapper').on('click', '.work-save', function(e) {
+    $(this).closest('.work-history').removeClass('edit-mode');
+    $(this).text('Edit').removeClass('work-save');
+
+    $(this).closest('.work-history').find('.editing-worksection').removeClass('editing-worksection');
+    $(this).closest('.work-history').find('.icon-tick').removeClass('icon-tick').addClass('icon-edit');
 
     e.preventDefault();
   });
@@ -2284,16 +2288,6 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
     var $thisVal = $(this).val();
 
     $(this).next('.editable-work').text($thisVal);
-  });
-
-  $('.work-history-wrapper').on('click', '.work-save', function(e) {
-    $(this).closest('.work-history').removeClass('edit-mode');
-    $(this).text('Edit').removeClass('work-save');
-
-    $(this).closest('.work-history').find('.editing-worksection').removeClass('editing-worksection');
-    $(this).closest('.work-history').find('.icon-tick').removeClass('icon-tick').addClass('icon-edit');
-
-    e.preventDefault();
   });
 
   //-- Errors on pattern library page
