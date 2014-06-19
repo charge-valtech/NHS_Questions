@@ -189,7 +189,7 @@ module.exports = function(grunt) {
       },
       sprint: {
         files: [
-          {expand: true, cwd: 'sprint/', src: ['apprentice/*.html', 'trainee/*.html', 'employer/*.html', '*.html'], dest: 'sprint/', ext: '.html'}
+          {expand: true, cwd: 'sprint/', src: ['apprentice/*.html', 'trainee/*.html', 'employer/*.html', '*.html', '!pattern-library.html'], dest: 'sprint/', ext: '.html'}
         ]
       }
     },
