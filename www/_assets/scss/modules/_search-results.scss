@@ -114,11 +114,13 @@
 .work-history-item.edit-mode {
   .toggle-content {
     display: block;
+    width: 100%;
   }
   .toggle-content.inline {
     display: inline-block;
-    margin-right: 3px;
+    margin-right: 6px;
     margin-bottom: $gutter-half;
+    width: 49%;
   }
   .work-hyphen,
   .toggle-content + span {

@@ -2195,38 +2195,91 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
 // ------------ Work experience entry ------------ //
 
   $('#addWorkBtn').on('click', function(e) {
-    var $workEmployer = $('#work-employer').val(),
-        $workTitle    = $('#work-title').val(),
-        $workRole     = $('#work-role').val(),
-        $workFrom     = $('#work-from').val(),
-        $workTo       = $('#work-to').val(),
-        $isCurrent    = $('#work-current').is(':checked'),
-        $isCurrValue  = ($isCurrent ? "Current" : ""),
-        $historyHTML  = '<div class="work-history grid-3-4">' +
-                          '<div class="hgroup-small">' +
-                            '<h3 class="work-editsection heading-small heading-with-border">' + 
-                              '<input class="form-control editable-work-input toggle-content" value="' + $workEmployer + '">' +
-                              '<span class="editable-work">' + $workEmployer + '</span>' +
-                              ' - ' + 
-                              '<input class="form-control editable-work-input toggle-content" value="' + $workTitle + '">' +
-                              '<span class="editable-work">' + $workTitle + '</span>' +
-                            '</h3>' +
-                            '<h4 class="subtitle work-editsection">'+ 
-                              '<input class="form-control editable-work-input toggle-content" value="' + $workFrom + '">' +
-                              '<span class="editable-work">' + $workFrom + '</span>' +
-                              ' - ' + 
-                              '<input class="form-control editable-work-input toggle-content" value="' + $workTo + $isCurrValue + '">' +
-                              '<span class="editable-work">' + $workTo + $isCurrValue + '</span>' +
-                            '</h4>' +
-                          '</div>' +
-                          '<p class="copy-16 work-editsection">'+ 
-                            '<textarea class="form-control editable-work-input toggle-content">' + $workRole + '</textarea>' +
-                            '<span class="editable-work">' + $workRole + '</span>' +
-                          '</p>' +
-                          '<p class="copy-16"><a href="#" class="work-delete">Delete</a></p>' +
-                        '</div>';
+    var $workEmployer    = $('#work-employer').val(),
+        $workTitle       = $('#work-title').val(),
+        $workRole        = $('#work-role').val(),
+        $workFrom        = $('#work-from').val(),
+        $workTo          = $('#work-to').val(),
+        $isCurrent       = $('#work-current').is(':checked'),
+        $isCurrValue     = ($isCurrent ? "Current" : ""),
+        $historyItemHTML = '<div class="grid-wrapper work-history-item">' +
+                              '<div class="work-controls">' +
+                                '<div class="work-edit ta-center"><span class="cell-span fake-link">Edit</span></div>' +
+                                '<div class="work-delete ta-center"><span class="cell-span"><i class="ir icon-remove">Remove</i></span></div>' +
+                              '</div>' +
+                              '<div class="grid grid-1-2">' +
+                                '<table class="table-no-btm-border table-compound">' +
+                                  '<colgroup>' +
+                                    '<col class="t100">' +
+                                    '<col>' +
+                                  '</colgroup>' +
+                                  '<thead>' +
+                                    '<tr>' +
+                                      '<th><span class="heading-span">Work experience</span></th>' +
+                                    '</tr>' +
+                                  '</thead>' +
+                                  '<tbody>' +
+                                    '<tr>' +
+                                      '<td>' + 
+                                        '<input type="text" class="form-control toggle-content inline width-all-49 editable-work-input" value="' +
+                                        $workEmployer +'">' +
+                                        '<span class="cell-span editable-work">' +
+                                        $workEmployer + '</span>' +
+                                        '<span class="cell-span work-hyphen">-</span>' +
+                                        '<input type="text" class="form-control toggle-content inline width-all-49 editable-work-input no-right-margin" value="' +
+                                        $workTitle + '">' +
+                                        '<span class="cell-span editable-work">' +
+                                        $workTitle + '</span>' +
+                                        '<div></div>' +
+                                        '<textarea class="form-control toggle-content editable-work-input">'+
+                                        $workRole +'</textarea>' +
+                                        '<span class="cell-span editable-work">' + 
+                                        $workRole +'</span>' +
+                                      '</td>' +
+                                    '</tr>' +
+                                  '</tbody>' +
+                                '</table>' +
+                              '</div>' +
+                              '<div class="grid grid-1-2">' +
+                                '<table class="table-no-btm-border table-compound">' +
+                                  '<colgroup>' +
+                                    '<col class="t30">' +
+                                    '<col class="t30">' +
+                                    '<col class="t25">' +
+                                    '<col class="t15">' +
+                                    '<col>' +
+                                  '</colgroup>' +
+                                  '<thead>' +
+                                    '<tr>' +
+                                      '<th><span class="heading-span">From</span></th>' +
+                                      '<th><span class="heading-span">To</span></th>' +
+                                      '<th></th>' +
+                                      '<th></th>' +
+                                    '</tr>' +
+                                  '</thead>' +
+                                  '<tbody>' +
+                                    '<tr>' +
+                                      '<td>' +
+                                        '<input type="text" class="form-control toggle-content editable-work-input" value="' +
+                                        $workFrom + '">' +
+                                        '<span class="cell-span editable-work">' +
+                                        $workFrom + '</span>' +
+                                      '</td>' +
+                                      '<td>' +
+                                        '<input type="text" class="form-control toggle-content editable-work-input" value="' +
+                                        $workTo + '">' +
+                                        '<span class="cell-span editable-work">' +
+                                        $workTo + $isCurrValue + '</span>' +
+                                      '</td>' +
+                                      '<td></td>' +
+                                      '<td></td>' +
+                                    '</tr>' +
+                                  '</tbody>' +
+                                '</table>' +
+                              '</div>' +
+                            '</div>';
 
-    $('.work-history-wrapper').append($historyHTML);
+    $('.work-history-wrapper').append($historyItemHTML);
 
     $('#work-employer').val('');
     $('#work-title').val('');
