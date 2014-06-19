@@ -2090,8 +2090,8 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
                             '<input class="form-control qual-input-edit" type="text" value="' + $qualYear + '">' +
                             '<span class="qualSpan">' + $qualYear + '</span>' +
                           '</td>' +
-                          '<td class="fake-link td-qualEdit ta-center">Edit</td>' +
-                          '<td class="qualRemove ta-center"><i class="ir icon-remove">Remove</i></td>' +
+                          '<td class="td-qualEdit ta-center"><span class="fake-link cell-span">Edit</span></td>' +
+                          '<td class="qualRemove ta-center"><i class="cell-span"><i class="ir icon-remove">Remove</i></i></td>' +
                         '</tr>',
         $emptyTable  = '<div class="qualification-table"' + 'id="' + $qualID + '">' +
                         '<div class="hgroup-small">' +
@@ -2165,7 +2165,7 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
         $qualSpans = $this.siblings().find('span'),
         $editBoxes = $this.siblings().find('.qual-input-edit');
 
-    $this.text('Save').addClass('qualSave');
+    $this.html('<span class="fake-link cell-span">Save</span>').addClass('qualSave');
 
     $qualSpans.hide();
     $editBoxes.show();
@@ -2178,7 +2178,7 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
         $qualSpans  = $this.siblings().find('span'),
         $editBoxes  = $this.siblings().find('.qual-input-edit');
 
-    $this.text('Edit').removeClass('qualSave');
+    $this.html('<span class="fake-link cell-span">Edit</span>').removeClass('qualSave');
 
     $qualSpans.show();
     $editBoxes.hide();
@@ -2268,20 +2268,6 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
     $(this).closest('.work-history').find('.icon-tick').removeClass('icon-tick').addClass('icon-edit');
 
     e.preventDefault();
-  });
-
-  $('.work-history-wrapper').on('click', '.icon-edit', function() {
-    $(this).closest('.work-editsection').addClass('editing-worksection');
-
-    $(this).removeClass('icon-edit').addClass('icon-tick').text('Done');
-
-  });
-
-  $('.work-history-wrapper').on('click', '.icon-tick', function() {
-    $(this).closest('.work-editsection').removeClass('editing-worksection');
-    
-    $(this).removeClass('icon-tick').addClass('icon-edit').text('Edit');
-
   });
 
   $('.work-history-wrapper').on('keyup', '.editable-work-input', function() {
