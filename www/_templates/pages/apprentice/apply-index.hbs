@@ -211,9 +211,13 @@ headerTitle: Find an Apprenticeship
   <div class="work-history-wrapper">
 
     <div class="grid-3-4">
-      <div class="grid-wrapper">
+      <div class="grid-wrapper work-history-item">
+        <div class="work-controls">
+          <div class="work-edit ta-center"><span class="cell-span fake-link">Edit</span></div>
+          <div class="work-delete ta-center"><span class="cell-span"><i class="ir icon-remove">Remove</i></span></div>
+        </div>
         <div class="grid grid-1-2">
-          <table class="table-no-btm-border">
+          <table class="table-no-btm-border table-compound">
             <colgroup>
               <col class="t100">
               <col>
@@ -226,19 +230,21 @@ headerTitle: Find an Apprenticeship
             <tbody>
               <tr>
                 <td>
+                  <input type="text" class="form-control toggle-content inline width-all-49 work-input-edit" value="Boots">
                   <span class="cell-span">Boots</span>
-                  <span class="cell-span">-</span>
+                  <span class="cell-span work-hyphen">-</span>
+                  <input type="text" class="form-control toggle-content inline width-all-49 work-input-edit no-right-margin" value="Customer service">
                   <span class="cell-span">Customer service</span>
-                  <div>
-                    <span class="cell-span">I did Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam similique, tempore neque ratione optio, excepturi saepe nobis qui delectus unde.</span>
-                  </div>
+                  <div></div>
+                  <textarea name="" value="" class="form-control toggle-content work-input-edit"></textarea>
+                  <span class="cell-span">I did Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam similique, tempore neque ratione optio, excepturi saepe nobis qui delectus unde.</span>
                 </td>
               </tr>
             </tbody>
           </table>
         </div>
         <div class="grid grid-1-2">
-          <table class="table-no-btm-border">
+          <table class="table-no-btm-border table-compound">
             <colgroup>
               <col class="t30">
               <col class="t30">
@@ -256,10 +262,16 @@ headerTitle: Find an Apprenticeship
             </thead>
             <tbody>
               <tr>
-                <td><span class="cell-span">2012</span></td>
-                <td><span class="cell-span">2013</span></td>
-                <td class="ta-center"><span class="cell-span fake-link">Edit</span></td>
-                <td class="ta-center"><span class="cell-span"><i class="ir icon-remove">Remove</i></span></td>
+                <td>
+                  <input type="text" class="form-control toggle-content work-input-edit" value="May 2012">
+                  <span class="cell-span">May 2012</span>
+                </td>
+                <td>
+                  <input type="text" class="form-control toggle-content work-input-edit" value="Feb 2013">
+                  <span class="cell-span">Feb 2013</span>
+                </td>
+                <td></td>
+                <td></td>
               </tr>
             </tbody>
           </table>

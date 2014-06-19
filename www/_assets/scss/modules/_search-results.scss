@@ -86,25 +86,42 @@
 
 /* Application form stuff */
 
-.edit-mode {
-  .editable-work {
+.work-history-item {
+  margin-bottom: $gutter-half;
+  position: relative;
+  @include media(tablet) {
+    margin-bottom: $gutter;
+  }
+  .work-controls {
+    @include core-14;
+    position: absolute;
+    width: 40%;
+    top: 5px; right: 0;
+    @include media(tablet) {
+      top: 50px;
+      width: 20%;
+    }
+  }
+  .work-edit, 
+  .work-delete {
     display: inline-block;
-    padding: 7px 4px;
+    margin-right: -4px;
+    vertical-align: middle;
+    width: 50%;
   }
 }
 
-.editing-worksection {
+.work-history-item.edit-mode {
   .toggle-content {
+    display: block;
+  }
+  .toggle-content.inline {
     display: inline-block;
-    width: auto;
+    margin-right: 3px;
+    margin-bottom: $gutter-half;
   }
-  textarea.toggle-content {
-    width: 100%;
-    @include media(tablet) {
-      width: 75%;
-    }
-  }
-  .editable-work {
+  .work-hyphen,
+  .toggle-content + span {
     display: none;
   }
 }

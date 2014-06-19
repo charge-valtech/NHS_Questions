@@ -157,12 +157,12 @@ select {
   // Disable webkit appearance and remove rounded corners
   border-radius: 0;
   -webkit-appearance: none;
-  @include media(tablet){
-    width: 50%;
-    .grid & {
-      width: 75%;
-    }
-  }
+  // @include media(tablet){
+  //   width: 50%;
+  //   .grid & {
+  //     width: 75%;
+  //   }
+  // }
 }
 
 

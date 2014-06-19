@@ -2249,20 +2249,20 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
   });
 
   $('.work-history-wrapper').on('click', '.work-delete', function(e) {
-    $(this).closest('.work-history').remove();
+    $(this).closest('.work-history-item').remove();
     e.preventDefault();
   });
 
   $('.work-history-wrapper').on('click', '.work-edit', function(e) {
-    $(this).closest('.work-history').addClass('edit-mode');
-    $(this).text('Save').addClass('work-save');
+    $(this).closest('.work-history-item').addClass('edit-mode');
+    $(this).html('<span class="cell-span fake-link">Save</span>').addClass('work-save');
 
     e.preventDefault();
   });
 
   $('.work-history-wrapper').on('click', '.work-save', function(e) {
-    $(this).closest('.work-history').removeClass('edit-mode');
-    $(this).text('Edit').removeClass('work-save');
+    $(this).closest('.work-history-item').removeClass('edit-mode');
+    $(this).html('<span class="cell-span fake-link">Edit</span>').removeClass('work-save');
 
     $(this).closest('.work-history').find('.editing-worksection').removeClass('editing-worksection');
     $(this).closest('.work-history').find('.icon-tick').removeClass('icon-tick').addClass('icon-edit');
