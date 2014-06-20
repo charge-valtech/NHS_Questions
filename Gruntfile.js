@@ -274,7 +274,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('default', ['jshint', 'concat:dev', 'sass', 'assemble', 'connect', 'watch']);
 
-  grunt.registerTask('sync', ['modernizr', 'jshint', 'concat:dev', 'sass', 'assemble', 'browserSync', 'watch']);
+  grunt.registerTask('sync', ['jshint', 'concat:dev', 'sass', 'assemble', 'browserSync', 'watch']);
 
   grunt.registerTask('sprint', ['uglify:dist', 'replace:map', 'clean:sprint', 'replace:scripts', 'copyto:sprint', 'prettify:sprint']);
 
