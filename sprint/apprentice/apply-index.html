@@ -170,23 +170,23 @@
             </div>
           </div>
         </fieldset>
-        <fieldset class="fieldset-with-border">
-          <legend class="heading-large">Education</legend>
-          <div class="form-group">
-            <label for="education-where" class="form-label">Name of most recent school/college</label>
-            <input type="text" id="education-where" class="form-control">
-          </div>
-          <div class="inline-fixed">
-            <div class="form-group">
-              <label for="education-from" class="form-label">From</label>
-              <input type="text" class="form-control form-control-medium" id="education-from">
-            </div>
-            <div class="form-group">
-              <label for="education-to" class="form-label">To</label>
-              <input type="text" class="form-control form-control-medium" id="education-to">
-            </div>
-          </div>
-        </fieldset>
+        <!-- <fieldset class="fieldset-with-border">
+  <legend class="heading-large">Education</legend>
+  <div class="form-group">
+    <label for="education-where" class="form-label">Name of most recent school/college</label>
+    <input type="text" id="education-where" class="form-control">
+  </div>
+  <div class="inline-fixed">
+    <div class="form-group">
+      <label for="education-from" class="form-label">From</label>
+      <input type="text" class="form-control form-control-medium" id="education-from">
+    </div>
+    <div class="form-group">
+      <label for="education-to" class="form-label">To</label>
+      <input type="text" class="form-control form-control-medium" id="education-to">
+    </div>
+  </div>
+</fieldset> -->
         <fieldset class="fieldset-with-border">
           <legend class="heading-large">Qualifications</legend>
           <div class="enter-qualification clearfix">
@@ -214,6 +214,10 @@
               <label for="other-qual" class="form-label">Name of other qualification</label>
               <input type="text" class="form-control" id="other-qual">
             </div>
+            <div class="form-group">
+              <label for="qual-where" class="form-label">Name of school/college</label>
+              <input id="qual-where" type="text" class="form-control">
+            </div>
             <div class="form-group form-group-compound">
               <label for="subject-name" class="form-label">Subject</label>
               <input type="text" class="form-control" id="subject-name">
@@ -236,6 +240,7 @@
             <div class="qualification-table toggle-content">
               <div class="hgroup-small">
                 <h3 class="heading-small heading-qualType"></h3>
+                <span class="subtitle subtitle-qualWhere"></span>
               </div>
               <table class="grid-3-4">
                 <colgroup>
@@ -328,7 +333,7 @@
             <textarea id="question3" class="form-control"></textarea>
           </div>
           <div class="form-group">
-            <label for="question4" class="form-label">Support</label>
+            <label for="question4" class="form-label">Is there anything we can do to support your interview?</label>
             <textarea id="question4" class="form-control"></textarea>
           </div>
         </fieldset>
