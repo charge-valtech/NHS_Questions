@@ -74,6 +74,7 @@ $(function() {
   $('#saveQualification').on('click', function(e){
     var $qualType    = $('#qual-type').val(),
         $qualID      = $('#qual-type').find(":selected").attr('class'),
+        $qualWhere   = $('#qual-where').val(),
         $qualSubject = $('#subject-name').val(),
         $qualGrade   = $('#subject-grade').val(),
         $qualYear    = $('#subject-year').val(),
@@ -101,6 +102,7 @@ $(function() {
         $emptyTable  = '<div class="qualification-table"' + 'id="' + $qualID + '">' +
                         '<div class="hgroup-small">' +
                           '<h3 class="heading-small heading-qualType">' + $qualTorO + '</h3>' +
+                          '<span class="subtitle subtitle-qualWhere">'+ $qualWhere +'</span>' +
                         '</div>' +
                         '<table class="grid-3-4">' +
                           '<colgroup>' +
@@ -129,6 +131,7 @@ $(function() {
     if($('.tr-qualRow').length == 0) {
       $('.qualification-table').show().attr('id', $qualID);
       $('.heading-qualType').html($qualTorO);
+      $('.subtitle-qualWhere').html($qualWhere);
       $('.tbody-qual').html($rowHTML);
     } else {
       $('#' + $qualID).find('.tbody-qual').append($rowHTML);
