@@ -97,8 +97,9 @@ summary {
 }
 
 details summary {
+  @include core-19;
   cursor: pointer;
-  @extend .copy-19;
+  margin-bottom: $gutter-half;
 }
 
 details summary:focus {
