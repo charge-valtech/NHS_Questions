@@ -159,6 +159,9 @@ select {
   -webkit-appearance: none;
   @include media(tablet){
     width: 50%;
+    .controls-3-4 & {
+      width: 75%;
+    }
   }
 }
 
