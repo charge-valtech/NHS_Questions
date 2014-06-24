@@ -163,6 +163,14 @@ select {
       width: 75%;
     }
   }
+  &[readonly] {
+    border: none;
+    border-left: 1px solid $border-colour;
+    cursor: text;
+    &:focus {
+      outline: none;
+    }
+  }
 }
 
 
