@@ -17,6 +17,14 @@ ul {
   }
 }
 
+.list-max-11 {
+  @include core-16;
+  max-height: 17.25em; /*276px*/
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+}
+
 ol {
   margin-left: 25px;
 }
