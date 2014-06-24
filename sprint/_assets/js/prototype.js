@@ -85,16 +85,13 @@ $(function() {
         $qualTorO    = ($isOther ? $otherQual : $qualType),
         $rowHTML     = '<tr class="tr-qualRow">' +
                           '<td class="td-qualcell">' +
-                            '<input class="form-control qual-input-edit" type="text" value="' + $qualSubject + '">' +
-                            '<span class="qualSpan">' + $qualSubject + '</span>' +
+                            '<input class="form-control qual-input-edit" type="text" value="' + $qualSubject + '" readonly>' +
                           '</td>' +
                           '<td class="td-qualcell">' +
-                            '<input class="form-control qual-input-edit" type="text" value="' + $qualGrade + '">' +
-                            '<span class="qualSpan">' + $qualGrade + $isPredValue + '</span>' +
+                            '<input class="form-control qual-input-edit" type="text" value="' + $qualGrade + $isPredValue + '" readonly>' +
                           '</td>' +
                           '<td class="td-qualcell">' +
-                            '<input class="form-control qual-input-edit" type="text" value="' + $qualYear + '">' +
-                            '<span class="qualSpan">' + $qualYear + '</span>' +
+                            '<input class="form-control qual-input-edit" type="text" value="' + $qualYear + '" readonly>' +
                           '</td>' +
                           '<td class="td-qualEdit ta-center"><span class="fake-link cell-span">Edit</span></td>' +
                           '<td class="qualRemove ta-center"><i class="cell-span"><i class="ir icon-remove">Remove</i></i></td>' +
@@ -168,34 +165,24 @@ $(function() {
 
   $('.qualifications-wrapper').on('click', '.td-qualEdit', function(e) {
     var $this      = $(this),
-        $qualSpans = $this.siblings().find('span'),
         $editBoxes = $this.siblings().find('.qual-input-edit');
 
     $this.html('<span class="fake-link cell-span">Save</span>').addClass('qualSave');
 
-    $qualSpans.hide();
-    $editBoxes.show();
+    $editBoxes.removeAttr('readonly');
 
     e.preventDefault();
   });
 
   $('.qualifications-wrapper').on('click', '.qualSave', function(e) {
     var $this       = $(this),
-        $qualSpans  = $this.siblings().find('span'),
         $editBoxes  = $this.siblings().find('.qual-input-edit');
 
     $this.html('<span class="fake-link cell-span">Edit</span>').removeClass('qualSave');
 
-    $qualSpans.show();
-    $editBoxes.hide();
+    $editBoxes.prop('readonly', 'readonly');
 
     e.preventDefault();
-  });
-
-  $('.qualifications-wrapper').on('keyup', '.qual-input-edit', function() {
-    var $thisVal = $(this).val();
-
-    $(this).next('.qualSpan').text($thisVal);
   });
 
 // ------------ Work experience entry ------------ //
