@@ -21,19 +21,22 @@ headerTitle: Find an Apprenticeship
   <legend class="heading-large">Your details</legend>
   <div class="form-group form-group-compound">
     <label for="first-name" class="form-label">First name</label>
-    <input id="first-name" type="text" class="form-control" autocapitalize="words" autocorrect="off" value="John" readonly>
+    <!-- <input id="first-name" type="text" class="form-control" autocapitalize="words" autocorrect="off" value="John" readonly> -->
+    <span class="form-prepopped">John</span>
   </div>
   <div class="form-group form-group-compound">
     <label for="middle-name" class="form-label">Middle name (optional)</label>
-    <input id="middle-name" type="text" class="form-control" autocapitalize="words" autocorrect="off" value="Michael" readonly>
+    <!-- <input id="middle-name" type="text" class="form-control" autocapitalize="words" autocorrect="off" value="Michael" readonly> -->
+    <span class="form-prepopped">Michael</span>
   </div>
   <div class="form-group">
     <label for="last-name" class="form-label">Last name</label>
-    <input id="last-name" type="text" class="form-control" autocapitalize="words" autocorrect="off" value="Smith" readonly>
+    <!-- <input id="last-name" type="text" class="form-control" autocapitalize="words" autocorrect="off" value="Smith" readonly> -->
+    <span class="form-prepopped">Smith</span>
   </div>
-  <div class="form-group form-group-compound date-input">
+  <div class="form-group date-input">
     <p class="form-label">Date of birth</p>
-    <div class="form-group form-group-compound">
+    <!-- <div class="form-group form-group-compound">
       <label class="form-hint" for="date-day2">Day</label>
       <input type="tel" class="form-control" maxlength="2" id="date-day2" value="12" readonly>
     </div>
@@ -44,7 +47,8 @@ headerTitle: Find an Apprenticeship
     <div class="form-group form-group-compound form-group-year">
       <label class="form-hint" for="date-year2">Year</label>
       <input type="tel" class="form-control" maxlength="4" id="date-year2" value="1994" readonly>
-    </div>
+    </div> -->
+    <span class="form-prepopped">12/06/1994</span>
   </div>
 
   <div>
@@ -100,7 +104,8 @@ headerTitle: Find an Apprenticeship
     <h3 class="heading-small">Contact</h3>
     <div class="form-group">
       <label for="email-address" class="form-label">Email address</label>
-      <input type="email" id="email-address" class="form-control" autocapitalize="off" autocorrect="off" value="john.smith@email.com" readonly>
+      <!-- <input type="email" id="email-address" class="form-control" autocapitalize="off" autocorrect="off" value="john.smith@email.com" readonly> -->
+      <span class="form-prepopped">john.smith@email.com</span>
     </div>
     <div class="form-group">
       <label for="tel-number" class="form-label">Phone</label>
@@ -159,10 +164,9 @@ headerTitle: Find an Apprenticeship
     </div>
   </div>
   <div class="qualifications-wrapper">
-    <div class="qualification-table">
+    <div class="qualification-table" id="gcse">
       <div class="hgroup-small">
         <h3 class="heading-small heading-qualType">GCSE</h3>
-        <input class="form-control qual-input-edit" type="text" value="St Bernards School">
         <span class="subtitle subtitle-qualWhere">St Bernards School</span>
       </div>
       <table class="grid-3-4">
@@ -186,36 +190,13 @@ headerTitle: Find an Apprenticeship
         <tbody class="tbody-qual">
           <tr class="tr-qualRow">
             <td class="td-qualcell">
-              <input class="form-control qual-input-edit" type="text" value="Maths">
-              <span class="qualSpan">Maths</span>
+              <input class="form-control qual-input-edit" type="text" value="Maths" readonly>
             </td>
             <td class="td-qualcell">
-              <input class="form-control qual-input-edit" type="text" value="A">
-              <span class="qualSpan">A</span>
+              <input class="form-control qual-input-edit" type="text" value="A" readonly>
             </td>
             <td class="td-qualcell">
-              <input class="form-control qual-input-edit" type="text" value="2011">
-              <span class="qualSpan">2011</span>
-            </td>
-            <td class="td-qualEdit ta-center">
-              <span class="fake-link cell-span">Edit</span>
-            </td>
-            <td class="qualRemove ta-center">
-              <i class="cell-span"><i class="ir icon-remove">Remove</i></i>
-            </td>
-          </tr>
-          <tr class="tr-qualRow">
-            <td class="td-qualcell">
-              <input class="form-control qual-input-edit" type="text" value="English">
-              <span class="qualSpan">English</span>
-            </td>
-            <td class="td-qualcell">
-              <input class="form-control qual-input-edit" type="text" value="B">
-              <span class="qualSpan">B</span>
-            </td>
-            <td class="td-qualcell">
-              <input class="form-control qual-input-edit" type="text" value="2011">
-              <span class="qualSpan">2011</span>
+              <input class="form-control qual-input-edit" type="text" value="2011" readonly>
             </td>
             <td class="td-qualEdit ta-center">
               <span class="fake-link cell-span">Edit</span>

@@ -163,14 +163,21 @@ select {
       width: 75%;
     }
   }
+  table & {
+    width: 100%;
+  }
   &[readonly] {
     border: none;
-    border-left: 1px solid $border-colour;
     cursor: text;
+    padding: 5px;
     &:focus {
       outline: none;
     }
   }
+}
+
+.form-prepopped {
+  color: $grey-1;
 }
 
 
