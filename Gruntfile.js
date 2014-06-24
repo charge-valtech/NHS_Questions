@@ -7,7 +7,7 @@ module.exports = function(grunt) {
         separator: ';'
       },
       dev: {
-        src: ['www/_assets/js/vendor-concat/*.js', 'www/_assets/js/*.js', '!www/_assets/js/scripts.js', '!www/_assets/js/scripts.min.js'],
+        src: ['www/_assets/js/vendor-concat/*.js', 'www/_assets/js/*.js', '!www/_assets/js/prototype.js', '!www/_assets/js/scripts.js', '!www/_assets/js/scripts.min.js'],
         dest: 'www/_assets/js/scripts.js'
       }
     },
@@ -106,6 +106,7 @@ module.exports = function(grunt) {
             'www/_assets/js{,/**/*}',
             '!www/_assets/js/vendor{,/**/*}',
             '!www/_assets/js/scripts.min.js',
+            '!www/_assets/js/prototype.js',
             'www/_templates{,/**/*}',
             'www/z-backups{,/**/*}',
             'www/_assets/css/*.map'
