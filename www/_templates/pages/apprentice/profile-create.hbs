@@ -107,16 +107,13 @@ headerTitle: Find an Apprenticeship
     <label for="pref-tel" class="block-label">
       <input name="preference" type="radio" id="pref-tel">Phone
     </label>
-    <label for="pref-post" class="block-label">
-      <input name="preference" type="radio" id="pref-post">Post
-    </label>
   </div>
 </fieldset>
-<fieldset>
+<fieldset class="fieldset-with-border">
   <legend class="heading-large">Sign in details</legend>
   <div class="form-group">
-    <p class="form-label">Your username is your email address</p>
-    <span class="form-prepopped linked-input-slave"></span>
+    <p class="form-label">Username is your email address</p>
+    <span class="form-prepopped hidden linked-input-slave"></span>
     <a href="#emailInput">Edit your email</a>
   </div>
   <div class="form-group">
@@ -129,6 +126,20 @@ headerTitle: Find an Apprenticeship
     <p class="form-hint strength-indicator">Password strength: <span id="pass_meter" class=""></span></p>
   </div>
 </fieldset>
+<fieldset>
+  <details>
+    <summary role="button">Read our terms &amp; conditions</summary>
+    <div class="max-height-15 scrolling-panel text copy-16">
+      {{> terms }}
+    </div>
+  </details>
+  <div class="form-group">
+    <label for="accept-terms" class="block-label">
+      <input type="checkbox" id="accept-terms">I accept the terms &amp; conditions
+    </label>
+  </div>
+</fieldset>
+
 <div class="form-group">
   <a class="button" href="profile-complete.html">Create account</a>
   <p><a class="button-link" href="index.html">Back</a></p>

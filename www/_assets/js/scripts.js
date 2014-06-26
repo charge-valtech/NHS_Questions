@@ -1797,7 +1797,10 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
   $('.linked-input-master').keyup(function() {
     var masterVal = $(this).val();
     $('.linked-input-slave').val(masterVal);
-    $('.linked-input-slave').text(masterVal);
+    $('.linked-input-slave').removeClass('hidden').text(masterVal);
+    if($(this).val() == '') {
+      $('.linked-input-slave').addClass('hidden');
+    }
   });
 
   // Add/remove selected class
