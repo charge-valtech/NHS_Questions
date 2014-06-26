@@ -75,6 +75,16 @@ $(function() {
     $('.summary-box').toggle();
   });
 
+  $('.inpage-focus').on('click', function() {
+    var $this      = $(this),
+        $target    = $this.attr('href'),
+        $targetFor = $($target).attr('for');
+
+    $('#' + $targetFor).focus();
+  });
+
+// -- Password strength indicator 
+
   $("#password-input").keyup(function() {
     initializeStrengthMeter();
   });

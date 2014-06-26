@@ -1829,6 +1829,16 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
     $('.summary-box').toggle();
   });
 
+  $('.inpage-focus').on('click', function() {
+    var $this      = $(this),
+        $target    = $this.attr('href'),
+        $targetFor = $($target).attr('for');
+
+    $('#' + $targetFor).focus();
+  });
+
+// -- Password strength indicator 
+
   $("#password-input").keyup(function() {
     initializeStrengthMeter();
   });
