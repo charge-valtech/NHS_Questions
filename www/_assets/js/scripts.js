@@ -1786,13 +1786,6 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
 
   });
 
-  // Removed due to lack of support on mobile and confusing to users
-  // $('.date-input').on('keyup', '.form-control', function(){
-  //   if($(this).val().length==$(this).attr("maxlength")){
-  //     $(this).parent().next('.form-group').find('.form-control').focus();
-  //   }
-  // });
-
   // Create linked input fields (For using email address as username)
   $('.linked-input-master').keyup(function() {
     var masterVal = $(this).val();
@@ -1809,7 +1802,6 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
     $('input:not(:checked)').parent().removeClass('selected');
     $('input:checked').parent().addClass('selected');
 
-
     // Show data-toggle content
     var target = $(this).parent().attr('data-target');
     $('#'+target).show();
@@ -1818,9 +1810,6 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
     if($(this).prop('checked') != true) {
       $(this).parent().next('.toggle-content').hide();
     }
-    // $('.toggle-content').hide();
-
-
   });
 
   $('.amend-answers').on('click', function() {
@@ -1845,11 +1834,9 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
   });
 
   function initializeStrengthMeter() {
-    var username = $('#username-input').val();
     $("#pass_meter").pwStrengthManager({
       password: $("#password-input").val(),
       minChars : "8",
-      // blackList : [username],
       advancedStrength: true
     });
   }
