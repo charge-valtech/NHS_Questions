@@ -120,7 +120,8 @@ module.exports = function(grunt) {
         ],
         options: {
           ignore: [
-            'sprint/_assets/video{,/**/*}'
+            'sprint/_assets/video{,/**/*}',
+            'sprint/_assets/js/prototype.js'
           ]
         }
       },
