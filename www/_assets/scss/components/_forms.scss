@@ -134,9 +134,6 @@ select {
   @include copy-19;
   color: $secondary-text-colour;
   display: block;
-  @include media (tablet) {
-    margin-top: 8px;
-  }
 }
 
 // Used for paragraphs i n-between forms
@@ -327,9 +324,9 @@ select {
     width: 100%;
   }
   .pw-masktoggle {
-    margin-right: 0;
+    margin: 0;
     position: absolute;
-    top: 0; right: 0;
+    bottom: 0; right: 0;
   }
   @include media(tablet) {
     width: 50%;
@@ -351,6 +348,9 @@ select {
 .qual-input-edit {
   @media (max-width: 450px) {
     font-size: 16px;
+    &[readonly] {
+      font-size: 12px;
+    }
   }
 }
 

@@ -43,6 +43,7 @@ $(function() {
   $('.linked-input-master').keyup(function() {
     var masterVal = $(this).val();
     $('.linked-input-slave').val(masterVal);
+    $('.linked-input-slave').text(masterVal);
   });
 
   // Add/remove selected class
@@ -91,7 +92,7 @@ $(function() {
     $("#pass_meter").pwStrengthManager({
       password: $("#password-input").val(),
       minChars : "8",
-      blackList : [username],
+      // blackList : [username],
       advancedStrength: true
     });
   }

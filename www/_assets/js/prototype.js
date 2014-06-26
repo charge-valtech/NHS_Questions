@@ -192,9 +192,11 @@ $(function() {
         $workTitle       = $('#work-title').val(),
         $workRole        = $('#work-role').val(),
         $workFrom        = $('#work-from').val(),
+        $workFYear       = $('#work-from-year').val(),
         $workTo          = $('#work-to').val(),
+        $workTYear       = $('#work-to-year').val(),
         $isCurrent       = $('#work-current').is(':checked'),
-        $isCurrValue     = ($isCurrent ? "Current" : ""),
+        $isCurrValue     = ($isCurrent ? "Current" : $workTo + ' ' + $workTYear),
         $historyItemHTML = '<div class="grid-wrapper work-history-item">' +
                               '<div class="work-controls">' +
                                 '<div class="work-edit ta-center"><span class="cell-span fake-link">Edit</span></div>' +
@@ -254,15 +256,15 @@ $(function() {
                                     '<tr>' +
                                       '<td>' +
                                         '<input type="text" class="form-control toggle-content editable-work-input" value="' +
-                                        $workFrom + '">' +
+                                        $workFrom + ' ' + $workFYear + '">' +
                                         '<span class="cell-span editable-work">' +
-                                        $workFrom + '</span>' +
+                                        $workFrom + ' ' + $workFYear + '</span>' +
                                       '</td>' +
                                       '<td>' +
                                         '<input type="text" class="form-control toggle-content editable-work-input" value="' +
-                                        $workTo + '">' +
+                                        $isCurrValue + '">' +
                                         '<span class="cell-span editable-work">' +
-                                        $workTo + $isCurrValue + '</span>' +
+                                        $isCurrValue + '</span>' +
                                       '</td>' +
                                       '<td></td>' +
                                       '<td></td>' +
@@ -277,11 +279,13 @@ $(function() {
     $('#work-employer').val('');
     $('#work-title').val('');
     $('#work-role').val('');
-    $('#work-from').val('');
-    $('#work-to').val('');
+    $('#work-from-year').val('');
+    $('#work-to-year').val('');
     $('#work-current').prop('checked', false);
     $('#work-to').parent().removeClass('disabled');
+    $('#work-to-year').parent().removeClass('disabled');
     $('#work-to').prop('disabled', false);
+    $('#work-to-year').prop('disabled', false);
 
     e.preventDefault();
 
@@ -289,9 +293,11 @@ $(function() {
 
   $('#work-current').click(function() {
     $('#work-to').prop('disabled', $(this).prop('checked'));
+    $('#work-to-year').prop('disabled', $(this).prop('checked'));
     $('#work-to').parent().toggleClass('disabled', $(this).prop('checked'));
+    $('#work-to-year').parent().toggleClass('disabled', $(this).prop('checked'));
 
-    $('#work-to').val('');
+    $('#work-to-year').val('');
   });
 
   $('.work-history-wrapper').on('click', '.work-delete', function(e) {

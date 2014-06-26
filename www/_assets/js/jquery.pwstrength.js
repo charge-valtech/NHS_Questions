@@ -47,7 +47,7 @@
           var errors = this.customValidators();
 
           if ("" == this.settings.password) {
-            this.info = "Password cannot be empty";
+            this.info = "Cannot be empty";
             this.className = "strength-weak";
           } else if (errors == 0) {
             var strength = zxcvbn(this.settings.password, this.settings.blackList);
@@ -70,7 +70,7 @@
                 this.className = "strength-strong";
                 break;
               case 4:
-                this.info = "Strongest";
+                this.info = "Very strong";
                 this.className = "strength-strong";
                 break;
             }
@@ -80,7 +80,7 @@
         },
 				minChars: function() {
           if (this.settings.password.length < this.settings.minChars) {
-            this.info = "Must be at least " + this.settings.minChars + " characters";
+            this.info = "At least " + this.settings.minChars + " characters";
             return false;
           } else {
             return true;
