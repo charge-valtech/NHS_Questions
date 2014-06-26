@@ -286,17 +286,57 @@
               <textarea type="text" class="form-control" id="work-role"></textarea>
             </div>
             <div class="inline-fixed">
-              <div class="form-group">
+              <div class="form-group form-group-compound">
                 <label for="work-from" class="form-label">From</label>
-                <input type="text" class="form-control form-control-medium" id="work-from">
+                <div class="form-group form-group-compound">
+                  <span class="form-hint">Month</span>
+                  <select name="" id="work-from">
+                    <option value="Jan">Jan</option>
+                    <option value="Feb">Feb</option>
+                    <option value="Mar">Mar</option>
+                    <option value="Apr">Apr</option>
+                    <option value="May">May</option>
+                    <option value="June">June</option>
+                    <option value="July">July</option>
+                    <option value="Aug">Aug</option>
+                    <option value="Sept">Sept</option>
+                    <option value="Oct">Oct</option>
+                    <option value="Nov">Nov</option>
+                    <option value="Dec">Dec</option>
+                  </select>
+                </div>
+                <div class="form-group form-group-compound">
+                  <span class="form-hint">Year</span>
+                  <input type="tel" class="form-control form-control-medium" maxlength="4" id="work-from-year">
+                </div>
               </div>
               <div class="form-group">
                 <label for="work-to" class="form-label">To</label>
-                <input type="text" class="form-control form-control-medium" id="work-to">
-              </div>
-              <div class="form-group">
-                <input id="work-current" type="checkbox">
-                <label for="work-current">Current</label>
+                <div class="form-group form-group-compound">
+                  <span class="form-hint">Month</span>
+                  <select name="" id="work-to">
+                    <option value="Jan">Jan</option>
+                    <option value="Feb">Feb</option>
+                    <option value="Mar">Mar</option>
+                    <option value="Apr">Apr</option>
+                    <option value="May">May</option>
+                    <option value="June">June</option>
+                    <option value="July">July</option>
+                    <option value="Aug">Aug</option>
+                    <option value="Sept">Sept</option>
+                    <option value="Oct">Oct</option>
+                    <option value="Nov">Nov</option>
+                    <option value="Dec">Dec</option>
+                  </select>
+                </div>
+                <div class="form-group form-group-compound">
+                  <span class="form-hint">Year</span>
+                  <input type="tel" class="form-control form-control-medium" maxlength="4" id="work-to-year">
+                </div>
+                <div class="form-group form-group-compound">
+                  <input id="work-current" type="checkbox">
+                  <label for="work-current">Current</label>
+                </div>
               </div>
             </div>
             <div class="form-group">
