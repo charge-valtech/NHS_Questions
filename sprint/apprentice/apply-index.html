@@ -75,21 +75,21 @@
         </section>
         <fieldset class="fieldset-with-border">
           <legend class="heading-large">Your details</legend>
-          <div class="form-group form-group-compound">
-            <label for="first-name" class="form-label">First name</label>
-            <!-- <input id="first-name" type="text" class="form-control" autocapitalize="words" autocorrect="off" value="John" readonly> -->
-            <span class="form-prepopped">John</span>
-          </div>
-          <div class="form-group form-group-compound">
-            <label for="middle-name" class="form-label">Middle name (optional)</label>
-            <!-- <input id="middle-name" type="text" class="form-control" autocapitalize="words" autocorrect="off" value="Michael" readonly> -->
-            <span class="form-prepopped">Michael</span>
-          </div>
           <div class="form-group">
-            <label for="last-name" class="form-label">Last name</label>
-            <!-- <input id="last-name" type="text" class="form-control" autocapitalize="words" autocorrect="off" value="Smith" readonly> -->
-            <span class="form-prepopped">Smith</span>
+            <label for="first-name" class="form-label">Full name</label>
+            <!-- <input id="first-name" type="text" class="form-control" autocapitalize="words" autocorrect="off" value="John" readonly> -->
+            <span class="form-prepopped">John Michael Smith</span>
           </div>
+          <!--   <div class="form-group form-group-compound">
+    <label for="middle-name" class="form-label">Middle name (optional)</label>
+    <input id="middle-name" type="text" class="form-control" autocapitalize="words" autocorrect="off" value="Michael" readonly>
+    <span class="form-prepopped">Michael</span>
+  </div>
+  <div class="form-group">
+    <label for="last-name" class="form-label">Last name</label>
+    <input id="last-name" type="text" class="form-control" autocapitalize="words" autocorrect="off" value="Smith" readonly>
+    <span class="form-prepopped">Smith</span>
+  </div> -->
           <div class="form-group date-input">
             <p class="form-label">Date of birth</p>
             <!-- <div class="form-group form-group-compound">
@@ -106,67 +106,69 @@
     </div> -->
             <span class="form-prepopped">12/06/1994</span>
           </div>
-          <div>
-            <h3 class="heading-small">Address</h3>
-            <div class="inline-fixed">
-              <div class="form-group form-group-compound">
-                <label for="post-code" class="form-label">Post code</label>
-                <input id="post-code" type="text" class="form-control form-control-large " autocapitalize="characters"
-                autocorrect="off" value="SL3 2BB">
-              </div>
-              <div class="form-group form-group-compound">
-                <a href="#" class="button address-find-btn">Find address</a>
-              </div>
-            </div>
-            <div class="address-find-select form-group">
-              <label for="address-select" class="form-label">Select your address</label>
-              <select name="" id="address-select">
-                <option value="void">-- 5 found --</option>
-                <option class="address-select-option" value="36 Bolton Road">36 Bolton Road</option>
-                <option selected class="address-select-option" value="37 Bolton Road">37 Bolton Road</option>
-                <option class="address-select-option" value="38 Bolton Road">38 Bolton Road</option>
-                <option class="address-select-option" value="39 Bolton Road">39 Bolton Road</option>
-                <option class="address-select-option" value="40 Bolton Road">40 Bolton Road</option>
-              </select>
-            </div>
-            <div class="form-group">
-              Or you can <a href="#" class="address-manual-btn">enter address manually</a>
-            </div>
-            <div class="address-manual-input panel-indent">
-              <div class="form-group form-group-compound">
-                <label for="address1" class="form-label">First line of address</label>
-                <input id="address1" type="text" class="form-control" autocorrect="off" value="37 Bolton Road">
-              </div>
-              <div class="form-group form-group-compound">
-                <label for="address2" class="form-label">Second line (optional)</label>
-                <input id="address2" type="text" class="form-control" autocorrect="off">
-              </div>
-              <div class="form-group form-group-compound">
-                <label for="address3" class="form-label">Town or city</label>
-                <input id="address3" type="text" class="form-control" autocorrect="off" value="Slough">
-              </div>
-              <div class="form-group form-group-compound">
-                <label for="address3b" class="form-label">County</label>
-                <input id="address3b" type="text" class="form-control" autocorrect="off" value="Berkshire">
-              </div>
-              <div class="form-group form-group-compound">
-                <label for="address4" class="form-label">Post code</label>
-                <input id="address4" type="text" class="form-control form-control-large" autocapitalize="characters"
-                autocorrect="off" value="SL3 2BB">
-              </div>
-            </div>
+          <div class="form-group">
+            <!-- <div class="inline-fixed">
+      <div class="form-group form-group-compound">
+        <label for="post-code" class="form-label">Post code</label>
+        <input id="post-code" type="text" class="form-control form-control-large " autocapitalize="characters" autocorrect="off" value="SL3 2BB">
+      </div>
+      <div class="form-group form-group-compound">
+        <a href="#" class="button address-find-btn">Find address</a>
+      </div>
+    </div>
+    <div class="address-find-select form-group">
+      <label for="address-select" class="form-label">Select your address</label>
+      <select name="" id="address-select">
+        <option value="void">-- 5 found --</option>
+        <option class="address-select-option" value="36 Bolton Road">36 Bolton Road</option>
+        <option selected class="address-select-option" value="37 Bolton Road">37 Bolton Road</option>
+        <option class="address-select-option" value="38 Bolton Road">38 Bolton Road</option>
+        <option class="address-select-option" value="39 Bolton Road">39 Bolton Road</option>
+        <option class="address-select-option" value="40 Bolton Road">40 Bolton Road</option>
+      </select>
+    </div>
+    <div class="form-group">
+      Or you can <a href="#" class="address-manual-btn">enter address manually</a>
+    </div>
+    <div class="address-manual-input panel-indent">
+      <div class="form-group form-group-compound">
+        <label for="address1" class="form-label">First line of address</label>
+        <input id="address1" type="text" class="form-control" autocorrect="off" value="37 Bolton Road">
+      </div>
+      <div class="form-group form-group-compound">
+        <label for="address2" class="form-label">Second line (optional)</label>
+        <input id="address2" type="text" class="form-control" autocorrect="off">
+      </div>
+      <div class="form-group form-group-compound">
+        <label for="address3" class="form-label">Town or city</label>
+        <input id="address3" type="text" class="form-control" autocorrect="off" value="Slough">
+      </div>
+      <div class="form-group form-group-compound">
+        <label for="address3b" class="form-label">County</label>
+        <input id="address3b" type="text" class="form-control" autocorrect="off" value="Berkshire">
+      </div>
+      <div class="form-group form-group-compound">
+        <label for="address4" class="form-label">Post code</label>
+        <input id="address4" type="text" class="form-control form-control-large" autocapitalize="characters" autocorrect="off" value="SL3 2BB">
+      </div>
+    </div> -->
+            <span class="form-label">Address</span>
+            <ul class="list-text form-prepopped">
+              <li>37 Bolton road</li>
+              <li>Slough</li>
+              <li>Berkshire</li>
+              <li>SL3 4BB</li>
+            </ul>
           </div>
           <div class="form-group">
-            <h3 class="heading-small">Contact</h3>
-            <div class="form-group">
-              <label for="email-address" class="form-label">Email address</label>
-              <!-- <input type="email" id="email-address" class="form-control" autocapitalize="off" autocorrect="off" value="john.smith@email.com" readonly> -->
-              <span class="form-prepopped">john.smith@email.com</span>
-            </div>
-            <div class="form-group">
-              <label for="tel-number" class="form-label">Phone</label>
-              <input id="tel-number" type="tel" class="form-control form-control-1-3" value="07954 389421">
-            </div>
+            <label for="email-address" class="form-label">Email address</label>
+            <!-- <input type="email" id="email-address" class="form-control" autocapitalize="off" autocorrect="off" value="john.smith@email.com" readonly> -->
+            <span class="form-prepopped">john.smith@email.com</span>
+          </div>
+          <div class="form-group">
+            <label for="tel-number" class="form-label">Phone</label>
+            <!-- <input id="tel-number" type="tel" class="form-control form-control-1-3" value="07954 389421"> -->
+            <span class="form-prepopped">07954 389421</span>
           </div>
         </fieldset>
         <fieldset class="fieldset-with-border">
