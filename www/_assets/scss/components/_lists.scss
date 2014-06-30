@@ -17,6 +17,10 @@ ul {
   }
 }
 
+.list-bullet {
+  margin-bottom: 20px;
+}
+
 .list-max-11 {
   @include core-16;
   max-height: 17.25em; /*276px*/

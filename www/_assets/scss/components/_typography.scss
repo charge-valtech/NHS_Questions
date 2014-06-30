@@ -258,6 +258,7 @@ p, pre {
   margin: 5px 0 20px;
   &.text {
     @include copy-19;
+    clear: both;
   }
 }
 
