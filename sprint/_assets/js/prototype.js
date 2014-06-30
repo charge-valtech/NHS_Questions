@@ -93,12 +93,42 @@ $(function() {
     $('#address3bPre').text(address3bPre);
     $('#address4Pre').text(address4Pre);
     $('#emailInputPre').text(emailInputPre);
+  }
 
+  $('#applyPreviewBtn').on('click', function() {
+    var $schoolName = $('#school-name').val(),
+        $schoolFrom = $('#school-from').val(),
+        $schoolTo   = $('#school-to').val(),
+        $question1  = $('#question1').val(),
+        $question2  = $('#question2').val(),
+        $question3  = $('#question3').val(),
+        $question4  = $('#question4').val();
 
-    if(address2Pre == null) {
-      $('#address2Pre').hide();
-    }
+    $.jStorage.set('schoolName', $schoolName);
+    $.jStorage.set('schoolFrom', $schoolFrom);
+    $.jStorage.set('schoolTo', $schoolTo);
+    $.jStorage.set('question1', $question1);
+    $.jStorage.set('question2', $question2);
+    $.jStorage.set('question3', $question3);
+    $.jStorage.set('question4', $question4);
+  });
 
+  if($('#schoolNamePre').length > 0) {
+    var schoolNamePre = $.jStorage.get('schoolName'),
+        schoolFromPre = $.jStorage.get('schoolFrom'),
+        schoolToPre   = $.jStorage.get('schoolTo'),
+        question1Pre  = $.jStorage.get('question1'),
+        question2Pre  = $.jStorage.get('question2'),
+        question3Pre  = $.jStorage.get('question3'),
+        question4Pre  = $.jStorage.get('question4');
+
+    $('#schoolNamePre').text(schoolNamePre);
+    $('#schoolFromPre').text(schoolFromPre);
+    $('#schoolToPre').text(schoolToPre);
+    $('#question1Pre').text(question1Pre);
+    $('#question2Pre').text(question2Pre);
+    $('#question3Pre').text(question3Pre);
+    $('#question4Pre').text(question4Pre);
 
   }
 
