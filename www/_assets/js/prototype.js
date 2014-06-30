@@ -363,8 +363,8 @@ $(function() {
                                             $workFYear + '">' +
                                           '</div>' +
                                         '</div>' +
-                                        '<span class="cell-span editable-work">' +
-                                        $workFrom + ' ' + $workFYear + '</span>' +
+                                        '<span class="cell-span editable-work work-from-value">' + $workFrom + '</span>' +
+                                        '<span class="cell-span editable-work">' + $workFYear + '</span>' +
                                       '</td>' +
                                       '<td>' +
                                         '<div class="toggle-content">' +
@@ -392,8 +392,8 @@ $(function() {
                                             '<label><input type="checkbox"> Current</label>' +
                                           '</div>' +
                                         '</div>' +
-                                        '<span class="cell-span editable-work">' +
-                                        $isCurrValue + '</span>' +
+                                        '<span class="cell-span editable-work work-to-value">' + $workTo + '</span>' +
+                                        '<span class="cell-span editable-work">' + $workTYear + '</span>' +
                                       '</td>' +
                                       '<td></td>' +
                                       '<td></td>' +
@@ -408,7 +408,9 @@ $(function() {
     $('#work-employer').val('');
     $('#work-title').val('');
     $('#work-role').val('');
+    $('#work-from').val('Jan');
     $('#work-from-year').val('');
+    $('#work-to').val('Jan');
     $('#work-to-year').val('');
     $('#work-current').prop('checked', false);
     $('#work-to').parent().removeClass('disabled');
@@ -418,6 +420,10 @@ $(function() {
 
     e.preventDefault();
 
+  });
+
+  $('.work-history-wrapper').on('click', '.work-edit', function() {
+    $(this).closest('.work-history-item').find('#workFromSelect');
   });
 
   $('#work-current').click(function() {
