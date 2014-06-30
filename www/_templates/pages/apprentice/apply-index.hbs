@@ -120,6 +120,24 @@ headerTitle: Find an Apprenticeship
 </fieldset>
 
 <fieldset class="fieldset-with-border">
+  <legend class="heading-large">Education</legend>
+  <div class="form-group form-group-compound">
+    <label for="school-name" class="form-label">Name of most recent school/college</label>
+    <input class="form-control" type="text">
+  </div>
+  <div class="inline-fixed">
+    <div class="form-group">
+      <label for="school-from" class="form-label">From</label>
+      <input type="text" class="form-control form-control-medium" id="school-from">
+    </div>
+    <div class="form-group">
+      <label for="school-to" class="form-label">To</label>
+      <input type="text" class="form-control form-control-medium" id="school-to">
+    </div>
+  </div>
+</fieldset>
+
+<fieldset class="fieldset-with-border">
   <legend class="heading-large">Qualifications</legend>
   <div class="enter-qualification clearfix">
     <div class="inline-fixed">
@@ -146,10 +164,6 @@ headerTitle: Find an Apprenticeship
       <label for="other-qual" class="form-label">Name of other qualification</label>
       <input type="text" class="form-control" id="other-qual">
     </div>
-    <div class="form-group">
-      <label for="qual-where" class="form-label">Name of school/college</label>
-      <input id="qual-where" type="text" class="form-control">
-    </div>
     <div class="form-group form-group-compound">
       <label for="subject-name" class="form-label">Subject</label>
       <input type="text" class="form-control" id="subject-name">
@@ -172,7 +186,6 @@ headerTitle: Find an Apprenticeship
     <div class="qualification-table" id="gcse">
       <div class="hgroup-small">
         <h3 class="heading-small heading-qualType">GCSE</h3>
-        <span class="subtitle subtitle-qualWhere">St Bernards School</span>
       </div>
       <table class="grid-3-4">
         <colgroup>
