@@ -89,6 +89,13 @@
 .work-history-item {
   margin-bottom: $gutter-half;
   position: relative;
+  select {
+    height: 27px;
+    width: 100%;
+    @include media(tablet) {
+      height: 29px;
+    }
+  }
   @include media(tablet) {
     margin-bottom: $gutter;
   }
@@ -102,7 +109,7 @@
       width: 20%;
     }
   }
-  .work-edit, 
+  .work-edit,
   .work-delete {
     display: inline-block;
     margin-right: -4px;
@@ -114,13 +121,10 @@
 .work-history-item.edit-mode {
   .toggle-content {
     display: block;
-    width: 100%;
   }
   .toggle-content.inline {
     display: inline-block;
-    margin-right: 6px;
     margin-bottom: $gutter-half;
-    width: 49%;
   }
   .work-hyphen,
   .toggle-content + span {

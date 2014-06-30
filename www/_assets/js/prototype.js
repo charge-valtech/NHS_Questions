@@ -282,7 +282,7 @@ $(function() {
         $workTo          = $('#work-to').val(),
         $workTYear       = $('#work-to-year').val(),
         $isCurrent       = $('#work-current').is(':checked'),
-        $isCurrValue     = ($isCurrent ? "Current" : $workTo + ' ' + $workTYear),
+        $isCurrValue     = ($isCurrent ? "" : $workTo + ' ' + $workTYear),
         $historyItemHTML = '<div class="grid-wrapper work-history-item">' +
                               '<div class="work-controls">' +
                                 '<div class="work-edit ta-center"><span class="cell-span fake-link">Edit</span></div>' +
@@ -312,7 +312,7 @@ $(function() {
                                         '<span class="cell-span editable-work">' +
                                         $workTitle + '</span>' +
                                         '<div></div>' +
-                                        '<textarea class="form-control toggle-content editable-work-input">'+
+                                        '<textarea rows="3" class="form-control toggle-content editable-work-input">'+
                                         $workRole +'</textarea>' +
                                         '<span class="cell-span editable-work">' +
                                         $workRole +'</span>' +
@@ -341,14 +341,57 @@ $(function() {
                                   '<tbody>' +
                                     '<tr>' +
                                       '<td>' +
-                                        '<input type="text" class="form-control toggle-content editable-work-input" value="' +
-                                        $workFrom + ' ' + $workFYear + '">' +
+                                        '<div class="toggle-content">' +
+                                          '<div class="form-group form-group-compound">' +
+                                            '<select id="workFromSelect">' +
+                                              '<option value="Jan">Jan</option>' +
+                                              '<option value="Feb">Feb</option>' +
+                                              '<option value="Mar">Mar</option>' +
+                                              '<option value="Apr">Apr</option>' +
+                                              '<option value="May">May</option>' +
+                                              '<option value="June">June</option>' +
+                                              '<option value="July">July</option>' +
+                                              '<option value="Aug">Aug</option>' +
+                                              '<option value="Sept">Sept</option>' +
+                                              '<option value="Oct">Oct</option>' +
+                                              '<option value="Nov">Nov</option>' +
+                                              '<option value="Dec">Dec</option>' +
+                                            '</select>' +
+                                          '</div>' +
+                                          '<div class="form-group form-group-compound">' +
+                                            '<input type="text" class="form-control toggle-content editable-work-input" value="' +
+                                            $workFYear + '">' +
+                                          '</div>' +
+                                        '</div>' +
                                         '<span class="cell-span editable-work">' +
                                         $workFrom + ' ' + $workFYear + '</span>' +
                                       '</td>' +
                                       '<td>' +
-                                        '<input type="text" class="form-control toggle-content editable-work-input" value="' +
-                                        $isCurrValue + '">' +
+                                        '<div class="toggle-content">' +
+                                          '<div class="form-group form-group-compound">' +
+                                            '<select id="workToSelect">' +
+                                              '<option value="Jan">Jan</option>' +
+                                              '<option value="Feb">Feb</option>' +
+                                              '<option value="Mar">Mar</option>' +
+                                              '<option value="Apr">Apr</option>' +
+                                              '<option value="May">May</option>' +
+                                              '<option value="June">June</option>' +
+                                              '<option value="July">July</option>' +
+                                              '<option value="Aug">Aug</option>' +
+                                              '<option value="Sept">Sept</option>' +
+                                              '<option value="Oct">Oct</option>' +
+                                              '<option value="Nov">Nov</option>' +
+                                              '<option value="Dec">Dec</option>' +
+                                            '</select>' +
+                                          '</div>' +
+                                          '<div class="form-group form-group-compound">' +
+                                            '<input type="text" class="form-control toggle-content editable-work-input" value="' +
+                                            $workTYear + '">' +
+                                          '</div>' +
+                                          '<div class="form-group form-group-compound">' +
+                                            '<label><input type="checkbox"> Current</label>' +
+                                          '</div>' +
+                                        '</div>' +
                                         '<span class="cell-span editable-work">' +
                                         $isCurrValue + '</span>' +
                                       '</td>' +
