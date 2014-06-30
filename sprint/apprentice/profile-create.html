@@ -77,16 +77,16 @@
           <div class="form-group date-input">
             <p class="form-label">Date of birth</p>
             <div class="form-group form-group-compound">
-              <label class="form-hint" for="date-day2">Day</label>
-              <input type="tel" class="form-control" maxlength="2" pattern="[0-9*]" id="date-day2">
+              <label class="form-hint" for="dob-day">Day</label>
+              <input type="number" class="form-control" maxlength="2" pattern="[0-9]*" id="dob-day">
             </div>
             <div class="form-group form-group-compound">
-              <label class="form-hint" for="date-month2">Month</label>
-              <input type="tel" class="form-control" maxlength="2" id="date-month2">
+              <label class="form-hint" for="dob-month">Month</label>
+              <input type="number" class="form-control" maxlength="2" pattern="[0-9]*" id="dob-month">
             </div>
             <div class="form-group form-group-compound form-group-year">
-              <label class="form-hint" for="date-year2">Year</label>
-              <input type="tel" class="form-control" maxlength="4" id="date-year2">
+              <label class="form-hint" for="dob-year">Year</label>
+              <input type="number" class="form-control" maxlength="4" pattern="[0-9]*" id="dob-year">
             </div>
           </div>
           <div class="form-group toggle-content">
@@ -152,8 +152,8 @@
               <input type="email" class="form-control linked-input-master" id="email-input" spellcheck="false">
             </div>
             <div class="form-group">
-              <label for="telephone-num1" class="form-label">Phone</label>
-              <input type="tel" class="form-control form-control-1-3" id="telephone-num1">
+              <label for="phone-input" class="form-label">Phone</label>
+              <input type="tel" class="form-control form-control-1-3" id="phone-input">
             </div>
             <div class="form-group inline">
               <p class="form-label">I prefer to be contacted by</p>
@@ -184,9 +184,9 @@
           </div>
         </fieldset>
         <fieldset>
-          <details>
+          <details class="text">
             <summary role="button">Read our terms &amp; conditions</summary>
-            <div class="max-height-15 scrolling-panel text copy-16">
+            <div class="max-height-15 scrolling-panel copy-16">
               <div id="" class="">
                 <strong>The Chief Executive of Skills Funding – Candidate terms conditions for use of Apprenticeship vacancies <br>
 </strong>
@@ -413,7 +413,7 @@
           </div>
         </fieldset>
         <div class="form-group">
-          <a class="button" href="profile-complete.html">Create account</a>
+          <a id="createAccountBtn" class="button" href="apply-index.html">Create account</a>
           <p><a class="button-link" href="index.html">Back</a>
           </p>
         </div>

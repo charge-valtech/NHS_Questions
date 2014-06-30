@@ -36,6 +36,12 @@ select {
   }
 }
 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .fieldset-with-border {
   border-bottom: 1px solid $grey-2;
   margin-bottom: 20px;

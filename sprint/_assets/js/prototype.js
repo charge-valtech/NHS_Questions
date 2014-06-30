@@ -43,6 +43,65 @@ $(function() {
 
   changeSearchInputs();
 
+  //------------- Copy details from registration
+
+  $('#createAccountBtn').on('click', function(){
+    $firstName  = $('#first-name').val(),
+    $middleName = $('#middle-name').val(),
+    $lastName   = $('#last-name').val(),
+    $fullName   = $firstName + ' ' + $middleName + ' ' + $lastName,
+    $dobDay     = $('#dob-day').val(),
+    $dobMonth   = $('#dob-month').val(),
+    $dobYear    = $('#dob-year').val(),
+    $dobFull    = $dobDay + '/' + $dobMonth + '/' + $dobYear,
+    $address1   = $('#address1').val(),
+    $address2   = $('#address2').val(),
+    $address3   = $('#address3').val(),
+    $address3b  = $('#address3b').val(),
+    $address4   = $('#address4').val(),
+    $emailInput = $('#email-input').val(),
+    $phoneInput = $('#phone-input').val();
+
+    $.jStorage.set('fullName', $fullName);
+    $.jStorage.set('dobFull', $dobFull);
+    $.jStorage.set('address1', $address1);
+    $.jStorage.set('address2', $address2);
+    $.jStorage.set('address3', $address3);
+    $.jStorage.set('address3b', $address3b);
+    $.jStorage.set('address4', $address4);
+    $.jStorage.set('emailInput', $emailInput);
+    $.jStorage.set('phoneInput', $phoneInput);
+
+  });
+
+  if($('#fullNamePre').length > 0) {
+    var fullNamePre   = $.jStorage.get('fullName'),
+        dobFullPre    = $.jStorage.get('dobFull'),
+        address1Pre   = $.jStorage.get('address1'),
+        address2Pre   = $.jStorage.get('address2'),
+        address3Pre   = $.jStorage.get('address3'),
+        address3bPre  = $.jStorage.get('address3b'),
+        address4Pre   = $.jStorage.get('address4'),
+        emailInputPre = $.jStorage.get('emailInput'),
+        phoneInputPre = $.jStorage.get('phoneInput');
+
+    $('#fullNamePre').text(fullNamePre);
+    $('#dobFullPre').text(dobFullPre);
+    $('#address1Pre').text(address1Pre);
+    $('#address2Pre').text(address2Pre);
+    $('#address3Pre').text(address3Pre);
+    $('#address3bPre').text(address3bPre);
+    $('#address4Pre').text(address4Pre);
+    $('#emailInputPre').text(emailInputPre);
+
+
+    if(address2Pre == null) {
+      $('#address2Pre').hide();
+    }
+
+
+  }
+
 //------------- Address input
   $('.address-find-btn').on('click', function(e) {
     $('.address-find-select').show();
