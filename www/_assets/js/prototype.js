@@ -343,7 +343,7 @@ $(function() {
                                       '<td>' +
                                         '<div class="toggle-content">' +
                                           '<div class="form-group form-group-compound">' +
-                                            '<select id="workFromSelect">' +
+                                            '<select class="work-month-select" id="workFromSelect">' +
                                               '<option value="Jan">Jan</option>' +
                                               '<option value="Feb">Feb</option>' +
                                               '<option value="Mar">Mar</option>' +
@@ -359,17 +359,17 @@ $(function() {
                                             '</select>' +
                                           '</div>' +
                                           '<div class="form-group form-group-compound">' +
-                                            '<input type="text" class="form-control toggle-content editable-work-input" value="' +
+                                            '<input type="text" class="form-control toggle-content work-year-input" value="' +
                                             $workFYear + '">' +
                                           '</div>' +
                                         '</div>' +
-                                        '<span class="cell-span editable-work work-from-value">' + $workFrom + '</span>' +
-                                        '<span class="cell-span editable-work">' + $workFYear + '</span>' +
+                                        '<span class="cell-span editable-work work-month work-from-month">' + $workFrom + '</span>' +
+                                        '<span class="cell-span editable-work work-year">' + $workFYear + '</span>' +
                                       '</td>' +
                                       '<td>' +
                                         '<div class="toggle-content">' +
                                           '<div class="form-group form-group-compound">' +
-                                            '<select id="workToSelect">' +
+                                            '<select class="work-month-select" id="workToSelect">' +
                                               '<option value="Jan">Jan</option>' +
                                               '<option value="Feb">Feb</option>' +
                                               '<option value="Mar">Mar</option>' +
@@ -385,15 +385,15 @@ $(function() {
                                             '</select>' +
                                           '</div>' +
                                           '<div class="form-group form-group-compound">' +
-                                            '<input type="text" class="form-control toggle-content editable-work-input" value="' +
+                                            '<input type="text" class="form-control toggle-content work-year-input" value="' +
                                             $workTYear + '">' +
                                           '</div>' +
                                           '<div class="form-group form-group-compound">' +
                                             '<label><input type="checkbox"> Current</label>' +
                                           '</div>' +
                                         '</div>' +
-                                        '<span class="cell-span editable-work work-to-value">' + $workTo + '</span>' +
-                                        '<span class="cell-span editable-work">' + $workTYear + '</span>' +
+                                        '<span class="cell-span editable-work work-month work-to-month">' + $workTo + '</span>' +
+                                        '<span class="cell-span editable-work work-year">' + $workTYear + '</span>' +
                                       '</td>' +
                                       '<td></td>' +
                                       '<td></td>' +
@@ -423,7 +423,13 @@ $(function() {
   });
 
   $('.work-history-wrapper').on('click', '.work-edit', function() {
-    $(this).closest('.work-history-item').find('#workFromSelect');
+    var $workFromMonth = $(this).closest('.work-history-item').find('.work-from-month').text(),
+        $workToMonth   = $(this).closest('.work-history-item').find('.work-to-month').text();
+
+
+    $(this).closest('.work-history-item').find('#workFromSelect').val($workFromMonth);
+    $(this).closest('.work-history-item').find('#workToSelect').val($workToMonth);
+
   });
 
   $('#work-current').click(function() {
@@ -461,6 +467,18 @@ $(function() {
     var $thisVal = $(this).val();
 
     $(this).next('.editable-work').text($thisVal);
+  });
+
+  $('.work-history-wrapper').on('keyup', '.work-year-input', function() {
+    var $thisVal = $(this).val();
+
+    $(this).closest('td').find('.work-year').text($thisVal);
+  });
+
+  $('.work-history-wrapper').on('change', '.work-month-select', function() {
+    var $thisVal = $(this).val();
+
+    $(this).closest('td').find('.work-month').text($thisVal);
   });
 
   //-- Errors on pattern library page

@@ -127,7 +127,7 @@
     margin-bottom: $gutter-half;
   }
   .work-hyphen,
-  .toggle-content + span {
+  .toggle-content ~ span {
     display: none;
   }
 }
