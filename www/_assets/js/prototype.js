@@ -95,6 +95,12 @@ $(function() {
     $('#emailInputPre').text(emailInputPre);
   }
 
+  if($('#accountCreated').length > 0) {
+    var emailInputPre = $.jStorage.get('emailInput');
+
+    $('.email-address').text(emailInputPre);
+  }
+
   $('#applyPreviewBtn').on('click', function() {
     var $schoolName = $('#school-name').val(),
         $schoolFrom = $('#school-from').val(),

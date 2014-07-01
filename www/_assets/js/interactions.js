@@ -132,6 +132,12 @@ $(function() {
       $($charCountEl).text($maxLength - $lengthOfText);
     }
 
+    if($lengthOfText > $maxLength) {
+      $charCountEl.parent().addClass('has-error');
+    } else {
+      $charCountEl.parent().removeClass('has-error');
+    }
+
   });
 
 });

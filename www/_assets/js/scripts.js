@@ -1886,6 +1886,12 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
       $($charCountEl).text($maxLength - $lengthOfText);
     }
 
+    if($lengthOfText > $maxLength) {
+      $charCountEl.parent().addClass('has-error');
+    } else {
+      $charCountEl.parent().removeClass('has-error');
+    }
+
   });
 
 });;/*
