@@ -181,11 +181,11 @@
           <div class="inline-fixed">
             <div class="form-group">
               <label for="school-from" class="form-label">From</label>
-              <input type="text" class="form-control form-control-medium" id="school-from">
+              <input type="tel" class="form-control form-control-medium" id="school-from" maxlength="4">
             </div>
             <div class="form-group">
               <label for="school-to" class="form-label">To</label>
-              <input type="text" class="form-control form-control-medium" id="school-to">
+              <input type="tel" class="form-control form-control-medium" id="school-to" maxlength="4">
             </div>
           </div>
         </fieldset>
@@ -235,9 +235,9 @@
             </div>
           </div>
           <div class="qualifications-wrapper">
-            <div class="qualification-table" id="gcse">
+            <div class="qualification-table toggle-content">
               <div class="hgroup-small">
-                <h3 class="heading-small heading-qualType">GCSE</h3>
+                <h3 class="heading-small heading-qualType"></h3>
               </div>
               <table class="grid-3-4">
                 <colgroup>
@@ -261,23 +261,6 @@
                   </tr>
                 </thead>
                 <tbody class="tbody-qual">
-                  <tr class="tr-qualRow">
-                    <td class="td-qualcell">
-                      <input class="form-control qual-input-edit" type="text" value="Maths" readonly>
-                    </td>
-                    <td class="td-qualcell">
-                      <input class="form-control qual-input-edit" type="text" value="A" readonly>
-                    </td>
-                    <td class="td-qualcell">
-                      <input class="form-control qual-input-edit" type="text" value="2011" readonly>
-                    </td>
-                    <td class="td-qualEdit ta-center">
-                      <span class="fake-link cell-span">Edit</span>
-                    </td>
-                    <td class="qualRemove ta-center">
-                      <i class="cell-span"><i class="ir icon-remove">Remove</i></i>
-                    </td>
-                  </tr>
                 </tbody>
               </table>
             </div>
@@ -344,7 +327,7 @@
                 </div>
                 <div class="form-group form-group-compound">
                   <span class="form-hint">Year</span>
-                  <input type="tel" class="form-control form-control-medium" maxlength="4" id="work-from-year">
+                  <input type="tel" class="form-control form-control-medium" maxlength="4" id="work-to-year">
                 </div>
                 <div class="form-group form-group-compound">
                   <input id="work-current" type="checkbox">
@@ -357,86 +340,84 @@
             </div>
           </div>
           <div class="work-history-wrapper grid-3-4">
-            <div class="grid-wrapper work-history-item">
-              <div class="work-controls">
-                <div class="work-edit ta-center">
-                  <span class="cell-span fake-link">Edit</span>
-                </div>
-                <div class="work-delete ta-center">
-                  <span class="cell-span">
+            <!-- <div class="grid-wrapper work-history-item">
+      <div class="work-controls">
+        <div class="work-edit ta-center">
+          <span class="cell-span fake-link">Edit</span>
+        </div>
+        <div class="work-delete ta-center">
+          <span class="cell-span">
             <i class="ir icon-remove">Remove</i>
           </span>
-                </div>
-              </div>
-              <div class="grid grid-1-2">
-                <table class="table-no-btm-border table-compound">
-                  <colgroup>
-                    <col class="t100">
-                      <col>
-                  </colgroup>
-                  <thead>
-                    <tr>
-                      <th>
-                        <span class="heading-span">Work experience</span>
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <input type="text" class="form-control toggle-content inline width-all-49 editable-work-input"
-                        value="Boots">
-                        <span class="cell-span editable-work">Boots</span>
-                        <span class="cell-span work-hyphen">-</span>
-                        <input type="text" class="form-control toggle-content inline width-all-49 editable-work-input no-right-margin"
-                        value="Customer service">
-                        <span class="cell-span editable-work">Customer service</span>
-                        <div></div>
-                        <textarea class="form-control toggle-content editable-work-input">Helped customers at the checkout</textarea>
-                        <span class="cell-span editable-work">Helped customers at the checkout</span>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="grid grid-1-2">
-                <table class="table-no-btm-border table-compound">
-                  <colgroup>
-                    <col class="t30">
-                      <col class="t30">
-                        <col class="t25">
-                          <col class="t15">
-                            <col>
-                  </colgroup>
-                  <thead>
-                    <tr>
-                      <th>
-                        <span class="heading-span">From</span>
-                      </th>
-                      <th>
-                        <span class="heading-span">To</span>
-                      </th>
-                      <th></th>
-                      <th></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <input type="text" class="form-control toggle-content editable-work-input" value="May 2012">
-                        <span class="cell-span editable-work">May 2012</span>
-                      </td>
-                      <td>
-                        <input type="text" class="form-control toggle-content editable-work-input" value="Sep 2013">
-                        <span class="cell-span editable-work">Sep 2013</span>
-                      </td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
+        </div>
+      </div>
+      <div class="grid grid-1-2">
+        <table class="table-no-btm-border table-compound">
+          <colgroup>
+            <col class="t100">
+            <col>
+          </colgroup>
+          <thead>
+            <tr>
+              <th>
+                <span class="heading-span">Work experience</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <input type="text" class="form-control toggle-content inline width-all-49 editable-work-input" value="Boots">
+                <span class="cell-span editable-work">Boots</span>
+                <span class="cell-span work-hyphen">-</span>
+                <input type="text" class="form-control toggle-content inline width-all-49 editable-work-input no-right-margin" value="Customer service">
+                <span class="cell-span editable-work">Customer service</span>
+                <div></div>
+                <textarea class="form-control toggle-content editable-work-input">Helped customers at the checkout</textarea>
+                <span class="cell-span editable-work">Helped customers at the checkout</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="grid grid-1-2">
+        <table class="table-no-btm-border table-compound">
+          <colgroup>
+            <col class="t30">
+            <col class="t30">
+            <col class="t25">
+            <col class="t15">
+            <col>
+          </colgroup>
+          <thead>
+            <tr>
+              <th>
+                <span class="heading-span">From</span>
+              </th>
+              <th>
+                <span class="heading-span">To</span>
+              </th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <input type="text" class="form-control toggle-content editable-work-input" value="May 2012">
+                <span class="cell-span editable-work">May 2012</span>
+              </td>
+              <td>
+                <input type="text" class="form-control toggle-content editable-work-input" value="Sep 2013">
+                <span class="cell-span editable-work">Sep 2013</span>
+              </td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div> -->
           </div>
         </fieldset>
         <fieldset class="fieldset-with-border">

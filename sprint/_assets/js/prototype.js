@@ -282,7 +282,12 @@ $(function() {
         $workTo          = $('#work-to').val(),
         $workTYear       = $('#work-to-year').val(),
         $isCurrent       = $('#work-current').is(':checked'),
-        $isCurrValue     = ($isCurrent ? "Current" : $workTo + ' ' + $workTYear),
+        $isChecked       = ($isCurrent ? 'checked' : ''),
+        $isDisabled      = ($isCurrent ? 'disabled' : ''),
+        $isCurrValue     = ($isCurrent ? '<span class="cell-span editable-work work-to-span work-month work-to-month"></span>' +
+                                          '<span class="cell-span editable-work work-to-span work-year"></span>' :
+                                          '<span class="cell-span editable-work work-to-span work-month work-to-month">' + $workTo + '</span>' +
+                                          '<span class="cell-span editable-work work-to-span work-year">' + $workTYear + '</span>'),
         $historyItemHTML = '<div class="grid-wrapper work-history-item">' +
                               '<div class="work-controls">' +
                                 '<div class="work-edit ta-center"><span class="cell-span fake-link">Edit</span></div>' +
@@ -312,7 +317,7 @@ $(function() {
                                         '<span class="cell-span editable-work">' +
                                         $workTitle + '</span>' +
                                         '<div></div>' +
-                                        '<textarea class="form-control toggle-content editable-work-input">'+
+                                        '<textarea rows="3" class="form-control toggle-content editable-work-input">'+
                                         $workRole +'</textarea>' +
                                         '<span class="cell-span editable-work">' +
                                         $workRole +'</span>' +
@@ -341,16 +346,58 @@ $(function() {
                                   '<tbody>' +
                                     '<tr>' +
                                       '<td>' +
-                                        '<input type="text" class="form-control toggle-content editable-work-input" value="' +
-                                        $workFrom + ' ' + $workFYear + '">' +
-                                        '<span class="cell-span editable-work">' +
-                                        $workFrom + ' ' + $workFYear + '</span>' +
+                                        '<div class="toggle-content">' +
+                                          '<div class="form-group form-group-compound">' +
+                                            '<select class="work-month-select" id="workFromSelect">' +
+                                              '<option value="Jan">Jan</option>' +
+                                              '<option value="Feb">Feb</option>' +
+                                              '<option value="Mar">Mar</option>' +
+                                              '<option value="Apr">Apr</option>' +
+                                              '<option value="May">May</option>' +
+                                              '<option value="June">June</option>' +
+                                              '<option value="July">July</option>' +
+                                              '<option value="Aug">Aug</option>' +
+                                              '<option value="Sept">Sept</option>' +
+                                              '<option value="Oct">Oct</option>' +
+                                              '<option value="Nov">Nov</option>' +
+                                              '<option value="Dec">Dec</option>' +
+                                            '</select>' +
+                                          '</div>' +
+                                          '<div class="form-group form-group-compound">' +
+                                            '<input type="text" class="form-control toggle-content work-year-input" value="' +
+                                            $workFYear + '">' +
+                                          '</div>' +
+                                        '</div>' +
+                                        '<span class="cell-span editable-work work-month work-from-month">' + $workFrom + '</span>' +
+                                        '<span class="cell-span editable-work work-year">' + $workFYear + '</span>' +
                                       '</td>' +
                                       '<td>' +
-                                        '<input type="text" class="form-control toggle-content editable-work-input" value="' +
-                                        $isCurrValue + '">' +
-                                        '<span class="cell-span editable-work">' +
-                                        $isCurrValue + '</span>' +
+                                        '<div class="toggle-content">' +
+                                          '<div class="form-group form-group-compound ' + $isDisabled + '">' +
+                                            '<select class="editable-current work-month-select" id="workToSelect"' + $isDisabled + '>' +
+                                              '<option value="Jan">Jan</option>' +
+                                              '<option value="Feb">Feb</option>' +
+                                              '<option value="Mar">Mar</option>' +
+                                              '<option value="Apr">Apr</option>' +
+                                              '<option value="May">May</option>' +
+                                              '<option value="June">June</option>' +
+                                              '<option value="July">July</option>' +
+                                              '<option value="Aug">Aug</option>' +
+                                              '<option value="Sept">Sept</option>' +
+                                              '<option value="Oct">Oct</option>' +
+                                              '<option value="Nov">Nov</option>' +
+                                              '<option value="Dec">Dec</option>' +
+                                            '</select>' +
+                                          '</div>' +
+                                          '<div class="form-group form-group-compound ' + $isDisabled + '">' +
+                                            '<input type="text" class="editable-current form-control toggle-content work-year-input" value="' +
+                                            $workTYear + '"' + $isDisabled +'>' +
+                                          '</div>' +
+                                          '<div class="form-group form-group-compound">' +
+                                            '<label><input ' + $isChecked + ' type="checkbox" id="edit-current"> Current</label>' +
+                                          '</div>' +
+                                        '</div>' +
+                                         $isCurrValue +
                                       '</td>' +
                                       '<td></td>' +
                                       '<td></td>' +
@@ -365,7 +412,9 @@ $(function() {
     $('#work-employer').val('');
     $('#work-title').val('');
     $('#work-role').val('');
+    $('#work-from').val('Jan');
     $('#work-from-year').val('');
+    $('#work-to').val('Jan');
     $('#work-to-year').val('');
     $('#work-current').prop('checked', false);
     $('#work-to').parent().removeClass('disabled');
@@ -377,6 +426,16 @@ $(function() {
 
   });
 
+  $('.work-history-wrapper').on('click', '.work-edit', function() {
+    var $workFromMonth = $(this).closest('.work-history-item').find('.work-from-month').text(),
+        $workToMonth   = $(this).closest('.work-history-item').find('.work-to-month').text();
+
+
+    $(this).closest('.work-history-item').find('#workFromSelect').val($workFromMonth);
+    $(this).closest('.work-history-item').find('#workToSelect').val($workToMonth);
+
+  });
+
   $('#work-current').click(function() {
     $('#work-to').prop('disabled', $(this).prop('checked'));
     $('#work-to-year').prop('disabled', $(this).prop('checked'));
@@ -384,6 +443,12 @@ $(function() {
     $('#work-to-year').parent().toggleClass('disabled', $(this).prop('checked'));
 
     $('#work-to-year').val('');
+  });
+
+  $('.work-history-wrapper').on('click', '#edit-current', function() {
+    $(this).closest('td').find('.editable-current').prop('disabled', $(this).prop('checked'));
+    $(this).closest('td').find('.editable-current').parent().toggleClass('disabled', $(this).prop('checked'));
+
   });
 
   $('.work-history-wrapper').on('click', '.work-delete', function(e) {
@@ -399,11 +464,21 @@ $(function() {
   });
 
   $('.work-history-wrapper').on('click', '.work-save', function(e) {
+    var $currentCheck     = $(this).closest('.work-history-item').find('#edit-current'),
+        $isChecked        = $currentCheck.is(':checked'),
+        $workToSpans      = $(this).closest('.work-history-item').find('.work-to-span'),
+        $editableCurrents = $(this).closest('.work-history-item').find('.editable-currents');
+
     $(this).closest('.work-history-item').removeClass('edit-mode');
     $(this).html('<span class="cell-span fake-link">Edit</span>').removeClass('work-save');
 
     $(this).closest('.work-history').find('.editing-worksection').removeClass('editing-worksection');
     $(this).closest('.work-history').find('.icon-tick').removeClass('icon-tick').addClass('icon-edit');
+
+    if($isChecked) {
+      $workToSpans.text('');
+      $editableCurrents.val('');
+    }
 
     e.preventDefault();
   });
@@ -412,6 +487,18 @@ $(function() {
     var $thisVal = $(this).val();
 
     $(this).next('.editable-work').text($thisVal);
+  });
+
+  $('.work-history-wrapper').on('keyup', '.work-year-input', function() {
+    var $thisVal = $(this).val();
+
+    $(this).closest('td').find('.work-year').text($thisVal);
+  });
+
+  $('.work-history-wrapper').on('change', '.work-month-select', function() {
+    var $thisVal = $(this).val();
+
+    $(this).closest('td').find('.work-month').text($thisVal);
   });
 
   //-- Errors on pattern library page
