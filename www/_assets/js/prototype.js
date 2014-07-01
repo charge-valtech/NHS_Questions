@@ -93,6 +93,7 @@ $(function() {
     $('#address3bPre').text(address3bPre);
     $('#address4Pre').text(address4Pre);
     $('#emailInputPre').text(emailInputPre);
+    $('#phoneInputPre').text(phoneInputPre);
   }
 
   if($('#accountCreated').length > 0) {
