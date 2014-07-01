@@ -51,7 +51,7 @@ $(function() {
     // Show data-toggle content
     var target = $(this).parent().attr('data-target');
     $('#'+target).show();
-    
+
     // Hide open data-toggle content
     if($(this).prop('checked') != true) {
       $(this).parent().next('.toggle-content').hide();
@@ -83,7 +83,7 @@ $(function() {
     $('#' + $targetFor).focus();
   });
 
-// -- Password strength indicator 
+// -- Password strength indicator
 
   $("#password-input").keyup(function() {
     initializeStrengthMeter();
@@ -119,5 +119,19 @@ $(function() {
       $('.pw-masktoggle').text('Show');
     }
   }
+
+  //--------Max character length on textareas
+
+  $('textarea').on('keyup', function() {
+    var $this         = $(this),
+        $maxLength    = $this.attr('data-val-length-max'),
+        $lengthOfText = $this.val().length,
+        $charCountEl  = $this.next('.form-hint').find('.maxchar-count');
+
+    if($maxLength) {
+      $($charCountEl).text($maxLength - $lengthOfText);
+    }
+
+  });
 
 });

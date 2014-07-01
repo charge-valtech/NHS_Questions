@@ -1805,7 +1805,7 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
     // Show data-toggle content
     var target = $(this).parent().attr('data-target');
     $('#'+target).show();
-    
+
     // Hide open data-toggle content
     if($(this).prop('checked') != true) {
       $(this).parent().next('.toggle-content').hide();
@@ -1837,7 +1837,7 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
     $('#' + $targetFor).focus();
   });
 
-// -- Password strength indicator 
+// -- Password strength indicator
 
   $("#password-input").keyup(function() {
     initializeStrengthMeter();
@@ -1873,6 +1873,20 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
       $('.pw-masktoggle').text('Show');
     }
   }
+
+  //--------Max character length on textareas
+
+  $('textarea').on('keyup', function() {
+    var $this         = $(this),
+        $maxLength    = $this.attr('data-val-length-max'),
+        $lengthOfText = $this.val().length,
+        $charCountEl  = $this.next('.form-hint').find('.maxchar-count');
+
+    if($maxLength) {
+      $($charCountEl).text($maxLength - $lengthOfText);
+    }
+
+  });
 
 });;/*
  *  jQuery Password Strength - v0.0.1
