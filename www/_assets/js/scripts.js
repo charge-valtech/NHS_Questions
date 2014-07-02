@@ -1797,19 +1797,15 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
   });
 
   // Add/remove selected class
-  $('.block-label').find('input[type=radio], input[type=checkbox]').click(function() {
+  $('.block-label').on('click', 'input[type=radio], input[type=checkbox]', function() {
 
-    $('input:not(:checked)').parent().removeClass('selected');
-    $('input:checked').parent().addClass('selected');
+      $('input:not(:checked)').parent().removeClass('selected');
+      $('input:checked').parent().addClass('selected');
 
-    // Show data-toggle content
-    var target = $(this).parent().attr('data-target');
-    $('#'+target).show();
+      $('.toggle-content').hide();
 
-    // Hide open data-toggle content
-    if($(this).prop('checked') != true) {
-      $(this).parent().next('.toggle-content').hide();
-    }
+      var target = $('input:checked').parent().attr('data-target');
+      $('#'+target).show();
   });
 
   $('.amend-answers').on('click', function() {

@@ -8,54 +8,23 @@ headerTitle: Find an Apprenticeship
 </div>
 <fieldset class="fieldset-with-border">
   <legend class="heading-large">Your details</legend>
-  <div class="form-group">
-    <label for="first-name" class="form-label">Full name</label>
-    <span class="form-prepopped" id="fullNamePre">John Michael Smith</span>
-  </div>
-  <div class="form-group date-input">
-    <p class="form-label">Date of birth</p>
-    <span class="form-prepopped" id="dobFullPre">12/06/1994</span>
-  </div>
-
-  <div class="form-group">
-    <span class="form-label">Address</span>
-    <ul class="list-text form-prepopped">
-      <li id="address1Pre">37 Bolton road</li>
-      <li id="address2Pre"></li>
-      <li id="address3Pre">Slough</li>
-      <li id="address3bPre">Berkshire</li>
-      <li id="address4Pre">SL3 4BB</li>
-    </ul>
-  </div>
-
-  <div class="form-group">
-    <label for="email-address" class="form-label">Email address</label>
-    <span class="form-prepopped" id="emailInputPre">john.smith@email.com</span>
-  </div>
-
-  <div class="form-group">
-    <label for="tel-number" class="form-label">Phone</label>
-    <span class="form-prepopped" id="phoneInputPre">07954 389421</span>
-  </div>
+  {{> application-details }}
 </fieldset>
 
 <fieldset class="fieldset-with-border">
   <legend class="heading-large">Education</legend>
-  <div class="form-group form-group-compound">
+  <div class="form-group">
     <label for="school-name" class="form-label">Name of most recent school/college</label>
-    <!-- <input class="form-control" type="text"> -->
     <span class="form-prepopped" id="schoolNamePre">St Bernards School</span>
   </div>
   <div class="inline-fixed">
     <p class="form-label">Years attended</p>
     <div class="form-group">
       <label for="school-from" class="form-label">From</label>
-      <!-- <input type="text" class="form-control form-control-medium" id="school-from"> -->
       <span class="form-prepopped" id="schoolFromPre">2008</span>
     </div>
     <div class="form-group">
       <label for="school-to" class="form-label">To</label>
-      <!-- <input type="text" class="form-control form-control-medium" id="school-to"> -->
       <span class="form-prepopped" id="schoolToPre">2011</span>
     </div>
   </div>
@@ -85,46 +54,46 @@ headerTitle: Find an Apprenticeship
         <tbody class="tbody-qual">
           <tr class="tr-qualRow">
             <td class="td-qualcell">
-              <input class="form-control qual-input-edit" type="text" value="Maths" readonly>
+              <input class="form-control qual-input-edit form-prepopped" type="text" value="Maths" readonly>
             </td>
             <td class="td-qualcell">
-              <input class="form-control qual-input-edit" type="text" value="A" readonly>
+              <input class="form-control qual-input-edit form-prepopped" type="text" value="A" readonly>
             </td>
             <td class="td-qualcell">
-              <input class="form-control qual-input-edit" type="text" value="2011" readonly>
-            </td>
-          </tr>
-          <tr class="tr-qualRow">
-            <td class="td-qualcell">
-              <input class="form-control qual-input-edit" type="text" value="English" readonly>
-            </td>
-            <td class="td-qualcell">
-              <input class="form-control qual-input-edit" type="text" value="B" readonly>
-            </td>
-            <td class="td-qualcell">
-              <input class="form-control qual-input-edit" type="text" value="2011" readonly>
+              <input class="form-control qual-input-edit form-prepopped" type="text" value="2011" readonly>
             </td>
           </tr>
           <tr class="tr-qualRow">
             <td class="td-qualcell">
-              <input class="form-control qual-input-edit" type="text" value="Science" readonly>
+              <input class="form-control qual-input-edit form-prepopped" type="text" value="English" readonly>
             </td>
             <td class="td-qualcell">
-              <input class="form-control qual-input-edit" type="text" value="BB" readonly>
+              <input class="form-control qual-input-edit form-prepopped" type="text" value="B" readonly>
             </td>
             <td class="td-qualcell">
-              <input class="form-control qual-input-edit" type="text" value="2011" readonly>
+              <input class="form-control qual-input-edit form-prepopped" type="text" value="2011" readonly>
             </td>
           </tr>
           <tr class="tr-qualRow">
             <td class="td-qualcell">
-              <input class="form-control qual-input-edit" type="text" value="Geography" readonly>
+              <input class="form-control qual-input-edit form-prepopped" type="text" value="Science" readonly>
             </td>
             <td class="td-qualcell">
-              <input class="form-control qual-input-edit" type="text" value="C" readonly>
+              <input class="form-control qual-input-edit form-prepopped" type="text" value="BB" readonly>
             </td>
             <td class="td-qualcell">
-              <input class="form-control qual-input-edit" type="text" value="2011" readonly>
+              <input class="form-control qual-input-edit form-prepopped" type="text" value="2011" readonly>
+            </td>
+          </tr>
+          <tr class="tr-qualRow">
+            <td class="td-qualcell">
+              <input class="form-control qual-input-edit form-prepopped" type="text" value="Geography" readonly>
+            </td>
+            <td class="td-qualcell">
+              <input class="form-control qual-input-edit form-prepopped" type="text" value="C" readonly>
+            </td>
+            <td class="td-qualcell">
+              <input class="form-control qual-input-edit form-prepopped" type="text" value="2011" readonly>
             </td>
           </tr>
         </tbody>
@@ -153,11 +122,11 @@ headerTitle: Find an Apprenticeship
           <tbody>
             <tr>
               <td>
-                <span class="cell-span editable-work">Superdrug</span>
-                <span class="cell-span work-hyphen">-</span>
-                <span class="cell-span editable-work">Customer service</span>
+                <span class="form-prepopped cell-span editable-work">Superdrug</span>
+                <span class="form-prepopped cell-span work-hyphen">-</span>
+                <span class="form-prepopped cell-span editable-work">Customer service</span>
                 <div></div>
-                <span class="cell-span editable-work">Helping customers at the checkout</span>
+                <span class="form-prepopped cell-span editable-work">Helping customers at the checkout</span>
               </td>
             </tr>
           </tbody>
@@ -187,10 +156,10 @@ headerTitle: Find an Apprenticeship
           <tbody>
             <tr>
               <td>
-                <span class="cell-span editable-work">Dec 2013</span>
+                <span class="form-prepopped cell-span editable-work">Dec 2013</span>
               </td>
               <td>
-                <span class="cell-span editable-work">Current</span>
+                <span class="form-prepopped cell-span editable-work">Current</span>
               </td>
               <td></td>
               <td></td>
@@ -216,11 +185,11 @@ headerTitle: Find an Apprenticeship
           <tbody>
             <tr>
               <td>
-                <span class="cell-span editable-work">Boots</span>
-                <span class="cell-span work-hyphen">-</span>
-                <span class="cell-span editable-work">Customer service</span>
+                <span class="form-prepopped cell-span editable-work">Boots</span>
+                <span class="form-prepopped cell-span work-hyphen">-</span>
+                <span class="form-prepopped cell-span editable-work">Customer service</span>
                 <div></div>
-                <span class="cell-span editable-work">Helped customers at the checkout</span>
+                <span class="form-prepopped cell-span editable-work">Helped customers at the checkout</span>
               </td>
             </tr>
           </tbody>
@@ -250,10 +219,10 @@ headerTitle: Find an Apprenticeship
           <tbody>
             <tr>
               <td>
-                <span class="cell-span editable-work">May 2012</span>
+                <span class="form-prepopped cell-span editable-work">May 2012</span>
               </td>
               <td>
-                <span class="cell-span editable-work">Sept 2013</span>
+                <span class="form-prepopped cell-span editable-work">Sept 2013</span>
               </td>
               <td></td>
               <td></td>
@@ -286,7 +255,7 @@ headerTitle: Find an Apprenticeship
 </fieldset>
 
 <div class="form-group">
-  <a href="apply-happens.html" class="button">Apply</a>
+  <a href="apply-happens.html" class="button">Submit application</a>
   <p>
     <a href="apply-index.html" class="button-link">Back</a>
   </p>
