@@ -96,6 +96,18 @@ details summary:focus {
   }
 }
 
+.success-banner {
+  background: $turquoise;
+  color: $white;
+  margin-bottom: $gutter;
+  padding: $gutter-half;
+  text-align: center;
+  width: 100%;
+  @include media(tablet) {
+    padding: $gutter;
+  }
+}
+
 .mob-collpanel-trigger {
   @media (max-width: 640px) {
     &:after {

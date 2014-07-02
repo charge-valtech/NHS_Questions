@@ -73,28 +73,28 @@ $(function() {
 
   });
 
-  // if($('#fullNamePre').length > 0) {
-  //   var fullNamePre   = $.jStorage.get('fullName'),
-  //       dobFullPre    = $.jStorage.get('dobFull'),
-  //       address1Pre   = $.jStorage.get('address1'),
-  //       address2Pre   = $.jStorage.get('address2'),
-  //       address3Pre   = $.jStorage.get('address3'),
-  //       address3bPre  = $.jStorage.get('address3b'),
-  //       address4Pre   = $.jStorage.get('address4'),
-  //       emailInputPre = $.jStorage.get('emailInput'),
-  //       phoneInputPre = $.jStorage.get('phoneInput');
+  if($('#fullNamePre').length > 0) {
+    var fullNamePre   = $.jStorage.get('fullName'),
+        dobFullPre    = $.jStorage.get('dobFull'),
+        address1Pre   = $.jStorage.get('address1'),
+        address2Pre   = $.jStorage.get('address2'),
+        address3Pre   = $.jStorage.get('address3'),
+        address3bPre  = $.jStorage.get('address3b'),
+        address4Pre   = $.jStorage.get('address4'),
+        emailInputPre = $.jStorage.get('emailInput'),
+        phoneInputPre = $.jStorage.get('phoneInput');
 
-  //   $('#fullNamePre').text(fullNamePre);
-  //   $('#dobFullPre').text(dobFullPre);
-  //   $('#address1Pre').text(address1Pre);
-  //   $('#address2Pre').text(address2Pre);
-  //   $('#address3Pre').text(address3Pre);
-  //   $('#address3bPre').text(address3bPre);
-  //   $('#address4Pre').text(address4Pre);
-  //   $('#emailInputPre').text(emailInputPre);
-  //   $('#phoneInputPre').text(phoneInputPre);
+    $('#fullNamePre').text(fullNamePre);
+    $('#dobFullPre').text(dobFullPre);
+    $('#address1Pre').text(address1Pre);
+    $('#address2Pre').text(address2Pre);
+    $('#address3Pre').text(address3Pre);
+    $('#address3bPre').text(address3bPre);
+    $('#address4Pre').text(address4Pre);
+    $('#emailInputPre').text(emailInputPre);
+    $('#phoneInputPre').text(phoneInputPre);
 
-  // }
+  }
 
   if($('#accountCreated').length > 0) {
     var emailInputPre = $.jStorage.get('emailInput');
@@ -120,24 +120,24 @@ $(function() {
     $.jStorage.set('question4', $question4);
   });
 
-  // if($('#schoolNamePre').length > 0) {
-  //   var schoolNamePre = $.jStorage.get('schoolName'),
-  //       schoolFromPre = $.jStorage.get('schoolFrom'),
-  //       schoolToPre   = $.jStorage.get('schoolTo'),
-  //       question1Pre  = $.jStorage.get('question1'),
-  //       question2Pre  = $.jStorage.get('question2'),
-  //       question3Pre  = $.jStorage.get('question3'),
-  //       question4Pre  = $.jStorage.get('question4');
+  if($('#schoolNamePre').length > 0) {
+    var schoolNamePre = $.jStorage.get('schoolName'),
+        schoolFromPre = $.jStorage.get('schoolFrom'),
+        schoolToPre   = $.jStorage.get('schoolTo'),
+        question1Pre  = $.jStorage.get('question1'),
+        question2Pre  = $.jStorage.get('question2'),
+        question3Pre  = $.jStorage.get('question3'),
+        question4Pre  = $.jStorage.get('question4');
 
-  //   $('#schoolNamePre').text(schoolNamePre);
-  //   $('#schoolFromPre').text(schoolFromPre);
-  //   $('#schoolToPre').text(schoolToPre);
-  //   $('#question1Pre').text(question1Pre);
-  //   $('#question2Pre').text(question2Pre);
-  //   $('#question3Pre').text(question3Pre);
-  //   $('#question4Pre').text(question4Pre);
+    $('#schoolNamePre').text(schoolNamePre);
+    $('#schoolFromPre').text(schoolFromPre);
+    $('#schoolToPre').text(schoolToPre);
+    $('#question1Pre').text(question1Pre);
+    $('#question2Pre').text(question2Pre);
+    $('#question3Pre').text(question3Pre);
+    $('#question4Pre').text(question4Pre);
 
-  // }
+  }
 
 //------------- Address input
   $('.address-find-btn').on('click', function(e) {
