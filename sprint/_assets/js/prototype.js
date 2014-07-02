@@ -47,9 +47,8 @@ $(function() {
 
   $('#createAccountBtn').on('click', function(){
     $firstName  = $('#first-name').val(),
-    $middleName = $('#middle-name').val(),
     $lastName   = $('#last-name').val(),
-    $fullName   = $firstName + ' ' + $middleName + ' ' + $lastName,
+    $fullName   = $firstName + ' ' + $lastName,
     $dobDay     = $('#dob-day').val(),
     $dobMonth   = $('#dob-month').val(),
     $dobYear    = $('#dob-year').val(),
@@ -94,6 +93,7 @@ $(function() {
     $('#address4Pre').text(address4Pre);
     $('#emailInputPre').text(emailInputPre);
     $('#phoneInputPre').text(phoneInputPre);
+
   }
 
   if($('#accountCreated').length > 0) {
