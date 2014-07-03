@@ -44,39 +44,11 @@ iframe {
   }
 }
 
-// .icon-edit {
-//   background: url(../img/icon-edit.png) no-repeat;
-//   background-size: 16px 16px;
-//   cursor: pointer;
-//   display: none;
-//   margin: 0 5px;
-//   vertical-align: middle;
-//   width: 16px; height: 16px;
-//   &.next-textarea {
-//     margin-top: 6px;
-//     vertical-align: top;
-//   }
-//   @include device-pixel-ratio(2) {
-//     background-image: url(../img/icon-edit-2x.png);
-//   }
-//   .edit-mode & {
-//     display: inline-block;
-//   }
-// }
-
-// .icon-tick {
-//   background: url(../img/icon-tick.png) no-repeat;
-//   background-size: 16px 16px;
-//   cursor: pointer;
-//   display: inline-block;
-//   margin: 0 5px;
-//   vertical-align: middle;
-//   width: 16px; height: 16px;
-//   &.next-textarea {
-//     margin-top: 6px;
-//     vertical-align: top;
-//   }
-//   @include device-pixel-ratio(2) {
-//     background-image: url(../img/icon-tick-2x.png);
-//   }
-// }
+.icon-with-text {
+  .the-text {
+    display: none;
+    @include media(tablet) {
+      display: inline-block;
+    }
+  }
+}
