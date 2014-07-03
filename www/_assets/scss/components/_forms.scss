@@ -20,6 +20,13 @@ fieldset { /*Overriding normalize presets*/
   padding: 0;
 }
 
+legend {
+  a {
+    @include copy-19;
+    float: right;
+  }
+}
+
 select {
   border: 1px solid $border-colour;;
   font-family: inherit;
