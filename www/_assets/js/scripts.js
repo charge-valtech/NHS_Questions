@@ -1876,16 +1876,16 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
     var $this         = $(this),
         $maxLength    = $this.attr('data-val-length-max'),
         $lengthOfText = $this.val().length,
-        $charCountEl  = $this.next('.form-hint').find('.maxchar-count');
+        $charCountEl  = $this.next('.maxchar-count');
 
     if($maxLength) {
       $($charCountEl).text($maxLength - $lengthOfText);
     }
 
     if($lengthOfText > $maxLength) {
-      $charCountEl.parent().addClass('has-error');
+      $charCountEl.addClass('has-error');
     } else {
-      $charCountEl.parent().removeClass('has-error');
+      $charCountEl.removeClass('has-error');
     }
 
   });
