@@ -43,155 +43,177 @@ headerTitle: Find an Apprenticeship
 
 <fieldset class="fieldset-with-border" id="applyQualifications">
   <legend class="heading-large">Qualifications</legend>
-  <div class="enter-qualification clearfix">
-    <div class="inline-fixed">
-      <div class="form-group">
-        <label for="qual-type" class="form-label">Type of qualification</label>
-        <select id="qual-type">
-          <option value="">Select from list</option>
-          <option class="gcse" value="GCSE">GCSE</option>
-          <option class="as-level" value="AS Level">AS Level</option>
-          <option class="a-level" value="A Level">A Level</option>
-          <option class="btec" value="BTEC">BTEC</option>
-          <option class="nvq1" value="NVQ or SVQ Level 1">NVQ or SVQ Level 1</option>
-          <option class="nvq2" value="NVQ or SVQ Level 2">NVQ or SVQ Level 2</option>
-          <option class="nvq3" value="NVQ or SVQ Level 3">NVQ or SVQ Level 3</option>
-          <option id="otherQualOption" class="other" value="Other">Other</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="subject-year" class="form-label">Year</label>
-        <input maxlength="4" type="tel" class="form-control form-control-small" pattern="[0-9]*" id="subject-year">
-      </div>
-    </div>
-    <div class="other-qual-input form-group toggle-content">
-      <label for="other-qual" class="form-label">Name of other qualification</label>
-      <input type="text" class="form-control" id="other-qual">
-    </div>
-    <div class="form-group form-group-compound">
-      <label for="subject-name" class="form-label">Subject</label>
-      <input type="text" class="form-control" id="subject-name">
-    </div>
-    <div class="inline-fixed">
-      <div class="form-group">
-        <label for="subject-grade" class="form-label">Grade</label>
-        <input type="text" class="form-control form-control-medium" id="subject-grade">
-      </div>
-      <div class="form-group">
-        <input id="qual-predicted" type="checkbox">
-        <label for="qual-predicted">Predicted?</label>
-      </div>
-    </div>
-    <div class="form-group">
-      <a href="#" class="button save-qual-btn" id="saveQualification">Add qualification</a>
-    </div>
+  <p class="form-label">Would you like to enter qualifications?</p>
+  <div class="form-group inline clearfix">
+    <label data-target="qualifications-panel" for="qualifications-yes" class="block-label">
+      <input name="quals" type="radio" id="qualifications-yes">Yes
+    </label>
+    <label for="qualifications-no" class="block-label">
+      <input name="quals" type="radio" id="qualifications-no">No
+    </label>
   </div>
-  <div class="qualifications-wrapper">
-    <div class="qualification-table toggle-content">
-      <div class="hgroup-small">
-        <h3 class="heading-small heading-qualType"></h3>
+  <div id="qualifications-panel" class="has-qualifications toggle-content">
+    <div class="enter-qualification clearfix">
+      <div class="inline-fixed">
+        <div class="form-group">
+          <label for="qual-type" class="form-label">Type of qualification</label>
+          <select id="qual-type">
+            <option value="">Select from list</option>
+            <option class="gcse" value="GCSE">GCSE</option>
+            <option class="as-level" value="AS Level">AS Level</option>
+            <option class="a-level" value="A Level">A Level</option>
+            <option class="btec" value="BTEC">BTEC</option>
+            <option class="nvq1" value="NVQ or SVQ Level 1">NVQ or SVQ Level 1</option>
+            <option class="nvq2" value="NVQ or SVQ Level 2">NVQ or SVQ Level 2</option>
+            <option class="nvq3" value="NVQ or SVQ Level 3">NVQ or SVQ Level 3</option>
+            <option id="otherQualOption" class="other" value="Other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="subject-year" class="form-label">Year</label>
+          <input maxlength="4" type="tel" class="form-control form-control-small" pattern="[0-9]*" id="subject-year">
+        </div>
       </div>
-      <table class="grid-3-4">
-        <colgroup>
-          <col class="t40">
-          <col class="t25">
-          <col class="t15">
-          <col class="t10">
-          <col class="t10">
-          <col>
-        </colgroup>
-        <thead>
-          <tr>
-            <th class="th-qualSubject"><span class="heading-span">Subject</span></th>
-            <th class="th-qualGrade"><span class="heading-span">Grade</span></th>
-            <th class="th-qualYear"><span class="heading-span">Year</span></th>
-            <th></th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody class="tbody-qual">
-        </tbody>
-      </table>
+      <div class="other-qual-input form-group toggle-content">
+        <label for="other-qual" class="form-label">Name of other qualification</label>
+        <input type="text" class="form-control" id="other-qual">
+      </div>
+      <div class="form-group form-group-compound">
+        <label for="subject-name" class="form-label">Subject</label>
+        <input type="text" class="form-control" id="subject-name">
+      </div>
+      <div class="inline-fixed">
+        <div class="form-group">
+          <label for="subject-grade" class="form-label">Grade</label>
+          <input type="text" class="form-control form-control-medium" id="subject-grade">
+        </div>
+        <div class="form-group">
+          <input id="qual-predicted" type="checkbox">
+          <label for="qual-predicted">Predicted?</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <a href="#" class="button save-qual-btn" id="saveQualification">Add qualification</a>
+      </div>
+    </div>
+    <div class="qualifications-wrapper">
+      <div class="qualification-table toggle-content">
+        <div class="hgroup-small">
+          <h3 class="heading-small heading-qualType"></h3>
+        </div>
+        <table class="grid-3-4">
+          <colgroup>
+            <col class="t40">
+            <col class="t25">
+            <col class="t15">
+            <col class="t10">
+            <col class="t10">
+            <col>
+          </colgroup>
+          <thead>
+            <tr>
+              <th class="th-qualSubject"><span class="heading-span">Subject</span></th>
+              <th class="th-qualGrade"><span class="heading-span">Grade</span></th>
+              <th class="th-qualYear"><span class="heading-span">Year</span></th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody class="tbody-qual">
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </fieldset>
 
 <fieldset class="fieldset-with-border" id="applyWorkExperience">
   <legend class="heading-large">Work experience</legend>
-  <div class="enter-work clearfix">
-    <div class="form-group form-group-compound">
-      <label for="work-employer" class="form-label">Employer</label>
-      <input type="text" class="form-control" id="work-employer">
-    </div>
-    <div class="form-group form-group">
-      <label for="work-title" class="form-label">Job title</label>
-      <input type="text" class="form-control" id="work-title">
-    </div>
-    <div class="form-group form-group-compound">
-      <label for="work-role" class="form-label">Main duties</label>
-      <textarea type="text" rows="3" class="form-control" id="work-role" data-val-length-max="200"></textarea>
-      <span class="form-hint maxchar-count">200</span>
-    </div>
-    <div class="inline-fixed">
+  <p class="form-label">Would you like to enter work experience?</p>
+  <div class="form-group inline clearfix">
+    <label data-target="workexperience-panel" for="workexp-yes" class="block-label">
+      <input name="workexp" type="radio" id="workexp-yes">Yes
+    </label>
+    <label for="workexp-no" class="block-label">
+      <input name="workexp" type="radio" id="workexp-no">No
+    </label>
+  </div>
+  <div id="workexperience-panel" class="has-work-experience toggle-content">
+    <div class="enter-work clearfix">
       <div class="form-group form-group-compound">
-        <label for="work-from" class="form-label">From</label>
+        <label for="work-employer" class="form-label">Employer</label>
+        <input type="text" class="form-control" id="work-employer">
+      </div>
+      <div class="form-group form-group">
+        <label for="work-title" class="form-label">Job title</label>
+        <input type="text" class="form-control" id="work-title">
+      </div>
+      <div class="form-group form-group-compound">
+        <label for="work-role" class="form-label">Main duties</label>
+        <textarea type="text" rows="3" class="form-control" id="work-role" data-val-length-max="200"></textarea>
+        <span class="form-hint maxchar-count">200</span>
+      </div>
+      <div class="inline-fixed">
         <div class="form-group form-group-compound">
-          <span class="form-hint">Month</span>
-          <select name="" id="work-from">
-            <option value="Jan">Jan</option>
-            <option value="Feb">Feb</option>
-            <option value="Mar">Mar</option>
-            <option value="Apr">Apr</option>
-            <option value="May">May</option>
-            <option value="June">June</option>
-            <option value="July">July</option>
-            <option value="Aug">Aug</option>
-            <option value="Sept">Sept</option>
-            <option value="Oct">Oct</option>
-            <option value="Nov">Nov</option>
-            <option value="Dec">Dec</option>
-          </select>
+          <label for="work-from" class="form-label">From</label>
+          <div class="form-group form-group-compound">
+            <span class="form-hint">Month</span>
+            <select name="" id="work-from">
+              <option value="Jan">Jan</option>
+              <option value="Feb">Feb</option>
+              <option value="Mar">Mar</option>
+              <option value="Apr">Apr</option>
+              <option value="May">May</option>
+              <option value="June">June</option>
+              <option value="July">July</option>
+              <option value="Aug">Aug</option>
+              <option value="Sept">Sept</option>
+              <option value="Oct">Oct</option>
+              <option value="Nov">Nov</option>
+              <option value="Dec">Dec</option>
+            </select>
+          </div>
+          <div class="form-group form-group-compound">
+            <span class="form-hint">Year</span>
+            <input type="tel" class="form-control form-control-medium" pattern="[0-9]*" maxlength="4" id="work-from-year">
+          </div>
         </div>
-        <div class="form-group form-group-compound">
-          <span class="form-hint">Year</span>
-          <input type="tel" class="form-control form-control-medium" maxlength="4" id="work-from-year">
+        <div class="form-group">
+          <label for="work-to" class="form-label">To</label>
+          <div class="form-group form-group-compound">
+            <span class="form-hint">Month</span>
+            <select name="" id="work-to">
+              <option value="Jan">Jan</option>
+              <option value="Feb">Feb</option>
+              <option value="Mar">Mar</option>
+              <option value="Apr">Apr</option>
+              <option value="May">May</option>
+              <option value="June">June</option>
+              <option value="July">July</option>
+              <option value="Aug">Aug</option>
+              <option value="Sept">Sept</option>
+              <option value="Oct">Oct</option>
+              <option value="Nov">Nov</option>
+              <option value="Dec">Dec</option>
+            </select>
+          </div>
+          <div class="form-group form-group-compound">
+            <span class="form-hint">Year</span>
+            <input type="tel" class="form-control form-control-medium" pattern="[0-9]*" maxlength="4" id="work-to-year">
+          </div>
+          <div class="form-group form-group-compound">
+            <input id="work-current" type="checkbox">
+            <label for="work-current">Current</label>
+          </div>
         </div>
       </div>
       <div class="form-group">
-        <label for="work-to" class="form-label">To</label>
-        <div class="form-group form-group-compound">
-          <span class="form-hint">Month</span>
-          <select name="" id="work-to">
-            <option value="Jan">Jan</option>
-            <option value="Feb">Feb</option>
-            <option value="Mar">Mar</option>
-            <option value="Apr">Apr</option>
-            <option value="May">May</option>
-            <option value="June">June</option>
-            <option value="July">July</option>
-            <option value="Aug">Aug</option>
-            <option value="Sept">Sept</option>
-            <option value="Oct">Oct</option>
-            <option value="Nov">Nov</option>
-            <option value="Dec">Dec</option>
-          </select>
-        </div>
-        <div class="form-group form-group-compound">
-          <span class="form-hint">Year</span>
-          <input type="tel" class="form-control form-control-medium" maxlength="4" id="work-to-year">
-        </div>
-        <div class="form-group form-group-compound">
-          <input id="work-current" type="checkbox">
-          <label for="work-current">Current</label>
-        </div>
+        <a href="#" class="button save-work-btn" id="addWorkBtn">Add work</a>
       </div>
     </div>
-    <div class="form-group">
-      <a href="#" class="button save-work-btn" id="addWorkBtn">Add work</a>
+    <div class="work-history-wrapper grid-3-4">
+    
     </div>
-  </div>
-  <div class="work-history-wrapper grid-3-4">
-
   </div>
 </fieldset>
 
@@ -224,7 +246,7 @@ headerTitle: Find an Apprenticeship
   <div class="form-group">
     <label for="question4" class="form-label">Is there anything we can do to support your interview?</label>
     <span class="form-hint">For example, do you need a signer, information in braille</span>
-    <div class="inline">
+    <div class="form-group form-group-compound inline">
       <label data-target="support-panel" for="support-yes" class="block-label">
         <input name="support" type="radio" id="support-yes">Yes
       </label>

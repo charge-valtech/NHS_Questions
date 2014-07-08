@@ -1802,7 +1802,7 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
       $('input:not(:checked)').parent().removeClass('selected');
       $('input:checked').parent().addClass('selected');
 
-      $('.toggle-content').hide();
+      $(this).closest('.form-group').next('.toggle-content').toggle();
 
       var target = $('input:checked').parent().attr('data-target');
       $('#'+target).show();
