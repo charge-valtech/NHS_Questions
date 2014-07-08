@@ -1873,7 +1873,15 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
   //--------Max character length on textareas
 
   $('textarea').on('keyup', function() {
-    var $this         = $(this),
+    characterCount(this);
+  });
+
+  $('textarea:not(:empty)').each(function() {
+    characterCount(this);
+  });
+
+  function characterCount(that) {
+    var $this         = $(that),
         $maxLength    = $this.attr('data-val-length-max'),
         $lengthOfText = $this.val().length,
         $charCountEl  = $this.next('.maxchar-count');
@@ -1887,8 +1895,7 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
     } else {
       $charCountEl.removeClass('has-error');
     }
-
-  });
+  }
 
 });;/*
  *  jQuery Password Strength - v0.0.1

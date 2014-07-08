@@ -119,7 +119,15 @@ $(function() {
   //--------Max character length on textareas
 
   $('textarea').on('keyup', function() {
-    var $this         = $(this),
+    characterCount(this);
+  });
+
+  $('textarea:not(:empty)').each(function() {
+    characterCount(this);
+  });
+
+  function characterCount(that) {
+    var $this         = $(that),
         $maxLength    = $this.attr('data-val-length-max'),
         $lengthOfText = $this.val().length,
         $charCountEl  = $this.next('.maxchar-count');
@@ -133,7 +141,6 @@ $(function() {
     } else {
       $charCountEl.removeClass('has-error');
     }
-
-  });
+  }
 
 });
