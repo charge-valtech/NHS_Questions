@@ -103,13 +103,15 @@ $(function() {
   }
 
   $('#applyPreviewBtn').on('click', function() {
-    var $schoolName = $('#school-name').val(),
-        $schoolFrom = $('#school-from').val(),
-        $schoolTo   = $('#school-to').val(),
-        $question1  = $('#question1').val(),
-        $question2  = $('#question2').val(),
-        $question3  = $('#question3').val(),
-        $question4  = $('#question4').val();
+    var $schoolName    = $('#school-name').val(),
+        $schoolFrom    = $('#school-from').val(),
+        $schoolTo      = $('#school-to').val(),
+        $question1     = $('#question1').val(),
+        $question2     = $('#question2').val(),
+        $question3     = $('#question3').val(),
+        $question4     = $('#question4').val(),
+        $addQuestion1  = $('#add-question1').val(),
+        $addQuestion2  = $('#add-question2').val();
 
     $.jStorage.set('schoolName', $schoolName);
     $.jStorage.set('schoolFrom', $schoolFrom);
@@ -118,16 +120,20 @@ $(function() {
     $.jStorage.set('question2', $question2);
     $.jStorage.set('question3', $question3);
     $.jStorage.set('question4', $question4);
+    $.jStorage.set('add-question1', $addQuestion1);
+    $.jStorage.set('add-question2', $addQuestion2);
   });
 
   if($('#schoolNamePre').length > 0) {
-    var schoolNamePre = $.jStorage.get('schoolName'),
-        schoolFromPre = $.jStorage.get('schoolFrom'),
-        schoolToPre   = $.jStorage.get('schoolTo'),
-        question1Pre  = $.jStorage.get('question1'),
-        question2Pre  = $.jStorage.get('question2'),
-        question3Pre  = $.jStorage.get('question3'),
-        question4Pre  = $.jStorage.get('question4');
+    var schoolNamePre    = $.jStorage.get('schoolName'),
+        schoolFromPre    = $.jStorage.get('schoolFrom'),
+        schoolToPre      = $.jStorage.get('schoolTo'),
+        question1Pre     = $.jStorage.get('question1'),
+        question2Pre     = $.jStorage.get('question2'),
+        question3Pre     = $.jStorage.get('question3'),
+        question4Pre     = $.jStorage.get('question4'),
+        addQuestion1Pre  = $.jStorage.get('add-question1'),
+        addQuestion2Pre  = $.jStorage.get('add-question2');
 
     $('#schoolNamePre').text(schoolNamePre);
     $('#schoolFromPre').text(schoolFromPre);
@@ -136,6 +142,8 @@ $(function() {
     $('#question2Pre').text(question2Pre);
     $('#question3Pre').text(question3Pre);
     $('#question4Pre').text(question4Pre);
+    $('#add-question1Pre').text(addQuestion1Pre);
+    $('#add-question2Pre').text(addQuestion2Pre);
 
   }
 
