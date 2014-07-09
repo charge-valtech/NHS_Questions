@@ -3,6 +3,7 @@
 
 .button {
   @include button ($button-colour);
+  font-family: inherit;
   margin: 0 $gutter-half $gutter-half 0;
   text-align: center;
   width: 100%;
