@@ -12,9 +12,6 @@ headerTitle: Find an Apprenticeship
     <p>
       An exciting opportunity has arisen for the right candidate to gain an engineering qualification through an apprenticeship. If you have got drive and want to learn a highly skilled trade then look no further.
     </p>
-    <p>
-      <a href="search-details.html">Back to vacancy</a>
-    </p>
   </div>
 </section>
 <fieldset class="fieldset-with-border grid-wrapper">
@@ -44,7 +41,7 @@ headerTitle: Find an Apprenticeship
 <fieldset class="fieldset-with-border" id="applyQualifications">
   <legend class="heading-large">Qualifications</legend>
   <p class="form-label">Do you have any qualifications?</p>
-  <div class="form-group inline clearfix">
+  <div class="form-group form-group-compound inline clearfix">
     <label data-target="qualifications-panel" for="qualifications-yes" class="block-label">
       <input name="quals" type="radio" id="qualifications-yes">Yes
     </label>
@@ -125,11 +122,20 @@ headerTitle: Find an Apprenticeship
       </div>
     </div>
   </div>
+  <div class="form-group text">
+    <details>
+      <summary role="button">Yet to sit your exams?</summary>
+      <p class="panel-indent">If you haven’t taken your exams yet, or are still awaiting for your results, enter the grades you're predicted to get. If you’re unsure where to find these, contact your school or college.</p>
+    </details>
+  </div>
 </fieldset>
 
 <fieldset class="fieldset-with-border" id="applyWorkExperience">
   <legend class="heading-large">Work experience</legend>
-  <p class="form-label text">Do you have any work experience, either voluntary or paid, that will support your application?</p>
+  <p class="form-label text">Do you have any work experience?</p>
+  <span class="form-hint text">
+    Try and use any skills you have gained through work (whether paid or unpaid) that relate to the role you’re applying for
+  </span>
   <div class="form-group inline clearfix">
     <label data-target="workexperience-panel" for="workexp-yes" class="block-label">
       <input name="workexp" type="radio" id="workexp-yes">Yes
@@ -219,33 +225,41 @@ headerTitle: Find an Apprenticeship
 
 <fieldset class="fieldset-with-border" id="applyAboutYou">
   <legend class="heading-large">About you</legend>
-  <div class="form-group text">
-    <details>
-      <summary role="button">Help with this section</summary>
-      <p class="panel-indent">Think carefully about how you answer these questions. Where possible, keep the vacancy that you're applying for in mind, and tailor your answers to match the role.</p>
-    </details>
-  </div>
   <div class="form-group">
-    <label for="question1" class="form-label">What are your strengths?</label>
-    <span class="form-hint">For example, team working, organising</span>
+    <label for="question1" class="form-label">Provide examples of your strengths</label>
+    <div class="text">
+      <details class="no-btm-margin">
+        <summary role="button">Help with this section</summary>
+        <p class="panel-indent">An employer is looking for examples of your strengths. Whatever skills you give, you’ll need to provide details of when you’ve shown these.</p>
+      </details>
+    </div>
     <textarea id="question1" class="form-control" data-val-length-max="4000"></textarea>
     <span class="form-hint maxchar-count">4000</span>
   </div>
   <div class="form-group">
-    <label for="question2" class="form-label">Where do you feel you could improve?</label>
-    <span class="form-hint">For example, time managing, confidence</span>
+    <label for="question2" class="form-label">What skills would you like to improve?</label>
+    <div class="text">
+      <details class="no-btm-margin">
+        <summary role="button">Help with this section</summary>
+        <p class="panel-indent">Try and keep your answers relevant to the job you’re applying for and the industry the employer works in.</p>
+      </details>
+    </div>
     <textarea id="question2" class="form-control" data-val-length-max="4000"></textarea>
     <span class="form-hint maxchar-count">4000</span>
   </div>
   <div class="form-group">
-    <label for="question3" class="form-label">What are your hobbies/interests?</label>
-    <span class="form-hint">These can include any personal achievements</span>
+    <label for="question3" class="form-label">What are you hobbies and interests?</label>
+    <div class="text">
+      <details class="no-btm-margin">
+        <summary role="button">Help with this section</summary>
+        <p class="panel-indent">Try and keep your answers as current as possible and think of skills you’ve gained from your hobbies and interests that might be relevant to the vacancy. Remember to include any personal achievements.</p>
+      </details>
+    </div>
     <textarea id="question3" class="form-control" data-val-length-max="4000"></textarea>
     <span class="form-hint maxchar-count">4000</span>
   </div>
   <div class="form-group">
     <label for="question4" class="form-label">Is there anything we can do to support your interview?</label>
-    <span class="form-hint">For example, do you need a signer, information in braille</span>
     <div class="form-group form-group-compound inline">
       <label data-target="support-panel" for="support-yes" class="block-label">
         <input name="support" type="radio" id="support-yes">Yes
