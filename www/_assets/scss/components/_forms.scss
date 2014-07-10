@@ -71,7 +71,6 @@ input[type=number]::-webkit-outer-spin-button {
 // Form group is used to wrap label and input pairs
 .form-group {
   clear: both;
-  float: left;
   margin-bottom: 20px;
   width: 100%;
   @include media(tablet) {
@@ -130,6 +129,9 @@ input[type=number]::-webkit-outer-spin-button {
       display: inline-block;
       margin-right: 5px;
     }
+  }
+  .form-lighter-labels & {
+    color: $secondary-text-colour;
   }
 }
 

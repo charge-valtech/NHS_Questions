@@ -116,11 +116,15 @@ headerTitle: Find an Apprenticeship
   <div class="form-group">
     <label for="password-input" class="form-label">Create password</label>
     <span class="form-hint text">Must contain letters, numbers, symbols and be at least 8 characters.</span>
-    <div class="password-wrapper">
+    <div class="form-group form-group-compound password-wrapper">
       <input type="password" class="form-control" id="password-input">
-      <span class="pw-masktoggle button-link">Show</span>
+      <span class="pw-masktoggle button-link hide-nojs">Show</span>
     </div>
-    <p class="form-hint strength-indicator">Password strength: <span id="pass_meter" class=""></span></p>
+    <div class="password-second show-nojs">
+      <label for="confirm-password" class="form-label">Confirm password</label>
+      <input type="password" class="form-control">
+    </div>
+    <p class="form-hint strength-indicator hide-nojs">Password strength: <span id="pass_meter" class=""></span></p>
   </div>
 </fieldset>
 <fieldset>

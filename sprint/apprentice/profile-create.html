@@ -55,7 +55,14 @@
     </header>
     <div class="content-container">
       <div class="phase-notice gov-border">
-        <strong class="beta__label">Beta</strong>  <span>This is a prototype – your <a href="#">feedback</a> will help us to improve it.</span>
+        <div class="prototype-warning">
+          <strong class="beta__label">Beta</strong>  <span>This is a prototype – your <a href="#">feedback</a> will help us to improve it.</span>
+        </div>
+        <!-- <ul class="account-info">
+  	<li class="your-name">Henry Charge</li>
+  	<li><a href="/apprentice/profile-signin.html">Dashboard</a></li>
+  	<li><a href="/apprentice/profile-signin.html"><i class="fa fa-sign-in"></i>Sign in</a></li>
+  </ul> -->
       </div>
       <main role="main" id="main">
         <h1 class="heading-xlarge">Create an account</h1>
@@ -173,11 +180,15 @@
           <div class="form-group">
             <label for="password-input" class="form-label">Create password</label>
             <span class="form-hint text">Must contain letters, numbers, symbols and be at least 8 characters.</span>
-            <div class="password-wrapper">
+            <div class="form-group form-group-compound password-wrapper">
               <input type="password" class="form-control" id="password-input">
-              <span class="pw-masktoggle button-link">Show</span>
+              <span class="pw-masktoggle button-link hide-nojs">Show</span>
             </div>
-            <p class="form-hint strength-indicator">Password strength: <span id="pass_meter" class=""></span>
+            <div class="password-second show-nojs">
+              <label for="confirm-password" class="form-label">Confirm password</label>
+              <input type="password" class="form-control">
+            </div>
+            <p class="form-hint strength-indicator hide-nojs">Password strength: <span id="pass_meter" class=""></span>
             </p>
           </div>
         </fieldset>

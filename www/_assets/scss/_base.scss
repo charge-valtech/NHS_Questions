@@ -23,6 +23,10 @@
   }
 }
 
+.show-nojs {
+  display: none;
+}
+
 .no-js {
   .toggle-content, .toggle-content--mob {
     display: block !important;
@@ -30,7 +34,18 @@
   .nojs-notice {
     display: table-cell;
   }
+  .hide-nojs {
+    display: none !important;
+  }
+  span.show-nojs {
+    display: inline-block;
+  }
+  div.show-nojs {
+    display: block;
+  }
 }
+
+
 
 /* 1. Stops scrollbar from hiding when user is inactive on the page */
 
