@@ -96,9 +96,9 @@ module.exports = function(grunt) {
       }
     },
     copyto: {
-      sprint: {
+      prototype: {
         files: [
-          {cwd: 'www/', src: ['**/*'], dest: 'sprint/'}
+          {cwd: 'www/', src: ['**/*'], dest: 'prototype/'}
         ],
         options: {
           ignore: [
@@ -115,15 +115,20 @@ module.exports = function(grunt) {
       },
       beta: {
         files: [
-          {cwd: 'sprint/_assets/', src: ['**/*'], dest: '_beta-sln/Beta/src/SFA.Apprenticeships.Web.Candidate/Content/_assets/'},
-          {cwd: 'sprint/_assets/', src: ['**/*'], dest: '_beta-sln/Beta/src/SFA.Apprenticeships.Web.Employer/Content/_assets/'}
+          {cwd: 'prototype/_assets/', src: ['**/*'], dest: '_beta-sln/Beta/src/SFA.Apprenticeships.Web.Candidate/Content/_assets/'},
+          {cwd: 'prototype/_assets/', src: ['**/*'], dest: '_beta-sln/Beta/src/SFA.Apprenticeships.Web.Employer/Content/_assets/'}
         ],
         options: {
           ignore: [
-            'sprint/_assets/video{,/**/*}',
-            'sprint/_assets/js/prototype.js'
+            'prototype/_assets/video{,/**/*}',
+            'prototype/_assets/js/prototype.js'
           ]
         }
+      },
+      sprint: {
+        files: [
+          {cwd: 'prototype/', src: ['**/*'], dest: 'sprint/'}
+        ]
       },
       dist: {
         files: [
@@ -146,11 +151,11 @@ module.exports = function(grunt) {
       }
     },
     clean: {
+      prototype: {
+        src: [ 'prototype/' ]
+      },
       sprint: {
         src: [ 'sprint/' ]
-      },
-      demo: {
-        src: [ 'demo/' ]
       },
       dist: {
         src: [ 'dist/' ]
@@ -189,9 +194,9 @@ module.exports = function(grunt) {
           {expand: true, cwd: 'dist/', src: ['apprentice/*.html', 'trainee/*.html', 'employer/*.html', '*.html'], dest: 'dist/', ext: '.html'}
         ]
       },
-      sprint: {
+      prototype: {
         files: [
-          {expand: true, cwd: 'sprint/', src: ['apprentice/*.html', 'trainee/*.html', 'employer/*.html', '*.html', '!pattern-library.html'], dest: 'sprint/', ext: '.html'}
+          {expand: true, cwd: 'prototype/', src: ['apprentice/*.html', 'trainee/*.html', 'employer/*.html', '*.html', '!pattern-library.html'], dest: 'prototype/', ext: '.html'}
         ]
       }
     },
@@ -278,7 +283,9 @@ module.exports = function(grunt) {
 
   grunt.registerTask('sync', ['jshint', 'concat:dev', 'sass', 'assemble', 'browserSync', 'watch']);
 
-  grunt.registerTask('sprint', ['uglify:dist', 'replace:map', 'clean:sprint', 'replace:scripts', 'copyto:sprint', 'prettify:sprint']);
+  grunt.registerTask('prototype', ['uglify:dist', 'replace:map', 'clean:prototype', 'replace:scripts', 'copyto:prototype', 'prettify:prototype']);
+
+  grunt.registerTask('sprint', ['clean:sprint', 'copyto:sprint']);
 
   grunt.registerTask('dist', ['uglify:dist', 'replace:map', 'clean:dist', 'replace:scripts', 'copyto:dist', 'prettify:dist']);
 
