@@ -146,7 +146,9 @@
   }
   li {
     display: inline-block;
+    margin-bottom: 0;
     list-style-type: none;
+    // padding-bottom: 5px;
   }
   .your-name {
     padding: 0 5px;

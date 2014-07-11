@@ -38,50 +38,49 @@ headerTitle: Find an Apprenticeship
 
 <fieldset class="fieldset-with-border">
   <legend class="heading-large">Contact details</legend>
+  <div class="form-group form-group-compound">
+    <label for="post-code" class="form-label">Postcode</label>
+    <input id="post-code" type="text" class="form-control form-control-large " autocapitalize="characters" autocorrect="off" value="">
+  </div>
+  <div class="form-group form-group-compound">
+    <a href="#" class="button address-find-btn">Find address</a>
+  </div>
+  <div class="address-find-select form-group toggle-content">
+    <label for="address-select" class="form-label">Select your address</label>
+    <select name="" id="address-select">
+      <option value="void">-- 5 found --</option>
+      <option class="address-select-option" value="36 Bolton Road">36 Bolton Road</option>
+      <option class="address-select-option" value="37 Bolton Road">37 Bolton Road</option>
+      <option class="address-select-option" value="38 Bolton Road">38 Bolton Road</option>
+      <option class="address-select-option" value="39 Bolton Road">39 Bolton Road</option>
+      <option class="address-select-option" value="40 Bolton Road">40 Bolton Road</option>
+    </select>
+  </div>
   <div class="form-group">
+    <a href="#" class="address-manual-btn">I want to enter address manually</a>
+  </div>
+  <div class="address-manual-input panel-indent toggle-content">
     <div class="form-group form-group-compound">
-      <label for="post-code" class="form-label">Postcode</label>
-      <input id="post-code" type="text" class="form-control form-control-large " autocapitalize="characters" autocorrect="off" value="">
+      <label for="address1" class="form-label">First line of address</label>
+      <input id="address1" type="text" class="form-control" autocorrect="off" value="">
     </div>
     <div class="form-group form-group-compound">
-      <a href="#" class="button address-find-btn">Find address</a>
+      <label for="address2" class="form-label">Second line (optional)</label>
+      <input id="address2" type="text" class="form-control" autocorrect="off">
     </div>
-    <div class="address-find-select form-group toggle-content">
-      <label for="address-select" class="form-label">Select your address</label>
-      <select name="" id="address-select">
-        <option value="void">-- 5 found --</option>
-        <option class="address-select-option" value="36 Bolton Road">36 Bolton Road</option>
-        <option class="address-select-option" value="37 Bolton Road">37 Bolton Road</option>
-        <option class="address-select-option" value="38 Bolton Road">38 Bolton Road</option>
-        <option class="address-select-option" value="39 Bolton Road">39 Bolton Road</option>
-        <option class="address-select-option" value="40 Bolton Road">40 Bolton Road</option>
-      </select>
+    <div class="form-group form-group-compound">
+      <label for="address3" class="form-label">Town or city</label>
+      <input id="address3" type="text" class="form-control" autocorrect="off" value="">
     </div>
-    <div class="form-group">
-      <a href="#" class="address-manual-btn">I want to enter address manually</a>
+    <div class="form-group form-group-compound">
+      <label for="address3b" class="form-label">County</label>
+      <input id="address3b" type="text" class="form-control" autocorrect="off" value="">
     </div>
-    <div class="address-manual-input panel-indent toggle-content">
-      <div class="form-group form-group-compound">
-        <label for="address1" class="form-label">First line of address</label>
-        <input id="address1" type="text" class="form-control" autocorrect="off" value="">
-      </div>
-      <div class="form-group form-group-compound">
-        <label for="address2" class="form-label">Second line (optional)</label>
-        <input id="address2" type="text" class="form-control" autocorrect="off">
-      </div>
-      <div class="form-group form-group-compound">
-        <label for="address3" class="form-label">Town or city</label>
-        <input id="address3" type="text" class="form-control" autocorrect="off" value="">
-      </div>
-      <div class="form-group form-group-compound">
-        <label for="address3b" class="form-label">County</label>
-        <input id="address3b" type="text" class="form-control" autocorrect="off" value="">
-      </div>
-      <div class="form-group form-group-compound">
-        <label for="address4" class="form-label">Post code</label>
-        <input id="address4" type="text" class="form-control form-control-large" autocapitalize="characters" autocorrect="off" value="">
-      </div>
+    <div class="form-group form-group-compound">
+      <label for="address4" class="form-label">Post code</label>
+      <input id="address4" type="text" class="form-control form-control-large" autocapitalize="characters" autocorrect="off" value="">
     </div>
+  </div>
 
   <div class="form-group">
     <label for="email-input" class="form-label" id="emailInput">Enter email address</label>
@@ -89,8 +88,8 @@ headerTitle: Find an Apprenticeship
     <input type="email" class="form-control linked-input-master" id="email-input" spellcheck="false">
   </div>
   <div class="form-group">
-    <p class="form-label">Enter your phone number</p>
-    <span class="form-hint text">You'll need regular access to your email (for example, to activate your account). Answer 'Yes' and you'll receive notifications via email and SMS.</span>
+    <label class="form-label" for="phone-input">Enter phone number</label>
+    <span class="form-hint text">If this is a mobile you can activate your account via SMS, if you don't have a mobile, enter your landline number</span>
     <input type="tel" class="form-control form-control-1-3" id="phone-input">
   </div>
 
