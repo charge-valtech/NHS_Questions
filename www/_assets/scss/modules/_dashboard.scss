@@ -1,0 +1,32 @@
+.dashboard__statusbar {
+  border-bottom: 1px solid $border-colour;
+  margin-bottom: $gutter;
+  padding: 0;
+  li {
+    list-style: none;
+    margin-bottom: 10px;
+    @include media(tablet) {
+      display: inline-block;
+      margin-right: $gutter;
+    }
+  }
+}
+
+.fig-indicator {
+  background: $grey-1;
+  color: $white;
+  display: inline-block;
+  font-size: .8em;
+  font-weight: 700;
+  margin-right: 5px;
+  min-width: 1.2em;
+  padding: 2px 4px 0;
+  text-align: center;
+  vertical-align: baseline;
+  &.good {
+    background: $turquoise;
+  }
+  &.pending {
+    background: $orange;
+  }
+}

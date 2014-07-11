@@ -20,6 +20,11 @@ table {
   @include media(tablet) {
     margin-bottom: $gutter;
   }
+  &.vert-middle {
+    td {
+      vertical-align: middle;
+    }
+  }
 }
 
 .table-compound {
