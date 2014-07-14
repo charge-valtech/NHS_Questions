@@ -1835,13 +1835,13 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
 
 // -- Password strength indicator
 
-  $("#password-input").keyup(function() {
+  $("#Password").keyup(function() {
     initializeStrengthMeter();
   });
 
   function initializeStrengthMeter() {
     $("#pass_meter").pwStrengthManager({
-      password: $("#password-input").val(),
+      password: $("#Password").val(),
       minChars : "8",
       advancedStrength: true
     });

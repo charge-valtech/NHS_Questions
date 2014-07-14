@@ -90,9 +90,12 @@ module.exports = function(grunt) {
         files: ['www/_assets/js/**/*.js', '!www/_assets/js/scripts.min.js', '!www/_assets/js/scripts.js'],
         tasks: ['jshint', 'concat:dev']
       },
-      html: {
+      hbs: {
         files: ['www/_templates/{,*/}*.hbs', 'www/_templates/{,*/*/}*.hbs'],
         tasks: ['assemble']
+      },
+      html: {
+        files: ['www/email.html']
       }
     },
     copyto: {
@@ -279,11 +282,11 @@ module.exports = function(grunt) {
 
   grunt.registerTask('modern', ['modernizr']);
 
-  grunt.registerTask('default', ['jshint', 'concat:dev', 'sass', 'assemble', 'connect', 'watch']);
+  grunt.registerTask('dev', ['jshint', 'concat:dev', 'sass', 'assemble', 'connect', 'watch']);
 
   grunt.registerTask('sync', ['jshint', 'concat:dev', 'sass', 'assemble', 'browserSync', 'watch']);
 
-  grunt.registerTask('prototype', ['uglify:dist', 'replace:map', 'clean:prototype', 'replace:scripts', 'copyto:prototype', 'prettify:prototype']);
+  grunt.registerTask('proto', ['uglify:dist', 'replace:map', 'clean:prototype', 'replace:scripts', 'copyto:prototype', 'prettify:prototype']);
 
   grunt.registerTask('sprint', ['clean:sprint', 'copyto:sprint']);
 
