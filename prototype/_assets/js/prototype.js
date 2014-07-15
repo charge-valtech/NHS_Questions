@@ -524,11 +524,11 @@ $(function() {
   });
 
   //-- Application save
-  $('#saveApplication').on('click', function() {
-    $(this).hide();
-    $('#applicationSaved').show();
-    return false;
-  });
+  // $('#saveApplication').on('click', function() {
+  //   $(this).hide();
+  //   $('#applicationSaved').show();
+  //   return false;
+  // });
 
   //-- Banner sign in
 
