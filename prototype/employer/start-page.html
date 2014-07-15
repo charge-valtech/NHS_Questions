@@ -23,8 +23,8 @@
     />
     <!--<![endif]-->
     <link rel="shortcut icon" href="../_assets/img/favicon.ico" type="image/x-icon">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"
-    rel="stylesheet">
+    <link href="../_assets/css/font-awesome/css/font-awesome.min.css" rel="stylesheet"
+    type="text/css">
     <script>
     var html = document.documentElement;
     html.className += " js-enabled";
@@ -56,16 +56,19 @@
     <div class="content-container">
       <div class="phase-notice gov-border">
         <div class="prototype-warning">
-          <strong class="beta__label">Beta</strong>  <span>This is a prototype – your <a href="#">feedback</a> will help us to improve it.</span>
+          <strong class="beta__label">Beta</strong>  <span>This is a prototype – your <a href="/feedback.html">feedback</a> will help us to improve it.</span>
         </div>
-        <!--   <ul class="account-info sign-in">
-  	<li><a href="/apprentice/profile-signin.html"><i class="fa fa-sign-in"></i>Sign in</a></li>
-  </ul> -->
-        <!--   <ul class="account-info sign-out">
-  	<li class="your-name">Henry Charge</li>
-  	<li><a href="/apprentice/index.html">Dashboard</a></li>
-  	<li><a href="/apprentice/index.html"><i class="fa fa-sign-out"></i>Sign out</a></li>
-  </ul> -->
+        <ul class="account-info sign-in" id="bannerSignedOut">
+          <li><a href="/apprentice/profile-signin.html"><i class="fa fa-sign-in"></i>Sign in</a>
+          </li>
+        </ul>
+        <ul class="account-info sign-out" id="bannerSignedIn" style="display: none;">
+          <li class="your-name">Henry Charge</li>
+          <li><a href="/apprentice/dashboard.html">Dashboard</a>
+          </li>
+          <li><a href="/feedback.html" id="btnSignOut"><i class="fa fa-sign-out"></i>Sign out</a>
+          </li>
+        </ul>
       </div>
       <main role="main" id="main">
         <h1 class="heading-xlarge">Post a vacancy</h1>
@@ -104,6 +107,7 @@
 </footer>
   <script src="../_assets/js/scripts.min.js"></script>
   <!-- Prototype specific scripts -->
+  <script src="../_assets/js/vendor/jquery.cookie.js"></script>
   <script src="../_assets/js/prototype.js"></script>
 </body>
 </html>

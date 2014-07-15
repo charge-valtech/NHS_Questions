@@ -306,7 +306,7 @@ $(function() {
         $historyItemHTML = '<div class="grid-wrapper work-history-item">' +
                               '<div class="work-controls">' +
                                 '<div class="work-edit ta-center"><span class="cell-span fake-link">Edit</span></div>' +
-                                '<div class="work-delete ta-center"><span class="cell-span"><i class="ir icon-remove">Remove</i></span></div>' +
+                                '<div class="work-delete ta-center"><span class="cell-span"><i class="ir fa fa-times">Remove</i></span></div>' +
                               '</div>' +
                               '<div class="grid grid-1-2">' +
                                 '<table class="table-no-btm-border table-compound">' +
@@ -522,6 +522,35 @@ $(function() {
     $('.validation-summary-errors').toggle();
     $('.has-an-error').toggleClass('input-validation-error')
   });
+
+  //-- Application save
+  $('#saveApplication').on('click', function() {
+    $(this).hide();
+    $('#applicationSaved').show();
+    return false;
+  });
+
+  //-- Banner sign in
+
+  $('#btnSignIn').on('click', function() {
+    $.cookie('signedIn', true, {path: '/'});
+  });
+
+  $('#btnSignOut').on('click', function() {
+    $.removeCookie('signedIn', { path: '/' });
+  });
+
+  if($.cookie('signedIn')) {
+    $('#bannerSignedOut').hide();
+    $('#bannerSignedIn').show();
+    $('.details-apply').show();
+    $('.details-signIn').hide();
+  } else {
+    $('#bannerSignedOut').show();
+    $('#bannerSignedIn').hide();
+    $('.details-apply').hide();
+    $('.details-signIn').show();
+  }
 
 // --------------- Remove for live code -------------- //
 });
