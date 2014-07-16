@@ -2,29 +2,70 @@
 headerTitle: Apprenticeships
 ---
 
-<div class="hgroup">
-	<h1 class="heading-xlarge">Your dashboard</h1>
-	<span class="subtitle">Manage your applications</span>
+<div class="grid-wrapper">
+  <div class="grid grid-1-2">
+    <div class="hgroup">
+      <h1 class="heading-xlarge">Your dashboard</h1>
+      <span class="subtitle">Manage your applications</span>
+    </div>
+  </div>
+  <div class="grid grid-1-2">
+    <!-- <p>Search for more vacancies</p> -->
+    <a style="float: right;" href="search-index.html" class="">Find an apprenticeship</a>
+    <!-- <details>
+      <summary>View your saved searches</summary>
+      <div class="detail-content">
+        <section class="clearfix">
+          <table class="vert-middle">
+            <colgroup>
+              <col class="t50">
+              <col class="t25">
+              <col class="t25">
+              <col>
+            </colgroup>
+            <tr>
+              <td>Hair</td>
+              <td class="ta-center"><a href="#"><i class="fa fa-search"></i>Search</a></td>
+              <td class="ta-center"><a href="#"><i class="fa fa-times"></i>Delete</a></td>
+            </tr>
+            <tr>
+              <td>Carpenter</td>
+              <td class="ta-center"><a href="#"><i class="fa fa-search"></i>Search</a></td>
+              <td class="ta-center"><a href="#"><i class="fa fa-times"></i>Delete</a></td>
+            </tr>
+            <tr>
+              <td>Admin</td>
+              <td class="ta-center"><a href="#"><i class="fa fa-search"></i>Search</a></td>
+              <td class="ta-center"><a href="#"><i class="fa fa-times"></i>Delete</a></td>
+            </tr>
+          </table>
+        </section>
+      </div>
+    </details> -->
+  </div>
 </div>
 <ul class="dashboard__statusbar">
-<!--   <li class="heading-medium">
-    Application status
-  </li> -->
   <li>
-    <span class="fig-indicator good">3</span> <a href="#dashOffers">In progress</a>
+    <span class="bold-medium" style="margin-right: 5px;">5</span><a href="#dashInProgress">In progress</a>
   </li>
   <li>
-    <span class="fig-indicator pending">2</span> <a href="#dashSubmitted">Submitted</a>
+    <span class="bold-medium" style="margin-right: 5px;">10</span><a href="#dashSubmitted">Submitted</a>
   </li>
   <li>
-    <span class="fig-indicator">4</span> <a href="#dashDrafts">Drafts</a>
+    <span class="bold-medium" style="margin-right: 5px;">4</span><a href="#dashUnsuccessful">Unsuccessful</a>
+  </li>
+  <li>
+    <span class="bold-medium" style="margin-right: 5px;">6</span><a href="#dashDrafts">Drafts</a>
+  </li>
+  <li>
+    <span class="bold-medium" style="margin-right: 5px;">3</span><a href="#dashSavedVacancies">Saved vacancies</a>
   </li>
 </ul>
 <div class="grid-wrapper">
   <div class="grid grid-1-2">
     <div class="inner-block-padr">
       <section class="clearfix">
-        <h2 class="heading-medium" id="dashOffers">Application status</h2>
+        <h2 class="heading-medium" id="dashInProgress">Application status</h2>
 
         <table class="vert-middle">
           <colgroup>
@@ -46,42 +87,11 @@ headerTitle: Apprenticeships
             <td colspan="2">In progress</td>
           </tr>
           <tr>
-            <td>Lorem ipsum dolor sit amet, consectetur.</td>
-            <td>Unsuccessful</td>
-            <td class="ta-center"><a href="#"><i class="fa fa-times"></i>Remove</a></td>
-          </tr>
-          <tr>
-            <td>Lorem ipsum dolor sit amet, consectetur.</td>
-            <td>Unsuccessful</td>
-            <td class="ta-center"><a href="#"><i class="fa fa-times"></i>Remove</a></td>
+            <td style="border-bottom: none" colspan="2"></td>
+            <td style="border-bottom: none" class="ta-center"><a href=""><i class="fa fa-angle-down"></i>View more</a></td>
           </tr>
         </table>
-      </section>
-
-      <section class="clearfix">
-        <h2 class="heading-medium" id="dashSubmitted">Submitted</h2>
-
-        <table class="vert-middle">
-          <colgroup>
-            <col class="t75">
-            <col class="t25">
-            <col>
-          </colgroup>
-          <tr>
-            <td>Lorem ipsum dolor sit amet, consectetur.</td>
-            <td class="ta-center">2 Jul 14</td>
-          </tr>
-          <tr>
-            <td>Lorem ipsum dolor sit amet.</td>
-            <td class="ta-center">6 Jul 14</td>
-          </tr>
-        </table>
-      </section>
-
-      <section class="clearfix">
-        <h2 class="heading-medium" id="dashDrafts">Drafts</h2>
-
-        <table class="vert-middle">
+        <table class="vert-middle" id="dashSubmitted">
           <colgroup>
             <col class="t50">
             <col class="t25">
@@ -90,23 +100,49 @@ headerTitle: Apprenticeships
           </colgroup>
           <tr>
             <td>Lorem ipsum dolor sit amet, consectetur.</td>
-            <td class="ta-center"><a href="apply-index.html"><i class="fa fa-edit"></i>Resume</a></td>
-            <td class="ta-center"><a href="#"><i class="fa fa-times"></i>Delete</a></td>
+            <td class="">Submitted</td>
+            <td class="ta-center">2 Jul 14</td>
           </tr>
           <tr>
             <td>Lorem ipsum dolor sit amet.</td>
-            <td class="ta-center"><a href="apply-index.html"><i class="fa fa-edit"></i>Resume</a></td>
-            <td class="ta-center"><a href="#"><i class="fa fa-times"></i>Delete</a></td>
+            <td class="">Submitted</td>
+            <td class="ta-center">6 Jul 14</td>
+          </tr>
+          <tr>
+            <td>Lorem ipsum dolor sit amet.</td>
+            <td class="">Submitted</td>
+            <td class="ta-center">6 Jul 14</td>
+          </tr>
+          <tr>
+            <td style="border-bottom: none" colspan="2"></td>
+            <td style="border-bottom: none" class="ta-center"><a href=""><i class="fa fa-angle-down"></i>View more</a></td>
+          </tr>
+        </table>
+        <table class="vert-middle" id="dashUnsuccessful">
+          <colgroup>
+            <col class="t50">
+            <col class="t25">
+            <col class="t25">
+            <col>
+          </colgroup>
+          <tr>
+            <td>Lorem ipsum dolor sit amet, consectetur.</td>
+            <td>Unsuccessful</td>
+            <td class="ta-center"><a style="color: black" href="#"><i class="copy-16 fa fa-times-circle"></i></a></td>
           </tr>
           <tr>
             <td>Lorem ipsum dolor sit amet, consectetur.</td>
-            <td class="ta-center"><a href="apply-index.html"><i class="fa fa-edit"></i>Resume</a></td>
-            <td class="ta-center"><a href="#"><i class="fa fa-times"></i>Delete</a></td>
+            <td>Unsuccessful</td>
+            <td class="ta-center"><a style="color: black" href="#"><i class="copy-16 fa fa-times-circle"></i></a></td>
           </tr>
           <tr>
-            <td>Lorem ipsum dolor sit amet.</td>
-            <td class="ta-center"><a href="apply-index.html"><i class="fa fa-edit"></i>Resume</a></td>
-            <td class="ta-center"><a href="#"><i class="fa fa-times"></i>Delete</a></td>
+            <td>Lorem ipsum dolor sit amet, consectetur.</td>
+            <td>Unsuccessful</td>
+            <td class="ta-center"><a style="color: black" href="#"><i class="copy-16 fa fa-times-circle"></i></a></td>
+          </tr>
+          <tr>
+            <td style="border-bottom: none" colspan="2"></td>
+            <td style="border-bottom: none" class="ta-center"><a href=""><i class="fa fa-angle-down"></i>View more</a></td>
           </tr>
         </table>
       </section>
@@ -114,35 +150,37 @@ headerTitle: Apprenticeships
   </div>
   <div class="grid grid-1-2">
     <section class="clearfix">
-      <h2 class="heading-medium" id="dashSavedSearches">Saved searches</h2>
+      <h2 class="heading-medium" id="dashDrafts">Drafts</h2>
+
       <table class="vert-middle">
         <colgroup>
-          <col class="t40">
-          <col class="t15">
-          <col class="t15">
-          <col class="t15">
+          <col class="t50">
+          <col class="t25">
+          <col class="t25">
           <col>
         </colgroup>
         <tr>
-          <td>Hair</td>
-          <td class="ta-center"><a href="#"><i class="fa fa-search"></i>Search</a></td>
-          <td class="ta-center"><a href="#"><i class="fa fa-pencil"></i>Edit</a></td>
-          <td class="ta-center"><a href="#"><i class="fa fa-times"></i>Delete</a></td>
+          <td>Lorem ipsum dolor sit amet, consectetur.</td>
+          <td class="ta-center"><a href="apply-index.html">Resume</a></td>
+          <td class="ta-center"><a style="color: black" href="#"><i class="copy-16 fa fa-times-circle"></i></a></td>
         </tr>
         <tr>
-          <td>Carpenter</td>
-          <td class="ta-center"><a href="#"><i class="fa fa-search"></i>Search</a></td>
-          <td class="ta-center"><a href="#"><i class="fa fa-pencil"></i>Edit</a></td>
-          <td class="ta-center"><a href="#"><i class="fa fa-times"></i>Delete</a></td>
+          <td>Lorem ipsum dolor sit amet.</td>
+          <td class="ta-center"><a href="apply-index.html">Resume</a></td>
+          <td class="ta-center"><a style="color: black" href="#"><i class="copy-16 fa fa-times-circle"></i></a></td>
         </tr>
         <tr>
-          <td>Admin</td>
-          <td class="ta-center"><a href="#"><i class="fa fa-search"></i>Search</a></td>
-          <td class="ta-center"><a href="#"><i class="fa fa-pencil"></i>Edit</a></td>
-          <td class="ta-center"><a href="#"><i class="fa fa-times"></i>Delete</a></td>
+          <td>Lorem ipsum dolor sit amet, consectetur.</td>
+          <td class="ta-center"><a href="apply-index.html">Resume</a></td>
+          <td class="ta-center"><a style="color: black" href="#"><i class="copy-16 fa fa-times-circle"></i></a></td>
+        </tr>
+        <tr>
+          <td style="border-bottom: none" colspan="2"></td>
+          <td style="border-bottom: none" class="ta-center"><a href=""><i class="fa fa-angle-down"></i>View more</a></td>
         </tr>
       </table>
     </section>
+
     <section class="clearfix">
       <h2 class="heading-medium" id="dashSavedVacancies">Saved vacancies</h2>
 
@@ -155,18 +193,18 @@ headerTitle: Apprenticeships
         </colgroup>
         <tr>
           <td>Lorem ipsum dolor sit amet, consectetur.</td>
-          <td class="ta-center"><a href="apply-index.html"><i class="fa fa-edit"></i>Apply</a></td>
-          <td class="ta-center"><a href="#"><i class="fa fa-times"></i>Delete</a></td>
+          <td class="ta-center"><a href="apply-index.html">Apply</a></td>
+          <td class="ta-center"><a style="color: black" href="#"><i class="copy-16 fa fa-times-circle"></i></a></td>
         </tr>
         <tr>
           <td>Lorem ipsum dolor sit amet.</td>
-          <td class="ta-center"><a href="apply-index.html"><i class="fa fa-edit"></i>Apply</a></td>
-          <td class="ta-center"><a href="#"><i class="fa fa-times"></i>Delete</a></td>
+          <td class="ta-center"><a href="apply-index.html">Apply</a></td>
+          <td class="ta-center"><a style="color: black" href="#"><i class="copy-16 fa fa-times-circle"></i></a></td>
         </tr>
         <tr>
           <td>Lorem ipsum dolor sit amet, consectetur.</td>
-          <td class="ta-center"><a href="apply-index.html"><i class="fa fa-edit"></i>Apply</a></td>
-          <td class="ta-center"><a href="#"><i class="fa fa-times"></i>Delete</a></td>
+          <td class="ta-center"><a href="apply-index.html">Apply</a></td>
+          <td class="ta-center"><a style="color: black" href="#"><i class="copy-16 fa fa-times-circle"></i></a></td>
         </tr>
       </table>
     </section>
