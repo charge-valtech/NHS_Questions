@@ -3196,7 +3196,7 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
   });
 
   function changePassType() {
-    var password = document.getElementById('password-input');
+    var password = document.getElementById('Password');
     if (password.type == 'password') {
       password.type = 'text';
     } else {

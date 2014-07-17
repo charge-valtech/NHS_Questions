@@ -41,7 +41,12 @@ table {
   text-align: right;
 }
 
-.table-no-btm-border {
+.no-wrap {
+  white-space: nowrap;
+}
+
+.table-no-btm-border,
+.no-btm-border {
   td {
     border-bottom: none;
   }

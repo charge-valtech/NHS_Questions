@@ -40,6 +40,19 @@ ol {
   }
 }
 
+.list-nav {
+  margin-bottom: $gutter;
+  padding: 0;
+  li {
+    list-style: none;
+    margin-bottom: 10px;
+    @include media(tablet) {
+      display: inline-block;
+      margin-right: $gutter;
+    }
+  }
+}
+
 .list-flowing {
   @extend %clearfix;
   @include media(tablet) {
@@ -61,7 +74,6 @@ ol {
       width: 33.3%;
     }
   }
-
 }
 
 ol, ul {

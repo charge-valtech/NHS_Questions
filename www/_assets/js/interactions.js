@@ -99,7 +99,7 @@ $(function() {
   });
 
   function changePassType() {
-    var password = document.getElementById('password-input');
+    var password = document.getElementById('Password');
     if (password.type == 'password') {
       password.type = 'text';
     } else {

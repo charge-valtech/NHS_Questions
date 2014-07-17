@@ -43,7 +43,8 @@ details summary:focus {
 }
 
 // Styles for browsers that don't yet natively support details/summary
-.no-details details p {
+.no-details details p,
+.no-details details .detail-content {
   display: none;
 }
 .no-details details > summary:before {
@@ -61,7 +62,9 @@ details summary:focus {
   content: '▼ ';
 }
 .no-details .open p,
-.no-js details p {
+.no-js details p,
+.no-details .open .detail-content,
+.no-js details .detail-content, {
   display: block;
 }
 
