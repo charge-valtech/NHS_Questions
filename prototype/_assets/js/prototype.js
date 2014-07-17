@@ -306,7 +306,7 @@ $(function() {
         $historyItemHTML = '<div class="grid-wrapper work-history-item">' +
                               '<div class="work-controls">' +
                                 '<div class="work-edit ta-center"><span class="cell-span fake-link">Edit</span></div>' +
-                                '<div class="work-delete ta-center"><span class="cell-span"><i class="ir fa fa-times">Remove</i></span></div>' +
+                                '<div class="work-delete ta-center"><span class="cell-span"><i class="ir icon-remove">Remove</i></span></div>' +
                               '</div>' +
                               '<div class="grid grid-1-2">' +
                                 '<table class="table-no-btm-border table-compound">' +
