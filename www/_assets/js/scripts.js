@@ -3240,6 +3240,36 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
     }
   }
 
+  //--------Expanding tables
+
+  $('.tbody-3rows').each(function() {
+    var $this       = $(this),
+        $rowLength  = $this.find('tr').length,
+        $expandRows = $this.next('.tbody-expandrows'),
+        $after3Rows = $this.find('tr:nth-of-type(3)').nextAll();
+
+    if($rowLength > 3) {
+      $expandRows.show();
+      $after3Rows.hide();
+    }
+  });
+
+  $('.btnExpandRows').on('click', function() {
+    var $this        = $(this),
+        $tbodyExpand = $this.closest('.tbody-expandrows');
+        $tbodyRows   = $tbodyExpand.prev('.tbody-3rows').find('tr:nth-of-type(3)').nextAll();
+
+    $tbodyRows.toggle();
+
+    if($this.html() == '<i class="fa fa-angle-down"></i>View more') {
+      $this.html('<i class="fa fa-angle-up"></i>View less');
+    } else {
+      $this.html('<i class="fa fa-angle-down"></i>View more');
+    }
+
+  });
+
+
 });;/*
  *  jQuery Password Strength - v0.0.1
  *
