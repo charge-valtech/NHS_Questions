@@ -53,5 +53,6 @@
 .validation-message {
   display: block;
   @include core-16;
-  // color: $error-colour;
+  color: $error-colour;
+  margin-top: 5px;
 }
