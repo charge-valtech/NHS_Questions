@@ -3141,18 +3141,8 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
 
   // Add/remove selected class
   $('.block-label').on('click', 'input[type=radio], input[type=checkbox]', function() {
-    // var target = $('input:checked').parent().attr('data-target');
-
-    // $('input:not(:checked)').parent().removeClass('selected');
-    // $('input:checked').parent().addClass('selected');
-
-    // $(this).closest('.form-group').next('.toggle-content').toggle();
-
-    // $('#'+target).show();
-
     var $this   = $(this),
         $target = $this.parent().attr('data-target');
-
 
     $('input:not(:checked)').parent().removeClass('selected');
     $('input:checked').parent().addClass('selected');
