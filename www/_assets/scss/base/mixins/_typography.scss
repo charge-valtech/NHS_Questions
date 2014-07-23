@@ -279,7 +279,7 @@ $is-print: false !default;
   padding-bottom: 8px;
 
   @include media(tablet){
-    padding-top: 0;
+    padding-top: 4px;
     padding-bottom: 5px;
   }
 }
