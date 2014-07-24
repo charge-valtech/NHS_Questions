@@ -3244,6 +3244,14 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
     }
   }
 
+  //--------Date input error behaviour
+
+  $('.date-input').on('keyup blur', '.form-control', function() {
+    if($('.date-input').has('.input-validation-error')) {
+      $(this).addClass('input-validation-error');
+    }
+  });
+
   //--------Expanding tables
 
   $('.tbody-3rows').each(function() {
