@@ -33,7 +33,7 @@ $(function() {
   });
 
   // Create linked input fields (For using email address as username)
-  $('.linked-input-master').keyup(function() {
+  $('.linked-input-master').on('keyup blur', function() {
     var masterVal = $(this).val();
     $('.linked-input-slave').val(masterVal);
     $('.linked-input-slave').removeClass('hidden').text(masterVal);

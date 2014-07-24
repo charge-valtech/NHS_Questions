@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>SFA Apprenticeships</title>
+    <title>Apprenticeships</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--[if gt IE 8]><!-->
@@ -23,6 +23,8 @@
     />
     <!--<![endif]-->
     <link rel="shortcut icon" href="../_assets/img/favicon.ico" type="image/x-icon">
+    <link href="../_assets/css/font-awesome/css/font-awesome.min.css" rel="stylesheet"
+    type="text/css">
     <script>
     var html = document.documentElement;
     html.className += " js-enabled";
@@ -47,27 +49,39 @@
           </a>
         </div>
         <div class="global-header__nav">
-          <h1 class="global-header__title beta">Find an Apprenticeship</h1>
+          <h1 class="global-header__title beta">Apprenticeships</h1>
         </div>
       </div>
     </header>
     <div class="content-container">
       <div class="phase-notice gov-border">
-        <strong class="beta__label">Beta</strong>  <span>This is a prototype – your <a href="#">feedback</a> will help us to improve it.</span>
+        <div class="prototype-warning">
+          <strong class="beta__label">Beta</strong>  <span>This is a prototype – your <a href="/feedback.html">feedback</a> will help us to improve it.</span>
+        </div>
+        <ul class="account-info sign-in" id="bannerSignedOut">
+          <li><a href="/apprentice/profile-signin.html"><i class="fa fa-sign-in"></i>Sign in</a>
+          </li>
+        </ul>
+        <div class="account-info sign-out" id="bannerSignedIn" style="display: none;">
+          <span class="your-name">Henry Charge</span>
+          <div>
+            <a href="/apprentice/dashboard.html">Dashboard</a>
+            <a href="/apprentice/dashboard.html">Profile</a>
+            <a href="/feedback.html" id="btnSignOut"><i class="fa fa-sign-out"></i>Sign out</a>
+          </div>
+        </div>
       </div>
       <main role="main" id="main">
-        <h1 class="heading-xlarge">Account created</h1>
-        <fieldset>
-          <legend class="heading-large">Confirmation email sent</legend>
-          <div class="form-group text">
-            <p>Your confirmation email has been sent to <strong>name@email.com</strong>
-            </p>
+        <fieldset class="inner-block-padr">
+          <legend class="heading-large">Account locked</legend>
+          <p class="text">To unlock your account, enter your email address. You'll receive a 6-digit
+            code, which you can then use to unlock your account.</p>
+          <div class="form-group">
+            <label class="form-label" for="email-add">Email address</label>
+            <input type="email" class="form-control" id="email-add" />
           </div>
           <div class="form-group">
-            <a href="index.html" class="button">Return to dashboard</a>
-            <p>
-              <a href="profile-create.html" class="button-link">Back</a>
-            </p>
+            <a class="button" href="blocked-entercode.html">Send code</a>
           </div>
         </fieldset>
       </main>
@@ -96,6 +110,7 @@
     </footer>
     <script src="../_assets/js/scripts.min.js"></script>
     <!-- Prototype specific scripts -->
+    <script src="../_assets/js/vendor/jquery.cookie.js"></script>
     <script src="../_assets/js/prototype.js"></script>
   </body>
 </html>

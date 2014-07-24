@@ -43,10 +43,13 @@ select {
   }
 }
 
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
 }
 
 .fieldset-with-border {
@@ -143,7 +146,6 @@ input[type=number]::-webkit-outer-spin-button {
     @include core-19;
   }
 }
-
 
 .form-hint {
   @include copy-19;

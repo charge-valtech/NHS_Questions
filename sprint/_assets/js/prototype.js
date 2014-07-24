@@ -523,5 +523,34 @@ $(function() {
     $('.has-an-error').toggleClass('input-validation-error')
   });
 
+  //-- Application save
+  // $('#saveApplication').on('click', function() {
+  //   $(this).hide();
+  //   $('#applicationSaved').show();
+  //   return false;
+  // });
+
+  //-- Banner sign in
+
+  $('#btnSignIn').on('click', function() {
+    $.cookie('signedIn', true, {path: '/'});
+  });
+
+  $('#btnSignOut').on('click', function() {
+    $.removeCookie('signedIn', { path: '/' });
+  });
+
+  if($.cookie('signedIn')) {
+    $('#bannerSignedOut').hide();
+    $('#bannerSignedIn').show();
+    $('.details-apply').show();
+    $('.details-signIn').hide();
+  } else {
+    $('#bannerSignedOut').show();
+    $('#bannerSignedIn').hide();
+    $('.details-apply').hide();
+    $('.details-signIn').show();
+  }
+
 // --------------- Remove for live code -------------- //
 });
