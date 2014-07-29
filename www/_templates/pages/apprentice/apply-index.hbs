@@ -193,94 +193,320 @@ headerTitle: Apprenticeships
 
 <fieldset class="fieldset-with-border" id="applyWorkExperience">
   <legend class="heading-large">Work experience</legend>
-  <p class="form-label text">Do you have any work experience?</p>
-  <span class="form-hint text">
+  <p class="hide-nojs form-label text">Do you have any work experience?</p>
+  <p class="form-hint text">
     Try and use any skills you have gained through work (whether paid or unpaid) that relate to the role you’re applying for
-  </span>
-  <div class="form-group inline clearfix">
-    <label data-target="workexperience-panel" for="workexp-yes" class="block-label">
-      <input name="workexp" type="radio" id="workexp-yes">Yes
-    </label>
-    <label for="workexp-no" class="block-label">
-      <input name="workexp" type="radio" id="workexp-no">No
-    </label>
-  </div>
-  <div id="workexperience-panel" class="has-work-experience toggle-content">
-    <div class="enter-work clearfix">
-      <div class="form-group form-group-compound">
-        <label for="work-employer" class="form-label">Employer</label>
-        <input type="text" class="form-control" id="work-employer">
-      </div>
-      <div class="form-group form-group">
-        <label for="work-title" class="form-label">Job title</label>
-        <input type="text" class="form-control" id="work-title">
-      </div>
-      <div class="form-group form-group-compound">
-        <label for="work-role" class="form-label">Main duties</label>
-        <textarea type="text" rows="3" class="form-control" id="work-role" data-val-length-max="200"></textarea>
-        <span class="form-hint maxchar-count">200</span>
-      </div>
-      <div class="inline-fixed">
+  </p>
+  <div class="hide-nojs">
+    <div class="form-group inline clearfix">
+      <label data-target="workexperience-panel" for="workexp-yes" class="block-label">
+        <input name="workexp" type="radio" id="workexp-yes">Yes
+      </label>
+      <label for="workexp-no" class="block-label">
+        <input name="workexp" type="radio" id="workexp-no">No
+      </label>
+    </div>
+    <div id="workexperience-panel" class="has-work-experience toggle-content">
+      <div class="enter-work clearfix">
         <div class="form-group form-group-compound">
-          <label for="work-from" class="form-label">From</label>
+          <label for="work-employer" class="form-label">Employer</label>
+          <input type="text" class="form-control" id="work-employer">
+        </div>
+        <div class="form-group form-group">
+          <label for="work-title" class="form-label">Job title</label>
+          <input type="text" class="form-control" id="work-title">
+        </div>
+        <div class="form-group form-group-compound">
+          <label for="work-role" class="form-label">Main duties</label>
+          <textarea type="text" rows="3" class="form-control" id="work-role" data-val-length-max="200"></textarea>
+          <span class="form-hint maxchar-count">200</span>
+        </div>
+        <div class="inline-fixed">
           <div class="form-group form-group-compound">
-            <span class="form-hint">Month</span>
-            <select name="" id="work-from">
-              <option value="Jan">Jan</option>
-              <option value="Feb">Feb</option>
-              <option value="Mar">Mar</option>
-              <option value="Apr">Apr</option>
-              <option value="May">May</option>
-              <option value="June">June</option>
-              <option value="July">July</option>
-              <option value="Aug">Aug</option>
-              <option value="Sept">Sept</option>
-              <option value="Oct">Oct</option>
-              <option value="Nov">Nov</option>
-              <option value="Dec">Dec</option>
-            </select>
+            <label for="work-from" class="form-label">From</label>
+            <div class="form-group form-group-compound">
+              <span class="form-hint">Month</span>
+              <select name="" id="work-from">
+                <option value="Jan">Jan</option>
+                <option value="Feb">Feb</option>
+                <option value="Mar">Mar</option>
+                <option value="Apr">Apr</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="Aug">Aug</option>
+                <option value="Sept">Sept</option>
+                <option value="Oct">Oct</option>
+                <option value="Nov">Nov</option>
+                <option value="Dec">Dec</option>
+              </select>
+            </div>
+            <div class="form-group form-group-compound">
+              <span class="form-hint">Year</span>
+              <input type="tel" class="form-control form-control-medium" pattern="[0-9]*" maxlength="4" id="work-from-year">
+            </div>
           </div>
-          <div class="form-group form-group-compound">
-            <span class="form-hint">Year</span>
-            <input type="tel" class="form-control form-control-medium" pattern="[0-9]*" maxlength="4" id="work-from-year">
+          <div class="form-group">
+            <label for="work-to" class="form-label">To</label>
+            <div class="form-group form-group-compound">
+              <span class="form-hint">Month</span>
+              <select name="" id="work-to">
+                <option value="Jan">Jan</option>
+                <option value="Feb">Feb</option>
+                <option value="Mar">Mar</option>
+                <option value="Apr">Apr</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="Aug">Aug</option>
+                <option value="Sept">Sept</option>
+                <option value="Oct">Oct</option>
+                <option value="Nov">Nov</option>
+                <option value="Dec">Dec</option>
+              </select>
+            </div>
+            <div class="form-group form-group-compound">
+              <span class="form-hint">Year</span>
+              <input type="tel" class="form-control form-control-medium" pattern="[0-9]*" maxlength="4" id="work-to-year">
+            </div>
+            <div class="form-group form-group-compound">
+              <input id="work-current" type="checkbox">
+              <label for="work-current">Current</label>
+            </div>
           </div>
         </div>
         <div class="form-group">
-          <label for="work-to" class="form-label">To</label>
-          <div class="form-group form-group-compound">
-            <span class="form-hint">Month</span>
-            <select name="" id="work-to">
-              <option value="Jan">Jan</option>
-              <option value="Feb">Feb</option>
-              <option value="Mar">Mar</option>
-              <option value="Apr">Apr</option>
-              <option value="May">May</option>
-              <option value="June">June</option>
-              <option value="July">July</option>
-              <option value="Aug">Aug</option>
-              <option value="Sept">Sept</option>
-              <option value="Oct">Oct</option>
-              <option value="Nov">Nov</option>
-              <option value="Dec">Dec</option>
-            </select>
-          </div>
-          <div class="form-group form-group-compound">
-            <span class="form-hint">Year</span>
-            <input type="tel" class="form-control form-control-medium" pattern="[0-9]*" maxlength="4" id="work-to-year">
-          </div>
-          <div class="form-group form-group-compound">
-            <input id="work-current" type="checkbox">
-            <label for="work-current">Current</label>
-          </div>
+          <a href="#" class="button save-work-btn" id="addWorkBtn">Add work</a>
         </div>
       </div>
-      <div class="form-group">
-        <a href="#" class="button save-work-btn" id="addWorkBtn">Add work</a>
+      <div class="work-history-wrapper grid-3-4">
+
       </div>
     </div>
-    <div class="work-history-wrapper grid-3-4">
+  </div>
+  <div class="show-nojs">
+    <section class="grid-wrapper section-border">
+      <table class="grid grid-2-3 no-btm-border no-btm-margin">
+        <tr>
+          <td>
+            <label for="employer1" class="form-label">Employer</label>
+            <input type="text" id="employer1" class="form-control">
+          </td>
+          <td>
+            <label for="jobTitle1" class="form-label">Job title</label>
+            <input type="text" id="jobTitle1" class="form-control">
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <label for="mainDuties1" class="form-label">Main duties</label>
+            <textarea id="mainDuties1" class="form-control"></textarea>
+            <span class="form-hint maxchar-count">200</span>
+          </td>
+        </tr>
+      </table>
 
-    </div>
+      <table class="grid grid-1-3 no-btm-border no-btm-margin">
+        <tr>
+          <td class="inline">
+            <div class="form-group no-btm-margin">
+              <label for="fromMonth1" class="form-label">From</label>
+              <select id="fromMonth1">
+                <option value="Jan">Jan</option>
+                <option value="Feb">Feb</option>
+                <option value="Mar">Mar</option>
+                <option value="Apr">Apr</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="Aug">Aug</option>
+                <option value="Sept">Sept</option>
+                <option value="Oct">Oct</option>
+                <option value="Nov">Nov</option>
+                <option value="Dec">Dec</option>
+              </select>
+            </div>
+            <div class="form-group no-btm-margin">
+              <label for="fromYear1" class="form-label">Year</label>
+              <input type="text" class="form-control form-control-medium" id="fromYear1">
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="inline">
+            <div class="form-group">
+              <label for="toMonth1" class="form-label">To</label>
+              <select id="toMonth1">
+                <option value="Jan">Jan</option>
+                <option value="Feb">Feb</option>
+                <option value="Mar">Mar</option>
+                <option value="Apr">Apr</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="Aug">Aug</option>
+                <option value="Sept">Sept</option>
+                <option value="Oct">Oct</option>
+                <option value="Nov">Nov</option>
+                <option value="Dec">Dec</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="toYear1" class="form-label">Year</label>
+              <input type="text" class="form-control form-control-medium" id="toYear1">
+            </div>
+          </td>
+        </tr>
+      </table>
+    </section>
+    <section class="grid-wrapper section-border">
+      <table class="grid grid-2-3 no-btm-border no-btm-margin">
+        <tr>
+          <td>
+            <label for="employer2" class="form-label">Employer</label>
+            <input type="text" id="employer2" class="form-control">
+          </td>
+          <td>
+            <label for="jobTitle2" class="form-label">Job title</label>
+            <input type="text" id="jobTitle2" class="form-control">
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <label for="mainDuties2" class="form-label">Main duties</label>
+            <textarea id="mainDuties2" class="form-control"></textarea>
+            <span class="form-hint maxchar-count">200</span>
+          </td>
+        </tr>
+      </table>
+
+      <table class="grid grid-1-3 no-btm-border no-btm-margin">
+        <tr>
+          <td class="inline">
+            <div class="form-group no-btm-margin">
+              <label for="fromMonth2" class="form-label">From</label>
+              <select id="fromMonth2">
+                <option value="Jan">Jan</option>
+                <option value="Feb">Feb</option>
+                <option value="Mar">Mar</option>
+                <option value="Apr">Apr</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="Aug">Aug</option>
+                <option value="Sept">Sept</option>
+                <option value="Oct">Oct</option>
+                <option value="Nov">Nov</option>
+                <option value="Dec">Dec</option>
+              </select>
+            </div>
+            <div class="form-group no-btm-margin">
+              <label for="fromYear2" class="form-label">Year</label>
+              <input type="text" class="form-control form-control-medium" id="fromYear2">
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="inline">
+            <div class="form-group">
+              <label for="toMonth2" class="form-label">To</label>
+              <select id="toMonth2">
+                <option value="Jan">Jan</option>
+                <option value="Feb">Feb</option>
+                <option value="Mar">Mar</option>
+                <option value="Apr">Apr</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="Aug">Aug</option>
+                <option value="Sept">Sept</option>
+                <option value="Oct">Oct</option>
+                <option value="Nov">Nov</option>
+                <option value="Dec">Dec</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="toYear2" class="form-label">Year</label>
+              <input type="text" class="form-control form-control-medium" id="toYear2">
+            </div>
+          </td>
+        </tr>
+      </table>
+    </section>
+    <section class="grid-wrapper">
+      <table class="grid grid-2-3 no-btm-border no-btm-margin">
+        <tr>
+          <td>
+            <label for="employer3" class="form-label">Employer</label>
+            <input type="text" id="employer3" class="form-control">
+          </td>
+          <td>
+            <label for="jobTitle3" class="form-label">Job title</label>
+            <input type="text" id="jobTitle3" class="form-control">
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <label for="mainDuties3" class="form-label">Main duties</label>
+            <textarea id="mainDuties3" class="form-control"></textarea>
+            <span class="form-hint maxchar-count">200</span>
+          </td>
+        </tr>
+      </table>
+
+      <table class="grid grid-1-3 no-btm-border no-btm-margin">
+        <tr>
+          <td class="inline">
+            <div class="form-group no-btm-margin">
+              <label for="fromMonth3" class="form-label">From</label>
+              <select id="fromMonth3">
+                <option value="Jan">Jan</option>
+                <option value="Feb">Feb</option>
+                <option value="Mar">Mar</option>
+                <option value="Apr">Apr</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="Aug">Aug</option>
+                <option value="Sept">Sept</option>
+                <option value="Oct">Oct</option>
+                <option value="Nov">Nov</option>
+                <option value="Dec">Dec</option>
+              </select>
+            </div>
+            <div class="form-group no-btm-margin">
+              <label for="fromYear3" class="form-label">Year</label>
+              <input type="text" class="form-control form-control-medium" id="fromYear3">
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="inline">
+            <div class="form-group">
+              <label for="toMonth3" class="form-label">To</label>
+              <select id="toMonth3">
+                <option value="Jan">Jan</option>
+                <option value="Feb">Feb</option>
+                <option value="Mar">Mar</option>
+                <option value="Apr">Apr</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="Aug">Aug</option>
+                <option value="Sept">Sept</option>
+                <option value="Oct">Oct</option>
+                <option value="Nov">Nov</option>
+                <option value="Dec">Dec</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="toYear3" class="form-label">Year</label>
+              <input type="text" class="form-control form-control-medium" id="toYear3">
+            </div>
+          </td>
+        </tr>
+      </table>
+    </section>
   </div>
 </fieldset>
 

@@ -41,6 +41,9 @@ select {
     line-height: 36px;
     width: auto;
   }
+  table & {
+    height: 29px;
+  }
 }
 
 input[type='number'] {
@@ -212,26 +215,26 @@ input::-webkit-inner-spin-button {
 }
 
 .form-control-hours {
-  width: 4em;
+  width: 4em !important;
 }
 
 .form-control-small {
-  width: 4em;
+  width: 4em !important;
 }
 
 .form-control-medium {
-  width: 6em;
+  width: 6em !important;
 }
 
 .form-control-large {
-  width: 7em;
+  width: 7em !important;
   @include media(tablet) {
-    width: 8em;
+    width: 8em !important;
   }
 }
 
 .form-control-xlarge {
-  width: 10em;
+  width: 10em !important;
 }
 
 .form-control-wage {
@@ -264,6 +267,10 @@ input::-webkit-inner-spin-button {
   @include media(tablet){
     width: 50%;
   }
+}
+
+.form-control-1-1 {
+  width: 100%;
 }
 
 // Radio buttons

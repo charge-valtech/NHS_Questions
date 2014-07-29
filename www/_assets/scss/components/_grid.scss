@@ -67,7 +67,7 @@
 }
 
 .width-all-1-2 {
-  width: 50%;
+  width: 50% !important;
 }
 
 .width-all-49 {
@@ -81,6 +81,10 @@
 
 .width-all-3-4 {
   width: 75%;
+}
+
+.width-all-1-1 {
+  width: 100% !important;
 }
 
 .btm-align {
