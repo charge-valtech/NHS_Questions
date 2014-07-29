@@ -40,87 +40,148 @@ headerTitle: Apprenticeships
 
 <fieldset class="fieldset-with-border" id="applyQualifications">
   <legend class="heading-large">Qualifications</legend>
-  <p class="form-label">Do you have any qualifications?</p>
-  <div class="form-group form-group-compound inline clearfix">
-    <label data-target="qualifications-panel" for="qualifications-yes" class="block-label">
-      <input name="quals" type="radio" id="qualifications-yes">Yes
-    </label>
-    <label for="qualifications-no" class="block-label">
-      <input name="quals" type="radio" id="qualifications-no">No
-    </label>
+  <div class="hide-nojs">
+    <p class="form-label">Do you have any qualifications?</p>
+    <div class="form-group form-group-compound inline clearfix">
+      <label data-target="qualifications-panel" for="qualifications-yes" class="block-label">
+        <input name="quals" type="radio" id="qualifications-yes">Yes
+      </label>
+      <label for="qualifications-no" class="block-label">
+        <input name="quals" type="radio" id="qualifications-no">No
+      </label>
+    </div>
+    <div id="qualifications-panel" class="has-qualifications toggle-content">
+      <div class="enter-qualification clearfix">
+        <div class="inline-fixed">
+          <div class="form-group">
+            <label for="qual-type" class="form-label">Type of qualification</label>
+            <select id="qual-type">
+              <option value="">Select from list</option>
+              <option class="gcse" value="GCSE">GCSE</option>
+              <option class="as-level" value="AS Level">AS Level</option>
+              <option class="a-level" value="A Level">A Level</option>
+              <option class="btec" value="BTEC">BTEC</option>
+              <option class="nvq1" value="NVQ or SVQ Level 1">NVQ or SVQ Level 1</option>
+              <option class="nvq2" value="NVQ or SVQ Level 2">NVQ or SVQ Level 2</option>
+              <option class="nvq3" value="NVQ or SVQ Level 3">NVQ or SVQ Level 3</option>
+              <option id="otherQualOption" class="other" value="Other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="subject-year" class="form-label">Year</label>
+            <input maxlength="4" type="tel" class="form-control form-control-small" pattern="[0-9]*" id="subject-year">
+          </div>
+        </div>
+        <div class="other-qual-input form-group toggle-content">
+          <label for="other-qual" class="form-label">Name of other qualification</label>
+          <input type="text" class="form-control" id="other-qual">
+        </div>
+        <div class="form-group form-group-compound">
+          <label for="subject-name" class="form-label">Subject</label>
+          <input type="text" class="form-control" id="subject-name">
+        </div>
+        <div class="inline-fixed">
+          <div class="form-group">
+            <label for="subject-grade" class="form-label">Grade</label>
+            <input type="text" class="form-control form-control-medium" id="subject-grade">
+          </div>
+          <div class="form-group">
+            <input id="qual-predicted" type="checkbox">
+            <label for="qual-predicted">Predicted?</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <a href="#" class="button save-qual-btn" id="saveQualification">Add qualification</a>
+        </div>
+      </div>
+      <div class="qualifications-wrapper">
+        <div class="qualification-table toggle-content">
+          <div class="hgroup-small">
+            <h3 class="heading-small heading-qualType"></h3>
+          </div>
+          <table class="grid-3-4">
+            <colgroup>
+              <col class="t40">
+              <col class="t25">
+              <col class="t15">
+              <col class="t10">
+              <col class="t10">
+              <col>
+            </colgroup>
+            <thead>
+              <tr>
+                <th class="th-qualSubject"><span class="heading-span">Subject</span></th>
+                <th class="th-qualGrade"><span class="heading-span">Grade</span></th>
+                <th class="th-qualYear"><span class="heading-span">Year</span></th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody class="tbody-qual">
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
   </div>
-  <div id="qualifications-panel" class="has-qualifications toggle-content">
-    <div class="enter-qualification clearfix">
-      <div class="inline-fixed">
-        <div class="form-group">
-          <label for="qual-type" class="form-label">Type of qualification</label>
-          <select id="qual-type">
-            <option value="">Select from list</option>
-            <option class="gcse" value="GCSE">GCSE</option>
-            <option class="as-level" value="AS Level">AS Level</option>
-            <option class="a-level" value="A Level">A Level</option>
-            <option class="btec" value="BTEC">BTEC</option>
-            <option class="nvq1" value="NVQ or SVQ Level 1">NVQ or SVQ Level 1</option>
-            <option class="nvq2" value="NVQ or SVQ Level 2">NVQ or SVQ Level 2</option>
-            <option class="nvq3" value="NVQ or SVQ Level 3">NVQ or SVQ Level 3</option>
-            <option id="otherQualOption" class="other" value="Other">Other</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="subject-year" class="form-label">Year</label>
-          <input maxlength="4" type="tel" class="form-control form-control-small" pattern="[0-9]*" id="subject-year">
-        </div>
-      </div>
-      <div class="other-qual-input form-group toggle-content">
-        <label for="other-qual" class="form-label">Name of other qualification</label>
-        <input type="text" class="form-control" id="other-qual">
-      </div>
-      <div class="form-group form-group-compound">
-        <label for="subject-name" class="form-label">Subject</label>
-        <input type="text" class="form-control" id="subject-name">
-      </div>
-      <div class="inline-fixed">
-        <div class="form-group">
-          <label for="subject-grade" class="form-label">Grade</label>
-          <input type="text" class="form-control form-control-medium" id="subject-grade">
-        </div>
-        <div class="form-group">
-          <input id="qual-predicted" type="checkbox">
-          <label for="qual-predicted">Predicted?</label>
-        </div>
-      </div>
-      <div class="form-group">
-        <a href="#" class="button save-qual-btn" id="saveQualification">Add qualification</a>
-      </div>
-    </div>
-    <div class="qualifications-wrapper">
-      <div class="qualification-table toggle-content">
-        <div class="hgroup-small">
-          <h3 class="heading-small heading-qualType"></h3>
-        </div>
-        <table class="grid-3-4">
-          <colgroup>
-            <col class="t40">
-            <col class="t25">
-            <col class="t15">
-            <col class="t10">
-            <col class="t10">
-            <col>
-          </colgroup>
-          <thead>
-            <tr>
-              <th class="th-qualSubject"><span class="heading-span">Subject</span></th>
-              <th class="th-qualGrade"><span class="heading-span">Grade</span></th>
-              <th class="th-qualYear"><span class="heading-span">Year</span></th>
-              <th></th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody class="tbody-qual">
-          </tbody>
-        </table>
-      </div>
-    </div>
+  <div class="show-nojs">
+    <table>
+      <colgroup>
+        <col class="t30">
+        <col class="t30">
+        <col class="t10">
+        <col class="t10">
+        <col class="t20">
+        <col>
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>Qualification</th>
+          <th>Year</th>
+          <th>Grade</th>
+          <th>Predicted?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><label for="subject1" class="visuallyhidden">Subject</label><input type="text" class="form-control" id="subject1"></td>
+          <td><label for="qualification1" class="visuallyhidden">Qualification</label><input type="text" class="form-control" id="qualification1"></td>
+          <td><label for="year1" class="visuallyhidden">Year</label><input type="text" class="form-control" id="year1"></td>
+          <td><label for="grade1" class="visuallyhidden">Grade</label><input type="text" class="form-control" id="grade1"></td>
+          <td class="va-middle"><label for="predicted1" class="visuallyhidden">Predicted?</label><input type="checkbox" id="predicted1"></td>
+        </tr>
+        <tr>
+          <td><label for="subject2" class="visuallyhidden">Subject</label><input type="text" class="form-control" id="subject2"></td>
+          <td><label for="qualification2" class="visuallyhidden">Qualification</label><input type="text" class="form-control" id="qualification2"></td>
+          <td><label for="year2" class="visuallyhidden">Year</label><input type="text" class="form-control" id="year2"></td>
+          <td><label for="grade2" class="visuallyhidden">Grade</label><input type="text" class="form-control" id="grade2"></td>
+          <td class="va-middle"><label for="predicted2" class="visuallyhidden">Predicted?</label><input type="checkbox" id="predicted2"></td>
+        </tr>
+        <tr>
+          <td><label for="subject3" class="visuallyhidden">Subject</label><input type="text" class="form-control" id="subject3"></td>
+          <td><label for="qualification3" class="visuallyhidden">Qualification</label><input type="text" class="form-control" id="qualification3"></td>
+          <td><label for="year3" class="visuallyhidden">Year</label><input type="text" class="form-control" id="year3"></td>
+          <td><label for="grade3" class="visuallyhidden">Grade</label><input type="text" class="form-control" id="grade3"></td>
+          <td class="va-middle"><label for="predicted3" class="visuallyhidden">Predicted?</label><input type="checkbox" id="predicted3"></td>
+        </tr>
+        <tr>
+          <td><label for="subject4" class="visuallyhidden">Subject</label><input type="text" class="form-control" id="subject4"></td>
+          <td><label for="qualification4" class="visuallyhidden">Qualification</label><input type="text" class="form-control" id="qualification4"></td>
+          <td><label for="year4" class="visuallyhidden">Year</label><input type="text" class="form-control" id="year4"></td>
+          <td><label for="grade4" class="visuallyhidden">Grade</label><input type="text" class="form-control" id="grade4"></td>
+          <td class="va-middle"><label for="predicted4" class="visuallyhidden">Predicted?</label><input type="checkbox" id="predicted4"></td>
+        </tr>
+        <tr>
+          <td><label for="subject5" class="visuallyhidden">Subject</label><input type="text" class="form-control" id="subject5"></td>
+          <td><label for="qualification5" class="visuallyhidden">Qualification</label><input type="text" class="form-control" id="qualification5"></td>
+          <td><label for="year5" class="visuallyhidden">Year</label><input type="text" class="form-control" id="year5"></td>
+          <td><label for="grade5" class="visuallyhidden">Grade</label><input type="text" class="form-control" id="grade5"></td>
+          <td class="va-middle"><label for="predicted5" class="visuallyhidden">Predicted?</label><input type="checkbox" id="predicted5"></td>
+        </tr>
+      </tbody>
+    </table>
+    <a href="#" class="button">Add 5 more qualifications</a>
   </div>
   <div class="form-group text">
     <details>

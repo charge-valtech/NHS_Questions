@@ -49,10 +49,22 @@
   }
 }
 
+.form-control.input-validation-error {
+  background: $error-background;
+}
+
 // Validation message
 .validation-message {
   display: block;
   @include core-16;
   color: $error-colour;
   margin-top: 5px;
+}
+
+.date-input {
+  .form-group.input-validation-error {
+    border-left: 0;
+    margin-left: 0;
+    padding-left: 0;
+  }
 }
