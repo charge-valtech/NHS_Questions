@@ -37,34 +37,48 @@ headerTitle: Advertising an Apprenticeship
 
 <fieldset class="fieldset-with-border">
   <legend class="heading-large">Vacancy Location</legend>
-  <div class="form-group form-group-compound inline-button">
-    <label class="form-label" for="role-short-desc">Postcode</label>
-    <input id="role-short-desc" type="text" class="form-control form-control-1-4">
-    <a class="button-link" href="#">Find address</a>
+  <div class="form-group form-group-compound">
+    <label for="post-code" class="form-label">Postcode</label>
+    <input id="post-code" type="text" class="form-control form-control-large " autocapitalize="characters" autocorrect="off" value="">
   </div>
-  <div class="form-group">
-    <label for="select-address" class="form-label">Select address</label>
-    <select id="select-address">
-        <option value="">Please select</option>
-        <option value="">45 High Street, Reddich</option>
-        <option value="">47 High Street, Reddich</option>
-        <option value="">49 High Street, Reddich</option>
-        <option value="">51 High Street, Reddich</option>
-        <option value="">53 High Street, Reddich</option>
-        <option value="">55 High Street, Reddich</option>
+  <div class="form-group form-group-compound">
+    <a href="#" class="button address-find-btn">Find address</a>
+  </div>
+  <div class="address-find-select form-group toggle-content">
+    <label for="address-select" class="form-label">Select your address</label>
+    <select name="" id="address-select">
+      <option value="void">-- 5 found --</option>
+      <option class="address-select-option" value="36 Bolton Road">36 Bolton Road</option>
+      <option class="address-select-option" value="37 Bolton Road">37 Bolton Road</option>
+      <option class="address-select-option" value="38 Bolton Road">38 Bolton Road</option>
+      <option class="address-select-option" value="39 Bolton Road">39 Bolton Road</option>
+      <option class="address-select-option" value="40 Bolton Road">40 Bolton Road</option>
     </select>
   </div>
-  <div class="form-group form-group-compound">
-    <label class="form-label" for="address1">Address line 1</label>
-    <input type="text" id="address1" class="form-control">
+  <div class="form-group">
+    <a href="#" class="address-manual-btn">I want to enter address manually</a>
   </div>
-  <div class="form-group form-group-compound">
-    <label class="form-label" for="address2">Address line 2</label>
-    <input type="text" id="address2" class="form-control">
-  </div>
-  <div class="form-group form-group">
-    <label class="form-label" for="address3">Town or City</label>
-    <input type="text" id="address3" class="form-control form-control-1-3">
+  <div class="address-manual-input panel-indent toggle-content">
+    <div class="form-group form-group-compound">
+      <label for="address1" class="form-label">First line of address</label>
+      <input id="address1" type="text" class="form-control" autocorrect="off" value="">
+    </div>
+    <div class="form-group form-group-compound">
+      <label for="address2" class="form-label">Second line (optional)</label>
+      <input id="address2" type="text" class="form-control" autocorrect="off">
+    </div>
+    <div class="form-group form-group-compound">
+      <label for="address3" class="form-label">Town or city</label>
+      <input id="address3" type="text" class="form-control" autocorrect="off" value="">
+    </div>
+    <div class="form-group form-group-compound">
+      <label for="address3b" class="form-label">County</label>
+      <input id="address3b" type="text" class="form-control" autocorrect="off" value="">
+    </div>
+    <div class="form-group form-group-compound">
+      <label for="address4" class="form-label">Post code</label>
+      <input id="address4" type="text" class="form-control form-control-large" autocapitalize="characters" autocorrect="off" value="">
+    </div>
   </div>
 </fieldset>
 
@@ -79,32 +93,46 @@ headerTitle: Advertising an Apprenticeship
     <p class="form-label">Working days (tick all that apply)</p>
     <p class="form-hint">What days might they be expected to work</p>
   </div>
-  <div class="form-group">
-    <label for="weekday1" class="block-label"><input id="weekday1" type="checkbox">Monday</label>
-    <label for="weekday2" class="block-label"><input id="weekday2" type="checkbox">Tuesday</label>
-    <label for="weekday3" class="block-label"><input id="weekday3" type="checkbox">Wednesday</label>
-    <label for="weekday4" class="block-label"><input id="weekday4" type="checkbox">Thursday</label>
-    <label for="weekday5" class="block-label"><input id="weekday5" type="checkbox">Friday</label>
-    <label for="weekday6" class="block-label"><input id="weekday6" type="checkbox">Saturday</label>
-    <label for="weekday7" class="block-label"><input id="weekday7" type="checkbox">Sunday</label>
-  </div>
+    <div>
+      <label for="weekday1" class="block-label"><input id="weekday1" type="checkbox">Monday</label>
+    </div>
+    <div>
+      <label for="weekday2" class="block-label"><input id="weekday2" type="checkbox">Tuesday</label>
+    </div>
+    <div>
+      <label for="weekday3" class="block-label"><input id="weekday3" type="checkbox">Wednesday</label>
+    </div>
+    <div>
+      <label for="weekday4" class="block-label"><input id="weekday4" type="checkbox">Thursday</label>
+    </div>
+    <div>
+      <label for="weekday5" class="block-label"><input id="weekday5" type="checkbox">Friday</label>
+    </div>
+    <div>
+      <label for="weekday6" class="block-label"><input id="weekday6" type="checkbox">Saturday</label>
+    </div>
+    <div class="form-group">
+      <label for="weekday7" class="block-label"><input id="weekday7" type="checkbox">Sunday</label>
+    </div>
 </fieldset>
 
-<fieldset class="fieldset-with-border inline">
+<fieldset class="fieldset-with-border">
   <legend class="heading-large">Wage</legend>
-  <div class="form-group">
-    <label for="wage-amount" class="form-label">Amount</label>
-    <input id="wage-amount" type="text" class="form-control form-control-wage">
-    <p class="form-hint">E.g. &pound;100.00</p>
-  </div>
-  <div class="form-group">
-    <label for="wage-freq" class="form-label">Frequency</label>
-    <select id="wage-freq">
-      <option value="">Please select</option>
-      <option selected="selected" value="">Weekly</option>
-      <option value="">Monthly</option>
-      <option value="">Yearly</option>
-    </select>
+  <div class="inline">
+    <div class="form-group form-group-compound">
+      <label for="wage-amount" class="form-label">Amount</label>
+      <input id="wage-amount" type="text" class="form-control form-control-large" value="&pound;">
+    </div>
+    <div class="form-group form-group-compound">
+      <label for="wage-freq" class="form-label">Frequency</label>
+      <select id="wage-freq">
+        <option value="">Please select</option>
+        <option selected="selected" value="">Weekly</option>
+        <option value="">Monthly</option>
+        <option value="">Yearly</option>
+      </select>
+    </div>
+    <p class="form-hint">eg £100.00</p>
   </div>
 </fieldset>
 
@@ -151,20 +179,20 @@ headerTitle: Advertising an Apprenticeship
         <input class="check-to-show-trigger" id="enter-start" type="radio" name="h-dates">
         Enter date
       </label>
-      <div id="start-date-panel" class="panel-indent toggle-content form-group date-input">
-        <p class="form-label">Start date</p>
-        <div class="form-group form-group-compound">
-          <label class="form-hint" for="date-day3">Day</label>
-          <input type="tel" class="form-control" maxlength="2" id="date-day3">
-        </div>
-        <div class="form-group form-group-compound">
-          <label class="form-hint" for="date-month3">Month</label>
-          <input type="tel" class="form-control" maxlength="2" id="date-month3">
-        </div>
-        <div class="form-group form-group-compound form-group-year">
-          <label class="form-hint" for="date-year3">Year</label>
-          <input type="tel" class="form-control" maxlength="4" id="date-year3">
-        </div>
+    </div>
+    <div id="start-date-panel" class="panel-indent toggle-content form-group date-input">
+      <p class="form-label">Start date</p>
+      <div class="form-group form-group-compound">
+        <label class="form-hint" for="date-day3">Day</label>
+        <input type="tel" class="form-control" maxlength="2" id="date-day3">
+      </div>
+      <div class="form-group form-group-compound">
+        <label class="form-hint" for="date-month3">Month</label>
+        <input type="tel" class="form-control" maxlength="2" id="date-month3">
+      </div>
+      <div class="form-group form-group-compound form-group-year">
+        <label class="form-hint" for="date-year3">Year</label>
+        <input type="tel" class="form-control" maxlength="4" id="date-year3">
       </div>
     </div>
   </div>
@@ -172,5 +200,4 @@ headerTitle: Advertising an Apprenticeship
 
 <div class="form-group">
   <a class="button" href="training-details.html">Save and continue</a>
-  <p><a class="button-link" href="review-details.html">Back</a></p>
 </div>
