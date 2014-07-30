@@ -1,3 +1,0 @@
-[submodule "node_modules/govuk_frontend_toolkit/govuk_frontend_toolkit"]
-	path = node_modules/govuk_frontend_toolkit/govuk_frontend_toolkit
-	url = https://github.com/alphagov/govuk_frontend_toolkit.git
