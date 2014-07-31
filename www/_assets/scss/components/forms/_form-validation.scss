@@ -7,8 +7,11 @@
   border-left: 3px solid $error-colour;
   box-sizing: content-box;
   margin-bottom: $gutter;
-  margin-left: -18px;
+  margin-left: -13px;
   padding: $gutter-half 0 $gutter $gutter-half;
+  @include media(tablet) {
+    margin-left: -18px;
+  }
   ul {
     margin-top: 10px;
   }
