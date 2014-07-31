@@ -218,6 +218,10 @@ input::-webkit-inner-spin-button {
   width: 4em !important;
 }
 
+.form-control-xsmall {
+  width: 2.5em !important;
+}
+
 .form-control-small {
   width: 4em !important;
 }
@@ -297,7 +301,6 @@ input::-webkit-inner-spin-button {
 @import "forms/form-validation";
 
 // Form patterns
-@import "forms/form-date-inputs";
 
 @import "forms/form-chunky-labels";
 

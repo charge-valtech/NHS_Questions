@@ -147,18 +147,6 @@ $(function() {
     }
   }
 
-  //--------Date input error behaviour
-
-  // $('.date-input').on('keyup blur', '.form-control', function() {
-  //   var $this = $(this);
-
-  //   if($this.find('.input-validation-error').length != 0) {
-  //     $this.addClass('input-validation-error');
-  //   } else {
-  //     $this.removeClass('input-validation-error');
-  //   }
-  // });
-
   //--------Expanding tables
 
   $('.tbody-3rows').each(function() {

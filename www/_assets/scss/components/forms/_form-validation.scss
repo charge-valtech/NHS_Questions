@@ -32,10 +32,6 @@
   box-sizing: content-box;
   margin-left: -13px;
   padding: 0 0 0 10px;
-  .field-validation-error {
-    color: $error-colour;
-    margin-top: 8px;
-  }
   .form-control {
     box-sizing: border-box;
     border: 1px solid $border-colour;
@@ -47,6 +43,16 @@
     margin-left: -18px;
     padding-left: $gutter-half;
   }
+}
+
+.field-validation-valid {
+  clear: left;
+}
+.field-validation-error {
+  clear: left;
+  color: $error-colour;
+  display: block;
+  margin-top: 8px;
 }
 
 .form-control.input-validation-error {
@@ -61,7 +67,7 @@
   margin-top: 5px;
 }
 
-.date-input {
+.form-group.input-validation-error {
   .form-group.input-validation-error {
     border-left: 0;
     margin-left: 0;

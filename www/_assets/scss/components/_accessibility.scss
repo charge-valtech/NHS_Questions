@@ -43,6 +43,11 @@
   display: none;
   visibility: hidden; }
 
+.alwayshidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
 /* Hide only visually, but have it available for screenreaders */
 .visuallyhidden {
   position: absolute;
