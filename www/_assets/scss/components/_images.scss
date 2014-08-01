@@ -45,6 +45,9 @@ iframe {
 }
 
 .icon-with-text {
+  .the-icon {
+    display: inline-block;
+  }
   .the-text {
     display: none;
     @include media(tablet) {
