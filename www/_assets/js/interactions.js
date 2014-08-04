@@ -168,12 +168,19 @@ $(function() {
 
     $tbodyRows.toggle();
 
-    if($this.html() == '<i class="fa fa-angle-down"></i>View more') {
-      $this.html('<i class="fa fa-angle-up"></i>View less');
+    if($this.html() == '<i class="fa fa-angle-down"></i>More') {
+      $this.html('<i class="fa fa-angle-up"></i>Less');
     } else {
-      $this.html('<i class="fa fa-angle-down"></i>View more');
+      $this.html('<i class="fa fa-angle-down"></i>More');
     }
 
+  });
+
+  //--- Dashboard pretend delete
+
+  $('.proto-dashboard').on('click', '.icon-black', function(){
+    $(this).closest('tr').remove();
+    return false;
   });
 
 
