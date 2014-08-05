@@ -373,8 +373,8 @@
           <legend class="heading-large">Work experience</legend>
           <p class="hide-nojs form-label text">Do you have any work experience?</p>
           <p class="form-hint text">
-            Use skills you've gained through work (whether paid or unpaid) that relate to the
-            role you’re applying for.
+            Use skills you've gained at work (whether paid or unpaid) that relate to the apprenticeship
+            you’re applying for.
           </p>
           <div class="hide-nojs">
             <div class="form-group inline clearfix">
@@ -422,7 +422,7 @@
                     </div>
                     <div class="form-group form-group-compound">
                       <span class="form-hint">Year</span>
-                      <input type="tel" class="form-control form-control-medium" pattern="[0-9]*" maxlength="4"
+                      <input type="tel" class="form-control form-control-small" pattern="[0-9]*" maxlength="4"
                       id="work-from-year">
                     </div>
                   </div>
@@ -447,7 +447,7 @@
                     </div>
                     <div class="form-group form-group-compound">
                       <span class="form-hint">Year</span>
-                      <input type="tel" class="form-control form-control-medium" pattern="[0-9]*" maxlength="4"
+                      <input type="tel" class="form-control form-control-small" pattern="[0-9]*" maxlength="4"
                       id="work-to-year">
                     </div>
                     <div class="form-group form-group-compound">
@@ -693,45 +693,47 @@
           <legend class="heading-large">About you</legend>
           <div class="form-group">
             <label for="question1" class="form-label">Provide examples of your strengths</label>
-            <div class="text">
-              <details class="no-btm-margin">
-                <summary role="button">Help with this section</summary>
-                <p class="panel-indent">An employer is looking for examples of your strengths. Whatever
-                  skills you give, you’ll need to provide details of when you’ve
-                  shown these.</p>
-              </details>
-            </div>
+            <!-- <div class="text">
+      <details class="no-btm-margin">
+        <summary role="button">Help with this section</summary>
+        <p class="panel-indent">An employer is looking for examples of your strengths. Whatever skills you give, you’ll need to provide details of when you’ve shown these.</p>
+      </details>
+    </div> -->
+            <p class="form-hint text">An employer is looking for examples of your strengths. Whatever skills
+              you give, you’ll need to provide details of when you’ve shown these.</p>
             <textarea id="question1" class="form-control" data-val-length-max="4000"></textarea>
             <span class="form-hint maxchar-count">4000</span>
           </div>
           <div class="form-group">
             <label for="question2" class="form-label">What skills would you like to improve?</label>
-            <div class="text">
-              <details class="no-btm-margin">
-                <summary role="button">Help with this section</summary>
-                <p class="panel-indent">Try and keep your answers relevant to the job you’re applying for
-                  and the industry the employer works in.</p>
-              </details>
-            </div>
+            <!-- <div class="text">
+      <details class="no-btm-margin">
+        <summary role="button">Help with this section</summary>
+        <p class="panel-indent">Try and keep your answers relevant to the apprenticeship you’re applying for and the industry the employer works in.</p>
+      </details>
+    </div> -->
+            <p class="form-hint text">Try and keep your answers relevant to the apprenticeship you’re applying
+              for and the industry the employer works in.</p>
             <textarea id="question2" class="form-control" data-val-length-max="4000"></textarea>
             <span class="form-hint maxchar-count">4000</span>
           </div>
           <div class="form-group">
-            <label for="question3" class="form-label">What are you hobbies and interests?</label>
-            <div class="text">
-              <details class="no-btm-margin">
-                <summary role="button">Help with this section</summary>
-                <p class="panel-indent">Try and keep your answers as current as possible and think of skills
-                  you’ve gained from your hobbies and interests that might be relevant
-                  to the vacancy. Remember to include any personal achievements.</p>
-              </details>
-            </div>
+            <label for="question3" class="form-label">What are your hobbies and interests?</label>
+            <!-- <div class="text">
+      <details class="no-btm-margin">
+        <summary role="button">Help with this section</summary>
+        <p class="panel-indent">Try and keep your answers as current as possible and think of skills you’ve gained from your hobbies and interests that might be relevant to the vacancy. Remember to include any personal achievements.</p>
+      </details>
+    </div> -->
+            <p class="form-hint text">Try and keep your answers as current as possible and think of skills
+              you’ve gained from your hobbies and interests that might be relevant
+              to the vacancy. Remember to include any personal achievements.</p>
             <textarea id="question3" class="form-control" data-val-length-max="4000"></textarea>
             <span class="form-hint maxchar-count">4000</span>
           </div>
           <div class="form-group">
             <label for="question4" class="form-label">Is there anything we can do to support your interview?</label>
-            <span class="form-hint">eg do you need a signer, information in braille</span>
+            <p class="form-hint">For example, do you need a signer, information in braille.</p>
             <div class="form-group form-group-compound inline">
               <label data-target="support-panel" for="support-yes" class="block-label">
                 <input name="support" type="radio" id="support-yes">Yes
@@ -762,11 +764,11 @@
         </fieldset>
         <div class="form-group">
           <a href="apply-preview.html" class="button" id="applyPreviewBtn">Preview application</a>
-          <p id="saveApplication" class="toggle-content">
-            <span class="fake-link">Save for later</span>
+          <p id="saveApplication">
+            <span class="fake-link">Save draft</span>
           </p>
           <p id="applicationSaved">
-            Saved at 10:20 to <a href="dashboard.html">dashboard</a>
+            Saved at 10:20 to <a href="dashboard.html">my applications</a>
           </p>
         </div>
       </main>
