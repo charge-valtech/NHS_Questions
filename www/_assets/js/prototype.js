@@ -96,9 +96,6 @@ $(function() {
 
   }
 
-  var fullName = $.jStorage.get('fullName');
-  $('#bannerUserName').text(fullName);
-
   if($('#accountCreated').length > 0) {
     var emailInputPre = $.jStorage.get('emailInput');
 
