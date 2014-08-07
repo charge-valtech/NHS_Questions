@@ -17,6 +17,10 @@ $square-height: 10;
   }
 }
 
+img {
+  max-width: 100%;
+}
+
 .imgwrap--square {
   padding-top: percentage($square-height / $square-width);
 }
