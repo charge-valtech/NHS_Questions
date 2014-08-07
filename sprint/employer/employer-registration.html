@@ -58,16 +58,15 @@
         <div class="prototype-warning">
           <strong class="beta__label">Beta</strong>  <span>This is a prototype – your <a href="/feedback.html">feedback</a> will help us to improve it.</span>
         </div>
-        <ul class="account-info sign-in" id="bannerSignedOut">
-          <li><a href="/apprentice/profile-signin.html"><i class="fa fa-sign-in"></i>Sign in</a>
-          </li>
-        </ul>
+        <div class="account-info sign-in" id="bannerSignedOut">
+          <a href="/apprentice/profile-signin.html"><i class="fa fa-sign-in"></i>Sign in</a>
+        </div>
         <div class="account-info sign-out" id="bannerSignedIn" style="display: none;">
-          <span class="your-name">Henry Charge</span>
+          <span class="your-name" id="bannerUserName">Your Name</span>
           <div>
-            <a href="/apprentice/dashboard.html">Dashboard</a>
-            <a href="/apprentice/dashboard.html">Profile</a>
-            <a href="/feedback.html" id="btnSignOut"><i class="fa fa-sign-out"></i>Sign out</a>
+            <a href="/apprentice/dashboard.html">My applications</a>
+            <a href="/apprentice/dashboard.html">Settings</a>
+            <a href="/apprentice/profile-signedout.html" id="btnSignOut"><i class="fa fa-sign-out"></i>Sign out</a>
           </div>
         </div>
       </div>
@@ -135,7 +134,7 @@
         </fieldset>
         <fieldset>
           <legend class="heading-large">Contact details</legend>
-          <div class="form-group form-group-compound">
+          <div class="form-group form-group-compound text">
             <label class="form-label">Who should we contact if we have any questions about your registration?</label>
             <p class="form-hint">These details are for internal communications only, and will NOT be
               displayed on the advertisement.</p>
@@ -163,8 +162,6 @@
         </fieldset>
         <div class="form-group">
           <a class="button" href="registration-submit.html">Save and continue</a>
-          <p><a class="button-link" href="../employer.html">Back</a>
-          </p>
         </div>
       </main>
     </div>

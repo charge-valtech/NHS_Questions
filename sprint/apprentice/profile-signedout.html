@@ -71,18 +71,36 @@
         </div>
       </div>
       <main role="main" id="main">
-        <fieldset class="inner-block-padr">
-          <legend class="heading-large">Account locked</legend>
-          <p class="text">To unlock your account, enter your email address. You'll receive a 6-digit
-            code, which you can then use to unlock your account.</p>
-          <div class="form-group">
-            <label class="form-label" for="email-add">Email address</label>
-            <input type="email" class="form-control" id="email-add" />
+        <div class="grid-wrapper">
+          <div class="panel-success">
+            <p class="text"><i class="fa fa-check"></i>You've successfully signed out</p>
           </div>
-          <div class="form-group">
-            <a class="button" href="blocked-entercode.html">Send code</a>
+          <div class="grid grid-1-2">
+            <fieldset>
+              <legend class="heading-large">Sign in</legend>
+              <p>Sign in or <a href="profile-create.html">create an account</a> to get
+                started.</p>
+              <div class="form-group form-group-compound">
+                <label class="form-label" for="email-add">Email address</label>
+                <input type="email" class="form-control form-control-3-4" id="email-add" />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="password">Password</label>
+                <input type="password" class="form-control form-control-3-4" id="password" />
+                <a class="form-hint" href="forgottenpassword.html">Forgotten password?</a>
+              </div>
+              <div class="form-group">
+                <a class="button" id="btnSignIn" href="search-details.html">Sign in</a>
+              </div>
+            </fieldset>
           </div>
-        </fieldset>
+          <div class="grid grid-1-2">
+            <h2 class="heading-large">Create an account</h2>
+            <p class="text">If you create an account you can save and track your applications,
+              set up vacancy alerts and manage your profile.</p>
+            <a href="profile-create.html">Create account</a>
+          </div>
+        </div>
       </main>
     </div>
     <footer class="gov-border" role="contentinfo">

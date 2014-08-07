@@ -58,26 +58,22 @@
         <div class="prototype-warning">
           <strong class="beta__label">Beta</strong>  <span>This is a prototype – your <a href="/feedback.html">feedback</a> will help us to improve it.</span>
         </div>
-        <ul class="account-info sign-in" id="bannerSignedOut">
-          <li><a href="/apprentice/profile-signin.html"><i class="fa fa-sign-in"></i>Sign in</a>
-          </li>
-        </ul>
+        <div class="account-info sign-in" id="bannerSignedOut">
+          <a href="/apprentice/profile-signin.html"><i class="fa fa-sign-in"></i>Sign in</a>
+        </div>
         <div class="account-info sign-out" id="bannerSignedIn" style="display: none;">
-          <span class="your-name">Henry Charge</span>
+          <span class="your-name" id="bannerUserName">Your Name</span>
           <div>
-            <a href="/apprentice/dashboard.html">Dashboard</a>
-            <a href="/apprentice/dashboard.html">Profile</a>
-            <a href="/feedback.html" id="btnSignOut"><i class="fa fa-sign-out"></i>Sign out</a>
+            <a href="/apprentice/dashboard.html">My applications</a>
+            <a href="/apprentice/dashboard.html">Settings</a>
+            <a href="/apprentice/profile-signedout.html" id="btnSignOut"><i class="fa fa-sign-out"></i>Sign out</a>
           </div>
         </div>
       </div>
       <main role="main" id="main">
         <div class="grid-wrapper">
           <div class="grid grid-1-2">
-            <div class="hgroup">
-              <h1 class="heading-xlarge">Your dashboard</h1>
-              <span class="subtitle">Manage your applications</span>
-            </div>
+            <h1 class="heading-xlarge">My applications</h1>
           </div>
           <div class="grid grid-1-2">
             <a href="search-index.html" class="page-link">Find an apprenticeship</a>
@@ -115,26 +111,26 @@
         </div>
         <ul class="list-nav">
           <li>
-            <span class="bold-medium">5</span>  <a class="" href="#dashInProgress">In progress</a>
+            <span class="bold-medium">2</span>  <a class="" href="#dashInProgress">Successful</a>
+          </li>
+          <li>
+            <span class="bold-medium">3</span>  <a class="" href="#dashUnsuccessful">Unsuccessful</a>
           </li>
           <li>
             <span class="bold-medium">10</span>  <a class="" href="#dashSubmitted">Submitted</a>
           </li>
           <li>
-            <span class="bold-medium">2</span>  <a class="" href="#dashUnsuccessful">Unsuccessful</a>
-          </li>
-          <li>
             <span class="bold-medium">6</span>  <a class="" href="#dashDrafts">Drafts</a>
           </li>
           <li>
-            <span class="bold-medium">3</span>  <a class="" href="#dashSavedVacancies">Saved vacancies</a>
+            <span class="bold-medium">3</span>  <a class="" href="#dashSavedVacancies">Saved apprenticeships</a>
           </li>
         </ul>
-        <div class="grid-wrapper">
+        <div class="grid-wrapper proto-dashboard">
           <div class="grid grid-1-2">
             <div class="inner-block-padr">
               <section class="clearfix">
-                <h2 class="heading-medium" id="dashInProgress">Application status</h2>
+                <h2 class="heading-medium" id="dashInProgress">Successful</h2>
                 <table class="vert-middle">
                   <colgroup>
                     <col class="t50">
@@ -144,40 +140,29 @@
                   </colgroup>
                   <tbody class="tbody-3rows">
                     <tr>
-                      <td>Lorem ipsum dolor sit amet, consectetur.</td>
-                      <td>In progress</td>
-                      <td class="ta-center">12 Jul 14</td>
+                      <td>Apprentice Toolmaker/Precision Machinist with Accura Geometric
+                        Ltd</td>
+                      <td class="ta-center">Successful</td>
+                      <td class="ta-center"><a class="icon-black" href="#"><i class="copy-16 fa fa-times-circle"></i><span class="visuallyhidden">Delete</span></a>
+                      </td>
                     </tr>
                     <tr>
-                      <td>Lorem ipsum dolor sit amet.</td>
-                      <td>In progress</td>
-                      <td class="ta-center">10 Jul 14</td>
-                    </tr>
-                    <tr>
-                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
-                      <td>In progress</td>
-                      <td class="ta-center">10 Jul 14</td>
-                    </tr>
-                    <tr>
-                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
-                      <td>In progress</td>
-                      <td class="ta-center">9 Jul 14</td>
-                    </tr>
-                    <tr>
-                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
-                      <td>In progress</td>
-                      <td class="ta-center">7 Jul 14</td>
+                      <td>Apprentice Engineering with Universal Boltforgers Ltd</td>
+                      <td class="ta-center">Successful</td>
+                      <td class="ta-center"><a class="icon-black" href="#"><i class="copy-16 fa fa-times-circle"></i><span class="visuallyhidden">Delete</span></a>
+                      </td>
                     </tr>
                   </tbody>
                   <tbody class="tbody-expandrows">
                     <tr class="no-btm-border">
                       <td colspan="2"></td>
-                      <td class="no-wrap ta-center"><span class="btnExpandRows fake-link" href=""><i class="fa fa-angle-down"></i>View more</span>
+                      <td class="no-wrap ta-center"><span class="btnExpandRows fake-link" href=""><i class="fa fa-angle-down"></i>More</span>
                       </td>
                     </tr>
                   </tbody>
                 </table>
-                <table class="vert-middle" id="dashSubmitted">
+                <h2 class="heading-medium" id="dashSubmitted">Submitted</h2>
+                <table class="vert-middle" id="">
                   <colgroup>
                     <col class="t50">
                       <col class="t25">
@@ -186,81 +171,96 @@
                   </colgroup>
                   <tbody class="tbody-3rows">
                     <tr>
-                      <td>Lorem ipsum dolor sit amet, consectetur.</td>
-                      <td class="">Submitted</td>
+                      <td>Apprentice Service Technician with Global Plant Sales Limited</td>
+                      <td class="ta-center">Submitted</td>
                       <td class="ta-center">10 Jul 14</td>
                     </tr>
                     <tr>
-                      <td>Lorem ipsum dolor sit amet.</td>
-                      <td class="">Submitted</td>
+                      <td>Engineering Apprentice with Exova</td>
+                      <td class="ta-center">Submitted</td>
                       <td class="ta-center">4 Jul 14</td>
                     </tr>
                     <tr>
-                      <td>Lorem ipsum dolor sit amet.</td>
-                      <td class="">Submitted</td>
+                      <td>Engineering Apprentice with Whiston Industries Ltd</td>
+                      <td class="ta-center">Submitted</td>
                       <td class="ta-center">4 Jul 14</td>
                     </tr>
                     <tr>
-                      <td>Lorem ipsum dolor sit amet.</td>
-                      <td class="">Submitted</td>
+                      <td>Apprentice Mechanical Labourer with University of Warwick</td>
+                      <td class="ta-center">Submitted</td>
                       <td class="ta-center">3 Jul 14</td>
                     </tr>
                     <tr>
-                      <td>Lorem ipsum dolor sit amet.</td>
-                      <td class="">Submitted</td>
+                      <td>Apprentice Machine Operator/ Engineer with A &amp; B Richardson
+                        Engineering Ltd</td>
+                      <td class="ta-center">Submitted</td>
                       <td class="ta-center">1 Jul 14</td>
                     </tr>
                     <tr>
-                      <td>Lorem ipsum dolor sit amet.</td>
-                      <td class="">Submitted</td>
+                      <td>Engineering Apprentice with Zero Cases Ltd</td>
+                      <td class="ta-center">Submitted</td>
                       <td class="ta-center">29 Jun 14</td>
                     </tr>
                     <tr>
-                      <td>Lorem ipsum dolor sit amet.</td>
-                      <td class="">Submitted</td>
+                      <td>Apprentice Engineer with Fastener Solutions Ltd</td>
+                      <td class="ta-center">Submitted</td>
                       <td class="ta-center">29 Jun 14</td>
                     </tr>
                     <tr>
-                      <td>Lorem ipsum dolor sit amet.</td>
-                      <td class="">Submitted</td>
+                      <td>Engineering Machine Apprentice with Jag Precision Engineering</td>
+                      <td class="ta-center">Submitted</td>
                       <td class="ta-center">26 Jun 14</td>
                     </tr>
                     <tr>
-                      <td>Lorem ipsum dolor sit amet.</td>
-                      <td class="">Submitted</td>
+                      <td>Apprentice Mechanical Engineer with Kingspan Offsite Ltd</td>
+                      <td class="ta-center">Submitted</td>
                       <td class="ta-center">24 Jun 14</td>
                     </tr>
                     <tr>
-                      <td>Lorem ipsum dolor sit amet.</td>
-                      <td class="">Submitted</td>
+                      <td>Civil Engineering Apprentice with Ove Arup &amp; Partners</td>
+                      <td class="ta-center">Submitted</td>
                       <td class="ta-center">22 Jun 14</td>
                     </tr>
                   </tbody>
                   <tbody class="tbody-expandrows">
                     <tr class="no-btm-border">
                       <td colspan="2"></td>
-                      <td class="no-wrap ta-center"><span class="btnExpandRows fake-link" href=""><i class="fa fa-angle-down"></i>View more</span>
+                      <td class="no-wrap ta-center"><span class="btnExpandRows fake-link" href=""><i class="fa fa-angle-down"></i>More</span>
                       </td>
                     </tr>
                   </tbody>
                 </table>
-                <table class="vert-middle" id="dashUnsuccessful">
+                <h2 class="heading-medium" id="dashUnsuccessful">Unsuccessful</h2>
+                <table class="vert-middle" id="">
                   <colgroup>
                     <col class="t50">
                       <col class="t25">
                         <col class="t25">
                           <col>
                   </colgroup>
-                  <tbody class="tbody-3rows">
+                  <tbody>
                     <tr>
-                      <td>Lorem ipsum dolor sit amet, consectetur.</td>
-                      <td>Unsuccessful</td>
+                      <td>Manufacturing Apprenticeship with A S H Plastics Ltd</td>
+                      <td class="ta-center">Apprenticeship withdrawn</td>
+                      <td class="ta-center"><a class="icon-black" href="#"><i class="copy-16 fa fa-times-circle"></i><span class="visuallyhidden">Delete</span></a>
+                      </td>
+                    </tr>
+                    <tr class="no-btm-border">
+                      <td>Apprentice Maintenance Engineer with Cargill Meats Europe
+                        TA Sun Valley Ltd</td>
+                      <td class="ta-center">Unsuccessful</td>
                       <td class="ta-center"><a class="icon-black" href="#"><i class="copy-16 fa fa-times-circle"></i><span class="visuallyhidden">Delete</span></a>
                       </td>
                     </tr>
                     <tr>
-                      <td>Lorem ipsum dolor sit amet, consectetur.</td>
-                      <td>Unsuccessful</td>
+                      <td colspan="3">
+                        <b>Reason:</b> You meet the criteria for this role but have
+                        not been successful this time
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Engineering Apprentice with Taskmaster Doors Ltd</td>
+                      <td class="ta-center">Application withdrawn</td>
                       <td class="ta-center"><a class="icon-black" href="#"><i class="copy-16 fa fa-times-circle"></i><span class="visuallyhidden">Delete</span></a>
                       </td>
                     </tr>
@@ -268,7 +268,7 @@
                   <tbody class="tbody-expandrows">
                     <tr class="no-btm-border">
                       <td colspan="2"></td>
-                      <td class="no-wrap ta-center"><span class="btnExpandRows fake-link" href=""><i class="fa fa-angle-down"></i>View more</span>
+                      <td class="no-wrap ta-center"><span class="btnExpandRows fake-link" href=""><i class="fa fa-angle-down"></i>More</span>
                       </td>
                     </tr>
                   </tbody>
@@ -288,42 +288,44 @@
                 </colgroup>
                 <tbody class="tbody-3rows">
                   <tr>
-                    <td>Lorem ipsum dolor sit amet, consectetur.</td>
+                    <td>Apprentice Mechanical Engineer – Precision Toolmaker with R
+                      G Engineering</td>
                     <td class="ta-center"><a href="apply-index.html">Resume</a>
                     </td>
                     <td class="ta-center"><a class="icon-black" href="#"><i class="copy-16 fa fa-times-circle"></i><span class="visuallyhidden">Delete</span></a>
                     </td>
                   </tr>
                   <tr>
-                    <td>Lorem ipsum dolor sit amet.</td>
+                    <td>Glass Processor Apprentice with Mi Glass Ltd</td>
                     <td class="ta-center"><a href="apply-index.html">Resume</a>
                     </td>
                     <td class="ta-center"><a class="icon-black" href="#"><i class="copy-16 fa fa-times-circle"></i><span class="visuallyhidden">Delete</span></a>
                     </td>
                   </tr>
                   <tr>
-                    <td>Lorem ipsum dolor sit amet, consectetur.</td>
+                    <td>Structural Steel Engineering Apprentice with Structural Steelwork
+                      Ltd</td>
+                    <td class="ta-center">Apprenticeship withdrawn</td>
+                    <td class="ta-center"><a class="icon-black" href="#"><i class="copy-16 fa fa-times-circle"></i><span class="visuallyhidden">Delete</span></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Apprentice Project / Process Engineer with Rem Power</td>
                     <td class="ta-center"><a href="apply-index.html">Resume</a>
                     </td>
                     <td class="ta-center"><a class="icon-black" href="#"><i class="copy-16 fa fa-times-circle"></i><span class="visuallyhidden">Delete</span></a>
                     </td>
                   </tr>
                   <tr>
-                    <td>Lorem ipsum dolor sit amet, consectetur.</td>
+                    <td>Engineering Apprentice with Whiton Tools Ltd</td>
                     <td class="ta-center"><a href="apply-index.html">Resume</a>
                     </td>
                     <td class="ta-center"><a class="icon-black" href="#"><i class="copy-16 fa fa-times-circle"></i><span class="visuallyhidden">Delete</span></a>
                     </td>
                   </tr>
                   <tr>
-                    <td>Lorem ipsum dolor sit amet.</td>
-                    <td class="ta-center"><a href="apply-index.html">Resume</a>
-                    </td>
-                    <td class="ta-center"><a class="icon-black" href="#"><i class="copy-16 fa fa-times-circle"></i><span class="visuallyhidden">Delete</span></a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Lorem ipsum dolor sit amet, consectetur.</td>
+                    <td>Manufacturing Systems/ Electrical Engineering Apprentice with
+                      Hydraforce Hydraulics Ltd</td>
                     <td class="ta-center"><a href="apply-index.html">Resume</a>
                     </td>
                     <td class="ta-center"><a class="icon-black" href="#"><i class="copy-16 fa fa-times-circle"></i><span class="visuallyhidden">Delete</span></a>
@@ -333,14 +335,12 @@
                 <tbody class="tbody-expandrows">
                   <tr class="no-btm-border">
                     <td colspan="2"></td>
-                    <td class="no-wrap ta-center"><span class="btnExpandRows fake-link" href=""><i class="fa fa-angle-down"></i>View more</span>
+                    <td class="no-wrap ta-center"><span class="btnExpandRows fake-link" href=""><i class="fa fa-angle-down"></i>More</span>
                     </td>
                   </tr>
                 </tbody>
               </table>
-            </section>
-            <section class="clearfix">
-              <h2 class="heading-medium" id="dashSavedVacancies">Saved vacancies</h2>
+              <h2 class="heading-medium" id="dashSavedVacancies">Saved apprenticeships</h2>
               <table class="vert-middle">
                 <colgroup>
                   <col class="t50">
@@ -350,21 +350,22 @@
                 </colgroup>
                 <tbody class="tbody-3rows">
                   <tr>
-                    <td>Lorem ipsum dolor sit amet, consectetur.</td>
+                    <td>Engineering Machine Apprentice with Hub Engineering Co Limited</td>
                     <td class="ta-center"><a href="apply-index.html">Apply</a>
                     </td>
                     <td class="ta-center"><a class="icon-black" href="#"><i class="copy-16 fa fa-times-circle"></i><span class="visuallyhidden">Delete</span></a>
                     </td>
                   </tr>
                   <tr>
-                    <td>Lorem ipsum dolor sit amet.</td>
+                    <td>Apprentice Engineering Machinist with J Marklew Engineering
+                      Ltd</td>
                     <td class="ta-center"><a href="apply-index.html">Apply</a>
                     </td>
                     <td class="ta-center"><a class="icon-black" href="#"><i class="copy-16 fa fa-times-circle"></i><span class="visuallyhidden">Delete</span></a>
                     </td>
                   </tr>
                   <tr>
-                    <td>Lorem ipsum dolor sit amet, consectetur.</td>
+                    <td>Building Services Technician Apprentice with Ove Arup & Partners</td>
                     <td class="ta-center"><a href="apply-index.html">Apply</a>
                     </td>
                     <td class="ta-center"><a class="icon-black" href="#"><i class="copy-16 fa fa-times-circle"></i><span class="visuallyhidden">Delete</span></a>
@@ -374,7 +375,7 @@
                 <tbody class="tbody-expandrows">
                   <tr class="no-btm-border">
                     <td colspan="2"></td>
-                    <td class="no-wrap ta-center"><span class="btnExpandRows fake-link" href=""><i class="fa fa-angle-down"></i>View more</span>
+                    <td class="no-wrap ta-center"><span class="btnExpandRows fake-link" href=""><i class="fa fa-angle-down"></i>More</span>
                     </td>
                   </tr>
                 </tbody>

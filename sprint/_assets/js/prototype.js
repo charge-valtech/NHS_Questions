@@ -551,6 +551,5 @@ $(function() {
     $('.details-apply').hide();
     $('.details-signIn').show();
   }
-
 // --------------- Remove for live code -------------- //
 });
