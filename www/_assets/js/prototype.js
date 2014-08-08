@@ -551,5 +551,22 @@ $(function() {
     $('.details-apply').hide();
     $('.details-signIn').show();
   }
+
+
+  //-- Settings page edit/readonly
+
+  $('.proto-editbtn').on('click', function() {
+    $('.proto-readonly').hide();
+    $('.proto-editmode').show();
+
+    return false;
+  });
+
+  $('.proto-savebtn').on('click', function() {
+    $('.proto-readonly').show();
+    $('.proto-editmode').hide();
+
+    return false;
+  });
 // --------------- Remove for live code -------------- //
 });
