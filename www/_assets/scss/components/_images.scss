@@ -25,6 +25,27 @@ img {
   padding-top: percentage($square-height / $square-width);
 }
 
+.ad-details__map {
+  background-color: $grey-3;
+  height: 250px;
+  margin-bottom: 20px;
+  vertical-align: middle;
+  position: relative;
+  .no-js & {
+    display: table;
+    .nojs-notice {
+      padding: 0 $gutter-half;
+      vertical-align: middle;
+    }
+  }
+}
+
+.map-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+}
+
 iframe, object, embed {
   max-width: 100%;
 }

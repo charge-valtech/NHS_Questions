@@ -3280,7 +3280,6 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
     return false;
   });
 
-
 });;/*
  *  jQuery Password Strength - v0.0.1
  *

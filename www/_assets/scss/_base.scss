@@ -45,7 +45,11 @@
   }
 }
 
-
+.hide-tablet {
+  @include media(tablet) {
+    display: none;
+  }
+}
 
 /* 1. Stops scrollbar from hiding when user is inactive on the page */
 

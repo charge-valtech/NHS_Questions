@@ -70,20 +70,6 @@
   }
 }
 
-.ad-details__map {
-  background-color: $grey-3;
-  height: 250px;
-  margin-bottom: 20px;
-  vertical-align: middle;
-  .no-js & {
-    display: table;
-    .nojs-notice {
-      padding: 0 $gutter-half;
-      vertical-align: middle;
-    }
-  }
-}
-
 /* Application form stuff */
 
 .work-history-item {

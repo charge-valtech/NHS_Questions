@@ -172,3 +172,24 @@
     float: right;
   }
 }
+
+.block-link {
+  background: $grey-3;
+  border: 1px solid $grey-3;
+  color: $black;
+  cursor: pointer; // Encourage clicking on block labels
+  display: block;
+  margin-bottom: $gutter-half;
+  padding: 20px $gutter-half;
+  text-decoration: none;
+  &:hover {
+    border-color: $black;
+    color: $black;
+  }
+  &.active {
+    background: $white;
+    border-color: $black;
+  }
+}
+
+
