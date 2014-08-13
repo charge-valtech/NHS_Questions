@@ -3273,13 +3273,6 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
 
   });
 
-  //--- Dashboard pretend delete
-
-  $('.proto-dashboard').on('click', '.icon-black', function(){
-    $(this).closest('tr').remove();
-    return false;
-  });
-
 });;/*
  *  jQuery Password Strength - v0.0.1
  *

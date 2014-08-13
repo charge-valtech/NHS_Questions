@@ -176,11 +176,4 @@ $(function() {
 
   });
 
-  //--- Dashboard pretend delete
-
-  $('.proto-dashboard').on('click', '.icon-black', function(){
-    $(this).closest('tr').remove();
-    return false;
-  });
-
 });
