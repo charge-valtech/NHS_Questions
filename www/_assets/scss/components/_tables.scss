@@ -69,6 +69,15 @@ table {
   }
 }
 
+.borderradius .tbody-3rows { /*IE9 and above*/
+  tr {
+    display: none;
+  }
+  tr:nth-child(-n+3) {
+    display: table-row;
+  }
+}
+
 /**
  * In the HTML above we see several `col` elements with classes whose numbers
  * represent a percentage width for that column. We leave one column free of a

@@ -3116,7 +3116,18 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
     return false;
   });
 
+  // Create linked input fields (For using email address as username)
+  $('.linked-input-master').on('keyup blur', function() {
+    var masterVal = $(this).val();
+    $('.linked-input-slave').val(masterVal);
+    $('.linked-input-slave').removeClass('hidden').text(masterVal);
+    if($(this).val() == '') {
+      $('.linked-input-slave').addClass('hidden');
+    }
+  });
+
   $(".block-label").each(function(){
+    var $target = $(this).attr('data-target');
 
     // Add focus
     $(".block-label input").focus(function() {
@@ -3127,15 +3138,8 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
     // Add selected class
     $('input:checked').parent().addClass('selected');
 
-  });
-
-  // Create linked input fields (For using email address as username)
-  $('.linked-input-master').on('keyup blur', function() {
-    var masterVal = $(this).val();
-    $('.linked-input-slave').val(masterVal);
-    $('.linked-input-slave').removeClass('hidden').text(masterVal);
-    if($(this).val() == '') {
-      $('.linked-input-slave').addClass('hidden');
+    if($(this).hasClass('selected')) {
+      $('#' + $target).show();
     }
   });
 
@@ -3180,42 +3184,6 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
     $('#' + $targetFor).focus();
   });
 
-// -- Password strength indicator
-
-  $("#Password").keyup(function() {
-    initializeStrengthMeter();
-  });
-
-  function initializeStrengthMeter() {
-    $("#pass_meter").pwStrengthManager({
-      password: $("#Password").val(),
-      minChars : "8",
-      advancedStrength: true
-    });
-  }
-
-  $('.pw-masktoggle').on("click", function() {
-    changePassType();
-    toggleShowHide();
-  });
-
-  function changePassType() {
-    var password = document.getElementById('Password');
-    if (password.type == 'password') {
-      password.type = 'text';
-    } else {
-      password.type = 'password';
-    }
-  }
-
-  function toggleShowHide() {
-    var showOrHide = $('.pw-masktoggle').text();
-    if (showOrHide == 'Show') {
-      $('.pw-masktoggle').text('Hide');
-    } else {
-      $('.pw-masktoggle').text('Show');
-    }
-  }
 
   //--------Max character length on textareas
 
@@ -3231,7 +3199,7 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
     var $this         = $(that),
         $maxLength    = $this.attr('data-val-length-max'),
         $lengthOfText = $this.val().length,
-        $charCountEl  = $this.next('.maxchar-count');
+        $charCountEl  = $this.closest('.form-group').find('.maxchar-count');
 
     if($maxLength) {
       $($charCountEl).text($maxLength - $lengthOfText);
@@ -3264,6 +3232,8 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
         $tbodyRows   = $tbodyExpand.prev('.tbody-3rows').find('tr:nth-of-type(3)').nextAll();
 
     $tbodyRows.toggle();
+
+    $this.closest('table').toggleClass('opened');
 
     if($this.html() == '<i class="fa fa-angle-down"></i>More') {
       $this.html('<i class="fa fa-angle-up"></i>Less');

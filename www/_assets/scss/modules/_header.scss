@@ -36,8 +36,10 @@
   text-decoration: none;
   text-rendering: optimizeLegibility;
   img {
+    display: inline-block;
     line-height: inherit;
     margin: -6px 6px 0 0;
+    max-width: 35px;
     vertical-align: middle;
     width: 35px; height: 31px;
   }

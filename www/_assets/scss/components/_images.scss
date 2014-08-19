@@ -83,4 +83,7 @@ iframe {
 
 .icon-black {
   color: $black;
+  &:hover {
+    color: $grey-1;
+  }
 }

@@ -12,7 +12,7 @@
   }
 }
 
-.panel-success {
+%message-panel {
   @extend %clearfix;
   background: $success-background;
   border-left: 3px solid $success-colour;
@@ -38,6 +38,33 @@
   .heading-small {
     color: $success-colour;
     margin-top: $gutter-half;
+  }
+}
+
+.panel-success {
+  @extend %message-panel;
+  background: $success-background;
+  border-color: $success-colour;
+  .heading-small {
+    color: $success-colour;
+  }
+}
+
+.panel-warning {
+  @extend %message-panel;
+  background: $warning-background;
+  border-color: $warning-colour;
+  .heading-small {
+    color: $warning-colour;
+  }
+}
+
+.panel-danger {
+  @extend %message-panel;
+  background: $error-background;
+  border-color: $error-colour;
+  .heading-small {
+    color: $error-colour;
   }
 }
 
