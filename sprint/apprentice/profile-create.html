@@ -11,6 +11,7 @@
     <title>Apprenticeships</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
     <!--[if gt IE 8]><!-->
     <link href="../_assets/css/main.css" media="all" rel="stylesheet" type="text/css">
     <!--<![endif]-->
@@ -65,7 +66,7 @@
           <span class="your-name" id="bannerUserName">Your Name</span>
           <div>
             <a href="/apprentice/dashboard.html">My applications</a>
-            <a href="/apprentice/dashboard.html">Settings</a>
+            <a href="/apprentice/settings.html">Settings</a>
             <a href="/apprentice/profile-signedout.html" id="btnSignOut"><i class="fa fa-sign-out"></i>Sign out</a>
           </div>
         </div>
@@ -113,6 +114,7 @@
           <legend class="heading-large">Contact details</legend>
           <div class="form-group form-group-compound">
             <label for="post-code" class="form-label">Postcode</label>
+            <span class="form-hint">For example, BN1 8NH</span>
             <input id="post-code" type="text" class="form-control form-control-large " autocapitalize="characters"
             autocorrect="off" value="">
           </div>
@@ -130,27 +132,27 @@
               <option class="address-select-option" value="40 Bolton Road">40 Bolton Road</option>
             </select>
           </div>
-          <div class="form-group">
-            <a href="#" class="address-manual-btn">I want to enter my address manually</a>
+          <div class="form-group form-group-compound">
+            <span class="form-hint">Or enter address manually</span>
           </div>
-          <div class="address-manual-input panel-indent toggle-content">
+          <div class="address-manual-input">
             <div class="form-group form-group-compound">
-              <label for="address1" class="form-label">First line of address</label>
+              <label for="address1" class="form-label">Address</label>
               <input id="address1" type="text" class="form-control" autocorrect="off" value="">
             </div>
             <div class="form-group form-group-compound">
-              <label for="address2" class="form-label">Second line (optional)</label>
+              <label for="address2" class="form-label visuallyhidden">Second line (optional)</label>
               <input id="address2" type="text" class="form-control" autocorrect="off">
             </div>
             <div class="form-group form-group-compound">
-              <label for="address3" class="form-label">Town or city</label>
+              <label for="address3" class="form-label visuallyhidden">Third line (optional)</label>
               <input id="address3" type="text" class="form-control" autocorrect="off" value="">
             </div>
             <div class="form-group form-group-compound">
-              <label for="address3b" class="form-label">County (optional)</label>
+              <label for="address3b" class="form-label visuallyhidden">Fourth line (optional)</label>
               <input id="address3b" type="text" class="form-control" autocorrect="off" value="">
             </div>
-            <div class="form-group form-group-compound">
+            <div class="form-group">
               <label for="address4" class="form-label">Post code</label>
               <input id="address4" type="text" class="form-control form-control-large" autocapitalize="characters"
               autocorrect="off" value="">

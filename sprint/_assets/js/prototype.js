@@ -73,28 +73,28 @@ $(function() {
 
   });
 
-  if($('#fullNamePre').length > 0) {
-    var fullNamePre   = $.jStorage.get('fullName'),
-        dobFullPre    = $.jStorage.get('dobFull'),
-        address1Pre   = $.jStorage.get('address1'),
-        address2Pre   = $.jStorage.get('address2'),
-        address3Pre   = $.jStorage.get('address3'),
-        address3bPre  = $.jStorage.get('address3b'),
-        address4Pre   = $.jStorage.get('address4'),
-        emailInputPre = $.jStorage.get('emailInput'),
-        phoneInputPre = $.jStorage.get('phoneInput');
+  // if($('#fullNamePre').length > 0) {
+  //   var fullNamePre   = $.jStorage.get('fullName'),
+  //       dobFullPre    = $.jStorage.get('dobFull'),
+  //       address1Pre   = $.jStorage.get('address1'),
+  //       address2Pre   = $.jStorage.get('address2'),
+  //       address3Pre   = $.jStorage.get('address3'),
+  //       address3bPre  = $.jStorage.get('address3b'),
+  //       address4Pre   = $.jStorage.get('address4'),
+  //       emailInputPre = $.jStorage.get('emailInput'),
+  //       phoneInputPre = $.jStorage.get('phoneInput');
 
-    $('#fullNamePre').text(fullNamePre);
-    $('#dobFullPre').text(dobFullPre);
-    $('#address1Pre').text(address1Pre);
-    $('#address2Pre').text(address2Pre);
-    $('#address3Pre').text(address3Pre);
-    $('#address3bPre').text(address3bPre);
-    $('#address4Pre').text(address4Pre);
-    $('#emailInputPre').text(emailInputPre);
-    $('#phoneInputPre').text(phoneInputPre);
+  //   $('#fullNamePre').text(fullNamePre);
+  //   $('#dobFullPre').text(dobFullPre);
+  //   $('#address1Pre').text(address1Pre);
+  //   $('#address2Pre').text(address2Pre);
+  //   $('#address3Pre').text(address3Pre);
+  //   $('#address3bPre').text(address3bPre);
+  //   $('#address4Pre').text(address4Pre);
+  //   $('#emailInputPre').text(emailInputPre);
+  //   $('#phoneInputPre').text(phoneInputPre);
 
-  }
+  // }
 
   if($('#accountCreated').length > 0) {
     var emailInputPre = $.jStorage.get('emailInput');
@@ -551,5 +551,6 @@ $(function() {
     $('.details-apply').hide();
     $('.details-signIn').show();
   }
+
 // --------------- Remove for live code -------------- //
 });
