@@ -1,28 +1,32 @@
 ---
-headerTitle: Find a Traineeship
+headerTitle: Traineeships
 ---
 
 <h1 class="heading-xlarge">Create an account</h1>
 
 <fieldset class="fieldset-with-border">
   <legend class="heading-large">Your details</legend>
-  <div class="form-group">
-    <label for="full-name" class="form-label">Full name</label>
-    <input type="text" id="full-name" class="form-control">
+  <div class="form-group form-group-compound">
+    <label for="first-name" class="form-label">First name</label>
+    <input id="first-name" type="text" class="form-control" autocapitalize="words" autocorrect="off" value="" >
   </div>
-  <div class="form-group date-input">
+  <div class="form-group">
+    <label for="last-name" class="form-label">Last name</label>
+    <input id="last-name" type="text" class="form-control" autocapitalize="words" autocorrect="off" value="" >
+  </div>
+  <div class="form-group inline-fixed">
     <p class="form-label">Date of birth</p>
     <div class="form-group form-group-compound">
-      <label class="form-hint" for="date-day2">Day</label>
-      <input type="tel" class="form-control" maxlength="2" pattern="[0-9*]" id="date-day2">
+      <label class="form-hint" for="dob-day">Day</label>
+      <input type="tel" class="form-control form-control-xsmall" maxlength="2" pattern="[0-9]*" id="dob-day">
     </div>
     <div class="form-group form-group-compound">
-      <label class="form-hint" for="date-month2">Month</label>
-      <input type="tel" class="form-control" maxlength="2" id="date-month2">
+      <label class="form-hint" for="dob-month">Month</label>
+      <input type="tel" class="form-control form-control-xsmall" maxlength="2" pattern="[0-9]*" id="dob-month">
     </div>
     <div class="form-group form-group-compound form-group-year">
-      <label class="form-hint" for="date-year2">Year</label>
-      <input type="tel" class="form-control" maxlength="4" id="date-year2">
+      <label class="form-hint" for="dob-year">Year</label>
+      <input type="tel" class="form-control form-control-small" maxlength="4" pattern="[0-9]*" id="dob-year">
     </div>
   </div>
   <div class="form-group toggle-content">
@@ -34,79 +38,101 @@ headerTitle: Find a Traineeship
 
 <fieldset class="fieldset-with-border">
   <legend class="heading-large">Contact details</legend>
-  <div class="form-group form-group-compound inline-button">
-    <label class="form-label" for="role-short-desc">Postcode</label>
-    <input id="role-short-desc" type="text" class="form-control form-control-1-4">
-    <a class="button-link" href="#">Find address</a>
+  <div class="form-group form-group-compound">
+    <label for="post-code" class="form-label">Postcode</label>
+    <span class="form-hint">For example, BN1 8NH</span>
+    <input id="post-code" type="text" class="form-control form-control-large " autocapitalize="characters" autocorrect="off" value="">
   </div>
-  <div class="form-group">
-    <label for="select-address" class="form-label">Select address</label>
-    <select id="select-address">
-        <option value="">Please select</option>
-        <option value="">45 High Street, Reddich</option>
-        <option value="">47 High Street, Reddich</option>
-        <option value="">49 High Street, Reddich</option>
-        <option value="">51 High Street, Reddich</option>
-        <option value="">53 High Street, Reddich</option>
-        <option value="">55 High Street, Reddich</option>
+  <div class="form-group form-group-compound">
+    <a href="#" class="button address-find-btn">Find address</a>
+  </div>
+  <div class="address-find-select form-group toggle-content">
+    <label for="address-select" class="form-label">Select your address</label>
+    <select name="" id="address-select">
+      <option value="void">-- 5 found --</option>
+      <option class="address-select-option" value="36 Bolton Road">36 Bolton Road</option>
+      <option class="address-select-option" value="37 Bolton Road">37 Bolton Road</option>
+      <option class="address-select-option" value="38 Bolton Road">38 Bolton Road</option>
+      <option class="address-select-option" value="39 Bolton Road">39 Bolton Road</option>
+      <option class="address-select-option" value="40 Bolton Road">40 Bolton Road</option>
     </select>
   </div>
-  <!-- <div class="form-group form-group-compound">
-    <label class="form-label" for="address1">Address line 1</label>
-    <input type="text" id="address1" class="form-control">
-  </div>
   <div class="form-group form-group-compound">
-    <label class="form-label" for="address2">Address line 2</label>
-    <input type="text" id="address2" class="form-control">
+    <span class="form-hint">Or enter address manually</span>
   </div>
-  <div class="form-group form-group">
-    <label class="form-label" for="address3">Town or City</label>
-    <input type="text" id="address3" class="form-control form-control-1-3">
-  </div> -->
+  <div class="address-manual-input">
+    <div class="form-group form-group-compound">
+      <label for="address1" class="form-label">Address</label>
+      <input id="address1" type="text" class="form-control" autocorrect="off" value="">
+    </div>
+    <div class="form-group form-group-compound">
+      <label for="address2" class="form-label visuallyhidden">Second line (optional)</label>
+      <input id="address2" type="text" class="form-control" autocorrect="off">
+    </div>
+    <div class="form-group form-group-compound">
+      <label for="address3" class="form-label visuallyhidden">Third line (optional)</label>
+      <input id="address3" type="text" class="form-control" autocorrect="off" value="">
+    </div>
+    <div class="form-group form-group-compound">
+      <label for="address3b" class="form-label visuallyhidden">Fourth line (optional)</label>
+      <input id="address3b" type="text" class="form-control" autocorrect="off" value="">
+    </div>
+    <div class="form-group">
+      <label for="address4" class="form-label">Post code</label>
+      <input id="address4" type="text" class="form-control form-control-large" autocapitalize="characters" autocorrect="off" value="">
+    </div>
+  </div>
 
-  <div class="form-group form-group-compound">
-    <label for="first-email" class="form-label">Enter email</label>
-    <span class="form-hint">This will also be your username</span>
-    <input type="email" class="form-control" id="first-email">
+  <div class="form-group">
+    <label for="email-input" class="form-label" id="emailInput">Enter email address</label>
+    <span class="form-hint text">You'll need this to sign in to your account. The address you choose will be seen by employers.</span>
+    <input type="email" class="form-control linked-input-master" id="email-input" spellcheck="false">
   </div>
   <div class="form-group">
-    <label for="second-email" class="form-label">Re-type email</label>
-    <input type="email" class="form-control linked-input-master" id="second-email">
-  </div>
-  <div class="form-group">
-    <label for="telephone-num1" class="form-label">Telephone</label>
-    <input type="tel" class="form-control" id="telephone-num1">
+    <label class="form-label" for="phone-input">Enter mobile phone number</label>
+    <span class="form-hint text">If you don't have a mobile, enter a landline number</span>
+    <input type="tel" class="form-control form-control-1-3" id="phone-input">
   </div>
 
-  <div class="form-group inline">
-    <p class="form-label">I prefer to be contacted by</p>
-    <label for="pref-email" class="block-label">
-      <input name="preference" type="radio" id="pref-email">Email
-    </label>
-    <label for="pref-tel" class="block-label">
-      <input name="preference" type="radio" id="pref-tel">Telephone
-    </label>
-    <label for="pref-post" class="block-label">
-      <input name="preference" type="radio" id="pref-post">Post
-    </label>
+</fieldset>
+<fieldset class="fieldset-with-border">
+  <legend class="heading-large">Sign in details</legend>
+  <div class="form-group">
+    <p class="form-label">Email address</p>
+    <span class="form-prepopped hidden linked-input-slave"></span>
+    <input type="hidden" class="form-prepopped hidden linked-input-slave" name="username">
+    <a class="inl-block inpage-focus" href="#emailInput">Edit your email</a>
+  </div>
+  <div class="form-group">
+    <label for="Password" class="form-label">Create password</label>
+    <span class="form-hint text">Must contain letters, numbers, symbols and be at least 8 characters.</span>
+    <div class="form-group form-group-compound password-wrapper">
+      <input type="password" class="form-control" id="Password">
+      <span class="pw-masktoggle button-link hide-nojs">Show</span>
+    </div>
+    <div class="password-second show-nojs">
+      <label for="confirm-password" class="form-label">Confirm password</label>
+      <input type="password" class="form-control">
+    </div>
+    <p class="form-hint strength-indicator hide-nojs">Password strength: <span id="pass_meter" class=""></span></p>
   </div>
 </fieldset>
 <fieldset>
-  <legend class="heading-large">Sign in details</legend>
-  <div class="form-group">
-    <p>Your username will be your email address</p>
-  </div>
-  <div class="form-group">
-    <label for="password-input" class="form-label">Create password</label>
-    <span class="form-hint">This must be at least 8 characters long</span>
-    <div class="password-wrapper">
-      <input type="password" class="form-control" id="password-input">
-      <span class="pw-masktoggle button-link">Show</span>
+  <details class="text">
+    <summary role="button">Read our terms &amp; conditions</summary>
+    <div class="detail-content max-height-15 scrolling-panel copy-16">
+      {{> terms }}
     </div>
-    <p class="form-hint strength-indicator">Password strength: <span id="pass_meter" class=""></span></p>
+  </details>
+  <div class="form-group">
+    <label for="accept-terms" class="block-label">
+      <input type="checkbox" id="accept-terms">I accept the terms &amp; conditions
+    </label>
   </div>
 </fieldset>
+
 <div class="form-group">
-  <a class="button" href="profile-complete.html">Create account</a>
-  <p><a class="button-link" href="index.html">Back</a></p>
+  <a id="createAccountBtn" class="button" href="profile-success.html">Create account</a>
 </div>
+
+<script src="{{assets}}/js/vendor/zxcvbn-async.js"></script>

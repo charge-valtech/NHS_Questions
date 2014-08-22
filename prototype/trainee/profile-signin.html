@@ -37,6 +37,11 @@
     <script src="../_assets/js/vendor/modernizr-custom.js"></script>
   </head>
   <body>
+    <!-- <div id="global-cookie-message" class="cookie-banner">
+  <div class="content-container">
+      <span class="copy-16">GOV.UK uses cookies to make the site simpler. <a href="#">Find out more about cookies</a></span>
+  </div>
+</div> -->
     <div class="skiplink-container">
       <div>
         <a href="#main" class="skiplink">Skip to main content</a>
@@ -50,7 +55,7 @@
           </a>
         </div>
         <div class="global-header__nav">
-          <h1 class="global-header__title beta">Advertising a Traineeship</h1>
+          <h1 class="global-header__title beta">Traineeships</h1>
         </div>
       </div>
     </header>
@@ -72,22 +77,31 @@
         </div>
       </div>
       <main role="main" id="main">
-        <h1 class="heading-xlarge">Trainee account</h1>
-        <fieldset>
-          <legend class="heading-large">Sign in</legend>
-          <div class="form-group form-group-compound">
-            <label class="form-label" for="email-add">Email address</label>
-            <input type="email" class="form-control" id="email-add" />
+        <div class="grid-wrapper">
+          <div class="grid grid-1-2">
+            <fieldset>
+              <legend class="heading-large">Sign in</legend>
+              <p>Sign in or <a href="profile-create.html">create an account</a>.</p>
+              <div class="form-group form-group-compound">
+                <label class="form-label" for="email-add">Email address</label>
+                <input type="email" class="form-control form-control-3-4" id="email-add" />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="password">Password</label>
+                <input type="password" class="form-control form-control-3-4" id="password" />
+                <a class="form-hint" href="forgottenpassword.html">Forgotten password?</a>
+              </div>
+              <div class="form-group">
+                <a class="button" id="btnSignIn" href="search-details.html">Sign in</a>
+              </div>
+            </fieldset>
           </div>
-          <div class="form-group">
-            <label class="form-label" for="password">Password</label>
-            <input type="password" class="form-control" id="password" />
-            <a class="form-hint" href="#">Forgotten password?</a>
+          <div class="grid grid-1-2">
+            <h2 class="heading-large">Create an account</h2>
+            <p class="text">If you create an account you can save and track your applications and
+              manage your account settings.</p>
+            <a href="profile-create.html">Create an account</a>
           </div>
-        </fieldset>
-        <div class="form-group">
-          <a class="button" href="search-index.html">Sign in</a>
-          <!-- <p><a class="button-link" href="start-page.html">Back</a></p> -->
         </div>
       </main>
     </div>

@@ -68,6 +68,15 @@
   }
 }
 
+.panel-info {
+  @extend %message-panel;
+  background: $info-background;
+  border-color: $info-colour;
+  .heading-small {
+    color: $info-colour;
+  }
+}
+
 .scrolling-panel {
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;

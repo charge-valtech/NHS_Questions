@@ -552,5 +552,42 @@ $(function() {
     $('.details-signIn').show();
   }
 
+  $("#Password").keyup(function () {
+        initializeStrengthMeter();
+    });
+
+    function initializeStrengthMeter() {
+        $("#pass_meter").pwStrengthManager({
+            password: $("#Password").val(),
+            minChars: "8",
+            advancedStrength: true
+        });
+    }
+
+    $('.pw-masktoggle').on("click", function () {
+        changePassType();
+        toggleShowHide();
+
+        return false;
+    });
+
+    function changePassType() {
+        var password = document.getElementById('Password');
+        if (password.type == 'password') {
+            password.type = 'text';
+        } else {
+            password.type = 'password';
+        }
+    }
+
+    function toggleShowHide() {
+        var showOrHide = $('.pw-masktoggle').text();
+        if (showOrHide == 'Show') {
+            $('.pw-masktoggle').text('Hide');
+        } else {
+            $('.pw-masktoggle').text('Show');
+        }
+    }
+
 // --------------- Remove for live code -------------- //
 });

@@ -118,8 +118,7 @@ module.exports = function(grunt) {
       },
       beta: {
         files: [
-          {cwd: 'prototype/_assets/', src: ['**/*'], dest: '_beta-sln/Beta/src/SFA.Apprenticeships.Web.Candidate/Content/_assets/'},
-          {cwd: 'prototype/_assets/', src: ['**/*'], dest: '_beta-sln/Beta/src/SFA.Apprenticeships.Web.Employer/Content/_assets/'}
+          {cwd: 'prototype/_assets/', src: ['**/*'], dest: '_beta-sln/Beta/src/SFA.Apprenticeships.Web.Candidate/Content/_assets/'}
         ],
         options: {
           ignore: [

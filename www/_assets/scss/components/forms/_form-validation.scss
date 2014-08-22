@@ -75,6 +75,9 @@
 }
 
 .form-group.input-validation-error {
+  > .form-control {
+    background: $error-background;
+  }
   .form-group.input-validation-error {
     border-left: 0;
     margin-left: 0;

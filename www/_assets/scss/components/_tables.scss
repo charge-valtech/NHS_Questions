@@ -61,6 +61,9 @@ table {
 
 .tbody-expandrows {
   display: none;
+  .fake-link {
+    padding: 8px 0;
+  }
 }
 
 .no-js {

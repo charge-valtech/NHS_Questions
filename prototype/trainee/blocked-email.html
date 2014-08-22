@@ -37,6 +37,11 @@
     <script src="../_assets/js/vendor/modernizr-custom.js"></script>
   </head>
   <body>
+    <!-- <div id="global-cookie-message" class="cookie-banner">
+  <div class="content-container">
+      <span class="copy-16">GOV.UK uses cookies to make the site simpler. <a href="#">Find out more about cookies</a></span>
+  </div>
+</div> -->
     <div class="skiplink-container">
       <div>
         <a href="#main" class="skiplink">Skip to main content</a>
@@ -50,7 +55,7 @@
           </a>
         </div>
         <div class="global-header__nav">
-          <h1 class="global-header__title beta">Find a Traineeship</h1>
+          <h1 class="global-header__title beta">Traineeships</h1>
         </div>
       </div>
     </header>
@@ -72,18 +77,16 @@
         </div>
       </div>
       <main role="main" id="main">
-        <h1 class="heading-xlarge">Account created</h1>
-        <fieldset>
-          <legend class="heading-large">Confirmation email sent</legend>
-          <div class="form-group text">
-            <p>Your confirmation email has been sent to <strong>name@email.com</strong>
-            </p>
+        <fieldset class="inner-block-padr">
+          <legend class="heading-large">Account locked</legend>
+          <p class="text">To unlock your account, enter your email address. You'll receive a 6-digit
+            code, which you can then use to unlock your account.</p>
+          <div class="form-group">
+            <label class="form-label" for="email-add">Email address</label>
+            <input type="email" class="form-control" id="email-add" />
           </div>
           <div class="form-group">
-            <a href="index.html" class="button">Return to dashboard</a>
-            <p>
-              <a href="profile-create.html" class="button-link">Back</a>
-            </p>
+            <a class="button" href="blocked-entercode.html">Send code</a>
           </div>
         </fieldset>
       </main>
