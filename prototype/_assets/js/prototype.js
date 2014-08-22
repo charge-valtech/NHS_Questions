@@ -589,5 +589,10 @@ $(function() {
         }
     }
 
+    if($('.global-header__title').text() == 'Traineeships') {
+      $('#applicationsLink').attr('href', '/trainee/dashboard.html');
+      $('title').text('Traineeships');
+    }
+
 // --------------- Remove for live code -------------- //
 });
