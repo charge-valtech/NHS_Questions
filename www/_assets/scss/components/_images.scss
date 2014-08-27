@@ -87,3 +87,12 @@ iframe {
     color: $grey-1;
   }
 }
+
+.performance {
+  background: url(../img/performance-icon.png) no-repeat 0 2px;
+  background-size: 25px 15px;
+  padding-left: 35px;
+  @include device-pixel-ratio(2) {
+    background-image: url(../img/performance-icon-2x.png);
+  }
+}
