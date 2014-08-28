@@ -28,7 +28,7 @@ legend {
 }
 
 select {
-  border: 1px solid $border-colour;;
+  border: 1px solid $border-colour;
   font-family: inherit;
   font-size: inherit;
   height: 31px;
@@ -43,6 +43,18 @@ select {
   }
   table & {
     height: 29px;
+  }
+}
+
+.android-browser {
+  select,
+  select[size="0"],
+  select[size="1"] {
+    -webkit-appearance: none; /* clean up default UI*/
+    background-image: url(data:image/png;base64,R0lGODlhDQAEAIAAAAAAAP8A/yH5BAEHAAEALAAAAAANAAQAAAILhA+hG5jMDpxvhgIAOw==); /* a simple arrow img */
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-right: 20px;
   }
 }
 

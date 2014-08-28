@@ -3098,6 +3098,16 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
 ;$(function() {
   FastClick.attach(document.body);
 
+  function isAndroid() {
+    var nua = navigator.userAgent,
+        isAndroid = (nua.indexOf('Mozilla/5.0') > -1 && nua.indexOf('Android ') > -1 && nua.indexOf('AppleWebKit') > -1 && nua.indexOf('Chrome') === -1);
+    if (isAndroid) {
+      $('html').addClass('android-browser');
+    }
+  }
+
+  isAndroid();
+
   $('.menu-trigger').on('click', function() {
     $(this).next('.menu').toggleClass('menu-open');
     $(this).toggleClass('triggered');
