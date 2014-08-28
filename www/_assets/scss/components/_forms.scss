@@ -74,6 +74,10 @@ input::-webkit-inner-spin-button {
   font-size: 16px;
 }
 
+[disabled] {
+  opacity: 0.5;
+}
+
 // Form group is used to wrap label and input pairs
 .form-group {
   clear: both;

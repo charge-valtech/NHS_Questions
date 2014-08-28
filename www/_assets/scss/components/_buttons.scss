@@ -16,10 +16,6 @@
   margin-bottom: 0;
 }
 
-.button:focus {
-  outline: 3px solid $yellow;
-}
-
 // Link style buttons
 .button-link {
   @include core-19;

@@ -39,7 +39,7 @@
   line-height: 1em;
   padding-bottom: 1px;
   text-decoration: none;
-  text-rendering: optimizeLegibility;
+  // text-rendering: optimizeLegibility; - This breaks logo on android stock internet browser
   img {
     display: inline-block;
     line-height: inherit;

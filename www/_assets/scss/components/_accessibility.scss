@@ -81,6 +81,10 @@ a:focus, button:focus {
   outline: 3px solid $yellow;
 }
 
+.button:focus {
+  outline: 3px solid $yellow;
+}
+
 button:active {
   outline: none;
 }
@@ -89,4 +93,8 @@ input:focus,
 textarea:focus,
 select:focus {
   outline: 3px solid $yellow;
+}
+
+.disabled:focus {
+  outline: none;
 }
