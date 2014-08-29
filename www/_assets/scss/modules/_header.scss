@@ -72,6 +72,15 @@
   @include media(tablet) {
     font-size: 24px; /* 20px */
   }
+  a {
+    color: $white;
+    display: inline-block;
+    padding: 2px 0;
+    text-decoration: none;
+    &:hover {
+      border-bottom: 1px solid $white;
+    }
+  }
 }
 
 .global-header__link {

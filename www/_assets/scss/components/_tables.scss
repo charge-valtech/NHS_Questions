@@ -28,6 +28,12 @@ table {
       vertical-align: middle;
     }
   }
+  a, .fake-link {
+    @media only (max-width: 400px) {
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+  }
 }
 
 .table-compound {
