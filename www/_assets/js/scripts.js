@@ -3208,7 +3208,7 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
   function characterCount(that) {
     var $this         = $(that),
         $maxLength    = $this.attr('data-val-length-max'),
-        $lengthOfText = $this.val().length,
+        $lengthOfText = $this.val().replace(/\n/g, '').length,
         $charCountEl  = $this.closest('.form-group').find('.maxchar-count');
 
     if($maxLength) {

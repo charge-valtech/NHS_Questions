@@ -37,11 +37,11 @@
   .hide-nojs {
     display: none !important;
   }
+  .show-nojs {
+    display: block;
+  }
   span.show-nojs {
     display: inline-block;
-  }
-  div.show-nojs {
-    display: block;
   }
 }
 

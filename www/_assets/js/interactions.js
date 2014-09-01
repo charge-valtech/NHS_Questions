@@ -111,7 +111,7 @@ $(function() {
   function characterCount(that) {
     var $this         = $(that),
         $maxLength    = $this.attr('data-val-length-max'),
-        $lengthOfText = $this.val().length,
+        $lengthOfText = $this.val().replace(/\n/g, '').length,
         $charCountEl  = $this.closest('.form-group').find('.maxchar-count');
 
     if($maxLength) {
