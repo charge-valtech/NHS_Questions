@@ -73,12 +73,13 @@
     font-size: 24px; /* 20px */
   }
   a {
+    border-bottom: 1px solid transparent;
     color: $white;
     display: inline-block;
     padding: 2px 0;
     text-decoration: none;
     &:hover {
-      border-bottom: 1px solid $white;
+      border-color: $white;
     }
   }
 }

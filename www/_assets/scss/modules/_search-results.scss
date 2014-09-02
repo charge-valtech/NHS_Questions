@@ -39,36 +39,36 @@
   opacity: 0;
 }
 
-.save-trigger + label {
-  color: $govuk-blue;
-  cursor: pointer;
-  display: inline-block;
-  text-decoration: underline;
-  &:before {
-    background: url(../img/icon-star-hollow.png) no-repeat;
-    background-size: 19px 19px;
-    content: '';
-    display: inline-block;
-    margin-right: 5px;
-    margin-bottom: -2px;
-    width: 19px; height: 19px;
-    @include device-pixel-ratio(2) {
-      background-image: url(../img/icon-star-hollow-2x.png);
-    }
-  }
-}
+// .save-trigger + label {
+//   color: $govuk-blue;
+//   cursor: pointer;
+//   display: inline-block;
+//   text-decoration: underline;
+//   &:before {
+//     background: url(../img/icon-star-hollow.png) no-repeat;
+//     background-size: 19px 19px;
+//     content: '';
+//     display: inline-block;
+//     margin-right: 5px;
+//     margin-bottom: -2px;
+//     width: 19px; height: 19px;
+//     @include device-pixel-ratio(2) {
+//       background-image: url(../img/icon-star-hollow-2x.png);
+//     }
+//   }
+// }
 
-.save-trigger:checked + label {
-  &:after {
-    content: 'd';
-  }
-  &:before {
-    background-image: url(../img/icon-star-filled.png);
-    @include device-pixel-ratio(2) {
-      background-image: url(../img/icon-star-filled-2x.png);
-    }
-  }
-}
+// .save-trigger:checked + label {
+//   &:after {
+//     content: 'd';
+//   }
+//   &:before {
+//     background-image: url(../img/icon-star-filled.png);
+//     @include device-pixel-ratio(2) {
+//       background-image: url(../img/icon-star-filled-2x.png);
+//     }
+//   }
+// }
 
 /* Application form stuff */
 

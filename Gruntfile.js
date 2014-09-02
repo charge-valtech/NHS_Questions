@@ -277,7 +277,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('copytoolkit', ['devUpdate', 'copyto:fe_toolkit']);
 
-  grunt.registerTask('imageoptim', ['imageoptim']);
+  grunt.registerTask('images', ['imageoptim']);
 
   grunt.registerTask('modern', ['modernizr']);
 
