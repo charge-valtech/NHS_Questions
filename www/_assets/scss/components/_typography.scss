@@ -278,6 +278,10 @@ a, .fake-link {
   &:hover {
     color: $link-hover-colour;
   }
+  &.link-withbold {
+    border-bottom: 1px solid $link-colour;
+    text-decoration: none;
+  }
 }
 
 .fake-link {

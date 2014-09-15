@@ -3245,7 +3245,7 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
 
     $this.closest('table').toggleClass('opened');
 
-    if($this.html() == '<i class="fa fa-angle-down"></i>More') {
+    if($this.text().indexOf('More') > -1) {
       $this.html('<i class="fa fa-angle-up"></i>Less');
     } else {
       $this.html('<i class="fa fa-angle-down"></i>More');
