@@ -290,10 +290,27 @@ a, .fake-link {
 }
 
 a[rel="external"] {
-  @include external-link-default;
-  @include external-link-19;
+    position: relative;
 }
 
+a[rel="external"]:before {
+  color: $purple;
+  content: "\f08e";
+  font-family: FontAwesome;
+  font-size: 0.7em;
+  position: absolute;
+  bottom: 0.275em;
+  right: 0.175em;
+  text-decoration: none;
+}
+
+a[rel="external"]:after {
+  content: '\00a0\00a0\00a0\00a0\00a0';
+}
+
+a[rel="external"]:hover:before {
+  color: $link-hover-colour;
+}
 
 b,
 strong {

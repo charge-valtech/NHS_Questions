@@ -56,19 +56,6 @@ iframe {
   }
 }
 
-.icon-remove {
-  background: url(../img/icon-remove.png) no-repeat;
-  background-size: 16px 16px;
-  cursor: pointer;
-  display: inline-block;
-  margin-bottom: 2px;
-  vertical-align: bottom;
-  width: 16px; height: 16px;
-  @include device-pixel-ratio(2) {
-    background-image: url(../img/icon-remove-2x.png);
-  }
-}
-
 .icon-with-text {
   .the-icon {
     display: inline-block;
@@ -83,9 +70,15 @@ iframe {
 
 .icon-black {
   color: $black;
+  cursor: pointer;
   &:hover {
     color: $grey-1;
   }
+}
+
+.remove-qualification-link {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 .performance {

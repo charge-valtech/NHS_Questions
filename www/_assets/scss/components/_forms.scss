@@ -20,8 +20,8 @@ fieldset { /*Overriding normalize presets*/
   padding: 0;
 }
 
-legend {
-  a {
+.heading-large {
+  .icon-with-text {
     @include copy-19;
     float: right;
   }
