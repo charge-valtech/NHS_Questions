@@ -77,6 +77,25 @@
   }
 }
 
+.fixed-info {
+  background: $info-background;
+  border-left: 3px solid $info-colour;
+  position: fixed;
+  bottom: 0; right: 0;
+  padding: 10px $gutter;
+  text-align: center;
+  width: 100%;
+  p {
+    @include core-16;
+    margin: 0; padding: 0;
+  }
+  @include media(tablet) {
+    padding-top: $gutter-half;
+    padding-bottom: $gutter-half;
+    width: auto;
+  }
+}
+
 .scrolling-panel {
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
