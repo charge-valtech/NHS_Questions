@@ -152,13 +152,15 @@
               are grades your teacher expects you to get.</p>
             <div class="form-group form-group-compound inline clearfix">
               <label data-target="qualifications-panel" for="qualifications-yes" class="block-label">
-                <input name="quals" type="radio" id="qualifications-yes">Yes
+                <input aria-controls="qualifications-panel" aria-expanded="false" name="quals"
+                type="radio" id="qualifications-yes">Yes
               </label>
               <label for="qualifications-no" class="block-label">
                 <input name="quals" type="radio" id="qualifications-no">No
               </label>
             </div>
-            <div id="qualifications-panel" class="has-qualifications toggle-content">
+            <div id="qualifications-panel" class="has-qualifications toggle-content" aria-hidden="true"
+            role="region">
               <div class="enter-qualification clearfix">
                 <div class="inline-fixed">
                   <div class="form-group">
@@ -708,6 +710,7 @@
             <p class="form-hint text">Please provide examples of when you've demonstrated your strengths.</p>
             <textarea id="question1" class="form-control" data-val-length-max="4000"></textarea>
             <span class="form-hint maxchar-count">4000</span>
+            <span class="visuallyhidden" aria-live="polite"></span>
           </div>
           <div class="form-group">
             <label for="question2" class="form-label">What skills would you like to improve during this apprenticeship?</label>
@@ -739,13 +742,14 @@
             <p class="form-hint">For example, do you need a signer, information in braille.</p>
             <div class="form-group form-group-compound inline">
               <label data-target="support-panel" for="support-yes" class="block-label">
-                <input name="support" type="radio" id="support-yes">Yes
+                <input checked name="support" type="radio" id="support-yes" aria-controls="support-panel"
+                aria-expanded="false">Yes
               </label>
               <label for="support-no" class="block-label">
-                <input checked name="support" type="radio" id="support-no">No
+                <input name="support" type="radio" id="support-no">No
               </label>
             </div>
-            <div id="support-panel" class="panel-indent toggle-content">
+            <div id="support-panel" class="panel-indent toggle-content" aria-hidden="true">
               <span class="form-hint">Give examples below</span>
               <textarea id="question4" class="form-control" data-val-length-max="4000"></textarea>
               <span class="form-hint maxchar-count">4000</span>
@@ -773,9 +777,6 @@
           <p id="applicationSaved">
             Saved at 10:20 to <a href="dashboard.html">my applications</a>
           </p>
-        </div>
-        <div class="fixed-info">
-          <p>Saving draft</p>
         </div>
       </main>
     </div>

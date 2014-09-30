@@ -3,7 +3,7 @@
 
 // By default, block labels stack vertically
 .block-label {
-  background: $grey-3;
+  background: lighten($grey-3, 5%);
   border: 1px solid $grey-3;
   cursor: pointer; // Encourage clicking on block labels
   display: block;

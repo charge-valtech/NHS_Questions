@@ -65,7 +65,8 @@ $(function() {
     $('input:checked').parent().addClass('selected');
 
     if($target == undefined) {
-      $this.closest('.form-group').next('.toggle-content').hide();
+      $this.closest('.form-group').next('.toggle-content').hide().attr('aria-hidden', true);
+      $this.closest('.form-group').find('[aria-expanded]').attr('aria-expanded', false);
     } else {
       $('#' + $target).show();
     }
@@ -112,7 +113,8 @@ $(function() {
     var $this         = $(that),
         $maxLength    = $this.attr('data-val-length-max'),
         $lengthOfText = $this.val().replace(/\n/g, '').length,
-        $charCountEl  = $this.closest('.form-group').find('.maxchar-count');
+        $charCountEl  = $this.closest('.form-group').find('.maxchar-count'),
+        $thisAria     = $this.closest('.form-group').find('[aria-live]');
 
     if($maxLength) {
       $($charCountEl).text($maxLength - $lengthOfText);
@@ -120,8 +122,10 @@ $(function() {
 
     if($lengthOfText > $maxLength) {
       $charCountEl.addClass('has-error');
+      $thisAria.text("Character limit has been reached, you must type fewer than " + $maxLength + " characters");
     } else {
       $charCountEl.removeClass('has-error');
+      $thisAria.text("");
     }
   }
 
@@ -135,7 +139,7 @@ $(function() {
 
     if($rowLength > 3) {
       $expandRows.show();
-      $after3Rows.hide();
+      $after3Rows.hide().attr('aria-hidden', true);
     }
   });
 
@@ -150,10 +154,41 @@ $(function() {
 
     if($this.text().indexOf('More') > -1) {
       $this.html('<i class="fa fa-angle-up"></i>Less');
+      $this.attr('aria-expanded', false);
+      $tbodyRows.attr('aria-hidden', false);
     } else {
       $this.html('<i class="fa fa-angle-down"></i>More');
+      $this.attr('aria-expanded', true);
+      $tbodyRows.attr('aria-hidden', true);
     }
 
+  });
+
+  //----------Details > Summary ARIA
+
+  $('[aria-expanded]').on('click', function() {
+    var $this = $(this),
+        $controls = $(this).attr('aria-controls');
+
+    if(!$this.parent().hasClass('selected')) {
+      if($this.is('[aria-expanded="false"]')) {
+        $('#' + $controls).attr('aria-hidden', false);
+        $this.attr('aria-expanded', true);
+      } else {
+        $('#' + $controls).attr('aria-hidden', true);
+        $this.attr('aria-expanded', false);
+      }
+    }
+
+  });
+
+  $('[aria-hidden]').each(function() {
+    var $controlID = $(this).attr('id');
+
+    if($(this).is(':visible')) {
+      $(this).attr('aria-hidden', false);
+      $('[aria-controls="' + $controlID + '"]').attr('aria-expanded', true);
+    }
   });
 
 });
