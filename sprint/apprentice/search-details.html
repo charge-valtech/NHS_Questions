@@ -37,6 +37,11 @@
     <script src="../_assets/js/vendor/modernizr-custom.js"></script>
   </head>
   <body>
+    <!-- <div id="global-cookie-message" class="cookie-banner">
+  <div class="content-container">
+      <span class="copy-16">GOV.UK uses cookies to make the site simpler. <a href="#">Find out more about cookies</a></span>
+  </div>
+</div> -->
     <div class="skiplink-container">
       <div>
         <a href="#main" class="skiplink">Skip to main content</a>
@@ -45,19 +50,19 @@
     <header role="banner" class="global-header">
       <div class="global-header__wrapper">
         <div class="global-header__logo">
-          <a href="/" title="Go to the GOV.UK homepage" class="govuk-logo">
+          <a href="http://gov.uk" title="Go to the GOV.UK homepage" class="govuk-logo">
             <img src="../_assets/img/gov.uk_logotype_crown.png" alt="Crown">GOV.UK
           </a>
         </div>
         <div class="global-header__nav">
-          <h1 class="global-header__title beta">Apprenticeships</h1>
+          <h1 class="global-header__title beta"><a href="/">Apprenticeships</a></h1>
         </div>
       </div>
     </header>
     <div class="content-container">
       <div class="phase-notice gov-border">
         <div class="prototype-warning">
-          <strong class="beta__label">Beta</strong>  <span>This is a prototype – your <a href="/feedback.html">feedback</a> will help us to improve it.</span>
+          <strong class="beta__label">Beta</strong>  <span>This is a prototype – your <a href="#" rel="external">feedback</a> will help to improve it.</span>
         </div>
         <div class="account-info sign-in" id="bannerSignedOut">
           <a href="/apprentice/profile-signin.html"><i class="fa fa-sign-in"></i>Sign in</a>
@@ -65,7 +70,7 @@
         <div class="account-info sign-out" id="bannerSignedIn" style="display: none;">
           <span class="your-name" id="bannerUserName">Your Name</span>
           <div>
-            <a href="/apprentice/dashboard.html">My applications</a>
+            <a id="applicationsLink" href="/apprentice/dashboard.html">My applications</a>
             <a href="/apprentice/settings.html">Settings</a>
             <a href="/apprentice/profile-signedout.html" id="btnSignOut"><i class="fa fa-sign-out"></i>Sign out</a>
           </div>
@@ -91,6 +96,7 @@
           <div class="grid grid-1-3">
             <a href="profile-signin.html" class="details-signIn button button-with-hint">Sign in to apply</a>
             <a style="display: none;" href="apply-index.html" class="details-apply button button-with-hint">Apply for apprenticeship</a>
+            <!-- This apprenticeship requires you to apply through the employer's website, <a href="#" rel="external">apply now</a> -->
             <p class="copy-16">Closing date: 30 Jun 14</p>
           </div>
         </section>
@@ -271,6 +277,19 @@
           </div>
           <p class="subtext">Content provided by Valkyrie Support Services - 01 May 14</p>
         </section>
+        <section class="section-border">
+          <h2 class="heading-large collpanel-trigger">Other information</h2>
+          <div class="text collpanel toggle-content">
+            <p>This vacancy may close early due to high demand of applicants.</p>
+            <p>Important Other Information</p>
+            <p>The National Minimum Wage (NMW) for Apprentices is £2.68 per hour from
+              October 2013. This applies to 16-18 year old Apprentices and those
+              aged over 19 in the first year of their Apprenticeship. For all other
+              Apprentices the National Minimum wage appropriate to their age applies.
+              The Minimum Wage for Apprentices applies to both time spent on the
+              job plus time spent training.</p>
+          </div>
+        </section>
         <section id="before-apply">
           <h2 class="heading-large">Before you apply</h2>
           <div class="text">
@@ -302,7 +321,7 @@
           </ul>
           <a class="footer__copyright" href="http://www.nationalarchives.gov.uk/information-management/our-services/crown-copyright.htm"
           target="_blank">
-            <img src="../_assets/img/logos/govuk-crest@2x.png" width="125" height="102" alt="Crown copyright logo">
+            <img src="../_assets/img/govuk-crest@2x.png" width="125" height="102" alt="Crown copyright logo">
             <p>&copy; Crown copyright</p>
           </a>
         </div>

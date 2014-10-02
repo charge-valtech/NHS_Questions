@@ -197,7 +197,7 @@ $(function() {
                             '<input class="form-control qual-input-edit" type="text" value="' + $qualYear + '" readonly>' +
                           '</td>' +
                           '<td class="td-qualEdit ta-center"><span class="fake-link cell-span">Edit</span></td>' +
-                          '<td class="qualRemove ta-center"><i class="cell-span"><i class="ir icon-remove">Remove</i></i></td>' +
+                          '<td class="qualRemove ta-center"><i class="cell-span"><i class="copy-16 fa fa-times-circle icon-black"></i><i class="visuallyhidden">Remove</i></i></td>' +
                         '</tr>',
         $emptyTable  = '<div class="qualification-table"' + 'id="' + $qualID + '">' +
                         '<div class="hgroup-small">' +
@@ -306,7 +306,7 @@ $(function() {
         $historyItemHTML = '<div class="grid-wrapper work-history-item">' +
                               '<div class="work-controls">' +
                                 '<div class="work-edit ta-center"><span class="cell-span fake-link">Edit</span></div>' +
-                                '<div class="work-delete ta-center"><span class="cell-span"><i class="ir icon-remove">Remove</i></span></div>' +
+                                '<div class="work-delete ta-center"><span class="cell-span"><i class="copy-16 fa fa-times-circle icon-black"></i><i class="visuallyhidden">Remove</i></span></div>' +
                               '</div>' +
                               '<div class="grid grid-1-2">' +
                                 '<table class="table-no-btm-border table-compound">' +
@@ -551,6 +551,48 @@ $(function() {
     $('.details-apply').hide();
     $('.details-signIn').show();
   }
+
+  $("#Password").keyup(function () {
+        initializeStrengthMeter();
+    });
+
+    function initializeStrengthMeter() {
+        $("#pass_meter").pwStrengthManager({
+            password: $("#Password").val(),
+            minChars: "8",
+            advancedStrength: true
+        });
+    }
+
+    $('.pw-masktoggle').on("click", function () {
+        changePassType();
+        toggleShowHide();
+
+        return false;
+    });
+
+    function changePassType() {
+        var password = document.getElementById('Password');
+        if (password.type == 'password') {
+            password.type = 'text';
+        } else {
+            password.type = 'password';
+        }
+    }
+
+    function toggleShowHide() {
+        var showOrHide = $('.pw-masktoggle').text();
+        if (showOrHide == 'Show') {
+            $('.pw-masktoggle').text('Hide');
+        } else {
+            $('.pw-masktoggle').text('Show');
+        }
+    }
+
+    if($('.global-header__title').text() == 'Traineeships') {
+      $('#applicationsLink').attr('href', '/trainee/dashboard.html');
+      $('title').text('Traineeships');
+    }
 
 // --------------- Remove for live code -------------- //
 });

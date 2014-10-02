@@ -55,7 +55,7 @@
           </a>
         </div>
         <div class="global-header__nav">
-          <h1 class="global-header__title beta"><a href="/">Apprenticeships</a></h1>
+          <h1 class="global-header__title beta"><a href="/">Traineeships</a></h1>
         </div>
       </div>
     </header>
@@ -77,37 +77,99 @@
         </div>
       </div>
       <main role="main" id="main">
-        <fieldset class="inner-block-padr">
-          <legend class="heading-large">Password reset</legend>
-          <p class="text">Enter your 6-character code to reset your password</p>
-          <div class="form-group">
-            <p class="form-label">Email address</p>
-            <span class="form-prepopped">henrycharge@gmail.com</span>
+        <h1 class="heading-xlarge">Settings</h1>
+        <!-- <div class="grid grid-1-3">
+    <div class="inner-block-padr">
+      <nav class="title-toggler">
+        <h2 class="heading-medium mob-collpanel-trigger hide-tablet chosen-selection">Personal details</h2>
+        <div class="mob-collpanel toggle-content--mob">
+          <a class="block-link active" href="#">Personal details</a>
+          <a class="block-link" href="#">Account</a>
+        </div>
+      </nav>
+    </div>
+  </div> -->
+        <h2 class="heading-medium">Personal details</h2>
+        <div class="form-group form-group-compound">
+          <label for="firstName" class="form-label">First name</label>
+          <input type="text" id="firstName" class="form-control" value="John">
+        </div>
+        <div class="form-group">
+          <label for="lastName" class="form-label">Last name</label>
+          <input type="text" id="lastName" class="form-control" value="Smith">
+        </div>
+        <div class="form-group inline-fixed">
+          <p class="form-label">Date of birth</p>
+          <div class="form-group form-group-compound">
+            <label class="form-hint" for="dob-day">Day</label>
+            <input type="tel" class="form-control form-control-xsmall" maxlength="2" pattern="[0-9]*"
+            id="dob-day" value="12">
+          </div>
+          <div class="form-group form-group-compound">
+            <label class="form-hint" for="dob-month">Month</label>
+            <input type="tel" class="form-control form-control-xsmall" maxlength="2" pattern="[0-9]*"
+            id="dob-month" value="11">
+          </div>
+          <div class="form-group form-group-compound form-group-year">
+            <label class="form-hint" for="dob-year">Year</label>
+            <input type="tel" class="form-control form-control-small" maxlength="4" pattern="[0-9]*"
+            id="dob-year" value="1990">
+          </div>
+        </div>
+        <div class="form-group form-group-compound">
+          <span class="form-label">Address</span>
+          <label for="post-code" class="form-label form-hint">Postcode</label>
+          <input id="post-code" type="text" class="form-control form-control-large " autocapitalize="characters"
+          autocorrect="off" value="">
+        </div>
+        <div class="form-group form-group-compound">
+          <a href="#" class="button address-find-btn">Find address</a>
+        </div>
+        <div class="form-group form-group-compound">
+          <span class="form-hint">Or enter manually</span>
+        </div>
+        <div class="address-find-select form-group toggle-content">
+          <label for="address-select" class="form-label">Select your address</label>
+          <select name="" id="address-select">
+            <option value="void">-- 5 found --</option>
+            <option class="address-select-option" value="36 Bolton Road">36 Bolton Road</option>
+            <option class="address-select-option" value="37 Bolton Road">37 Bolton Road</option>
+            <option class="address-select-option" value="38 Bolton Road">38 Bolton Road</option>
+            <option class="address-select-option" value="39 Bolton Road">39 Bolton Road</option>
+            <option class="address-select-option" value="40 Bolton Road">40 Bolton Road</option>
+          </select>
+        </div>
+        <!--  <div class="form-group">
+  <a href="#" class="address-manual-btn">I want to enter my address manually</a>
+</div> -->
+        <div class="address-manual-input">
+          <div class="form-group form-group-compound">
+            <label for="address1" class="form-label">Address</label>
+            <input id="address1" type="text" class="form-control" autocorrect="off" value="36 Bolton Road">
+          </div>
+          <div class="form-group form-group-compound">
+            <label for="address2" class="form-label visuallyhidden">Second line (optional)</label>
+            <input id="address2" type="text" class="form-control" autocorrect="off">
+          </div>
+          <div class="form-group form-group-compound">
+            <label for="address3" class="form-label visuallyhidden">Town or city</label>
+            <input id="address3" type="text" class="form-control" autocorrect="off" value="Birmingham">
+          </div>
+          <div class="form-group form-group-compound">
+            <label for="address3b" class="form-label visuallyhidden">County (optional)</label>
+            <input id="address3b" type="text" class="form-control" autocorrect="off" value="West Midlands">
           </div>
           <div class="form-group">
-            <label class="form-label" for="enter-code">Enter code</label>
-            <input type="text" class="form-control" id="enter-code" />
-            <p><a href="#">Resend code</a>
-            </p>
+            <label for="address4" class="form-label">Post code</label>
+            <input id="address4" type="text" class="form-control form-control-large" autocapitalize="characters"
+            autocorrect="off" value="B21 3ML">
           </div>
-          <div class="form-group">
-            <label for="Password" class="form-label">New password</label>
-            <span class="form-hint text">Must contain letters, numbers, symbols and be at least 8 characters.</span>
-            <div class="form-group form-group-compound password-wrapper">
-              <input type="password" class="form-control" id="Password">
-              <span class="pw-masktoggle button-link hide-nojs">Show</span>
-            </div>
-            <div class="password-second show-nojs">
-              <label for="confirm-password" class="form-label">Confirm password</label>
-              <input type="password" class="form-control">
-            </div>
-            <p class="form-hint strength-indicator hide-nojs">Password strength: <span id="pass_meter" class=""></span>
-            </p>
-          </div>
-          <div class="form-group">
-            <a class="button" id="btnSignIn" href="dashboard.html">Reset password</a>
-          </div>
-        </fieldset>
+        </div>
+        <div class="form-group">
+          <label for="phoneNumber" class="form-label">Phone</label>
+          <input type="tel" id="phoneNumber" class="form-control" value="07942 733876" />
+        </div>
+        <a href="#" class="button">Update details</a>
       </main>
     </div>
     <footer class="gov-border" role="contentinfo">

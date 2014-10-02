@@ -114,7 +114,7 @@ $(function() {
         $maxLength    = $this.attr('data-val-length-max'),
         $lengthOfText = $this.val().replace(/\n/g, '').length,
         $charCountEl  = $this.closest('.form-group').find('.maxchar-count'),
-        $thisAria     = $this.closest('.form-group').find('[aria-live]');
+        $thisAria     = $this.closest('.form-group').find('.aria-limit');
 
     if($maxLength) {
       $($charCountEl).text($maxLength - $lengthOfText);

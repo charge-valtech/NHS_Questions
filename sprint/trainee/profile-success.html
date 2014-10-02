@@ -13,18 +13,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <!--[if gt IE 8]><!-->
-    <link href="_assets/css/main.css" media="all" rel="stylesheet" type="text/css">
+    <link href="../_assets/css/main.css" media="all" rel="stylesheet" type="text/css">
     <!--<![endif]-->
-    <!--[if lte IE 8]><link href="_assets/css/main-ie8.css" media="all" rel="stylesheet" type="text/css"><![endif]-->
+    <!--[if lte IE 8]><link href="../_assets/css/main-ie8.css" media="all" rel="stylesheet" type="text/css"><![endif]-->
     <!--[if lte IE 8]>
-    <link href="_assets/css/fonts-ie8.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="../_assets/css/fonts-ie8.css" media="all" rel="stylesheet" type="text/css" />
     <![endif]-->
     <!--[if gte IE 9]><!-->
-    <link href="_assets/css/fonts.css" media="all" rel="stylesheet" type="text/css"
+    <link href="../_assets/css/fonts.css" media="all" rel="stylesheet" type="text/css"
     />
     <!--<![endif]-->
-    <link rel="shortcut icon" href="_assets/img/favicon.ico" type="image/x-icon">
-    <link href="_assets/css/font-awesome/css/font-awesome.min.css" rel="stylesheet"
+    <link rel="shortcut icon" href="../_assets/img/favicon.ico" type="image/x-icon">
+    <link href="../_assets/css/font-awesome/css/font-awesome.min.css" rel="stylesheet"
     type="text/css">
     <script>
     var html = document.documentElement;
@@ -34,7 +34,7 @@
       document.documentElement.className += ' no-details';
     }
     </script>
-    <script src="_assets/js/vendor/modernizr-custom.js"></script>
+    <script src="../_assets/js/vendor/modernizr-custom.js"></script>
   </head>
   <body>
     <!-- <div id="global-cookie-message" class="cookie-banner">
@@ -51,11 +51,11 @@
       <div class="global-header__wrapper">
         <div class="global-header__logo">
           <a href="http://gov.uk" title="Go to the GOV.UK homepage" class="govuk-logo">
-            <img src="_assets/img/gov.uk_logotype_crown.png" alt="Crown">GOV.UK
+            <img src="../_assets/img/gov.uk_logotype_crown.png" alt="Crown">GOV.UK
           </a>
         </div>
         <div class="global-header__nav">
-          <h1 class="global-header__title beta"><a href="/">Apprenticeships</a></h1>
+          <h1 class="global-header__title beta"><a href="/">Traineeships</a></h1>
         </div>
       </div>
     </header>
@@ -77,40 +77,29 @@
         </div>
       </div>
       <main role="main" id="main">
-        <h1 class="heading-xlarge">Your feedback</h1>
+        <div class="panel-success">
+          <p id="SuccessMessageText" class="text"><i class="fa fa-check"></i>You've successfully created your account</p>
+        </div>
+        <h1 id="accountCreated" class="heading-xlarge">Activate your account</h1>
+        <p class="text">
+          An email has been sent to <b class="email-address"></b>. It’ll contain
+          a 6-character code that you’ll need to activate your account.
+        </p>
         <div class="form-group">
-          <h2 class="heading-medium">How did you feel about the service you received?</h2>
-          <ul class="list-text">
-            <li>
-              <label>
-                <input type="radio" name="test">Very satisfied</label>
-            </li>
-            <li>
-              <label>
-                <input type="radio" name="test">Satisfied</label>
-            </li>
-            <li>
-              <label>
-                <input type="radio" name="test">No opinion</label>
-            </li>
-            <li>
-              <label>
-                <input type="radio" name="test">Dissatisfied</label>
-            </li>
-            <li>
-              <label>
-                <input type="radio" name="test">Very dissatisfied</label>
-            </li>
-          </ul>
+          <label for="activation-code" class="form-label">Activation code</label>
+          <input type="text" id="activation-code" class="form-control form-control-2-3">
+          <p><a href="">Resend code</a>
+          </p>
         </div>
         <div class="form-group">
-          <h2 class="heading-medium">How could we improve this service?</h2>
-          <label for="feedback" class="form-label">Enter some suggestions</label>
-          <textarea id="feedback" class="form-control" data-val-length-max="1200"></textarea>
-          <span class="form-hint maxchar-count">1200</span>
+          <a href="search-details.html" class="button" id="btnSignIn">Activate account</a>
         </div>
-        <div class="form-group">
-          <a href="#" class="button">Send feedback</a>
+        <div class="panel-indent text">
+          <p>
+            You must activate your account within 30 days of receiving your activation code.
+            After 30 days your account will be deleted and you'll need to register
+            again.
+          </p>
         </div>
       </main>
     </div>
@@ -130,15 +119,15 @@
           </ul>
           <a class="footer__copyright" href="http://www.nationalarchives.gov.uk/information-management/our-services/crown-copyright.htm"
           target="_blank">
-            <img src="_assets/img/govuk-crest@2x.png" width="125" height="102" alt="Crown copyright logo">
+            <img src="../_assets/img/govuk-crest@2x.png" width="125" height="102" alt="Crown copyright logo">
             <p>&copy; Crown copyright</p>
           </a>
         </div>
       </div>
     </footer>
-    <script src="_assets/js/scripts.min.js"></script>
+    <script src="../_assets/js/scripts.min.js"></script>
     <!-- Prototype specific scripts -->
-    <script src="_assets/js/vendor/jquery.cookie.js"></script>
-    <script src="_assets/js/prototype.js"></script>
+    <script src="../_assets/js/vendor/jquery.cookie.js"></script>
+    <script src="../_assets/js/prototype.js"></script>
   </body>
 </html>
