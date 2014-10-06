@@ -122,6 +122,11 @@
   padding: 2px 5px 0;
   text-transform: uppercase;
   vertical-align: top;
+  .heading-large & {
+    margin-top: -11px;
+    margin-left: 10px;
+    vertical-align: middle;
+  }
   @include media(tablet) {
     line-height: 1.25;
   }

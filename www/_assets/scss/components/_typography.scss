@@ -44,7 +44,7 @@ h4, h5, h6 {
 .hgroup {
   margin-bottom: $gutter;
   padding: 0;
-  h1 {
+  h1, .heading-xlarge {
     margin-bottom: 5px;
   }
   .subtitle {
@@ -54,6 +54,22 @@ h4, h5, h6 {
   }
   @include media(tablet) {
     margin-bottom: $gutter * 2;
+  }
+}
+
+.hgroup-large {
+  margin-bottom: 20px;
+  padding: 0;
+  h2, .heading-large {
+    margin-bottom: 5px;
+  }
+  .subtitle {
+    @include core-24;
+    color: $secondary-text-colour;
+    margin: 0;
+  }
+  @include media(tablet) {
+    margin-bottom: 45px;
   }
 }
 
