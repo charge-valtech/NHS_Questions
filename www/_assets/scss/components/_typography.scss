@@ -305,26 +305,18 @@ a, .fake-link {
   text-decoration: underline;
 }
 
-a[rel="external"] {
-  position: relative;
-}
 
-a[rel="external"]:before {
+a[rel="external"]:after {
   color: $purple;
   content: "\f08e";
+  display: inline-block;
   font-family: FontAwesome;
   font-size: 0.7em;
-  position: absolute;
-  bottom: 0.275em;
-  right: 0.175em;
+  margin-left: 0.25em;
   text-decoration: none;
 }
 
-a[rel="external"]:after {
-  content: '\00a0\00a0\00a0\00a0\00a0';
-}
-
-a[rel="external"]:hover:before {
+a[rel="external"]:hover:after {
   color: $link-hover-colour;
 }
 
