@@ -273,7 +273,7 @@ headerTitle: SFA Pattern library
 
 <fieldset class="fieldset-with-border">
   <legend id="navigation" class="heading-large">Navigation</legend>
-  <h3 class="heading-medium">Breadcrumbs</h3>
+<!--   <h3 class="heading-medium">Breadcrumbs</h3>
   <nav role="navigation" class="breadcrumbs">
     <ul>
       <li class="breadcrumbs__item">
@@ -286,7 +286,7 @@ headerTitle: SFA Pattern library
         <a href="#">Somewhere else</a>
       </li>
     </ul>
-  </nav>
+  </nav> -->
   <br>
 
   <h3 class="heading-medium">Progress indicator</h3>
@@ -313,35 +313,24 @@ headerTitle: SFA Pattern library
 
   <div class="text">
     <h3 class="heading-medium">Bottom of page navigation</h3>
-    <nav role="navigation" class="page-navigation">
-      <a class="page-navigation__btn previous" href="#" rel="previous">
-        <i class="arrow-button"></i>
-        Previous page
+    <div class="page-navigation">
+      <a href="#" class="page-navigation__btn previous">
+        <i class="arrow-button fa fa-angle-left"></i>
+        <span class="description">Previous <span class="hide-mob">page</span></span>
+        <span class="counter">1 of 6</span>
       </a>
-      <a class="page-navigation__btn next" href="#" rel="next">
-        <i class="arrow-button"></i>
-        Next page
+      <a href="#" class="page-navigation__btn next">
+        <i class="arrow-button fa fa-angle-right"></i>
+        <span class="description">Next <span class="hide-mob">page</span></span>
+        <span class="counter">2 of 6</span>
       </a>
-    </nav>
+    </div>
   </div>
 
   <details>
     <summary role="button">HTML examples</summary>
     <xmp class="panel-indent prettyprint">
-      <h3 class="heading-medium">Breadcrumbs</h3>
-      <nav role="navigation" class="breadcrumbs">
-        <ul>
-          <li class="breadcrumbs__item">
-            <a href="#">Home</a>
-          </li>
-          <li class="breadcrumbs__item">
-            <a href="#">Somewhere</a>
-          </li>
-          <li class="breadcrumbs__item">
-            <a href="#">Somewhere else</a>
-          </li>
-        </ul>
-      </nav>
+
       <br>
 
       <h3 class="heading-medium">Progress indicator</h3>
@@ -368,16 +357,18 @@ headerTitle: SFA Pattern library
 
       <div class="text">
         <h3 class="heading-medium">Bottom of page navigation</h3>
-        <nav role="navigation" class="page-navigation">
-          <a class="page-navigation__btn previous" href="#" rel="previous">
-            <i class="arrow-button"></i>
-            Previous page
+        <div class="page-navigation">
+          <a href="#" class="page-navigation__btn previous">
+            <i class="arrow-button fa fa-angle-left"></i>
+            <span class="description">Previous <span class="hide-mob">page</span></span>
+            <span class="counter">1 of 6</span>
           </a>
-          <a class="page-navigation__btn next" href="#" rel="next">
-            <i class="arrow-button"></i>
-            Next page
+          <a href="#" class="page-navigation__btn next">
+            <i class="arrow-button fa fa-angle-right"></i>
+            <span class="description">Next <span class="hide-mob">page</span></span>
+            <span class="counter">2 of 6</span>
           </a>
-        </nav>
+        </div>
       </div>
 
     </xmp>
