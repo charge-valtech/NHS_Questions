@@ -315,7 +315,7 @@ a[rel="external"]:after {
   .lt-ie9 & {
     background-image: url('../img/icon-external.png');
   }
-  .lt-ie9 .phase-notice & {
+  .lt-ie9 .phase-notice &, .lt-ie9 .copy-16 &  {
     display: none;
   }
 }
