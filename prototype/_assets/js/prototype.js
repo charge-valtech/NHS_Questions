@@ -599,7 +599,8 @@ $(function() {
     }
 
     if($('.global-header__title').text() == 'Traineeships') {
-      $('#applicationsLink').attr('href', '/trainee/dashboard.html');
+      $('#applicationsLink').remove();
+      $('#settingsLink').attr('href', '/trainee/settings.html');
       $('title').text('Traineeships');
       $('.global-header__title a').attr('href', '/trainee/search-index.html');
     }
