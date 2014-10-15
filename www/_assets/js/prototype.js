@@ -605,7 +605,18 @@ $(function() {
       $('.global-header__title a').attr('href', '/trainee/search-index.html');
     }
 
-    // $('')
+    $('#viewTrainingProvider').on('click', function() {
+      $('#trainingProviderPanel').show();
+      $('#employerPanel').hide();
 
+      return false;
+    });
+
+    $('#viewEmployer').on('click', function() {
+      $('#employerPanel').show();
+      $('#trainingProviderPanel').hide();
+
+      return false;
+    });
 // --------------- Remove for live code -------------- //
 });
