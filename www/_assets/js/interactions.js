@@ -29,6 +29,15 @@ $(function() {
     return false;
   });
 
+  $('.button-toggler').on('click', function() {
+    var $this = $(this),
+        $target = $this.attr('data-target');
+
+    $('#' + $target).toggleClass('toggle-content');
+
+    return false;
+  });
+
   // Create linked input fields (For using email address as username)
   $('.linked-input-master').on('keyup blur', function() {
     var masterVal = $(this).val();

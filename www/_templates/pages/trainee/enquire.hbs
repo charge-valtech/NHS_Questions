@@ -2,7 +2,37 @@
 headerTitle: Traineeships
 ---
 
-<h1 class="heading-xlarge">Create an account</h1>
+<!-- <h1 class="heading-xlarge">Is a traineeship right for me?</h1>
+<div class="text">
+  <p>In order to undertake a traineeship opportunity, you must be:</p>
+  <ul>
+    <li>Between 16 and 24 years old</li>
+    <li>Unemployed (or work less than 16 hours per week)</li>
+  </ul>
+</div>
+
+<div class="form-group">
+  <label data-target="traineeship-enquire" for="accept-eligible" class="block-label">
+    <input type="checkbox" id="accept-eligible">I am eligible for a traineeship
+  </label>
+</div> -->
+
+<!-- <div class="form-group">
+  <a href="/apprentice/search-index.html">Find an apprenticeship</a>
+</div> -->
+
+<h1 class="heading-xlarge">Enquire for opportunity</h1>
+
+<section class="section-border">
+  <div class="hgroup-medium">
+    <h2 class="heading-medium">Traineeship in Business Administration</h2>
+    <h3 class="subtitle">Prolink Associates Ltd</h3>
+  </div>
+
+  <div class="text">
+    <p>Valuable work experience within the field of Business Admin. You will working with Admin team to support them doing basic admin duties. This Traineeship Opportunity is Work Experience as part of an entry to work course.</p>
+  </div>
+</section>
 
 <fieldset class="fieldset-with-border">
   <legend class="heading-large">Your details</legend>
@@ -18,15 +48,15 @@ headerTitle: Traineeships
     <p class="form-label">Date of birth</p>
     <div class="form-group form-group-compound">
       <label class="form-hint" for="dob-day">Day</label>
-      <input type="tel" class="form-control form-control-xsmall" maxlength="2" pattern="[0-9]*" id="dob-day">
+      <input type="tel" class="form-control form-control-xsmall" maxlength="2" id="dob-day">
     </div>
     <div class="form-group form-group-compound">
       <label class="form-hint" for="dob-month">Month</label>
-      <input type="tel" class="form-control form-control-xsmall" maxlength="2" pattern="[0-9]*" id="dob-month">
+      <input type="tel" class="form-control form-control-xsmall" maxlength="2" id="dob-month">
     </div>
     <div class="form-group form-group-compound form-group-year">
       <label class="form-hint" for="dob-year">Year</label>
-      <input type="tel" class="form-control form-control-small" maxlength="4" pattern="[0-9]*" id="dob-year">
+      <input type="tel" class="form-control form-control-small" maxlength="4" id="dob-year">
     </div>
   </div>
   <div class="form-group toggle-content">
@@ -36,7 +66,7 @@ headerTitle: Traineeships
   </div>
 </fieldset>
 
-<fieldset class="fieldset-with-border">
+<fieldset class="">
   <legend class="heading-large">Contact details</legend>
   <div class="form-group form-group-compound">
     <label for="post-code" class="form-label">Postcode</label>
@@ -85,7 +115,7 @@ headerTitle: Traineeships
 
   <div class="form-group">
     <label for="email-input" class="form-label" id="emailInput">Enter email address</label>
-    <span class="form-hint text">You'll need this to sign in to your account. The address you choose will be seen by employers.</span>
+    <span class="form-hint text">You'll need this to receive feedback from the provider</span>
     <input type="email" class="form-control linked-input-master" id="email-input" spellcheck="false">
   </div>
   <div class="form-group">
@@ -94,45 +124,17 @@ headerTitle: Traineeships
     <input type="tel" class="form-control form-control-1-3" id="phone-input">
   </div>
 
-</fieldset>
-<fieldset class="fieldset-with-border">
-  <legend class="heading-large">Sign in details</legend>
   <div class="form-group">
-    <p class="form-label">Email address</p>
-    <span class="form-prepopped hidden linked-input-slave"></span>
-    <input type="hidden" class="form-prepopped hidden linked-input-slave" name="username">
-    <a class="inl-block inpage-focus" href="#emailInput">Edit your email</a>
+    <h2 class="heading-large">About you</h2>
+
+    <label for="aboutYou" class="form-label">Tell us why you think this traineeship would be suitable for you</label>
+    <textarea id="aboutYou" class="form-control" rows="4"></textarea>
   </div>
+
   <div class="form-group">
-    <label for="Password" class="form-label">Create password</label>
-    <span class="form-hint text">Must contain letters, numbers, symbols and be at least 8 characters.</span>
-    <div class="form-group form-group-compound password-wrapper">
-      <input type="password" class="form-control" id="Password">
-      <span class="pw-masktoggle button-link hide-nojs">Show</span>
-    </div>
-    <div class="password-second show-nojs">
-      <label for="confirm-password" class="form-label">Confirm password</label>
-      <input type="password" class="form-control">
-    </div>
-    <p class="form-hint strength-indicator hide-nojs">Password strength: <span id="pass_meter" class=""></span></p>
+    <a href="create-account.html" class="button" id="enquiryButton">Submit enquiry</a>
   </div>
-</fieldset>
-<fieldset>
-  <details class="text">
-    <summary role="button">Read our terms &amp; conditions</summary>
-    <div class="detail-content max-height-15 scrolling-panel copy-16">
-      {{> terms }}
-    </div>
-  </details>
-  <div class="form-group">
-    <label for="accept-terms" class="block-label">
-      <input type="checkbox" id="accept-terms">I accept the terms &amp; conditions
-    </label>
-  </div>
+
 </fieldset>
 
-<div class="form-group">
-  <a id="createAccountBtn" class="button" href="profile-success.html">Create account</a>
-</div>
 
-<script src="{{assets}}/js/vendor/zxcvbn-async.js"></script>

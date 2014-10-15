@@ -77,20 +77,43 @@
         </div>
       </div>
       <main role="main" id="main">
-        <fieldset class="inner-block-padr">
-          <legend class="heading-large">Forgotten password</legend>
-          <div class="text">
-            <p>To reset your password we need to send you a 6-character code to your
-              email address.</p>
+        <div class="success-banner">
+          <h1 class="heading-large"><i class="fa fa-check"></i>Enquiry submitted</h1>
+          <div>
+            Your enquiry has been sent for:
+            <h2 class="heading-medium">Traineeship in Business Administration</h2>
           </div>
-          <div class="form-group">
-            <label class="form-label" for="email-add">Enter email</label>
-            <input type="email" class="form-control" id="email-add" />
+        </div>
+        <h2 class="heading-large">Create an account?</h2>
+        <div class="panel-indent">
+          <p class="text">Creating an account will allow your details to be saved for subsequent
+            enquiries</p>
+        </div>
+        <div class="form-group">
+          <p class="form-label">Email address</p>
+          <span class="form-prepopped" id="enquiryEmail"></span>
+          <!-- <a class="inl-block inpage-focus" href="#emailInput">Edit your email</a> -->
+        </div>
+        <div class="form-group">
+          <label for="Password" class="form-label">Create password</label>
+          <span class="form-hint">Requires upper and lowercase letters, a number and at least 8 characters</span>
+          <div class="form-group password-wrapper">
+            <input type="password" class="form-control" id="Password">
+            <p class="form-hint strength-indicator hide-nojs">Password strength: <span id="pass_meter" class=""></span>
+            </p>
           </div>
-          <div class="form-group">
-            <a class="button" href="forgottenpassword-entercode.html">Send code</a>
+          <div class="password-second form-group">
+            <label for="confirm-password" class="form-label">Confirm password</label>
+            <input type="password" class="form-control">
           </div>
-        </fieldset>
+          <div class="form-group form-group-compound">
+            <a href="#" class="button">Create account</a>
+          </div>
+          <p>
+            Or, <a href="search-index.html"> find a traineeship</a>
+          </p>
+        </div>
+        <script src="../_assets/js/vendor/zxcvbn-async.js"></script>
       </main>
     </div>
     <footer class="gov-border" role="contentinfo">

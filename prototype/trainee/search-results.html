@@ -55,14 +55,14 @@
           </a>
         </div>
         <div class="global-header__nav">
-          <h1 class="global-header__title beta"><a href="/">Traineeships</a></h1>
+          <h1 class="global-header__title beta"><a href="/apprentice/index.html">Traineeships</a></h1>
         </div>
       </div>
     </header>
     <div class="content-container">
       <div class="phase-notice gov-border">
         <div class="prototype-warning">
-          <strong class="beta__label">Beta</strong>  <span>This is a prototype – your <a href="#" rel="external">feedback</a> will help to improve it.</span>
+          <strong class="beta__label">Beta</strong>  <span>This is a prototype – your <a href="https://www.surveymonkey.com/s/MFNR7NZ" target="_blank" rel="external">feedback</a> will help to improve it.</span>
         </div>
         <div class="account-info sign-in" id="bannerSignedOut">
           <a href="/apprentice/profile-signin.html"><i class="fa fa-sign-in"></i>Sign in</a>
@@ -80,8 +80,8 @@
         <div class="search-results-wrapper grid-wrapper">
           <div class="hgroup">
             <h1 class="heading-xlarge">Search results</h1>
-            <p>There are <b class="bold-medium">18</b> traineeships that closely match
-              your search.</p>
+            <p class="small-btm-margin">We've found <b class="bold-medium">18</b> traineeships in your selected
+              area.</p>
           </div>
           <section class="grid grid-1-3">
             <fieldset class="search-filter">
@@ -211,10 +211,19 @@
                 <span class="counter">1 of 6</span>
               </a>
               <a href="#" class="page-navigation__btn next">
-                <i class="arrow-button"></i>
+                <i class="arrow-button fa fa-angle-right"></i>
                 <span class="description">Next <span class="hide-mob">page</span></span>
                 <span class="counter">2 of 6</span>
               </a>
+            </div>
+            <div class="form-group">
+              <label for="results-per-page" class="heading-small inline">Display results</label>
+              <select id="results-per-page" name="resultsPerPage">
+                <option selected="selected" value="5">5 per page</option>
+                <option value="10">10 per page</option>
+                <option value="25">25 per page</option>
+                <option value="50">50 per page</option>
+              </select>
             </div>
           </section>
         </div>

@@ -73,6 +73,15 @@ $(function() {
 
   });
 
+  $('#enquiryButton').on('click', function(){
+    var $emailInput = $('#email-input').val();
+
+    $.jStorage.set('emailInput', $emailInput);
+
+  });
+
+  $('#enquiryEmail').text($.jStorage.get('emailInput'));
+
   // if($('#fullNamePre').length > 0) {
   //   var fullNamePre   = $.jStorage.get('fullName'),
   //       dobFullPre    = $.jStorage.get('dobFull'),
@@ -592,7 +601,10 @@ $(function() {
     if($('.global-header__title').text() == 'Traineeships') {
       $('#applicationsLink').attr('href', '/trainee/dashboard.html');
       $('title').text('Traineeships');
+      $('.global-header__title a').attr('href', '/trainee/search-index.html');
     }
+
+    // $('')
 
 // --------------- Remove for live code -------------- //
 });
