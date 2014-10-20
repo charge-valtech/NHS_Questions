@@ -618,5 +618,27 @@ $(function() {
 
       return false;
     });
+
+  // $('#forgotPasswordBtn').on('click', function(){
+  //   var $this = $(this),
+  //       $thisVal = $this.val();
+
+  //   $.jStorage.set('forgottenEmail', $thisVal);
+  // });
+
+  // if($('#forgottenEmail').length) {
+  //   var $forgottenEmail = $.jStorage.get('forgottenEmail');
+
+  //   $('#forgottenEmail').val($forgottenEmail);
+  // }
+
+  $('.saveADraft').on('click', function() {
+    $('#savedInfo').show();
+  });
+
+  $('#removeDraft').on('click', function() {
+    $(this).closest('section').remove();
+    $('#deleteSuccess').show();
+  });
 // --------------- Remove for live code -------------- //
 });
