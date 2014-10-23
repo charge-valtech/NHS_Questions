@@ -599,7 +599,7 @@ $(function() {
     }
 
     if($('.global-header__title').text() == 'Traineeships') {
-      $('#applicationsLink').remove();
+      // $('#applicationsLink').remove();
       $('#settingsLink').attr('href', '/trainee/settings.html');
       $('title').text('Traineeships');
       $('.global-header__title a').attr('href', '/trainee/search-index.html');
@@ -638,7 +638,7 @@ $(function() {
 
   $('#removeDraft').on('click', function() {
     $(this).closest('section').remove();
-    $('#deleteSuccess').show();
+    // $('#deleteSuccess').show();
   });
 // --------------- Remove for live code -------------- //
 });
