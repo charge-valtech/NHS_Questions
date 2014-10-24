@@ -77,143 +77,633 @@
         </div>
       </div>
       <main role="main" id="main">
-        <!-- <h1 class="heading-xlarge">Is a traineeship right for me?</h1>
-<div class="text">
-  <p>In order to undertake a traineeship opportunity, you must be:</p>
-  <ul>
-    <li>Between 16 and 24 years old</li>
-    <li>Unemployed (or work less than 16 hours per week)</li>
-  </ul>
-</div>
-<div class="form-group">
-  <label data-target="traineeship-enquire" for="accept-eligible" class="block-label">
-    <input type="checkbox" id="accept-eligible">I am eligible for a traineeship
-  </label>
-</div> -->
-        <!-- <div class="form-group">
-  <a href="/apprentice/search-index.html">Find an apprenticeship</a>
-</div> -->
-        <h1 class="heading-xlarge">Enquire for opportunity</h1>
+        <h1 class="heading-xlarge">Enquiry form</h1>
         <section class="section-border">
-          <div class="hgroup-medium">
-            <h2 class="heading-medium">Traineeship in Business Administration</h2>
-            <h3 class="subtitle">Prolink Associates Ltd</h3>
-          </div>
           <div class="text">
-            <p>Valuable work experience within the field of Business Admin. You will
-              working with Admin team to support them doing basic admin duties.
-              This Traineeship Opportunity is Work Experience as part of an entry
-              to work course.</p>
+            <div class="hgroup-medium">
+              <h3 class="heading-medium">Traineeship in Business Administration</h3>
+              <span class="subtitle">Prolink Associates Ltd</span>
+            </div>
+            <p>
+              Valuable work experience within the field of Business Admin. You will working with
+              Admin team to support them doing basic admin duties. This Traineeship
+              Opportunity is Work Experience as part of an entry to work course.
+            </p>
+            <p><a href="search-details.html">View opportunity</a>
+            </p>
           </div>
         </section>
-        <fieldset class="fieldset-with-border">
+        <fieldset class="fieldset-with-border grid-wrapper">
           <legend class="heading-large">Your details</legend>
-          <div class="form-group form-group-compound">
-            <label for="first-name" class="form-label">First name</label>
-            <input id="first-name" type="text" class="form-control" autocapitalize="words"
-            autocorrect="off" value="">
-          </div>
-          <div class="form-group">
-            <label for="last-name" class="form-label">Last name</label>
-            <input id="last-name" type="text" class="form-control" autocapitalize="words" autocorrect="off"
-            value="">
-          </div>
-          <div class="form-group inline-fixed">
-            <p class="form-label">Date of birth</p>
-            <div class="form-group form-group-compound">
-              <label class="form-hint" for="dob-day">Day</label>
-              <input type="tel" class="form-control form-control-xsmall" maxlength="2" id="dob-day">
-            </div>
-            <div class="form-group form-group-compound">
-              <label class="form-hint" for="dob-month">Month</label>
-              <input type="tel" class="form-control form-control-xsmall" maxlength="2" id="dob-month">
-            </div>
-            <div class="form-group form-group-compound form-group-year">
-              <label class="form-hint" for="dob-year">Year</label>
-              <input type="tel" class="form-control form-control-small" maxlength="4" id="dob-year">
-            </div>
-          </div>
-          <div class="form-group toggle-content">
-            <label for="understand-age" class="block-label">
-              <input type="checkbox" id="understand-age">I understand that I may have to fund all or part of the training
-              myself
-            </label>
-          </div>
-        </fieldset>
-        <fieldset class="">
-          <legend class="heading-large">Contact details</legend>
-          <div class="form-group form-group-compound">
-            <label for="post-code" class="form-label">Postcode</label>
-            <span class="form-hint">For example, BN1 8NH</span>
-            <input id="post-code" type="text" class="form-control form-control-large " autocapitalize="characters"
-            autocorrect="off" value="">
-          </div>
-          <div class="form-group form-group-compound">
-            <a href="#" class="button address-find-btn">Find address</a>
-          </div>
-          <div class="address-find-select form-group toggle-content">
-            <label for="address-select" class="form-label">Select your address</label>
-            <select name="" id="address-select">
-              <option value="void">-- 5 found --</option>
-              <option class="address-select-option" value="36 Bolton Road">36 Bolton Road</option>
-              <option class="address-select-option" value="37 Bolton Road">37 Bolton Road</option>
-              <option class="address-select-option" value="38 Bolton Road">38 Bolton Road</option>
-              <option class="address-select-option" value="39 Bolton Road">39 Bolton Road</option>
-              <option class="address-select-option" value="40 Bolton Road">40 Bolton Road</option>
-            </select>
-          </div>
-          <div class="form-group form-group-compound">
-            <span class="form-hint">Or enter address manually</span>
-          </div>
-          <div class="address-manual-input">
-            <div class="form-group form-group-compound">
-              <label for="address1" class="form-label">Address</label>
-              <input id="address1" type="text" class="form-control" autocorrect="off" value="">
-            </div>
-            <div class="form-group form-group-compound">
-              <label for="address2" class="form-label visuallyhidden">Second line (optional)</label>
-              <input id="address2" type="text" class="form-control" autocorrect="off">
-            </div>
-            <div class="form-group form-group-compound">
-              <label for="address3" class="form-label visuallyhidden">Third line (optional)</label>
-              <input id="address3" type="text" class="form-control" autocorrect="off" value="">
-            </div>
-            <div class="form-group form-group-compound">
-              <label for="address3b" class="form-label visuallyhidden">Fourth line (optional)</label>
-              <input id="address3b" type="text" class="form-control" autocorrect="off" value="">
+          <div class="grid grid-1-2">
+            <div class="form-group">
+              <label for="first-name" class="form-label">Full name</label>
+              <span class="form-prepopped" id="fullNamePre">John Smith</span>
             </div>
             <div class="form-group">
-              <label for="address4" class="form-label">Post code</label>
-              <input id="address4" type="text" class="form-control form-control-large" autocapitalize="characters"
-              autocorrect="off" value="">
+              <p class="form-label">Date of birth</p>
+              <span class="form-prepopped" id="dobFullPre">12/06/1994</span>
+            </div>
+            <div class="form-group">
+              <span class="form-label">Address</span>
+              <ul class="list-text form-prepopped">
+                <li id="address1Pre">37 Bolton road</li>
+                <li id="address2Pre"></li>
+                <li id="address3Pre">Birmingham</li>
+                <li id="address3bPre">West Midlands</li>
+                <li id="address4Pre">B23 4BB</li>
+              </ul>
             </div>
           </div>
-          <div class="form-group">
-            <label for="email-input" class="form-label" id="emailInput">Enter email address</label>
-            <span class="form-hint text">You'll need this to receive feedback from the provider</span>
-            <input type="email" class="form-control linked-input-master" id="email-input" spellcheck="false">
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="phone-input">Enter mobile phone number</label>
-            <span class="form-hint text">If you don't have a mobile, enter a landline number</span>
-            <input type="tel" class="form-control form-control-1-3" id="phone-input">
-          </div>
-          <div class="form-group">
-            <h2 class="heading-large">About you</h2>
-            <label for="aboutYou" class="form-label">Tell us why you think this traineeship would be suitable for you</label>
-            <textarea id="aboutYou" class="form-control" rows="4"></textarea>
-          </div>
-          <div class="form-group">
-            <a href="create-account.html" class="button" id="enquiryButton">Submit enquiry</a>
+          <div class="grid grid-1-2">
+            <div class="form-group">
+              <label for="email-address" class="form-label">Email address</label>
+              <span class="form-prepopped" id="emailInputPre">john.smith@email.com</span>
+            </div>
+            <div class="form-group">
+              <label for="tel-number" class="form-label">Phone</label>
+              <span class="form-prepopped" id="phoneInputPre">07954 389421</span>
+            </div>
           </div>
         </fieldset>
+        <fieldset class="fieldset-with-border" id="applyQualifications">
+          <legend class="heading-large">Qualifications</legend>
+          <div class="hide-nojs">
+            <p class="form-label">Do you have any qualifications?</p>
+            <p class="form-hint text">If you don't know your results yet, enter your predicted grades. These
+              are grades your teacher expects you to get.</p>
+            <div class="form-group form-group-compound inline clearfix">
+              <label data-target="qualifications-panel" for="qualifications-yes" class="block-label">
+                <input aria-controls="qualifications-panel" aria-expanded="false" name="quals"
+                type="radio" id="qualifications-yes">Yes
+              </label>
+              <label for="qualifications-no" class="block-label">
+                <input checked name="quals" type="radio" id="qualifications-no">No
+              </label>
+            </div>
+            <div id="qualifications-panel" class="has-qualifications toggle-content" aria-hidden="true"
+            role="region">
+              <div class="enter-qualification clearfix">
+                <div class="inline-fixed">
+                  <div class="form-group">
+                    <label for="qual-type" class="form-label">Type of qualification</label>
+                    <select id="qual-type">
+                      <option value="">Select from list</option>
+                      <option class="gcse" value="GCSE">GCSE</option>
+                      <option class="as-level" value="AS Level">AS Level</option>
+                      <option class="a-level" value="A Level">A Level</option>
+                      <option class="btec" value="BTEC">BTEC</option>
+                      <option class="nvq1" value="NVQ or SVQ Level 1">NVQ or SVQ Level 1</option>
+                      <option class="nvq2" value="NVQ or SVQ Level 2">NVQ or SVQ Level 2</option>
+                      <option class="nvq3" value="NVQ or SVQ Level 3">NVQ or SVQ Level 3</option>
+                      <option id="otherQualOption" class="other" value="Other">Other</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="subject-year" class="form-label">Year</label>
+                    <input maxlength="4" type="tel" class="form-control form-control-small" pattern="[0-9]*"
+                    id="subject-year">
+                  </div>
+                </div>
+                <div class="other-qual-input form-group toggle-content">
+                  <label for="other-qual" class="form-label">Name of other qualification</label>
+                  <input type="text" class="form-control" id="other-qual">
+                </div>
+                <div class="form-group form-group-compound">
+                  <label for="subject-name" class="form-label">Subject</label>
+                  <input type="text" class="form-control" id="subject-name">
+                </div>
+                <div class="inline-fixed">
+                  <div class="form-group">
+                    <label for="subject-grade" class="form-label">Grade</label>
+                    <input type="text" class="form-control form-control-medium" id="subject-grade">
+                  </div>
+                  <div class="form-group">
+                    <input id="qual-predicted" type="checkbox">
+                    <label for="qual-predicted">Predicted?</label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <a href="#" class="button save-qual-btn" id="saveQualification">Add qualification</a>
+                </div>
+              </div>
+              <div class="qualifications-wrapper">
+                <div class="qualification-table toggle-content">
+                  <div class="hgroup-small">
+                    <h3 class="heading-small heading-qualType"></h3>
+                  </div>
+                  <table class="grid-3-4">
+                    <colgroup>
+                      <col class="t40">
+                        <col class="t25">
+                          <col class="t15">
+                            <col class="t10">
+                              <col class="t10">
+                                <col>
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th class="th-qualSubject"><span class="heading-span">Subject</span>
+                        </th>
+                        <th class="th-qualGrade"><span class="heading-span">Grade</span>
+                        </th>
+                        <th class="th-qualYear"><span class="heading-span">Year</span>
+                        </th>
+                        <th></th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody class="tbody-qual">
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="show-nojs">
+            <table>
+              <colgroup>
+                <col class="t30">
+                  <col class="t30">
+                    <col class="t10">
+                      <col class="t10">
+                        <col class="t20">
+                          <col>
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>Subject</th>
+                  <th>Qualification</th>
+                  <th>Year</th>
+                  <th>Grade</th>
+                  <th>Predicted?</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <label for="subject1" class="visuallyhidden">Subject</label>
+                    <input type="text" class="form-control" id="subject1">
+                  </td>
+                  <td>
+                    <label for="qualification1" class="visuallyhidden">Qualification</label>
+                    <input type="text" class="form-control"
+                    id="qualification1">
+                  </td>
+                  <td>
+                    <label for="year1" class="visuallyhidden">Year</label>
+                    <input type="text" class="form-control" id="year1">
+                  </td>
+                  <td>
+                    <label for="grade1" class="visuallyhidden">Grade</label>
+                    <input type="text" class="form-control" id="grade1">
+                  </td>
+                  <td class="va-middle">
+                    <label for="predicted1" class="visuallyhidden">Predicted?</label>
+                    <input type="checkbox" id="predicted1">
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="subject2" class="visuallyhidden">Subject</label>
+                    <input type="text" class="form-control" id="subject2">
+                  </td>
+                  <td>
+                    <label for="qualification2" class="visuallyhidden">Qualification</label>
+                    <input type="text" class="form-control"
+                    id="qualification2">
+                  </td>
+                  <td>
+                    <label for="year2" class="visuallyhidden">Year</label>
+                    <input type="text" class="form-control" id="year2">
+                  </td>
+                  <td>
+                    <label for="grade2" class="visuallyhidden">Grade</label>
+                    <input type="text" class="form-control" id="grade2">
+                  </td>
+                  <td class="va-middle">
+                    <label for="predicted2" class="visuallyhidden">Predicted?</label>
+                    <input type="checkbox" id="predicted2">
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="subject3" class="visuallyhidden">Subject</label>
+                    <input type="text" class="form-control" id="subject3">
+                  </td>
+                  <td>
+                    <label for="qualification3" class="visuallyhidden">Qualification</label>
+                    <input type="text" class="form-control"
+                    id="qualification3">
+                  </td>
+                  <td>
+                    <label for="year3" class="visuallyhidden">Year</label>
+                    <input type="text" class="form-control" id="year3">
+                  </td>
+                  <td>
+                    <label for="grade3" class="visuallyhidden">Grade</label>
+                    <input type="text" class="form-control" id="grade3">
+                  </td>
+                  <td class="va-middle">
+                    <label for="predicted3" class="visuallyhidden">Predicted?</label>
+                    <input type="checkbox" id="predicted3">
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="subject4" class="visuallyhidden">Subject</label>
+                    <input type="text" class="form-control" id="subject4">
+                  </td>
+                  <td>
+                    <label for="qualification4" class="visuallyhidden">Qualification</label>
+                    <input type="text" class="form-control"
+                    id="qualification4">
+                  </td>
+                  <td>
+                    <label for="year4" class="visuallyhidden">Year</label>
+                    <input type="text" class="form-control" id="year4">
+                  </td>
+                  <td>
+                    <label for="grade4" class="visuallyhidden">Grade</label>
+                    <input type="text" class="form-control" id="grade4">
+                  </td>
+                  <td class="va-middle">
+                    <label for="predicted4" class="visuallyhidden">Predicted?</label>
+                    <input type="checkbox" id="predicted4">
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="subject5" class="visuallyhidden">Subject</label>
+                    <input type="text" class="form-control" id="subject5">
+                  </td>
+                  <td>
+                    <label for="qualification5" class="visuallyhidden">Qualification</label>
+                    <input type="text" class="form-control"
+                    id="qualification5">
+                  </td>
+                  <td>
+                    <label for="year5" class="visuallyhidden">Year</label>
+                    <input type="text" class="form-control" id="year5">
+                  </td>
+                  <td>
+                    <label for="grade5" class="visuallyhidden">Grade</label>
+                    <input type="text" class="form-control" id="grade5">
+                  </td>
+                  <td class="va-middle">
+                    <label for="predicted5" class="visuallyhidden">Predicted?</label>
+                    <input type="checkbox" id="predicted5">
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <a href="#" class="button">Add 5 more qualifications</a>
+          </div>
+        </fieldset>
+        <fieldset class="fieldset-with-border" id="applyWorkExperience">
+          <legend class="heading-large">Work experience</legend>
+          <p class="hide-nojs form-label text">Do you have any work experience?</p>
+          <p class="form-hint text">
+            Please include any work, whether paid or voluntary.
+          </p>
+          <div class="hide-nojs">
+            <div class="form-group inline clearfix">
+              <label data-target="workexperience-panel" for="workexp-yes" class="block-label">
+                <input name="workexp" type="radio" id="workexp-yes">Yes
+              </label>
+              <label for="workexp-no" class="block-label">
+                <input checked name="workexp" type="radio" id="workexp-no">No
+              </label>
+            </div>
+            <div id="workexperience-panel" class="has-work-experience toggle-content">
+              <div class="enter-work clearfix">
+                <div class="form-group form-group-compound">
+                  <label for="work-employer" class="form-label">Employer</label>
+                  <input type="text" class="form-control" id="work-employer">
+                </div>
+                <div class="form-group form-group">
+                  <label for="work-title" class="form-label">Job title</label>
+                  <input type="text" class="form-control" id="work-title">
+                </div>
+                <div class="form-group form-group-compound">
+                  <label for="work-role" class="form-label">Main duties</label>
+                  <textarea type="text" rows="3" class="form-control" id="work-role" data-val-length-max="200"></textarea>
+                  <span class="form-hint maxchar-count">200</span>
+                </div>
+                <div class="inline-fixed">
+                  <div class="form-group form-group-compound">
+                    <label for="work-from" class="form-label">From</label>
+                    <div class="form-group form-group-compound">
+                      <span class="form-hint">Month</span>
+                      <select name="" id="work-from">
+                        <option value="Jan">Jan</option>
+                        <option value="Feb">Feb</option>
+                        <option value="Mar">Mar</option>
+                        <option value="Apr">Apr</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="Aug">Aug</option>
+                        <option value="Sept">Sept</option>
+                        <option value="Oct">Oct</option>
+                        <option value="Nov">Nov</option>
+                        <option value="Dec">Dec</option>
+                      </select>
+                    </div>
+                    <div class="form-group form-group-compound">
+                      <span class="form-hint">Year</span>
+                      <input type="tel" class="form-control form-control-small" pattern="[0-9]*" maxlength="4"
+                      id="work-from-year">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="work-to" class="form-label">To</label>
+                    <div class="form-group form-group-compound">
+                      <span class="form-hint">Month</span>
+                      <select name="" id="work-to">
+                        <option value="Jan">Jan</option>
+                        <option value="Feb">Feb</option>
+                        <option value="Mar">Mar</option>
+                        <option value="Apr">Apr</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="Aug">Aug</option>
+                        <option value="Sept">Sept</option>
+                        <option value="Oct">Oct</option>
+                        <option value="Nov">Nov</option>
+                        <option value="Dec">Dec</option>
+                      </select>
+                    </div>
+                    <div class="form-group form-group-compound">
+                      <span class="form-hint">Year</span>
+                      <input type="tel" class="form-control form-control-small" pattern="[0-9]*" maxlength="4"
+                      id="work-to-year">
+                    </div>
+                    <div class="form-group form-group-compound">
+                      <input id="work-current" type="checkbox">
+                      <label for="work-current">Current</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <a href="#" class="button save-work-btn" id="addWorkBtn">Add work</a>
+                </div>
+              </div>
+              <div class="work-history-wrapper grid-3-4">
+              </div>
+            </div>
+          </div>
+          <div class="show-nojs">
+            <section class="grid-wrapper section-border">
+              <table class="grid grid-2-3 no-btm-border no-btm-margin">
+                <tr>
+                  <td>
+                    <label for="employer1" class="form-label">Employer</label>
+                    <input type="text" id="employer1" class="form-control">
+                  </td>
+                  <td>
+                    <label for="jobTitle1" class="form-label">Job title</label>
+                    <input type="text" id="jobTitle1" class="form-control">
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <label for="mainDuties1" class="form-label">Main duties</label>
+                    <textarea id="mainDuties1" class="form-control"></textarea>
+                    <span class="form-hint maxchar-count">200</span>
+                  </td>
+                </tr>
+              </table>
+              <table class="grid grid-1-3 no-btm-border no-btm-margin">
+                <tr>
+                  <td class="inline">
+                    <div class="form-group no-btm-margin">
+                      <label for="fromMonth1" class="form-label">From</label>
+                      <select id="fromMonth1">
+                        <option value="Jan">Jan</option>
+                        <option value="Feb">Feb</option>
+                        <option value="Mar">Mar</option>
+                        <option value="Apr">Apr</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="Aug">Aug</option>
+                        <option value="Sept">Sept</option>
+                        <option value="Oct">Oct</option>
+                        <option value="Nov">Nov</option>
+                        <option value="Dec">Dec</option>
+                      </select>
+                    </div>
+                    <div class="form-group no-btm-margin">
+                      <label for="fromYear1" class="form-label">Year</label>
+                      <input type="text" class="form-control form-control-medium" id="fromYear1">
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="inline">
+                    <div class="form-group">
+                      <label for="toMonth1" class="form-label">To</label>
+                      <select id="toMonth1">
+                        <option value="Jan">Jan</option>
+                        <option value="Feb">Feb</option>
+                        <option value="Mar">Mar</option>
+                        <option value="Apr">Apr</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="Aug">Aug</option>
+                        <option value="Sept">Sept</option>
+                        <option value="Oct">Oct</option>
+                        <option value="Nov">Nov</option>
+                        <option value="Dec">Dec</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="toYear1" class="form-label">Year</label>
+                      <input type="text" class="form-control form-control-medium" id="toYear1">
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </section>
+            <section class="grid-wrapper section-border">
+              <table class="grid grid-2-3 no-btm-border no-btm-margin">
+                <tr>
+                  <td>
+                    <label for="employer2" class="form-label">Employer</label>
+                    <input type="text" id="employer2" class="form-control">
+                  </td>
+                  <td>
+                    <label for="jobTitle2" class="form-label">Job title</label>
+                    <input type="text" id="jobTitle2" class="form-control">
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <label for="mainDuties2" class="form-label">Main duties</label>
+                    <textarea id="mainDuties2" class="form-control"></textarea>
+                    <span class="form-hint maxchar-count">200</span>
+                  </td>
+                </tr>
+              </table>
+              <table class="grid grid-1-3 no-btm-border no-btm-margin">
+                <tr>
+                  <td class="inline">
+                    <div class="form-group no-btm-margin">
+                      <label for="fromMonth2" class="form-label">From</label>
+                      <select id="fromMonth2">
+                        <option value="Jan">Jan</option>
+                        <option value="Feb">Feb</option>
+                        <option value="Mar">Mar</option>
+                        <option value="Apr">Apr</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="Aug">Aug</option>
+                        <option value="Sept">Sept</option>
+                        <option value="Oct">Oct</option>
+                        <option value="Nov">Nov</option>
+                        <option value="Dec">Dec</option>
+                      </select>
+                    </div>
+                    <div class="form-group no-btm-margin">
+                      <label for="fromYear2" class="form-label">Year</label>
+                      <input type="text" class="form-control form-control-medium" id="fromYear2">
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="inline">
+                    <div class="form-group">
+                      <label for="toMonth2" class="form-label">To</label>
+                      <select id="toMonth2">
+                        <option value="Jan">Jan</option>
+                        <option value="Feb">Feb</option>
+                        <option value="Mar">Mar</option>
+                        <option value="Apr">Apr</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="Aug">Aug</option>
+                        <option value="Sept">Sept</option>
+                        <option value="Oct">Oct</option>
+                        <option value="Nov">Nov</option>
+                        <option value="Dec">Dec</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="toYear2" class="form-label">Year</label>
+                      <input type="text" class="form-control form-control-medium" id="toYear2">
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </section>
+            <section class="grid-wrapper">
+              <table class="grid grid-2-3 no-btm-border no-btm-margin">
+                <tr>
+                  <td>
+                    <label for="employer3" class="form-label">Employer</label>
+                    <input type="text" id="employer3" class="form-control">
+                  </td>
+                  <td>
+                    <label for="jobTitle3" class="form-label">Job title</label>
+                    <input type="text" id="jobTitle3" class="form-control">
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <label for="mainDuties3" class="form-label">Main duties</label>
+                    <textarea id="mainDuties3" class="form-control"></textarea>
+                    <span class="form-hint maxchar-count">200</span>
+                  </td>
+                </tr>
+              </table>
+              <table class="grid grid-1-3 no-btm-border no-btm-margin">
+                <tr>
+                  <td class="inline">
+                    <div class="form-group no-btm-margin">
+                      <label for="fromMonth3" class="form-label">From</label>
+                      <select id="fromMonth3">
+                        <option value="Jan">Jan</option>
+                        <option value="Feb">Feb</option>
+                        <option value="Mar">Mar</option>
+                        <option value="Apr">Apr</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="Aug">Aug</option>
+                        <option value="Sept">Sept</option>
+                        <option value="Oct">Oct</option>
+                        <option value="Nov">Nov</option>
+                        <option value="Dec">Dec</option>
+                      </select>
+                    </div>
+                    <div class="form-group no-btm-margin">
+                      <label for="fromYear3" class="form-label">Year</label>
+                      <input type="text" class="form-control form-control-medium" id="fromYear3">
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="inline">
+                    <div class="form-group">
+                      <label for="toMonth3" class="form-label">To</label>
+                      <select id="toMonth3">
+                        <option value="Jan">Jan</option>
+                        <option value="Feb">Feb</option>
+                        <option value="Mar">Mar</option>
+                        <option value="Apr">Apr</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="Aug">Aug</option>
+                        <option value="Sept">Sept</option>
+                        <option value="Oct">Oct</option>
+                        <option value="Nov">Nov</option>
+                        <option value="Dec">Dec</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="toYear3" class="form-label">Year</label>
+                      <input type="text" class="form-control form-control-medium" id="toYear3">
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </section>
+            <div class="form-group">
+              <a href="#" class="button">Add 1 more work experience</a>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="fieldset-with-border" id="applyAdditional">
+          <legend class="heading-large">Additional questions</legend>
+          <div class="form-group">
+            <label for="add-question1" class="form-label">Why would you like to become a trainee?</label>
+            <textarea id="add-question1" class="form-control" data-val-length-max="4000"></textarea>
+            <span class="form-hint maxchar-count">4000</span>
+            <span class="visuallyhidden aria-limit" aria-live="polite"></span>
+          </div>
+          <div class="form-group">
+            <label for="add-question2" class="form-label">Where do you see yourself in three years?</label>
+            <textarea id="add-question2" class="form-control" data-val-length-max="4000"></textarea>
+            <span class="form-hint maxchar-count">4000</span>
+            <span class="visuallyhidden aria-limit" aria-live="polite"></span>
+          </div>
+        </fieldset>
+        <div class="form-group">
+          <a href="apply-preview.html" class="button" id="applyPreviewBtn">Preview enquiry</a>
+        </div>
       </main>
     </div>
     <footer class="gov-border" role="contentinfo">
       <div class="footer__wrapper">
         <div class="footer__meta">
           <ul class="footer__nav" role="navigation">
-            <li class="footer__link"><a href="/apprentice/helpdesk.html">Helpdesk</a>
+            <li class="small-btm-margin"><a class="bold-medium" href="/apprentice/helpdesk.html">Contact us for help</a>
             </li>
             <li class="footer__link"><a href="/apprentice/privacy.html">Privacy &amp; Cookies</a>
             </li>

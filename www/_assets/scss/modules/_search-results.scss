@@ -26,6 +26,9 @@
   margin: 0;
   overflow: hidden;
   padding: 15px 0;
+  &:first-child {
+    padding-top: 0;
+  }
 }
 
 .search-save {

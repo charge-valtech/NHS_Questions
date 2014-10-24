@@ -298,6 +298,12 @@ a, .fake-link {
     border-bottom: 1px solid $link-colour;
     text-decoration: none;
   }
+  &.link-unimp {
+    text-decoration: none;
+    &:hover, &:focus {
+      text-decoration: underline;
+    }
+  }
 }
 
 .fake-link {
