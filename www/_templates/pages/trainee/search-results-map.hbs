@@ -1,6 +1,19 @@
 ---
 headerTitle: Traineeships
 ---
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js">
+</script>
+<script type="text/javascript">
+  function initialize() {
+    var mapOptions = {
+      center: { lat: 52.477794, lng: -1.89836},
+      zoom: 13
+    };
+    var map = new google.maps.Map(document.getElementById('map-canvas'),
+        mapOptions);
+  }
+  google.maps.event.addDomListener(window, 'load', initialize);
+</script>
 <div class="hgroup">
   <h1 class="heading-xlarge small-btm-margin">Search results</h1>
   <p class="small-btm-margin">We've found <b class="bold-medium">7</b> traineeships in your selected area.</p>
@@ -51,7 +64,8 @@ headerTitle: Traineeships
         <a href="#" class="button">Update results</a>
       </div>
     </div>
-    <iframe src="http://mapbuildr.com/frame/7gmhqs" frameborder="0" height="600" width="700"></iframe>
+    <!-- <iframe src="http://mapbuildr.com/frame/7gmhqs" frameborder="0" height="600" width="700"></iframe> -->
+    <div id="map-canvas" style="height: 600px"></div>
   </div>
 </div>
 

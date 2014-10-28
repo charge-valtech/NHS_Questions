@@ -77,6 +77,24 @@
         </div>
       </div>
       <main role="main" id="main">
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js">
+        </script>
+        <script type="text/javascript">
+        function initialize()
+        {
+          var mapOptions = {
+            center:
+            {
+              lat: 52.8849566,
+              lng: -1.9770329
+            },
+            zoom: 6
+          };
+          var map = new google.maps.Map(document.getElementById('map-canvas'),
+            mapOptions);
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+        </script>
         <div class="hgroup">
           <h1 class="heading-xlarge">Find a traineeship</h1>
           <span class="subtitle">Search and enquire for a traineeship in England</span>
@@ -95,7 +113,7 @@
             </div>
           </div>
           <div class="grid grid-2-3">
-            <iframe src="http://mapbuildr.com/frame/d67ohq" frameborder="0" height="600" width="640"></iframe>
+            <div id="map-canvas" style="height: 600px"></div>
           </div>
         </div>
       </main>
