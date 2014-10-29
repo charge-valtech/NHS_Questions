@@ -54,19 +54,19 @@
 
             switch (strength.score) {
               case 0:
-                this.info = "Very weak";
-                this.className = "strength-weak";
-                break;
-              case 1:
-                this.info = "Weak";
-                this.className = "strength-weak";
-                break;
-              case 2:
                 this.info = "Medium";
                 this.className = "strength-medium";
                 break;
-              case 3:
+              case 1:
                 this.info = "Strong";
+                this.className = "strength-strong";
+                break;
+              case 2:
+                this.info = "Strong";
+                this.className = "strength-strong";
+                break;
+              case 3:
+                this.info = "Very strong";
                 this.className = "strength-strong";
                 break;
               case 4:

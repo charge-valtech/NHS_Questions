@@ -567,9 +567,7 @@ $(function() {
 
     function initializeStrengthMeter() {
         $("#pass_meter").pwStrengthManager({
-            password: $("#Password").val(),
-            minChars: "8",
-            advancedStrength: true
+            password: $("#Password").val()
         });
     }
 
