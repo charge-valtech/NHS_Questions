@@ -6,13 +6,78 @@ headerTitle: Traineeships
 <script type="text/javascript">
   function initialize() {
     var mapOptions = {
-      center: { lat: 52.477794, lng: -1.89836},
+      center: { lat: 52.490829, lng: -1.897802},
       mapTypeControl: false,
       zoom: 13
-    };
-    var map = new google.maps.Map(document.getElementById('map-canvas'),
-        mapOptions);
+    }
+
+    var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+    setMarkers(map, tships)
+
   }
+
+  var tships = [
+    [
+      'Traineeship in IT Software Applications (ITQ) with Prolink Associates Ltd',
+      52.482571,
+      -1.902266,
+      1
+    ],
+    [
+      'TRAINEESHIP in Warehousing with Gordon Franks Training',
+      52.484871,
+      -1.909218,
+      2
+    ],
+    [
+      'TRAINEESHIP in Business Administration with National Institute of Professional Drivers Ltd',
+      52.50034,
+      -1.905524,
+      3
+    ],
+    [
+      'TRAINEESHIP in Hospitality with Quality Hotel Birmingham',
+      52.468247,
+      -1.913939,
+      4
+    ],
+    [
+      'TRAINEESHIP Administrator with Computaccount Uk Ltd',
+      52.462651,
+      -1.898575,
+      5
+    ],
+    [
+      'TRAINEESHIP in Early Years with Busy Bees Childcare Ltd',
+      52.487066,
+      -1.857376,
+      6
+    ],
+    [
+      'TRAINEESHIP in Administration with Genting Casinos Egypt Limited',
+      52.516691,
+      -1.876688,
+      7
+    ]
+  ];
+
+  function setMarkers(map, locations) {
+    var image = '{{assets}}/img/icon-location.svg';
+
+    for (var i = 0; i < locations.length; i++) {
+      var tship = locations[i];
+      var myLatLng = new google.maps.LatLng(tship[1], tship[2]);
+      var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          icon: image,
+          title: tship[0],
+          zIndex: tship[3]
+      });
+    }
+  }
+
   google.maps.event.addDomListener(window, 'load', initialize);
 </script>
 <div class="hgroup">
