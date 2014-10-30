@@ -7,6 +7,7 @@ headerTitle: Traineeships
   function initialize() {
     var mapOptions = {
       center: { lat: 52.8849566, lng: -1.9770329},
+      mapTypeControl: false,
       zoom: 6
     };
     var map = new google.maps.Map(document.getElementById('map-canvas'),
@@ -32,6 +33,6 @@ headerTitle: Traineeships
     </div>
   </div>
   <div class="grid grid-2-3">
-    <div id="map-canvas" style="height: 600px"></div>
+    <div class="map-container" id="map-canvas" style="height: 600px"></div>
   </div>
 </div>

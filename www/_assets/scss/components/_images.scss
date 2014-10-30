@@ -19,6 +19,9 @@ $square-height: 10;
 
 img {
   max-width: 100%;
+  .map-container & {
+    max-width: inherit;
+  }
 }
 
 .imgwrap--square {
