@@ -54,6 +54,7 @@
 /* 1. Stops scrollbar from hiding when user is inactive on the page */
 
 html {
+  background-color: $grey-8; /*Match footer colour for short pages*/
   overflow-y: scroll;
   /* 1 */
   -ms-overflow-style: scrollbar; /*auto | none | scrollbar | -ms-autohiding-scrollbar*/
@@ -62,6 +63,7 @@ html {
 }
 
 body {
+  background-color: white;
   margin: 0;
 }
 
