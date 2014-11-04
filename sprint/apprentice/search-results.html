@@ -55,14 +55,14 @@
           </a>
         </div>
         <div class="global-header__nav">
-          <h1 class="global-header__title beta"><a href="/">Apprenticeships</a></h1>
+          <h1 class="global-header__title beta"><a href="/apprentice/index.html">Apprenticeships</a></h1>
         </div>
       </div>
     </header>
     <div class="content-container">
       <div class="phase-notice gov-border">
         <div class="prototype-warning">
-          <strong class="beta__label">Beta</strong>  <span>This is a prototype – your <a href="#" rel="external">feedback</a> will help to improve it.</span>
+          <strong class="beta__label">Beta</strong>  <span>This is a prototype – your <a href="https://www.surveymonkey.com/s/MFNR7NZ" target="_blank" rel="external">feedback</a> will help to improve it.</span>
         </div>
         <div class="account-info sign-in" id="bannerSignedOut">
           <a href="/apprentice/profile-signin.html"><i class="fa fa-sign-in"></i>Sign in</a>
@@ -71,12 +71,78 @@
           <span class="your-name" id="bannerUserName">Your Name</span>
           <div>
             <a id="applicationsLink" href="/apprentice/dashboard.html">My applications</a>
-            <a href="/apprentice/settings.html">Settings</a>
+            <a href="/apprentice/settings.html" id="settingsLink">Settings</a>
             <a href="/apprentice/profile-signedout.html" id="btnSignOut"><i class="fa fa-sign-out"></i>Sign out</a>
           </div>
         </div>
       </div>
       <main role="main" id="main">
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js">
+        </script>
+        <script type="text/javascript">
+        function gup(name)
+        {
+          name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+          var regexS = "[\\?&]" + name + "=([^&#]*)";
+          var regex = new RegExp(regexS);
+          var results = regex.exec(window.location.href);
+          if (results == null)
+            return null;
+          else
+            return results[1];
+        }
+        var latitude = Number(gup('Latitude')),
+          longitude = Number(gup('Longitude')),
+          miles = Number(gup('WithinDistance')),
+          zoom = 9,
+          radiusCircle;
+        if (miles <= 40)
+        {
+          zoom = 7
+        }
+        if (miles <= 30)
+        {
+          zoom = 8
+        }
+        if (miles < 20)
+        {
+          zoom = 9
+        }
+        if (miles < 10)
+        {
+          zoom = 10
+        }
+        if (miles < 5)
+        {
+          zoom = 11
+        }
+        function initialize()
+        {
+          var mapOptions = {
+            center:
+            {
+              lat: latitude,
+              lng: longitude
+            },
+            zoom: zoom,
+            disableDefaultUI: true
+          };
+          var map = new google.maps.Map(document.getElementById('map-canvas'),
+            mapOptions);
+          var distanceCircle = {
+            strokeColor: '#005ea5',
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: '#005ea5',
+            fillOpacity: 0.25,
+            map: map,
+            center: mapOptions.center,
+            radius: miles * 1609.344
+          }
+          radiusCircle = new google.maps.Circle(distanceCircle);
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+        </script>
         <div class="search-results-wrapper grid-wrapper">
           <div class="hgroup">
             <h1 class="heading-xlarge">Search results</h1>
@@ -135,15 +201,18 @@
                 <div class="form-group">
                   <label for="loc-within" class="form-label">Within</label>
                   <select id="loc-within">
-                    <option value="">This area only</option>
+                    <option value="">2 miles</option>
                     <option value="">5 miles</option>
-                    <option value="">10 miles</option>
+                    <option selected value="">10 miles</option>
                     <option value="">15 miles</option>
                     <option value="">20 miles</option>
                     <option value="">30 miles</option>
                     <option value="">40 miles</option>
                   </select>
                 </div>
+                <!--         <div class="form-group">
+          <div id="map-canvas" style="width: 100%; height: 200px"></div>
+        </div> -->
                 <div class="form-group">
                   <a href="#" class="button">Update results</a>
                 </div>
@@ -272,7 +341,7 @@
       <div class="footer__wrapper">
         <div class="footer__meta">
           <ul class="footer__nav" role="navigation">
-            <li class="footer__link"><a href="/apprentice/helpdesk.html">Helpdesk</a>
+            <li class="small-btm-margin"><a class="bold-medium" href="/apprentice/helpdesk.html">Contact us</a>
             </li>
             <li class="footer__link"><a href="/apprentice/privacy.html">Privacy &amp; Cookies</a>
             </li>

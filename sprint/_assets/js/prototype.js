@@ -73,6 +73,15 @@ $(function() {
 
   });
 
+  $('#enquiryButton').on('click', function(){
+    var $emailInput = $('#email-input').val();
+
+    $.jStorage.set('emailInput', $emailInput);
+
+  });
+
+  $('#enquiryEmail').text($.jStorage.get('emailInput'));
+
   // if($('#fullNamePre').length > 0) {
   //   var fullNamePre   = $.jStorage.get('fullName'),
   //       dobFullPre    = $.jStorage.get('dobFull'),
@@ -558,9 +567,7 @@ $(function() {
 
     function initializeStrengthMeter() {
         $("#pass_meter").pwStrengthManager({
-            password: $("#Password").val(),
-            minChars: "8",
-            advancedStrength: true
+            password: $("#Password").val()
         });
     }
 
@@ -590,9 +597,46 @@ $(function() {
     }
 
     if($('.global-header__title').text() == 'Traineeships') {
-      $('#applicationsLink').attr('href', '/trainee/dashboard.html');
+      // $('#applicationsLink').remove();
+      $('#settingsLink').attr('href', '/trainee/settings.html');
       $('title').text('Traineeships');
+      $('.global-header__title a').attr('href', '/trainee/search-index.html');
     }
 
+    $('#viewTrainingProvider').on('click', function() {
+      $('#trainingProviderPanel').show();
+      $('#employerPanel').hide();
+
+      return false;
+    });
+
+    $('#viewEmployer').on('click', function() {
+      $('#employerPanel').show();
+      $('#trainingProviderPanel').hide();
+
+      return false;
+    });
+
+  // $('#forgotPasswordBtn').on('click', function(){
+  //   var $this = $(this),
+  //       $thisVal = $this.val();
+
+  //   $.jStorage.set('forgottenEmail', $thisVal);
+  // });
+
+  // if($('#forgottenEmail').length) {
+  //   var $forgottenEmail = $.jStorage.get('forgottenEmail');
+
+  //   $('#forgottenEmail').val($forgottenEmail);
+  // }
+
+  $('.saveADraft').on('click', function() {
+    $('#savedInfo').show();
+  });
+
+  $('#removeDraft').on('click', function() {
+    $(this).closest('section').remove();
+    // $('#deleteSuccess').show();
+  });
 // --------------- Remove for live code -------------- //
 });
