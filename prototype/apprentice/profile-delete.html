@@ -82,10 +82,20 @@
 </h1>
         <div class="text">
           <p>Deleting your account will remove any saved drafts and all of your information
-            from the site. You are able to create an account with the same email
-            address, although you will need to re-enter all of your details.</p>
+            from the site.</p>
+          <p>You are able to create an account with the same email address, although
+            you will need to re-enter all of your details.</p>
         </div>
-        <div class="form-group">
+        <div class="form-group inline">
+          <p>Do you still wish to delete your account?</p>
+          <label data-target="deleteAccount" for="deleteYes" class="block-label">
+            <input type="radio" name="delete" id="deleteYes">Yes
+          </label>
+          <label for="deleteNo" class="block-label">
+            <input checked type="radio" name="delete" id="deleteNo">No
+          </label>
+        </div>
+        <div id="deleteAccount" class="form-group toggle-content">
           <a href="#" class="button">Delete my account</a>
         </div>
       </main>

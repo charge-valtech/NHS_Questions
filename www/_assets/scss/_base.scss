@@ -60,6 +60,7 @@ html {
   -ms-overflow-style: scrollbar; /*auto | none | scrollbar | -ms-autohiding-scrollbar*/
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
+  min-width: 300px; /*Set minimum width for windows and other browsers that can squeeze narrower*/
 }
 
 body {
