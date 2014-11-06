@@ -639,5 +639,33 @@ $(function() {
     $(this).closest('section').remove();
     // $('#deleteSuccess').show();
   });
+
+  function gup( name )
+    {
+      name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+      var regexS = "[\\?&]"+name+"=([^&#]*)";
+      var regex = new RegExp( regexS );
+      var results = regex.exec( window.location.href );
+      if( results == null )
+        return null;
+      else
+        return results[1];
+    }
+
+  if($('.heading-xlarge').text() == 'My applications') {
+    var tshipPar = gup('Traineeships');
+
+    if(tshipPar == "true") {
+      $('#tshipPrompt').show();
+    } else if(tshipPar == "seen") {
+      $('#tshipLink').show();
+    }
+  } else if($('.heading-xlarge').text() == 'Settings') {
+    var settingsPar = gup('Account');
+
+    if (settingsPar == "true") {
+      $('#accountSettings').show();
+    }
+  }
 // --------------- Remove for live code -------------- //
 });
