@@ -77,10 +77,13 @@
         </div>
       </div>
       <main role="main" id="main">
+        <div role="alert" aria-live="assertive" id="deletedAccount" class="toggle-content panel-success">
+          <p id="VacancyDeletedInfoMessageText">You’ve successfully deleted your account</p>
+        </div>
         <div class="grid-wrapper">
           <div class="grid grid-1-2">
             <fieldset>
-              <legend class="heading-large">Sign in</legend>
+              <legend class="heading-large" id="signInTitle">Sign in</legend>
               <p>Sign in or <a href="profile-create.html">create an account</a>.</p>
               <div class="form-group form-group-compound">
                 <label class="form-label" for="email-add">Email address</label>

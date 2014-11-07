@@ -666,6 +666,12 @@ $(function() {
     if (settingsPar == "true") {
       $('#accountSettings').show();
     }
+  } else if($('#signInTitle')) {
+    var deletedPar = gup('Deleted');
+
+    if (deletedPar == "true") {
+      $('#deletedAccount').show();
+    }
   }
 // --------------- Remove for live code -------------- //
 });
