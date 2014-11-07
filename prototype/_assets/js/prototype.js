@@ -667,10 +667,13 @@ $(function() {
       $('#accountSettings').show();
     }
   } else if($('#signInTitle')) {
-    var deletedPar = gup('Deleted');
+    var signInPar = gup('Status');
 
-    if (deletedPar == "true") {
+    if (signInPar == "deleted") {
       $('#deletedAccount').show();
+    } else if (signInPar == "no-access") {
+      $('#forgotPasswordBtn').hide();
+      $('#cantAccessBtn').show();
     }
   }
 // --------------- Remove for live code -------------- //
