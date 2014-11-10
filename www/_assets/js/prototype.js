@@ -545,7 +545,7 @@ $(function() {
     $.cookie('signedIn', true, {path: '/'});
   });
 
-  $('#btnSignOut').on('click', function() {
+  $('#btnSignOut, #btnDeleteAccount').on('click', function() {
     $.removeCookie('signedIn', { path: '/' });
   });
 
@@ -665,6 +665,8 @@ $(function() {
 
     if (settingsPar == "true") {
       $('#accountSettings').show();
+    } else if (settingsPar == "alt") {
+      $('#accountSettings2').show();
     }
   } else if($('#signInTitle')) {
     var signInPar = gup('Status');
