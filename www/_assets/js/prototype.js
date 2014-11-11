@@ -660,13 +660,15 @@ $(function() {
     } else if(tshipPar == "seen") {
       $('#tshipLink').show();
     }
-  } else if($('.heading-xlarge').text() == 'Settings') {
+  } else if($('.heading-xlarge').text() == 'Your account settings') {
     var settingsPar = gup('Account');
 
     if (settingsPar == "true") {
       $('#accountSettings').show();
+      $('#updateSettingsBtn').hide();
     } else if (settingsPar == "alt") {
       $('#accountSettings2').show();
+      $('#updateSettingsBtn').hide();
     }
   } else if($('#signInTitle')) {
     var signInPar = gup('Status');
