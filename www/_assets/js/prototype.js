@@ -675,6 +675,8 @@ $(function() {
 
     if (signInPar == "deleted") {
       $('#deletedAccount').show();
+      $('#forgotPasswordBtn').hide();
+      $('#cantAccessBtn').show();
     } else if (signInPar == "no-access") {
       $('#forgotPasswordBtn').hide();
       $('#cantAccessBtn').show();
