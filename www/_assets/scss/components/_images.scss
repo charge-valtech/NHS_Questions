@@ -24,6 +24,10 @@ img {
   }
 }
 
+.map-container {
+  position: relative;
+}
+
 .imgwrap--square {
   padding-top: percentage($square-height / $square-width);
 }

@@ -659,6 +659,9 @@ $(function() {
       $('#tshipPrompt').show();
     } else if(tshipPar == "seen") {
       $('#tshipLink').show();
+    } else if(tshipPar == "submitted") {
+      $('#dashTraineeships').show();
+      $('#tshipLink').show();
     }
   } else if($('.heading-xlarge').text() == 'Your account settings') {
     var settingsPar = gup('Account');
