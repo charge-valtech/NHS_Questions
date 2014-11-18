@@ -662,6 +662,7 @@ $(function() {
     } else if(tshipPar == "submitted") {
       $('#dashTraineeships').show();
       $('#tshipLink').show();
+      $('#tshipJump').removeClass('toggle-content');
     }
   } else if($('.heading-xlarge').text() == 'Your account settings') {
     var settingsPar = gup('Account');

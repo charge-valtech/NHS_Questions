@@ -46,6 +46,9 @@ ol {
   li {
     list-style: none;
     margin-bottom: 10px;
+    &.toggle-content {
+      display: none;
+    }
     @include media(tablet) {
       display: inline-block;
       margin-right: $gutter;
