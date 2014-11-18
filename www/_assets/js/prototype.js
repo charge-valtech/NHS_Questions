@@ -683,6 +683,8 @@ $(function() {
     } else if (signInPar == "no-access") {
       $('#forgotPasswordBtn').hide();
       $('#cantAccessBtn').show();
+    } else if (signInPar == "signout") {
+      $('#signedOut').show();
     }
   }
 
