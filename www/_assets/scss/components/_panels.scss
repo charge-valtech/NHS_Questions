@@ -139,7 +139,7 @@ details summary:focus {
   margin-right: -1px;
   width: 20px;
 }
-.no-details details.open summary {
+.no-details details.open summary:focus {
   outline: 3px solid $yellow;
 }
 .no-details details.open summary:before {
