@@ -689,5 +689,22 @@ $(function() {
     }
   }
 
+  $('#tshipAbout').on('change', 'input', function() {
+    if ($('#england-yes').is(':checked') &&
+      $('#unemployed-yes').is(':checked') &&
+      ($('#age16').is(':checked') || $('#age19').is(':checked')) &&
+      $('#tshipAbout input:checked').length == 3) {
+
+      $('#tshipSearch').show();
+      $('#tshipNotRight').hide();
+
+    } else if ($('#tshipAbout input:checked').length == 3){
+
+      $('#tshipSearch').hide();
+      $('#tshipNotRight').show();
+
+    }
+  });
+
 // --------------- Remove for live code -------------- //
 });
