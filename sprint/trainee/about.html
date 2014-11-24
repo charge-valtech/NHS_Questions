@@ -55,7 +55,7 @@
           </a>
         </div>
         <div class="global-header__nav">
-          <div class="global-header__title beta"><a href="/apprentice/index.html">Advertising an Apprenticeship</a>
+          <div class="global-header__title beta"><a href="/apprentice/index.html">Traineeships</a>
           </div>
         </div>
       </div>
@@ -78,78 +78,75 @@
         </div>
       </div>
       <main role="main" id="main">
-        <h1 class="heading-xlarge">Review organisation details</h1>
-        <fieldset class="fieldset-with-border">
-          <legend class="heading-large">Organisation details</legend>
-          <div class="form-group">
-            <label class="form-label" for="businessOrganDetails">Name of organisation</label>
-            <input class="form-control" type="text" id="businessOrganDetails" />
-          </div>
-          <div class="form-group">
-            <label for="select-org-type" class="form-label">Organisation type or sector</label>
-            <select id="select-org-type">
-              <option value="Please select ">Please select</option>
-              <option value="Administration &amp; Human Resources">Administration &amp; Human Resources</option>
-              <option value="Agriculture &amp; Land Based Services">Agriculture &amp; Land Based Services</option>
-              <option value="Arts, Creative &amp; Cultural Industries">Arts, Creative &amp; Cultural Industries</option>
-              <option value="Automotive Industry &amp; Passenger Transport">Automotive Industry &amp; Passenger Transport</option>
-              <option value="Broadcast, Film &amp; Multimedia">Broadcast, Film &amp; Multimedia</option>
-              <option value="Chemical, Oil &amp; Nuclear Industry">Chemical, Oil &amp; Nuclear Industry</option>
-              <option value="Construction">Construction</option>
-              <option value="Customer Service &amp; Retail">Customer Service &amp; Retail</option>
-              <option value="Energy/Utilities Industry">Energy/Utilities Industry</option>
-              <option value="Engineering, Electricians &amp; Building Services">Engineering, Electricians &amp; Building Services</option>
-              <option value="Financial Services">Financial Services</option>
-              <option value="Food and Drink">Food and Drink</option>
-              <option value="Hair &amp; Beauty">Hair &amp; Beauty</option>
-              <option value="Hospitality &amp; Travel">Hospitality &amp; Travel</option>
-              <option value="Information Technology &amp; Communications">Information Technology &amp; Communications</option>
-              <option value="Logistics">Logistics</option>
-              <option value="Manufacturing &amp; Processing">Manufacturing &amp; Processing</option>
-              <option value="Marine Industry">Marine Industry</option>
-              <option value="Property">Property</option>
-              <option value="Public Services">Public Services</option>
-              <option value="Sports &amp; Fitness">Sports &amp; Fitness</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="busWebAddress">Website address</label>
-            <input type="text" width="100" id="busWebAddress" class="form-control" />
-          </div>
-          <div class="form-group">
-            <label for="howmany-emp" class="form-label">How many employees does your organisation have in the UK?</label>
-            <select id="howmany-emp">
-              <option value="Please select ">Please select</option>
-              <option value="&lt;9">&lt;9</option>
-              <option value="9-49">9-49</option>
-              <option value="50-249">50-249</option>
-              <option value="250-999">250-999</option>
-              <option value="1000-4999">1000-4999</option>
-              <option value="5000+">5000+</option>
-              <option value="Don't Know">Don't Know</option>
-            </select>
-          </div>
-        </fieldset>
-        <fieldset>
-          <legend class="heading-large">Include a logo</legend>
-          <div class="form-group form-group-compound inline">
-            <p class="form-label">Do you want to include a logo in the advert?</p>
-            <label for="radio-inline-1" class="block-label">
-              <input id="radio-inline-1" type="radio" name="radio-inline-group" value="Yes">Yes
+        <h1 class="heading-xlarge">Interested in traineeships?</h1>
+        <div class="text" id="tshipAbout">
+          <section>
+            <p>A traineeship is a course designed to prepare someone for an apprenticeship
+              or get them ready for work. They can take up to 6 months. <a href="search-index.html">Find a traineeship</a>.</p>
+            <p>Answer the following questions to see if you'd be suitable for a traineeship.</p>
+          </section>
+          <div class="form-group inline">
+            <h2 class="heading-medium">Are you eligible to work in England?</h2>
+            <label for="england-yes" class="block-label">
+              <input name="england" type="radio" id="england-yes">Yes
             </label>
-            <label for="radio-inline-2" class="block-label">
-              <input id="radio-inline-2" type="radio" name="radio-inline-group" value="No">No
+            <label for="england-no" class="block-label">
+              <input name="england" type="radio" id="england-no">No
             </label>
           </div>
-          <div class="form-group form-group-compound">
-            <a class="button-link" href="#">Choose file</a>
+          <div class="form-group inline">
+            <h2 class="heading-medium">Unemployed with little or no work experience</h2>
+            <label for="unemployed-yes" class="block-label">
+              <input name="unemployed" type="radio" id="unemployed-yes">Yes
+            </label>
+            <label for="unemployed-no" class="block-label">
+              <input name="unemployed" type="radio" id="unemployed-no">No
+            </label>
           </div>
           <div class="form-group">
-            <img src="../_assets/img/logos/AdultLearningAcad.png" alt="GOV.UK">
+            <h2 class="heading-medium">Choose one of the following</h2>
+            <div>
+              <label for="age16" class="block-label">
+                <input name="age" type="radio" id="age16">Aged 16-18 and qualified below Level 3
+              </label>
+            </div>
+            <div>
+              <label for="age19" class="block-label">
+                <input name="age" type="radio" id="age19">Aged 19-23 and qualified below Level 2
+              </label>
+            </div>
+            <div>
+              <label for="neither" class="block-label">
+                <input name="age" type="radio" id="neither">Neither
+              </label>
+            </div>
           </div>
-        </fieldset>
-        <div class="form-group">
-          <a class="button" href="vacancy.html">Save and continue</a>
+          <div class="panel-indent">
+            <p>Traineeships are unpaid, although employers are encouraged to support
+              trainees with expenses such as travel and meals.</p>
+            <p>If you're unsure then contact the <a href="https://nationalcareersservice.direct.gov.uk">National Careers Service</a>,
+              or <a href="/apprentice/helpdesk.html">contact us</a> for help.</p>
+          </div>
+          <div class="form-group toggle-content" id="tshipSearch">
+            <p>It looks like you're eligible for a traineesip.</p>
+            <div class="get-started">
+              <a href="search-index.html" class="button">Find a traineeship</a>
+            </div>
+          </div>
+          <div class="form-group toggle-content" id="tshipNotRight">
+            <p>It doesn't look like a traineeship would be suitable for you, if you're
+              unsure of what the correct option for you would be, contact the
+              <a
+              href="https://nationalcareersservice.direct.gov.uk">National Careers Service</a>.</p>
+            <p>Alternatively, if you think you'd be eligible for an apprenticeship,
+              use the <a href="/apprentice/search-index.html">find an apprenticeship</a> service
+              instead.</p>
+          </div>
+          <!--
+  <section>
+    <h2 class="heading-large">Get advice</h2>
+    <p>If you’re thinking of applying for a traineeship, or are unsure whether it’s the right option for you, contact the National Careers Service website for advice.</p>
+  </section> -->
         </div>
       </main>
     </div>

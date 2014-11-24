@@ -545,7 +545,7 @@ $(function() {
     $.cookie('signedIn', true, {path: '/'});
   });
 
-  $('#btnSignOut').on('click', function() {
+  $('#btnSignOut, #btnDeleteAccount').on('click', function() {
     $.removeCookie('signedIn', { path: '/' });
   });
 
@@ -567,7 +567,8 @@ $(function() {
 
     function initializeStrengthMeter() {
         $("#pass_meter").pwStrengthManager({
-            password: $("#Password").val()
+            password: $("#Password").val(),
+            minChars: 8
         });
     }
 
@@ -638,5 +639,72 @@ $(function() {
     $(this).closest('section').remove();
     // $('#deleteSuccess').show();
   });
+
+  function gup( name )
+    {
+      name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+      var regexS = "[\\?&]"+name+"=([^&#]*)";
+      var regex = new RegExp( regexS );
+      var results = regex.exec( window.location.href );
+      if( results == null )
+        return null;
+      else
+        return results[1];
+    }
+
+  if($('.heading-xlarge').text() == 'My applications') {
+    var tshipPar = gup('Traineeships');
+
+    if(tshipPar == "true") {
+      $('#tshipPrompt').show();
+    } else if(tshipPar == "seen") {
+      $('#tshipLink').show();
+    } else if(tshipPar == "submitted") {
+      $('#dashTraineeships').show();
+      $('#tshipLink').show();
+      $('#tshipJump').removeClass('toggle-content');
+    }
+  } else if($('.heading-xlarge').text() == 'Your account settings') {
+    var settingsPar = gup('Account');
+
+    if (settingsPar == "true") {
+      $('#accountSettings').show();
+      $('#updateSettingsBtn').hide();
+    } else if (settingsPar == "alt") {
+      $('#accountSettings2').show();
+      $('#updateSettingsBtn').hide();
+    }
+  } else if($('#signInTitle')) {
+    var signInPar = gup('Status');
+
+    if (signInPar == "deleted") {
+      $('#deletedAccount').show();
+      $('#forgotPasswordBtn').hide();
+      $('#cantAccessBtn').show();
+    } else if (signInPar == "no-access") {
+      $('#forgotPasswordBtn').hide();
+      $('#cantAccessBtn').show();
+    } else if (signInPar == "signout") {
+      $('#signedOut').show();
+    }
+  }
+
+  $('#tshipAbout').on('change', 'input', function() {
+    if ($('#england-yes').is(':checked') &&
+      $('#unemployed-yes').is(':checked') &&
+      ($('#age16').is(':checked') || $('#age19').is(':checked')) &&
+      $('#tshipAbout input:checked').length == 3) {
+
+      $('#tshipSearch').show();
+      $('#tshipNotRight').hide();
+
+    } else if ($('#tshipAbout input:checked').length == 3){
+
+      $('#tshipSearch').hide();
+      $('#tshipNotRight').show();
+
+    }
+  });
+
 // --------------- Remove for live code -------------- //
 });

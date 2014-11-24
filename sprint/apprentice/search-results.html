@@ -55,7 +55,8 @@
           </a>
         </div>
         <div class="global-header__nav">
-          <h1 class="global-header__title beta"><a href="/apprentice/index.html">Apprenticeships</a></h1>
+          <div class="global-header__title beta"><a href="/apprentice/index.html">Apprenticeships</a>
+          </div>
         </div>
       </div>
     </header>
@@ -65,14 +66,14 @@
           <strong class="beta__label">Beta</strong>  <span>This is a prototype – your <a href="https://www.surveymonkey.com/s/MFNR7NZ" target="_blank" rel="external">feedback</a> will help to improve it.</span>
         </div>
         <div class="account-info sign-in" id="bannerSignedOut">
-          <a href="/apprentice/profile-signin.html"><i class="fa fa-sign-in"></i>Sign in</a>
+          <a href="/apprentice/profile-signin.html?"><i class="fa fa-sign-in"></i>Sign in</a>
         </div>
         <div class="account-info sign-out" id="bannerSignedIn" style="display: none;">
           <span class="your-name" id="bannerUserName">Your Name</span>
           <div>
             <a id="applicationsLink" href="/apprentice/dashboard.html">My applications</a>
             <a href="/apprentice/settings.html" id="settingsLink">Settings</a>
-            <a href="/apprentice/profile-signedout.html" id="btnSignOut"><i class="fa fa-sign-out"></i>Sign out</a>
+            <a href="/apprentice/profile-signin.html?Status=signout" id="btnSignOut"><i class="fa fa-sign-out"></i>Sign out</a>
           </div>
         </div>
       </div>
@@ -156,48 +157,35 @@
               <div class="mob-collpanel toggle-content--mob">
                 <div class="form-group">
                   <label for="keywords" class="form-label">Keywords (optional)</label>
-                  <input id="keywords" type="text" class="form-control search-proto-result-input search-proto-result-input-1">
+                  <input id="keywords" type="text" class="form-control search-proto-result-input search-proto-result-input-1"
+                  value="building">
                 </div>
+                <!--         <div class="form-group">
+          <details id="relatedKeywords">
+            <summary>Related keywords</summary>
+            <ul class="panel-indent font-xsmall list-text">
+              <li><a href="#">construction</a></li>
+              <li><a href="#">plumbing</a></li>
+              <li><a href="#">carpentry</a></li>
+              <li><a href="#">bricklaying</a></li>
+            </ul>
+          </details>
+        </div> -->
                 <div class="form-group">
                   <label for="location" class="form-label">Apprenticeship location</label>
-                  <input id="location" type="text" class="form-control search-proto-result-input search-proto-result-input-2">
+                  <input id="location" type="text" class="form-control search-proto-result-input search-proto-result-input-2"
+                  value="coventry">
                 </div>
-                <!-- <ul class="list-text list-max-11">
-          <li>Did you mean: </li>
-          <li>
-            <a href="#">Enfield (London)</a>
-          </li>
-          <li>
-            <a href="#">Enfield (Warwickshire)</a>
-          </li>
-          <li>
-            <a href="#">Enfield (Surrey)</a>
-          </li>
-          <li>
-            <a href="#">Enfield (Surrey)</a>
-          </li>
-          <li>
-            <a href="#">Enfield (Surrey)</a>
-          </li>
-          <li>
-            <a href="#">Enfield (Surrey)</a>
-          </li>
-          <li>
-            <a href="#">Enfield (Surrey)</a>
-          </li>
-          <li>
-            <a href="#">Enfield (Surrey)</a>
-          </li>
-          <li>
-            <a href="#">Enfield (Surrey)</a>
-          </li>
-          <li>
-            <a href="#">Enfield (Surrey)</a>
-          </li>
-          <li>
-            <a href="#">Enfield (Warwickshire)</a>
-          </li>
-        </ul> -->
+                <!-- <details open class="open form-group form-group-compound">
+          <summary tabindex="0">Did you mean:</summary>
+          <div class="detail-content panel-indent">
+              <ul id="location-suggestions" class="list-text list-max-11">
+                <li><a href="@Url.Action("results", locationSearch)">Somewhere</a></li>
+                <li><a href="@Url.Action("results", locationSearch)">Somewhere</a></li>
+                <li><a href="@Url.Action("results", locationSearch)">Somewhere</a></li>
+              </ul>
+          </div>
+        </details> -->
                 <div class="form-group">
                   <label for="loc-within" class="form-label">Within</label>
                   <select id="loc-within">
@@ -210,9 +198,9 @@
                     <option value="">40 miles</option>
                   </select>
                 </div>
-                <!--         <div class="form-group">
-          <div id="map-canvas" style="width: 100%; height: 200px"></div>
-        </div> -->
+                <div class="form-group">
+                  <div id="map-canvas" style="width: 100%; height: 200px"></div>
+                </div>
                 <div class="form-group">
                   <a href="#" class="button">Update results</a>
                 </div>
@@ -361,7 +349,10 @@
         </div>
       </div>
     </footer>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.3/fastclick.min.js"></script>
     <script src="../_assets/js/scripts.min.js"></script>
+    <script src="../_assets/js/vendor/jstorage.js"></script>
     <!-- Prototype specific scripts -->
     <script src="../_assets/js/vendor/jquery.cookie.js"></script>
     <script src="../_assets/js/prototype.js"></script>

@@ -55,7 +55,8 @@
           </a>
         </div>
         <div class="global-header__nav">
-          <h1 class="global-header__title beta"><a href="/apprentice/index.html">Apprenticeships</a></h1>
+          <div class="global-header__title beta"><a href="/apprentice/index.html">Apprenticeships</a>
+          </div>
         </div>
       </div>
     </header>
@@ -65,14 +66,14 @@
           <strong class="beta__label">Beta</strong>  <span>This is a prototype – your <a href="https://www.surveymonkey.com/s/MFNR7NZ" target="_blank" rel="external">feedback</a> will help to improve it.</span>
         </div>
         <div class="account-info sign-in" id="bannerSignedOut">
-          <a href="/apprentice/profile-signin.html"><i class="fa fa-sign-in"></i>Sign in</a>
+          <a href="/apprentice/profile-signin.html?"><i class="fa fa-sign-in"></i>Sign in</a>
         </div>
         <div class="account-info sign-out" id="bannerSignedIn" style="display: none;">
           <span class="your-name" id="bannerUserName">Your Name</span>
           <div>
             <a id="applicationsLink" href="/apprentice/dashboard.html">My applications</a>
             <a href="/apprentice/settings.html" id="settingsLink">Settings</a>
-            <a href="/apprentice/profile-signedout.html" id="btnSignOut"><i class="fa fa-sign-out"></i>Sign out</a>
+            <a href="/apprentice/profile-signin.html?Status=signout" id="btnSignOut"><i class="fa fa-sign-out"></i>Sign out</a>
           </div>
         </div>
       </div>
@@ -139,7 +140,10 @@
         </div>
       </div>
     </footer>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.3/fastclick.min.js"></script>
     <script src="../_assets/js/scripts.min.js"></script>
+    <script src="../_assets/js/vendor/jstorage.js"></script>
     <!-- Prototype specific scripts -->
     <script src="../_assets/js/vendor/jquery.cookie.js"></script>
     <script src="../_assets/js/prototype.js"></script>

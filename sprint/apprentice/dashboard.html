@@ -55,7 +55,8 @@
           </a>
         </div>
         <div class="global-header__nav">
-          <h1 class="global-header__title beta"><a href="/apprentice/index.html">Apprenticeships</a></h1>
+          <div class="global-header__title beta"><a href="/apprentice/index.html">Apprenticeships</a>
+          </div>
         </div>
       </div>
     </header>
@@ -65,14 +66,14 @@
           <strong class="beta__label">Beta</strong>  <span>This is a prototype – your <a href="https://www.surveymonkey.com/s/MFNR7NZ" target="_blank" rel="external">feedback</a> will help to improve it.</span>
         </div>
         <div class="account-info sign-in" id="bannerSignedOut">
-          <a href="/apprentice/profile-signin.html"><i class="fa fa-sign-in"></i>Sign in</a>
+          <a href="/apprentice/profile-signin.html?"><i class="fa fa-sign-in"></i>Sign in</a>
         </div>
         <div class="account-info sign-out" id="bannerSignedIn" style="display: none;">
           <span class="your-name" id="bannerUserName">Your Name</span>
           <div>
             <a id="applicationsLink" href="/apprentice/dashboard.html">My applications</a>
             <a href="/apprentice/settings.html" id="settingsLink">Settings</a>
-            <a href="/apprentice/profile-signedout.html" id="btnSignOut"><i class="fa fa-sign-out"></i>Sign out</a>
+            <a href="/apprentice/profile-signin.html?Status=signout" id="btnSignOut"><i class="fa fa-sign-out"></i>Sign out</a>
           </div>
         </div>
       </div>
@@ -81,42 +82,35 @@
           <p id="VacancyDeletedInfoMessageText">You’ve successfully deleted your draft for the <a id="vacancyDeletedLink"
             href="apply-index.html">Apprentice Mechanical Engineer – Precision Toolmaker</a> apprenticeship</p>
         </div>
+        <div role="alert" aria-live="assertive" id="tshipPrompt" class="toggle-content panel-info">
+          <div class="text">
+            <p>Have you considered a traineeship? Traineeships are courses designed
+              to get someone ready for an apprenticeship.</p>
+            <p>
+              <a href="/trainee/about.html">More about traineeships</a>
+            </p>
+          </div>
+        </div>
         <div class="grid-wrapper">
           <div class="grid grid-1-2">
             <h1 class="heading-xlarge">My applications</h1>
           </div>
           <div class="grid grid-1-2">
-            <a href="search-index.html" class="page-link">Find an apprenticeship</a>
-            <!--  <details>
-      <summary>View your saved searches</summary>
-      <div class="detail-content">
-        <section class="clearfix">
-          <table class="vert-middle">
-            <colgroup>
-              <col class="t50">
-              <col class="t25">
-              <col class="t25">
-              <col>
-            </colgroup>
-            <tr>
-              <td>Hair</td>
-              <td class="ta-center"><a href="#"><i class="fa fa-search"></i>Search</a></td>
-              <td class="ta-center"><a href="#"><i class="fa fa-times"></i>Delete</a></td>
-            </tr>
-            <tr>
-              <td>Carpenter</td>
-              <td class="ta-center"><a href="#"><i class="fa fa-search"></i>Search</a></td>
-              <td class="ta-center"><a href="#"><i class="fa fa-times"></i>Delete</a></td>
-            </tr>
-            <tr>
-              <td>Admin</td>
-              <td class="ta-center"><a href="#"><i class="fa fa-search"></i>Search</a></td>
-              <td class="ta-center"><a href="#"><i class="fa fa-times"></i>Delete</a></td>
-            </tr>
-          </table>
-        </section>
-      </div>
-    </details> -->
+            <div class="page-link">
+              <ul class="list-text small-btm-margin">
+                <li>
+                  <a class="link-unimp" href="search-index.html">Find an apprenticeship</a>
+                </li>
+              </ul>
+              <ul class="list-text toggle-content" id="tshipLink">
+                <li>
+                  <a class="link-unimp" href="/trainee/search-index.html">Find a traineeship</a>
+                </li>
+                <li>
+                  <a class="link-unimp" href="/trainee/about.html">About traineeships</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         <ul class="list-nav">
@@ -131,6 +125,9 @@
           </li>
           <li>
             <span class="bold-medium">1</span>  <a class="" href="#dashDrafts">Drafts</a>
+          </li>
+          <li class="toggle-content" id="tshipJump">
+            <span class="bold-medium">2</span>  <a class="" href="#dashTships">Traineeships</a>
           </li>
           <!--   <li>
     <span class="bold-medium">3</span> <a class="" href="#dashSavedVacancies">Saved apprenticeships</a>
@@ -250,6 +247,41 @@
           </tr>
         </tbody> -->
               </table>
+              <div id="dashTraineeships" class="toggle-content">
+                <h2 class="heading-medium" id="dashTships">Traineeships</h2>
+                <table class="vert-middle">
+                  <colgroup>
+                    <col class="t60">
+                      <col class="t20">
+                        <col class="t20">
+                          <col>
+                  </colgroup>
+                  <tbody class="tbody-3rows">
+                    <tr>
+                      <td>
+                        Traineeship in IT Software Applications (ITQ) with Prolink Associates Ltd
+                      </td>
+                      <td class="ta-center">
+                        Applied
+                      </td>
+                      <td class="ta-center">
+                        10 Nov 14
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        TRAINEESHIP in Hospitality with Quality Hotel Birmingham
+                      </td>
+                      <td class="ta-center">
+                        Applied
+                      </td>
+                      <td class="ta-center">
+                        30 Oct 14
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
               <!-- <h2 class="heading-medium" id="dashSavedVacancies">Saved apprenticeships</h2>
       <table class="vert-middle">
         <colgroup>
@@ -316,7 +348,10 @@
         </div>
       </div>
     </footer>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.3/fastclick.min.js"></script>
     <script src="../_assets/js/scripts.min.js"></script>
+    <script src="../_assets/js/vendor/jstorage.js"></script>
     <!-- Prototype specific scripts -->
     <script src="../_assets/js/vendor/jquery.cookie.js"></script>
     <script src="../_assets/js/prototype.js"></script>
