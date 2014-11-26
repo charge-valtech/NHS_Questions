@@ -183,55 +183,27 @@
           <label for="phoneNumber" class="form-label">Phone</label>
           <input type="tel" id="phoneNumber" class="form-control" value="07942 733876" />
         </div>
-        <div class="toggle-content" id="accountSettings">
-          <div class="form-group inline">
-            <h3 class="heading-large">How we contact you</h3>
-            <div class="panel-indent text">
-              <p>We will send you a notification when:</p>
-              <ul class="list-bullet">
-                <li>you submit an application form</li>
-                <li>the status of one of your applications changes</li>
-                <li>an apprenticeship is approaching its closing date</li>
-              </ul>
-            </div>
-            <p class="form-label">How would you like to be notified?</p>
-            <span class="form-hint text">If you don't select an option you won't receive any notifications</span>
-            <label for="pref-email" class="block-label">
-              <input checked type="checkbox" id="pref-email">Email
-            </label>
-            <label for="pref-tel" class="block-label">
-              <input checked type="checkbox" id="pref-tel">Text message
-            </label>
+        <div id="accountSettings2">
+          <h3 class="heading-large">How we contact you</h3>
+          <div class="panel-indent text">
+            <p>We will send you a notification when:</p>
+            <ul class="list-bullet">
+              <li>you submit an application form</li>
+              <li>the status of one of your applications changes</li>
+              <li>an apprenticeship is approaching its closing date</li>
+            </ul>
           </div>
           <div class="form-group">
-            <a href="#" class="button">Update details</a>
-          </div>
-          <h2 class="heading-large">Deleting your account</h3>
-  <div class="form-group">
-    <p class="text">If you want to remove your details from the apprenticeship service you must <a href="profile-delete.html">delete your account</a></p>
-  </div>
-</div>
-<div class="toggle-content" id="accountSettings2">
-  <h3 class="heading-large">How we contact you</h3>
-  <div class="panel-indent text">
-    <p>We will send you a notification when:</p>
-    <ul class="list-bullet">
-      <li>you submit an application form</li>
-      <li>the status of one of your applications changes</li>
-      <li>an apprenticeship is approaching its closing date</li>
-    </ul>
-  </div>
-  <div class="form-group">
-    <div class="form-group form-group-compound">
-      <p class="form-label">Receive notifications by email</p>
-      <label for="email-yes" class="block-label">
-        <input checked name="emailPref" type="radio" id="email-yes">Yes
-      </label>
-      <label for="email-no" class="block-label">
-        <input name="emailPref" type="radio" id="email-no">No
-      </label>
-    </div>
-    <div class="form-group form-group-compound">
+            <div class="form-group form-group-compound">
+              <p class="form-label">Receive notifications by email</p>
+              <label for="email-yes" class="block-label">
+                <input checked name="emailPref" type="radio" id="email-yes">Yes
+              </label>
+              <label for="email-no" class="block-label">
+                <input name="emailPref" type="radio" id="email-no">No
+              </label>
+            </div>
+            <!-- <div class="form-group form-group-compound">
       <p class="form-label">Receive notifications by text message</p>
       <label for="text-yes" class="block-label">
         <input checked name="textPref" type="radio" id="text-yes">Yes
@@ -239,44 +211,44 @@
       <label for="text-no" class="block-label">
         <input name="textPref" type="radio" id="text-no">No
       </label>
+    </div> -->
+          </div>
+          <div class="form-group">
+            <a href="#" class="button">Update details</a>
+          </div>
+        </div>
+      </main>
     </div>
-  </div>
-  <div class="form-group">
-    <a href="#" class="button">Update details</a>
-  </div>
-  <h2 class="heading-large">Deleting your account</h3>
-  <div class="form-group">
-    <p class="text">If you want to remove your details from the apprenticeship service you must <a href="profile-delete.html">delete your account</a></p>
-  </div>
-</div>
-<div class="form-group" id="updateSettingsBtn">
-  <a href="#" class="button">Update details</a>
-</div>
-    </main>
-  </div>
-  <footer class="gov-border" role="contentinfo">
-  <div class="footer__wrapper">
-    <div class="footer__meta">
-      <ul class="footer__nav" role="navigation">
-        <li class="small-btm-margin"><a class="bold-medium" href="/apprentice/helpdesk.html">Contact us</a></li>
-        <li class="footer__link"><a href="/apprentice/privacy.html">Privacy &amp; Cookies</a></li>
-        <li class="footer__link"><a href="/apprentice/terms.html">Terms &amp; Conditions</a></li>
-        <li class="footer__link">Built by <a href="http://gov.uk/sfa" target="_blank">Skills Funding Agency</a></li>
-        <li class="footer__ogl"><a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/2" class="ir ogl-logo">OGL</a>All content is available under the <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/2">Open Government Licence v2.0</a>, except where otherwise stated</li>
-      </ul>
-      <a class="footer__copyright" href="http://www.nationalarchives.gov.uk/information-management/our-services/crown-copyright.htm" target="_blank">
-        <img src="../_assets/img/govuk-crest-2x.png" width="125" height="102" alt="Crown copyright logo">
-        <p>&copy; Crown copyright</p>
-      </a>
-    </div>
-  </div>
-</footer>
-  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.3/fastclick.min.js"></script>
-  <script src="../_assets/js/scripts.min.js"></script>
-  <script src="../_assets/js/vendor/jstorage.js"></script>
-  <!-- Prototype specific scripts -->
-  <script src="../_assets/js/vendor/jquery.cookie.js"></script>
-  <script src="../_assets/js/prototype.js"></script>
-</body>
+    <footer class="gov-border" role="contentinfo">
+      <div class="footer__wrapper">
+        <div class="footer__meta">
+          <ul class="footer__nav" role="navigation">
+            <li class="small-btm-margin"><a class="bold-medium" href="/apprentice/helpdesk.html">Contact us</a>
+            </li>
+            <li class="footer__link"><a href="/apprentice/privacy.html">Privacy &amp; Cookies</a>
+            </li>
+            <li class="footer__link"><a href="/apprentice/terms.html">Terms &amp; Conditions</a>
+            </li>
+            <li class="footer__link">Built by <a href="http://gov.uk/sfa" target="_blank">Skills Funding Agency</a>
+            </li>
+            <li class="footer__ogl"><a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/2"
+              class="ir ogl-logo">OGL</a>All content is available under the <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/2">Open Government Licence v2.0</a>,
+              except where otherwise stated</li>
+          </ul>
+          <a class="footer__copyright" href="http://www.nationalarchives.gov.uk/information-management/our-services/crown-copyright.htm"
+          target="_blank">
+            <img src="../_assets/img/govuk-crest-2x.png" width="125" height="102" alt="Crown copyright logo">
+            <p>&copy; Crown copyright</p>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.3/fastclick.min.js"></script>
+    <script src="../_assets/js/scripts.min.js"></script>
+    <script src="../_assets/js/vendor/jstorage.js"></script>
+    <!-- Prototype specific scripts -->
+    <script src="../_assets/js/vendor/jquery.cookie.js"></script>
+    <script src="../_assets/js/prototype.js"></script>
+  </body>
 </html>
