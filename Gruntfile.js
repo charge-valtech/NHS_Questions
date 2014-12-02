@@ -248,6 +248,18 @@ module.exports = function(grunt) {
           open: true
         }
       }
+    },
+    uncss: {
+      offline: {
+        options: {
+          // csspath      : 'www/_assets/css/',
+          // urls         : ['http://localhost:/mypage', '...'], // Deprecated
+          timeout      : 1000,
+        },
+        files: {
+          'www/offline/offline.css': ['www/offline/maintenance.html']
+        }
+      }
     }
 
   });
@@ -260,6 +272,8 @@ module.exports = function(grunt) {
     'grunt-contrib-uglify',
     'grunt-contrib-jshint',
     'grunt-sass',
+    'grunt-uncss',
+    'grunt-criticalcss',
     'grunt-contrib-concat',
     'grunt-text-replace',
     'grunt-contrib-watch',
@@ -280,6 +294,8 @@ module.exports = function(grunt) {
   grunt.registerTask('images', ['imageoptim']);
 
   grunt.registerTask('modern', ['modernizr']);
+
+  grunt.registerTask('offline', ['uncss:offline']);
 
   grunt.registerTask('dev', ['jshint', 'concat:dev', 'sass', 'assemble', 'connect', 'watch']);
 

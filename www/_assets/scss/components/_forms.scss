@@ -44,6 +44,9 @@ select {
   table & {
     height: 29px;
   }
+  .copy-16 & {
+    height: 31px;
+  }
 }
 
 .android-browser {
@@ -155,6 +158,9 @@ input::-webkit-inner-spin-button {
       display: inline-block;
       margin-right: 5px;
     }
+  }
+  .copy-16 & {
+    @include core-16;
   }
   .form-lighter-labels & {
     color: $secondary-text-colour;

@@ -66,6 +66,19 @@ ol {
   }
 }
 
+.list-flowing-2cols {
+  list-style-type: none;
+  padding-left: 0;
+  li {
+    @include media(tablet){
+      display: inline-block;
+      margin-right: -4px;
+      vertical-align: top;
+      width: 50%;
+    }
+  }
+}
+
 .list-flowing-3cols {
   list-style-type: none;
   padding-left: 0;
