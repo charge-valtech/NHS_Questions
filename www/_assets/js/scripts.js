@@ -206,6 +206,8 @@ $(function() {
     var $this = $(this),
         $tabID = $this.attr('href');
 
+    console.log($tabID);
+
     $this.addClass('active');
 
     $('.tabbed-tab').not($('[href="' + $tabID + '"]')).removeClass('active');

@@ -17,6 +17,23 @@ ul {
   }
 }
 
+.list-checkradio {
+  li {
+    margin-bottom: 7px;
+    padding-left: 25px;
+    position: relative;
+  }
+  input[type="radio"], input[type="checkbox"] {
+    margin: 0;
+    position: absolute;
+    left: 0; top: 2px;
+  }
+}
+
+.child-list {
+  padding-left: $gutter-half;
+}
+
 .list-bullet {
   margin-bottom: 20px;
 }
@@ -24,6 +41,13 @@ ul {
 .list-max-11 {
   @include core-16;
   max-height: 17.25em; /*276px*/
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+}
+
+.list-max-6 {
+  max-height: 10.125em; /*162px*/
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   width: 100%;

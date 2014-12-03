@@ -79,93 +79,153 @@ headerTitle: Apprenticeships
 <div class="search-results-wrapper grid-wrapper">
   <div class="hgroup">
     <h1 class="heading-xlarge">Search results</h1>
-    <p class="small-btm-margin">We've found <b class="bold-medium">84</b> apprenticeships in your selected apprenticeship type</p>
-    <select name="" id="selectApprType">
-      <option value="">Agriculture, Horticulture and Animal Care</option>
-      <option value="">Arts, Media and Publishing</option>
-      <option value="">Business, Administration and Law</option>
-      <option value="">Construction, Planning and the Built Environment</option>
-      <option value="">Education and Training</option>
-      <option value="">Engineering and Manufacturing Technologies</option>
-      <option value="">Health, Public Services and Care</option>
-      <option value="">Information and Communication Technology</option>
-      <option value="">Leisure, Travel and Tourism</option>
-      <option value="">Retail and Commercial Enterprise</option>
-    </select>
+    <p class="small-btm-margin">We've found <b class="bold-medium">84</b> apprenticeships in your selected apprenticeship sector</p>
   </div>
   <section class="grid grid-1-3">
     <fieldset class="search-filter">
-      <legend class="heading-medium mob-collpanel-trigger">Edit search</legend>
-      <div class="mob-collpanel toggle-content--mob">
-        <div class="form-group">
-          <details>
-            <summary>Browse within type</summary>
-            <ul class="panel-indent copy-16 list-text details-content">
-              <li><a class="link-unimp" href="">Agriculture</a></li>
-              <li><a class="link-unimp" href="">Animal Care</a></li>
-              <li><a class="link-unimp" href="">Animal Technology</a></li>
-              <li><a class="link-unimp" href="">Environmental Conservation</a></li>
-              <li><a class="link-unimp" href="">Equine</a></li>
-              <li><a class="link-unimp" href="">Farriery</a></li>
-              <li><a class="link-unimp" href="">Fencing</a></li>
-              <li><a class="link-unimp" href="">Fish Husbandry and Fisheries Management</a></li>
-              <li><a class="link-unimp" href="">Floristry</a></li>
-              <li><a class="link-unimp" href="">Game and Wildlife Management</a></li>
-              <li><a class="link-unimp" href="">Horticulture</a></li>
-              <li><a class="link-unimp" href="">Land-based Engineering</a></li>
-              <li><a class="link-unimp" href="">Nursing Assistant in a Veterinary Environment</a></li>
-              <li><a class="link-unimp" href="">Trees and Timber</a></li>
-              <li><a class="link-unimp" href="">Veterinary Nursing</a></li>
+      <legend class="hide-tablet heading-medium mob-collpanel-trigger">Edit search</legend>
+      <div class="toggle-content--mob mob-collpanel">
+        <nav class="tabbed-nav">
+          <a href="#tab1" class="tabbed-tab">Search</a>
+          <a href="#tab2" class="tabbed-tab active">Browse</a>
+        </nav>
+        <div class="tabbed-content" id="tab1">
+          <div class="form-group">
+            <label for="keywords" class="form-label">Keywords (optional)</label>
+            <span class="form-hint">Can include job title, reference number or keyword</span>
+            <input id="keywords" type="text" class="form-control form-control-3-4 search-proto-input search-proto-input-1">
+          </div>
+          <div class="form-group">
+            <label for="location" class="form-label">Apprenticeship location</label>
+            <span class="form-hint">Enter postcode, town or city</span>
+            <input id="location" type="text" class="form-control form-control-3-4 search-proto-input search-proto-input-2">
+          </div>
+          <div class="form-group">
+            <label for="loc-within" class="form-label">Within</label>
+            <select id="loc-within">
+              <option value="">2 miles</option>
+              <option value="">5 miles</option>
+              <option value="">10 miles</option>
+              <option value="">15 miles</option>
+              <option value="">20 miles</option>
+              <option value="">30 miles</option>
+              <option value="">40 miles</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <a class="button" href="search-results.html?Keywords=&Location=Coventry+%28West+Midlands%29&WithinDistance=10&Latitude=52.4035&Longitude=-1.50901&Hash=0&LocationType=NonNational&ResultsPerPage=5">Update results</a>
+          </div>
+          <!-- <div class="form-group">
+            <div id="map-canvas" class="map-container" style="width: 100%; height: 250px"></div>
+          </div> -->
+          <div class="form-group">
+            <details>
+              <summary>Filter results</summary>
+              <div class="detail-content">
+                <div class="form-group">
+                  <label for="wageFilter" class="form-label">Minimum wage (per hour)</label>
+                  <input id="wageFilter" type="text" class="form-control width-all-1-2" value="£2.73">
+                </div>
+                <div class="form-group">
+                  <label for="apprType" class="form-label">Apprenticeship level</label>
+                  <select name="" id="apprType">
+                    <option value="">Select level</option>
+                    <option value="">Intermediate (level 2)</option>
+                    <option value="">Advanced (level 3)</option>
+                    <option value="">Higher (level 4 or above)</option>
+                  </select>
+                </div>
+                <div>
+                  <button class="button">Apply filters</button>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+        <div class="tabbed-content active" id="tab2">
+          <div class="form-group form-group-compound">
+            <label for="location" class="form-label">Apprenticeship location</label>
+            <input id="location" type="text" class="form-control search-proto-result-input search-proto-result-input-2" value="coventry">
+          </div>
+          <div class="form-group">
+            <label for="loc-within" class="form-label">Within</label>
+            <select id="loc-within">
+              <option value="">2 miles</option>
+              <option value="">5 miles</option>
+              <option value="">10 miles</option>
+              <option value="">15 miles</option>
+              <option selected value="">20 miles</option>
+              <option value="">30 miles</option>
+              <option value="">40 miles</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <ul class="copy-16 list-text list-checkradio details-content">
+              <li>
+                <input checked type="radio" name="parentSectors" id="parentInput0"><label for="parentInput0">Agriculture, Horticulture and Animal Care</label>
+                <ul class="copy-16 list-text list-checkradio">
+                  <li><input type="checkbox" id="childInput1"><label for="childInput1">Agriculture</label></li>
+                  <li><input type="checkbox" id="childInput2"><label for="childInput2">Animal Care</label></li>
+                  <li><input type="checkbox" id="childInput3"><label for="childInput3">Animal Technology</label></li>
+                  <li><input type="checkbox" id="childInput4"><label for="childInput4">Environmental Conservation</label></li>
+                  <li><input type="checkbox" id="childInput5"><label for="childInput5">Equine</label></li>
+                  <li><input type="checkbox" id="childInput6"><label for="childInput6">Farriery</label></li>
+                  <li><input type="checkbox" id="childInput7"><label for="childInput7">Fencing</label></li>
+                  <li><input type="checkbox" id="childInput8"><label for="childInput8">Fish Husbandry and Fisheries Management</label></li>
+                  <li><input type="checkbox" id="childInput9"><label for="childInput9">Floristry</label></li>
+                  <li><input type="checkbox" id="childInput10"><label for="childInput10">Game and Wildlife Management</label></li>
+                  <li><input type="checkbox" id="childInput11"><label for="childInput11">Horticulture</label></li>
+                  <li><input type="checkbox" id="childInput12"><label for="childInput12">Land-based Engineering</label></li>
+                  <li><input type="checkbox" id="childInput13"><label for="childInput13">Nursing Assistant in a Veterinary Environment</label></li>
+                  <li><input type="checkbox" id="childInput14"><label for="childInput14">Trees and Timber</label></li>
+                  <li><input type="checkbox" id="childInput15"><label for="childInput15">Veterinary Nursing</label></li>
+                </ul>
+              </li>
+              <li>
+                <input type="radio" name="parentSectors" id="parentInput1"><label for="parentInput1">Arts, Media and Publishing</label>
+              </li>
+              <li><input type="radio" name="parentSectors" id="parentInput2"><label for="parentInput2">Business, Administration and Law</label></li>
+              <li><input type="radio" name="parentSectors" id="parentInput3"><label for="parentInput3">Construction, Planning and the Built Environment</label></li>
+              <li><input type="radio" name="parentSectors" id="parentInput4"><label for="parentInput4">Education and Training</label></li>
+              <li><input type="radio" name="parentSectors" id="parentInput5"><label for="parentInput5">Engineering and Manufacturing Technologies</label></li>
+              <li><input type="radio" name="parentSectors" id="parentInput6"><label for="parentInput6">Health, Public Services and Care</label></li>
+              <li><input type="radio" name="parentSectors" id="parentInput7"><label for="parentInput7">Information and Communication Technology</label></li>
+              <li><input type="radio" name="parentSectors" id="parentInput8"><label for="parentInput8">Leisure, Travel and Tourism</label></li>
+              <li><input type="radio" name="parentSectors" id="parentInput9"><label for="parentInput9">Retail and Commercial Enterprise</label></li>
             </ul>
-          </details>
-
-        </div>
-        <div class="form-group">
-          <label for="location" class="form-label">Apprenticeship location</label>
-          <input id="location" type="text" class="form-control search-proto-result-input search-proto-result-input-2" value="coventry">
-        </div>
-        <div class="form-group">
-          <label for="loc-within" class="form-label">Within</label>
-          <select id="loc-within">
-            <option value="">2 miles</option>
-            <option value="">5 miles</option>
-            <option value="">10 miles</option>
-            <option value="">15 miles</option>
-            <option selected value="">20 miles</option>
-            <option value="">30 miles</option>
-            <option value="">40 miles</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <a href="#" class="button no-btm-margin">Update results</a>
-        </div>
-        <div class="form-group">
-          <div id="map-canvas" class="map-container" style="width: 100%; height: 250px"></div>
-        </div>
-        <div class="form-group">
-          <details>
-            <summary>Filter results</summary>
-            <div class="detail-content">
-              <div class="form-group">
-                <label for="wageFilter" class="form-label">Minimum wage (per hour)</label>
-                <input id="wageFilter" type="text" class="form-control width-all-1-2" value="£2.73">
+          </div>
+          <div class="form-group">
+            <a href="#" class="button">Update results</a>
+          </div>
+          <div class="form-group">
+            <div id="map-canvas" class="map-container" style="width: 100%; height: 250px"></div>
+          </div>
+          <div class="form-group">
+            <details>
+              <summary>Filter results</summary>
+              <div class="detail-content">
+                <div class="form-group">
+                  <label for="wageFilter" class="form-label">Minimum wage (per hour)</label>
+                  <input id="wageFilter" type="text" class="form-control width-all-1-2" value="£2.73">
+                </div>
+                <div class="form-group">
+                  <label for="apprType" class="form-label">Apprenticeship level</label>
+                  <select name="" id="apprType">
+                    <option value="">Select level</option>
+                    <option value="">Intermediate (level 2)</option>
+                    <option value="">Advanced (level 3)</option>
+                    <option value="">Higher (level 4 or above)</option>
+                  </select>
+                </div>
+                <div>
+                  <button class="button">Apply filters</button>
+                </div>
               </div>
-              <div class="form-group">
-                <label for="apprType" class="form-label">Apprenticeship level</label>
-                <select name="" id="apprType">
-                  <option value="">Select level</option>
-                  <option value="">Intermediate (level 2)</option>
-                  <option value="">Advanced (level 3)</option>
-                  <option value="">Higher (level 4 or above)</option>
-                </select>
-              </div>
-              <div>
-                <button class="button">Apply filters</button>
-              </div>
-            </div>
-          </details>
+            </details>
+          </div>
         </div>
       </div>
+
     </fieldset>
   </section>
   <section class="grid grid-2-3">
