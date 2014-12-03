@@ -91,7 +91,7 @@ module.exports = function(grunt) {
         tasks: ['jshint', 'concat:dev']
       },
       hbs: {
-        files: ['www/_templates/{,*/}*.hbs', 'www/_templates/{,*/*/}*.hbs'],
+        files: ['www/_templates/{,*/}*.hbs', 'www/_templates/{,*/*/}*.hbs', 'www/_templates/{,*/*/*/}*.hbs'],
         tasks: ['assemble']
       },
       html: {

@@ -200,4 +200,21 @@ $(function() {
     }
   });
 
+  //----------Tabbed content
+
+  $('.tabbed-tab').on('click', function () {
+    var $this = $(this),
+        $tabID = $this.attr('href');
+
+    $this.addClass('active');
+
+    $('.tabbed-tab').not($('[href="' + $tabID + '"]')).removeClass('active');
+
+    $($tabID).show();
+
+    $('.tabbed-content').not($tabID).hide();
+
+    return false;
+  });
+
 });
