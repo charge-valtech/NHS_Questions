@@ -1,0 +1,228 @@
+---
+headerTitle: Apprenticeships
+---
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js">
+</script>
+<script type="text/javascript">
+  function gup( name )
+    {
+      name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+      var regexS = "[\\?&]"+name+"=([^&#]*)";
+      var regex = new RegExp( regexS );
+      var results = regex.exec( window.location.href );
+      if( results == null )
+        return null;
+      else
+        return results[1];
+    }
+
+  var latitude   = Number(gup( 'Latitude' )),
+      longitude  = Number(gup( 'Longitude' )),
+      miles      = Number(gup( 'WithinDistance' )),
+      zoom       = 9,
+      radiusCircle;
+
+  if(miles <= 40) {
+    zoom = 7
+  }
+
+  if(miles <= 30) {
+    zoom = 8
+  }
+
+  if(miles < 20) {
+    zoom = 9
+  }
+
+  if(miles < 10) {
+    zoom = 10
+  }
+
+  if(miles < 5) {
+    zoom = 11
+  }
+
+
+
+  function initialize() {
+
+    var mapOptions = {
+      center: { lat: latitude, lng: longitude},
+      zoom: zoom,
+      panControl: false,
+      zoomControl: true,
+      mapTypeControl: false,
+      scaleControl: false,
+      streetViewControl: false,
+      overviewMapControl: false,
+      scrollwheel: false
+    };
+
+    var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+    var distanceCircle = {
+      strokeColor: '#005ea5',
+      strokeOpacity: 0.8,
+      strokeWeight: 2,
+      fillColor: '#005ea5',
+      fillOpacity: 0.25,
+      map: map,
+      center: mapOptions.center,
+      radius: miles * 1609.344
+    }
+
+    radiusCircle = new google.maps.Circle(distanceCircle);
+
+  }
+  google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+<div class="search-results-wrapper grid-wrapper">
+  <div class="hgroup">
+    <h1 class="heading-xlarge">Search results</h1>
+    <p class="small-btm-margin">We've found <b class="bold-medium">18</b> apprenticeships in your selected area.</p>
+    <p>We've also found <a href="#">4 apprenticeships nationwide</a>.</p>
+  </div>
+  <section class="grid grid-1-3">
+    <fieldset class="search-filter">
+      <legend class="heading-medium mob-collpanel-trigger">Edit search</legend>
+      <div class="mob-collpanel toggle-content--mob">
+        <div class="form-group">
+          <label for="keywords" class="form-label">Keywords (optional)</label>
+          <input id="keywords" type="text" class="form-control search-proto-result-input search-proto-result-input-1" value="building">
+        </div>
+        <div class="form-group">
+          <label for="apprType" class="form-label">Apprenticeship level</label>
+          <select name="" id="apprType">
+            <option value="">Select level</option>
+            <option value="">Intermediate (level 2)</option>
+            <option value="">Advanced (level 3)</option>
+            <option value="">Higher (level 4 or above)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="location" class="form-label">Apprenticeship location</label>
+          <input id="location" type="text" class="form-control search-proto-result-input search-proto-result-input-2" value="coventry">
+        </div>
+        <div class="form-group">
+          <label for="loc-within" class="form-label">Within</label>
+          <select id="loc-within">
+            <option value="">2 miles</option>
+            <option value="">5 miles</option>
+            <option selected value="">10 miles</option>
+            <option value="">15 miles</option>
+            <option value="">20 miles</option>
+            <option value="">30 miles</option>
+            <option value="">40 miles</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <a href="#" class="button no-btm-margin">Update results</a>
+        </div>
+        <div class="form-group">
+          <div id="map-canvas" class="map-container" style="width: 100%; height: 250px"></div>
+        </div>
+      </div>
+    </fieldset>
+  </section>
+  <section class="grid grid-2-3">
+    <fieldset>
+      <legend class="visuallyhidden">Search items</legend>
+      <div class="float-right-wrap">
+        <div class="form-group form-group-compound">
+          <label for="sort-results" class="heading-medium inline">Sort results</label>
+          <select name="" id="sort-results">
+            <option value="sort-distance">Distance</option>
+            <option value="sort-closing">Closing date</option>
+          </select>
+        </div>
+      </div>
+    </fieldset>
+    <ul class="search-results">
+      <li class="search-results__item section-border">
+        <div class="hgroup-medium">
+          <h3 class="heading-medium"><a href="search-details.html">Mechanical Engineer – Precision Toolmaker</a></h3>
+          <h4 class="subtitle">R G Engineering</h4>
+        </div>
+        <p>
+          An exciting opportunity has arisen for the right candidate to gain an engineering qualification through an apprenticeship. If you have got drive and want to learn a highly skilled trade then look no further.
+        </p>
+        <div class="inl-block-wrapper">
+          <ul class="list-text btm-align width-all-2-3">
+            <li><b>Distance:</b> 5.2 miles</li>
+            <li><b>Closing date:</b> 30 Jun 14</li>
+          </ul>
+          <div class="btm-align width-all-1-3">
+<!--             <div class="search-save">
+              <input type="checkbox" class="save-trigger" id="save-trigger1">
+              <label for="save-trigger1">Save</label>
+            </div> -->
+          </div>
+        </div>
+      </li>
+      <li class="search-results__item section-border">
+        <div class="hgroup-medium">
+          <h3 class="heading-medium"><a href="#">Advanced Apprenticeship in Electro-technical Installation/Maintenance</a></h3>
+          <h4 class="subtitle">Johnson Controls Ltd</h4>
+        </div>
+        <p>
+          Electro-technical Engineers are responsible for the installation, maintenance, and the diagnosis and repair of faults, for a variety of Electrical Services and Equipment in commercial, industrial and retail buildings.
+        </p>
+        <div class="inl-block-wrapper">
+          <ul class="list-text btm-align width-all-2-3">
+            <li><b>Distance:</b> 5.2 miles</li>
+            <li><b>Closing date:</b> 14 Jun 14</li>
+          </ul>
+          <div class="btm-align width-all-1-3">
+<!--             <div class="search-save">
+              <input type="checkbox" class="save-trigger" id="save-trigger2">
+              <label for="save-trigger2">Save</label>
+            </div> -->
+          </div>
+        </div>
+      </li>
+      <li class="search-results__item section-border">
+        <div class="hgroup-medium">
+          <h3 class="heading-medium"><a href="#">Engineering Compressed Air Service Apprentice</a></h3>
+          <h4 class="subtitle">Direct Air &amp; Pipe Work Ltd</h4>
+        </div>
+        <p>
+          Training to become a Compressed Air Service Engineer Once qualified working at Customers Premises around the Midlands and UK with company vehicle carrying out routine servicing/repairs of compressed air equipment.
+        </p>
+        <div class="inl-block-wrapper">
+          <ul class="list-text btm-align width-all-2-3">
+            <li><b>Distance:</b> 5.2 miles</li>
+            <li><b>Closing date:</b> 18 Jun 14</li>
+          </ul>
+          <div class="btm-align width-all-1-3">
+<!--             <div class="search-save">
+              <input type="checkbox" class="save-trigger" id="save-trigger3">
+              <label for="save-trigger3">Save</label>
+            </div> -->
+          </div>
+        </div>
+      </li>
+    </ul>
+    <div class="page-navigation">
+      <a href="#" class="page-navigation__btn previous">
+        <i class="arrow-button fa fa-angle-left"></i>
+        <span class="description">Previous <span class="hide-mob">page</span></span>
+        <span class="counter">1 of 6</span>
+      </a>
+      <a href="#" class="page-navigation__btn next">
+        <i class="arrow-button fa fa-angle-right"></i>
+        <span class="description">Next <span class="hide-mob">page</span></span>
+        <span class="counter">2 of 6</span>
+      </a>
+    </div>
+    <div class="form-group">
+    <label for="results-per-page" class="heading-small inline">Display results</label>
+      <select id="results-per-page" name="resultsPerPage"><option selected="selected" value="5">5 per page</option>
+        <option value="10">10 per page</option>
+        <option value="25">25 per page</option>
+        <option value="50">50 per page</option>
+      </select>
+    </div>
+  </section>
+</div>
+
+
