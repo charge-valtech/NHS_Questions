@@ -116,17 +116,11 @@ headerTitle: Apprenticeships
           </select>
         </div>
         <div class="form-group">
-          <a href="#" class="button no-btm-margin">Update results</a>
-        </div>
-        <div class="form-group">
-          <div id="map-canvas" class="map-container" style="width: 100%; height: 250px"></div>
-        </div>
-        <div class="form-group">
-          <details open>
-            <summary>Filter results</summary>
+          <details>
+            <summary>Filter by wage/level</summary>
             <div class="detail-content">
               <div class="form-group">
-                <label for="wageFilter" class="form-label">Weekly wage</label>
+                <label for="wageFilter" class="form-label">Weekly wage (from)</label>
                 <input id="wageFilter" type="text" class="form-control width-all-1-2" value="">
               </div>
               <div class="form-group">
@@ -138,11 +132,14 @@ headerTitle: Apprenticeships
                   <option value="">Higher (level 4 or above)</option>
                 </select>
               </div>
-              <div>
-                <button class="button">Apply filters</button>
-              </div>
             </div>
           </details>
+        </div>
+        <div class="form-group">
+          <a href="#" class="button no-btm-margin">Update results</a>
+        </div>
+        <div class="form-group">
+          <div id="map-canvas" class="map-container" style="width: 100%; height: 250px"></div>
         </div>
       </div>
     </fieldset>

@@ -115,9 +115,9 @@
       <div class="form-group">
         <label for="locationBrowse" class="form-label">Apprenticeship location</label>
         <span class="form-hint">Enter postcode, town or city</span>
-        <input id="locationBrowse" type="text" class="form-control form-control-3-4 search-proto-input search-proto-input-2">
+        <input autofocus id="locationBrowse" type="text" class="form-control form-control-3-4 search-proto-input search-proto-input-2">
       </div>
-      <div class="grid-wrapper">
+      <!-- <div class="grid-wrapper">
         <div class="grid grid-1-2">
           <div class="inner-block-padr">
             <ul class="list-text no-btm-margin">
@@ -138,6 +138,31 @@
             <li><a href="search-results-browse.html?Keywords=&Location=b2+4nd&WithinDistance=20&SearchAction=Search&Latitude=52.4781331433771&Longitude=-1.8986588941503&Hash=-699855120&LocationType=NonNational&sortType=Distance&SearchAction=Search&resultsPerPage=5" class="link-unimp">Retail and Commercial Enterprise</a></li>
           </ul>
         </div>
+      </div> -->
+      <div class="grid-wrapper">
+        <div class="grid grid-1-2">
+          <div class="inner-block-padr">
+            <ul class="copy-16 list-text list-checkradio details-content">
+              <li><input type="radio" name="parentSectors" id="parentInput0"><label for="parentInput0">Agriculture, Horticulture and Animal Care</label></li>
+              <li><input type="radio" name="parentSectors" id="parentInput1"><label for="parentInput1">Arts, Media and Publishing</label></li>
+              <li><input type="radio" name="parentSectors" id="parentInput2"><label for="parentInput2">Business, Administration and Law</label></li>
+              <li><input type="radio" name="parentSectors" id="parentInput3"><label for="parentInput3">Construction, Planning and the Built Environment</label></li>
+              <li><input type="radio" name="parentSectors" id="parentInput4"><label for="parentInput4">Education and Training</label></li>
+            </ul>
+          </div>
+        </div>
+        <div class="grid grid-1-2">
+          <ul class="copy-16 list-text list-checkradio details-content">
+            <li><input type="radio" name="parentSectors" id="parentInput5"><label for="parentInput5">Engineering and Manufacturing Technologies</label></li>
+            <li><input type="radio" name="parentSectors" id="parentInput6"><label for="parentInput6">Health, Public Services and Care</label></li>
+            <li><input type="radio" name="parentSectors" id="parentInput7"><label for="parentInput7">Information and Communication Technology</label></li>
+            <li><input type="radio" name="parentSectors" id="parentInput8"><label for="parentInput8">Leisure, Travel and Tourism</label></li>
+            <li><input type="radio" name="parentSectors" id="parentInput9"><label for="parentInput9">Retail and Commercial Enterprise</label></li>
+          </ul>
+        </div>
+      </div>
+      <div class="form-group">
+        <a href="search-results-browse.html?Keywords=&Location=b2+4nd&WithinDistance=20&SearchAction=Search&Latitude=52.4781331433771&Longitude=-1.8986588941503&Hash=-699855120&LocationType=NonNational&sortType=Distance&SearchAction=Search&resultsPerPage=5" class="button">Search</a>
       </div>
     </div>
   </section>
