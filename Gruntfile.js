@@ -176,7 +176,7 @@ module.exports = function(grunt) {
         }]
       },
       scripts: {
-        src: ['www/apprentice/*.html', 'www/trainee/*.html', 'www/employer/*.html', 'www/*.html'],
+        src: ['www/apprentice/*.html', 'www/test/apprentice/*.html', 'www/trainee/*.html', 'www/employer/*.html', 'www/*.html'],
         overwrite: true,
         replacements: [{
           from: 'scripts.js',
