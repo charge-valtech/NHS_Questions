@@ -79,7 +79,7 @@ headerTitle: Apprenticeships
 <div class="search-results-wrapper grid-wrapper">
   <div class="hgroup">
     <h1 class="heading-xlarge">Search results</h1>
-    <p class="small-btm-margin">We've found <b class="bold-medium">37</b> apprenticeships in your selected apprenticeship sector</p>
+    <p class="small-btm-margin">We've found <b class="bold-medium">237</b> apprenticeships in your selected apprenticeship sector</p>
   </div>
   <section class="grid grid-1-3">
     <fieldset class="search-filter">
@@ -135,22 +135,25 @@ headerTitle: Apprenticeships
           </div>
         </div>
         <div class="tabbed-content active" id="tab2">
-          <div class="form-group form-group-compound">
-            <label for="location" class="form-label">Apprenticeship location</label>
-            <input id="location" type="text" class="form-control search-proto-result-input search-proto-result-input-2" value="coventry">
-          </div>
-          <div class="form-group">
-            <label for="loc-within" class="form-label">Within</label>
-            <select id="loc-within">
-              <option value="">2 miles</option>
-              <option value="">5 miles</option>
-              <option value="">10 miles</option>
-              <option value="">15 miles</option>
-              <option value="">20 miles</option>
-              <option value="">30 miles</option>
-              <option selected value="">40 miles</option>
-            </select>
-          </div>
+          <details>
+            <summary>Location</summary>
+            <div class="form-group form-group-compound">
+              <label for="nolocation" class="form-label">Apprenticeship location</label>
+              <input id="nolocation" type="text" class="form-control search-proto-result-input search-proto-result-input-2" value="coventry">
+            </div>
+            <div class="form-group">
+              <label for="loc-within" class="form-label">Within</label>
+              <select id="loc-within">
+                <option value="">2 miles</option>
+                <option value="">5 miles</option>
+                <option value="">10 miles</option>
+                <option value="">15 miles</option>
+                <option value="">20 miles</option>
+                <option value="">30 miles</option>
+                <option value="">40 miles</option>
+              </select>
+            </div>
+          </details>
           <div class="form-group">
             <details open>
               <summary>Show/hide sectors</summary>
@@ -340,9 +343,9 @@ headerTitle: Apprenticeships
           <div class="form-group">
             <a href="#" class="button">Update results</a>
           </div>
-          <div class="form-group">
+          <!-- <div class="form-group">
             <div id="map-canvas" class="map-container" style="width: 100%; height: 250px"></div>
-          </div>
+          </div> -->
         </div>
       </div>
 
@@ -355,7 +358,7 @@ headerTitle: Apprenticeships
         <div class="form-group form-group-compound">
           <label for="sort-results" class="heading-medium inline">Sort results</label>
           <select name="" id="sort-results">
-            <option value="sort-distance">Distance</option>
+            <!-- <option value="sort-distance">Distance</option> -->
             <option value="sort-closing">Closing date</option>
           </select>
         </div>

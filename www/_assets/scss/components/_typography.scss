@@ -304,6 +304,9 @@ a, .fake-link {
       text-decoration: underline;
     }
   }
+  &[href^=mailto] {
+    word-wrap: break-word;
+  }
 }
 
 .fake-link {
