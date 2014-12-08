@@ -8,6 +8,13 @@ headerTitle: Find an apprenticeship
     var mapOptions = {
       center: { lat: 52.490829, lng: -1.897802},
       mapTypeControl: false,
+      panControl: false,
+      zoomControl: true,
+      mapTypeControl: false,
+      scaleControl: false,
+      // streetViewControl: false,
+      overviewMapControl: false,
+      scrollwheel: false,
       zoom: 13
     }
 
@@ -32,53 +39,53 @@ headerTitle: Find an apprenticeship
 
   var appships = [
     [
-      'Traineeship in IT Software Applications (ITQ) with Prolink Associates Ltd',
+      'Mechanical Engineer – Precision Toolmaker',
       52.482571,
       -1.902266,
       1,
-      "tship-01"
+      "appship-01"
     ],
     [
-      'TRAINEESHIP in Warehousing with Gordon Franks Training',
+      'Track Maintenance and Engineer Apprentice (Birmingham)',
       52.484871,
       -1.909218,
       2,
-      "tship-02"
+      "appship-02"
     ],
     [
-      'TRAINEESHIP in Business Administration with National Institute of Professional Drivers Ltd',
+      'Apprentice grinding engineer',
       52.50034,
       -1.905524,
       3,
-      "tship-03"
+      "appship-03"
     ],
     [
-      'TRAINEESHIP in Hospitality with Quality Hotel Birmingham',
+      'Engineering Apprentice',
       52.468247,
       -1.913939,
       4,
-      "tship-04"
+      "appship-04"
     ],
     [
-      'TRAINEESHIP Administrator with Computaccount Uk Ltd',
+      'Manufacturing Technician Apprentice',
       52.462651,
       -1.898575,
       5,
-      "tship-05"
+      "appship-05"
     ],
     [
-      'TRAINEESHIP in Early Years with Busy Bees Childcare Ltd',
+      'Apprentice Manufacturing Operator',
       52.487066,
       -1.857376,
       6,
-      "tship-06"
+      "appship-06"
     ],
     [
-      'TRAINEESHIP in Administration with Genting Casinos Egypt Limited',
+      'Manufacturing Technician Apprentice',
       52.516691,
       -1.876688,
       7,
-      "tship-07"
+      "appship-07"
     ]
   ];
 
@@ -86,14 +93,14 @@ headerTitle: Find an apprenticeship
     var image = '{{assets}}/img/icon-location.svg';
 
     for (var i = 0; i < locations.length; i++) {
-      var tship = locations[i];
-      var myLatLng = new google.maps.LatLng(tship[1], tship[2]);
+      var appship = locations[i];
+      var myLatLng = new google.maps.LatLng(appship[1], appship[2]);
       var marker = new google.maps.Marker({
           position: myLatLng,
           map: map,
           icon: image,
-          title: tship[0],
-          zIndex: tship[3]
+          title: appship[0],
+          zIndex: appship[3]
       });
     }
   }
@@ -120,7 +127,7 @@ headerTitle: Find an apprenticeship
       <div class="form-group">
         <label for="keywordSearch" class="form-label">Keyword (optional)</label>
         <!-- <span class="form-hint">Enter a postcode, town or city</span> -->
-        <input type="text" id="keywordSearch" class="form-control form-control-3-4" value="business admin">
+        <input type="text" id="keywordSearch" class="form-control form-control-3-4" value="engineer">
       </div>
       <div class="form-group">
         <label for="locationSearch" class="form-label">Location</label>
@@ -152,7 +159,7 @@ headerTitle: Find an apprenticeship
       <div class="mob-collpanel toggle-content--mob">
         <div class="form-group">
           <label for="keywords" class="form-label">Keywords (optional)</label>
-          <input id="keywords" type="text" class="form-control search-proto-result-input search-proto-result-input-1" value="building">
+          <input id="keywords" type="text" class="form-control search-proto-result-input " value="engineer">
         </div>
         <!-- <div class="form-group">
           <label for="apprType" class="form-label">Apprenticeship level</label>
@@ -165,14 +172,14 @@ headerTitle: Find an apprenticeship
         </div> -->
         <div class="form-group">
           <label for="location" class="form-label">Apprenticeship location</label>
-          <input id="location" type="text" class="form-control search-proto-result-input search-proto-result-input-2" value="coventry">
+          <input id="location" type="text" class="form-control search-proto-result-input" value="B2 4ND">
         </div>
         <div class="form-group">
           <label for="loc-within" class="form-label">Within</label>
           <select id="loc-within">
             <option value="">2 miles</option>
             <option value="">5 miles</option>
-            <option selected value="">10 miles</option>
+            <option value="">10 miles</option>
             <option value="">15 miles</option>
             <option value="">20 miles</option>
             <option value="">30 miles</option>
