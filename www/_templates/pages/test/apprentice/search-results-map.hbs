@@ -39,53 +39,74 @@ headerTitle: Find an apprenticeship
 
   var appships = [
     [
-      'Mechanical Engineer – Precision Toolmaker',
+      'Engineer Training Programme - First Line Managers (Higher Apprenticeship) ',
       52.482571,
       -1.902266,
       1,
-      "appship-01"
+      "appship-01",
+      '<h2 class="heading-small">Engineer Training Programme - First Line Managers (Higher Apprenticeship)</h2>' +
+      '<p>National Grid is a leading gas and electricity company, our Engineer Training Programme will turn your interest in practical and technical subjects into a long-term career, where you will constantly learn and develop new skills.</p>' +
+      '<p><a href="search-details.html">View apprenticeship</a></p>'
     ],
     [
       'Track Maintenance and Engineer Apprentice (Birmingham)',
       52.484871,
       -1.909218,
       2,
-      "appship-02"
+      "appship-02",
+      '<h2 class="heading-small">Track Maintenance and Engineer Apprentice (Birmingham)</h2>' +
+      '<p>Intertrain’s Track Maintenance and Engineering apprenticeship a fantastic opportunity for practically minded people. Our students learn fundamental skills in the railway industry by undertaking work experience trackside, whilst developing academic skills.</p>' +
+      '<p><a href="search-details.html">View apprenticeship</a></p>'
     ],
     [
       'Apprentice grinding engineer',
       52.50034,
       -1.905524,
       3,
-      "appship-03"
+      "appship-03",
+      '<h2 class="heading-small">Apprentice grinding engineer</h2>' +
+      '<p>Apprentice engineer required to learn primarily surface grinding.</p>' +
+      '<p><a href="search-details.html">View apprenticeship</a></p>'
     ],
     [
       'Engineering Apprentice',
       52.468247,
       -1.913939,
       4,
-      "appship-04"
+      "appship-04",
+      '<h2 class="heading-small">Engineering Apprentice</h2>' +
+      '<p>An excellent opportunity to work for a well established engineering firm based just outside Birmingham City Centre. Training to become a CNC Setter/Programmer.</p>' +
+      '<p><a href="search-details.html">View apprenticeship</a></p>'
     ],
     [
       'Manufacturing Technician Apprentice',
       52.462651,
       -1.898575,
       5,
-      "appship-05"
+      "appship-05",
+      '<h2 class="heading-small">Manufacturing Technician Apprentice</h2>' +
+      '<p>Key training will be given to the chosen candidate to enable them to complete various tasks using modern manufacturing techniques. The role includes machine setting, turning materials, quality control and many more.</p>' +
+      '<p><a href="search-details.html">View apprenticeship</a></p>'
     ],
     [
       'Apprentice Manufacturing Operator',
       52.487066,
       -1.857376,
       6,
-      "appship-06"
+      "appship-06",
+      '<h2 class="heading-small">Apprentice Manufacturing Operator</h2>' +
+      '<p>Shaftec produce a range of key components used many different motor vehicles. You will be trained how to use relevant pieces of machinery and also assemble pieces to a flawless standard.</p>' +
+      '<p><a href="search-details.html">View apprenticeship</a></p>'
     ],
     [
       'Manufacturing Technician Apprentice',
       52.516691,
       -1.876688,
       7,
-      "appship-07"
+      "appship-07",
+      '<h2 class="heading-small">Manufacturing Technician Apprentice</h2>' +
+      '<p>Key training will be given to the chosen candidate to enable them to complete various tasks using modern manufacturing techniques. The role includes machine setting, turning materials, quality control and many mor</p>' +
+      '<p><a href="search-details.html">View apprenticeship</a></p>'
     ]
   ];
 
@@ -102,10 +123,25 @@ headerTitle: Find an apprenticeship
           title: appship[0],
           zIndex: appship[3]
       });
+
+      var infowindow = new google.maps.InfoWindow({
+        content: '',
+        maxWidth: 300
+      });
+
+      bindInfoWindow(marker, map, infowindow, appship[5]);
     }
   }
 
+  function bindInfoWindow(marker, map, infowindow, strDescription) {
+    google.maps.event.addListener(marker, 'click', function() {
+      infowindow.setContent(strDescription);
+      infowindow.open(map, marker);
+    });
+  }
+
   google.maps.event.addDomListener(window, 'load', initialize);
+
 </script>
 <div class="hgroup">
   <h1 class="heading-xlarge small-btm-margin">Search results</h1>
@@ -116,44 +152,67 @@ headerTitle: Find an apprenticeship
   <a href="#tab2" class="tabbed-tab">View in list</a>
 </nav>
 <div class="grid-wrapper tabbed-content active" id="tab1">
+  <div class="grid grid-1-3">
+    <fieldset>
+      <legend class="heading-medium mob-collpanel-trigger">Edit search</legend>
+      <div class="mob-collpanel toggle-content--mob">
+        <div class="form-group">
+          <label for="keywordSearch" class="form-label">Keywords (optional)</label>
+          <!-- <span class="form-hint">Enter a postcode, town or city</span> -->
+          <input type="text" id="keywordSearch" class="form-control form-control-3-4" value="engineer">
+        </div>
+        <div class="form-group">
+          <label for="locationSearch" class="form-label">Apprenticeship location</label>
+          <!-- <span class="form-hint">Postcode, city or town</span> -->
+          <input type="text" id="locationSearch" class="form-control form-control-3-4" value="B2 4ND">
+        </div>
+        <div class="form-group">
+          <label for="searchWithin" class="form-label">Within</label>
+          <select id="searchWithin">
+            <option value="">2 miles</option>
+            <option value="">5 miles</option>
+            <option value="">10 miles</option>
+            <option value="">15 miles</option>
+            <option value="">20 miles</option>
+            <option value="">30 miles</option>
+            <option value="">40 miles</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <details>
+            <summary>Filter by wage/level</summary>
+            <div class="detail-content">
+              <div class="form-group">
+                <label for="wageFilter" class="form-label">Weekly wage (from)</label>
+                <input id="wageFilter" type="text" class="form-control width-all-1-2" value="£">
+              </div>
+              <div class="form-group">
+                <label for="apprType" class="form-label">Apprenticeship level</label>
+                <select name="" id="apprType">
+                  <option value="">Select level</option>
+                  <option value="">Intermediate (level 2)</option>
+                  <option value="">Advanced (level 3)</option>
+                  <option value="">Higher (level 4 or above)</option>
+                </select>
+              </div>
+            </div>
+          </details>
+        </div>
+        <div class="form-group">
+          <a href="#" class="button">Update results</a>
+        </div>
+      </div>
+    </fieldset>
+  </div>
   <div class="grid grid-2-3">
     <div class="inner-block-padr">
-      <!-- <iframe src="http://mapbuildr.com/frame/7gmhqs" frameborder="0" height="600" width="700"></iframe> -->
       <section class="map-container" id="map-canvas" style="height: 600px"></section>
     </div>
   </div>
-  <div class="grid grid-1-3">
-    <div>
-      <div class="form-group">
-        <label for="keywordSearch" class="form-label">Keyword (optional)</label>
-        <!-- <span class="form-hint">Enter a postcode, town or city</span> -->
-        <input type="text" id="keywordSearch" class="form-control form-control-3-4" value="engineer">
-      </div>
-      <div class="form-group">
-        <label for="locationSearch" class="form-label">Location</label>
-        <!-- <span class="form-hint">Postcode, city or town</span> -->
-        <input type="text" id="locationSearch" class="form-control form-control-3-4" value="B2 4ND">
-      </div>
-      <div class="form-group">
-        <label for="searchWithin" class="form-label">Within</label>
-        <select id="searchWithin">
-          <option value="">2 miles</option>
-          <option value="">5 miles</option>
-          <option value="">10 miles</option>
-          <option value="">15 miles</option>
-          <option value="">20 miles</option>
-          <option value="">30 miles</option>
-          <option value="">40 miles</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <a href="#" class="button">Update results</a>
-      </div>
-    </div>
-  </div>
+
 </div>
 <div class="grid-wrapper tabbed-content" id="tab2">
-    <section class="grid grid-1-3">
+  <section class="grid grid-1-3">
     <fieldset class="search-filter">
       <legend class="heading-medium mob-collpanel-trigger">Edit search</legend>
       <div class="mob-collpanel toggle-content--mob">
@@ -242,12 +301,6 @@ headerTitle: Find an apprenticeship
             <li><b>Distance:</b> 5.2 miles</li>
             <li><b>Closing date:</b> 30 Jun 14</li>
           </ul>
-          <div class="btm-align width-all-1-3">
-<!--             <div class="search-save">
-              <input type="checkbox" class="save-trigger" id="save-trigger1">
-              <label for="save-trigger1">Save</label>
-            </div> -->
-          </div>
         </div>
       </li>
       <li class="search-results__item section-border">
@@ -263,12 +316,6 @@ headerTitle: Find an apprenticeship
             <li><b>Distance:</b> 5.2 miles</li>
             <li><b>Closing date:</b> 14 Jun 14</li>
           </ul>
-          <div class="btm-align width-all-1-3">
-<!--             <div class="search-save">
-              <input type="checkbox" class="save-trigger" id="save-trigger2">
-              <label for="save-trigger2">Save</label>
-            </div> -->
-          </div>
         </div>
       </li>
       <li class="search-results__item section-border">
@@ -284,12 +331,6 @@ headerTitle: Find an apprenticeship
             <li><b>Distance:</b> 5.2 miles</li>
             <li><b>Closing date:</b> 18 Jun 14</li>
           </ul>
-          <div class="btm-align width-all-1-3">
-<!--             <div class="search-save">
-              <input type="checkbox" class="save-trigger" id="save-trigger3">
-              <label for="save-trigger3">Save</label>
-            </div> -->
-          </div>
         </div>
       </li>
     </ul>
