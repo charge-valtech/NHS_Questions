@@ -85,6 +85,11 @@ table {
   tr:nth-child(-n+3) {
     display: table-row;
   }
+  &.tbody-withReasons {
+    tr:nth-child(-n+6) {
+    display: table-row;
+  }
+  }
 }
 
 /**

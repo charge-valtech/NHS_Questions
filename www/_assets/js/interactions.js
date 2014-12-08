@@ -144,32 +144,53 @@ $(function() {
     var $this       = $(this),
         $rowLength  = $this.find('tr').length,
         $expandRows = $this.next('.tbody-expandrows'),
-        $after3Rows = $this.find('tr:nth-of-type(3)').nextAll();
+        $after3Rows = $this.find('tr:nth-of-type(3)').nextAll(),
+        $after6Rows = $this.find('tr:nth-of-type(6)').nextAll();
 
-    if($rowLength > 3) {
+    if($rowLength > 3 && !$this.hasClass('tbody-withReasons')) {
       $expandRows.show();
       $after3Rows.hide().attr('aria-hidden', true);
+    } else if($rowLength > 6 && $this.hasClass('tbody-withReasons')) {
+      $expandRows.show();
+      $after6Rows.hide().attr('aria-hidden', true);
     }
+
   });
 
   $('.btnExpandRows').on('click', function() {
     var $this        = $(this),
         $tbodyExpand = $this.closest('.tbody-expandrows');
-        $tbodyRows   = $tbodyExpand.prev('.tbody-3rows').find('tr:nth-of-type(3)').nextAll();
+        $tbody3Rows   = $tbodyExpand.prev('.tbody-3rows').find('tr:nth-of-type(3)').nextAll(),
+        $tbodyWithReasons  = $tbodyExpand.prev('.tbody-withReasons').find('tr:nth-of-type(6)').nextAll();
 
-    $tbodyRows.toggle();
+
+    if(!$tbodyExpand.prev('.tbody-withReasons').length > 0) {
+      $tbody3Rows.toggle();
+    } else if($tbodyExpand.prev('.tbody-withReasons').length > 0) {
+      $tbodyWithReasons.toggle();
+    }
 
     $this.closest('table').toggleClass('opened');
 
     if($this.text().indexOf('More') > -1) {
       $this.html('<i class="fa fa-angle-up"></i>Less');
       $this.attr('aria-expanded', false);
-      $tbodyRows.attr('aria-hidden', false);
+      if(!$tbodyExpand.prev('.tbody-withReasons').length > 0){
+        $tbody3Rows.attr('aria-hidden', false);
+      } else if ($tbodyExpand.prev('.tbody-withReasons').length > 0) {
+        $tbodyWithReasons.attr('aria-hidden', false);
+      }
     } else {
       $this.html('<i class="fa fa-angle-down"></i>More');
       $this.attr('aria-expanded', true);
-      $tbodyRows.attr('aria-hidden', true);
+      if(!$tbodyExpand.prev('.tbody-withReasons').length > 0){
+        $tbody3Rows.attr('aria-hidden', true);
+      } else if ($tbodyExpand.prev('.tbody-withReasons').length > 0) {
+        $tbodyWithReasons.attr('aria-hidden', true);
+      }
     }
+
+    return false;
 
   });
 
