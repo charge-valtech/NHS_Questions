@@ -39,34 +39,7 @@ headerTitle: Find an apprenticeship
       </div>
     </div>
     <div class="tabbed-content" id="tab2">
-      <!-- <h3 class="heading-medium">Browse by type</h3> -->
-      <div class="form-group">
-        <label for="locationBrowse" class="form-label">Apprenticeship location</label>
-        <span class="form-hint">Enter postcode, town or city</span>
-        <input autofocus id="locationBrowse" type="text" class="form-control form-control-3-4 search-proto-input search-proto-input-2">
-      </div>
-      <!-- <div class="grid-wrapper">
-        <div class="grid grid-1-2">
-          <div class="inner-block-padr">
-            <ul class="list-text no-btm-margin">
-              <li><a href="search-results-browse.html?Keywords=&Location=b2+4nd&WithinDistance=20&SearchAction=Search&Latitude=52.4781331433771&Longitude=-1.8986588941503&Hash=-699855120&LocationType=NonNational&sortType=Distance&SearchAction=Search&resultsPerPage=5" class="link-unimp">Agriculture, Horticulture and Animal Care</a></li>
-              <li><a href="search-results-browse.html?Keywords=&Location=b2+4nd&WithinDistance=20&SearchAction=Search&Latitude=52.4781331433771&Longitude=-1.8986588941503&Hash=-699855120&LocationType=NonNational&sortType=Distance&SearchAction=Search&resultsPerPage=5" class="link-unimp">Arts, Media and Publishing</a></li>
-              <li><a href="search-results-browse.html?Keywords=&Location=b2+4nd&WithinDistance=20&SearchAction=Search&Latitude=52.4781331433771&Longitude=-1.8986588941503&Hash=-699855120&LocationType=NonNational&sortType=Distance&SearchAction=Search&resultsPerPage=5" class="link-unimp">Business, Administration and Law</a></li>
-              <li><a href="search-results-browse.html?Keywords=&Location=b2+4nd&WithinDistance=20&SearchAction=Search&Latitude=52.4781331433771&Longitude=-1.8986588941503&Hash=-699855120&LocationType=NonNational&sortType=Distance&SearchAction=Search&resultsPerPage=5" class="link-unimp">Construction, Planning and the Built Environment</a></li>
-              <li><a href="search-results-browse.html?Keywords=&Location=b2+4nd&WithinDistance=20&SearchAction=Search&Latitude=52.4781331433771&Longitude=-1.8986588941503&Hash=-699855120&LocationType=NonNational&sortType=Distance&SearchAction=Search&resultsPerPage=5" class="link-unimp">Education and Training</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="grid grid-1-2">
-          <ul class="list-text">
-            <li><a href="search-results-browse.html?Keywords=&Location=b2+4nd&WithinDistance=20&SearchAction=Search&Latitude=52.4781331433771&Longitude=-1.8986588941503&Hash=-699855120&LocationType=NonNational&sortType=Distance&SearchAction=Search&resultsPerPage=5" class="link-unimp">Engineering and Manufacturing Technologies</a></li>
-            <li><a href="search-results-browse.html?Keywords=&Location=b2+4nd&WithinDistance=20&SearchAction=Search&Latitude=52.4781331433771&Longitude=-1.8986588941503&Hash=-699855120&LocationType=NonNational&sortType=Distance&SearchAction=Search&resultsPerPage=5" class="link-unimp">Health, Public Services and Care</a></li>
-            <li><a href="search-results-browse.html?Keywords=&Location=b2+4nd&WithinDistance=20&SearchAction=Search&Latitude=52.4781331433771&Longitude=-1.8986588941503&Hash=-699855120&LocationType=NonNational&sortType=Distance&SearchAction=Search&resultsPerPage=5" class="link-unimp">Information and Communication Technology</a></li>
-            <li><a href="search-results-browse.html?Keywords=&Location=b2+4nd&WithinDistance=20&SearchAction=Search&Latitude=52.4781331433771&Longitude=-1.8986588941503&Hash=-699855120&LocationType=NonNational&sortType=Distance&SearchAction=Search&resultsPerPage=5" class="link-unimp">Leisure, Travel and Tourism</a></li>
-            <li><a href="search-results-browse.html?Keywords=&Location=b2+4nd&WithinDistance=20&SearchAction=Search&Latitude=52.4781331433771&Longitude=-1.8986588941503&Hash=-699855120&LocationType=NonNational&sortType=Distance&SearchAction=Search&resultsPerPage=5" class="link-unimp">Retail and Commercial Enterprise</a></li>
-          </ul>
-        </div>
-      </div> -->
+      <p class="form-label">Browse by category</p>
       <div class="grid-wrapper">
         <div class="grid grid-1-2">
           <div class="inner-block-padr">
@@ -89,8 +62,26 @@ headerTitle: Find an apprenticeship
           </ul>
         </div>
       </div>
+      <div class="form-group form-group-compound">
+        <label for="locationBrowse" class="form-label">Apprenticeship location</label>
+        <span class="form-hint">Enter postcode, town or city</span>
+        <input id="locationBrowse" type="text" class="form-control form-control-3-4 search-proto-input search-proto-input-2">
+      </div>
       <div class="form-group">
-        <a href="search-results-browse.html?Keywords=&Location=b2+4nd&WithinDistance=40&SearchAction=Search&Latitude=52.4781331433771&Longitude=-1.8986588941503&Hash=-699855120&LocationType=NonNational&sortType=Distance&SearchAction=Search&resultsPerPage=5" class="button">Search</a>
+        <label for="loc-within" class="form-label">Within</label>
+        <select id="loc-within">
+          <option value="">2 miles</option>
+          <option value="">5 miles</option>
+          <option value="">10 miles</option>
+          <option value="">15 miles</option>
+          <option value="">20 miles</option>
+          <option value="">30 miles</option>
+          <option value="">40 miles</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <a href="search-results-browse.html?Keywords=&Location=b2+4nd&WithinDistance=40&SearchAction=Search&Latitude=52.4781331433771&Longitude=-1.8986588941503&Hash=-699855120&LocationType=NonNational&sortType=Distance&SearchAction=Search&resultsPerPage=5" class="button">Browse</a>
       </div>
     </div>
   </section>
