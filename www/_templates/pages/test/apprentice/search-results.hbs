@@ -4,44 +4,26 @@ headerTitle: Find an apprenticeship
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js">
 </script>
 <script type="text/javascript">
-  function gup( name )
-    {
-      name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
-      var regexS = "[\\?&]"+name+"=([^&#]*)";
-      var regex = new RegExp( regexS );
-      var results = regex.exec( window.location.href );
-      if( results == null )
-        return null;
-      else
-        return results[1];
-    }
-
-  var latitude   = Number(gup( 'Latitude' )),
-      longitude  = Number(gup( 'Longitude' )),
-      miles      = Number(gup( 'WithinDistance' )),
+$(function() {
+  var latitude   = 52.4035,
+      longitude  = -1.50901,
+      miles      = 10,
       zoom       = 9,
-      radiusCircle;
+      radiusCircle,
+      vacancyLinks = $('.vacancy-link').toArray(),
+      vacancies = [],
+      vacancy = [];
 
-  if(miles <= 40) {
-    zoom = 7
+
+  for (var i = 0; i < vacancyLinks.length; i++) {
+    var lat   = $(vacancyLinks[i]).attr('data-vac-lat'),
+        longi = $(vacancyLinks[i]).attr('data-vac-long'),
+        title = $(vacancyLinks[i]).html();
+
+    vacancies[i] = [lat, longi, title];
   }
 
-  if(miles <= 30) {
-    zoom = 8
-  }
-
-  if(miles < 20) {
-    zoom = 9
-  }
-
-  if(miles < 10) {
-    zoom = 10
-  }
-
-  if(miles < 5) {
-    zoom = 11
-  }
-
+  console.log(vacancies);
 
 
   function initialize() {
@@ -74,7 +56,10 @@ headerTitle: Find an apprenticeship
     radiusCircle = new google.maps.Circle(distanceCircle);
 
   }
+
   google.maps.event.addDomListener(window, 'load', initialize);
+});
+
 </script>
 <div class="search-results-wrapper grid-wrapper">
   <div class="hgroup">
@@ -160,7 +145,7 @@ headerTitle: Find an apprenticeship
     <ul class="search-results">
       <li class="search-results__item section-border">
         <div class="hgroup-medium">
-          <h3 class="heading-medium"><a href="search-details.html">Mechanical Engineer – Precision Toolmaker</a></h3>
+          <h3 class="heading-medium"><a class="vacancy-link" data-vac-lat="52.415237" data-vac-long="-1.501553" href="search-details.html">Mechanical Engineer – Precision Toolmaker</a></h3>
           <h4 class="subtitle">R G Engineering</h4>
         </div>
         <p>
@@ -181,7 +166,7 @@ headerTitle: Find an apprenticeship
       </li>
       <li class="search-results__item section-border">
         <div class="hgroup-medium">
-          <h3 class="heading-medium"><a href="#">Advanced Apprenticeship in Electro-technical Installation/Maintenance</a></h3>
+          <h3 class="heading-medium"><a class="vacancy-link" data-vac-lat="52.400919" data-vac-long="-1.442026" href="#">Advanced Apprenticeship in Electro-technical Installation/Maintenance</a></h3>
           <h4 class="subtitle">Johnson Controls Ltd</h4>
         </div>
         <p>
@@ -202,7 +187,7 @@ headerTitle: Find an apprenticeship
       </li>
       <li class="search-results__item section-border">
         <div class="hgroup-medium">
-          <h3 class="heading-medium"><a href="#">Engineering Compressed Air Service Apprentice</a></h3>
+          <h3 class="heading-medium"><a class="vacancy-link" data-vac-lat="52.31506" data-vac-long="-1.499383" href="#">Engineering Compressed Air Service Apprentice</a></h3>
           <h4 class="subtitle">Direct Air &amp; Pipe Work Ltd</h4>
         </div>
         <p>
@@ -221,9 +206,41 @@ headerTitle: Find an apprenticeship
           </div>
         </div>
       </li>
+      <li class="search-results__item section-border">
+                <div class="hgroup-medium">
+                    <h3 class="heading-medium vacancy-title-link"><a class="vacancy-link" data-vac-lat="52.357597" data-vac-long="-1.330397" href="#">PLC and SCADA Engineering Apprentice</a></h3>
+                    <h4 class="subtitle">Cougar Automation Limited</h4>
+                </div>
+                <p>Would you love to be part of a team delivering great PLC and SCADA projects that make your customers happy? If so, apply to be a PLC and SCADA Engineering Apprentice in the Coventry office of award winning industrial system integrator Cougar Automation.</p>
+                <ul class="list-text no-btm-margin">
+
+                        <li><b>Distance:</b> <span class="distance-value">2.9</span> miles</li>
+
+                    <li><b>Closing date:</b> <span class="closing-date-value">
+31 Jan 2015</span></li>
+
+
+                </ul>
+            </li>
+            <li class="search-results__item section-border">
+                <div class="hgroup-medium">
+                    <h3 class="heading-medium vacancy-title-link"><a class="vacancy-link" data-vac-lat="52.522231" data-vac-long="-1.539764" href="#">Mobile Telecommunications Engineer </a></h3>
+                    <h4 class="subtitle">Central Communication Projects Ltd</h4>
+                </div>
+                <p>This is a great opportunity to work in one of the fastest growing and dynamic industries. CCP Ltd works with a number of partners in Mobile Telecommunications.  You will work at the front end of the operation as a field or switch engineer.</p>
+                <ul class="list-text no-btm-margin">
+
+                        <li><b>Distance:</b> <span class="distance-value">6.1</span> miles</li>
+
+                    <li><b>Closing date:</b> <span class="closing-date-value">
+12 Jan 2015</span></li>
+
+
+                </ul>
+            </li>
     </ul>
     <div class="page-navigation">
-      <a href="#" class="page-navigation__btn previous">
+      <a href="#" class="page-navigation__btn previous disabled">
         <i class="arrow-button fa fa-angle-left"></i>
         <span class="description">Previous <span class="hide-mob">page</span></span>
         <span class="counter">1 of 6</span>
