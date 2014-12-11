@@ -55,6 +55,24 @@ $(function() {
 
     radiusCircle = new google.maps.Circle(distanceCircle);
 
+    setMarkers(map, vacancies)
+
+  }
+
+  function setMarkers(map, locations) {
+    var image = '{{assets}}/img/icon-location.svg';
+
+    for (var i = 0; i < locations.length; i++) {
+      var appship = locations[i];
+      var myLatLng = new google.maps.LatLng(appship[0], appship[1]);
+      var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          animation : google.maps.Animation.DROP,
+          icon: image,
+          title: appship[2]
+      });
+    }
   }
 
   google.maps.event.addDomListener(window, 'load', initialize);
