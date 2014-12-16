@@ -653,7 +653,8 @@ $(function() {
     }
 
   if($('.heading-xlarge').text() == 'My applications') {
-    var tshipPar = gup('Traineeships');
+    var tshipPar = gup('Traineeships'),
+        appSupport = gup('Apprenticeships');
 
     if(tshipPar == "true") {
       $('#tshipPrompt').show();
@@ -663,6 +664,8 @@ $(function() {
       $('#dashTraineeships').show();
       $('#tshipLink').show();
       $('#tshipJump').removeClass('toggle-content');
+    } else if(appSupport == "true") {
+      $('#supportPrompt').show();
     }
   } else if($('.heading-xlarge').text() == 'Your account settings') {
     var settingsPar = gup('Account');
@@ -704,6 +707,10 @@ $(function() {
       $('#tshipNotRight').show();
 
     }
+  });
+
+  $('.notInterested').on('click', function() {
+    $(this).closest('.panel-info').hide();
   });
 
 // --------------- Remove for live code -------------- //
