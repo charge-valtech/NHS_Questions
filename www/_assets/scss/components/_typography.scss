@@ -354,3 +354,11 @@ strong {
     text-align: right;
   }
 }
+
+.closing-vsoon {
+  color: $error-colour;
+}
+
+.closing-soon {
+  color: $warning-colour;
+}
