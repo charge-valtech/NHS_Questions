@@ -139,3 +139,12 @@ ol, ul {
     margin-bottom: 5px;
   }
 }
+
+.heading-with-check {
+  padding-left: 1.7em;
+  position: relative;
+  .fa {
+    top: -0.12em; left: 0;
+    position: absolute;
+  }
+}
