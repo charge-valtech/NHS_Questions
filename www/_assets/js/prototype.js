@@ -658,6 +658,7 @@ $(function() {
 
     if(tshipPar == "true") {
       $('#tshipPrompt').show();
+      $('#tshipLink').show();
     } else if(tshipPar == "seen") {
       $('#tshipLink').show();
     } else if(tshipPar == "submitted") {
@@ -667,47 +668,7 @@ $(function() {
     } else if(appSupport == "true") {
       $('#supportPrompt').show();
     }
-  } else if($('.heading-xlarge').text() == 'Your account settings') {
-    var settingsPar = gup('Account');
-
-    if (settingsPar == "true") {
-      $('#accountSettings').show();
-      $('#updateSettingsBtn').hide();
-    } else if (settingsPar == "alt") {
-      $('#accountSettings2').show();
-      $('#updateSettingsBtn').hide();
-    }
-  } else if($('#signInTitle')) {
-    var signInPar = gup('Status');
-
-    if (signInPar == "deleted") {
-      $('#deletedAccount').show();
-      $('#forgotPasswordBtn').hide();
-      $('#cantAccessBtn').show();
-    } else if (signInPar == "no-access") {
-      $('#forgotPasswordBtn').hide();
-      $('#cantAccessBtn').show();
-    } else if (signInPar == "signout") {
-      $('#signedOut').show();
-    }
   }
-
-  $('#tshipAbout').on('change', 'input', function() {
-    if ($('#england-yes').is(':checked') &&
-      $('#unemployed-yes').is(':checked') &&
-      ($('#age16').is(':checked') || $('#age19').is(':checked')) &&
-      $('#tshipAbout input:checked').length == 3) {
-
-      $('#tshipSearch').show();
-      $('#tshipNotRight').hide();
-
-    } else if ($('#tshipAbout input:checked').length == 3){
-
-      $('#tshipSearch').hide();
-      $('#tshipNotRight').show();
-
-    }
-  });
 
   $('.notInterested').on('click', function() {
     $(this).closest('.panel-info').hide();
