@@ -81,12 +81,20 @@ $(function() {
 
   function bindMarkerClick(marker, map, vacancyID) {
     google.maps.event.addListener(marker, 'mouseover', function() {
-      $('#' + vacancyID).closest('.search-results__item').css('background', '#E5E5E5');
-      $('.vacancy-link').not('#' + vacancyID).closest('.search-results__item').css('background', 'none');
+      $('#' + vacancyID).closest('.search-results__item').css('background', '#E5E5E5').addClass('map-hover');
+      $('.vacancy-link').not('#' + vacancyID).closest('.search-results__item').css('background', 'none').removeClass('map-hover');
     });
   }
 
   google.maps.event.addDomListener(window, 'load', initialize);
+
+  $(document).click(function(event) {
+    if(!$(event.target).closest('#map-canvas').length) {
+      if($('.search-results__item').hasClass("map-hover")) {
+        $('.search-results__item').removeClass('map-hover').css('background', 'none');
+      }
+    }
+  });
 });
 
 </script>
@@ -97,47 +105,49 @@ $(function() {
     <p>We've also found <a href="#">4 apprenticeships nationwide</a>.</p>
   </div>
   <section class="grid grid-1-3">
-    <fieldset class="search-filter">
-      <legend class="heading-medium mob-collpanel-trigger">Edit search</legend>
-      <div class="mob-collpanel toggle-content--mob">
-        <div class="form-group">
-          <label for="keywords" class="form-label">Keywords (optional)</label>
-          <input id="keywords" type="text" class="form-control search-proto-result-input search-proto-result-input-1" value="building">
-        </div>
+    <div class="fixedsticky">
+      <fieldset class="search-filter">
+        <legend class="heading-medium mob-collpanel-trigger">Edit search</legend>
+        <div class="mob-collpanel toggle-content--mob">
+          <div class="form-group">
+            <label for="keywords" class="form-label">Keywords (optional)</label>
+            <input id="keywords" type="text" class="form-control search-proto-result-input search-proto-result-input-1" value="building">
+          </div>
 
-        <div class="form-group">
-          <label for="location" class="form-label">Apprenticeship location</label>
-          <input id="location" type="text" class="form-control search-proto-result-input search-proto-result-input-2" value="coventry">
+          <div class="form-group">
+            <label for="location" class="form-label">Apprenticeship location</label>
+            <input id="location" type="text" class="form-control search-proto-result-input search-proto-result-input-2" value="coventry">
+          </div>
+          <div class="form-group">
+            <label for="loc-within" class="form-label">Within</label>
+            <select id="loc-within">
+              <option value="">2 miles</option>
+              <option value="">5 miles</option>
+              <option selected value="">10 miles</option>
+              <option value="">15 miles</option>
+              <option value="">20 miles</option>
+              <option value="">30 miles</option>
+              <option value="">40 miles</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="apprType" class="form-label">Apprenticeship level</label>
+            <select name="" id="apprType">
+              <option value="">All levels</option>
+              <option value="">Intermediate</option>
+              <option value="">Advanced</option>
+              <option value="">Higher</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <a href="#" class="button no-btm-margin">Update results</a>
+          </div>
+          <div class="form-group">
+            <div id="map-canvas" class="map-container" style="width: 100%; height: 250px"></div>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="loc-within" class="form-label">Within</label>
-          <select id="loc-within">
-            <option value="">2 miles</option>
-            <option value="">5 miles</option>
-            <option selected value="">10 miles</option>
-            <option value="">15 miles</option>
-            <option value="">20 miles</option>
-            <option value="">30 miles</option>
-            <option value="">40 miles</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="apprType" class="form-label">Apprenticeship level</label>
-          <select name="" id="apprType">
-            <option value="">All levels</option>
-            <option value="">Intermediate (level 2)</option>
-            <option value="">Advanced (level 3)</option>
-            <option value="">Higher (level 4 or above)</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <a href="#" class="button no-btm-margin">Update results</a>
-        </div>
-        <div class="form-group">
-          <div id="map-canvas" class="map-container" style="width: 100%; height: 250px"></div>
-        </div>
-      </div>
-    </fieldset>
+      </fieldset>
+    </div>
   </section>
   <section class="grid grid-2-3">
     <fieldset>
@@ -272,4 +282,4 @@ $(function() {
   </section>
 </div>
 
-
+<script src="{{assets}}/js/vendor/sticky.js"></script>

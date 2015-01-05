@@ -63,3 +63,12 @@
   opacity: .5;
   pointer-events: none;
 }
+
+.sticky {
+  @include media(tablet) {
+    position: fixed;
+    top: 23px;
+    width: 27.35%;
+    max-width: 320px;
+  }
+}
