@@ -174,6 +174,12 @@
               }
             }
           });
+          var hoveredItem;
+          $('.search-results__item').on('hover', function()
+          {
+            var $this = $(this),
+              hoveredItem = $this.
+          });
         });
         </script>
         <div class="search-results-wrapper grid-wrapper">
@@ -258,12 +264,6 @@
                     <li><b>Distance:</b> 0.2 miles</li>
                     <li><b>Closing:</b> today</li>
                   </ul>
-                  <div class="btm-align width-all-1-3">
-                    <!--             <div class="search-save">
-              <input type="checkbox" class="save-trigger" id="save-trigger1">
-              <label for="save-trigger1">Save</label>
-            </div> -->
-                  </div>
                 </div>
               </li>
               <li class="search-results__item section-border">
@@ -281,12 +281,6 @@
                     <li><b>Distance:</b> 1.2 miles</li>
                     <li><b>Closing:</b> 14 Feb 15</li>
                   </ul>
-                  <div class="btm-align width-all-1-3">
-                    <!--             <div class="search-save">
-              <input type="checkbox" class="save-trigger" id="save-trigger2">
-              <label for="save-trigger2">Save</label>
-            </div> -->
-                  </div>
                 </div>
               </li>
               <li class="search-results__item section-border">
@@ -304,12 +298,6 @@
                     <li><b>Distance:</b> 3.4 miles</li>
                     <li><b>Closing:</b> tomorrow</li>
                   </ul>
-                  <div class="btm-align width-all-1-3">
-                    <!--             <div class="search-save">
-              <input type="checkbox" class="save-trigger" id="save-trigger3">
-              <label for="save-trigger3">Save</label>
-            </div> -->
-                  </div>
                 </div>
               </li>
               <li class="search-results__item section-border">
@@ -323,8 +311,7 @@
                   award winning industrial system integrator Cougar Automation.</p>
                 <ul class="list-text no-btm-margin">
                   <li><b>Distance:</b>  <span class="distance-value">5.7</span> miles</li>
-                  <li><b>Closing:</b>  <span class="closing-date-value">
-in 5 days</span>
+                  <li><b>Closing:</b>  <span class="closing-date-value">in 5 days</span>
                   </li>
                 </ul>
               </li>
@@ -339,8 +326,7 @@ in 5 days</span>
                   of the operation as a field or switch engineer.</p>
                 <ul class="list-text no-btm-margin">
                   <li><b>Distance:</b>  <span class="distance-value">9.3</span> miles</li>
-                  <li><b>Closing date:</b>  <span class="closing-date-value">
-12 Mar 2015</span>
+                  <li><b>Closing date:</b>  <span class="closing-date-value">12 Mar 2015</span>
                   </li>
                 </ul>
               </li>
