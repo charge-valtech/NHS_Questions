@@ -76,7 +76,7 @@ $(function() {
 
       var vacancyID = appship[3];
 
-      bindMarkerClick(marker, map, vacancyID);
+      bindMarkerClick(marker, map, vacancyID, image1, image2);
 
       itemHover(image1, image2);
 
@@ -84,10 +84,18 @@ $(function() {
 
   }
 
-  function bindMarkerClick(marker, map, vacancyID) {
+  function bindMarkerClick(marker, map, vacancyID, image1, image2) {
     google.maps.event.addListener(marker, 'mouseover', function() {
+      marker.setIcon(image2);
+      marker.setZIndex(1000);
+
       $('#' + vacancyID).closest('.search-results__item').css('background', '#E5E5E5').addClass('map-hover');
       $('.vacancy-link').not('#' + vacancyID).closest('.search-results__item').css('background', 'none').removeClass('map-hover');
+    });
+
+    google.maps.event.addListener(marker, 'mouseout', function () {
+      marker.setIcon(image1);
+      marker.setZIndex(0);
     });
   }
 
