@@ -12,8 +12,8 @@ $(function() {
       radiusCircle,
       vacancyLinks = $('.vacancy-link').toArray(),
       vacancies    = [],
-      vacancy      = [];
-
+      vacancy      = [],
+      theMarkers   = [];
 
   for (var i = 0; i < vacancyLinks.length; i++) {
     var lat   = $(vacancyLinks[i]).attr('data-vac-lat'),
@@ -58,7 +58,8 @@ $(function() {
   }
 
   function setMarkers(map, locations) {
-    var image = '{{assets}}/img/icon-location.svg';
+    var image1 = '{{assets}}/img/icon-location.svg',
+        image2 = '{{assets}}/img/icon-location-selected.svg';
 
     for (var i = 0; i < locations.length; i++) {
       var appship = locations[i];
@@ -67,13 +68,17 @@ $(function() {
           position: myLatLng,
           map: map,
           animation : google.maps.Animation.DROP,
-          icon: image,
+          icon: image1,
           title: appship[2]
       });
+
+      theMarkers.push(marker);
 
       var vacancyID = appship[3];
 
       bindMarkerClick(marker, map, vacancyID);
+
+      itemHover(image1, image2);
 
     }
 
@@ -96,12 +101,22 @@ $(function() {
     }
   });
 
-  var hoveredItem;
 
-  $('.search-results__item').on('hover', function() {
-    // $this = $(this),
-    // hoveredItem
-  });
+  function itemHover(image1, image2) {
+    $('.search-results__item').mouseover(function() {
+      var thisPosition = $(this).index();
+      theMarkers[thisPosition].setIcon(image2)
+
+    });
+
+    $('.search-results__item').mouseleave(function() {
+      var thisPosition = $(this).index();
+      theMarkers[thisPosition].setIcon(image1)
+
+    });
+
+  }
+
 });
 
 </script>
@@ -238,6 +253,7 @@ $(function() {
           <li><b>Closing date:</b> <span class="closing-date-value">12 Mar 2015</span></li>
         </ul>
       </li>
+
     </ul>
     <div class="page-navigation">
       <a href="#" class="page-navigation__btn previous disabled">
