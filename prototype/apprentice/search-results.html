@@ -167,6 +167,17 @@
                 '.search-results__item').css('background', 'none').removeClass(
                 'map-hover');
             });
+            google.maps.event.addListener(marker, 'click', function()
+            {
+              marker.setIcon(image2);
+              marker.setZIndex(1000);
+              $('#' + vacancyID).closest('.search-results__item')[0].scrollIntoView();
+              $('#' + vacancyID).closest('.search-results__item').css(
+                'background', '#E5E5E5').addClass('map-hover');
+              $('.vacancy-link').not('#' + vacancyID).closest(
+                '.search-results__item').css('background', 'none').removeClass(
+                'map-hover');
+            });
             google.maps.event.addListener(marker, 'mouseout', function()
             {
               marker.setIcon(image1);
@@ -190,12 +201,16 @@
             $('.search-results__item').mouseover(function()
             {
               var thisPosition = $(this).index();
-              theMarkers[thisPosition].setIcon(image2)
+              theMarkers[thisPosition].setIcon(image2);
+              theMarkers[thisPosition].setZIndex(1000);
+              $(this).css('background', '#E5E5E5').addClass('map-hover');
             });
             $('.search-results__item').mouseleave(function()
             {
               var thisPosition = $(this).index();
-              theMarkers[thisPosition].setIcon(image1)
+              theMarkers[thisPosition].setIcon(image1);
+              theMarkers[thisPosition].setZIndex(0);
+              $(this).css('background', 'none').removeClass('map-hover');
             });
           }
         });
@@ -280,7 +295,7 @@
                 <div class="inl-block-wrapper">
                   <ul class="list-text btm-align width-all-2-3">
                     <li><b>Distance:</b> 0.2 miles</li>
-                    <li><b>Closing:</b> today</li>
+                    <li><b>Closing date:</b> today</li>
                   </ul>
                 </div>
               </li>
@@ -297,7 +312,7 @@
                 <div class="inl-block-wrapper">
                   <ul class="list-text btm-align width-all-2-3">
                     <li><b>Distance:</b> 1.2 miles</li>
-                    <li><b>Closing:</b> 14 Feb 15</li>
+                    <li><b>Closing date:</b> 14 Feb 15</li>
                   </ul>
                 </div>
               </li>
@@ -314,7 +329,7 @@
                 <div class="inl-block-wrapper">
                   <ul class="list-text btm-align width-all-2-3">
                     <li><b>Distance:</b> 3.4 miles</li>
-                    <li><b>Closing:</b> tomorrow</li>
+                    <li><b>Closing date:</b> tomorrow</li>
                   </ul>
                 </div>
               </li>
@@ -329,7 +344,7 @@
                   award winning industrial system integrator Cougar Automation.</p>
                 <ul class="list-text no-btm-margin">
                   <li><b>Distance:</b>  <span class="distance-value">5.7</span> miles</li>
-                  <li><b>Closing:</b>  <span class="closing-date-value">in 5 days</span>
+                  <li><b>Closing date:</b>  <span class="closing-date-value">in 5 days</span>
                   </li>
                 </ul>
               </li>
