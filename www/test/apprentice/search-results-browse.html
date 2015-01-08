@@ -92,6 +92,7 @@
   var latitude   = Number(gup( 'Latitude' )),
       longitude  = Number(gup( 'Longitude' )),
       miles      = Number(gup( 'WithinDistance' )),
+      tabNumber  = Number(gup('Tab')),
       zoom       = 9,
       radiusCircle;
 
@@ -115,7 +116,12 @@
     zoom = 11
   }
 
-
+  window.setTimeout(function() {
+    if(tabNumber == 1) {
+      $('#tabControl2').removeClass('active');
+      $('#tabControl1').addClass('active');
+    }
+  } , 0);
 
   function initialize() {
 
@@ -159,8 +165,8 @@
       <legend class="hide-tablet heading-medium mob-collpanel-trigger">Edit search</legend>
       <div class="toggle-content--mob mob-collpanel">
         <nav class="tabbed-nav">
-          <a href="#tab1" class="tabbed-tab">Search</a>
-          <a href="#tab2" class="tabbed-tab active">Browse</a>
+          <a href="#tab1" id="tabControl1" class="tabbed-tab">Search</a>
+          <a href="#tab2" id="tabControl2" class="tabbed-tab active">Browse</a>
         </nav>
         <div class="tabbed-content" id="tab1">
           <div class="form-group">
@@ -184,25 +190,14 @@
             </select>
           </div>
           <div class="form-group">
-            <details>
-              <summary>Filter by wage/level</summary>
-              <div class="detail-content">
-                <div class="form-group">
-                  <label for="wageFilter" class="form-label">Minimum wage (per hour)</label>
-                  <input id="wageFilter" type="text" class="form-control width-all-1-2" value="£2.73">
-                </div>
-                <div class="form-group">
-                  <label for="apprType" class="form-label">Apprenticeship level</label>
-                  <select name="" id="apprType">
-                    <option value="">Select level</option>
-                    <option value="">Intermediate (level 2)</option>
-                    <option value="">Advanced (level 3)</option>
-                    <option value="">Higher (level 4 or above)</option>
-                  </select>
-                </div>
-              </div>
-            </details>
-          </div>
+              <label for="apprType" class="form-label">Apprenticeship level</label>
+              <select name="" id="apprType">
+                <option value="">Select level</option>
+                <option value="">Intermediate</option>
+                <option value="">Advanced</option>
+                <option value="">Higher</option>
+              </select>
+            </div>
           <div class="form-group">
             <a class="button" href="search-results.html?Keywords=&Location=Coventry+%28West+Midlands%29&WithinDistance=10&Latitude=52.4035&Longitude=-1.50901&Hash=0&LocationType=NonNational&ResultsPerPage=5">Update results</a>
           </div>
@@ -388,34 +383,23 @@
             </ul>
           </div>
           <div class="form-group">
-            <details>
-              <summary>Filter by wage/level</summary>
-              <div class="detail-content">
-                <div class="form-group">
-                  <label for="wageFilter" class="form-label">Weekly wage (from)</label>
-                  <input id="wageFilter" type="text" class="form-control width-all-1-2" value="£">
-                </div>
-                <div class="form-group">
-                  <label for="apprType" class="form-label">Apprenticeship level</label>
-                  <select name="" id="apprType">
-                    <option value="">Select level</option>
-                    <option value="">Intermediate (level 2)</option>
-                    <option value="">Advanced (level 3)</option>
-                    <option value="">Higher (level 4 or above)</option>
-                  </select>
-                </div>
-              </div>
-            </details>
+            <label for="apprType" class="form-label">Apprenticeship level</label>
+            <select name="" id="apprType">
+              <option value="">Select level</option>
+              <option value="">Intermediate</option>
+              <option value="">Advanced</option>
+              <option value="">Higher</option>
+            </select>
           </div>
           <div class="form-group">
             <a href="#" class="button">Update results</a>
           </div>
-          <div class="form-group">
-            <div id="map-canvas" class="map-container" style="width: 100%; height: 250px"></div>
-          </div>
+
         </div>
       </div>
-
+      <div class="form-group">
+        <div id="map-canvas" class="map-container" style="width: 100%; height: 250px"></div>
+      </div>
     </fieldset>
   </section>
   <section class="grid grid-2-3">
