@@ -196,14 +196,32 @@
           </div>
           <div class="form-group">
             <div class="form-group form-group-compound">
-              <p class="form-label">Receive notifications by email?</p>
-              <label for="email-yes" class="block-label">
-                <input checked name="emailPref" type="radio" id="email-yes">Yes
+              <p class="form-label">Receive notifications?</p>
+              <label for="communication-yes" class="block-label">
+                <input checked name="emailPref" type="radio" id="communication-yes">Yes
               </label>
-              <label for="email-no" class="block-label">
-                <input name="emailPref" type="radio" id="email-no">No
+              <label for="communication-no" class="block-label">
+                <input name="emailPref" type="radio" id="communication-no">No
               </label>
             </div>
+            <div id="communication-type-panel" aria-hidden="false">
+            <div class=" form-group inline clearfix">
+                <p class="form-label" id="communicationTypeLabel">How would you like to receive them?</p>
+                <label for="communication-type-text" class="block-label">
+                    <input aria-controls="qualifications-panel" aria-expanded="false" aria-labelledby="communicationTypeLabel" id="communication-type-text" name="CommunicationTypes" type="radio" value="Text" />
+                    Text
+                </label>
+                <label for="communication-type-email" class="block-label">
+                    <input aria-labelledby="communicationTypeLabel" id="communication-type-email" name="CommunicationTypes" type="radio" value="Email" checked="checked"/>
+                    Email
+                </label>
+                <label for="communication-type-both" class="block-label">
+                    <input aria-labelledby="communicationTypeLabel" id="communication-type-both" name="CommunicationTypes" type="radio" value="Both" />
+                    Both
+                </label>
+            </div>
+        </div>
+
             <!-- <div class="form-group form-group-compound">
       <p class="form-label">Receive notifications by text message</p>
       <label for="text-yes" class="block-label">
