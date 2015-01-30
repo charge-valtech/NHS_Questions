@@ -223,21 +223,30 @@ $(function() {
 
   //----------Tabbed content
 
-  $('.tabbed-tab').on('click', function () {
-    var $this = $(this),
-        $tabID = $this.attr('href');
+  $('.tabbed-tab').attr('href', "#");
 
-    console.log($tabID);
+  $('.tabbed-tab').on('click', function() {
+      var $this = $(this),
+          $tabId = $this.attr('tab');
 
-    $this.addClass('active');
+      console.log($tabId);
 
-    $('.tabbed-tab').not($('[href="' + $tabID + '"]')).removeClass('active');
+      $this.addClass('active');
 
-    $($tabID).show();
+      $('.tabbed-tab').not($('[tab="' + $tabId + '"]')).removeClass('active');
 
-    $('.tabbed-content').not($tabID).hide();
+      if ($($tabId).length) {
+          $($tabId).show();
 
-    return false;
+          $('.tabbed-content').not($tabId).hide();
+      } else {
+          var $tabClass = '.' + $tabId.substr(1);
+
+          $('.tabbed-element' + $tabClass).show();
+          $('.tabbed-element').not($tabClass).hide();
+      }
+
+      return false;
   });
 
 });;/*
