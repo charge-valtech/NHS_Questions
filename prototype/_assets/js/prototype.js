@@ -674,13 +674,5 @@ $(function() {
     $(this).closest('.panel-info').hide();
   });
 
-  // settings
-  $('#communication-no').click(function(){
-      $('#communication-type-panel').hide();
-  });
-  $('#communication-yes').click(function(){
-      $('#communication-type-panel').show();
-  });
 // --------------- Remove for live code -------------- //
-
 });
