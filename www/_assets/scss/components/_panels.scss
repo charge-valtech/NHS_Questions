@@ -111,10 +111,30 @@
 .scrolling-panel {
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+  }
 }
 
 .max-height-15 {
   max-height: 19em; /* 304px */
+}
+
+.max-height-6ish {
+  max-height: 11em;
+  @media (min-height: 681px) {
+    max-height: 20em;
+  }
+  @media (min-height: 781px) {
+    max-height: 31em;
+  }
 }
 
 // Show & hide links

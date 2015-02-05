@@ -683,7 +683,7 @@ $(function() {
 
     if($('#textMessage').is(':checked') && !$.cookie('numberIsVerified')) {
 
-      window.location = $("#verifyLink").attr("href");
+      window.location = 'verify-number.html';
 
     }
   });
@@ -700,6 +700,7 @@ $(function() {
   if($.cookie('numberIsVerified')) {
     $('#textMessage').prop('checked', true).closest('label').addClass('selected');
     $('#verifyContainer').html('<span><i class="fa fa-check-circle-o"></i>Verified</>');
+    $('#successVerified').show();
   }
 
 // --------------- Remove for live code -------------- //
