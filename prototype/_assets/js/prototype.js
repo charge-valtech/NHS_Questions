@@ -690,7 +690,7 @@ $(function() {
 
   if($('#enterNumber').length > 0) {
     var mobileNumber    = $.jStorage.get('mobile-number');
-    $('#enterNumber').val(mobileNumber);
+    $('#enterNumber').text(mobileNumber);
   }
 
   $('#numberVerified').on('click', function() {
