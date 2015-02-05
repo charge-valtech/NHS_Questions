@@ -674,5 +674,33 @@ $(function() {
     $(this).closest('.panel-info').hide();
   });
 
+  //----- Verify trigger
+
+  $('#verifyNumBtn, #verifyLink').on('click', function() {
+    var $telephoneNumber    = $('#phoneNumber').val();
+
+    $.jStorage.set('mobile-number', $telephoneNumber);
+
+    if($('#textMessage').is(':checked') && !$.cookie('numberIsVerified')) {
+
+      window.location = $("#verifyLink").attr("href");
+
+    }
+  });
+
+  if($('#enterNumber').length > 0) {
+    var mobileNumber    = $.jStorage.get('mobile-number');
+    $('#enterNumber').val(mobileNumber);
+  }
+
+  $('#numberVerified').on('click', function() {
+    $.cookie('numberIsVerified', true, {path: '/'});
+  });
+
+  if($.cookie('numberIsVerified')) {
+    $('#textMessage').prop('checked', true).closest('label').addClass('selected');
+    $('#verifyContainer').html('<span><i class="fa fa-check-circle-o"></i>Verified</>');
+  }
+
 // --------------- Remove for live code -------------- //
 });

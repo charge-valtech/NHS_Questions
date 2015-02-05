@@ -182,7 +182,12 @@
         </div>
         <div class="form-group">
           <label for="phoneNumber" class="form-label">Phone</label>
-          <input type="tel" id="phoneNumber" class="form-control" value="07942 733876" />
+          <div class="input-withlink">
+            <input type="tel" id="phoneNumber" class="form-control" value="07942 733876" />
+            <span class="input-withlink__link" id="verifyContainer">
+      <a href="verify-number.html"id="verifyLink">Verify this</a>
+    </span>
+          </div>
         </div>
         <div id="accountSettings2">
           <h3 class="heading-large">How we contact you</h3>
@@ -207,7 +212,7 @@
             </ul>
           </div>
           <div class="form-group">
-            <a href="#" class="button">Update details</a>
+            <a href="#" class="button" id="verifyNumBtn">Update details</a>
           </div>
         </div>
       </main>

@@ -221,23 +221,46 @@ $(function() {
     }
   });
 
+  //----------Radio expanding lists IE8
+
+  if($('html').hasClass('lt-ie9')) {
+     $('.list-checkradio input[type=radio]:checked').siblings('details').addClass('ie8-details');
+
+     $('.list-checkradio > li').on('click', function () {
+       var $this = $(this),
+           $thisDetails = $this.find('details');
+
+       $('.list-checkradio input[type=radio]').not(':checked').siblings('details').removeClass('ie8-details');
+
+       $thisDetails.addClass('ie8-details');
+
+     });
+   }
+
   //----------Tabbed content
 
-  $('.tabbed-tab').on('click', function () {
-    var $this = $(this),
-        $tabID = $this.attr('href');
+  $('.tabbed-tab').attr('href', "#");
 
-    console.log($tabID);
+  $('.tabbed-tab').on('click', function() {
+      var $this = $(this),
+          $tabId = $this.attr('tab');
 
-    $this.addClass('active');
+      $this.addClass('active');
 
-    $('.tabbed-tab').not($('[href="' + $tabID + '"]')).removeClass('active');
+      $('.tabbed-tab').not($('[tab="' + $tabId + '"]')).removeClass('active');
 
-    $($tabID).show();
+      if ($($tabId).length) {
+          $($tabId).show();
 
-    $('.tabbed-content').not($tabID).hide();
+          $('.tabbed-content').not($tabId).hide();
+      } else {
+          var $tabClass = '.' + $tabId.substr(1);
 
-    return false;
+          $('.tabbed-element' + $tabClass).show();
+          $('.tabbed-element').not($tabClass).hide();
+      }
+
+      return false;
   });
 
 });

@@ -222,6 +222,25 @@ input::-webkit-inner-spin-button {
   }
 }
 
+.input-withlink {
+  position: relative;
+  .form-control {
+    width: 100%;
+  }
+  @include media(tablet) {
+    width: 50%;
+  }
+}
+
+.input-withlink__link {
+  display: inline-block;
+  padding-top: 5px;
+  @include media(tablet) {
+    position: absolute;
+    bottom: 5px; right: 10px;
+  }
+}
+
 .form-prepopped {
   color: $grey-1;
   font-weight: 700;
