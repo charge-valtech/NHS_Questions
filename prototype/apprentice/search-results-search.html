@@ -163,19 +163,21 @@
         <div class="search-results-wrapper grid-wrapper">
           <div class="hgroup">
             <h1 class="heading-xlarge">Search results</h1>
-            <p class="small-btm-margin">We've found <b class="bold-medium">37</b> apprenticeships in your selected
-              apprenticeship category</p>
+            <p id="result-message" class="small-btm-margin">We've found <b class="bold-medium">24</b> apprenticeships in your selected
+              area.</p>
+            <p class="small-btm-margin"><a href=""><i class="fa fa-bell-o"></i>Receive alerts for this search</a>
+            </p>
           </div>
           <section class="grid grid-1-3">
             <fieldset class="search-filter">
               <legend class="hide-tablet heading-medium mob-collpanel-trigger">Edit search</legend>
               <div class="mob-collpanel toggle-content--mob" id="editSearchPanel">
                 <nav class="tabbed-nav">
-                  <a href="#" id="search-tab-control" class="tabbed-tab " tab="#tab1">Search</a>
-                  <a href="#" id="browse-tab-control" class="tabbed-tab active" tab="#tab2">Browse</a>
+                  <a href="#" id="search-tab-control" class="tabbed-tab active" tab="#tab1">Search</a>
+                  <a href="#" id="browse-tab-control" class="tabbed-tab" tab="#tab2">Browse</a>
                 </nav>
                 <div class="tabbed-content active">
-                  <div id="categories" class="form-group tabbed-element tab2 active">
+                  <div id="categories" class="form-group tabbed-element tab2">
                     <ul id="category-list" class="copy-16 list-text list-checkradio">
                       <li>
                         <input type="radio" name="Category" id="category-alb" value="ALB">
@@ -1369,7 +1371,7 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="tabbed-element tab1 form-group">
+                  <div class="tabbed-element tab1 active form-group">
                     <a name="keywords"></a>
                     <label class="form-label" for="Keywords">Keywords (optional)</label>
                     <input class="form-control" data-val="true"
