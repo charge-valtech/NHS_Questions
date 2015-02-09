@@ -23,6 +23,11 @@ ul {
     padding-left: 25px;
     position: relative;
   }
+  &.scrolling-panel {
+    input[type="radio"], input[type="checkbox"] {
+      left: 3px; /* Compensates for the overflow on the panel */
+    }
+  }
   input[type="radio"], input[type="checkbox"] {
     cursor: pointer;
     margin: 0;

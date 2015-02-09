@@ -171,10 +171,25 @@ details summary:focus {
   margin-right: -1px;
   width: 20px;
 }
+
+.summary-style {
+  margin-left: 5px;
+}
+
+.summary-style:before {
+  content: '► ';
+  font-size: 16px;
+  display: inline-block;
+  margin-top: 1px;
+  margin-right: -1px;
+  width: 20px;
+}
+
 .no-details details.open summary:focus {
   outline: 3px solid $yellow;
 }
-.no-details details.open summary:before {
+.no-details details.open summary:before,
+.summary-style.open:before {
   content: '▼ ';
 }
 .no-details .open p,

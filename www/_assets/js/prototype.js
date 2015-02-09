@@ -709,5 +709,12 @@ $(function() {
     $('#refineSelect').show();
   });
 
+  $('#refineSearch').on('click', function() {
+    $('#keywordHint').toggle();
+    $('#refineControls').toggle();
+
+    $(this).toggleClass('open');
+  });
+
 // --------------- Remove for live code -------------- //
 });
