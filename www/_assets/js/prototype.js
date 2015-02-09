@@ -703,5 +703,11 @@ $(function() {
     $('#successVerified').show();
   }
 
+  //------ Refine keywords input
+
+  $('#Keywords').on('keypress', function() {
+    $('#refineSelect').show();
+  });
+
 // --------------- Remove for live code -------------- //
 });

@@ -229,6 +229,9 @@ input::-webkit-inner-spin-button {
   }
   @include media(tablet) {
     width: 50%;
+    .controls-3-4 & {
+      width: 75%;
+    }
   }
 }
 
@@ -240,6 +243,17 @@ input::-webkit-inner-spin-button {
     bottom: 5px; right: 10px;
   }
 }
+
+.input-withlink__select {
+  @include media(tablet) {
+    position: absolute;
+    bottom: 0; right: 0;
+  }
+  .input-withlink--left & {
+    left: 0;
+  }
+}
+
 
 .form-prepopped {
   color: $grey-1;
