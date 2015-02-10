@@ -705,8 +705,12 @@ $(function() {
 
   //------ Refine keywords input
 
-  $('#Keywords').on('keypress', function() {
+  $('#Keywords').on('keydown', function() {
     $('#refineSelect').show();
+
+    // if($(this).val().length == 0) {
+    //   $('#refineSelect').hide();
+    // }
   });
 
   $('#refineSearch').on('click', function() {
