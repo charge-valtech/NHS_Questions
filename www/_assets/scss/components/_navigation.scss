@@ -190,19 +190,18 @@
 }
 
 .tabbed-tab {
-  background: $grey-3;
   border: 1px solid transparent;
   border-bottom: 1px solid $grey-2;
-  color: $black;
   display: inline-block;
   margin-bottom: -1px;
   margin-right: 1px;
   padding: $gutter-half 10px;
-  text-decoration: none;
   &.active {
     background: $white;
     border-color: $grey-2;
     border-bottom-color: $white;
+    color: $black;
+    text-decoration: none;
     &:hover {
       color: inherit;
       cursor: default;
@@ -220,6 +219,9 @@
 
 .tabbed-content {
   border: 1px solid $grey-2;
+  // border-bottom: 0;
+  // border-right: 0;
+  // border-left: 0;
   display: none;
   margin-bottom: $gutter-half;
   padding: $gutter 10px 0;

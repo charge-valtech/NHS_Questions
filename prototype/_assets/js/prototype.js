@@ -720,5 +720,58 @@ $(function() {
     $(this).toggleClass('open');
   });
 
+  //------- Select to inject content to text input
+
+  $('.select-inject').on('change', function() {
+    var $this = $(this),
+        $selectedOption = $this.find('option:selected'),
+        $thisOptionText = $selectedOption.text();
+
+    $this.next('.select-injected').val($thisOptionText);
+
+    if($selectedOption.val() == "noSelect") {
+      $this.next('.select-injected').val("");
+    }
+  });
+
+  //-------- Maps on results
+
+  $('.map').each(function (index, Element) {
+    var coords = $(Element).text().split(",");
+    if (coords.length != 3) {
+        $(this).display = "none";
+        return;
+    }
+    var latlng = new google.maps.LatLng(parseFloat(coords[0]), parseFloat(coords[1]));
+    var myOptions = {
+        zoom: parseFloat(coords[2]),
+        center: latlng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        mapTypeControl: false,
+        overviewMapControl: false,
+        panControl: false,
+        scaleControl: false,
+        streetViewControl: false,
+        zoomControl: true,
+        zoomControlOptions: {
+            style: google.maps.ZoomControlStyle.SMALL
+        }
+    };
+    var map = new google.maps.Map(Element, myOptions);
+
+    var image1 = new google.maps.MarkerImage(
+                  '../_assets/img/icon-location.png',
+                  null, /* size is determined at runtime */
+                  null, /* origin is 0,0 */
+                  null, /* anchor is bottom center of the scaled image */
+                  new google.maps.Size(20, 32));
+
+    var marker = new google.maps.Marker({
+        icon: image1,
+        position: latlng,
+        map: map
+    });
+  });
+
 // --------------- Remove for live code -------------- //
 });
