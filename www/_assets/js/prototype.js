@@ -748,7 +748,7 @@ $(function() {
   var theMaps = [];
 
   $('.map').each(function (index, Element) {
-    var originLocation = new google.maps.LatLng(52.4113375,-1.5081828);
+
 
     var coords = $(Element).text().split(",");
     if (coords.length != 3) {
@@ -756,8 +756,7 @@ $(function() {
         return;
     }
     var latlng = new google.maps.LatLng(parseFloat(coords[0]), parseFloat(coords[1]));
-    var directionsDisplay = new google.maps.DirectionsRenderer({suppressMarkers: true});
-    var directionsService = new google.maps.DirectionsService();
+
 
     var myOptions = {
         zoom: 10,
@@ -791,7 +790,13 @@ $(function() {
         map: map
     });
 
-    function calcRoute(originLocation, transportMode, latLong, journeyTime, mapNumber) {
+  });
+
+  var directionsDisplay = new google.maps.DirectionsRenderer({suppressMarkers: true});
+  var directionsService = new google.maps.DirectionsService();
+  var originLocation = new google.maps.LatLng(52.4113375,-1.5081828);
+
+  function calcRoute(transportMode, latLong, journeyTime, mapNumber) {
 
       directionsDisplay.setMap(theMaps[mapNumber]);
 
@@ -825,10 +830,10 @@ $(function() {
           $durationElement = $(this).next('.journey-time'),
           $mapNumber = $(this).closest('.search-results__item').index();
 
-      calcRoute(originLocation, $thisVal, $thisLatLong, $durationElement, $mapNumber);
+      calcRoute($thisVal, $thisLatLong, $durationElement, $mapNumber);
     });
 
-    $('.search-results__item .summary-style').on('click', function() {
+    $('.search-results__item .summary-style').on('click', function(originLocation) {
       var $thisVal = $(this).next('.detail-content').find('.select-mode option:selected').val(),
           $thisLat = $(this).closest('.search-results__item')
                             .find('.vacancy-link').attr('data-vac-lat'),
@@ -840,11 +845,9 @@ $(function() {
 
       google.maps.event.trigger(theMaps[$mapNumber], 'resize');
 
-      calcRoute(originLocation, $thisVal, $thisLatLong, $durationElement, $mapNumber);
+      calcRoute($thisVal, $thisLatLong, $durationElement, $mapNumber);
 
     });
-
-  });
 
 // --------------- Remove for live code -------------- //
 });
