@@ -745,22 +745,29 @@ $(function() {
   });
 
   //-------- Maps on results
-  var theMaps = [];
+  var theMaps = [],
+      directionsDisplay = [],
+      directionsService = [],
+      vacancyLength = $('.vacancy-link').length,
+      originLat = $('#Latitude').val(),
+      originLon = $('#Longitude').val(),
+      originLocation = new google.maps.LatLng(originLat,originLon);
 
-  $('.map').each(function (index, Element) {
+  for (var i = 0; i < vacancyLength; i++){
+    directionsDisplay[i] = new google.maps.DirectionsRenderer({suppressMarkers: true});
+    directionsService[i] = new google.maps.DirectionsService();
+  };
 
-    var coords = $(Element).text().split(",");
-    if (coords.length != 3) {
-        $(this).display = "none";
-        return;
-    }
-    var latlng = new google.maps.LatLng(parseFloat(coords[0]), parseFloat(coords[1]));
+  $('.vacancy-link').each(function () {
 
+    var vacancyMap = $(this).closest('.search-results__item').find('.map')[0],
+        vacancyLat = $(this).attr('data-vac-lat'),
+        vacancyLon = $(this).attr('data-vac-long'),
+        latlng = new google.maps.LatLng(vacancyLat,vacancyLon);
 
     var myOptions = {
         zoom: 10,
         center: latlng,
-        mapTypeId: google.maps.MapTypeId.ROADMAP,
         mapTypeControl: false,
         overviewMapControl: false,
         panControl: false,
@@ -772,11 +779,11 @@ $(function() {
             style: google.maps.ZoomControlStyle.SMALL
         }
     };
-    var map = new google.maps.Map(Element, myOptions);
+    var map = new google.maps.Map(vacancyMap, myOptions);
 
     theMaps.push(map);
 
-    var image1 = new google.maps.MarkerImage(
+    var markerIcon = new google.maps.MarkerImage(
                   '../_assets/img/icon-location.png',
                   null, /* size is determined at runtime */
                   null, /* origin is 0,0 */
@@ -784,32 +791,28 @@ $(function() {
                   new google.maps.Size(20, 32));
 
     var marker = new google.maps.Marker({
-        icon: image1,
+        icon: markerIcon,
         position: latlng,
         map: map
     });
 
   });
 
-  var directionsDisplay = new google.maps.DirectionsRenderer({suppressMarkers: true});
-  var directionsService = new google.maps.DirectionsService();
-  var originLocation = new google.maps.LatLng(52.4113375,-1.5081828);
-
   function calcRoute(transportMode, latLong, journeyTime, mapNumber) {
 
-      directionsDisplay.setMap(theMaps[mapNumber]);
+      directionsDisplay[mapNumber].setMap(theMaps[mapNumber]);
 
       var request = {
           origin: originLocation,
           destination: latLong,
           travelMode: google.maps.TravelMode[transportMode]
       };
-      directionsService.route(request, function(response, status) {
+      directionsService[mapNumber].route(request, function(response, status) {
         if (status == google.maps.DirectionsStatus.OK) {
 
           $(journeyTime).text(response.routes[0].legs[0].duration.text);
 
-          directionsDisplay.setDirections(response);
+          directionsDisplay[mapNumber].setDirections(response);
         }
       });
 
@@ -832,17 +835,15 @@ $(function() {
       var $this = $(this),
           $thisVal = $this.next('.detail-content').find('.select-mode option:selected').val(),
           $thisVacLink = $this.closest('.search-results__item').find('.vacancy-link'),
+          $thisMap = $this.closest('.search-results__item').find('.map'),
           $thisLat = $thisVacLink.attr('data-vac-lat'),
           $thisLong = $thisVacLink.attr('data-vac-long'),
           $thisLatLong = new google.maps.LatLng($thisLat, $thisLong),
           $durationElement = $this.next('.detail-content').find('.journey-time'),
           $mapNumber = $this.closest('.search-results__item').index();
 
-      // google.maps.event.trigger(theMaps[$mapNumber], 'resize');
-
       calcRoute($thisVal, $thisLatLong, $durationElement, $mapNumber);
 
     });
-
 // --------------- Remove for live code -------------- //
 });
