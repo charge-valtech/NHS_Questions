@@ -749,7 +749,6 @@ $(function() {
 
   $('.map').each(function (index, Element) {
 
-
     var coords = $(Element).text().split(",");
     if (coords.length != 3) {
         $(this).display = "none";
@@ -800,14 +799,10 @@ $(function() {
 
       directionsDisplay.setMap(theMaps[mapNumber]);
 
-      var selectedMode = transportMode;
       var request = {
           origin: originLocation,
           destination: latLong,
-          // Note that Javascript allows us to access the constant
-          // using square brackets and a string value as its
-          // "property."
-          travelMode: google.maps.TravelMode[selectedMode]
+          travelMode: google.maps.TravelMode[transportMode]
       };
       directionsService.route(request, function(response, status) {
         if (status == google.maps.DirectionsStatus.OK) {
@@ -821,29 +816,29 @@ $(function() {
     }
 
     $('.select-mode').on('change', function() {
-      var $thisVal = $(this).val(),
-          $thisLat = $(this).closest('.search-results__item')
-                            .find('.vacancy-link').attr('data-vac-lat'),
-          $thisLong = $(this).closest('.search-results__item')
-                            .find('.vacancy-link').attr('data-vac-long'),
+      var $this = $(this),
+          $thisVal = $this.val(),
+          $thisVacLink = $this.closest('.search-results__item').find('.vacancy-link'),
+          $thisLat = $thisVacLink.attr('data-vac-lat'),
+          $thisLong = $thisVacLink.attr('data-vac-long'),
           $thisLatLong = new google.maps.LatLng($thisLat, $thisLong),
-          $durationElement = $(this).next('.journey-time'),
-          $mapNumber = $(this).closest('.search-results__item').index();
+          $durationElement = $this.next('.journey-time'),
+          $mapNumber = $this.closest('.search-results__item').index();
 
       calcRoute($thisVal, $thisLatLong, $durationElement, $mapNumber);
     });
 
     $('.search-results__item .summary-style').on('click', function(originLocation) {
-      var $thisVal = $(this).next('.detail-content').find('.select-mode option:selected').val(),
-          $thisLat = $(this).closest('.search-results__item')
-                            .find('.vacancy-link').attr('data-vac-lat'),
-          $thisLong = $(this).closest('.search-results__item')
-                            .find('.vacancy-link').attr('data-vac-long'),
+      var $this = $(this),
+          $thisVal = $this.next('.detail-content').find('.select-mode option:selected').val(),
+          $thisVacLink = $this.closest('.search-results__item').find('.vacancy-link'),
+          $thisLat = $thisVacLink.attr('data-vac-lat'),
+          $thisLong = $thisVacLink.attr('data-vac-long'),
           $thisLatLong = new google.maps.LatLng($thisLat, $thisLong),
-          $durationElement = $(this).next('.detail-content').find('.journey-time'),
-          $mapNumber = $(this).closest('.search-results__item').index();
+          $durationElement = $this.next('.detail-content').find('.journey-time'),
+          $mapNumber = $this.closest('.search-results__item').index();
 
-      google.maps.event.trigger(theMaps[$mapNumber], 'resize');
+      // google.maps.event.trigger(theMaps[$mapNumber], 'resize');
 
       calcRoute($thisVal, $thisLatLong, $durationElement, $mapNumber);
 

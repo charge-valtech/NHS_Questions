@@ -720,6 +720,16 @@ $(function() {
     $(this).toggleClass('open');
   });
 
+  //------- Inline details toggle
+
+  $('.summary-style').on('click', function() {
+    $this = $(this);
+
+    $this.toggleClass('open');
+
+    $this.next('.detail-content').toggle();
+  })
+
   //------- Select to inject content to text input
 
   $('.select-inject').on('change', function() {
@@ -735,22 +745,27 @@ $(function() {
   });
 
   //-------- Maps on results
+  var theMaps = [];
 
   $('.map').each(function (index, Element) {
+
     var coords = $(Element).text().split(",");
     if (coords.length != 3) {
         $(this).display = "none";
         return;
     }
     var latlng = new google.maps.LatLng(parseFloat(coords[0]), parseFloat(coords[1]));
+
+
     var myOptions = {
-        zoom: parseFloat(coords[2]),
+        zoom: 10,
         center: latlng,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         mapTypeControl: false,
         overviewMapControl: false,
         panControl: false,
         scaleControl: false,
+        scrollwheel: false,
         streetViewControl: false,
         zoomControl: true,
         zoomControlOptions: {
@@ -758,6 +773,8 @@ $(function() {
         }
     };
     var map = new google.maps.Map(Element, myOptions);
+
+    theMaps.push(map);
 
     var image1 = new google.maps.MarkerImage(
                   '../_assets/img/icon-location.png',
@@ -771,7 +788,61 @@ $(function() {
         position: latlng,
         map: map
     });
+
   });
+
+  var directionsDisplay = new google.maps.DirectionsRenderer({suppressMarkers: true});
+  var directionsService = new google.maps.DirectionsService();
+  var originLocation = new google.maps.LatLng(52.4113375,-1.5081828);
+
+  function calcRoute(transportMode, latLong, journeyTime, mapNumber) {
+
+      directionsDisplay.setMap(theMaps[mapNumber]);
+
+      var request = {
+          origin: originLocation,
+          destination: latLong,
+          travelMode: google.maps.TravelMode[transportMode]
+      };
+      directionsService.route(request, function(response, status) {
+        if (status == google.maps.DirectionsStatus.OK) {
+
+          $(journeyTime).text(response.routes[0].legs[0].duration.text);
+
+          directionsDisplay.setDirections(response);
+        }
+      });
+
+    }
+
+    $('.select-mode').on('change', function() {
+      var $this = $(this),
+          $thisVal = $this.val(),
+          $thisVacLink = $this.closest('.search-results__item').find('.vacancy-link'),
+          $thisLat = $thisVacLink.attr('data-vac-lat'),
+          $thisLong = $thisVacLink.attr('data-vac-long'),
+          $thisLatLong = new google.maps.LatLng($thisLat, $thisLong),
+          $durationElement = $this.next('.journey-time'),
+          $mapNumber = $this.closest('.search-results__item').index();
+
+      calcRoute($thisVal, $thisLatLong, $durationElement, $mapNumber);
+    });
+
+    $('.search-results__item .summary-style').on('click', function(originLocation) {
+      var $this = $(this),
+          $thisVal = $this.next('.detail-content').find('.select-mode option:selected').val(),
+          $thisVacLink = $this.closest('.search-results__item').find('.vacancy-link'),
+          $thisLat = $thisVacLink.attr('data-vac-lat'),
+          $thisLong = $thisVacLink.attr('data-vac-long'),
+          $thisLatLong = new google.maps.LatLng($thisLat, $thisLong),
+          $durationElement = $this.next('.detail-content').find('.journey-time'),
+          $mapNumber = $this.closest('.search-results__item').index();
+
+      // google.maps.event.trigger(theMaps[$mapNumber], 'resize');
+
+      calcRoute($thisVal, $thisLatLong, $durationElement, $mapNumber);
+
+    });
 
 // --------------- Remove for live code -------------- //
 });

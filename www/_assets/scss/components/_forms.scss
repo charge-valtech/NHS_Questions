@@ -47,6 +47,10 @@ select {
   .copy-16 & {
     height: 31px;
   }
+  &.select-mode {
+    margin-right: 5px;
+    width: auto;
+  }
 }
 
 .android-browser {
