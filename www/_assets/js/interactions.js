@@ -21,7 +21,7 @@ $(function() {
     }
   };
 
-  if (isMobile.matches) {
+  if (isMobile.any()) {
     FastClick.attach(document.body);
   }
 
