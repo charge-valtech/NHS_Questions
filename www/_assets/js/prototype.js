@@ -745,60 +745,62 @@ $(function() {
   });
 
   //-------- Maps on results
-  var theMaps = [],
-      directionsDisplay = [],
-      directionsService = [],
-      vacancyLength = $('.vacancy-link').length,
-      originLat = $('#Latitude').val(),
-      originLon = $('#Longitude').val(),
-      originLocation = new google.maps.LatLng(originLat,originLon);
 
-  for (var i = 0; i < vacancyLength; i++){
-    directionsDisplay[i] = new google.maps.DirectionsRenderer({suppressMarkers: true});
-    directionsService[i] = new google.maps.DirectionsService();
-  };
+  if($('.search-results__item').length > 0) {
+    var theMaps = [],
+        directionsDisplay = [],
+        directionsService = [],
+        vacancyLength = $('.vacancy-link').length,
+        originLat = $('#Latitude').val(),
+        originLon = $('#Longitude').val(),
+        originLocation = new google.maps.LatLng(originLat,originLon);
 
-  $('.vacancy-link').each(function () {
-
-    var vacancyMap = $(this).closest('.search-results__item').find('.map')[0],
-        vacancyLat = $(this).attr('data-vac-lat'),
-        vacancyLon = $(this).attr('data-vac-long'),
-        latlng = new google.maps.LatLng(vacancyLat,vacancyLon);
-
-    var myOptions = {
-        zoom: 10,
-        center: latlng,
-        mapTypeControl: false,
-        overviewMapControl: false,
-        panControl: false,
-        scaleControl: false,
-        scrollwheel: false,
-        streetViewControl: false,
-        zoomControl: true,
-        zoomControlOptions: {
-            style: google.maps.ZoomControlStyle.SMALL
-        }
+    for (var i = 0; i < vacancyLength; i++){
+      directionsDisplay[i] = new google.maps.DirectionsRenderer({suppressMarkers: true});
+      directionsService[i] = new google.maps.DirectionsService();
     };
-    var map = new google.maps.Map(vacancyMap, myOptions);
 
-    theMaps.push(map);
+    $('.vacancy-link').each(function () {
 
-    var markerIcon = new google.maps.MarkerImage(
-                  '../_assets/img/icon-location.png',
-                  null, /* size is determined at runtime */
-                  null, /* origin is 0,0 */
-                  null, /* anchor is bottom center of the scaled image */
-                  new google.maps.Size(20, 32));
+      var vacancyMap = $(this).closest('.search-results__item').find('.map')[0],
+          vacancyLat = $(this).attr('data-vac-lat'),
+          vacancyLon = $(this).attr('data-vac-long'),
+          latlng = new google.maps.LatLng(vacancyLat,vacancyLon);
 
-    var marker = new google.maps.Marker({
-        icon: markerIcon,
-        position: latlng,
-        map: map
+      var myOptions = {
+          zoom: 10,
+          center: latlng,
+          mapTypeControl: false,
+          overviewMapControl: false,
+          panControl: false,
+          scaleControl: false,
+          scrollwheel: false,
+          streetViewControl: false,
+          zoomControl: true,
+          zoomControlOptions: {
+              style: google.maps.ZoomControlStyle.SMALL
+          }
+      };
+      var map = new google.maps.Map(vacancyMap, myOptions);
+
+      theMaps.push(map);
+
+      var markerIcon = new google.maps.MarkerImage(
+                    '../_assets/img/icon-location.png',
+                    null, /* size is determined at runtime */
+                    null, /* origin is 0,0 */
+                    null, /* anchor is bottom center of the scaled image */
+                    new google.maps.Size(20, 32));
+
+      var marker = new google.maps.Marker({
+          icon: markerIcon,
+          position: latlng,
+          map: map
+      });
+
     });
 
-  });
-
-  function calcRoute(transportMode, latLong, journeyTime, mapNumber) {
+    function calcRoute(transportMode, latLong, journeyTime, mapNumber) {
 
       directionsDisplay[mapNumber].setMap(theMaps[mapNumber]);
 
@@ -815,7 +817,6 @@ $(function() {
           directionsDisplay[mapNumber].setDirections(response);
         }
       });
-
     }
 
     $('.select-mode').on('change', function() {
@@ -845,5 +846,76 @@ $(function() {
       calcRoute($thisVal, $thisLatLong, $durationElement, $mapNumber);
 
     });
+  }
+
+  if($('#getLocation').length > 0) {
+    var geocoder;
+
+    function initialize() {
+      geocoder = new google.maps.Geocoder();
+    }
+
+    function geoFindMe() {
+      var output  = document.getElementById("Location"),
+          latVal,
+          longVal;
+
+
+      if (!navigator.geolocation){
+        output.value = "Geolocation is not supported by your browser";
+        return;
+      }
+
+      function success(position) {
+        var latVal  = position.coords.latitude,
+            longVal = position.coords.longitude,
+            latlng = new google.maps.LatLng(latVal, longVal);
+
+
+        geocoder.geocode({'latLng': latlng}, function(results, status) {
+          if (status == google.maps.GeocoderStatus.OK) {
+            if (results[1]) {
+              var myPostcode;
+
+              for (var i = 0; i < results[1].address_components.length; i++) {
+                  for (var j = 0; j < results[1].address_components[i].types.length; j++) {
+                      if (results[1].address_components[i].types[j] == "postal_code") {
+                          myPostcode = results[1].address_components[i].long_name;
+                          break;
+                      }
+                  }
+              }
+
+              console.log(myPostcode);
+
+            } else {
+              alert('No results found');
+            }
+          } else {
+            alert('Geocoder failed due to: ' + status);
+          }
+        });
+
+      };
+
+      function error() {
+        output.value = "Unable to retrieve your location";
+      };
+
+      output.value = "Locating…";
+
+      navigator.geolocation.getCurrentPosition(success, error);
+    }
+
+    $('#getLocation').on('click', function() {
+
+      geoFindMe();
+
+    });
+
+    google.maps.event.addDomListener(window, 'load', initialize);
+  }
+
+
 // --------------- Remove for live code -------------- //
 });

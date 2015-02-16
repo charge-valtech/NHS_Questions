@@ -1,6 +1,7 @@
 ---
 headerTitle: Find an apprenticeship
 ---
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
 <div class="hgroup">
   <h1 class="heading-xlarge">Find an apprenticeship</h1>
   <h2 class="subtitle">Search and apply for an apprenticeship in England</h2>
@@ -71,42 +72,51 @@ headerTitle: Find an apprenticeship
 </div>
 <p class="visuallyhidden" id="keywordsHint">Try words that describe the type of apprenticeship you want, for example “carpentry” or “mechanics”.</p>
 
-                    <div class="form-group"><a name="location"></a><label class="form-label" for="Location">Apprenticeship location</label><span class="form-hint">Enter postcode, town or city</span><span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span><input class="form-control ui-autocomplete-input" data-val="true" data-val-length="Location must be 3 or more characters or a postcode" data-val-length-max="99" data-val-length-min="2" data-val-regex="Location contains some invalid characters" data-val-regex-pattern="^[a-zA-Z0-9\u0080-\uFFA7?$@#()&quot;'!,+\-=_:;.&amp;€£*%\s\/]+$" id="Location" name="Location" type="text" value="" autocomplete="off"><span class="field-validation-valid" data-valmsg-for="Location" data-valmsg-replace="true" aria-live="polite"></span></div>
+<div class="form-group">
+  <a name="location"></a>
+  <label class="form-label" for="Location">Apprenticeship location</label>
+  <span class="form-hint">Enter postcode, town or city. <span class="fake-link hide-nojs" id="getLocation">Use your location</span></span>
+  <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
+  <input class="form-control ui-autocomplete-input" data-val="true" data-val-length="Location must be 3 or more characters or a postcode" data-val-length-max="99" data-val-length-min="2" data-val-regex="Location contains some invalid characters" id="Location" name="Location" type="text" value="" autocomplete="off">
+  <span class="field-validation-valid" data-valmsg-for="Location" data-valmsg-replace="true" aria-live="polite"></span>
+</div>
 
-                    <div class="inline">
-                        <div class="form-group">
-                            <label for="loc-within" class="form-label">Within</label>
-                            <select data-val="true" data-val-number="The field WithinDistance must be a number." id="loc-within" name="WithinDistance"><option value="2">2 miles</option>
-<option selected="selected" value="5">5 miles</option>
-<option value="10">10 miles</option>
-<option value="15">15 miles</option>
-<option value="20">20 miles</option>
-<option value="30">30 miles</option>
-<option value="40">40 miles</option>
-</select>
-                        </div>
-                        <div class="form-group">
-                            <label for="apprenticeship-level" class="form-label">Apprenticeship level</label>
-                            <select id="apprenticeship-level" name="ApprenticeshipLevel"><option selected="selected" value="All">All levels</option>
-<option value="Intermediate">Intermediate</option>
-<option value="Advanced">Advanced</option>
-<option value="Higher">Higher</option>
-</select>
-                        </div>
-                    </div>
+<div class="inline">
+  <div class="form-group">
+    <label for="loc-within" class="form-label">Within</label>
+    <select data-val="true" data-val-number="The field WithinDistance must be a number." id="loc-within" name="WithinDistance">
+      <option value="2">2 miles</option>
+      <option selected="selected" value="5">5 miles</option>
+      <option value="10">10 miles</option>
+      <option value="15">15 miles</option>
+      <option value="20">20 miles</option>
+      <option value="30">30 miles</option>
+      <option value="40">40 miles</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="apprenticeship-level" class="form-label">Apprenticeship level</label>
+    <select id="apprenticeship-level" name="ApprenticeshipLevel">
+      <option selected="selected" value="All">All levels</option>
+      <option value="Intermediate">Intermediate</option>
+      <option value="Advanced">Advanced</option>
+      <option value="Higher">Higher</option>
+    </select>
+  </div>
+</div>
 
-                    <div class="form-group">
+<div class="form-group">
 
-                        <a href="search-results-search.html?Keywords=&Location=Coventry+%28West+Midlands%29&WithinDistance=10&Latitude=52.4035&Longitude=-1.50901&Hash=0&LocationType=NonNational&ResultsPerPage=5" class="button tabbed-element tab1 active" id="search-button">Search</a>
-                        <a href="search-results-browse.html?Keywords=&Location=b2+4nd&WithinDistance=40&SearchAction=Search&Latitude=52.4781331433771&Longitude=-1.8986588941503&Hash=-699855120&LocationType=NonNational&sortType=Distance&SearchAction=Search&resultsPerPage=5" class="button tabbed-element tab2 " id="browse-button">Browse</a>
-                    </div>
+  <a href="search-results-search.html?Keywords=&Location=Coventry+%28West+Midlands%29&WithinDistance=10&Latitude=52.4035&Longitude=-1.50901&Hash=0&LocationType=NonNational&ResultsPerPage=5" class="button tabbed-element tab1 active" id="search-button">Search</a>
+  <a href="search-results-browse.html?Keywords=&Location=b2+4nd&WithinDistance=40&SearchAction=Search&Latitude=52.4781331433771&Longitude=-1.8986588941503&Hash=-699855120&LocationType=NonNational&sortType=Distance&SearchAction=Search&resultsPerPage=5" class="button tabbed-element tab2 " id="browse-button">Browse</a>
+</div>
 
-                    <input data-val="true" data-val-number="The field Latitude must be a number." id="Latitude" name="Latitude" type="hidden" value="">
-                    <input data-val="true" data-val-number="The field Longitude must be a number." id="Longitude" name="Longitude" type="hidden" value="">
-                    <input data-val="true" data-val-number="The field Hash must be a number." id="Hash" name="Hash" type="hidden" value="0">
-                    <input id="LocationType" name="LocationType" type="hidden" value="NonNational">
-                    <input data-val="true" data-val-number="The field ResultsPerPage must be a number." id="ResultsPerPage" name="ResultsPerPage" type="hidden" value="5">
-                    <input id="SearchMode" name="SearchMode" type="hidden" value="Keyword">
+<input data-val="true" data-val-number="The field Latitude must be a number." id="Latitude" name="Latitude" type="hidden" value="">
+<input data-val="true" data-val-number="The field Longitude must be a number." id="Longitude" name="Longitude" type="hidden" value="">
+<input data-val="true" data-val-number="The field Hash must be a number." id="Hash" name="Hash" type="hidden" value="0">
+<input id="LocationType" name="LocationType" type="hidden" value="NonNational">
+<input data-val="true" data-val-number="The field ResultsPerPage must be a number." id="ResultsPerPage" name="ResultsPerPage" type="hidden" value="5">
+<input id="SearchMode" name="SearchMode" type="hidden" value="Keyword">
 
                 </div>
   </section>
