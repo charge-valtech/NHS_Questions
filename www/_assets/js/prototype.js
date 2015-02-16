@@ -886,7 +886,7 @@ $(function() {
                   }
               }
 
-              console.log(myPostcode);
+              output.value = myPostcode;
 
             } else {
               alert('No results found');
