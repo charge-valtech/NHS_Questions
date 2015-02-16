@@ -1,5 +1,7 @@
 $(function() {
-  FastClick.attach(document.body);
+  var rapidClicking = FastClick;
+
+  rapidClicking.attach(document.body);
 
   function isAndroid() {
     var nua = navigator.userAgent,
