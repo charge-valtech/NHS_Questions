@@ -888,6 +888,10 @@ $(function() {
 
               output.value = myPostcode;
 
+              $.jStorage.set('currentLat', latVal);
+              $.jStorage.set('currentLong', longVal);
+              $.jStorage.set('currentPostCode', myPostcode);
+
             } else {
               alert('No results found');
             }
@@ -896,6 +900,9 @@ $(function() {
           }
         });
 
+
+
+        $.cookie('gotLocation', true, {path: '/'});
       };
 
       function error() {
@@ -916,6 +923,16 @@ $(function() {
     google.maps.event.addDomListener(window, 'load', initialize);
   }
 
+  if($('.search-results__item').length > 0 && $.cookie('gotLocation')) {
+    var locationLat = $.jStorage.get('currentLat'),
+        locationLong = $.jStorage.get('currentLong'),
+        locPostCode = $.jStorage.get('currentPostCode');
+
+    $('#Latitude').val(locationLat);
+    $('#Longitude').val(locationLong);
+    $('#Location').val(locPostCode);
+
+  }
 
 // --------------- Remove for live code -------------- //
 });
