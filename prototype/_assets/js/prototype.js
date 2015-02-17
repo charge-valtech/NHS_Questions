@@ -730,20 +730,6 @@ $(function() {
     $this.next('.detail-content').toggle();
   })
 
-  //------- Select to inject content to text input
-
-  $('.select-inject').on('change', function() {
-    var $this = $(this),
-        $selectedOption = $this.find('option:selected'),
-        $thisOptionText = $selectedOption.text();
-
-    $this.next('.select-injected').val($thisOptionText);
-
-    if($selectedOption.val() == "noSelect") {
-      $this.next('.select-injected').val("");
-    }
-  });
-
   //-------- Maps on results
 
   if($('.search-results__item').length > 0) {
