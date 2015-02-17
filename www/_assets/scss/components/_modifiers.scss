@@ -85,3 +85,9 @@
     overflow-y: auto;
   }
 }
+
+.no-geolocation {
+  .geolocater {
+    display: none;
+  }
+}
