@@ -55,6 +55,28 @@
   }
 }
 
+.validation-warning,
+.input-validation-warning {
+  border-left: 3px solid $warning-colour;
+  box-sizing: content-box;
+  margin-left: -13px;
+  padding: 0 0 0 10px;
+  .form-control {
+    box-sizing: border-box;
+    border: 1px solid $border-colour;
+    color: $black;
+    margin-left: 0;
+    padding: 4px;
+  }
+  &.block-label {
+    margin-left: 0;
+  }
+  @include media(tablet) {
+    margin-left: -18px;
+    padding-left: $gutter-half;
+  }
+}
+
 .field-validation-valid {
   clear: left;
 }
@@ -82,6 +104,21 @@
     background: $error-background;
   }
   .form-group.input-validation-error {
+    border-left: 0;
+    margin-left: 0;
+    padding-left: 0;
+  }
+}
+
+.form-control.input-validation-warning {
+  background: $warning-background;
+}
+
+.form-group.input-validation-warning {
+  > .form-control {
+    background: $warning-background;
+  }
+  .form-group.input-validation-warning {
     border-left: 0;
     margin-left: 0;
     padding-left: 0;

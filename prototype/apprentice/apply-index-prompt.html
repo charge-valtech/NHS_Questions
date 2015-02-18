@@ -56,7 +56,7 @@
           </a>
         </div>
         <div class="global-header__nav">
-          <div class="global-header__title beta"><a href="/apprentice/search-index.html">Traineeships</a>
+          <div class="global-header__title beta"><a href="/apprentice/search-index.html">Find an apprenticeship</a>
           </div>
         </div>
       </div>
@@ -79,17 +79,23 @@
         </div>
       </div>
       <main role="main" id="main">
+        <div id="savedInfo" class="toggle-content panel-info">
+          <p class="autosave" id="applicationSavedTopMessage">Last saved at 12:00 on 12th Oct 2014 to <a href="dashboard.html" title="My Applications">my applications</a>
+          </p>
+        </div>
         <h1 class="heading-xlarge">Application form</h1>
         <section class="section-border">
           <div class="text">
             <div class="hgroup-medium">
-              <h3 class="heading-medium">Traineeship in Business Administration</h3>
-              <span class="subtitle">Prolink Associates Ltd</span>
+              <h3 class="heading-medium">Mechanical Engineer – Precision Toolmaker</h3>
+              <span class="subtitle">R G Engineering</span>
             </div>
             <p>
-              Valuable work experience within the field of Business Admin. You will working with
-              Admin team to support them doing basic admin duties. This Traineeship
-              Opportunity is Work Experience as part of an entry to work course.
+              An exciting opportunity has arisen for the right candidate to gain an engineering
+              qualification through an apprenticeship. If you have got drive and
+              want to learn a highly skilled trade then look no further.
+            </p>
+            <p><a href="search-details.html">View apprenticeship</a>
             </p>
           </div>
         </section>
@@ -129,7 +135,7 @@
         <fieldset class="fieldset-with-border" id="applyEducation">
           <legend class="heading-large">Education</legend>
           <div class="form-group">
-            <label for="school-name" class="form-label">Name of most recent school/college</label>
+            <label for="school-name" class="form-label">Name of most recent school or college</label>
             <input class="form-control" type="text" id="school-name" autocapitalize="words">
           </div>
           <div class="inline-fixed">
@@ -154,13 +160,15 @@
               are grades your teacher expects you to get.</p>
             <div class="form-group form-group-compound inline clearfix">
               <label data-target="qualifications-panel" for="qualifications-yes" class="block-label">
-                <input name="quals" type="radio" id="qualifications-yes">Yes
+                <input aria-controls="qualifications-panel" aria-expanded="false" name="quals"
+                type="radio" id="qualifications-yes">Yes
               </label>
               <label for="qualifications-no" class="block-label">
-                <input name="quals" type="radio" id="qualifications-no">No
+                <input checked name="quals" type="radio" id="qualifications-no">No
               </label>
             </div>
-            <div id="qualifications-panel" class="has-qualifications toggle-content">
+            <div id="qualifications-panel" class="has-qualifications toggle-content" aria-hidden="true"
+            role="region">
               <div class="enter-qualification clearfix">
                 <div class="inline-fixed">
                   <div class="form-group">
@@ -382,8 +390,7 @@
           <legend class="heading-large">Work experience</legend>
           <p class="hide-nojs form-label text">Do you have any work experience?</p>
           <p class="form-hint text">
-            Use skills you've gained at work (whether paid or unpaid) that relate to the traineeship
-            you’re applying for.
+            Please include any work, whether paid or voluntary.
           </p>
           <div class="hide-nojs">
             <div class="form-group inline clearfix">
@@ -391,7 +398,7 @@
                 <input name="workexp" type="radio" id="workexp-yes">Yes
               </label>
               <label for="workexp-no" class="block-label">
-                <input name="workexp" type="radio" id="workexp-no">No
+                <input checked name="workexp" type="radio" id="workexp-no">No
               </label>
             </div>
             <div id="workexperience-panel" class="has-work-experience toggle-content">
@@ -700,84 +707,97 @@
         </fieldset>
         <fieldset class="fieldset-with-border" id="applyAboutYou">
           <legend class="heading-large">About you</legend>
-          <div class="form-group">
-            <label for="question1" class="form-label">Give examples of your strengths that are relevant to the traineeship</label>
-            <!-- <div class="text">
-      <details class="no-btm-margin">
-        <summary role="button">Help with this section</summary>
-        <p class="panel-indent">An employer is looking for examples of your strengths. Whatever skills you give, you’ll need to provide details of when you’ve shown these.</p>
-      </details>
-    </div> -->
-            <p class="form-hint text">Don't just list your strengths. Whatever examples you give, you’ll
-              need to provide details of when you’ve shown these.</p>
-            <textarea id="question1" class="form-control" data-val-length-max="4000"></textarea>
-            <span class="form-hint maxchar-count">4000</span>
+          <div class="form-group text">
+            <details>
+              <summary aria-controls="helpText" role="button" aria-expanded="false">Help with this section</summary>
+              <p class="panel-indent" id="helpText" role="region" aria-hidden="true">
+                Think carefully about how you answer these questions. Where possible, keep the
+                vacancy that you're applying for in mind, and tailor your answers
+                to match the role.
+              </p>
+            </details>
           </div>
-          <div class="form-group">
-            <label for="question2" class="form-label">What skills would you like to improve during this traineeship?</label>
-            <!-- <div class="text">
-      <details class="no-btm-margin">
-        <summary role="button">Help with this section</summary>
-        <p class="panel-indent">Try and keep your answers relevant to the traineeship you’re applying for and the industry the employer works in.</p>
-      </details>
-    </div> -->
-            <p class="form-hint text">Try and think of what your duties will be and the industry the employer
-              works in.</p>
-            <textarea id="question2" class="form-control" data-val-length-max="4000"></textarea>
-            <span class="form-hint maxchar-count">4000</span>
+          <div class="panel-warning">
+            <p class="text">It looks like you haven't updated this section in a while. Consider
+              updating your answers keeping the vacancy that you're apply for in
+              mind.</p>
           </div>
-          <div class="form-group">
+          <div class="form-group input-validation-warning">
+            <label for="question1" class="form-label">What are your main strengths?</label>
+            <span class="form-hint text">Please provide examples of when you've demonstrated your strengths</span>
+            <textarea id="question1" class="form-control" rows="4" data-val-length-max="4000">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi quia
+              natus perferendis, eveniet quam consequuntur, repellat mollitia similique
+              amet aspernatur debitis quasi aperiam, dicta eum veritatis deleniti
+              autem accusantium omnis.
+            </textarea>
+            <!-- <span class="form-hint maxchar-count">4000</span> -->
+            <span class="visuallyhidden aria-limit" aria-live="polite"></span>
+          </div>
+          <div class="form-group input-validation-warning">
+            <label for="question2" class="form-label">What skills would you like to improve during this apprenticeship?</label>
+            <span class="form-hint text">Think of what your main duties would be and whether there are skills you'd like to develop</span>
+            <textarea id="question2" class="form-control" rows="4" data-val-length-max="4000">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque asperiores
+              veniam ipsam, deleniti aut laudantium facilis consequuntur sapiente
+              voluptatem voluptate saepe quibusdam error corporis voluptatibus.
+              Obcaecati minima, dolorum sint fugit.
+            </textarea>
+            <!-- <span class="form-hint maxchar-count">4000</span> -->
+            <span class="visuallyhidden aria-limit" aria-live="polite"></span>
+          </div>
+          <div class="form-group input-validation-warning">
             <label for="question3" class="form-label">What are your hobbies and interests?</label>
-            <!-- <div class="text">
-      <details class="no-btm-margin">
-        <summary role="button">Help with this section</summary>
-        <p class="panel-indent">Try and keep your answers as current as possible and think of skills you’ve gained from your hobbies and interests that might be relevant to the vacancy. Remember to include any personal achievements.</p>
-      </details>
-    </div> -->
-            <p class="form-hint text">Think of the skills you’ve gained from your hobbies and interests that
-              might be relevant. Include any personal achievements.</p>
-            <textarea id="question3" class="form-control" data-val-length-max="4000"></textarea>
-            <span class="form-hint maxchar-count">4000</span>
+            <span class="form-hint text">Remember to include any personal achievements</span>
+            <textarea id="question3" class="form-control" rows="4" data-val-length-max="4000">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus
+              facilis illo saepe numquam officiis aliquam atque animi optio, quos
+              rem sint tempora culpa asperiores sapiente debitis doloribus recusandae
+              natus accusantium.
+            </textarea>
+            <!-- <span class="form-hint maxchar-count">4000</span> -->
+            <span class="visuallyhidden aria-limit" aria-live="polite"></span>
           </div>
           <div class="form-group">
             <label for="question4" class="form-label">Is there anything we can do to support your interview?</label>
-            <p class="form-hint">For example, do you need a signer, information in braille.</p>
+            <span class="form-hint">For example, do you need a signer, information in braille.</span>
             <div class="form-group form-group-compound inline">
               <label data-target="support-panel" for="support-yes" class="block-label">
-                <input name="support" type="radio" id="support-yes">Yes
+                <input name="support" type="radio" id="support-yes" aria-controls="support-panel"
+                aria-expanded="false">Yes
               </label>
               <label for="support-no" class="block-label">
                 <input checked name="support" type="radio" id="support-no">No
               </label>
             </div>
-            <div id="support-panel" class="panel-indent toggle-content">
+            <div id="support-panel" class="panel-indent toggle-content" aria-hidden="true">
               <span class="form-hint">Give examples below</span>
-              <textarea id="question4" class="form-control" data-val-length-max="4000"></textarea>
-              <span class="form-hint maxchar-count">4000</span>
+              <textarea id="question4" class="form-control" rows="4" data-val-length-max="4000"></textarea>
+              <!-- <span class="form-hint maxchar-count">4000</span> -->
+              <span class="visuallyhidden aria-limit" aria-live="polite"></span>
             </div>
           </div>
         </fieldset>
         <fieldset class="fieldset-with-border" id="applyAdditional">
           <legend class="heading-large">Additional questions</legend>
           <div class="form-group">
-            <label for="add-question1" class="form-label">Why would you like to become a trainee?</label>
-            <textarea id="add-question1" class="form-control" data-val-length-max="4000"></textarea>
-            <span class="form-hint maxchar-count">4000</span>
+            <label for="add-question1" class="form-label">Why would you like to become an Apprentice?</label>
+            <textarea id="add-question1" class="form-control" rows="4" data-val-length-max="4000"></textarea>
+            <!-- <span class="form-hint maxchar-count">4000</span> -->
+            <span class="visuallyhidden aria-limit" aria-live="polite"></span>
           </div>
           <div class="form-group">
             <label for="add-question2" class="form-label">Where do you see yourself in three years?</label>
-            <textarea id="add-question2" class="form-control" data-val-length-max="4000"></textarea>
-            <span class="form-hint maxchar-count">4000</span>
+            <textarea id="add-question2" class="form-control" rows="4" data-val-length-max="4000"></textarea>
+            <!-- <span class="form-hint maxchar-count">4000</span> -->
+            <span class="visuallyhidden aria-limit" aria-live="polite"></span>
           </div>
         </fieldset>
         <div class="form-group">
-          <a href="apply-preview.html" class="button" id="applyPreviewBtn">Preview application</a>
+          <a href="apply-preview.html" class="button" id="applyPreviewBtn">Preview and submit</a>
           <p id="saveApplication">
-            <span class="fake-link">Save draft</span>
+            <a href="#" class="button-link saveADraft">Save draft</a>
           </p>
-          <p id="applicationSaved">
-            Saved at 10:20 to <a href="dashboard.html">my applications</a>
-          </p>
+          <!--   <p id="applicationSaved">
+    Saved at 10:20 to <a href="dashboard.html">my applications</a>
+  </p> -->
         </div>
       </main>
     </div>
