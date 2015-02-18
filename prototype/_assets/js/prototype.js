@@ -720,7 +720,12 @@ $(function() {
     $(this).toggleClass('open');
   });
 
+  // ------ Change bookmark icon on click
 
+  $('.bookmark-result').on('click', function() {
+    $(this).find('.fa').toggleClass('fa-heart-o fa-heart');
+
+  });
 
 // --------------- Remove for live code -------------- //
 });
