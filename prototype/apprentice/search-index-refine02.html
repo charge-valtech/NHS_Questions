@@ -79,6 +79,7 @@
         </div>
       </div>
       <main role="main" id="main">
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
         <div class="hgroup">
           <h1 class="heading-xlarge">Find an apprenticeship</h1>
           <h2 class="subtitle">Search and apply for an apprenticeship in England</h2>
@@ -152,13 +153,13 @@
               <div class="tabbed-element tab1 active form-group">
                 <a name="keywords"></a>
                 <label class="form-label" for="Keywords">Keywords (optional) <span id="refineSearch" class="fake-link summary-style"
-                  href="">Refine search</span>
+                  href="">Focus search</span>
                 </label>
                 <span id="keywordHint" class="form-hint text">Can include job title, employer or reference number.</span>
                 <div id="refineControls" class="toggle-content panel-indent">
-                  <span class="form-hint">Choose an option to refine your search</span>
+                  <span class="form-hint">Choose an option to focus your search</span>
                   <label class="form-label" for="refine01">
-                    <input id="refine01" checked type="radio" name="refine">All keywords</label>
+                    <input id="refine01" checked type="radio" name="refine">All</label>
                   <label class="form-label" for="refine02">
                     <input id="refine02" type="radio" name="refine">Employer</label>
                   <label class="form-label" for="refine03">
@@ -179,7 +180,7 @@
                 example “carpentry” or “mechanics”.</p>
               <div class="form-group">
                 <a name="location"></a>
-                <label class="form-label" for="Location">Apprenticeship location</label><span class="form-hint">Enter postcode, town or city</span>
+                <label class="form-label" for="Location">Apprenticeship location</label><span class="form-hint">Enter postcode, town or city. <span class="fake-link geolocater inl-block hide-nojs" id="getLocation">Use current location</span></span>
                 <span
                 role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
                   <input class="form-control ui-autocomplete-input" data-val="true"

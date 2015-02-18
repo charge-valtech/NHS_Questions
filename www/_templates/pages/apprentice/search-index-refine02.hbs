@@ -1,6 +1,8 @@
 ---
 headerTitle: Find an apprenticeship
 ---
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+
 <div class="hgroup">
   <h1 class="heading-xlarge">Find an apprenticeship</h1>
   <h2 class="subtitle">Search and apply for an apprenticeship in England</h2>
@@ -64,11 +66,11 @@ headerTitle: Find an apprenticeship
 
 <div class="tabbed-element tab1 active form-group">
   <a name="keywords"></a>
-  <label class="form-label" for="Keywords">Keywords (optional) <span id="refineSearch" class="fake-link summary-style" href="">Refine search</span></label>
+  <label class="form-label" for="Keywords">Keywords (optional) <span id="refineSearch" class="fake-link summary-style" href="">Focus search</span></label>
   <span id="keywordHint" class="form-hint text">Can include job title, employer or reference number.</span>
   <div id="refineControls" class="toggle-content panel-indent">
-    <span class="form-hint">Choose an option to refine your search</span>
-    <label class="form-label" for="refine01"><input id="refine01" checked type="radio" name="refine">All keywords</label>
+    <span class="form-hint">Choose an option to focus your search</span>
+    <label class="form-label" for="refine01"><input id="refine01" checked type="radio" name="refine">All</label>
     <label class="form-label" for="refine02"><input id="refine02" type="radio" name="refine">Employer</label>
     <label class="form-label" for="refine03"><input id="refine03" type="radio" name="refine">Description</label>
     <label class="form-label" for="refine04"><input id="refine04" type="radio" name="refine">Job title</label>
@@ -80,7 +82,7 @@ headerTitle: Find an apprenticeship
 </div>
 <p class="visuallyhidden" id="keywordsHint">Try words that describe the type of apprenticeship you want, for example “carpentry” or “mechanics”.</p>
 
-                    <div class="form-group"><a name="location"></a><label class="form-label" for="Location">Apprenticeship location</label><span class="form-hint">Enter postcode, town or city</span><span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span><input class="form-control ui-autocomplete-input" data-val="true" data-val-length="Location must be 3 or more characters or a postcode" data-val-length-max="99" data-val-length-min="2" data-val-regex="Location contains some invalid characters" data-val-regex-pattern="^[a-zA-Z0-9\u0080-\uFFA7?$@#()&quot;'!,+\-=_:;.&amp;€£*%\s\/]+$" id="Location" name="Location" type="text" value="" autocomplete="off"><span class="field-validation-valid" data-valmsg-for="Location" data-valmsg-replace="true" aria-live="polite"></span></div>
+                    <div class="form-group"><a name="location"></a><label class="form-label" for="Location">Apprenticeship location</label><span class="form-hint">Enter postcode, town or city. <span class="fake-link geolocater inl-block hide-nojs" id="getLocation">Use current location</span></span><span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span><input class="form-control ui-autocomplete-input" data-val="true" data-val-length="Location must be 3 or more characters or a postcode" data-val-length-max="99" data-val-length-min="2" data-val-regex="Location contains some invalid characters" data-val-regex-pattern="^[a-zA-Z0-9\u0080-\uFFA7?$@#()&quot;'!,+\-=_:;.&amp;€£*%\s\/]+$" id="Location" name="Location" type="text" value="" autocomplete="off"><span class="field-validation-valid" data-valmsg-for="Location" data-valmsg-replace="true" aria-live="polite"></span></div>
 
                     <div class="inline">
                         <div class="form-group">

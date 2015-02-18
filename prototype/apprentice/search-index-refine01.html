@@ -79,6 +79,7 @@
         </div>
       </div>
       <main role="main" id="main">
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
         <div class="hgroup">
           <h1 class="heading-xlarge">Find an apprenticeship</h1>
           <h2 class="subtitle">Search and apply for an apprenticeship in England</h2>
@@ -159,7 +160,7 @@
                   data-val-regex-pattern="^[a-zA-Z0-9\u0080-\uFFA7?$@#()&quot;'!,+\-=_:;.&amp;€£*%\s\/]+$"
                   id="Keywords" name="Keywords" type="text" value="">
                   <select name="" id="refineSelect" class="input-withlink__select toggle-content">
-                    <option hidden="hidden" value="">-- Refine --</option>
+                    <!-- <option hidden="hidden" value="">-- Search in --</option> -->
                     <option value="">All</option>
                     <option value="">Job title</option>
                     <option value="">Description</option>
@@ -173,7 +174,7 @@
                 example “carpentry” or “mechanics”.</p>
               <div class="form-group">
                 <a name="location"></a>
-                <label class="form-label" for="Location">Apprenticeship location</label><span class="form-hint">Enter postcode, town or city</span>
+                <label class="form-label" for="Location">Apprenticeship location</label><span class="form-hint">Enter postcode, town or city. <span class="fake-link geolocater inl-block hide-nojs" id="getLocation">Use current location</span></span>
                 <span
                 role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
                   <input class="form-control ui-autocomplete-input" data-val="true"
