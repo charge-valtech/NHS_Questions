@@ -723,7 +723,7 @@ $(function() {
   // ------ Change bookmark icon on click
 
   $('.bookmark-result').on('click', function() {
-    $(this).find('.fa').toggleClass('fa-heart-o fa-heart');
+    $(this).find('.fa').toggleClass('fa-star-o fa-star');
 
   });
 
