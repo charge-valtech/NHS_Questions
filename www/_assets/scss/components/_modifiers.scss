@@ -26,6 +26,13 @@
   margin-bottom: 5px;
 }
 
+.para-btm-margin {
+  margin-bottom: $gutter-half;
+  @include media(tablet) {
+    margin-bottom: $gutter;
+  }
+}
+
 .inl-block {
 	display: inline-block;
 }

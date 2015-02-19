@@ -717,7 +717,6 @@ $(function() {
     $('#keywordHint').toggle();
     $('#refineControls').toggle();
 
-    $(this).toggleClass('open');
   });
 
   // ------ Change bookmark icon on click

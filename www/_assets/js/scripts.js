@@ -423,7 +423,9 @@ $(function() {
   //-------- Maps on results
 
   if($('.search-results__item').length > 0) {
-    var theMaps = [],
+    var miles = 5,
+        radiusCircle,
+        theMaps = [],
         directionsDisplay = [],
         directionsService = [],
         vacancyLength = $('.vacancy-link').length,
@@ -436,6 +438,36 @@ $(function() {
       directionsService[i] = new google.maps.DirectionsService();
     };
 
+    //--- Radius map
+
+    var radiusMapOptions = {
+      center: { lat: originLat, lng: originLon},
+      zoom: 10,
+      panControl: false,
+      zoomControl: true,
+      mapTypeControl: false,
+      scaleControl: false,
+      streetViewControl: false,
+      overviewMapControl: false,
+      scrollwheel: false
+    };
+
+    var radiusMap = new google.maps.Map(document.getElementById('map-canvas'), radiusMapOptions);
+
+    var distanceCircle = {
+      strokeColor: '#005ea5',
+      strokeOpacity: 0.8,
+      strokeWeight: 2,
+      fillColor: '#005ea5',
+      fillOpacity: 0.25,
+      map: radiusMap,
+      center: radiusMapOptions.center,
+      radius: miles * 1609.344
+    }
+
+    radiusCircle = new google.maps.Circle(distanceCircle);
+
+    //--- Maps on each result
     $('.vacancy-link').each(function () {
 
       var vacancyMap = $(this).closest('.search-results__item').find('.map')[0],
