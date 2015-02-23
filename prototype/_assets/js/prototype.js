@@ -726,5 +726,16 @@ $(function() {
 
   });
 
+  //------- Choose details
+
+  $('#chooseDetails input').on('change', function() {
+    var $this = $(this),
+        $thisId = $this.attr('id');
+
+    $('li[data-show="' + $thisId + '"]').toggle();
+
+
+  });
+
 // --------------- Remove for live code -------------- //
 });
