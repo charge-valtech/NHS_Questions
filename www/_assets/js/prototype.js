@@ -732,7 +732,7 @@ $(function() {
     var $this = $(this),
         $thisId = $this.attr('id');
 
-    $('li[data-show="' + $thisId + '"]').toggle();
+    $('[data-show="' + $thisId + '"]').toggle();
 
 
   });
