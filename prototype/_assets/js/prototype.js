@@ -723,6 +723,7 @@ $(function() {
 
   $('.bookmark-result').on('click', function() {
     $(this).find('.fa').toggleClass('fa-star-o fa-star');
+    $(this).toggleClass('letter-d')
 
   });
 
