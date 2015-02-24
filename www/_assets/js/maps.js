@@ -8,8 +8,8 @@ $(function() {
         directionsDisplay = [],
         directionsService = [],
         vacancyLength = $('.vacancy-link').length,
-        originLat = ($.cookie('gotLocation') ? $.jStorage.get('currentLat') : $('#Latitude').val()),
-        originLon = ($.cookie('gotLocation') ? $.jStorage.get('currentLong') : $('#Longitude').val()),
+        originLat = ($.cookie('gotLocation') ? $.jStorage.get('currentLat') : Number($('#Latitude').val())),
+        originLon = ($.cookie('gotLocation') ? $.jStorage.get('currentLong') : Number($('#Longitude').val())),
         originLocation = new google.maps.LatLng(originLat,originLon);
 
     for (var i = 0; i < vacancyLength; i++){
