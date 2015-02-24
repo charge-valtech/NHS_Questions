@@ -737,5 +737,16 @@ $(function() {
 
   });
 
+  //------- Trigger saved search
+
+  $('#receiveSaveSearchAlert').on('click', function() {
+    $.cookie('savedSearch', true, {path: '/'});
+  });
+
+  if($('#savedSearch').length > 0 && $.cookie('savedSearch')) {
+    $('#savedSearch').find('p').hide();
+    $('#savedSearches').show();
+  }
+
 // --------------- Remove for live code -------------- //
 });
