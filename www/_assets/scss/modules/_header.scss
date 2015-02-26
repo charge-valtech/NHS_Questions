@@ -191,17 +191,14 @@
     width: 40%;
     vertical-align: top;
   }
-  li {
-    display: inline-block;
-    margin-bottom: 0;
-    list-style-type: none;
-    // padding-bottom: 5px;
-  }
   .your-name {
     padding: 0 5px;
   }
+  summary {
+    margin-right: 8px;
+    margin-top: 1px;
+  }
   a {
-    display: inline-block;
     padding: 0 5px;
   }
 }
