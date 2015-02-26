@@ -745,7 +745,7 @@ $(function() {
   });
 
   if($('#savedSearch').length > 0 && $.cookie('savedSearch')) {
-    $('#savedSearch').find('p').hide();
+    $('#savedSearch').find('.savedInitalText').hide();
     $('#savedSearches').show();
   }
 
