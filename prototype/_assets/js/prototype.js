@@ -723,7 +723,10 @@ $(function() {
 
   $('.bookmark-result').on('click', function() {
     $(this).find('.fa').toggleClass('fa-star-o fa-star');
-    $(this).toggleClass('letter-d')
+
+    $(this).attr('title', $(this).find('.fa').hasClass('fa-star') ? 'Remove from saved':'Add to saved');
+
+    return false;
 
   });
 
