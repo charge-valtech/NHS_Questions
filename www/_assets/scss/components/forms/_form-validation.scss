@@ -77,6 +77,28 @@
   }
 }
 
+.validation-info,
+.input-validation-info {
+  border-left: 3px solid $info-colour;
+  box-sizing: content-box;
+  margin-left: -13px;
+  padding: 0 0 0 10px;
+  .form-control {
+    box-sizing: border-box;
+    border: 1px solid $border-colour;
+    color: $black;
+    margin-left: 0;
+    padding: 4px;
+  }
+  &.block-label {
+    margin-left: 0;
+  }
+  @include media(tablet) {
+    margin-left: -18px;
+    padding-left: $gutter-half;
+  }
+}
+
 .field-validation-valid {
   clear: left;
 }
@@ -119,6 +141,21 @@
     background: $warning-background;
   }
   .form-group.input-validation-warning {
+    border-left: 0;
+    margin-left: 0;
+    padding-left: 0;
+  }
+}
+
+.form-control.input-validation-info {
+  background: $info-background;
+}
+
+.form-group.input-validation-info {
+  > .form-control {
+    background: $info-background;
+  }
+  .form-group.input-validation-info {
     border-left: 0;
     margin-left: 0;
     padding-left: 0;
