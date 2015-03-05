@@ -26,6 +26,10 @@
   margin-bottom: 5px;
 }
 
+.med-btm-margin {
+  margin-bottom: 10px;
+}
+
 .para-btm-margin {
   margin-bottom: $gutter-half;
   @include media(tablet) {

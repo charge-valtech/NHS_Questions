@@ -23,6 +23,8 @@ $(function() {
 
   if (isMobile.any()) {
     FastClick.attach(document.body);
+
+    $('input[autofocus]').removeAttr('autofocus');
   }
 
   function isAndroid() {
