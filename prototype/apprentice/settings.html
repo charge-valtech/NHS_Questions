@@ -204,28 +204,30 @@
             </label>
           </div>
         </div>
-        <div class="panel-indent text">
-          <p>We'll notify you when:</p>
-          <ul class="list-bullet">
-            <li>you submit an application form</li>
-            <li>the status of one of your applications changes</li>
-            <li>an apprenticeship is approaching its closing date</li>
-            <li>you have a saved search alert</li>
+        <div class="text para-btm-margin">
+          <p class="small-btm-margin">Choose to be notified when:</p>
+          <ul class="list-text list-checkradio">
+            <li>
+              <input checked type="checkbox" id="appSubmit">
+              <label for="appSubmit">you submit an application form</label>
+            </li>
+            <li>
+              <input checked type="checkbox" id="appStatus">
+              <label for="appStatus">the status of one of your applications changes</label>
+            </li>
+            <li>
+              <input checked type="checkbox" id="appClosing">
+              <label for="appClosing">an apprenticeship is approaching its closing date</label>
+            </li>
+            <li>
+              <input checked type="checkbox" id="savedAlerts">
+              <label for="savedAlerts">you have a saved search alert</label>
+            </li>
+            <li>
+              <input checked type="checkbox" id="sendUpdates">
+              <label for="sendUpdates">we send you updates on news and information</label>
+            </li>
           </ul>
-        </div>
-        <div class="form-group form-group-compound">
-          <p class="form-label">Receive updates on news and information?</p>
-          <label for="updatesEmail" class="block-label">
-            <input type="checkbox" id="updatesEmail">Email
-          </label>
-          <label for="updatesText" class="block-label">
-            <input type="checkbox" id="updatesText">Text
-          </label>
-        </div>
-        <div class="panel-indent text">
-          <p>We regularly send out latest careers news and information on upcoming
-            events
-          </p>
         </div>
         <div class="form-group" id="savedSearch">
           <h2 class="heading-large">Saved apprenticeship searches</h2>
