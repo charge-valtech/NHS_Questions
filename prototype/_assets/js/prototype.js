@@ -723,6 +723,7 @@ $(function() {
 
   $('#receiveSaveSearchAlert').on('click', function() {
     $.cookie('savedSearch', true, {path: '/'});
+    $('#savedSearchPanel').show();
   });
 
   if($('#savedSearch').length > 0 && $.cookie('savedSearch')) {
