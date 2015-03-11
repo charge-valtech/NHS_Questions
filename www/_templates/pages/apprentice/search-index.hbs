@@ -65,8 +65,16 @@ headerTitle: Find an apprenticeship
 
 <div class="tabbed-element tab1 active form-group">
   <a name="keywords"></a>
-  <label class="form-label" for="Keywords">Keywords (optional)</label>
-  <span class="form-hint">Can include job title, employer or reference number</span>
+  <label class="form-label" for="Keywords">Keywords (optional) <span id="refineSearch" class="fake-link summary-style">Refine search</span></label>
+  <span id="keywordHint" class="form-hint text">Can include job title, employer or reference number.</span>
+  <div id="refineControls" class="toggle-content panel-indent med-btm-margin">
+    <span class="form-hint">Choose an option to refine your search</span>
+    <label class="form-label" for="refine01"><input id="refine01" checked type="radio" name="refine">All</label>
+    <label class="form-label" for="refine04"><input id="refine04" type="radio" name="refine">Job title</label>
+    <label class="form-label" for="refine03"><input id="refine03" type="radio" name="refine">Description</label>
+    <label class="form-label" for="refine02"><input id="refine02" type="radio" name="refine">Employer</label>
+    <label class="form-label" for="refine05"><input id="refine05" type="radio" name="refine">Reference number</label>
+  </div>
   <input aria-describedby="keywordsHint" autofocus="autofocus" class="form-control" data-val="true" data-val-regex="'Keywords' contains some invalid characters" data-val-regex-pattern="^[a-zA-Z0-9\u0080-\uFFA7?$@#()&quot;'!,+\-=_:;.&amp;€£*%\s\/]+$" id="Keywords" name="Keywords" type="text" value="">
   <span class="field-validation-valid" data-valmsg-for="Keywords" data-valmsg-replace="true" aria-live="polite"></span>
 </div>
@@ -75,7 +83,7 @@ headerTitle: Find an apprenticeship
 <div class="form-group">
   <a name="location"></a>
   <label class="form-label" for="Location">Your location</label>
-  <span class="form-hint">Enter postcode, town or city. <span class="fake-link geolocater inl-block hide-nojs" id="getLocation">Use current location</span></span>
+  <span class="form-hint">Enter postcode, town or city or <span class="fake-link geolocater inl-block hide-nojs" id="getLocation">use current location</span></span>
   <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
   <input class="form-control ui-autocomplete-input" data-val="true" data-val-length="Location must be 3 or more characters or a postcode" data-val-length-max="99" data-val-length-min="2" data-val-regex="Location contains some invalid characters" id="Location" name="Location" type="text" value="" autocomplete="off">
   <span class="field-validation-valid" data-valmsg-for="Location" data-valmsg-replace="true" aria-live="polite"></span>
