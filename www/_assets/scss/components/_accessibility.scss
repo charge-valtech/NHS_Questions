@@ -49,8 +49,10 @@
 }
 
 .hide-button {
+  background: transparent !important;
   border: 0 !important;
   border:none !important;
+  color: transparent !important;
   display: block !important;
   width: 0 !important; height: 0 !important;
   margin: 0 !important;

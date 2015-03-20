@@ -291,16 +291,31 @@ $(function() {
 
   //------- Select to inject content to text input
 
-  $('.select-inject').on('change', function() {
-    var $this = $(this),
-        $selectedOption = $this.find('option:selected'),
-        $thisOptionText = $selectedOption.text();
+  $('.select-inject').on('change', function () {
+      var $this = $(this),
+          $selectedOption = $this.find('option:selected'),
+          $thisOptionText = $selectedOption.text(),
+          $theInput = $this.closest('.form-group').find('.select-injected'),
+          $selectedVal = $selectedOption.val();
 
-    $this.next('.select-injected').val($thisOptionText);
+      $theInput.val($thisOptionText);
 
-    if($selectedOption.val() == "noSelect") {
-      $this.next('.select-injected').val("");
-    }
+      $('.selfServe').each(function() {
+        if($(this).prop('id') == $selectedVal) {
+          $(this).show();
+          $('.selfServe').not($(this)).hide();
+        }
+      });
+
+      if($('#' + $selectedVal).length == 0) {
+        $('.selfServe').hide();
+      }
+
+      if ($selectedVal == "noSelect") {
+          $theInput.val("");
+      }
+
+      $theInput.focusout();
   });
 
   //------- Inline details toggle
