@@ -18,6 +18,9 @@
   li {
     color: $grey-1;
     padding: 12px 0 5px 0;
+    @media screen and (max-width: 640px) {
+      margin-bottom: 0;
+    }
   }
   a {
     text-decoration: none;
