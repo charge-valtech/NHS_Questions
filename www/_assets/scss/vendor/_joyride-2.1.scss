@@ -19,20 +19,24 @@ body {
   top: 0; /* keeps the page from scrolling when calculating position */
   left: 0;
   font-weight: normal;
-  border-radius: 4px;
 }
 
 .joyride-content-wrapper {
   font-size: 16px;
-  padding: 10px 10px 60px 15px;
+  padding: 10px 22px 60px 15px;
 }
 
 /* Mobile */
 @media only screen and (max-width: 767px) {
+  .browseHelp .joyride-nub {
+    left: 93px !important;
+  }
+  .savedHelp .joyride-nub {
+    left: 190px !important;
+  }
   .joyride-tip-guide {
-    width: 95% !important;
-    border-radius: 0;
-    left: 2.5% !important;
+    width: 93% !important;
+    left: 3.5% !important;
   }
   .joyride-tip-guide-wrapper {
     width: 100%;
