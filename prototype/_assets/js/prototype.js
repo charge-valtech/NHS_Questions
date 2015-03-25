@@ -739,5 +739,19 @@ $(function() {
     $('#savedSearches').show();
   }
 
+
+  // -------- Employer search
+
+  $('#employerSearch').on('click', function() {
+    $('#keywordSearchBox').hide();
+    $('#employerSearchBox').show();
+
+  });
+  $('#keywordSearch').on('click', function() {
+    $('#employerSearchBox').hide();
+    $('#keywordSearchBox').show();
+
+  });
+
 // --------------- Remove for live code -------------- //
 });

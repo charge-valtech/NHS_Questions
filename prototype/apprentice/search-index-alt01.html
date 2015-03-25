@@ -87,8 +87,9 @@
         <div class="grid-wrapper controls-3-4">
           <section class="grid grid-2-3">
             <nav class="tabbed-nav">
-              <a class="tabbed-tab active" href="#" id="keywords-tab-control" tab="#tab1">Keywords</a>
-              <a class="tabbed-tab" href="#" id="categories-tab-control" tab="#tab2">Categories</a>
+              <a class="tabbed-tab active" href="#" id="keywords-tab-control" tab="#tab1">Search</a>
+              <a class="tabbed-tab" href="#" id="categories-tab-control" tab="#tab2">Browse</a>
+              <a class="tabbed-tab" href="#" id="categories-tab-control" tab="#tab3">Saved searches</a>
             </nav>
             <div class="tabbed-content active">
               <div id="categories" class="form-group tabbed-element tab2 ">
@@ -151,21 +152,17 @@
                 </div>
               </div>
               <div class="tabbed-element tab1 active form-group">
-                <div class="form-group">
-                  <a name="location"></a>
-                  <label class="form-label" for="Location">Your location</label>
-                  <span class="form-hint">Enter postcode, town or city. <span class="fake-link geolocater inl-block hide-nojs" id="getLocation">Use current location</span></span>
-                  <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
-                  <input class="form-control ui-autocomplete-input" data-val="true" data-val-length="Location must be 3 or more characters or a postcode"
-                  data-val-length-max="99" data-val-length-min="2" data-val-regex="Location contains some invalid characters"
-                  id="Location" name="Location" type="text" value="" autocomplete="off">
-                  <span class="field-validation-valid" data-valmsg-for="Location" data-valmsg-replace="true"
-                  aria-live="polite"></span>
-                </div>
                 <a name="keywords"></a>
-                <label class="form-label" for="Keywords">Keywords (optional)</label>
-                <span class="form-hint">Can include reference number. <a href="">Employer search</a></span>
-                <input aria-describedby="keywordsHint" class="form-control" data-val="true" data-val-regex="'Keywords' contains some invalid characters"
+                <div class="" id="keywordSearchBox">
+                  <label class="form-label" for="Keywords">Keywords (optional)</label>
+                  <span id="keywordHint" class="form-hint text">Can include reference number. <span class="fake-link" id="employerSearch">Employer search</span></span>
+                </div>
+                <div class="toggle-content" id="employerSearchBox">
+                  <label class="form-label" for="Keywords">Employer name (optional)</label>
+                  <span id="keywordHint" class="form-hint text">Can include reference number. <span class="fake-link" id="keywordSearch">Keyword search</span></span>
+                </div>
+                <input aria-describedby="keywordsHint" autofocus="autofocus" class="form-control"
+                data-val="true" data-val-regex="'Keywords' contains some invalid characters"
                 data-val-regex-pattern="^[a-zA-Z0-9\u0080-\uFFA7?$@#()&quot;'!,+\-=_:;.&amp;€£*%\s\/]+$"
                 id="Keywords" name="Keywords" type="text" value="">
                 <span class="field-validation-valid" data-valmsg-for="Keywords" data-valmsg-replace="true"
@@ -173,35 +170,53 @@
               </div>
               <p class="visuallyhidden" id="keywordsHint">Try words that describe the type of apprenticeship you want, for
                 example “carpentry” or “mechanics”.</p>
-              <div class="inline">
+              <div class="disp-block tabbed-element tab1 tab2">
                 <div class="form-group">
-                  <label for="loc-within" class="form-label">Within</label>
-                  <select data-val="true" data-val-number="The field WithinDistance must be a number."
-                  id="loc-within" name="WithinDistance">
-                    <option value="2">2 miles</option>
-                    <option selected="selected" value="5">5 miles</option>
-                    <option value="10">10 miles</option>
-                    <option value="15">15 miles</option>
-                    <option value="20">20 miles</option>
-                    <option value="30">30 miles</option>
-                    <option value="40">40 miles</option>
-                  </select>
+                  <a name="location"></a>
+                  <label class="form-label" for="Location">Your location</label>
+                  <span class="form-hint">Enter postcode, town or city or <span class="fake-link geolocater inl-block hide-nojs" id="getLocation">use current location</span></span>
+                  <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
+                  <input class="form-control ui-autocomplete-input" data-val="true" data-val-length="Location must be 3 or more characters or a postcode"
+                  data-val-length-max="99" data-val-length-min="2" data-val-regex="Location contains some invalid characters"
+                  id="Location" name="Location" type="text" value="" autocomplete="off">
+                  <span class="field-validation-valid" data-valmsg-for="Location" data-valmsg-replace="true"
+                  aria-live="polite"></span>
                 </div>
-                <div class="form-group">
-                  <label for="apprenticeship-level" class="form-label">Apprenticeship level</label>
-                  <select id="apprenticeship-level" name="ApprenticeshipLevel">
-                    <option selected="selected" value="All">All levels</option>
-                    <option value="Intermediate">Intermediate</option>
-                    <option value="Advanced">Advanced</option>
-                    <option value="Higher">Higher</option>
-                  </select>
+                <div class="inline">
+                  <div class="form-group">
+                    <label for="loc-within" class="form-label">Within</label>
+                    <select data-val="true" data-val-number="The field WithinDistance must be a number."
+                    id="loc-within" name="WithinDistance">
+                      <option value="2">2 miles</option>
+                      <option selected="selected" value="5">5 miles</option>
+                      <option value="10">10 miles</option>
+                      <option value="15">15 miles</option>
+                      <option value="20">20 miles</option>
+                      <option value="30">30 miles</option>
+                      <option value="40">40 miles</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="apprenticeship-level" class="form-label">Apprenticeship level</label>
+                    <select id="apprenticeship-level" name="ApprenticeshipLevel">
+                      <option selected="selected" value="All">All levels</option>
+                      <option value="Intermediate">Intermediate</option>
+                      <option value="Advanced">Advanced</option>
+                      <option value="Higher">Higher</option>
+                    </select>
+                  </div>
                 </div>
               </div>
-              <div class="form-group">
+              <div class="form-group form-group-compound">
                 <a href="search-results-search.html?Keywords=&Location=Coventry+%28West+Midlands%29&WithinDistance=10&Latitude=52.4035&Longitude=-1.50901&Hash=0&LocationType=NonNational&ResultsPerPage=5"
                 class="button tabbed-element tab1 active" id="search-button">Search</a>
+              </div>
+              <div class="form-group tabbed-element tab2">
                 <a href="search-results-browse.html?Keywords=&Location=b2+4nd&WithinDistance=40&SearchAction=Search&Latitude=52.4781331433771&Longitude=-1.8986588941503&Hash=-699855120&LocationType=NonNational&sortType=Distance&SearchAction=Search&resultsPerPage=5"
                 class="button tabbed-element tab2 " id="browse-button">Browse</a>
+              </div>
+              <div class="tabbed-element disp-block form-group tab1 tab2">
+                <a href="" class="">Reset options</a>
               </div>
               <input data-val="true" data-val-number="The field Latitude must be a number." id="Latitude"
               name="Latitude" type="hidden" value="">
@@ -213,6 +228,29 @@
               <input data-val="true" data-val-number="The field ResultsPerPage must be a number."
               id="ResultsPerPage" name="ResultsPerPage" type="hidden" value="5">
               <input id="SearchMode" name="SearchMode" type="hidden" value="Keyword">
+              <div class="tabbed-element tab3">
+                <span class="form-label">Run a saved search</span>
+                <ul class="list-text list-checkradio">
+                  <li>
+                    <input type="radio" name="savedSearches" id="name1">
+                    <label for="name1">engineering within 5 miles of CV1 2WT</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="savedSearches" id="name2">
+                    <label for="name2">Within 10 miles of Coventry</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="savedSearches" id="name3">
+                    <label for="name3">Construction, Planning and the Built Environment within England</label>
+                  </li>
+                </ul>
+                <div class="form-group">
+                  <a href="search-results-search.html" class="button">Run search</a>
+                </div>
+                <p>
+                  You can change your saved searches by visiting <a href="settings.html">alert settings</a>
+                </p>
+              </div>
             </div>
           </section>
           <aside class="grid grid-1-3">
