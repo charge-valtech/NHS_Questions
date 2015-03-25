@@ -652,6 +652,14 @@ $(function() {
     $(this).closest('.panel-info').hide();
   });
 
+  if($('#signInTitle').length > 0) {
+    var signInStatus = gup('Status');
+
+    if(signInStatus == "signout") {
+      $('#signedOut').show();
+    }
+  }
+
   //----- Verify trigger
 
   $('#verifyNumBtn, #verifyLink').on('click', function() {
