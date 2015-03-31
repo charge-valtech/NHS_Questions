@@ -762,5 +762,23 @@ $(function() {
 
   });
 
+  // -------- Select all control
+
+  $('.all-select').on('change', function() {
+    var $this = $(this),
+        $container = $this.closest('.input-withlink--all-select');
+
+    if($this.val() != "All") {
+      $container.addClass('auto-width');
+      $container.css('padding-left', $this.outerWidth() + 'px');
+      $container.find('input').focus();
+    } else {
+      $container.removeClass('auto-width');
+      $container.css('padding-left', $this.outerWidth() + 'px');
+      $container.find('input').focus();
+
+    }
+  });
+
 // --------------- Remove for live code -------------- //
 });

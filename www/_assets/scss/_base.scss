@@ -46,6 +46,10 @@
   }
 }
 
+.js-enabled .hide-js {
+  display: none;
+}
+
 .hide-tablet {
   @include media(tablet) {
     display: none;

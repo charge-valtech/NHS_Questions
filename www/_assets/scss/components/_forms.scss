@@ -238,8 +238,13 @@ input::-webkit-inner-spin-button {
       width: 75%;
     }
   }
+}
+
+.input-withlink--all-select {
+  position: static;
   .js-enabled & {
     padding-left: 60px;
+    position: relative;
   }
 }
 
@@ -253,15 +258,32 @@ input::-webkit-inner-spin-button {
 }
 
 .input-withlink__select {
-  position: absolute;
   bottom: 0; left: 0;
   .input-withlink--left & {
     left: 0;
+  }
+  .js-enabled & {
+    position: absolute;
   }
 }
 
 .js-enabled .all-select {
   width: 60px;
+}
+
+.js-enabled .auto-width {
+  &.input-withlink--all-select {
+    @media screen and (max-width: 640px) {
+      padding-left: 0 !important;
+    }
+  }
+  .all-select {
+    width: auto;
+    @media screen and (max-width: 640px) {
+      position: static;
+      width: 100%;
+    }
+  }
 }
 
 
