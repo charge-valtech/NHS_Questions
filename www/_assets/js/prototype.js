@@ -764,8 +764,12 @@ $(function() {
 
   // -------- Select all control
 
-  $('.all-select').on('change', function() {
-    var $this = $(this),
+  if($('#refineSelect').length > 0) {
+    setSelectControl($('#refineSelect'));
+  }
+
+  function setSelectControl(that) {
+    var $this = that,
         $container = $this.closest('.input-withlink--all-select');
 
     if($this.val() != "All") {
@@ -776,8 +780,13 @@ $(function() {
       $container.removeClass('auto-width');
       $container.css('padding-left', $this.outerWidth() + 'px');
       $container.find('input').focus();
-
     }
+  }
+
+  $('.all-select').on('change', function() {
+    var $this = $(this);
+
+    setSelectControl($this);
   });
 
 // --------------- Remove for live code -------------- //
