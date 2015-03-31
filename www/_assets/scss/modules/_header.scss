@@ -162,35 +162,35 @@
   font-size: 14px; /*16px*/
   padding: 10px 0;
   vertical-align: middle;
-  span {
-    display: inline-block;
-    vertical-align: top;
-    width: 75%;
-  }
+  // span {
+  //   display: inline-block;
+  //   vertical-align: top;
+  //   width: 75%;
+  // }
   @include media(tablet) {
     font-size: 16px;
   }
 }
 
-.prototype-warning {
-  @include media(tablet) {
-    display: inline-block;
-    margin-right: -4px;
-    width: 60%;
-  }
-}
+// .prototype-warning {
+//   @include media(tablet) {
+//     display: inline-block;
+//     margin-right: -4px;
+//     width: 60%;
+//   }
+// }
 
 .account-info {
-  margin-top: $gutter-half;
+  // margin-top: $gutter-half;
   padding-left: 0;
   text-align: right;
-  @include media(tablet) {
-    display: inline-block;
-    margin-top: 0;
-    margin-right: -4px;
-    width: 40%;
-    vertical-align: top;
-  }
+  // @include media(tablet) {
+  //   display: inline-block;
+  //   margin-top: 0;
+  //   margin-right: -4px;
+  //   width: 40%;
+  //   vertical-align: top;
+  // }
   .your-name {
     padding: 0 5px;
   }

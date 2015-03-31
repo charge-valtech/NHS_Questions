@@ -708,9 +708,20 @@ $(function() {
   // ------ Change bookmark icon on click
 
   $('.bookmark-result').on('click', function() {
+    var savedNumberCount = 0,
+        numberOfSaved = $.jStorage.get('saved-count');
+
     $(this).find('.fa').toggleClass('fa-star-o fa-star');
 
     $(this).attr('title', $(this).find('.fa').hasClass('fa-star') ? 'Remove from saved':'Add to saved');
+
+    $('#savedHeaderItem').toggle();
+
+    savedNumberCount++;
+
+    $.jStorage.set('saved-count', savedNumberCount);
+
+    console.log(savedNumberCount);
 
     return false;
 
@@ -723,8 +734,6 @@ $(function() {
         $thisId = $this.attr('id');
 
     $('[data-show="' + $thisId + '"]').toggle();
-
-
   });
 
   //------- Trigger saved search

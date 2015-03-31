@@ -228,6 +228,7 @@ input::-webkit-inner-spin-button {
 
 .input-withlink {
   position: relative;
+  width: 100%;
   .form-control {
     width: 100%;
   }
@@ -236,6 +237,9 @@ input::-webkit-inner-spin-button {
     .controls-3-4 & {
       width: 75%;
     }
+  }
+  .js-enabled & {
+    padding-left: 60px;
   }
 }
 
@@ -249,13 +253,15 @@ input::-webkit-inner-spin-button {
 }
 
 .input-withlink__select {
-  @include media(tablet) {
-    position: absolute;
-    bottom: 0; right: 0;
-  }
+  position: absolute;
+  bottom: 0; left: 0;
   .input-withlink--left & {
     left: 0;
   }
+}
+
+.js-enabled .all-select {
+  width: 60px;
 }
 
 

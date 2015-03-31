@@ -78,6 +78,25 @@
           </div>
         </div>
       </div>
+      <!-- <div class="phase-notice gov-border">
+  <div class="prototype-warning">
+    <strong class="beta__label">Beta</strong> <span>This is a prototype – your <a href="https://www.surveymonkey.com/s/MFNR7NZ" target="_blank" rel="external">feedback</a> will help to improve it.</span>
+  </div>
+  <div class="account-info sign-in" id="bannerSignedOut">
+    <a href="/apprentice/profile-signin.html?"><i class="fa fa-sign-in"></i>Sign in / Create account</a>
+  </div>
+  <div class="account-info sign-out" id="bannerSignedIn" style="display: none;">
+    <div class="small-btm-margin">
+      <span class="your-name" id="bannerUserName">Henry Charge</span>
+          <a href="/apprentice/profile-signin.html?Status=signout" id="btnSignOut"><i class="fa fa-sign-out"></i>Sign out</a>
+    </div>
+    <div>
+      <a href="/apprentice/dashboard.html#dashDrafts" class="toggle-content" id="savedHeaderItem"><span id="savedCount"></span> Saved</a>
+      <a id="applicationsLink" href="/apprentice/dashboard.html">My applications</a>
+      <a href="/apprentice/settings.html" id="settingsLink">Settings</a>
+    </div>
+  </div>
+</div> -->
       <main role="main" id="main">
         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
         <div class="hgroup">
@@ -151,16 +170,31 @@
                   </div>
                 </div>
               </div>
+              <!-- <div class="tabbed-element tab1 active form-group" id="tourKeyword">
+  <a name="keywords"></a>
+  <label class="form-label" for="Keywords">Keywords (optional)</label>
+  <span id="keywordHint" class="form-hint text">Can include job title, employer or reference number</span>
+  <input aria-describedby="keywordsHint" autofocus="autofocus" class="form-control" data-val="true" data-val-regex="'Keywords' contains some invalid characters" data-val-regex-pattern="^[a-zA-Z0-9\u0080-\uFFA7?$@#()&quot;'!,+\-=_:;.&amp;€£*%\s\/]+$" id="Keywords" name="Keywords" type="text" value="">
+  <span class="field-validation-valid" data-valmsg-for="Keywords" data-valmsg-replace="true" aria-live="polite"></span>
+</div> -->
               <div class="tabbed-element tab1 active form-group" id="tourKeyword">
                 <a name="keywords"></a>
                 <label class="form-label" for="Keywords">Keywords (optional)</label>
                 <span id="keywordHint" class="form-hint text">Can include job title, employer or reference number</span>
-                <input aria-describedby="keywordsHint" autofocus="autofocus" class="form-control"
-                data-val="true" data-val-regex="'Keywords' contains some invalid characters"
-                data-val-regex-pattern="^[a-zA-Z0-9\u0080-\uFFA7?$@#()&quot;'!,+\-=_:;.&amp;€£*%\s\/]+$"
-                id="Keywords" name="Keywords" type="text" value="">
-                <span class="field-validation-valid" data-valmsg-for="Keywords" data-valmsg-replace="true"
-                aria-live="polite"></span>
+                <div class="input-withlink">
+                  <input aria-describedby="keywordsHint" autofocus="autofocus" class="form-control"
+                  data-val="true" data-val-regex="'Keywords' contains some invalid characters"
+                  data-val-regex-pattern="^[a-zA-Z0-9\u0080-\uFFA7?$@#()&quot;'!,+\-=_:;.&amp;€£*%\s\/]+$"
+                  id="Keywords" name="Keywords" type="text" value="">
+                  <select name="" id="refineSelect" class="input-withlink__select all-select">
+                    <!-- <option hidden="hidden" value="">-- Search by --</option> -->
+                    <option value="">All</option>
+                    <option value="">Job title</option>
+                    <option value="">Description</option>
+                    <option value="">Employer</option>
+                    <option value="">Ref. number</option>
+                  </select>
+                </div>
               </div>
               <p class="visuallyhidden" id="keywordsHint">Try words that describe the type of apprenticeship you want, for
                 example “carpentry” or “mechanics”.</p>

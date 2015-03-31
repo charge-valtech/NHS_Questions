@@ -64,13 +64,29 @@ headerTitle: Find an apprenticeship
     </div>
 </div>
 
-<div class="tabbed-element tab1 active form-group" id="tourKeyword">
+<!-- <div class="tabbed-element tab1 active form-group" id="tourKeyword">
   <a name="keywords"></a>
   <label class="form-label" for="Keywords">Keywords (optional)</label>
   <span id="keywordHint" class="form-hint text">Can include job title, employer or reference number</span>
 
   <input aria-describedby="keywordsHint" autofocus="autofocus" class="form-control" data-val="true" data-val-regex="'Keywords' contains some invalid characters" data-val-regex-pattern="^[a-zA-Z0-9\u0080-\uFFA7?$@#()&quot;'!,+\-=_:;.&amp;€£*%\s\/]+$" id="Keywords" name="Keywords" type="text" value="">
   <span class="field-validation-valid" data-valmsg-for="Keywords" data-valmsg-replace="true" aria-live="polite"></span>
+</div> -->
+<div class="tabbed-element tab1 active form-group" id="tourKeyword">
+  <a name="keywords"></a>
+    <label class="form-label" for="Keywords">Keywords (optional)</label>
+    <span id="keywordHint" class="form-hint text">Can include job title, employer or reference number</span>
+  <div class="input-withlink">
+      <input aria-describedby="keywordsHint" autofocus="autofocus" class="form-control" data-val="true" data-val-regex="'Keywords' contains some invalid characters" data-val-regex-pattern="^[a-zA-Z0-9\u0080-\uFFA7?$@#()&quot;'!,+\-=_:;.&amp;€£*%\s\/]+$" id="Keywords" name="Keywords" type="text" value="">
+      <select name="" id="refineSelect" class="input-withlink__select all-select">
+        <!-- <option hidden="hidden" value="">-- Search by --</option> -->
+        <option value="">All</option>
+        <option value="">Job title</option>
+        <option value="">Description</option>
+        <option value="">Employer</option>
+        <option value="">Ref. number</option>
+      </select>
+    </div>
 </div>
 <p class="visuallyhidden" id="keywordsHint">Try words that describe the type of apprenticeship you want, for example “carpentry” or “mechanics”.</p>
 
