@@ -72,9 +72,9 @@ headerTitle: Find an apprenticeship
   <input aria-describedby="keywordsHint" autofocus="autofocus" class="form-control" data-val="true" data-val-regex="'Keywords' contains some invalid characters" data-val-regex-pattern="^[a-zA-Z0-9\u0080-\uFFA7?$@#()&quot;'!,+\-=_:;.&amp;€£*%\s\/]+$" id="Keywords" name="Keywords" type="text" value="">
   <span class="field-validation-valid" data-valmsg-for="Keywords" data-valmsg-replace="true" aria-live="polite"></span>
 </div> -->
-<div class="tabbed-element tab1 active form-group" id="tourKeyword">
+<div class="tabbed-element tab1 active form-group">
   <a name="keywords"></a>
-    <label class="form-label" for="Keywords">Keywords (optional)</label>
+    <label class="form-label" for="tourKeyword">Keywords (optional)</label>
     <span id="keywordHint" class="form-hint text">Can include job title, employer or reference number</span>
   <div class="input-withlink input-withlink--all-select">
       <label for="refineSelect" class="hide-js inl-block">Refine search</label>
@@ -85,7 +85,7 @@ headerTitle: Find an apprenticeship
         <option value="Employer">Employer</option>
         <option value="Ref. number">Ref. number</option>
       </select>
-      <input aria-describedby="keywordsHint" autofocus="autofocus" class="form-control" data-val="true" data-val-regex="'Keywords' contains some invalid characters" data-val-regex-pattern="^[a-zA-Z0-9\u0080-\uFFA7?$@#()&quot;'!,+\-=_:;.&amp;€£*%\s\/]+$" id="Keywords" name="Keywords" type="text" value="">
+      <input aria-describedby="keywordsHint" autofocus="autofocus" class="form-control" data-val="true" data-val-regex="'Keywords' contains some invalid characters" data-val-regex-pattern="^[a-zA-Z0-9\u0080-\uFFA7?$@#()&quot;'!,+\-=_:;.&amp;€£*%\s\/]+$"  id="tourKeyword" name="Keywords" type="text" value="">
     </div>
 </div>
 <p class="visuallyhidden" id="keywordsHint">Try words that describe the type of apprenticeship you want, for example “carpentry” or “mechanics”.</p>
@@ -212,21 +212,24 @@ $('#runSearchHelp').on('click',function() {
 
 <ol id="searchTour" class="alwayshidden">
   <li data-id="keywords-tab-control">
-    Use the keyword search if you know what you're looking for, or you can leave the keyword blank if you just want to find apprenticeships nearby. Alternatively use the browse to find an apprenticeship by category.
+    <p>If you know the type of apprenticeship you’re looking for use the keyword search.</p>
   </li>
   <li class="browseHelp" data-id="categories-tab-control">
-    Browse by category
+    <p>If you want to see what apprenticeships are available in different industries you can search by category (eg construction or retail).</p>
   </li>
   <li class="savedHelp" data-id="saved-tab-control">
-    Run a saved search
+    <p>If you have saved searches you can run them from here. You can save as many different searches as you like.</p>
+  </li>
+  <li data-id="refineSelect">
+    <p>Select an option if you'd like to refine your search.</p>
   </li>
   <li data-id="tourKeyword">
-    Type in a keyword, this could be a specific job title.
+    <p>Type your keyword here, alternatively you can leave it blank to look for any apprenticeship in your selected area.</p>
   </li>
   <li data-id="tourLocation">
-    Enter your location
+    <p>You can search for apprenticeships in any location in England. This can be near your home or where you’d like to work.</p>
   </li>
   <li data-id="tourWithin" data-button="Finish">
-    Choose how far from your location you're willing to travel
+    <p>Choose how far from your location you want to search.</p>
   </li>
 </ol>

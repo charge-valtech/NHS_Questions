@@ -705,13 +705,31 @@ $(function() {
 
   });
 
-  // var blackHeaderHeight = $('.global-header').outerHeight(),
-  //     fixedContainerHeight = $('.fixed-container').outerHeight();
-
-
   // if($('.search-results__item').length > 0) {
-  //   $(window).on('scrollup', function() {
-  //     console.log(blackHeaderHeight + fixedContainerHeight);
+  //   var blackHeaderHeight = $('.global-header').outerHeight(),
+  //       fixedContainerHeight = $('.fixed-container').outerHeight(),
+  //       heightOfHeader = blackHeaderHeight + fixedContainerHeight,
+  //       lastScrollTop = 0,
+  //       delta = 5;
+
+  //   $(window).on('scroll', function() {
+  //     var nowScrollTop = $(this).scrollTop();
+  //     if(Math.abs(lastScrollTop - nowScrollTop) >= delta){
+  //       if (nowScrollTop > lastScrollTop){
+  //         console.log('down');
+  //         $('.fixed-container').removeClass('fixed-header');
+  //       } else {
+  //         console.log('up');
+
+  //         if(nowScrollTop > heightOfHeader) {
+  //           $('.fixed-container').addClass('fixed-header');
+  //         } else {
+  //           $('.fixed-container').removeClass('fixed-header');
+  //         }
+  //       }
+  //       lastScrollTop = nowScrollTop;
+  //     }
+
   //   })
   // }
 
