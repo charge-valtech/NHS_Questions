@@ -170,6 +170,18 @@
   @include media(tablet) {
     font-size: 16px;
   }
+  .fixed-header & {
+    margin: 0 auto;
+    max-width: 960px;
+  }
+}
+
+.fixed-container.fixed-header {
+  background: $white;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 // .prototype-warning {

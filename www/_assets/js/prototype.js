@@ -705,23 +705,36 @@ $(function() {
 
   });
 
+  // var blackHeaderHeight = $('.global-header').outerHeight(),
+  //     fixedContainerHeight = $('.fixed-container').outerHeight();
+
+
+  // if($('.search-results__item').length > 0) {
+  //   $(window).on('scrollup', function() {
+  //     console.log(blackHeaderHeight + fixedContainerHeight);
+  //   })
+  // }
+
   // ------ Change bookmark icon on click
 
   $('.bookmark-result').on('click', function() {
-    var savedNumberCount = 0,
-        numberOfSaved = $.jStorage.get('saved-count');
 
     $(this).find('.fa').toggleClass('fa-star-o fa-star');
 
     $(this).attr('title', $(this).find('.fa').hasClass('fa-star') ? 'Remove from saved':'Add to saved');
 
-    $('#savedHeaderItem').toggle();
+    if($('.fa-star').length > 0) {
+      $('#savedHeaderItem').removeClass('toggle-content');
+    } else {
+      $('#savedHeaderItem').addClass('toggle-content');
+    }
 
-    savedNumberCount++;
+    $('#savedCount').text($('.fa-star').length);
 
-    $.jStorage.set('saved-count', savedNumberCount);
+    $(this).toggleClass('filled-in');
+    $(this).blur();
 
-    console.log(savedNumberCount);
+    if('#settingsLink')
 
     return false;
 
