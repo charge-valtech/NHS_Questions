@@ -852,5 +852,14 @@ $(function() {
     setSelectControl($this);
   });
 
+  //------- Verify email
+
+  $('#emailVerified').on('click', function() {
+    $.cookie('emailIsVerified', true, {path: '/'});
+  });
+
+  if($.cookie('emailIsVerified')) {
+    $('#successEmailVerified').show();
+  }
 // --------------- Remove for live code -------------- //
 });
