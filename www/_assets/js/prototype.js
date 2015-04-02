@@ -711,9 +711,7 @@ $(function() {
       lastScrollTop = 0,
       delta = 5;
 
-  $(window).on('scroll', function() {
-    showFixedHeader();
-  });
+  $(window).on('scroll', throttle( 500, showFixedHeader ) );
 
   function showFixedHeader() {
     var nowScrollTop = $(window).scrollTop();
@@ -744,6 +742,25 @@ $(function() {
     $('.fixed-container').addClass('fixed-header');
     $('.content-container').css('padding-top', fixedContainerHeight + 'px');
   }
+
+  function throttle( delay, fn )
+    {
+      var last, deferTimer;
+      return function()
+      {
+        var context = this, args = arguments, now = +new Date;
+        if( last && now < last + delay )
+        {
+          clearTimeout( deferTimer );
+          deferTimer = setTimeout( function(){ last = now; fn.apply( context, args ); }, delay );
+        }
+        else
+        {
+          last = now;
+          fn.apply( context, args );
+        }
+      };
+    }
 
   // ------ Change bookmark icon on click
 
