@@ -80,22 +80,26 @@
 </div> -->
       <div class="fixed-container">
         <div class="banner-container">
-          <div class="phase-notice gov-border">
-            <!-- <div class="prototype-warning">
-        <strong class="beta__label">Beta</strong> <span>This is a prototype – your <a href="https://www.surveymonkey.com/s/MFNR7NZ" target="_blank" rel="external">feedback</a> will help to improve it.</span>
-      </div> -->
-            <div class="account-info sign-in" id="bannerSignedOut">
-              <a href="/apprentice/profile-signin.html?"><i class="fa fa-sign-in"></i>Sign in / Create account</a>
-            </div>
-            <div class="account-info sign-out" id="bannerSignedIn" style="display: none;">
-              <div class="small-btm-margin">
-                <span class="your-name" id="bannerUserName">Henry Charge</span>
-                <a href="/apprentice/profile-signin.html?Status=signout" id="btnSignOut"><i class="fa fa-sign-out"></i>Sign out</a>
+          <div class="phase-notice gov-border grid-wrapper">
+            <div class="grid grid-1-2">
+              <div class="prototype-warning">
+                <strong class="beta__label">Beta</strong>  <span>This is a prototype – your <a href="https://www.surveymonkey.com/s/MFNR7NZ" target="_blank" rel="external">feedback</a> will help improve it.</span>
               </div>
-              <div>
-                <a href="/apprentice/dashboard.html#dashDrafts" class="toggle-content" id="savedHeaderItem"><span id="savedCount"></span> Saved</a>
-                <a id="applicationsLink" href="/apprentice/dashboard.html">My applications</a>
-                <a href="/apprentice/settings.html" id="settingsLink">Settings</a>
+            </div>
+            <div class="grid grid-1-2">
+              <div class="account-info sign-in" id="bannerSignedOut">
+                <a href="/apprentice/profile-signin.html?"><i class="fa fa-sign-in"></i>Sign in / Create account</a>
+              </div>
+              <div class="account-info sign-out" id="bannerSignedIn" style="display: none;">
+                <div class="small-btm-margin">
+                  <span class="your-name" id="bannerUserName">Henry Charge</span>
+                  <a href="/apprentice/profile-signin.html?Status=signout" id="btnSignOut"><i class="fa fa-sign-out"></i>Sign out</a>
+                </div>
+                <div>
+                  <a href="/apprentice/dashboard.html#dashDrafts" class="toggle-content" id="savedHeaderItem"><span id="savedCount"></span> Saved</a>
+                  <a id="applicationsLink" href="/apprentice/dashboard.html">My applications</a>
+                  <a href="/apprentice/settings.html" id="settingsLink">Settings</a>
+                </div>
               </div>
             </div>
           </div>
@@ -360,8 +364,13 @@
             <p>You can search for apprenticeships in any location in England. This
               can be near your home or where you’d like to work.</p>
           </li>
-          <li data-id="tourWithin" data-button="Finish">
+          <li data-id="tourWithin">
             <p>Choose how far from your location you want to search.</p>
+          </li>
+          <li data-id="apprenticeship-level" data-button="Finish">
+            <p>You can also search by level. Intermediate is equivalent to 5 GCSE
+              passes, Advanced is 2 A-level passes and a Higher can lead to a foundation
+              degree.</p>
           </li>
         </ol>
       </main>
