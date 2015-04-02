@@ -170,10 +170,6 @@
   @include media(tablet) {
     font-size: 16px;
   }
-  .fixed-header & {
-    margin: 0 auto;
-    max-width: 960px;
-  }
 }
 
 .fixed-container.fixed-header {
@@ -182,6 +178,16 @@
   top: 0; left: 0;
   width: 100%;
   z-index: 1000;
+  .banner-container {
+    margin: 0 auto;
+    max-width: 1020px;
+    padding-left: $gutter;
+    padding-right: $gutter;
+    @media screen and (max-width: 640px) {
+      padding-left: $gutter-half;
+      padding-right: $gutter-half;
+    }
+  }
 }
 
 // .prototype-warning {

@@ -705,33 +705,45 @@ $(function() {
 
   });
 
-  // if($('.search-results__item').length > 0) {
-  //   var blackHeaderHeight = $('.global-header').outerHeight(),
-  //       fixedContainerHeight = $('.fixed-container').outerHeight(),
-  //       heightOfHeader = blackHeaderHeight + fixedContainerHeight,
-  //       lastScrollTop = 0,
-  //       delta = 5;
+  var blackHeaderHeight = $('.global-header').outerHeight(),
+      fixedContainerHeight = $('.fixed-container').outerHeight(),
+      heightOfHeader = blackHeaderHeight + fixedContainerHeight,
+      lastScrollTop = 0,
+      delta = 5;
 
-  //   $(window).on('scroll', function() {
-  //     var nowScrollTop = $(this).scrollTop();
-  //     if(Math.abs(lastScrollTop - nowScrollTop) >= delta){
-  //       if (nowScrollTop > lastScrollTop){
-  //         console.log('down');
-  //         $('.fixed-container').removeClass('fixed-header');
-  //       } else {
-  //         console.log('up');
+  $(window).on('scroll', function() {
+    showFixedHeader();
+  });
 
-  //         if(nowScrollTop > heightOfHeader) {
-  //           $('.fixed-container').addClass('fixed-header');
-  //         } else {
-  //           $('.fixed-container').removeClass('fixed-header');
-  //         }
-  //       }
-  //       lastScrollTop = nowScrollTop;
-  //     }
+  function showFixedHeader() {
+    var nowScrollTop = $(window).scrollTop();
+    if(Math.abs(lastScrollTop - nowScrollTop) >= delta){
+      if (nowScrollTop > lastScrollTop){
+        removeFixedHeader();
 
-  //   })
-  // }
+      } else {
+
+        if(nowScrollTop > heightOfHeader) {
+          addFixedHeader();
+
+        } else {
+          removeFixedHeader();
+
+        }
+      }
+      lastScrollTop = nowScrollTop;
+    }
+  }
+
+  function removeFixedHeader() {
+    $('.fixed-container').removeClass('fixed-header');
+    $('.content-container').css('padding-top', '0');
+  }
+
+  function addFixedHeader() {
+    $('.fixed-container').addClass('fixed-header');
+    $('.content-container').css('padding-top', fixedContainerHeight + 'px');
+  }
 
   // ------ Change bookmark icon on click
 
@@ -743,8 +755,10 @@ $(function() {
 
     if($('.fa-star').length > 0) {
       $('#savedHeaderItem').removeClass('toggle-content');
+      addFixedHeader();
     } else {
       $('#savedHeaderItem').addClass('toggle-content');
+      removeFixedHeader();
     }
 
     $('#savedCount').text($('.fa-star').length);
