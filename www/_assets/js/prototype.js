@@ -861,5 +861,17 @@ $(function() {
   if($.cookie('emailIsVerified')) {
     $('#successEmailVerified').show();
   }
+
+  //-------- What's new panel
+
+  $('#whatsNewLink').on('click', function() {
+    var $this = $(this);
+
+
+
+    $this.blur();
+
+    return false;
+  });
 // --------------- Remove for live code -------------- //
 });
