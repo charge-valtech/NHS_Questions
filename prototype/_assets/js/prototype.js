@@ -711,7 +711,7 @@ $(function() {
       lastScrollTop = 0,
       delta = 5;
 
-  $(window).on('scroll', throttle( 500, showFixedHeader ) );
+  $(window).on('scroll', showFixedHeader );
 
   function showFixedHeader() {
     var nowScrollTop = $(window).scrollTop();
