@@ -758,7 +758,6 @@ $(function() {
       addFixedHeader();
     } else {
       $('#savedHeaderItem').addClass('toggle-content');
-      removeFixedHeader();
     }
 
     $('#savedCount').text($('.fa-star').length);
