@@ -755,7 +755,9 @@ $(function() {
 
     if($('.fa-star').length > 0) {
       $('#savedHeaderItem').removeClass('toggle-content');
-      addFixedHeader();
+      if($(window).scrollTop() > heightOfHeader) {
+        addFixedHeader();
+      }
     } else {
       $('#savedHeaderItem').addClass('toggle-content');
     }
