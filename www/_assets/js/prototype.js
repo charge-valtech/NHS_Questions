@@ -870,8 +870,6 @@ $(function() {
     $this.closest('.hover-link')
          .find('.hover-link__child').toggleClass('hidden');
 
-    $this.blur();
-
     return false;
   });
 // --------------- Remove for live code -------------- //
