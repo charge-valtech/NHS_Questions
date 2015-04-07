@@ -872,5 +872,13 @@ $(function() {
 
     return false;
   });
+
+  $('.hover-link__close').on('click', function() {
+    $(this).closest('.hover-link__child').toggleClass('hidden');
+
+    $(this).blur();
+
+    return false;
+  });
 // --------------- Remove for live code -------------- //
 });
