@@ -864,10 +864,11 @@ $(function() {
 
   //-------- What's new panel
 
-  $('#whatsNewLink').on('click', function() {
+  $('.hover-link__anchor').on('click', function() {
     var $this = $(this);
 
-
+    $this.closest('.hover-link')
+         .find('.hover-link__child').toggleClass('hidden');
 
     $this.blur();
 

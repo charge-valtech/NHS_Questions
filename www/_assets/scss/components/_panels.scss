@@ -291,3 +291,25 @@ details summary:focus {
     display: block;
   }
 }
+
+.no-js .hover-link:hover {
+  .hidden {
+    display: block;
+    visibility: visible;
+  }
+}
+
+.hover-link {
+  position: relative;
+}
+
+.floating-panel {
+  background: $white;
+  border: 3px solid $grey-2;
+  color: $black;
+  padding: $gutter-half;
+  position: absolute;
+  top: 31px; right: 0;
+  width: 250px;
+}
+
