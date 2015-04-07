@@ -36,13 +36,20 @@
 }
 
 .progress-indicator-horizontal {
+  li {
+    display: none;
+  }
+  .active {
+    display: block;
+  }
   @include media(tablet) {
     li {
+      display: block;
       float: left;
       margin-right: 30px;
-      &.active {
-        margin-bottom: -5px;
-      }
+    }
+    .active {
+      margin-bottom: -5px;
     }
   }
 }
