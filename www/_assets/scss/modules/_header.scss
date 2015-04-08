@@ -167,6 +167,21 @@
   }
 }
 
+.prototype-warning {
+  margin-bottom: 5px;
+  @include media(tablet) {
+    margin-bottom: 0;
+  }
+  span {
+    display: inline-block;
+    vertical-align: top;
+    width: 77%;
+    @include media(tablet) {
+      width: 81.5%;
+    }
+  }
+}
+
 .fixed-container.fixed-header {
   background: $white;
   position: fixed;
