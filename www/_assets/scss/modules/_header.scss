@@ -200,6 +200,16 @@
   }
 }
 
+.dwarf-header {
+  max-height: 0;
+  overflow: hidden;
+  &.grown-header {
+    max-height: 400px;
+    // overflow: visible;
+    transition: max-height 0.5s ease-in;
+  }
+}
+
 .account-info {
   padding-left: 0;
   text-align: right;

@@ -719,14 +719,22 @@ $(function() {
       if (nowScrollTop > lastScrollTop){
         removeFixedHeader();
 
+        // if(nowScrollTop > heightOfHeader) {
+        //   $('.fixed-container').addClass('dwarf-header');
+        //   $('.dwarf-header').removeClass('grown-header');
+        // } else {
+        //   $('.fixed-container').removeClass('dwarf-header');
+        // }
+
       } else {
 
         if(nowScrollTop > heightOfHeader) {
           addFixedHeader();
+          // $('.dwarf-header').addClass('grown-header');
 
         } else {
           removeFixedHeader();
-
+          // $('.fixed-container').removeClass('grown-header dwarf-header');
         }
       }
       lastScrollTop = nowScrollTop;

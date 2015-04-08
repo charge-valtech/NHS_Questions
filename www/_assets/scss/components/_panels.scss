@@ -164,7 +164,7 @@ details summary:focus {
   display: none;
 }
 .no-details details > summary:before {
-  content: '► ';
+  content: "\25b6 ";
   font-size: 16px;
   float: left;
   margin-top: 1px;
@@ -178,7 +178,7 @@ details summary:focus {
 }
 
 .summary-style:before {
-  content: '► ';
+  content: "\25b6 ";
   font-size: 16px;
   display: inline-block;
   margin-top: 1px;
@@ -191,7 +191,7 @@ details summary:focus {
 }
 .no-details details.open summary:before,
 .summary-style.open:before {
-  content: '▼ ';
+  content: "\25bc ";
 }
 .no-details .open p,
 .no-js details p,
