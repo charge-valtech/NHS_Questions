@@ -521,6 +521,7 @@ input::-webkit-inner-spin-button {
   max-width: 0;
   max-height: 0;
   opacity: 0;
+  margin: 0; padding: 0;
   &:checked + .nhs-radiobtn__label:before {
     background: white;
     border: 0.35em solid $nhs-yellow;
