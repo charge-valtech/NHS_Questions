@@ -88,24 +88,24 @@ a {
   -webkit-tap-highlight-color: rgba(black, 0.3);
 }
 
-a:focus, button:focus {
-  background-color: $yellow;
-  outline: 3px solid $yellow;
-}
+// a:focus, button:focus {
+//   background-color: $yellow;
+//   outline: 3px solid $yellow;
+// }
 
-.button:focus {
-  outline: 3px solid $yellow;
-}
+// .button:focus {
+//   outline: 3px solid $yellow;
+// }
 
-button:active {
-  outline: none;
-}
+// button:active {
+//   outline: none;
+// }
 
-input:focus,
-textarea:focus,
-select:focus {
-  outline: 3px solid $yellow;
-}
+// input:focus,
+// textarea:focus,
+// select:focus {
+//   outline: 3px solid $yellow;
+// }
 
 .disabled:focus {
   outline: none;

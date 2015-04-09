@@ -62,3 +62,24 @@
     width: 50%;
   }
 }
+
+.nhs-countdown-container {
+  display: inline-block;
+  margin-bottom: 2em;
+}
+
+.nhs-countdown {
+  background: $nhs-yellow;
+  border-radius: 50%;
+  color: $nhs-pink;
+  display: table;
+  padding-top: 5px;
+  height: 4em;
+  width: 4em;
+  .nhs-the-count {
+    display: table-cell;
+    font-weight: bold;
+    line-height: 0.8;
+    vertical-align: middle;
+  }
+}
