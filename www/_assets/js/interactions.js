@@ -37,4 +37,45 @@ $(function() {
 
   isAndroid();
 
+
+  function slidePageIn() {
+    var viewportHeight = $(window).innerHeight();
+
+    $('.nhs-animatehtml').css('overflow-y', 'hidden');
+
+    $('.nhs-animate-inout').show();
+
+    $('.nhs-animate-inout').animate({'margin-top': '0'}, 1000);
+
+    setTimeout(function() {
+      $('.nhs-animatehtml').css('overflow-y', 'scroll');
+    }, 1000);
+  }
+
+  slidePageIn();
+
+  $('.nhs-nav-btn').on('click', function(e) {
+    var $this = $(this),
+        $thisHref;
+
+    e.preventDefault();
+
+    if($this.is('a')) {
+      $thisHref = $(this).attr('href');
+
+      setTimeout(function(){
+        window.location = $thisHref;
+      }, 1000);
+    } else {
+      setTimeout(function(){
+        $this.closest('form').submit();
+      }, 1000);
+    }
+
+    $('.nhs-body-container').animate({'margin-top': '1000px'}, 1000);
+
+
+
+  });
+
 });

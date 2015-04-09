@@ -67,10 +67,20 @@
 
 .nhs-page-navigation {
   background: darken($nhs-pink, 5%);
-  padding: 1.8em 0 2.6em;
+  display: none;
+  padding: 1.8em 0 3.2em;
   text-align: center;
-  &.no-show {
-    display: none;
+  &.nhs-show-nav {
+    display: block;
+  }
+}
+
+.nhs-pagenav-container {
+  margin: 0 auto;
+  max-width: 400px;
+  padding: 0 15px;
+  @include media(tablet) {
+    padding: 0;
   }
 }
 
@@ -83,6 +93,9 @@
 .nhs-page-navigation__link {
   color: $white;
   font-size: 1.7em;
+  &:hover, &:active {
+    color: darken($white, 10%);
+  }
 }
 
 .nhs-countdown-container {

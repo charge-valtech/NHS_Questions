@@ -2,7 +2,6 @@
 @import "base/variables";
 @import "base/extends";
 @import "base/mixins";
-@import "vendor/_joyride-2.1";
 
 *, *:after, *:before {
   @include box-sizing(border-box);
