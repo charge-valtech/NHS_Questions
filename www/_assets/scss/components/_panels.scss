@@ -326,7 +326,10 @@ details summary:focus {
 }
 
 .nhs-question-container {
-  margin-bottom: 3.5em;
+  margin-bottom: 2.5em;
+  @include media(tablet) {
+    margin-bottom: 3.5em;
+  }
 }
 
 .nhs-the-question {

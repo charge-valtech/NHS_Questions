@@ -491,7 +491,10 @@ input::-webkit-inner-spin-button {
 //NHS
 
 .nhs-answer-container {
-  margin-bottom: 6em;
+  margin-bottom: 3em;
+  @include media(tablet) {
+    margin-bottom: 5em;
+  }
 }
 
 .nhs-radiobtn__label {

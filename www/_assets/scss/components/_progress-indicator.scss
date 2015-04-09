@@ -63,6 +63,28 @@
   }
 }
 
+//NHS
+
+.nhs-page-navigation {
+  background: darken($nhs-pink, 5%);
+  padding: 1.8em 0 2.6em;
+  text-align: center;
+  &.no-show {
+    display: none;
+  }
+}
+
+.nhs-page-navigation__title {
+  color: $nhs-yellow;
+  font-size: 1.4em;
+  margin-bottom: 0.15em;
+}
+
+.nhs-page-navigation__link {
+  color: $white;
+  font-size: 1.7em;
+}
+
 .nhs-countdown-container {
   display: inline-block;
   margin-bottom: 2em;
