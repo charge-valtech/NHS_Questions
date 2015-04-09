@@ -65,17 +65,17 @@
 
 //NHS
 
-.progress-pie {
-  width: 130px; height: 130px;
-  circle {
-    fill: transparent;
-    stroke-width: 0;
-  }
-}
+// .progress-pie {
+//   width: 130px; height: 130px;
+//   circle {
+//     fill: transparent;
+//     stroke-width: 0;
+//   }
+// }
 
-.svg-pie path {
-  fill: rgba(black,0.5);
-}
+// .svg-pie path {
+//   fill: rgba(black,0.5);
+// }
 
 .nhs-countdown-container {
   display: inline-block;
@@ -104,83 +104,80 @@
   }
 }
 
-.progress-pie-01 {
+.progress-pie {
   background: url(../img/pie-pieces/pie-pieces-assets/pie-01.png) no-repeat;
-  background-size: 130px 130px;
+  position: absolute;
+  top: 50%; left: 50%;
+  margin-top: -3.42em; margin-left: -3.42em;
   width: 130px; height: 130px;
   @include device-pixel-ratio(2) {
-    background: url(../img/pie-pieces/pie-pieces-assets/pie-01-2x.png) no-repeat;
+    background-size: 130px 130px;
+  }
+  @media screen and (max-width: 640px) {
+    background-size: 109px 109px;
+    width: 109px; height: 109px;
+  }
+}
+
+.progress-pie-01 {
+  background-image: url(../img/pie-pieces/pie-pieces-assets/pie-01.png);
+  @include device-pixel-ratio(2) {
+    background-image: url(../img/pie-pieces/pie-pieces-assets/pie-01-2x.png);
   }
 }
 
 .progress-pie-02 {
-  background: url(../img/pie-pieces/pie-pieces-assets/pie-02.png) no-repeat;
-  background-size: 130px 130px;
-  width: 130px; height: 130px;
+  background-image: url(../img/pie-pieces/pie-pieces-assets/pie-02.png);
   @include device-pixel-ratio(2) {
-    background: url(../img/pie-pieces/pie-pieces-assets/pie-02-2x.png) no-repeat;
+    background-image: url(../img/pie-pieces/pie-pieces-assets/pie-02-2x.png);
   }
 }
 
 .progress-pie-03 {
-  background: url(../img/pie-pieces/pie-pieces-assets/pie-03.png) no-repeat;
-  background-size: 130px 130px;
-  width: 130px; height: 130px;
+  background-image: url(../img/pie-pieces/pie-pieces-assets/pie-03.png);
   @include device-pixel-ratio(2) {
-    background: url(../img/pie-pieces/pie-pieces-assets/pie-03-2x.png) no-repeat;
+    background-image: url(../img/pie-pieces/pie-pieces-assets/pie-03-2x.png);
   }
 }
 
 .progress-pie-04 {
-  background: url(../img/pie-pieces/pie-pieces-assets/pie-04.png) no-repeat;
-  background-size: 130px 130px;
-  width: 130px; height: 130px;
+  background-image: url(../img/pie-pieces/pie-pieces-assets/pie-04.png);
   @include device-pixel-ratio(2) {
-    background: url(../img/pie-pieces/pie-pieces-assets/pie-04-2x.png) no-repeat;
+    background-image: url(../img/pie-pieces/pie-pieces-assets/pie-04-2x.png);
   }
 }
 
 .progress-pie-05 {
-  background: url(../img/pie-pieces/pie-pieces-assets/pie-05.png) no-repeat;
-  background-size: 130px 130px;
-  width: 130px; height: 130px;
+  background-image: url(../img/pie-pieces/pie-pieces-assets/pie-05.png);
   @include device-pixel-ratio(2) {
-    background: url(../img/pie-pieces/pie-pieces-assets/pie-05-2x.png) no-repeat;
+    background-image: url(../img/pie-pieces/pie-pieces-assets/pie-05-2x.png);
   }
 }
 
 .progress-pie-06 {
-  background: url(../img/pie-pieces/pie-pieces-assets/pie-06.png) no-repeat;
-  background-size: 130px 130px;
-  width: 130px; height: 130px;
+  background-image: url(../img/pie-pieces/pie-pieces-assets/pie-06.png);
   @include device-pixel-ratio(2) {
-    background: url(../img/pie-pieces/pie-pieces-assets/pie-06-2x.png) no-repeat;
+    background-image: url(../img/pie-pieces/pie-pieces-assets/pie-06-2x.png);
   }
 }
 
 .progress-pie-07 {
-  background: url(../img/pie-pieces/pie-pieces-assets/pie-07.png) no-repeat;
-  background-size: 130px 130px;
-  width: 130px; height: 130px;
+  background-image: url(../img/pie-pieces/pie-pieces-assets/pie-07.png);
   @include device-pixel-ratio(2) {
-    background: url(../img/pie-pieces/pie-pieces-assets/pie-07-2x.png) no-repeat;
+    background-image: url(../img/pie-pieces/pie-pieces-assets/pie-07-2x.png);
   }
 }
 
 .progress-pie-08 {
-  background: url(../img/pie-pieces/pie-pieces-assets/pie-08.png) no-repeat;
-  background-size: 130px 130px;
-  width: 130px; height: 130px;
+  background-image: url(../img/pie-pieces/pie-pieces-assets/pie-08.png);
   @include device-pixel-ratio(2) {
-    background: url(../img/pie-pieces/pie-pieces-assets/pie-08-2x.png) no-repeat;
+    background-image: url(../img/pie-pieces/pie-pieces-assets/pie-08-2x.png);
   }
 }
 
 .progress-pie-09 {
-  background: url(../img/pie-pieces/pie-pieces-assets/pie-09.png) no-repeat;
-  background-size: 130px 130px;
-  width: 130px; height: 130px;
+  background-image: url(../img/pie-pieces/pie-pieces-assets/pie-09.png);
   @include device-pixel-ratio(2) {
-    background: url(../img/pie-pieces/pie-pieces-assets/pie-09-2x.png) no-repeat;
+    background-image: url(../img/pie-pieces/pie-pieces-assets/pie-09-2x.png);
   }
 }
