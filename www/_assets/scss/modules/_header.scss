@@ -27,8 +27,8 @@
 }
 
 .global-header {
-  background: $black;
-  color: $white;
+  background: $white;
+  color: $black;
 }
 
 .global-header__wrapper {
@@ -37,9 +37,7 @@
   overflow: hidden;
   padding: 15px;
   @include media(tablet) {
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-bottom: 10px;
+    padding: 20px 30px;
   }
 }
 
