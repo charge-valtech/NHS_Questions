@@ -506,7 +506,6 @@ input::-webkit-inner-spin-button {
   position: relative;
   &:before {
     background: rgba(black, 0.3);
-    border-radius: 50%;
     content: '';
     display: inline-block;
     margin-top: -0.1em;
@@ -514,6 +513,12 @@ input::-webkit-inner-spin-button {
     left: 0;
     vertical-align: middle;
     width: 1.4em; height: 1.4em;
+    .not-ie8 & {
+      border-radius: 50%;
+    }
+    .lt-ie9 & {
+      background: url(../img/radio-ie8.png);
+    }
   }
 }
 
@@ -526,5 +531,8 @@ input::-webkit-inner-spin-button {
     background: white;
     border: 0.35em solid $nhs-yellow;
   }
+  // &.ie8-checked + .nhs-radiobtn__label:before {
+  //   background: url(../img/radioselected-ie8.png);
+  // }
 }
 

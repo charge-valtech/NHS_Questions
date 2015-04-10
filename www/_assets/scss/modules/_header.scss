@@ -33,12 +33,18 @@
     display: inline-block;
     line-height: inherit;
     width: 50%; height: 50%;
+    .lt-ie9 & {
+      width: 133px; height: 61px;
+    }
   }
   .logo {
     display: inline-block;
     font-size: 0;
-    line-height: 1;
+    line-height: 1em;
     text-decoration: none;
+    .lt-ie9 & {
+      display: block;
+    }
   }
 }
 

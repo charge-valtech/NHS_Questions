@@ -52,9 +52,9 @@ $(function() {
     }, 1000);
   }
 
-  slidePageIn();
+  if($('html').is('.not-ie8')){slidePageIn();}
 
-  $('.nhs-nav-btn').on('click', function(e) {
+  $('.not-ie8 .nhs-nav-btn').on('click', function(e) {
     var $this = $(this),
         $thisHref;
 
@@ -74,9 +74,10 @@ $(function() {
 
     $('.nhs-body-container').animate({'margin-top': '1000px'}, 1000);
 
-
-
   });
+
+  $('.nhs-radiobtn__input:checked').addClass('ie8-checked');
+
 
 });;/*
  *  jQuery Password Strength - v0.0.1

@@ -102,6 +102,11 @@
     line-height: 0.8;
     vertical-align: middle;
   }
+  .lt-ie9 & {
+    background: url(../img/countdownbg-ie8.png) no-repeat;
+    margin-top: -52px; margin-left: -52px;
+    width: 103px; height: 104px;
+  }
 }
 
 .progress-pie {

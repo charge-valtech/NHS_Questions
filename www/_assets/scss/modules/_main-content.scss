@@ -54,6 +54,10 @@
     @media screen and ( min-height: 1600px ) {
       margin-top: 1700px;
     }
+    .lt-ie9 & {
+      display: block;
+      margin-top: 0;
+    }
   }
 }
 
